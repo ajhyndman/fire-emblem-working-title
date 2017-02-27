@@ -2,6 +2,7 @@ import fs from 'fs';
 import fetch from 'isomorphic-fetch';
 import {
   head,
+  mergeAll,
   tail,
 } from 'ramda';
 
@@ -45,7 +46,7 @@ fetch('http://feheroes.wiki/Stats_Table')
   .then(response => response.text())
   .then(html => {
     const heroRows = html.match(/<tr>((.|\n)*?)<\/tr>/g);
-    const heroes = tail(heroRows).map(parseHeroRow);
+    const heroes = mergeAll(tail(heroRows).map(parseHeroRow));
 
     fs.writeFileSync('./lib/stats.json', JSON.stringify(heroes, null, 2));
   });
