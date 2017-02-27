@@ -9,7 +9,7 @@ const parseHeroRow = (heroRow) => {
   const [
     colTitle,
     colMoveType,
-    colWeapon,
+    colWeaponType,
     colHp,
     colAtk,
     colSpd,
@@ -19,7 +19,7 @@ const parseHeroRow = (heroRow) => {
 
   const [, name] = /<a.*?>([^<]*?)</.exec(colTitle);
   const [, moveType] = /alt="Icon Move (.*?)\.png"/.exec(colMoveType);
-  const [, weapon] = /alt="Icon Class (.*?)\.png"/.exec(colWeapon);
+  const [, weaponType] = /alt="Icon Class (.*?)\.png"/.exec(colWeaponType);
   const hp = parseInt(/<td>(\d*?)\n<\/td>/.exec(colHp)[1], 10);
   const atk = parseInt(/<td>(\d*?)\n<\/td>/.exec(colAtk)[1], 10);
   const spd = parseInt(/<td>(\d*?)\n<\/td>/.exec(colSpd)[1], 10);
@@ -30,7 +30,7 @@ const parseHeroRow = (heroRow) => {
   return {
     [name]: {
       moveType,
-      weapon,
+      weaponType,
       hp,
       atk,
       spd,

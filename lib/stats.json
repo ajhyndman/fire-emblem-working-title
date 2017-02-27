@@ -2,7 +2,7 @@
   {
     "Abel": {
       "moveType": "Cavalry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 44,
       "atk": 41,
       "spd": 27,
@@ -14,7 +14,7 @@
   {
     "Alfonse": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 43,
       "atk": 51,
       "spd": 25,
@@ -26,7 +26,7 @@
   {
     "Anna": {
       "moveType": "Infantry",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 41,
       "atk": 45,
       "spd": 38,
@@ -38,7 +38,7 @@
   {
     "Arthur": {
       "moveType": "Infantry",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 48,
       "atk": 44,
       "spd": 29,
@@ -50,7 +50,7 @@
   {
     "Azama": {
       "moveType": "Infantry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": 43,
       "atk": 31,
       "spd": 26,
@@ -62,7 +62,7 @@
   {
     "Azura": {
       "moveType": "Infantry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 36,
       "atk": 43,
       "spd": 36,
@@ -74,7 +74,7 @@
   {
     "Barst": {
       "moveType": "Infantry",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 46,
       "atk": 38,
       "spd": 27,
@@ -86,7 +86,7 @@
   {
     "Bartre": {
       "moveType": "Infantry",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 49,
       "atk": 51,
       "spd": 28,
@@ -98,7 +98,7 @@
   {
     "Beruka": {
       "moveType": "Flying",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 43,
       "atk": 40,
       "spd": 23,
@@ -110,7 +110,7 @@
   {
     "Caeda": {
       "moveType": "Flying",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 36,
       "atk": 37,
       "spd": 37,
@@ -122,7 +122,7 @@
   {
     "Cain": {
       "moveType": "Cavalry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 42,
       "atk": 40,
       "spd": 27,
@@ -134,7 +134,7 @@
   {
     "Camilla": {
       "moveType": "Flying",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 37,
       "atk": 38,
       "spd": 27,
@@ -146,7 +146,7 @@
   {
     "Catria": {
       "moveType": "Flying",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 39,
       "atk": 42,
       "spd": 34,
@@ -158,7 +158,7 @@
   {
     "Cecilia": {
       "moveType": "Cavalry",
-      "weapon": "Green Tome",
+      "weaponType": "Green Tome",
       "hp": 36,
       "atk": 46,
       "spd": 22,
@@ -170,7 +170,7 @@
   {
     "Cherche": {
       "moveType": "Flying",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 46,
       "atk": 56,
       "spd": 25,
@@ -182,7 +182,7 @@
   {
     "Chrom": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 47,
       "atk": 53,
       "spd": 25,
@@ -194,7 +194,7 @@
   {
     "Clarine": {
       "moveType": "Cavalry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": 35,
       "atk": 37,
       "spd": 33,
@@ -206,7 +206,7 @@
   {
     "Cordelia": {
       "moveType": "Flying",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 40,
       "atk": 43,
       "spd": 30,
@@ -218,7 +218,7 @@
   {
     "Corrin (F)": {
       "moveType": "Infantry",
-      "weapon": "Blue Beast",
+      "weaponType": "Blue Beast",
       "hp": 41,
       "atk": 40,
       "spd": 34,
@@ -230,7 +230,7 @@
   {
     "Corrin (M)": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 42,
       "atk": 45,
       "spd": 32,
@@ -242,7 +242,7 @@
   {
     "Donnel": {
       "moveType": "Infantry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 48,
       "atk": 46,
       "spd": 24,
@@ -254,7 +254,7 @@
   {
     "Draug": {
       "moveType": "Armored",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 50,
       "atk": 41,
       "spd": 24,
@@ -266,7 +266,7 @@
   {
     "Effie": {
       "moveType": "Armored",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 50,
       "atk": 55,
       "spd": 22,
@@ -278,7 +278,7 @@
   {
     "Eirika": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 42,
       "atk": 42,
       "spd": 35,
@@ -290,7 +290,7 @@
   {
     "Eldigan": {
       "moveType": "Cavalry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -302,7 +302,7 @@
   {
     "Elise": {
       "moveType": "Cavalry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": 30,
       "atk": 38,
       "spd": 32,
@@ -314,7 +314,7 @@
   {
     "Eliwood": {
       "moveType": "Cavalry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 39,
       "atk": 47,
       "spd": 30,
@@ -326,7 +326,7 @@
   {
     "Ephraim": {
       "moveType": "Infantry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 45,
       "atk": 51,
       "spd": 25,
@@ -338,7 +338,7 @@
   {
     "Est": {
       "moveType": "Flying",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 36,
       "atk": 47,
       "spd": 30,
@@ -350,7 +350,7 @@
   {
     "Fae": {
       "moveType": "Infantry",
-      "weapon": "Green Beast",
+      "weaponType": "Green Beast",
       "hp": 46,
       "atk": 46,
       "spd": 28,
@@ -362,7 +362,7 @@
   {
     "Felicia": {
       "moveType": "Infantry",
-      "weapon": "Neutral Shuriken",
+      "weaponType": "Neutral Shuriken",
       "hp": 34,
       "atk": 33,
       "spd": 37,
@@ -374,7 +374,7 @@
   {
     "Fir": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 41,
       "atk": 33,
       "spd": 39,
@@ -386,7 +386,7 @@
   {
     "Florina": {
       "moveType": "Flying",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 42,
       "atk": 41,
       "spd": 28,
@@ -398,7 +398,7 @@
   {
     "Frederick": {
       "moveType": "Cavalry",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 43,
       "atk": 47,
       "spd": 25,
@@ -410,7 +410,7 @@
   {
     "Gaius": {
       "moveType": "Infantry",
-      "weapon": "Neutral Shuriken",
+      "weaponType": "Neutral Shuriken",
       "hp": 39,
       "atk": 39,
       "spd": 36,
@@ -422,7 +422,7 @@
   {
     "Gordin": {
       "moveType": "Infantry",
-      "weapon": "Neutral Bow",
+      "weaponType": "Neutral Bow",
       "hp": 43,
       "atk": 41,
       "spd": 20,
@@ -434,7 +434,7 @@
   {
     "Gunter": {
       "moveType": "Cavalry",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 43,
       "atk": 43,
       "spd": 24,
@@ -446,7 +446,7 @@
   {
     "Gwendolyn": {
       "moveType": "Armored",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 49,
       "atk": 41,
       "spd": 24,
@@ -458,7 +458,7 @@
   {
     "Hana": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 37,
       "atk": 52,
       "spd": 44,
@@ -470,7 +470,7 @@
   {
     "Hawkeye": {
       "moveType": "Infantry",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 45,
       "atk": 44,
       "spd": 22,
@@ -482,7 +482,7 @@
   {
     "Hector": {
       "moveType": "Armored",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 52,
       "atk": 52,
       "spd": 24,
@@ -494,7 +494,7 @@
   {
     "Henry": {
       "moveType": "Infantry",
-      "weapon": "Red Tome",
+      "weaponType": "Red Tome",
       "hp": 42,
       "atk": 34,
       "spd": 22,
@@ -506,7 +506,7 @@
   {
     "Hinata": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 47,
       "atk": 44,
       "spd": 27,
@@ -518,7 +518,7 @@
   {
     "Hinoka": {
       "moveType": "Flying",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 41,
       "atk": 43,
       "spd": 27,
@@ -530,7 +530,7 @@
   {
     "Jagen": {
       "moveType": "Cavalry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -542,7 +542,7 @@
   {
     "Jakob": {
       "moveType": "Infantry",
-      "weapon": "Neutral Shuriken",
+      "weaponType": "Neutral Shuriken",
       "hp": 39,
       "atk": 39,
       "spd": 31,
@@ -554,7 +554,7 @@
   {
     "Jeorge": {
       "moveType": "Infantry",
-      "weapon": "Neutral Bow",
+      "weaponType": "Neutral Bow",
       "hp": 37,
       "atk": 46,
       "spd": 32,
@@ -566,7 +566,7 @@
   {
     "Julia": {
       "moveType": "Infantry",
-      "weapon": "Green Tome",
+      "weaponType": "Green Tome",
       "hp": 38,
       "atk": 49,
       "spd": 26,
@@ -578,7 +578,7 @@
   {
     "Kagero": {
       "moveType": "Infantry",
-      "weapon": "Neutral Shuriken",
+      "weaponType": "Neutral Shuriken",
       "hp": 31,
       "atk": 40,
       "spd": 32,
@@ -590,7 +590,7 @@
   {
     "Klein": {
       "moveType": "Infantry",
-      "weapon": "Neutral Bow",
+      "weaponType": "Neutral Bow",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -602,7 +602,7 @@
   {
     "Lachesis": {
       "moveType": "Infantry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -614,7 +614,7 @@
   {
     "Laslow": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 44,
       "atk": 50,
       "spd": 26,
@@ -626,7 +626,7 @@
   {
     "Leo": {
       "moveType": "Cavalry",
-      "weapon": "Red Tome",
+      "weaponType": "Red Tome",
       "hp": 39,
       "atk": 43,
       "spd": 22,
@@ -638,7 +638,7 @@
   {
     "Lilina": {
       "moveType": "Infantry",
-      "weapon": "Red Tome",
+      "weaponType": "Red Tome",
       "hp": 35,
       "atk": 53,
       "spd": 25,
@@ -650,7 +650,7 @@
   {
     "Linde": {
       "moveType": "Infantry",
-      "weapon": "Blue Tome",
+      "weaponType": "Blue Tome",
       "hp": 35,
       "atk": 49,
       "spd": 39,
@@ -662,7 +662,7 @@
   {
     "Lissa": {
       "moveType": "Infantry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -674,7 +674,7 @@
   {
     "Lon'qu": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 45,
       "atk": 40,
       "spd": 42,
@@ -686,7 +686,7 @@
   {
     "Lucina": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 43,
       "atk": 50,
       "spd": 36,
@@ -698,7 +698,7 @@
   {
     "Lyn": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 37,
       "atk": 44,
       "spd": 37,
@@ -710,7 +710,7 @@
   {
     "Maria": {
       "moveType": "Infantry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": 36,
       "atk": 37,
       "spd": 34,
@@ -722,7 +722,7 @@
   {
     "Marth": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 41,
       "atk": 47,
       "spd": 34,
@@ -734,7 +734,7 @@
   {
     "Matthew": {
       "moveType": "Infantry",
-      "weapon": "Neutral Shuriken",
+      "weaponType": "Neutral Shuriken",
       "hp": 41,
       "atk": 36,
       "spd": 34,
@@ -746,7 +746,7 @@
   {
     "Merric": {
       "moveType": "Infantry",
-      "weapon": "Green Tome",
+      "weaponType": "Green Tome",
       "hp": 48,
       "atk": 40,
       "spd": 32,
@@ -758,7 +758,7 @@
   {
     "Minerva": {
       "moveType": "Flying",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 40,
       "atk": 52,
       "spd": 38,
@@ -770,7 +770,7 @@
   {
     "Narcian": {
       "moveType": "Flying",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 42,
       "atk": 41,
       "spd": 29,
@@ -782,7 +782,7 @@
   {
     "Niles": {
       "moveType": "Infantry",
-      "weapon": "Neutral Bow",
+      "weaponType": "Neutral Bow",
       "hp": 37,
       "atk": 34,
       "spd": 34,
@@ -794,7 +794,7 @@
   {
     "Nino": {
       "moveType": "Infantry",
-      "weapon": "Green Tome",
+      "weaponType": "Green Tome",
       "hp": 33,
       "atk": 46,
       "spd": 36,
@@ -806,7 +806,7 @@
   {
     "Nowi": {
       "moveType": "Infantry",
-      "weapon": "Blue Beast",
+      "weaponType": "Blue Beast",
       "hp": 45,
       "atk": 45,
       "spd": 27,
@@ -818,7 +818,7 @@
   {
     "Oboro": {
       "moveType": "Infantry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -830,7 +830,7 @@
   {
     "Odin": {
       "moveType": "Infantry",
-      "weapon": "Blue Tome",
+      "weaponType": "Blue Tome",
       "hp": 43,
       "atk": 35,
       "spd": 35,
@@ -842,7 +842,7 @@
   {
     "Ogma": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 47,
       "atk": 43,
       "spd": 29,
@@ -854,7 +854,7 @@
   {
     "Olivia": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 36,
       "atk": 43,
       "spd": 33,
@@ -866,7 +866,7 @@
   {
     "Olwen": {
       "moveType": "Cavalry",
-      "weapon": "Blue Tome",
+      "weaponType": "Blue Tome",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -878,7 +878,7 @@
   {
     "Palla": {
       "moveType": "Flying",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 42,
       "atk": 31,
       "spd": 31,
@@ -890,7 +890,7 @@
   {
     "Peri": {
       "moveType": "Cavalry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 35,
       "atk": 44,
       "spd": 33,
@@ -902,7 +902,7 @@
   {
     "Raigh": {
       "moveType": "Infantry",
-      "weapon": "Red Tome",
+      "weaponType": "Red Tome",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -914,7 +914,7 @@
   {
     "Raven": {
       "moveType": "Infantry",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 41,
       "atk": 42,
       "spd": 33,
@@ -926,7 +926,7 @@
   {
     "Reinhardt": {
       "moveType": "Cavalry",
-      "weapon": "Blue Tome",
+      "weaponType": "Blue Tome",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -938,7 +938,7 @@
   {
     "Robin (F)": {
       "moveType": "Infantry",
-      "weapon": "Green Tome",
+      "weaponType": "Green Tome",
       "hp": 40,
       "atk": 39,
       "spd": 29,
@@ -950,7 +950,7 @@
   {
     "Robin (M)": {
       "moveType": "Infantry",
-      "weapon": "Blue Tome",
+      "weaponType": "Blue Tome",
       "hp": 40,
       "atk": 40,
       "spd": 29,
@@ -962,7 +962,7 @@
   {
     "Roy": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 44,
       "atk": 46,
       "spd": 31,
@@ -974,7 +974,7 @@
   {
     "Ryoma": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 41,
       "atk": 50,
       "spd": 35,
@@ -986,7 +986,7 @@
   {
     "Saizo": {
       "moveType": "Infantry",
-      "weapon": "Neutral Shuriken",
+      "weaponType": "Neutral Shuriken",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -998,7 +998,7 @@
   {
     "Sakura": {
       "moveType": "Infantry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": 36,
       "atk": 38,
       "spd": 30,
@@ -1010,7 +1010,7 @@
   {
     "Sanaki": {
       "moveType": "Infantry",
-      "weapon": "Red Tome",
+      "weaponType": "Red Tome",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -1022,7 +1022,7 @@
   {
     "Selena": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 37,
       "atk": 37,
       "spd": 35,
@@ -1034,7 +1034,7 @@
   {
     "Seliph": {
       "moveType": "Infantry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": 52,
       "atk": 50,
       "spd": 24,
@@ -1046,7 +1046,7 @@
   {
     "Serra": {
       "moveType": "Infantry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": 33,
       "atk": 37,
       "spd": 31,
@@ -1058,7 +1058,7 @@
   {
     "Setsuna": {
       "moveType": "Infantry",
-      "weapon": "Neutral Bow",
+      "weaponType": "Neutral Bow",
       "hp": 39,
       "atk": 39,
       "spd": 37,
@@ -1070,7 +1070,7 @@
   {
     "Shanna": {
       "moveType": "Flying",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 39,
       "atk": 37,
       "spd": 35,
@@ -1082,7 +1082,7 @@
   {
     "Sharena": {
       "moveType": "Infantry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 43,
       "atk": 48,
       "spd": 35,
@@ -1094,7 +1094,7 @@
   {
     "Sheena": {
       "moveType": "Armored",
-      "weapon": "Green Axe",
+      "weaponType": "Green Axe",
       "hp": 45,
       "atk": 44,
       "spd": 25,
@@ -1106,7 +1106,7 @@
   {
     "Sophia": {
       "moveType": "Infantry",
-      "weapon": "Red Tome",
+      "weaponType": "Red Tome",
       "hp": 40,
       "atk": 46,
       "spd": 19,
@@ -1118,7 +1118,7 @@
   {
     "Stahl": {
       "moveType": "Cavalry",
-      "weapon": "Red Sword",
+      "weaponType": "Red Sword",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -1130,7 +1130,7 @@
   {
     "Subaki": {
       "moveType": "Flying",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": 43,
       "atk": 37,
       "spd": 35,
@@ -1142,7 +1142,7 @@
   {
     "Sully": {
       "moveType": "Cavalry",
-      "weapon": "Blue Lance",
+      "weaponType": "Blue Lance",
       "hp": null,
       "atk": null,
       "spd": null,
@@ -1154,7 +1154,7 @@
   {
     "Takumi": {
       "moveType": "Infantry",
-      "weapon": "Neutral Bow",
+      "weaponType": "Neutral Bow",
       "hp": 40,
       "atk": 46,
       "spd": 33,
@@ -1166,7 +1166,7 @@
   {
     "Tharja": {
       "moveType": "Infantry",
-      "weapon": "Red Tome",
+      "weaponType": "Red Tome",
       "hp": 39,
       "atk": 45,
       "spd": 34,
@@ -1178,7 +1178,7 @@
   {
     "Tiki": {
       "moveType": "Infantry",
-      "weapon": "Red Beast",
+      "weaponType": "Red Beast",
       "hp": 40,
       "atk": 46,
       "spd": 26,
@@ -1190,7 +1190,7 @@
   {
     "Tiki (Young)": {
       "moveType": "Infantry",
-      "weapon": "Red Beast",
+      "weaponType": "Red Beast",
       "hp": 41,
       "atk": 46,
       "spd": 30,
@@ -1202,7 +1202,7 @@
   {
     "Virion": {
       "moveType": "Infantry",
-      "weapon": "Neutral Bow",
+      "weaponType": "Neutral Bow",
       "hp": 46,
       "atk": 44,
       "spd": 31,
@@ -1214,7 +1214,7 @@
   {
     "Wrys": {
       "moveType": "Infantry",
-      "weapon": "Neutral Staff",
+      "weaponType": "Neutral Staff",
       "hp": 42,
       "atk": 34,
       "spd": 23,
