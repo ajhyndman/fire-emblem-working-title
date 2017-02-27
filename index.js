@@ -20,11 +20,11 @@ const parseHeroRow = (heroRow) => {
   const [, name] = /<a.*?>([^<]*?)</.exec(colTitle);
   const [, moveType] = /alt="Icon Move (.*?)\.png"/.exec(colMoveType);
   const [, weapon] = /alt="Icon Class (.*?)\.png"/.exec(colWeapon);
-  const [, hp] = /<td>(\d*?)\n<\/td>/.exec(colHp);
-  const [, atk] = /<td>(\d*?)\n<\/td>/.exec(colAtk);
-  const [, spd] = /<td>(\d*?)\n<\/td>/.exec(colSpd);
-  const [, def] = /<td>(\d*?)\n<\/td>/.exec(colDef);
-  const [, res] = /<td>(\d*?)\n<\/td>/.exec(colRes);
+  const hp = parseInt(/<td>(\d*?)\n<\/td>/.exec(colHp)[1], 10);
+  const atk = parseInt(/<td>(\d*?)\n<\/td>/.exec(colAtk)[1], 10);
+  const spd = parseInt(/<td>(\d*?)\n<\/td>/.exec(colSpd)[1], 10);
+  const def = parseInt(/<td>(\d*?)\n<\/td>/.exec(colDef)[1], 10);
+  const res = parseInt(/<td>(\d*?)\n<\/td>/.exec(colRes)[1], 10);
   const total = hp + atk + spd + def + res;
 
   return {
