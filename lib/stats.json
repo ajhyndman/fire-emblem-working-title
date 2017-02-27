@@ -1,0 +1,1226 @@
+[
+  {
+    "Abel": {
+      "moveType": "Cavalry",
+      "weapon": "Blue Lance",
+      "hp": "44",
+      "atk": "41",
+      "spd": "27",
+      "def": "25",
+      "res": "25",
+      "total": "4441272525"
+    }
+  },
+  {
+    "Alfonse": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "43",
+      "atk": "51",
+      "spd": "25",
+      "def": "32",
+      "res": "22",
+      "total": "4351253222"
+    }
+  },
+  {
+    "Anna": {
+      "moveType": "Infantry",
+      "weapon": "Green Axe",
+      "hp": "41",
+      "atk": "45",
+      "spd": "38",
+      "def": "22",
+      "res": "28",
+      "total": "4145382228"
+    }
+  },
+  {
+    "Arthur": {
+      "moveType": "Infantry",
+      "weapon": "Green Axe",
+      "hp": "48",
+      "atk": "44",
+      "spd": "29",
+      "def": "30",
+      "res": "25",
+      "total": "4844293025"
+    }
+  },
+  {
+    "Azama": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Staff",
+      "hp": "43",
+      "atk": "31",
+      "spd": "26",
+      "def": "29",
+      "res": "29",
+      "total": "4331262929"
+    }
+  },
+  {
+    "Azura": {
+      "moveType": "Infantry",
+      "weapon": "Blue Lance",
+      "hp": "36",
+      "atk": "43",
+      "spd": "36",
+      "def": "21",
+      "res": "28",
+      "total": "3643362128"
+    }
+  },
+  {
+    "Barst": {
+      "moveType": "Infantry",
+      "weapon": "Green Axe",
+      "hp": "46",
+      "atk": "38",
+      "spd": "27",
+      "def": "30",
+      "res": "13",
+      "total": "4638273013"
+    }
+  },
+  {
+    "Bartre": {
+      "moveType": "Infantry",
+      "weapon": "Green Axe",
+      "hp": "49",
+      "atk": "51",
+      "spd": "28",
+      "def": "36",
+      "res": "16",
+      "total": "4951283616"
+    }
+  },
+  {
+    "Beruka": {
+      "moveType": "Flying",
+      "weapon": "Green Axe",
+      "hp": "43",
+      "atk": "40",
+      "spd": "23",
+      "def": "37",
+      "res": "25",
+      "total": "4340233725"
+    }
+  },
+  {
+    "Caeda": {
+      "moveType": "Flying",
+      "weapon": "Red Sword",
+      "hp": "36",
+      "atk": "37",
+      "spd": "37",
+      "def": "24",
+      "res": "34",
+      "total": "3637372434"
+    }
+  },
+  {
+    "Cain": {
+      "moveType": "Cavalry",
+      "weapon": "Red Sword",
+      "hp": "42",
+      "atk": "40",
+      "spd": "27",
+      "def": "27",
+      "res": "21",
+      "total": "4240272721"
+    }
+  },
+  {
+    "Camilla": {
+      "moveType": "Flying",
+      "weapon": "Green Axe",
+      "hp": "37",
+      "atk": "38",
+      "spd": "27",
+      "def": "28",
+      "res": "31",
+      "total": "3738272831"
+    }
+  },
+  {
+    "Catria": {
+      "moveType": "Flying",
+      "weapon": "Blue Lance",
+      "hp": "39",
+      "atk": "42",
+      "spd": "34",
+      "def": "29",
+      "res": "25",
+      "total": "3942342925"
+    }
+  },
+  {
+    "Cecilia": {
+      "moveType": "Cavalry",
+      "weapon": "Green Tome",
+      "hp": "36",
+      "atk": "46",
+      "spd": "22",
+      "def": "22",
+      "res": "29",
+      "total": "3646222229"
+    }
+  },
+  {
+    "Cherche": {
+      "moveType": "Flying",
+      "weapon": "Green Axe",
+      "hp": "46",
+      "atk": "56",
+      "spd": "25",
+      "def": "32",
+      "res": "12",
+      "total": "4656253212"
+    }
+  },
+  {
+    "Chrom": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "47",
+      "atk": "53",
+      "spd": "25",
+      "def": "31",
+      "res": "17",
+      "total": "4753253117"
+    }
+  },
+  {
+    "Clarine": {
+      "moveType": "Cavalry",
+      "weapon": "Neutral Staff",
+      "hp": "35",
+      "atk": "37",
+      "spd": "33",
+      "def": "25",
+      "res": "32",
+      "total": "3537332532"
+    }
+  },
+  {
+    "Cordelia": {
+      "moveType": "Flying",
+      "weapon": "Blue Lance",
+      "hp": "40",
+      "atk": "43",
+      "spd": "30",
+      "def": "22",
+      "res": "25",
+      "total": "4043302225"
+    }
+  },
+  {
+    "Corrin (F)": {
+      "moveType": "Infantry",
+      "weapon": "Blue Beast",
+      "hp": "41",
+      "atk": "40",
+      "spd": "34",
+      "def": "34",
+      "res": "21",
+      "total": "4140343421"
+    }
+  },
+  {
+    "Corrin (M)": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "42",
+      "atk": "45",
+      "spd": "32",
+      "def": "29",
+      "res": "26",
+      "total": "4245322926"
+    }
+  },
+  {
+    "Donnel": {
+      "moveType": "Infantry",
+      "weapon": "Blue Lance",
+      "hp": "48",
+      "atk": "46",
+      "spd": "24",
+      "def": "32",
+      "res": "23",
+      "total": "4846243223"
+    }
+  },
+  {
+    "Draug": {
+      "moveType": "Armored",
+      "weapon": "Red Sword",
+      "hp": "50",
+      "atk": "41",
+      "spd": "24",
+      "def": "39",
+      "res": "18",
+      "total": "5041243918"
+    }
+  },
+  {
+    "Effie": {
+      "moveType": "Armored",
+      "weapon": "Blue Lance",
+      "hp": "50",
+      "atk": "55",
+      "spd": "22",
+      "def": "33",
+      "res": "23",
+      "total": "5055223323"
+    }
+  },
+  {
+    "Eirika": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "42",
+      "atk": "42",
+      "spd": "35",
+      "def": "26",
+      "res": "28",
+      "total": "4242352628"
+    }
+  },
+  {
+    "Eldigan": {
+      "moveType": "Cavalry",
+      "weapon": "Red Sword",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Elise": {
+      "moveType": "Cavalry",
+      "weapon": "Neutral Staff",
+      "hp": "30",
+      "atk": "38",
+      "spd": "32",
+      "def": "19",
+      "res": "32",
+      "total": "3038321932"
+    }
+  },
+  {
+    "Eliwood": {
+      "moveType": "Cavalry",
+      "weapon": "Red Sword",
+      "hp": "39",
+      "atk": "47",
+      "spd": "30",
+      "def": "23",
+      "res": "32",
+      "total": "3947302332"
+    }
+  },
+  {
+    "Ephraim": {
+      "moveType": "Infantry",
+      "weapon": "Blue Lance",
+      "hp": "45",
+      "atk": "51",
+      "spd": "25",
+      "def": "32",
+      "res": "20",
+      "total": "4551253220"
+    }
+  },
+  {
+    "Est": {
+      "moveType": "Flying",
+      "weapon": "Blue Lance",
+      "hp": "36",
+      "atk": "47",
+      "spd": "30",
+      "def": "24",
+      "res": "32",
+      "total": "3647302432"
+    }
+  },
+  {
+    "Fae": {
+      "moveType": "Infantry",
+      "weapon": "Green Beast",
+      "hp": "46",
+      "atk": "46",
+      "spd": "28",
+      "def": "25",
+      "res": "30",
+      "total": "4646282530"
+    }
+  },
+  {
+    "Felicia": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Shuriken",
+      "hp": "34",
+      "atk": "33",
+      "spd": "37",
+      "def": "18",
+      "res": "38",
+      "total": "3433371838"
+    }
+  },
+  {
+    "Fir": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "41",
+      "atk": "33",
+      "spd": "39",
+      "def": "24",
+      "res": "34",
+      "total": "4133392434"
+    }
+  },
+  {
+    "Florina": {
+      "moveType": "Flying",
+      "weapon": "Blue Lance",
+      "hp": "42",
+      "atk": "41",
+      "spd": "28",
+      "def": "25",
+      "res": "34",
+      "total": "4241282534"
+    }
+  },
+  {
+    "Frederick": {
+      "moveType": "Cavalry",
+      "weapon": "Green Axe",
+      "hp": "43",
+      "atk": "47",
+      "spd": "25",
+      "def": "36",
+      "res": "14",
+      "total": "4347253614"
+    }
+  },
+  {
+    "Gaius": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Shuriken",
+      "hp": "39",
+      "atk": "39",
+      "spd": "36",
+      "def": "22",
+      "res": "19",
+      "total": "3939362219"
+    }
+  },
+  {
+    "Gordin": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Bow",
+      "hp": "43",
+      "atk": "41",
+      "spd": "20",
+      "def": "32",
+      "res": "17",
+      "total": "4341203217"
+    }
+  },
+  {
+    "Gunter": {
+      "moveType": "Cavalry",
+      "weapon": "Green Axe",
+      "hp": "43",
+      "atk": "43",
+      "spd": "24",
+      "def": "33",
+      "res": "21",
+      "total": "4343243321"
+    }
+  },
+  {
+    "Gwendolyn": {
+      "moveType": "Armored",
+      "weapon": "Blue Lance",
+      "hp": "49",
+      "atk": "41",
+      "spd": "24",
+      "def": "41",
+      "res": "24",
+      "total": "4941244124"
+    }
+  },
+  {
+    "Hana": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "37",
+      "atk": "52",
+      "spd": "44",
+      "def": "17",
+      "res": "18",
+      "total": "3752441718"
+    }
+  },
+  {
+    "Hawkeye": {
+      "moveType": "Infantry",
+      "weapon": "Green Axe",
+      "hp": "45",
+      "atk": "44",
+      "spd": "22",
+      "def": "28",
+      "res": "30",
+      "total": "4544222830"
+    }
+  },
+  {
+    "Hector": {
+      "moveType": "Armored",
+      "weapon": "Green Axe",
+      "hp": "52",
+      "atk": "52",
+      "spd": "24",
+      "def": "37",
+      "res": "19",
+      "total": "5252243719"
+    }
+  },
+  {
+    "Henry": {
+      "moveType": "Infantry",
+      "weapon": "Red Tome",
+      "hp": "42",
+      "atk": "34",
+      "spd": "22",
+      "def": "32",
+      "res": "29",
+      "total": "4234223229"
+    }
+  },
+  {
+    "Hinata": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "47",
+      "atk": "44",
+      "spd": "27",
+      "def": "42",
+      "res": "21",
+      "total": "4744274221"
+    }
+  },
+  {
+    "Hinoka": {
+      "moveType": "Flying",
+      "weapon": "Blue Lance",
+      "hp": "41",
+      "atk": "43",
+      "spd": "27",
+      "def": "25",
+      "res": "24",
+      "total": "4143272524"
+    }
+  },
+  {
+    "Jagen": {
+      "moveType": "Cavalry",
+      "weapon": "Blue Lance",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Jakob": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Shuriken",
+      "hp": "39",
+      "atk": "39",
+      "spd": "31",
+      "def": "28",
+      "res": "24",
+      "total": "3939312824"
+    }
+  },
+  {
+    "Jeorge": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Bow",
+      "hp": "37",
+      "atk": "46",
+      "spd": "32",
+      "def": "24",
+      "res": "22",
+      "total": "3746322422"
+    }
+  },
+  {
+    "Julia": {
+      "moveType": "Infantry",
+      "weapon": "Green Tome",
+      "hp": "38",
+      "atk": "49",
+      "spd": "26",
+      "def": "17",
+      "res": "35",
+      "total": "3849261735"
+    }
+  },
+  {
+    "Kagero": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Shuriken",
+      "hp": "31",
+      "atk": "40",
+      "spd": "32",
+      "def": "22",
+      "res": "28",
+      "total": "3140322228"
+    }
+  },
+  {
+    "Klein": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Bow",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Lachesis": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Staff",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Laslow": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "44",
+      "atk": "50",
+      "spd": "26",
+      "def": "33",
+      "res": "19",
+      "total": "4450263319"
+    }
+  },
+  {
+    "Leo": {
+      "moveType": "Cavalry",
+      "weapon": "Red Tome",
+      "hp": "39",
+      "atk": "43",
+      "spd": "22",
+      "def": "25",
+      "res": "30",
+      "total": "3943222530"
+    }
+  },
+  {
+    "Lilina": {
+      "moveType": "Infantry",
+      "weapon": "Red Tome",
+      "hp": "35",
+      "atk": "53",
+      "spd": "25",
+      "def": "19",
+      "res": "31",
+      "total": "3553251931"
+    }
+  },
+  {
+    "Linde": {
+      "moveType": "Infantry",
+      "weapon": "Blue Tome",
+      "hp": "35",
+      "atk": "49",
+      "spd": "39",
+      "def": "14",
+      "res": "27",
+      "total": "3549391427"
+    }
+  },
+  {
+    "Lissa": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Staff",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Lon'qu": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "45",
+      "atk": "40",
+      "spd": "42",
+      "def": "22",
+      "res": "22",
+      "total": "4540422222"
+    }
+  },
+  {
+    "Lucina": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "43",
+      "atk": "50",
+      "spd": "36",
+      "def": "25",
+      "res": "19",
+      "total": "4350362519"
+    }
+  },
+  {
+    "Lyn": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "37",
+      "atk": "44",
+      "spd": "37",
+      "def": "26",
+      "res": "29",
+      "total": "3744372629"
+    }
+  },
+  {
+    "Maria": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Staff",
+      "hp": "36",
+      "atk": "37",
+      "spd": "34",
+      "def": "19",
+      "res": "32",
+      "total": "3637341932"
+    }
+  },
+  {
+    "Marth": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "41",
+      "atk": "47",
+      "spd": "34",
+      "def": "29",
+      "res": "23",
+      "total": "4147342923"
+    }
+  },
+  {
+    "Matthew": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Shuriken",
+      "hp": "41",
+      "atk": "36",
+      "spd": "34",
+      "def": "27",
+      "res": "16",
+      "total": "4136342716"
+    }
+  },
+  {
+    "Merric": {
+      "moveType": "Infantry",
+      "weapon": "Green Tome",
+      "hp": "48",
+      "atk": "40",
+      "spd": "32",
+      "def": "28",
+      "res": "19",
+      "total": "4840322819"
+    }
+  },
+  {
+    "Minerva": {
+      "moveType": "Flying",
+      "weapon": "Green Axe",
+      "hp": "40",
+      "atk": "52",
+      "spd": "38",
+      "def": "27",
+      "res": "17",
+      "total": "4052382717"
+    }
+  },
+  {
+    "Narcian": {
+      "moveType": "Flying",
+      "weapon": "Green Axe",
+      "hp": "42",
+      "atk": "41",
+      "spd": "29",
+      "def": "32",
+      "res": "26",
+      "total": "4241293226"
+    }
+  },
+  {
+    "Niles": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Bow",
+      "hp": "37",
+      "atk": "34",
+      "spd": "34",
+      "def": "17",
+      "res": "34",
+      "total": "3734341734"
+    }
+  },
+  {
+    "Nino": {
+      "moveType": "Infantry",
+      "weapon": "Green Tome",
+      "hp": "33",
+      "atk": "46",
+      "spd": "36",
+      "def": "19",
+      "res": "29",
+      "total": "3346361929"
+    }
+  },
+  {
+    "Nowi": {
+      "moveType": "Infantry",
+      "weapon": "Blue Beast",
+      "hp": "45",
+      "atk": "45",
+      "spd": "27",
+      "def": "33",
+      "res": "27",
+      "total": "4545273327"
+    }
+  },
+  {
+    "Oboro": {
+      "moveType": "Infantry",
+      "weapon": "Blue Lance",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Odin": {
+      "moveType": "Infantry",
+      "weapon": "Blue Tome",
+      "hp": "43",
+      "atk": "35",
+      "spd": "35",
+      "def": "25",
+      "res": "22",
+      "total": "4335352522"
+    }
+  },
+  {
+    "Ogma": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "47",
+      "atk": "43",
+      "spd": "29",
+      "def": "28",
+      "res": "13",
+      "total": "4743292813"
+    }
+  },
+  {
+    "Olivia": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "36",
+      "atk": "43",
+      "spd": "33",
+      "def": "27",
+      "res": "26",
+      "total": "3643332726"
+    }
+  },
+  {
+    "Olwen": {
+      "moveType": "Cavalry",
+      "weapon": "Blue Tome",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Palla": {
+      "moveType": "Flying",
+      "weapon": "Red Sword",
+      "hp": "42",
+      "atk": "31",
+      "spd": "31",
+      "def": "24",
+      "res": "30",
+      "total": "4231312430"
+    }
+  },
+  {
+    "Peri": {
+      "moveType": "Cavalry",
+      "weapon": "Blue Lance",
+      "hp": "35",
+      "atk": "44",
+      "spd": "33",
+      "def": "23",
+      "res": "33",
+      "total": "3544332333"
+    }
+  },
+  {
+    "Raigh": {
+      "moveType": "Infantry",
+      "weapon": "Red Tome",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Raven": {
+      "moveType": "Infantry",
+      "weapon": "Green Axe",
+      "hp": "41",
+      "atk": "42",
+      "spd": "33",
+      "def": "25",
+      "res": "22",
+      "total": "4142332522"
+    }
+  },
+  {
+    "Reinhardt": {
+      "moveType": "Cavalry",
+      "weapon": "Blue Tome",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Robin (F)": {
+      "moveType": "Infantry",
+      "weapon": "Green Tome",
+      "hp": "40",
+      "atk": "39",
+      "spd": "29",
+      "def": "29",
+      "res": "22",
+      "total": "4039292922"
+    }
+  },
+  {
+    "Robin (M)": {
+      "moveType": "Infantry",
+      "weapon": "Blue Tome",
+      "hp": "40",
+      "atk": "40",
+      "spd": "29",
+      "def": "29",
+      "res": "22",
+      "total": "4040292922"
+    }
+  },
+  {
+    "Roy": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "44",
+      "atk": "46",
+      "spd": "31",
+      "def": "25",
+      "res": "28",
+      "total": "4446312528"
+    }
+  },
+  {
+    "Ryoma": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "41",
+      "atk": "50",
+      "spd": "35",
+      "def": "27",
+      "res": "21",
+      "total": "4150352721"
+    }
+  },
+  {
+    "Saizo": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Shuriken",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Sakura": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Staff",
+      "hp": "36",
+      "atk": "38",
+      "spd": "30",
+      "def": "24",
+      "res": "30",
+      "total": "3638302430"
+    }
+  },
+  {
+    "Sanaki": {
+      "moveType": "Infantry",
+      "weapon": "Red Tome",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Selena": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "37",
+      "atk": "37",
+      "spd": "35",
+      "def": "32",
+      "res": "28",
+      "total": "3737353228"
+    }
+  },
+  {
+    "Seliph": {
+      "moveType": "Infantry",
+      "weapon": "Red Sword",
+      "hp": "52",
+      "atk": "50",
+      "spd": "24",
+      "def": "30",
+      "res": "22",
+      "total": "5250243022"
+    }
+  },
+  {
+    "Serra": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Staff",
+      "hp": "33",
+      "atk": "37",
+      "spd": "31",
+      "def": "21",
+      "res": "33",
+      "total": "3337312133"
+    }
+  },
+  {
+    "Setsuna": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Bow",
+      "hp": "39",
+      "atk": "39",
+      "spd": "37",
+      "def": "22",
+      "res": "23",
+      "total": "3939372223"
+    }
+  },
+  {
+    "Shanna": {
+      "moveType": "Flying",
+      "weapon": "Blue Lance",
+      "hp": "39",
+      "atk": "37",
+      "spd": "35",
+      "def": "25",
+      "res": "32",
+      "total": "3937352532"
+    }
+  },
+  {
+    "Sharena": {
+      "moveType": "Infantry",
+      "weapon": "Blue Lance",
+      "hp": "43",
+      "atk": "48",
+      "spd": "35",
+      "def": "29",
+      "res": "22",
+      "total": "4348352922"
+    }
+  },
+  {
+    "Sheena": {
+      "moveType": "Armored",
+      "weapon": "Green Axe",
+      "hp": "45",
+      "atk": "44",
+      "spd": "25",
+      "def": "36",
+      "res": "30",
+      "total": "4544253630"
+    }
+  },
+  {
+    "Sophia": {
+      "moveType": "Infantry",
+      "weapon": "Red Tome",
+      "hp": "40",
+      "atk": "46",
+      "spd": "19",
+      "def": "28",
+      "res": "29",
+      "total": "4046192829"
+    }
+  },
+  {
+    "Stahl": {
+      "moveType": "Cavalry",
+      "weapon": "Red Sword",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Subaki": {
+      "moveType": "Flying",
+      "weapon": "Blue Lance",
+      "hp": "43",
+      "atk": "37",
+      "spd": "35",
+      "def": "32",
+      "res": "25",
+      "total": "4337353225"
+    }
+  },
+  {
+    "Sully": {
+      "moveType": "Cavalry",
+      "weapon": "Blue Lance",
+      "hp": "",
+      "atk": "",
+      "spd": "",
+      "def": "",
+      "res": "",
+      "total": ""
+    }
+  },
+  {
+    "Takumi": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Bow",
+      "hp": "40",
+      "atk": "46",
+      "spd": "33",
+      "def": "25",
+      "res": "18",
+      "total": "4046332518"
+    }
+  },
+  {
+    "Tharja": {
+      "moveType": "Infantry",
+      "weapon": "Red Tome",
+      "hp": "39",
+      "atk": "45",
+      "spd": "34",
+      "def": "23",
+      "res": "20",
+      "total": "3945342320"
+    }
+  },
+  {
+    "Tiki": {
+      "moveType": "Infantry",
+      "weapon": "Red Beast",
+      "hp": "40",
+      "atk": "46",
+      "spd": "26",
+      "def": "32",
+      "res": "24",
+      "total": "4046263224"
+    }
+  },
+  {
+    "Tiki (Young)": {
+      "moveType": "Infantry",
+      "weapon": "Red Beast",
+      "hp": "41",
+      "atk": "46",
+      "spd": "30",
+      "def": "32",
+      "res": "29",
+      "total": "4146303229"
+    }
+  },
+  {
+    "Virion": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Bow",
+      "hp": "46",
+      "atk": "44",
+      "spd": "31",
+      "def": "26",
+      "res": "13",
+      "total": "4644312613"
+    }
+  },
+  {
+    "Wrys": {
+      "moveType": "Infantry",
+      "weapon": "Neutral Staff",
+      "hp": "42",
+      "atk": "34",
+      "spd": "23",
+      "def": "25",
+      "res": "33",
+      "total": "4234232533"
+    }
+  }
+]
