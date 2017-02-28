@@ -193,11 +193,11 @@
     "moveType": "Infantry",
     "weaponType": "Red Sword",
     "hp": 42,
-    "atk": 45,
+    "atk": 48,
     "spd": 32,
-    "def": 29,
-    "res": 26,
-    "total": 174
+    "def": 31,
+    "res": 24,
+    "total": 177
   },
   "Donnel": {
     "moveType": "Infantry",
@@ -242,12 +242,12 @@
   "Eldigan": {
     "moveType": "Cavalry",
     "weaponType": "Red Sword",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 45,
+    "atk": 51,
+    "spd": 27,
+    "def": 37,
+    "res": 22,
+    "total": 182
   },
   "Elise": {
     "moveType": "Cavalry",
@@ -492,12 +492,12 @@
   "Klein": {
     "moveType": "Infantry",
     "weaponType": "Neutral Bow",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 40,
+    "atk": 38,
+    "spd": 28,
+    "def": 20,
+    "res": 24,
+    "total": 150
   },
   "Lachesis": {
     "moveType": "Infantry",
@@ -733,11 +733,11 @@
     "moveType": "Flying",
     "weaponType": "Red Sword",
     "hp": 42,
-    "atk": 31,
+    "atk": 43,
     "spd": 31,
     "def": 24,
     "res": 30,
-    "total": 158
+    "total": 170
   },
   "Peri": {
     "moveType": "Cavalry",
@@ -772,12 +772,12 @@
   "Reinhardt": {
     "moveType": "Cavalry",
     "weaponType": "Blue Tome",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 38,
+    "atk": 41,
+    "spd": 18,
+    "def": 27,
+    "res": 25,
+    "total": 149
   },
   "Robin (F)": {
     "moveType": "Infantry",
@@ -842,12 +842,12 @@
   "Sanaki": {
     "moveType": "Infantry",
     "weaponType": "Red Tome",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 33,
+    "atk": 51,
+    "spd": 26,
+    "def": 17,
+    "res": 34,
+    "total": 161
   },
   "Selena": {
     "moveType": "Infantry",
