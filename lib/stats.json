@@ -552,12 +552,12 @@
   "Lissa": {
     "moveType": "Infantry",
     "weaponType": "Neutral Staff",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 39,
+    "atk": 36,
+    "spd": 25,
+    "def": 28,
+    "res": 30,
+    "total": 158
   },
   "Lon'qu": {
     "moveType": "Infantry",
@@ -684,8 +684,8 @@
     "weaponType": "Blue Lance",
     "hp": null,
     "atk": null,
-    "spd": null,
-    "def": null,
+    "spd": 26,
+    "def": 35,
     "res": null,
     "total": null
   },
@@ -722,12 +722,12 @@
   "Olwen": {
     "moveType": "Cavalry",
     "weaponType": "Blue Tome",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 34,
+    "atk": 35,
+    "spd": 26,
+    "def": 29,
+    "res": 30,
+    "total": 154
   },
   "Palla": {
     "moveType": "Flying",
@@ -752,12 +752,12 @@
   "Raigh": {
     "moveType": "Infantry",
     "weaponType": "Red Tome",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 41,
+    "atk": 42,
+    "spd": 29,
+    "def": 22,
+    "res": 29,
+    "total": 163
   },
   "Raven": {
     "moveType": "Infantry",
@@ -822,12 +822,12 @@
   "Saizo": {
     "moveType": "Infantry",
     "weaponType": "Neutral Shuriken",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 36,
+    "atk": 38,
+    "spd": 34,
+    "def": 33,
+    "res": 16,
+    "total": 157
   },
   "Sakura": {
     "moveType": "Infantry",
@@ -932,12 +932,12 @@
   "Stahl": {
     "moveType": "Cavalry",
     "weaponType": "Red Sword",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 45,
+    "atk": 46,
+    "spd": 26,
+    "def": 33,
+    "res": 19,
+    "total": 169
   },
   "Subaki": {
     "moveType": "Flying",
@@ -952,12 +952,12 @@
   "Sully": {
     "moveType": "Cavalry",
     "weaponType": "Blue Lance",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 42,
+    "atk": 38,
+    "spd": 34,
+    "def": 24,
+    "res": 28,
+    "total": 166
   },
   "Takumi": {
     "moveType": "Infantry",
