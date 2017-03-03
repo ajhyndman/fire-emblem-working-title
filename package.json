@@ -12,7 +12,11 @@
     "babel-plugin-ramda": "^1.1.6",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
-    "isomorphic-fetch": "^2.2.1",
+    "eslint": "^3.16.1",
+    "eslint-config-ajhyndman": "git+ssh://git@github.com/ajhyndman/eslint-config-ajhyndman#v1.0.0",
     "ramda": "^0.23.0"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
   }
 }
