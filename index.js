@@ -3,6 +3,7 @@ import fs from 'fs';
 import fetch from 'isomorphic-fetch';
 import {
   compose,
+  equals,
   filter,
   flatten,
   isNil,
@@ -13,7 +14,9 @@ import {
   mergeWith,
   not,
   replace,
+  split,
   tail,
+  toLower,
   trim,
   zipObj,
 } from 'ramda';
@@ -38,11 +41,11 @@ const parseHeroRowHtml = (heroRow) => {
   const [, name] = /<a.*?>([^<]*?)</.exec(colTitle);
   const [, moveType] = /alt="Icon Move (.*?)\.png"/.exec(colMoveType);
   const [, weaponType] = /alt="Icon Class (.*?)\.png"/.exec(colWeaponType);
-  const hp = parseInt(/<td>(\d*?)\n<\/td>/.exec(colHp)[1], 10);
-  const atk = parseInt(/<td>(\d*?)\n<\/td>/.exec(colAtk)[1], 10);
-  const spd = parseInt(/<td>(\d*?)\n<\/td>/.exec(colSpd)[1], 10);
-  const def = parseInt(/<td>(\d*?)\n<\/td>/.exec(colDef)[1], 10);
-  const res = parseInt(/<td>(\d*?)\n<\/td>/.exec(colRes)[1], 10);
+  const hp = parseInt(/<td>(\d*?)\s<\/td>/.exec(colHp)[1], 10);
+  const atk = parseInt(/<td>(\d*?)\s<\/td>/.exec(colAtk)[1], 10);
+  const spd = parseInt(/<td>(\d*?)\s<\/td>/.exec(colSpd)[1], 10);
+  const def = parseInt(/<td>(\d*?)\s<\/td>/.exec(colDef)[1], 10);
+  const res = parseInt(/<td>(\d*?)\s<\/td>/.exec(colRes)[1], 10);
   const total = hp + atk + spd + def + res;
 
   return {
@@ -64,29 +67,51 @@ const parseHeroAggregateHtml = (heroAggregateHtml) => {
   return mergeAll(tail(heroRows).map(parseHeroRowHtml));
 };
 
-const parseHeroDetailHtml = (heroDetailHtml) => {
-  const heroSkillTables = filter(
-    compose(not, isNil),
-    match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g, heroDetailHtml)
-  );
-
-  // console.log(heroSkillTables);
-  const heroSkills = compose(
-    filter(compose(not, isNil)),
-    flatten,
+// Takes an html table and returns a list of objects corresponding to rows in the table.
+// The keys of the object come from cells in the header and the values come from cells in the row
+const parseTable = (tableHtml) => {
+  const tableHeader = compose(
     map(compose(
+      replace('unlock', 'rarity'),  // Some tables use unlock others use rarity.
+      // convert to snake case.
+      replace(/\s+/g, '_'), 
+      toLower, 
+      // remove unnecessary chars
+      trim,
+      replace(/<th.*?>/g, ''),
+      replace(/<\/th.*?>/g, ''),
+    )),
+    match(/<th(\s.*?)?>(.|\n)*?<\/th.*?>/g) // needs to not match <thead>
+  )(tableHtml);
+
+  const tableRows = compose(
+      // START for each row
       map(compose(
-        trim,
-        replace(/<\/a>/g, ''),
-        replace(/<a.*?>/g, '')
-      )),
-      match(/<a.*?>.*?<\/a>/g)
-    ))
-  )(heroSkillTables);
+        // START for each cell
+        map(compose(
+          // remove unnecessary chars
+          trim,
+          replace(/<\/a>/g, ''),
+          replace(/<a.*?>/g, ''),
+          replace(/<td>/g, ''),
+          replace(/<\/td>/g, ''),
+          replace(/<span.*?>(.|\n)*?<\/span>/g, ''), // remove images
+        )),  
+        match(/<td>(.|\n)*?<\/td>/g))), // END for each cell
+      tail, // remove the Header row
+      match(/<tr.*?>(.|\n)*?<\/tr.*?>/g), // END for each row
+    )(tableHtml);
+    
+  return map(zipObj(tableHeader), tableRows);
+}
 
-  return heroSkills;
-};
-
+// takes the html page for a hero and returns the skills
+const parseHeroSkills = compose(
+  // filter(compose(not, equals({}))),
+  flatten,
+  map(parseTable),
+  filter(compose(not, isNil)),
+  match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g));
 
 /**
  * Raw data fetchers
@@ -123,9 +148,9 @@ async function fetchStats() {
       await Promise.all(
         map(compose(
           promise => {
-            return promise.then(parseHeroDetailHtml)
+            return promise.then(parseHeroSkills)
               .catch(err => {
-                console.error('parseHeroDetailHtml:', err);
+                console.error('parseHeroSkills:', err);
                 return [];
               })
           },
@@ -146,8 +171,8 @@ async function fetchStats() {
   );
 
   // console.log('Hero stats and skills:', heroStatsAndSkills);
-
   fs.writeFileSync('./lib/stats.json', JSON.stringify(heroStatsAndSkills, null, 2));
+  
 }
 
 
