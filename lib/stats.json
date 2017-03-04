@@ -7,7 +7,21 @@
     "spd": 27,
     "def": 25,
     "res": 25,
-    "total": 162
+    "total": 162,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Brave Lance",
+      "Brave Lance+",
+      "Holy Vestments",
+      "Aegis",
+      "HP +3",
+      "HP +4",
+      "HP +5",
+      "Swordbreaker 1",
+      "Swordbreaker 2",
+      "Swordbreaker 3"
+    ]
   },
   "Alfonse": {
     "moveType": "Infantry",
@@ -17,7 +31,21 @@
     "spd": 25,
     "def": 32,
     "res": 22,
-    "total": 173
+    "total": 173,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Fólkvangr",
+      "Daylight",
+      "Sol",
+      "Death Blow 1",
+      "Death Blow 2",
+      "Death Blow 3",
+      "Spur Attack 1",
+      "Spur Attack 2",
+      "Spur Attack 3"
+    ]
   },
   "Anna": {
     "moveType": "Infantry",
@@ -27,7 +55,21 @@
     "spd": 38,
     "def": 22,
     "res": 28,
-    "total": 174
+    "total": 174,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Silver Axe",
+      "Nóatún",
+      "Night Sky",
+      "Astra",
+      "Vantage 1",
+      "Vantage 2",
+      "Vantage 3",
+      "Spur Res 1",
+      "Spur Res 2",
+      "Spur Res 3"
+    ]
   },
   "Arthur": {
     "moveType": "Infantry",
@@ -37,7 +79,20 @@
     "spd": 29,
     "def": 30,
     "res": 25,
-    "total": 176
+    "total": 176,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Emerald Axe",
+      "Emerald Axe+",
+      "Swap",
+      "HP +3",
+      "HP +4",
+      "HP +5",
+      "Lancebreaker 1",
+      "Lancebreaker 2",
+      "Lancebreaker 3"
+    ]
   },
   "Azama": {
     "moveType": "Infantry",
@@ -47,7 +102,19 @@
     "spd": 26,
     "def": 29,
     "res": 29,
-    "total": 158
+    "total": 158,
+    "skills": [
+      "Assault",
+      "Pain",
+      "Heal",
+      "Reconcile",
+      "Martyr",
+      "Imbue",
+      "Solid-Earth Balm",
+      "Threaten Atk 1",
+      "Threaten Atk 2",
+      "Threaten Atk 3"
+    ]
   },
   "Azura": {
     "moveType": "Infantry",
@@ -57,7 +124,22 @@
     "spd": 36,
     "def": 21,
     "res": 28,
-    "total": 164
+    "total": 164,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Sapphire Lance",
+      "Sapphire Lance+",
+      "Sing",
+      "Sing",
+      "Dance",
+      "Speed +1",
+      "Speed +2",
+      "Speed +3",
+      "Fortify Res 1",
+      "Fortify Res 2",
+      "Fortify Res 3"
+    ]
   },
   "Barst": {
     "moveType": "Infantry",
@@ -67,7 +149,18 @@
     "spd": 27,
     "def": 30,
     "res": 13,
-    "total": 154
+    "total": 154,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Brave Axe",
+      "Brave Axe+",
+      "Reposition",
+      "Knock Back",
+      "Spur Atk 1",
+      "Spur Atk 2",
+      "Spur Atk 3"
+    ]
   },
   "Bartre": {
     "moveType": "Infantry",
@@ -77,7 +170,20 @@
     "spd": 28,
     "def": 36,
     "res": 16,
-    "total": 180
+    "total": 180,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Hammer",
+      "Hammer+",
+      "Smite",
+      "Fury 1",
+      "Fury 2",
+      "Fury 3",
+      "Brash Assault 1",
+      "Brash Assault 2",
+      "Brash Assault 3"
+    ]
   },
   "Beruka": {
     "moveType": "Flying",
@@ -87,7 +193,19 @@
     "spd": 23,
     "def": 37,
     "res": 25,
-    "total": 168
+    "total": 168,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Killer Axe",
+      "Killer Axe+",
+      "Night Sky",
+      "Glimmer",
+      "Defiant Def 1",
+      "Defiant Def 2",
+      "Defiant Def 3",
+      "Lunge"
+    ]
   },
   "Caeda": {
     "moveType": "Flying",
@@ -97,7 +215,20 @@
     "spd": 37,
     "def": 24,
     "res": 34,
-    "total": 168
+    "total": 168,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Armorslayer",
+      "Armorslayer+",
+      "Rally Speed",
+      "Darting Blow 1",
+      "Darting Blow 2",
+      "Darting Blow 3",
+      "Fortify Res 1",
+      "Fortify Res 2",
+      "Fortify Fliers"
+    ]
   },
   "Cain": {
     "moveType": "Cavalry",
@@ -107,7 +238,21 @@
     "spd": 27,
     "def": 27,
     "res": 21,
-    "total": 157
+    "total": 157,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Brave Sword",
+      "Brave Sword+",
+      "Buckler",
+      "Escutcheon",
+      "Wings of Mercy 1",
+      "Wings of Mercy 2",
+      "Wings of Mercy 3",
+      "Threaten Atk 1",
+      "Threaten Atk 2",
+      "Threaten Atk 3"
+    ]
   },
   "Camilla": {
     "moveType": "Flying",
@@ -117,7 +262,21 @@
     "spd": 27,
     "def": 28,
     "res": 31,
-    "total": 161
+    "total": 161,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Brave Axe",
+      "Brave Axe+",
+      "Dragon Gaze",
+      "Draconic Aura",
+      "Darting Blow 1",
+      "Darting Blow 2",
+      "Darting Blow 3",
+      "Savage Blow 1",
+      "Savage Blow 2",
+      "Savage Blow 3"
+    ]
   },
   "Catria": {
     "moveType": "Flying",
@@ -127,7 +286,21 @@
     "spd": 34,
     "def": 29,
     "res": 25,
-    "total": 169
+    "total": 169,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Killer Lance",
+      "Killer Lance+",
+      "New Moon",
+      "Luna",
+      "Armored Blow 1",
+      "Armored Blow 2",
+      "Armored Blow 3",
+      "Seal Atk 1",
+      "Seal Atk 2",
+      "Seal Atk 3"
+    ]
   },
   "Cecilia": {
     "moveType": "Cavalry",
@@ -137,7 +310,20 @@
     "spd": 22,
     "def": 22,
     "res": 29,
-    "total": 155
+    "total": 155,
+    "skills": [
+      "Wind",
+      "Elwind",
+      "Gronnraven",
+      "Gronnraven+",
+      "Rally Resistance",
+      "Attack +1",
+      "Attack +2",
+      "Attack +3",
+      "Escape Route 1",
+      "Escape Route 2",
+      "Escape Route 3"
+    ]
   },
   "Cherche": {
     "moveType": "Flying",
@@ -147,7 +333,20 @@
     "spd": 25,
     "def": 32,
     "res": 12,
-    "total": 171
+    "total": 171,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Hammer",
+      "Hammer+",
+      "Pivot",
+      "Attack +1",
+      "Attack +2",
+      "Attack +3",
+      "Fortify Def 1",
+      "Fortify Def 2",
+      "Fortify Def 3"
+    ]
   },
   "Chrom": {
     "moveType": "Infantry",
@@ -157,7 +356,22 @@
     "spd": 25,
     "def": 31,
     "res": 17,
-    "total": 173
+    "total": 173,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Falchion",
+      "Daylight",
+      "Sol",
+      "Aether",
+      "Defiant Def 1",
+      "Defiant Def 2",
+      "Defiant Def 3",
+      "Spur Def 1",
+      "Spur Def 2",
+      "Spur Def 3"
+    ]
   },
   "Clarine": {
     "moveType": "Cavalry",
@@ -167,7 +381,19 @@
     "spd": 33,
     "def": 25,
     "res": 32,
-    "total": 162
+    "total": 162,
+    "skills": [
+      "Assault",
+      "Fear",
+      "Heal",
+      "Reconcile",
+      "Martyr",
+      "Imbue",
+      "Swift-Winds Balm",
+      "Resistance +1",
+      "Resistance +2",
+      "Resistance +3"
+    ]
   },
   "Cordelia": {
     "moveType": "Flying",
@@ -177,7 +403,22 @@
     "spd": 30,
     "def": 22,
     "res": 25,
-    "total": 160
+    "total": 160,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Brave Lance",
+      "Brave Lance+",
+      "Night Sky",
+      "Astra",
+      "Galeforce",
+      "Triangle Adept 1",
+      "Triangle Adept 2",
+      "Triangle Adept 3",
+      "Pass 1",
+      "Pass 2",
+      "Pass 3"
+    ]
   },
   "Corrin (F)": {
     "moveType": "Infantry",
@@ -187,7 +428,21 @@
     "spd": 34,
     "def": 34,
     "res": 21,
-    "total": 170
+    "total": 170,
+    "skills": [
+      "Fire Breath",
+      "Fire Breath+",
+      "Dark Breath",
+      "Dark Breath+",
+      "Dragon Gaze",
+      "Draconic Aura",
+      "Seal Res 1",
+      "Seal Res 2",
+      "Seal Res 3",
+      "Hone Atk 1",
+      "Hone Atk 2",
+      "Hone Atk 3"
+    ]
   },
   "Corrin (M)": {
     "moveType": "Infantry",
@@ -197,7 +452,21 @@
     "spd": 32,
     "def": 31,
     "res": 24,
-    "total": 177
+    "total": 177,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Yato",
+      "Dragon Gaze",
+      "Dragon Fang",
+      "Defense +1",
+      "Defense +2",
+      "Defense +3",
+      "Obstruct 1",
+      "Obstruct 2",
+      "Obstruct 3"
+    ]
   },
   "Donnel": {
     "moveType": "Infantry",
@@ -207,7 +476,18 @@
     "spd": 24,
     "def": 32,
     "res": 23,
-    "total": 173
+    "total": 173,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Brave Lance",
+      "Brave Lance+",
+      "Reciprocal Aid",
+      "HP +3",
+      "HP +4",
+      "HP +5",
+      "Drag Back"
+    ]
   },
   "Draug": {
     "moveType": "Armored",
@@ -217,7 +497,19 @@
     "spd": 24,
     "def": 39,
     "res": 18,
-    "total": 172
+    "total": 172,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Brave Sword",
+      "Brave Sword+",
+      "Buckler",
+      "Pavise",
+      "Lunge",
+      "Spur Def 1",
+      "Spur Def 2",
+      "Ward Armor"
+    ]
   },
   "Effie": {
     "moveType": "Armored",
@@ -227,7 +519,20 @@
     "spd": 22,
     "def": 33,
     "res": 23,
-    "total": 183
+    "total": 183,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Silver Lance",
+      "Silver Lance+",
+      "Smite",
+      "Death Blow 1",
+      "Death Blow 2",
+      "Death Blow 3",
+      "Wary Fighter 1",
+      "Wary Fighter 2",
+      "Wary Fighter 3"
+    ]
   },
   "Eirika": {
     "moveType": "Infantry",
@@ -237,7 +542,18 @@
     "spd": 35,
     "def": 26,
     "res": 28,
-    "total": 173
+    "total": 173,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Sieglinde",
+      "Pivot",
+      "Drag Back",
+      "Hone Spd 1",
+      "Hone Spd 2",
+      "Hone Spd 3"
+    ]
   },
   "Eldigan": {
     "moveType": "Cavalry",
@@ -247,7 +563,19 @@
     "spd": 27,
     "def": 37,
     "res": 22,
-    "total": 182
+    "total": 182,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Killing Edge",
+      "Mystletainn",
+      "Rising Light",
+      "Growing Light",
+      "Fury 1",
+      "Fury 2",
+      "Fury 3",
+      "Lunge"
+    ]
   },
   "Elise": {
     "moveType": "Cavalry",
@@ -257,7 +585,19 @@
     "spd": 32,
     "def": 19,
     "res": 32,
-    "total": 151
+    "total": 151,
+    "skills": [
+      "Assault",
+      "Gravity",
+      "Heal",
+      "Mend",
+      "Recover",
+      "Imbue",
+      "Kindled-Fire Balm",
+      "Live to Serve 1",
+      "Live to Serve 2",
+      "Live to Serve 3"
+    ]
   },
   "Eliwood": {
     "moveType": "Cavalry",
@@ -267,7 +607,21 @@
     "spd": 30,
     "def": 23,
     "res": 32,
-    "total": 171
+    "total": 171,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Durandal",
+      "Holy Vestments",
+      "Sacred Cowl",
+      "Axebreaker 1",
+      "Axebreaker 2",
+      "Axebreaker 3",
+      "Spur Res 1",
+      "Spur Res 2",
+      "Ward Cavalry"
+    ]
   },
   "Ephraim": {
     "moveType": "Infantry",
@@ -277,7 +631,21 @@
     "spd": 25,
     "def": 32,
     "res": 20,
-    "total": 173
+    "total": 173,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Heavy Spear",
+      "Siegmund",
+      "New Moon",
+      "Moonbow",
+      "Seal Def 1",
+      "Seal Def 2",
+      "Seal Def 3",
+      "Threaten Def 1",
+      "Threaten Def 2",
+      "Threaten Def 3"
+    ]
   },
   "Est": {
     "moveType": "Flying",
@@ -287,7 +655,20 @@
     "spd": 30,
     "def": 24,
     "res": 32,
-    "total": 169
+    "total": 169,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Heavy Spear",
+      "Heavy Spear+",
+      "Shove",
+      "Defiant Res 1",
+      "Defiant Res 2",
+      "Defiant Res 3",
+      "Seal Spd 1",
+      "Seal Spd 2",
+      "Seal Spd 3"
+    ]
   },
   "Fae": {
     "moveType": "Infantry",
@@ -297,7 +678,20 @@
     "spd": 28,
     "def": 25,
     "res": 30,
-    "total": 175
+    "total": 175,
+    "skills": [
+      "Fire Breath",
+      "Fire Breath+",
+      "Light Breath",
+      "Light Breath+",
+      "Draw Back",
+      "Renewal 1",
+      "Renewal 2",
+      "Renewal 3",
+      "Threaten Atk 1",
+      "Threaten Atk 2",
+      "Threaten Atk 3"
+    ]
   },
   "Felicia": {
     "moveType": "Infantry",
@@ -307,7 +701,21 @@
     "spd": 37,
     "def": 18,
     "res": 38,
-    "total": 160
+    "total": 160,
+    "skills": [
+      "Iron Dagger",
+      "Steel Dagger",
+      "Silver Dagger",
+      "Silver Dagger+",
+      "Chilling Wind",
+      "Glacies",
+      "Resistance +1",
+      "Resistance +2",
+      "Resistance +3",
+      "Breath of Life 1",
+      "Breath of Life 2",
+      "Breath of Life 3"
+    ]
   },
   "Fir": {
     "moveType": "Infantry",
@@ -317,7 +725,21 @@
     "spd": 39,
     "def": 24,
     "res": 34,
-    "total": 171
+    "total": 171,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Killing Edge",
+      "Killing Edge+",
+      "Chilling Wind",
+      "Glacies",
+      "Speed +1",
+      "Speed +2",
+      "Speed +3",
+      "Pass 1",
+      "Pass 2",
+      "Pass 3"
+    ]
   },
   "Florina": {
     "moveType": "Flying",
@@ -327,7 +749,20 @@
     "spd": 28,
     "def": 25,
     "res": 34,
-    "total": 170
+    "total": 170,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Heavy Spear",
+      "Heavy Spear+",
+      "Ardent Sacrifice",
+      "Darting Blow 1",
+      "Darting Blow 2",
+      "Darting Blow 3",
+      "Breath of Life 1",
+      "Breath of Life 2",
+      "Breath of Life 3"
+    ]
   },
   "Frederick": {
     "moveType": "Cavalry",
@@ -337,7 +772,21 @@
     "spd": 25,
     "def": 36,
     "res": 14,
-    "total": 165
+    "total": 165,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Hammer",
+      "Hammer+",
+      "New Moon",
+      "Luna",
+      "Wings of Mercy 1",
+      "Wings of Mercy 2",
+      "Wings of Mercy 3",
+      "Fortify Def 1",
+      "Fortify Def 2",
+      "Fortify Def 3"
+    ]
   },
   "Gaius": {
     "moveType": "Infantry",
@@ -347,7 +796,20 @@
     "spd": 36,
     "def": 22,
     "res": 19,
-    "total": 155
+    "total": 155,
+    "skills": [
+      "Iron Dagger",
+      "Steel Dagger",
+      "Rogue Dagger",
+      "Rogue Dagger+",
+      "Rally Speed",
+      "Defiant Atk 1",
+      "Defiant Atk 2",
+      "Defiant Atk 3",
+      "Pass 1",
+      "Pass 2",
+      "Pass 3"
+    ]
   },
   "Gordin": {
     "moveType": "Infantry",
@@ -357,7 +819,20 @@
     "spd": 20,
     "def": 32,
     "res": 17,
-    "total": 153
+    "total": 153,
+    "skills": [
+      "Iron Bow",
+      "Steel Bow",
+      "Brave Bow",
+      "Brave Bow+",
+      "Shove",
+      "Attack +1",
+      "Attack +2",
+      "Attack +3",
+      "Vantage 1",
+      "Vantage 2",
+      "Vantage 3"
+    ]
   },
   "Gunter": {
     "moveType": "Cavalry",
@@ -367,7 +842,20 @@
     "spd": 24,
     "def": 33,
     "res": 21,
-    "total": 164
+    "total": 164,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Silver Axe",
+      "Silver Axe+",
+      "Harsh Command",
+      "Armored Blow 1",
+      "Armored Blow 2",
+      "Armored Blow 3",
+      "Hone Atk 1",
+      "Hone Atk 2",
+      "Hone Cavalry"
+    ]
   },
   "Gwendolyn": {
     "moveType": "Armored",
@@ -377,7 +865,19 @@
     "spd": 24,
     "def": 41,
     "res": 24,
-    "total": 179
+    "total": 179,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Killer Lance",
+      "Killer Lance+",
+      "Buckler",
+      "Escutcheon",
+      "Drag Back",
+      "Hone Atk 1",
+      "Hone Atk 2",
+      "Hone Armor"
+    ]
   },
   "Hana": {
     "moveType": "Infantry",
@@ -387,7 +887,20 @@
     "spd": 44,
     "def": 17,
     "res": 18,
-    "total": 168
+    "total": 168,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Armorslayer",
+      "Armorslayer+",
+      "Rally Attack",
+      "Life and Death 1",
+      "Life and Death 2",
+      "Life and Death 3",
+      "Obstruct 1",
+      "Obstruct 2",
+      "Obstruct 3"
+    ]
   },
   "Hawkeye": {
     "moveType": "Infantry",
@@ -397,7 +910,21 @@
     "spd": 22,
     "def": 28,
     "res": 30,
-    "total": 169
+    "total": 169,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Killer Axe",
+      "Killer Axe+",
+      "Rising Light",
+      "Growing Light",
+      "Death Blow 1",
+      "Death Blow 2",
+      "Death Blow 3",
+      "Threaten Atk 1",
+      "Threaten Atk 2",
+      "Threaten Atk 3"
+    ]
   },
   "Hector": {
     "moveType": "Armored",
@@ -407,7 +934,19 @@
     "spd": 24,
     "def": 37,
     "res": 19,
-    "total": 184
+    "total": 184,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Silver Axe",
+      "Armads",
+      "Buckler",
+      "Pavise",
+      "Distant Counter",
+      "Spur Atk 1",
+      "Spur Atk 2",
+      "Goad Armor"
+    ]
   },
   "Henry": {
     "moveType": "Infantry",
@@ -417,7 +956,21 @@
     "spd": 22,
     "def": 32,
     "res": 29,
-    "total": 159
+    "total": 159,
+    "skills": [
+      "Flux",
+      "Ruin",
+      "Rauðrraven",
+      "Rauðrraven+",
+      "Glowing Ember",
+      "Ignis",
+      "Defiant Def 1",
+      "Defiant Def 2",
+      "Defiant Def 3",
+      "G Tomebreaker 1",
+      "G Tomebreaker 2",
+      "G Tomebreaker 3"
+    ]
   },
   "Hinata": {
     "moveType": "Infantry",
@@ -427,7 +980,21 @@
     "spd": 27,
     "def": 42,
     "res": 21,
-    "total": 181
+    "total": 181,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Ruby Sword",
+      "Ruby Sword+",
+      "Buckler",
+      "Pavise",
+      "Fury 1",
+      "Fury 2",
+      "Fury 3",
+      "Brash Assault 1",
+      "Brash Assault 2",
+      "Brash Assault 3"
+    ]
   },
   "Hinoka": {
     "moveType": "Flying",
@@ -437,17 +1004,45 @@
     "spd": 27,
     "def": 25,
     "res": 24,
-    "total": 160
+    "total": 160,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Brave Lance",
+      "Brave Lance+",
+      "Rising Wind",
+      "Blazing Wind",
+      "Defiant Def 1",
+      "Defiant Def 2",
+      "Defiant Def 3",
+      "Hone Spd 1",
+      "Hone Spd 2",
+      "Hone Fliers"
+    ]
   },
   "Jagen": {
     "moveType": "Cavalry",
     "weaponType": "Blue Lance",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 36,
+    "atk": 45,
+    "spd": 27,
+    "def": 29,
+    "res": 38,
+    "total": 175,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Silver Lance",
+      "Silver Lance+",
+      "Holy Vestments",
+      "Aegis",
+      "Fury 1",
+      "Fury 2",
+      "Fury 3",
+      "Fortify Res 1",
+      "Fortify Res 2",
+      "Fortify Cavalry"
+    ]
   },
   "Jakob": {
     "moveType": "Infantry",
@@ -457,7 +1052,20 @@
     "spd": 31,
     "def": 28,
     "res": 24,
-    "total": 161
+    "total": 161,
+    "skills": [
+      "Iron Dagger",
+      "Steel Dagger",
+      "Silver Dagger",
+      "Silver Dagger+",
+      "Rally Resistance",
+      "Defense +1",
+      "Defense +2",
+      "Defense +3",
+      "Renewal 1",
+      "Renewal 2",
+      "Renewal 3"
+    ]
   },
   "Jeorge": {
     "moveType": "Infantry",
@@ -467,7 +1075,21 @@
     "spd": 32,
     "def": 24,
     "res": 22,
-    "total": 161
+    "total": 161,
+    "skills": [
+      "Iron Bow",
+      "Steel Bow",
+      "Silver Bow",
+      "Parthia",
+      "Rising Flame",
+      "Blazing Flame",
+      "Seal Atk 1",
+      "Seal Atk 2",
+      "Seal Atk 3",
+      "Spur Spd 1",
+      "Spur Spd 2",
+      "Spur Spd 3"
+    ]
   },
   "Julia": {
     "moveType": "Infantry",
@@ -477,7 +1099,21 @@
     "spd": 26,
     "def": 17,
     "res": 35,
-    "total": 165
+    "total": 165,
+    "skills": [
+      "Wind",
+      "Elwind",
+      "Rexcalibur",
+      "Naga",
+      "Dragon Gaze",
+      "Dragon Fang",
+      "Resistance +1",
+      "Resistance +2",
+      "Resistance +3",
+      "Breath of Life 1",
+      "Breath of Life 2",
+      "Breath of Life 3"
+    ]
   },
   "Kagero": {
     "moveType": "Infantry",
@@ -487,7 +1123,21 @@
     "spd": 32,
     "def": 22,
     "res": 28,
-    "total": 153
+    "total": 153,
+    "skills": [
+      "Iron Dagger",
+      "Steel Dagger",
+      "Poison Dagger",
+      "Poison Dagger+",
+      "Retribution",
+      "Reprisal",
+      "Warding Blow 1",
+      "Warding Blow 2",
+      "Warding Blow 3",
+      "Daggerbreaker 1",
+      "Daggerbreaker 2",
+      "Daggerbreaker 3"
+    ]
   },
   "Klein": {
     "moveType": "Infantry",
@@ -497,17 +1147,43 @@
     "spd": 28,
     "def": 20,
     "res": 24,
-    "total": 150
+    "total": 150,
+    "skills": [
+      "Iron Bow",
+      "Steel Bow",
+      "Brave Bow",
+      "Brave Bow+",
+      "Chilling Wind",
+      "Glacies",
+      "Death Blow 1",
+      "Death Blow 2",
+      "Death Blow 3",
+      "Quick Riposte 1",
+      "Quick Riposte 2",
+      "Quick Riposte 3"
+    ]
   },
   "Lachesis": {
     "moveType": "Infantry",
     "weaponType": "Neutral Staff",
-    "hp": null,
-    "atk": null,
-    "spd": null,
-    "def": null,
-    "res": null,
-    "total": null
+    "hp": 39,
+    "atk": 42,
+    "spd": 25,
+    "def": 22,
+    "res": 30,
+    "total": 158,
+    "skills": [
+      "Assault",
+      "Absorb",
+      "Heal",
+      "Mend",
+      "Physic",
+      "Imbue",
+      "Solid-Earth Balm",
+      "Spur Res 1",
+      "Spur Res 2",
+      "Spur Res 3"
+    ]
   },
   "Laslow": {
     "moveType": "Infantry",
@@ -517,7 +1193,21 @@
     "spd": 26,
     "def": 33,
     "res": 19,
-    "total": 172
+    "total": 172,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Silver Sword+",
+      "Daylight",
+      "Noontime",
+      "Axebreaker 1",
+      "Axebreaker 2",
+      "Axebreaker 3",
+      "Hone Spd 1",
+      "Hone Spd 2",
+      "Hone Spd 3"
+    ]
   },
   "Leo": {
     "moveType": "Cavalry",
@@ -527,7 +1217,21 @@
     "spd": 22,
     "def": 25,
     "res": 30,
-    "total": 159
+    "total": 159,
+    "skills": [
+      "Flux",
+      "Ruin",
+      "Fenrir",
+      "Brynhildr",
+      "Rising Light",
+      "Blazing Light",
+      "Quick Riposte 1",
+      "Quick Riposte 2",
+      "Quick Riposte 3",
+      "Savage Blow 1",
+      "Savage Blow 2",
+      "Savage Blow 3"
+    ]
   },
   "Lilina": {
     "moveType": "Infantry",
@@ -537,7 +1241,21 @@
     "spd": 25,
     "def": 19,
     "res": 31,
-    "total": 163
+    "total": 163,
+    "skills": [
+      "Fire",
+      "Elfire",
+      "Bolganone",
+      "Bolganone+",
+      "Rising Flame",
+      "Growing Flame",
+      "Attack +1",
+      "Attack +2",
+      "Attack +3",
+      "Spur Atk 1",
+      "Spur Atk 2",
+      "Spur Atk 3"
+    ]
   },
   "Linde": {
     "moveType": "Infantry",
@@ -547,7 +1265,13 @@
     "spd": 39,
     "def": 14,
     "res": 27,
-    "total": 164
+    "total": 164,
+    "skills": [
+      "Thunder",
+      "Elthunder",
+      "Thoron",
+      "Aura"
+    ]
   },
   "Lissa": {
     "moveType": "Infantry",
@@ -557,7 +1281,19 @@
     "spd": 25,
     "def": 28,
     "res": 30,
-    "total": 158
+    "total": 158,
+    "skills": [
+      "Assault",
+      "Gravity",
+      "Heal",
+      "Reconcile",
+      "Rehabilitate",
+      "Imbue",
+      "Kindled-Fire Balm",
+      "Renewal 1",
+      "Renewal 2",
+      "Renewal 3"
+    ]
   },
   "Lon'qu": {
     "moveType": "Infantry",
@@ -567,7 +1303,21 @@
     "spd": 42,
     "def": 22,
     "res": 22,
-    "total": 171
+    "total": 171,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Killing Edge",
+      "Killing Edge+",
+      "Night Sky",
+      "Glimmer",
+      "Speed +1",
+      "Speed +2",
+      "Speed +3",
+      "Vantage 1",
+      "Vantage 2",
+      "Vantage 3"
+    ]
   },
   "Lucina": {
     "moveType": "Infantry",
@@ -577,7 +1327,22 @@
     "spd": 36,
     "def": 25,
     "res": 19,
-    "total": 173
+    "total": 173,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Falchion",
+      "Aether",
+      "New Moon",
+      "Luna",
+      "Defiant Spd 1",
+      "Defiant Spd 2",
+      "Defiant Spd 3",
+      "Spur Atk 1",
+      "Spur Atk 2",
+      "Spur Atk 3"
+    ]
   },
   "Lyn": {
     "moveType": "Infantry",
@@ -587,7 +1352,22 @@
     "spd": 37,
     "def": 26,
     "res": 29,
-    "total": 173
+    "total": 173,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Sol Katti",
+      "Night Sky",
+      "Astra",
+      "Galeforce",
+      "Defiant Atk 1",
+      "Defiant Atk 2",
+      "Defiant Atk 3",
+      "Spur Spd 1",
+      "Spur Spd 2",
+      "Spur Spd 3"
+    ]
   },
   "Maria": {
     "moveType": "Infantry",
@@ -597,7 +1377,19 @@
     "spd": 34,
     "def": 19,
     "res": 32,
-    "total": 158
+    "total": 158,
+    "skills": [
+      "Assault",
+      "Panic",
+      "Heal",
+      "Mend",
+      "Physic",
+      "Miracle",
+      "Imbue",
+      "Fortify Res 1",
+      "Fortify Res 2",
+      "Fortify Res 3"
+    ]
   },
   "Marth": {
     "moveType": "Infantry",
@@ -607,7 +1399,20 @@
     "spd": 34,
     "def": 29,
     "res": 23,
-    "total": 174
+    "total": 174,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Falchion",
+      "Pivot",
+      "Escape Route 1",
+      "Escape Route 2",
+      "Escape Route 3",
+      "Spur Spd 1",
+      "Spur Spd 2",
+      "Spur Spd 3"
+    ]
   },
   "Matthew": {
     "moveType": "Infantry",
@@ -617,7 +1422,20 @@
     "spd": 34,
     "def": 27,
     "res": 16,
-    "total": 154
+    "total": 154,
+    "skills": [
+      "Iron Dagger",
+      "Steel Dagger",
+      "Rogue Dagger",
+      "Rogue Dagger+",
+      "Reciprocal Aid",
+      "Poison Strike 1",
+      "Poison Strike 2",
+      "Poison Strike 3",
+      "Hone Spd 1",
+      "Hone Spd 2",
+      "Hone Spd 3"
+    ]
   },
   "Merric": {
     "moveType": "Infantry",
@@ -627,7 +1445,21 @@
     "spd": 32,
     "def": 28,
     "res": 19,
-    "total": 167
+    "total": 167,
+    "skills": [
+      "Wind",
+      "Elwind",
+      "Rexcalibur",
+      "Excalibur",
+      "Rising Wind",
+      "Growing Wind",
+      "HP+3",
+      "HP+4",
+      "HP+5",
+      "Spur Res 1",
+      "Spur Res 2",
+      "Spur Res 3"
+    ]
   },
   "Minerva": {
     "moveType": "Flying",
@@ -637,7 +1469,21 @@
     "spd": 38,
     "def": 27,
     "res": 17,
-    "total": 174
+    "total": 174,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Silver Axe",
+      "Hauteclere",
+      "Holy Vestments",
+      "Sacred Cowl",
+      "Life and Death 1",
+      "Life and Death 2",
+      "Life and Death 3",
+      "Spur Def 1",
+      "Spur Def 2",
+      "Ward Fliers"
+    ]
   },
   "Narcian": {
     "moveType": "Flying",
@@ -647,7 +1493,21 @@
     "spd": 29,
     "def": 32,
     "res": 26,
-    "total": 170
+    "total": 170,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Emerald Axe",
+      "Emerald Axe+",
+      "Retribution",
+      "Vengeance",
+      "Lancebreaker 1",
+      "Lancebreaker 2",
+      "Lancebreaker 3",
+      "Savage Blow 1",
+      "Savage Blow 2",
+      "Savage Blow 3"
+    ]
   },
   "Niles": {
     "moveType": "Infantry",
@@ -657,7 +1517,21 @@
     "spd": 34,
     "def": 17,
     "res": 34,
-    "total": 156
+    "total": 156,
+    "skills": [
+      "Iron Bow",
+      "Steel Bow",
+      "Killer Bow",
+      "Killer Bow+",
+      "Chilling Wind",
+      "Iceberg",
+      "Warding Blow 1",
+      "Warding Blow 2",
+      "Warding Blow 3",
+      "Spur Res 1",
+      "Spur Res 2",
+      "Spur Res 3"
+    ]
   },
   "Nino": {
     "moveType": "Infantry",
@@ -667,7 +1541,20 @@
     "spd": 36,
     "def": 19,
     "res": 29,
-    "total": 163
+    "total": 163,
+    "skills": [
+      "Wind",
+      "Elwind",
+      "Gronnblade",
+      "Gronnblade+",
+      "Draw Back",
+      "Resistance +1",
+      "Resistance +2",
+      "Resistance +3",
+      "Hone Atk 1",
+      "Hone Atk 2",
+      "Hone Atk 3"
+    ]
   },
   "Nowi": {
     "moveType": "Infantry",
@@ -677,27 +1564,67 @@
     "spd": 27,
     "def": 33,
     "res": 27,
-    "total": 177
+    "total": 177,
+    "skills": [
+      "Fire Breath",
+      "Fire Breath+",
+      "Lightning Breath",
+      "Lightning Breath+",
+      "Rally Defense",
+      "Defense +1",
+      "Defense +2",
+      "Defense +3",
+      "Threaten Res 1",
+      "Threaten Res 2",
+      "Threaten Res 3"
+    ]
   },
   "Oboro": {
     "moveType": "Infantry",
     "weaponType": "Blue Lance",
-    "hp": null,
-    "atk": null,
+    "hp": 40,
+    "atk": 44,
     "spd": 26,
     "def": 35,
-    "res": null,
-    "total": null
+    "res": 24,
+    "total": 169,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Heavy Spear",
+      "Heavy Spear+",
+      "Rally Defense",
+      "Seal Def 1",
+      "Seal Def 2",
+      "Seal Def 3",
+      "Threaten Res 1",
+      "Threaten Res 2",
+      "Threaten Res 3"
+    ]
   },
   "Odin": {
     "moveType": "Infantry",
     "weaponType": "Blue Tome",
     "hp": 43,
     "atk": 35,
-    "spd": 35,
+    "spd": 32,
     "def": 25,
     "res": 22,
-    "total": 160
+    "total": 157,
+    "skills": [
+      "Thunder",
+      "Elthunder",
+      "Blárblade",
+      "Blárblade+",
+      "New Moon",
+      "Moonbow",
+      "Defiant Atk 1",
+      "Defiant Atk 2",
+      "Defiant Atk 3",
+      "R Tomebreaker 1",
+      "R Tomebreaker 2",
+      "R Tomebreaker 3"
+    ]
   },
   "Ogma": {
     "moveType": "Infantry",
@@ -707,7 +1634,21 @@
     "spd": 29,
     "def": 28,
     "res": 13,
-    "total": 160
+    "total": 160,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Brave Sword",
+      "Brave Sword+",
+      "Daylight",
+      "Noontime",
+      "Defiant Atk 1",
+      "Defiant Atk 2",
+      "Defiant Atk 3",
+      "Spur Atk 1",
+      "Spur Atk 2",
+      "Spur Atk 3"
+    ]
   },
   "Olivia": {
     "moveType": "Infantry",
@@ -717,17 +1658,41 @@
     "spd": 33,
     "def": 27,
     "res": 26,
-    "total": 165
+    "total": 165,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Silver Sword+",
+      "Dance",
+      "Knock Back",
+      "Hone Atk 1",
+      "Hone Atk 2",
+      "Hone Atk 3"
+    ]
   },
   "Olwen": {
     "moveType": "Cavalry",
     "weaponType": "Blue Tome",
     "hp": 34,
     "atk": 35,
-    "spd": 26,
-    "def": 29,
+    "spd": 29,
+    "def": 20,
     "res": 30,
-    "total": 154
+    "total": 148,
+    "skills": [
+      "Thunder",
+      "Elthunder",
+      "Thoron",
+      "Dire Thunder",
+      "Reposition",
+      "Warding Blow 1",
+      "Warding Blow 2",
+      "Warding Blow 3",
+      "Spur Res 1",
+      "Spur Res 2",
+      "Ward Cavalry"
+    ]
   },
   "Palla": {
     "moveType": "Flying",
@@ -737,7 +1702,21 @@
     "spd": 31,
     "def": 24,
     "res": 30,
-    "total": 170
+    "total": 170,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Ruby Sword",
+      "Ruby Sword+",
+      "New Moon",
+      "Moonbow",
+      "Wings of Mercy 1",
+      "Wings of Mercy 2",
+      "Wings of Mercy 3",
+      "Spur Spd 1",
+      "Spur Spd 2",
+      "Goad Fliers"
+    ]
   },
   "Peri": {
     "moveType": "Cavalry",
@@ -747,7 +1726,21 @@
     "spd": 33,
     "def": 23,
     "res": 33,
-    "total": 168
+    "total": 168,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Killer Lance",
+      "Killer Lance+",
+      "Night Sky",
+      "Glimmer",
+      "Resistance +1",
+      "Resistance +2",
+      "Resistance +3",
+      "Threaten Def 1",
+      "Threaten Def 2",
+      "Threaten Def 3"
+    ]
   },
   "Raigh": {
     "moveType": "Infantry",
@@ -757,17 +1750,44 @@
     "spd": 29,
     "def": 22,
     "res": 29,
-    "total": 163
+    "total": 163,
+    "skills": [
+      "Flux",
+      "Ruin",
+      "Rauðrwolf",
+      "Rauðrwolf+",
+      "Rally Attack",
+      "HP +3",
+      "HP +4",
+      "HP +5",
+      "Seal Res 1",
+      "Seal Res 2",
+      "Seal Res 3"
+    ]
   },
   "Raven": {
     "moveType": "Infantry",
     "weaponType": "Green Axe",
     "hp": 41,
     "atk": 42,
-    "spd": 33,
+    "spd": 30,
     "def": 25,
     "res": 22,
-    "total": 163
+    "total": 160,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Brave Axe",
+      "Brave Axe+",
+      "Daylight",
+      "Sol",
+      "Defiant Spd 1",
+      "Defiant Spd 2",
+      "Defiant Spd 3",
+      "Threaten Def 1",
+      "Threaten Def 2",
+      "Threaten Def 3"
+    ]
   },
   "Reinhardt": {
     "moveType": "Cavalry",
@@ -777,7 +1797,21 @@
     "spd": 18,
     "def": 27,
     "res": 25,
-    "total": 149
+    "total": 149,
+    "skills": [
+      "Thunder",
+      "Elthunder",
+      "Thoron",
+      "Dire Thunder",
+      "Rising Thunder",
+      "Blazing Thunder",
+      "Vantage 1",
+      "Vantage 2",
+      "Vantage 3",
+      "Spur Atk 1",
+      "Spur Atk 2",
+      "Goad Cavalry"
+    ]
   },
   "Robin (F)": {
     "moveType": "Infantry",
@@ -787,7 +1821,21 @@
     "spd": 29,
     "def": 29,
     "res": 22,
-    "total": 159
+    "total": 159,
+    "skills": [
+      "Wind",
+      "Elwind",
+      "Gronnwolf",
+      "Gronnwolf+",
+      "Glowing Ember",
+      "Ignis",
+      "Defiant Res 1",
+      "Defiant Res 2",
+      "Defiant Res 3",
+      "B Tomebreaker 1",
+      "B Tomebreaker 2",
+      "B Tomebreaker 3"
+    ]
   },
   "Robin (M)": {
     "moveType": "Infantry",
@@ -797,7 +1845,21 @@
     "spd": 29,
     "def": 29,
     "res": 22,
-    "total": 160
+    "total": 160,
+    "skills": [
+      "Thunder",
+      "Elthunder",
+      "Blárraven",
+      "Blárraven+",
+      "Glowing Ember",
+      "Bonfire",
+      "Defiant Spd 1",
+      "Defiant Spd 2",
+      "Defiant Spd 3",
+      "Spur Def 1",
+      "Spur Def 2",
+      "Spur Def 3"
+    ]
   },
   "Roy": {
     "moveType": "Infantry",
@@ -807,7 +1869,20 @@
     "spd": 31,
     "def": 25,
     "res": 28,
-    "total": 174
+    "total": 174,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Binding Blade",
+      "Shove",
+      "Triangle Adept 1",
+      "Triangle Adept 2",
+      "Triangle Adept 3",
+      "Seal Def 1",
+      "Seal Def 2",
+      "Seal Def 3"
+    ]
   },
   "Ryoma": {
     "moveType": "Infantry",
@@ -817,7 +1892,21 @@
     "spd": 35,
     "def": 27,
     "res": 21,
-    "total": 174
+    "total": 174,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Raijinto",
+      "Night Sky",
+      "Astra",
+      "Defiant Atk 1",
+      "Defiant Atk 2",
+      "Defiant Atk 3",
+      "Hone Spd 1",
+      "Hone Spd 2",
+      "Hone Spd 3"
+    ]
   },
   "Saizo": {
     "moveType": "Infantry",
@@ -827,7 +1916,20 @@
     "spd": 34,
     "def": 33,
     "res": 16,
-    "total": 157
+    "total": 157,
+    "skills": [
+      "Iron Dagger",
+      "Steel Dagger",
+      "Smoke Dagger",
+      "Smoke Dagger+",
+      "Harsh Command",
+      "Poison Strike 1",
+      "Poison Strike 2",
+      "Poison Strike 3",
+      "Spur Spd 1",
+      "Spur Spd 2",
+      "Spur Spd 3"
+    ]
   },
   "Sakura": {
     "moveType": "Infantry",
@@ -837,7 +1939,19 @@
     "spd": 30,
     "def": 24,
     "res": 30,
-    "total": 158
+    "total": 158,
+    "skills": [
+      "Assault",
+      "Fear",
+      "Heal",
+      "Mend",
+      "Physic",
+      "Imbue",
+      "Still-Water Balm",
+      "Fortify Def 1",
+      "Fortify Def 2",
+      "Fortify Def 3"
+    ]
   },
   "Sanaki": {
     "moveType": "Infantry",
@@ -847,7 +1961,20 @@
     "spd": 26,
     "def": 17,
     "res": 34,
-    "total": 161
+    "total": 161,
+    "skills": [
+      "Fire",
+      "Elfire",
+      "Bolganone",
+      "Cymbeline",
+      "Harsh Command",
+      "Triangle Adept 1",
+      "Triangle Adept 2",
+      "Triangle Adept 3",
+      "Hone Atk 1",
+      "Hone Atk 2",
+      "Hone Atk 3"
+    ]
   },
   "Selena": {
     "moveType": "Infantry",
@@ -857,7 +1984,20 @@
     "spd": 35,
     "def": 32,
     "res": 28,
-    "total": 169
+    "total": 169,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Armorslayer",
+      "Armorslayer+",
+      "Reposition",
+      "Triangle Adept 1",
+      "Triangle Adept 2",
+      "Triangle Adept 3",
+      "Threaten Spd 1",
+      "Threaten Spd 2",
+      "Threaten Spd 3"
+    ]
   },
   "Seliph": {
     "moveType": "Infantry",
@@ -867,7 +2007,8 @@
     "spd": 24,
     "def": 30,
     "res": 22,
-    "total": 178
+    "total": 178,
+    "skills": []
   },
   "Serra": {
     "moveType": "Infantry",
@@ -877,7 +2018,19 @@
     "spd": 31,
     "def": 21,
     "res": 33,
-    "total": 155
+    "total": 155,
+    "skills": [
+      "Assault",
+      "Absorb",
+      "Heal",
+      "Mend",
+      "Recover",
+      "Imbue",
+      "Swift-Winds Balm",
+      "Hone Atk 1",
+      "Hone Atk 2",
+      "Hone Atk 3"
+    ]
   },
   "Setsuna": {
     "moveType": "Infantry",
@@ -887,7 +2040,20 @@
     "spd": 37,
     "def": 22,
     "res": 23,
-    "total": 160
+    "total": 160,
+    "skills": [
+      "Iron Bow",
+      "Steel Bow",
+      "Assassin's Bow",
+      "Assassin's Bow+",
+      "Reciprocal Aid",
+      "HP +3",
+      "HP +4",
+      "HP +5",
+      "Bowbreaker 1",
+      "Bowbreaker 2",
+      "Bowbreaker 3"
+    ]
   },
   "Shanna": {
     "moveType": "Flying",
@@ -897,7 +2063,21 @@
     "spd": 35,
     "def": 25,
     "res": 32,
-    "total": 168
+    "total": 168,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Killer Lance",
+      "Killer Lance+",
+      "Chilling Wind",
+      "Iceberg",
+      "Desperation 1",
+      "Desperation 2",
+      "Desperation 3",
+      "Threaten Spd 1",
+      "Threaten Spd 2",
+      "Threaten Spd 3"
+    ]
   },
   "Sharena": {
     "moveType": "Infantry",
@@ -907,7 +2087,20 @@
     "spd": 35,
     "def": 29,
     "res": 22,
-    "total": 177
+    "total": 177,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Silver Lance",
+      "Fensalir",
+      "Rally Attack",
+      "Speed +1",
+      "Speed +2",
+      "Speed +3",
+      "Fortify Def 1",
+      "Fortify Def 2",
+      "Fortify Def 3"
+    ]
   },
   "Sheena": {
     "moveType": "Armored",
@@ -917,7 +2110,19 @@
     "spd": 25,
     "def": 36,
     "res": 30,
-    "total": 180
+    "total": 180,
+    "skills": [
+      "Iron Axe",
+      "Steel Axe",
+      "Killer Axe",
+      "Killer Axe+",
+      "Buckler",
+      "Escutcheon",
+      "Svalinn Shield",
+      "Fortify Def 1",
+      "Fortify Def 2",
+      "Fortify Armor"
+    ]
   },
   "Sophia": {
     "moveType": "Infantry",
@@ -927,7 +2132,21 @@
     "spd": 19,
     "def": 28,
     "res": 29,
-    "total": 162
+    "total": 162,
+    "skills": [
+      "Flux",
+      "Ruin",
+      "Fenrir",
+      "Fenrir+",
+      "Dragon Gaze",
+      "Dragon Fang",
+      "Warding Blow 1",
+      "Warding Blow 2",
+      "Warding Blow 3",
+      "Fortify Res 1",
+      "Fortify Res 2",
+      "Fortify Res 3"
+    ]
   },
   "Stahl": {
     "moveType": "Cavalry",
@@ -937,17 +2156,43 @@
     "spd": 26,
     "def": 33,
     "res": 19,
-    "total": 169
+    "total": 169,
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Ruby Sword",
+      "Ruby Sword+",
+      "Swap",
+      "Defense +1",
+      "Defense +2",
+      "Defense +3",
+      "Obstruct 1",
+      "Obstruct 2",
+      "Obstruct 3"
+    ]
   },
   "Subaki": {
     "moveType": "Flying",
     "weaponType": "Blue Lance",
-    "hp": 43,
+    "hp": 40,
     "atk": 37,
     "spd": 35,
-    "def": 32,
+    "def": 35,
     "res": 25,
-    "total": 172
+    "total": 172,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Sapphire Lance",
+      "Sapphire Lance+",
+      "Swap",
+      "Resistance +1",
+      "Resistance +2",
+      "Resistance +3",
+      "Quick Riposte 1",
+      "Quick Riposte 2",
+      "Quick Riposte 3"
+    ]
   },
   "Sully": {
     "moveType": "Cavalry",
@@ -957,7 +2202,20 @@
     "spd": 34,
     "def": 24,
     "res": 28,
-    "total": 166
+    "total": 166,
+    "skills": [
+      "Iron Lance",
+      "Steel Lance",
+      "Sapphire Lance",
+      "Sapphire Lance+",
+      "Draw Back",
+      "Swordbreaker 1",
+      "Swordbreaker 2",
+      "Swordbreaker 3",
+      "Spur Def 1",
+      "Spur Def 2",
+      "Spur Def 3"
+    ]
   },
   "Takumi": {
     "moveType": "Infantry",
@@ -967,7 +2225,19 @@
     "spd": 33,
     "def": 25,
     "res": 18,
-    "total": 162
+    "total": 162,
+    "skills": [
+      "Iron Bow",
+      "Steel Bow",
+      "Silver Bow",
+      "Fujin Yumi",
+      "Retribution",
+      "Vengeance",
+      "Close Counter",
+      "Threaten Spd 1",
+      "Threaten Spd 2",
+      "Threaten Spd 3"
+    ]
   },
   "Tharja": {
     "moveType": "Infantry",
@@ -977,7 +2247,21 @@
     "spd": 34,
     "def": 23,
     "res": 20,
-    "total": 161
+    "total": 161,
+    "skills": [
+      "Flux",
+      "Ruin",
+      "Rauðrblade",
+      "Rauðrblade+",
+      "Retribution",
+      "Vengeance",
+      "Darting Blow 1",
+      "Darting Blow 2",
+      "Darting Blow 3",
+      "Spur Res 1",
+      "Spur Res 2",
+      "Spur Res 3"
+    ]
   },
   "Tiki": {
     "moveType": "Infantry",
@@ -987,7 +2271,21 @@
     "spd": 26,
     "def": 32,
     "res": 24,
-    "total": 168
+    "total": 168,
+    "skills": [
+      "Fire Breath",
+      "Fire Breath+",
+      "Lightning Breath",
+      "Lightning Breath+",
+      "Glowing Ember",
+      "Bonfire",
+      "Defiant Atk 1",
+      "Defiant Atk 2",
+      "Defiant Atk 3",
+      "Spur Res 1",
+      "Spur Res 2",
+      "Spur Res 3"
+    ]
   },
   "Tiki (Young)": {
     "moveType": "Infantry",
@@ -997,7 +2295,21 @@
     "spd": 30,
     "def": 32,
     "res": 29,
-    "total": 178
+    "total": 178,
+    "skills": [
+      "Fire Breath",
+      "Fire Breath+",
+      "Flametongue",
+      "Flametongue+",
+      "Rising Flame",
+      "Growing Flame",
+      "Armored Blow 1",
+      "Armored Blow 2",
+      "Armored Blow 3",
+      "Breath of Life 1",
+      "Breath of Life 2",
+      "Breath of Life 3"
+    ]
   },
   "Virion": {
     "moveType": "Infantry",
@@ -1007,7 +2319,21 @@
     "spd": 31,
     "def": 26,
     "res": 13,
-    "total": 160
+    "total": 160,
+    "skills": [
+      "Iron Bow",
+      "Steel Bow",
+      "Silver Bow",
+      "Silver Bow+",
+      "Night Sky",
+      "Astra",
+      "Defiant Res 1",
+      "Defiant Res 2",
+      "Defiant Res 3",
+      "Seal Spd 1",
+      "Seal Spd 2",
+      "Seal Spd 3"
+    ]
   },
   "Wrys": {
     "moveType": "Infantry",
@@ -1017,6 +2343,18 @@
     "spd": 23,
     "def": 25,
     "res": 33,
-    "total": 157
+    "total": 157,
+    "skills": [
+      "Assault",
+      "Slow",
+      "Heal",
+      "Reconcile",
+      "Rehabilitate",
+      "Imbue",
+      "Heavenly Light",
+      "Live to Serve 1",
+      "Live to Serve 2",
+      "Live to Serve 3"
+    ]
   }
 }
