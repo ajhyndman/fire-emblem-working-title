@@ -2008,7 +2008,19 @@
     "def": 30,
     "res": 22,
     "total": 178,
-    "skills": []
+    "skills": [
+      "Iron Sword",
+      "Steel Sword",
+      "Silver Sword",
+      "Tyrfing",
+      "Rally Speed",
+      "HP +3",
+      "HP +4",
+      "HP +5",
+      "Brash Assault 1",
+      "Brash Assault 2",
+      "Brash Assault 3"
+    ]
   },
   "Serra": {
     "moveType": "Infantry",
