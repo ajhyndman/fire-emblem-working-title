@@ -14,7 +14,6 @@ import {
   mergeWith,
   not,
   replace,
-  split,
   tail,
   toLower,
   trim,
@@ -41,11 +40,11 @@ const parseHeroRowHtml = (heroRow) => {
   const [, name] = /<a.*?>([^<]*?)</.exec(colTitle);
   const [, moveType] = /alt="Icon Move (.*?)\.png"/.exec(colMoveType);
   const [, weaponType] = /alt="Icon Class (.*?)\.png"/.exec(colWeaponType);
-  const hp = parseInt(/<td>(\d*?)\s<\/td>/.exec(colHp)[1], 10);
-  const atk = parseInt(/<td>(\d*?)\s<\/td>/.exec(colAtk)[1], 10);
-  const spd = parseInt(/<td>(\d*?)\s<\/td>/.exec(colSpd)[1], 10);
-  const def = parseInt(/<td>(\d*?)\s<\/td>/.exec(colDef)[1], 10);
-  const res = parseInt(/<td>(\d*?)\s<\/td>/.exec(colRes)[1], 10);
+  const hp = parseInt(/<td>(\d*?)\n<\/td>/.exec(colHp)[1], 10);
+  const atk = parseInt(/<td>(\d*?)\n<\/td>/.exec(colAtk)[1], 10);
+  const spd = parseInt(/<td>(\d*?)\n<\/td>/.exec(colSpd)[1], 10);
+  const def = parseInt(/<td>(\d*?)\n<\/td>/.exec(colDef)[1], 10);
+  const res = parseInt(/<td>(\d*?)\n<\/td>/.exec(colRes)[1], 10);
   const total = hp + atk + spd + def + res;
 
   return {
