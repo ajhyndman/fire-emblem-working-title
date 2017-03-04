@@ -5,7 +5,8 @@
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "babel-node index.js",
+    "test": "eslint *.js"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
