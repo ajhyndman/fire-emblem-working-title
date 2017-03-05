@@ -1012,9 +1012,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-"eslint-config-ajhyndman@git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.0.1":
-  version "1.0.1"
-  resolved "git+https://github.com/ajhyndman/eslint-config-ajhyndman#cb63c5cefd4845e3d532759cc897afe77424a1b0"
+"eslint-config-ajhyndman@git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.0.2":
+  version "1.0.2"
+  resolved "git+https://github.com/ajhyndman/eslint-config-ajhyndman#d01282e6030a89181992f1657bca291556d63e61"
   dependencies:
     babel-eslint "^7.1.1"
     eslint-plugin-flowtype "^2.30.0"
