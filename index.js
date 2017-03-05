@@ -3,7 +3,7 @@ import fs from 'fs';
 import fetch from 'isomorphic-fetch';
 import {
   compose,
-  equals,
+  dissoc,
   filter,
   flatten,
   isNil,
@@ -90,79 +90,83 @@ const parseTable = (tableHtml) => {
         map(compose(
           // remove unnecessary chars
           trim,
-          replace(/<\/a>/g, ''),
           replace(/<a.*?>/g, ''),
-          replace(/<td>/g, ''),
+          replace(/<\/a>/g, ''),
+          replace(/<td.*?>/g, ''),
           replace(/<\/td>/g, ''),
-          replace(/<span.*?>(.|\n)*?<\/span>/g, ''), // remove images
+          replace(/<img.*?>/g, ''), // remove images
+          replace(/<span.*?>(.|\n)*?<\/span>/g, ''), // remove spanned images
         )),  
-        match(/<td>(.|\n)*?<\/td>/g))), // END for each cell
+        match(/<td.*?>(.|\n)*?<\/td>/g))), // END for each cell
       tail, // remove the Header row
       match(/<tr.*?>(.|\n)*?<\/tr.*?>/g), // END for each row
     )(tableHtml);
-    
-  return map(zipObj(tableHeader), tableRows);
+  // some tables have a column of icons, ignore that.
+  return map(dissoc(''), map(zipObj(tableHeader), tableRows));
 }
 
 // takes the html page for a hero and returns the skills
 const parseHeroSkills = compose(
-  // filter(compose(not, equals({}))),
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
   match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g));
 
+const parseSkillsPage = compose(
+  flatten,
+  map(parseTable),
+  filter(compose(not, isNil)),
+  match(/<table.*?wikitable.*?>(.|\n)*?<\/table>/g));
+
 /**
  * Raw data fetchers
  */
 
-const fetchAggregateStats = () =>
-  fetch('http://feheroes.wiki/Stats_Table')
-    .then(response => response.text());
-
-const fetchDetailStats = (heroName) =>
-  fetch(`http://feheroes.wiki/${encodeURIComponent(heroName)}`)
+const fetchPage = (url) =>
+  fetch(url)
     .then(response => {
       if (!response.ok) return Promise.reject({ type: '404' });
-      // console.log('response status', `http://feheroes.wiki/${encodeURIComponent(heroName)}`, response.status);
       return response.text();
     })
-    .catch(() => console.error('failed to fetch: ', `http://feheroes.wiki/${encodeURIComponent(heroName)}`));
+    .catch(() => console.error('failed to fetch: ', url));
 
+// Takes a url prefix, a list of page names, and a parse function.
+// Returns a map from page name to parsed page.
+async function fetchAndParsePages(rpcPrefix, pageNames, parseFunction) {
+  return zipObj(
+    pageNames,
+    await Promise.all(
+      map(compose(
+        promise => {
+          return promise.then(parseFunction)
+            .catch(err => {
+              console.error(parseFunction.name + ': ', err);
+              return [];
+            })
+        },
+        fetchPage,
+        (pageName) => rpcPrefix + encodeURIComponent(pageName)
+      ))(pageNames)
+    ).catch(err => console.error('fetchAndParsePages:', err))
+  );
+}
 
 /**
  * Fetch and collate the data.
  * (Do all the things!)
  */
-
-async function fetchStats() {
-  const heroStats = await fetchAggregateStats()
+ 
+async function fetchHeroStats() {
+  const heroStats = await fetchPage('http://feheroes.wiki/Stats_Table')
     .then(parseHeroAggregateHtml)
     .catch(err => console.error('fetchAggregateStats', err));
-
-  const heroSkills = map(
-    skills => ({ skills }),
-    zipObj(
-      Object.keys(heroStats),
-      await Promise.all(
-        map(compose(
-          promise => {
-            return promise.then(parseHeroSkills)
-              .catch(err => {
-                console.error('parseHeroSkills:', err);
-                return [];
-              })
-          },
-          fetchDetailStats
-        ))(Object.keys(heroStats))
-      ).catch(err => console.error('heroDetailStats:', err))
-    )
-  );
-
+  const heroSkills = 
+    map(
+      skills => ({ skills }),
+      await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills));
+  
   // console.log('Hero stats:', heroStats);
-
   // console.log('Hero skills:', heroSkills);
-
   const heroStatsAndSkills = mergeWith(
     merge,
     heroStats,
@@ -170,10 +174,16 @@ async function fetchStats() {
   );
 
   // console.log('Hero stats and skills:', heroStatsAndSkills);
-  fs.writeFileSync('./lib/stats.json', JSON.stringify(heroStatsAndSkills, null, 2));
-  
+  fs.writeFileSync('./lib/heroes.json', JSON.stringify(heroStatsAndSkills, null, 2));
 }
 
+async function fetchSkills() {
+  const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives'];
+  const skillsByType = await fetchAndParsePages('http://feheroes.wiki/', skillPageNames, parseSkillsPage);
 
-// TODO: Consume fetchStats in some more sophisticated scenario?
-fetchStats();
+  //console.log('Skills by type:', skillsByType);
+  fs.writeFileSync('./lib/skills.json', JSON.stringify(skillsByType, null, 2));
+}
+
+fetchHeroStats();
+fetchSkills();

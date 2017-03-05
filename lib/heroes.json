@@ -248,7 +248,7 @@
       {
         "name": "Night Sky",
         "charge": "4",
-        "effects": "Grant +50% to damage dealt",
+        "effects": "Grants +50% to damage dealt",
         "sp_cost": "Default",
         "default": "2",
         "rarity": "-"
@@ -256,7 +256,7 @@
       {
         "name": "Astra",
         "charge": "5",
-        "effects": "Grant +150% to damage dealt",
+        "effects": "Grants +150% to damage dealt",
         "sp_cost": "200",
         "default": "-",
         "rarity": "4"
