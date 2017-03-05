@@ -161,7 +161,8 @@ async function fetchAndParsePages(host, pageNames, parseFunction) {
  * (Do all the things!)
  */
 
-async function fetchHeroStats() {
+async function fetchWikiStats() {
+  // COLLATE HERO STATS
   const heroStats = await fetchPage('http://feheroes.wiki/Stats_Table')
     .then(parseHeroAggregateHtml)
     .catch(err => console.error('fetchAggregateStats', err));
@@ -181,11 +182,8 @@ async function fetchHeroStats() {
     heroSkills,
   );
 
-  // console.log('Hero stats and skills:', heroStatsAndSkills);
-  fs.writeFileSync('./lib/heroes.json', JSON.stringify(heroStatsAndSkills, null, 2));
-}
 
-async function fetchSkills() {
+  // COLLATE SKILL STATS
   const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives'];
   const skillsByType = await fetchAndParsePages(
     'http://feheroes.wiki/',
@@ -193,9 +191,13 @@ async function fetchSkills() {
     parseSkillsPage,
   );
 
-  //console.log('Skills by type:', skillsByType);
-  fs.writeFileSync('./lib/skills.json', JSON.stringify(skillsByType, null, 2));
+
+  // WRITE STATS TO FILE
+  const allStats = {
+    heroes: heroStatsAndSkills,
+    skills: skillsByType,
+  };
+  fs.writeFileSync('./lib/stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchHeroStats();
-fetchSkills();
+fetchWikiStats();
