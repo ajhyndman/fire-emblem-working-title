@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "babel-node src/index.js",
-    "test": "eslint *.js"
+    "test": "eslint **/*.js"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
