@@ -13,6 +13,7 @@ import {
   mergeAll,
   mergeWith,
   not,
+  pick,
   replace,
   tail,
   toLower,
@@ -165,7 +166,10 @@ async function fetchHeroStats() {
     .then(parseHeroAggregateHtml)
     .catch(err => console.error('fetchAggregateStats', err));
   const heroSkills = map(
-    skills => ({ skills }),
+    compose(
+      skills => ({ skills }),
+      map(pick(['name', 'default', 'rarity'])),
+    ),
     await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills)
   );
 
