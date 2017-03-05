@@ -40,11 +40,12 @@ async function fetchWikiStats() {
 
   // console.log('Hero stats:', heroStats);
   // console.log('Hero skills:', heroSkills);
-  const heroes = mergeWith(
-    merge,
-    heroStats,
-    heroSkills,
-  );
+  const heroes = compose(
+    Object.values,
+    mapObjIndexed(
+      (hero, heroName) => assoc('name', heroName, hero),
+    ),
+  )(mergeWith(merge, heroStats, heroSkills));
 
 
   // COLLATE SKILL STATS

@@ -1,6 +1,6 @@
 {
-  "heroes": {
-    "Abel": {
+  "heroes": [
+    {
       "moveType": "Cavalry",
       "weaponType": "Blue Lance",
       "hp": 44,
@@ -64,9 +64,10 @@
           "name": "Swordbreaker 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Abel"
     },
-    "Alfonse": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 43,
@@ -130,9 +131,10 @@
           "name": "Spur Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Alfonse"
     },
-    "Anna": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Axe",
       "hp": 41,
@@ -196,9 +198,10 @@
           "name": "Spur Res 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Anna"
     },
-    "Arthur": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Axe",
       "hp": 48,
@@ -257,9 +260,10 @@
           "name": "Lancebreaker 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Arthur"
     },
-    "Azama": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Staff",
       "hp": 43,
@@ -316,9 +320,10 @@
           "name": "Threaten Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Azama"
     },
-    "Azura": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Lance",
       "hp": 36,
@@ -377,9 +382,10 @@
           "name": "Fortify Res 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Azura"
     },
-    "Barst": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Axe",
       "hp": 46,
@@ -430,9 +436,10 @@
           "name": "Spur Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Barst"
     },
-    "Bartre": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Axe",
       "hp": 49,
@@ -491,9 +498,10 @@
           "name": "Brash Assault 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Bartre"
     },
-    "Beruka": {
+    {
       "moveType": "Flying",
       "weaponType": "Green Axe",
       "hp": 43,
@@ -549,9 +557,10 @@
           "name": "Lunge",
           "rarity": "3"
         }
-      ]
+      ],
+      "name": "Beruka"
     },
-    "Caeda": {
+    {
       "moveType": "Flying",
       "weaponType": "Red Sword",
       "hp": 36,
@@ -610,9 +619,10 @@
           "name": "Fortify Fliers",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Caeda"
     },
-    "Cain": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Red Sword",
       "hp": 42,
@@ -676,9 +686,10 @@
           "name": "Threaten Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Cain"
     },
-    "Camilla": {
+    {
       "moveType": "Flying",
       "weaponType": "Green Axe",
       "hp": 37,
@@ -742,9 +753,10 @@
           "name": "Savage Blow 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Camilla"
     },
-    "Catria": {
+    {
       "moveType": "Flying",
       "weaponType": "Blue Lance",
       "hp": 39,
@@ -808,9 +820,10 @@
           "name": "Seal Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Catria"
     },
-    "Cecilia": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Green Tome",
       "hp": 36,
@@ -869,9 +882,10 @@
           "name": "Escape Route 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Cecilia"
     },
-    "Cherche": {
+    {
       "moveType": "Flying",
       "weaponType": "Green Axe",
       "hp": 46,
@@ -930,9 +944,10 @@
           "name": "Fortify Def 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Cherche"
     },
-    "Chrom": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 47,
@@ -1001,9 +1016,10 @@
           "name": "Spur Def 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Chrom"
     },
-    "Clarine": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Neutral Staff",
       "hp": 35,
@@ -1060,9 +1076,10 @@
           "name": "Resistance +3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Clarine"
     },
-    "Cordelia": {
+    {
       "moveType": "Flying",
       "weaponType": "Blue Lance",
       "hp": 40,
@@ -1131,9 +1148,10 @@
           "name": "Pass 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Cordelia"
     },
-    "Corrin (F)": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Beast",
       "hp": 41,
@@ -1197,9 +1215,10 @@
           "name": "Hone Atk 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Corrin (F)"
     },
-    "Corrin (M)": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 42,
@@ -1263,9 +1282,10 @@
           "name": "Obstruct 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Corrin (M)"
     },
-    "Donnel": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Lance",
       "hp": 48,
@@ -1316,9 +1336,10 @@
           "name": "Drag Back",
           "rarity": "3"
         }
-      ]
+      ],
+      "name": "Donnel"
     },
-    "Draug": {
+    {
       "moveType": "Armored",
       "weaponType": "Red Sword",
       "hp": 50,
@@ -1374,9 +1395,10 @@
           "name": "Ward Armor",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Draug"
     },
-    "Effie": {
+    {
       "moveType": "Armored",
       "weaponType": "Blue Lance",
       "hp": 50,
@@ -1435,9 +1457,10 @@
           "name": "Wary Fighter 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Effie"
     },
-    "Eirika": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 42,
@@ -1488,9 +1511,10 @@
           "name": "Hone Spd 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Eirika"
     },
-    "Eldigan": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Red Sword",
       "hp": 45,
@@ -1544,9 +1568,10 @@
           "name": "Lunge",
           "rarity": "3"
         }
-      ]
+      ],
+      "name": "Eldigan"
     },
-    "Elise": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Neutral Staff",
       "hp": 30,
@@ -1603,9 +1628,10 @@
           "name": "Live to Serve 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Elise"
     },
-    "Eliwood": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Red Sword",
       "hp": 39,
@@ -1669,9 +1695,10 @@
           "name": "Ward Cavalry",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Eliwood"
     },
-    "Ephraim": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Lance",
       "hp": 45,
@@ -1735,9 +1762,10 @@
           "name": "Threaten Def 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Ephraim"
     },
-    "Est": {
+    {
       "moveType": "Flying",
       "weaponType": "Blue Lance",
       "hp": 36,
@@ -1796,9 +1824,10 @@
           "name": "Seal Spd 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Est"
     },
-    "Fae": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Beast",
       "hp": 46,
@@ -1857,9 +1886,10 @@
           "name": "Threaten Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Fae"
     },
-    "Felicia": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Shuriken",
       "hp": 34,
@@ -1923,9 +1953,10 @@
           "name": "Breath of Life 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Felicia"
     },
-    "Fir": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 41,
@@ -1989,9 +2020,10 @@
           "name": "Pass 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Fir"
     },
-    "Florina": {
+    {
       "moveType": "Flying",
       "weaponType": "Blue Lance",
       "hp": 42,
@@ -2050,9 +2082,10 @@
           "name": "Breath of Life 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Florina"
     },
-    "Frederick": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Green Axe",
       "hp": 43,
@@ -2116,9 +2149,10 @@
           "name": "Fortify Def 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Frederick"
     },
-    "Gaius": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Shuriken",
       "hp": 39,
@@ -2180,9 +2214,10 @@
           "name": "Pass 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Gaius"
     },
-    "Gordin": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Bow",
       "hp": 43,
@@ -2241,9 +2276,10 @@
           "name": "Vantage 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Gordin"
     },
-    "Gunter": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Green Axe",
       "hp": 43,
@@ -2302,9 +2338,10 @@
           "name": "Hone Cavalry",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Gunter"
     },
-    "Gwendolyn": {
+    {
       "moveType": "Armored",
       "weaponType": "Blue Lance",
       "hp": 49,
@@ -2360,9 +2397,10 @@
           "name": "Hone Armor",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Gwendolyn"
     },
-    "Hana": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 37,
@@ -2421,9 +2459,10 @@
           "name": "Obstruct 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Hana"
     },
-    "Hawkeye": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Axe",
       "hp": 45,
@@ -2485,9 +2524,10 @@
           "name": "Threaten Atk 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Hawkeye"
     },
-    "Hector": {
+    {
       "moveType": "Armored",
       "weaponType": "Green Axe",
       "hp": 52,
@@ -2543,9 +2583,10 @@
           "name": "Goad Armor",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Hector"
     },
-    "Henry": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Tome",
       "hp": 42,
@@ -2603,9 +2644,10 @@
           "name": "G Tomebreaker 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Henry"
     },
-    "Hinata": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 47,
@@ -2669,9 +2711,10 @@
           "name": "Brash Assault 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Hinata"
     },
-    "Hinoka": {
+    {
       "moveType": "Flying",
       "weaponType": "Blue Lance",
       "hp": 41,
@@ -2735,9 +2778,10 @@
           "name": "Hone Fliers",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Hinoka"
     },
-    "Jagen": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Blue Lance",
       "hp": 36,
@@ -2801,9 +2845,10 @@
           "name": "Fortify Cavalry",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Jagen"
     },
-    "Jakob": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Shuriken",
       "hp": 39,
@@ -2862,9 +2907,10 @@
           "name": "Renewal 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Jakob"
     },
-    "Jeorge": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Bow",
       "hp": 37,
@@ -2926,9 +2972,10 @@
           "name": "Spur Spd 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Jeorge"
     },
-    "Julia": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Tome",
       "hp": 38,
@@ -2990,9 +3037,10 @@
           "name": "Breath of Life 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Julia"
     },
-    "Kagero": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Shuriken",
       "hp": 31,
@@ -3056,9 +3104,10 @@
           "name": "Daggerbreaker 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Kagero"
     },
-    "Klein": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Bow",
       "hp": 40,
@@ -3122,9 +3171,10 @@
           "name": "Quick Riposte 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Klein"
     },
-    "Lachesis": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Staff",
       "hp": 39,
@@ -3181,9 +3231,10 @@
           "name": "Spur Res 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Lachesis"
     },
-    "Laslow": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 44,
@@ -3247,9 +3298,10 @@
           "name": "Hone Spd 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Laslow"
     },
-    "Leo": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Red Tome",
       "hp": 39,
@@ -3313,9 +3365,10 @@
           "name": "Savage Blow 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Leo"
     },
-    "Lilina": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Tome",
       "hp": 35,
@@ -3379,9 +3432,10 @@
           "name": "Spur Atk 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Lilina"
     },
-    "Linde": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Tome",
       "hp": 35,
@@ -3407,9 +3461,10 @@
           "name": "Aura",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Linde"
     },
-    "Lissa": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Staff",
       "hp": 39,
@@ -3466,9 +3521,10 @@
           "name": "Renewal 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Lissa"
     },
-    "Lon'qu": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 45,
@@ -3532,9 +3588,10 @@
           "name": "Vantage 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Lon'qu"
     },
-    "Lucina": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 43,
@@ -3603,9 +3660,10 @@
           "name": "Spur Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Lucina"
     },
-    "Lyn": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 37,
@@ -3674,9 +3732,10 @@
           "name": "Spur Spd 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Lyn"
     },
-    "Maria": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Staff",
       "hp": 36,
@@ -3733,9 +3792,10 @@
           "name": "Fortify Res 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Maria"
     },
-    "Marth": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 41,
@@ -3789,9 +3849,10 @@
           "name": "Spur Spd 3",
           "rarity": ""
         }
-      ]
+      ],
+      "name": "Marth"
     },
-    "Matthew": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Shuriken",
       "hp": 41,
@@ -3849,9 +3910,10 @@
           "name": "Hone Spd 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Matthew"
     },
-    "Merric": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Tome",
       "hp": 48,
@@ -3913,9 +3975,10 @@
           "name": "Spur Res 3",
           "rarity": ""
         }
-      ]
+      ],
+      "name": "Merric"
     },
-    "Minerva": {
+    {
       "moveType": "Flying",
       "weaponType": "Green Axe",
       "hp": 40,
@@ -3973,9 +4036,10 @@
           "name": "Ward Fliers",
           "rarity": "-"
         }
-      ]
+      ],
+      "name": "Minerva"
     },
-    "Narcian": {
+    {
       "moveType": "Flying",
       "weaponType": "Green Axe",
       "hp": 42,
@@ -4039,9 +4103,10 @@
           "name": "Savage Blow 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Narcian"
     },
-    "Niles": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Bow",
       "hp": 37,
@@ -4105,9 +4170,10 @@
           "name": "Spur Res 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Niles"
     },
-    "Nino": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Tome",
       "hp": 33,
@@ -4161,9 +4227,10 @@
           "name": "Hone Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Nino"
     },
-    "Nowi": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Beast",
       "hp": 45,
@@ -4222,9 +4289,10 @@
           "name": "Threaten Res 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Nowi"
     },
-    "Oboro": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Lance",
       "hp": 40,
@@ -4283,9 +4351,10 @@
           "name": "Threaten Res 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Oboro"
     },
-    "Odin": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Tome",
       "hp": 43,
@@ -4349,9 +4418,10 @@
           "name": "R Tomebreaker 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Odin"
     },
-    "Ogma": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 47,
@@ -4415,9 +4485,10 @@
           "name": "Spur Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Ogma"
     },
-    "Olivia": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 36,
@@ -4468,9 +4539,10 @@
           "name": "Hone Atk 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Olivia"
     },
-    "Olwen": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Blue Tome",
       "hp": 34,
@@ -4528,9 +4600,10 @@
           "name": "Ward Cavalry",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Olwen"
     },
-    "Palla": {
+    {
       "moveType": "Flying",
       "weaponType": "Red Sword",
       "hp": 42,
@@ -4594,9 +4667,10 @@
           "name": "Goad Fliers",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Palla"
     },
-    "Peri": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Blue Lance",
       "hp": 35,
@@ -4660,9 +4734,10 @@
           "name": "Threaten Def 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Peri"
     },
-    "Raigh": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Tome",
       "hp": 41,
@@ -4720,9 +4795,10 @@
           "name": "Seal Res 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Raigh"
     },
-    "Raven": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Axe",
       "hp": 41,
@@ -4780,9 +4856,10 @@
           "name": "Threaten Def 3",
           "rarity": "-"
         }
-      ]
+      ],
+      "name": "Raven"
     },
-    "Reinhardt": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Blue Tome",
       "hp": 38,
@@ -4844,9 +4921,10 @@
           "name": "Goad Cavalry",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Reinhardt"
     },
-    "Robin (F)": {
+    {
       "moveType": "Infantry",
       "weaponType": "Green Tome",
       "hp": 40,
@@ -4910,9 +4988,10 @@
           "name": "B Tomebreaker 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Robin (F)"
     },
-    "Robin (M)": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Tome",
       "hp": 40,
@@ -4976,9 +5055,10 @@
           "name": "Spur Def 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Robin (M)"
     },
-    "Roy": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 44,
@@ -5037,9 +5117,10 @@
           "name": "Seal Def 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Roy"
     },
-    "Ryoma": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 41,
@@ -5103,9 +5184,10 @@
           "name": "Hone Spd 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Ryoma"
     },
-    "Saizo": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Shuriken",
       "hp": 36,
@@ -5164,9 +5246,10 @@
           "name": "Spur Spd 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Saizo"
     },
-    "Sakura": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Staff",
       "hp": 36,
@@ -5223,9 +5306,10 @@
           "name": "Fortify Def 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Sakura"
     },
-    "Sanaki": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Tome",
       "hp": 33,
@@ -5284,9 +5368,10 @@
           "name": "Hone Atk 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Sanaki"
     },
-    "Selena": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 37,
@@ -5344,9 +5429,10 @@
           "name": "Threaten Spd 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Selena"
     },
-    "Seliph": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "hp": 52,
@@ -5405,9 +5491,10 @@
           "name": "Brash Assault 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Seliph"
     },
-    "Serra": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Staff",
       "hp": 33,
@@ -5464,9 +5551,10 @@
           "name": "Hone Atk 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Serra"
     },
-    "Setsuna": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Bow",
       "hp": 39,
@@ -5520,9 +5608,10 @@
           "name": "Bowbreaker 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Setsuna"
     },
-    "Shanna": {
+    {
       "moveType": "Flying",
       "weaponType": "Blue Lance",
       "hp": 39,
@@ -5586,9 +5675,10 @@
           "name": "Threaten Spd 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Shanna"
     },
-    "Sharena": {
+    {
       "moveType": "Infantry",
       "weaponType": "Blue Lance",
       "hp": 43,
@@ -5647,9 +5737,10 @@
           "name": "Fortify Def 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Sharena"
     },
-    "Sheena": {
+    {
       "moveType": "Armored",
       "weaponType": "Green Axe",
       "hp": 45,
@@ -5699,9 +5790,10 @@
           "name": "Fortify Armor",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Sheena"
     },
-    "Sophia": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Tome",
       "hp": 40,
@@ -5765,9 +5857,10 @@
           "name": "Fortify Res 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Sophia"
     },
-    "Stahl": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Red Sword",
       "hp": 45,
@@ -5826,9 +5919,10 @@
           "name": "Obstruct 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Stahl"
     },
-    "Subaki": {
+    {
       "moveType": "Flying",
       "weaponType": "Blue Lance",
       "hp": 40,
@@ -5887,9 +5981,10 @@
           "name": "Quick Riposte 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Subaki"
     },
-    "Sully": {
+    {
       "moveType": "Cavalry",
       "weaponType": "Blue Lance",
       "hp": 42,
@@ -5948,9 +6043,10 @@
           "name": "Spur Def 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Sully"
     },
-    "Takumi": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Bow",
       "hp": 40,
@@ -6006,9 +6102,10 @@
           "name": "Threaten Spd 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Takumi"
     },
-    "Tharja": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Tome",
       "hp": 39,
@@ -6066,9 +6163,10 @@
           "name": "Spur Res 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Tharja"
     },
-    "Tiki": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Beast",
       "hp": 40,
@@ -6132,9 +6230,10 @@
           "name": "Spur Res 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Tiki"
     },
-    "Tiki (Young)": {
+    {
       "moveType": "Infantry",
       "weaponType": "Red Beast",
       "hp": 41,
@@ -6198,9 +6297,10 @@
           "name": "Breath of Life 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Tiki (Young)"
     },
-    "Virion": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Bow",
       "hp": 46,
@@ -6264,9 +6364,10 @@
           "name": "Seal Spd 3",
           "rarity": "4"
         }
-      ]
+      ],
+      "name": "Virion"
     },
-    "Wrys": {
+    {
       "moveType": "Infantry",
       "weaponType": "Neutral Staff",
       "hp": 42,
@@ -6321,9 +6422,10 @@
           "name": "Live to Serve 3",
           "rarity": "5"
         }
-      ]
+      ],
+      "name": "Wrys"
     }
-  },
+  ],
   "skills": [
     {
       "name": "Brave Sword",
