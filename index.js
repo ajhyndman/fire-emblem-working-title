@@ -81,7 +81,7 @@ const parseTable = (tableHtml) => {
       replace(/<th.*?>/g, ''),
       replace(/<\/th.*?>/g, ''),
     )),
-    match(/<th(\s.*?)?>(.|\n)*?<\/th.*?>/g) // needs to not match <thead>
+    match(/<th(\s.*?)?>(.|\n)*?<\/th.*?>/g), // needs to not match <thead>
   )(tableHtml);
 
   const tableRows = compose(
@@ -111,14 +111,14 @@ const parseHeroSkills = compose(
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
-  match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g)
+  match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g),
 );
 
 const parseSkillsPage = compose(
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
-  match(/<table.*?wikitable.*?>(.|\n)*?<\/table>/g)
+  match(/<table.*?wikitable.*?>(.|\n)*?<\/table>/g),
 );
 
 
@@ -149,9 +149,9 @@ async function fetchAndParsePages(host, pageNames, parseFunction) {
             })
         },
         fetchPage,
-        (pageName) => host + encodeURIComponent(pageName)
-      ))(pageNames)
-    ).catch(err => console.error('fetchAndParsePages:', err))
+        (pageName) => host + encodeURIComponent(pageName),
+      ))(pageNames),
+    ).catch(err => console.error('fetchAndParsePages:', err)),
   );
 }
 
@@ -170,7 +170,7 @@ async function fetchHeroStats() {
       skills => ({ skills }),
       map(pick(['name', 'default', 'rarity'])),
     ),
-    await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills)
+    await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills),
   );
 
   // console.log('Hero stats:', heroStats);
@@ -178,7 +178,7 @@ async function fetchHeroStats() {
   const heroStatsAndSkills = mergeWith(
     merge,
     heroStats,
-    heroSkills
+    heroSkills,
   );
 
   // console.log('Hero stats and skills:', heroStatsAndSkills);
@@ -190,7 +190,7 @@ async function fetchSkills() {
   const skillsByType = await fetchAndParsePages(
     'http://feheroes.wiki/',
     skillPageNames,
-    parseSkillsPage
+    parseSkillsPage,
   );
 
   //console.log('Skills by type:', skillsByType);
