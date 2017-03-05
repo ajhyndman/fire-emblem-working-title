@@ -73,8 +73,8 @@ const parseTable = (tableHtml) => {
     map(compose(
       replace('unlock', 'rarity'),  // Some tables use unlock others use rarity.
       // convert to snake case.
-      replace(/\s+/g, '_'), 
-      toLower, 
+      replace(/\s+/g, '_'),
+      toLower,
       // remove unnecessary chars
       trim,
       replace(/<th.*?>/g, ''),
@@ -96,7 +96,7 @@ const parseTable = (tableHtml) => {
           replace(/<\/td>/g, ''),
           replace(/<img.*?>/g, ''), // remove images
           replace(/<span.*?>(.|\n)*?<\/span>/g, ''), // remove spanned images
-        )),  
+        )),
         match(/<td.*?>(.|\n)*?<\/td>/g))), // END for each cell
       tail, // remove the Header row
       match(/<tr.*?>(.|\n)*?<\/tr.*?>/g), // END for each row
@@ -110,13 +110,15 @@ const parseHeroSkills = compose(
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
-  match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g));
+  match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g)
+);
 
 const parseSkillsPage = compose(
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
-  match(/<table.*?wikitable.*?>(.|\n)*?<\/table>/g));
+  match(/<table.*?wikitable.*?>(.|\n)*?<\/table>/g)
+);
 
 /**
  * Raw data fetchers
@@ -155,16 +157,16 @@ async function fetchAndParsePages(rpcPrefix, pageNames, parseFunction) {
  * Fetch and collate the data.
  * (Do all the things!)
  */
- 
+
 async function fetchHeroStats() {
   const heroStats = await fetchPage('http://feheroes.wiki/Stats_Table')
     .then(parseHeroAggregateHtml)
     .catch(err => console.error('fetchAggregateStats', err));
-  const heroSkills = 
-    map(
-      skills => ({ skills }),
-      await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills));
-  
+  const heroSkills = map(
+    skills => ({ skills }),
+    await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills)
+  );
+
   // console.log('Hero stats:', heroStats);
   // console.log('Hero skills:', heroSkills);
   const heroStatsAndSkills = mergeWith(
