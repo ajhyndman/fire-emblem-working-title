@@ -565,14 +565,14 @@
       "cost": "200 SP",
       "damage_(mt)": "8",
       "range_(rng)": "1",
-      "special_effects": "Gives Atk +20% if weapon-triangle advantage, Atk -20% if disadvantage."
+      "special_effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
     },
     {
       "name": "Sapphire Lance+",
       "cost": "300 SP",
       "damage_(mt)": "12",
       "range_(rng)": "1",
-      "special_effects": "Gives Atk +20% if weapon-triangle advantage, Atk -20% if disadvantage."
+      "special_effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
     },
     {
       "name": "Fensalir",
@@ -1427,17 +1427,17 @@
     },
     {
       "name": "Attack +1",
-      "effects": "Grants Atk +1.",
+      "effects": "Grants Atk+1.",
       "sp_cost": "30<br />"
     },
     {
       "name": "Attack +2",
-      "effects": "Grants Atk +2.",
+      "effects": "Grants Atk+2.",
       "sp_cost": "60<br />"
     },
     {
       "name": "Attack +3",
-      "effects": "Grants Atk +3.",
+      "effects": "Grants Atk+3.",
       "sp_cost": "120"
     },
     {
@@ -1477,47 +1477,47 @@
     },
     {
       "name": "Defense +1",
-      "effects": "Grants Def +1.",
+      "effects": "Grants Def+1.",
       "sp_cost": "30<br />"
     },
     {
       "name": "Defense +2",
-      "effects": "Grants Def +2.",
+      "effects": "Grants Def+2.",
       "sp_cost": "60<br />"
     },
     {
       "name": "Defense +3",
-      "effects": "Grants Def +3.",
+      "effects": "Grants Def+3.",
       "sp_cost": "120"
     },
     {
       "name": "Defiant Atk 1",
-      "effects": "Grants Atk +3 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Atk+3 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "40<br />"
     },
     {
       "name": "Defiant Atk 2",
-      "effects": "Grants Atk +5 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "80<br />"
     },
     {
       "name": "Defiant Atk 3",
-      "effects": "Grants Atk +7 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Atk+7 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "160"
     },
     {
       "name": "Defiant Def 1",
-      "effects": "Grants Def +3 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Def+3 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "40<br />"
     },
     {
       "name": "Defiant Def 2",
-      "effects": "Grants Def +5 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Def+5 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "80<br />"
     },
     {
       "name": "Defiant Def 3",
-      "effects": "Grants Def +7 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Def+7 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "160"
     },
     {
@@ -1537,17 +1537,17 @@
     },
     {
       "name": "Defiant Spd 1",
-      "effects": "Grants Spd +3 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Spd+3 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "40<br />"
     },
     {
       "name": "Defiant Spd 2",
-      "effects": "Grants Spd +5 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Spd+5 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "80<br />"
     },
     {
       "name": "Defiant Spd 3",
-      "effects": "Grants Spd +7 at start of turn if unit's HP ≤ 50%.",
+      "effects": "Grants Spd+7 at start of turn if unit's HP ≤ 50%.",
       "sp_cost": "160"
     },
     {
@@ -1602,32 +1602,32 @@
     },
     {
       "name": "Resistance +1",
-      "effects": "Grants Res +1.",
+      "effects": "Grants Res+1.",
       "sp_cost": "30<br />"
     },
     {
       "name": "Resistance +2",
-      "effects": "Grants Res +2.",
+      "effects": "Grants Res+2.",
       "sp_cost": "60<br />"
     },
     {
       "name": "Resistance +3",
-      "effects": "Grants Res +3.",
+      "effects": "Grants Res+3.",
       "sp_cost": "120"
     },
     {
       "name": "Speed +1",
-      "effects": "Grants Spd +1.",
+      "effects": "Grants Spd+1.",
       "sp_cost": "30<br />"
     },
     {
       "name": "Speed +2",
-      "effects": "Grants Spd +2.",
+      "effects": "Grants Spd+2.",
       "sp_cost": "60<br />"
     },
     {
       "name": "Speed +3",
-      "effects": "Grants Spd +3.",
+      "effects": "Grants Spd+3.",
       "sp_cost": "120"
     },
     {
