@@ -120,6 +120,7 @@ const parseSkillsPage = compose(
   match(/<table.*?wikitable.*?>(.|\n)*?<\/table>/g)
 );
 
+
 /**
  * Raw data fetchers
  */
@@ -152,6 +153,7 @@ async function fetchAndParsePages(rpcPrefix, pageNames, parseFunction) {
     ).catch(err => console.error('fetchAndParsePages:', err))
   );
 }
+
 
 /**
  * Fetch and collate the data.
