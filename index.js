@@ -135,7 +135,7 @@ const fetchPage = (url) =>
 
 // Takes a url prefix, a list of page names, and a parse function.
 // Returns a map from page name to parsed page.
-async function fetchAndParsePages(rpcPrefix, pageNames, parseFunction) {
+async function fetchAndParsePages(host, pageNames, parseFunction) {
   return zipObj(
     pageNames,
     await Promise.all(
@@ -148,7 +148,7 @@ async function fetchAndParsePages(rpcPrefix, pageNames, parseFunction) {
             })
         },
         fetchPage,
-        (pageName) => rpcPrefix + encodeURIComponent(pageName)
+        (pageName) => host + encodeURIComponent(pageName)
       ))(pageNames)
     ).catch(err => console.error('fetchAndParsePages:', err))
   );
