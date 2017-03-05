@@ -2,12 +2,15 @@
 import fs from 'fs';
 import fetch from 'isomorphic-fetch';
 import {
+  assoc,
   compose,
   dissoc,
+  dropLast,
   filter,
   flatten,
   isNil,
   map,
+  mapObjIndexed,
   match,
   merge,
   mergeAll,
@@ -17,6 +20,7 @@ import {
   replace,
   tail,
   toLower,
+  toUpper,
   trim,
   zipObj,
 } from 'ramda';
@@ -176,7 +180,7 @@ async function fetchWikiStats() {
 
   // console.log('Hero stats:', heroStats);
   // console.log('Hero skills:', heroSkills);
-  const heroStatsAndSkills = mergeWith(
+  const heroes = mergeWith(
     merge,
     heroStats,
     heroSkills,
@@ -190,13 +194,20 @@ async function fetchWikiStats() {
     skillPageNames,
     parseSkillsPage,
   );
+  const skills = compose(
+    flatten,
+    Object.values,
+    mapObjIndexed(
+      (skillList, skillType) => map(
+        assoc('type', dropLast(1, toUpper(skillType))),
+        skillList,
+      ),
+    ),
+  )(skillsByType);
 
 
   // WRITE STATS TO FILE
-  const allStats = {
-    heroes: heroStatsAndSkills,
-    skills: skillsByType,
-  };
+  const allStats = { heroes, skills };
   fs.writeFileSync('./lib/stats.json', JSON.stringify(allStats, null, 2));
 }
 
