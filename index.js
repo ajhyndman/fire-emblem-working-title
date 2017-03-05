@@ -183,7 +183,11 @@ async function fetchHeroStats() {
 
 async function fetchSkills() {
   const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives'];
-  const skillsByType = await fetchAndParsePages('http://feheroes.wiki/', skillPageNames, parseSkillsPage);
+  const skillsByType = await fetchAndParsePages(
+    'http://feheroes.wiki/',
+    skillPageNames,
+    parseSkillsPage
+  );
 
   //console.log('Skills by type:', skillsByType);
   fs.writeFileSync('./lib/skills.json', JSON.stringify(skillsByType, null, 2));
