@@ -73,8 +73,8 @@ const parseTable = (tableHtml) => {
     map(compose(
       replace('unlock', 'rarity'),  // Some tables use unlock others use rarity.
       // convert to snake case.
-      replace(/\s+/g, '_'), 
-      toLower, 
+      replace(/\s+/g, '_'),
+      toLower,
       // remove unnecessary chars
       trim,
       replace(/<th.*?>/g, ''),
@@ -96,7 +96,7 @@ const parseTable = (tableHtml) => {
           replace(/<\/td>/g, ''),
           replace(/<img.*?>/g, ''), // remove images
           replace(/<span.*?>(.|\n)*?<\/span>/g, ''), // remove spanned images
-        )),  
+        )),
         match(/<td.*?>(.|\n)*?<\/td>/g))), // END for each cell
       tail, // remove the Header row
       match(/<tr.*?>(.|\n)*?<\/tr.*?>/g), // END for each row
@@ -110,13 +110,16 @@ const parseHeroSkills = compose(
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
-  match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g));
+  match(/<table.*?skills-table.*?>(.|\n)*?<\/table>/g)
+);
 
 const parseSkillsPage = compose(
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
-  match(/<table.*?wikitable.*?>(.|\n)*?<\/table>/g));
+  match(/<table.*?wikitable.*?>(.|\n)*?<\/table>/g)
+);
+
 
 /**
  * Raw data fetchers
@@ -132,7 +135,7 @@ const fetchPage = (url) =>
 
 // Takes a url prefix, a list of page names, and a parse function.
 // Returns a map from page name to parsed page.
-async function fetchAndParsePages(rpcPrefix, pageNames, parseFunction) {
+async function fetchAndParsePages(host, pageNames, parseFunction) {
   return zipObj(
     pageNames,
     await Promise.all(
@@ -145,26 +148,27 @@ async function fetchAndParsePages(rpcPrefix, pageNames, parseFunction) {
             })
         },
         fetchPage,
-        (pageName) => rpcPrefix + encodeURIComponent(pageName)
+        (pageName) => host + encodeURIComponent(pageName)
       ))(pageNames)
     ).catch(err => console.error('fetchAndParsePages:', err))
   );
 }
 
+
 /**
  * Fetch and collate the data.
  * (Do all the things!)
  */
- 
+
 async function fetchHeroStats() {
   const heroStats = await fetchPage('http://feheroes.wiki/Stats_Table')
     .then(parseHeroAggregateHtml)
     .catch(err => console.error('fetchAggregateStats', err));
-  const heroSkills = 
-    map(
-      skills => ({ skills }),
-      await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills));
-  
+  const heroSkills = map(
+    skills => ({ skills }),
+    await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills)
+  );
+
   // console.log('Hero stats:', heroStats);
   // console.log('Hero skills:', heroSkills);
   const heroStatsAndSkills = mergeWith(
@@ -179,7 +183,11 @@ async function fetchHeroStats() {
 
 async function fetchSkills() {
   const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives'];
-  const skillsByType = await fetchAndParsePages('http://feheroes.wiki/', skillPageNames, parseSkillsPage);
+  const skillsByType = await fetchAndParsePages(
+    'http://feheroes.wiki/',
+    skillPageNames,
+    parseSkillsPage
+  );
 
   //console.log('Skills by type:', skillsByType);
   fs.writeFileSync('./lib/skills.json', JSON.stringify(skillsByType, null, 2));
