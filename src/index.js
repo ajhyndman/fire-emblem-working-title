@@ -9,7 +9,10 @@ import {
   merge,
   mergeWith,
   pick,
+  prop,
   toUpper,
+  values,
+  zipObj,
 } from 'ramda';
 
 import { fetchPage, fetchAndParsePages } from './fetch';
@@ -30,22 +33,23 @@ async function fetchWikiStats() {
   const heroStats = await fetchPage('http://feheroes.wiki/Stats_Table')
     .then(parseHeroAggregateHtml)
     .catch(err => console.error('fetchAggregateStats', err));
+  const heroNames = map(prop('name'), heroStats);
   const heroSkills = map(
     compose(
       skills => ({ skills }),
       map(pick(['name', 'default', 'rarity'])),
     ),
-    await fetchAndParsePages('http://feheroes.wiki/', Object.keys(heroStats), parseHeroSkills),
+    await fetchAndParsePages('http://feheroes.wiki/', heroNames, parseHeroSkills),
   );
-
   // console.log('Hero stats:', heroStats);
   // console.log('Hero skills:', heroSkills);
-  const heroes = compose(
-    Object.values,
-    mapObjIndexed(
-      (hero, heroName) => assoc('name', heroName, hero),
-    ),
-  )(mergeWith(merge, heroStats, heroSkills));
+  
+  // Create an object that maps hero name to the hero object in order to merge in the hero skills.
+  const heroes = values(
+    mergeWith(
+      merge,
+      zipObj(heroNames, heroStats),
+      heroSkills));
 
 
   // COLLATE SKILL STATS
