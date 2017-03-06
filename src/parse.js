@@ -10,10 +10,11 @@ import {
   prop,
   replace,
   tail,
-  toLower,
   trim,
   zipObj,
 } from 'ramda';
+
+import { camelCase } from './util';
 
 
 /**
@@ -26,9 +27,7 @@ export const parseTable = (tableHtml) => {
   const tableHeader = compose(
     map(compose(
       replace('unlock', 'rarity'),  // Some tables use unlock others use rarity.
-      // convert to snake case.
-      replace(/\s+/g, '_'),
-      toLower,
+      camelCase,
       trim,
       replace(/<.*?>/g, ''), // remove all tags. td, a, span, image, bold, etc.
     )),

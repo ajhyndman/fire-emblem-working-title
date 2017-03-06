@@ -2,8 +2,8 @@
   "heroes": [
     {
       "name": "Abel",
-      "move_type": "Cavalry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Cavalry",
+      "weaponType": "Blue Lance",
       "hp": 44,
       "atk": 41,
       "spd": 27,
@@ -69,8 +69,8 @@
     },
     {
       "name": "Alfonse",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 43,
       "atk": 51,
       "spd": 25,
@@ -136,8 +136,8 @@
     },
     {
       "name": "Anna",
-      "move_type": "Infantry",
-      "weapon_type": "Green Axe",
+      "moveType": "Infantry",
+      "weaponType": "Green Axe",
       "hp": 41,
       "atk": 45,
       "spd": 38,
@@ -203,8 +203,8 @@
     },
     {
       "name": "Arthur",
-      "move_type": "Infantry",
-      "weapon_type": "Green Axe",
+      "moveType": "Infantry",
+      "weaponType": "Green Axe",
       "hp": 48,
       "atk": 44,
       "spd": 29,
@@ -265,8 +265,8 @@
     },
     {
       "name": "Azama",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Staff",
       "hp": 43,
       "atk": 31,
       "spd": 26,
@@ -325,8 +325,8 @@
     },
     {
       "name": "Azura",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Infantry",
+      "weaponType": "Blue Lance",
       "hp": 36,
       "atk": 43,
       "spd": 36,
@@ -387,8 +387,8 @@
     },
     {
       "name": "Barst",
-      "move_type": "Infantry",
-      "weapon_type": "Green Axe",
+      "moveType": "Infantry",
+      "weaponType": "Green Axe",
       "hp": 46,
       "atk": 38,
       "spd": 27,
@@ -441,8 +441,8 @@
     },
     {
       "name": "Bartre",
-      "move_type": "Infantry",
-      "weapon_type": "Green Axe",
+      "moveType": "Infantry",
+      "weaponType": "Green Axe",
       "hp": 49,
       "atk": 51,
       "spd": 28,
@@ -503,8 +503,8 @@
     },
     {
       "name": "Beruka",
-      "move_type": "Flying",
-      "weapon_type": "Green Axe",
+      "moveType": "Flying",
+      "weaponType": "Green Axe",
       "hp": 43,
       "atk": 40,
       "spd": 23,
@@ -562,8 +562,8 @@
     },
     {
       "name": "Caeda",
-      "move_type": "Flying",
-      "weapon_type": "Red Sword",
+      "moveType": "Flying",
+      "weaponType": "Red Sword",
       "hp": 36,
       "atk": 37,
       "spd": 37,
@@ -624,8 +624,8 @@
     },
     {
       "name": "Cain",
-      "move_type": "Cavalry",
-      "weapon_type": "Red Sword",
+      "moveType": "Cavalry",
+      "weaponType": "Red Sword",
       "hp": 42,
       "atk": 40,
       "spd": 27,
@@ -691,8 +691,8 @@
     },
     {
       "name": "Camilla",
-      "move_type": "Flying",
-      "weapon_type": "Green Axe",
+      "moveType": "Flying",
+      "weaponType": "Green Axe",
       "hp": 37,
       "atk": 38,
       "spd": 27,
@@ -758,8 +758,8 @@
     },
     {
       "name": "Catria",
-      "move_type": "Flying",
-      "weapon_type": "Blue Lance",
+      "moveType": "Flying",
+      "weaponType": "Blue Lance",
       "hp": 39,
       "atk": 42,
       "spd": 34,
@@ -825,8 +825,8 @@
     },
     {
       "name": "Cecilia",
-      "move_type": "Cavalry",
-      "weapon_type": "Green Tome",
+      "moveType": "Cavalry",
+      "weaponType": "Green Tome",
       "hp": 36,
       "atk": 46,
       "spd": 22,
@@ -887,8 +887,8 @@
     },
     {
       "name": "Cherche",
-      "move_type": "Flying",
-      "weapon_type": "Green Axe",
+      "moveType": "Flying",
+      "weaponType": "Green Axe",
       "hp": 46,
       "atk": 56,
       "spd": 25,
@@ -949,8 +949,8 @@
     },
     {
       "name": "Chrom",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 47,
       "atk": 53,
       "spd": 25,
@@ -1021,8 +1021,8 @@
     },
     {
       "name": "Clarine",
-      "move_type": "Cavalry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Cavalry",
+      "weaponType": "Neutral Staff",
       "hp": 35,
       "atk": 37,
       "spd": 33,
@@ -1081,8 +1081,8 @@
     },
     {
       "name": "Cordelia",
-      "move_type": "Flying",
-      "weapon_type": "Blue Lance",
+      "moveType": "Flying",
+      "weaponType": "Blue Lance",
       "hp": 40,
       "atk": 43,
       "spd": 30,
@@ -1153,8 +1153,8 @@
     },
     {
       "name": "Corrin (F)",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Beast",
+      "moveType": "Infantry",
+      "weaponType": "Blue Beast",
       "hp": 41,
       "atk": 40,
       "spd": 34,
@@ -1220,8 +1220,8 @@
     },
     {
       "name": "Corrin (M)",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 42,
       "atk": 48,
       "spd": 32,
@@ -1287,8 +1287,8 @@
     },
     {
       "name": "Donnel",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Infantry",
+      "weaponType": "Blue Lance",
       "hp": 48,
       "atk": 46,
       "spd": 24,
@@ -1341,8 +1341,8 @@
     },
     {
       "name": "Draug",
-      "move_type": "Armored",
-      "weapon_type": "Red Sword",
+      "moveType": "Armored",
+      "weaponType": "Red Sword",
       "hp": 50,
       "atk": 41,
       "spd": 24,
@@ -1400,8 +1400,8 @@
     },
     {
       "name": "Effie",
-      "move_type": "Armored",
-      "weapon_type": "Blue Lance",
+      "moveType": "Armored",
+      "weaponType": "Blue Lance",
       "hp": 50,
       "atk": 55,
       "spd": 22,
@@ -1462,8 +1462,8 @@
     },
     {
       "name": "Eirika",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 42,
       "atk": 42,
       "spd": 35,
@@ -1516,8 +1516,8 @@
     },
     {
       "name": "Eldigan",
-      "move_type": "Cavalry",
-      "weapon_type": "Red Sword",
+      "moveType": "Cavalry",
+      "weaponType": "Red Sword",
       "hp": 45,
       "atk": 51,
       "spd": 27,
@@ -1573,8 +1573,8 @@
     },
     {
       "name": "Elise",
-      "move_type": "Cavalry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Cavalry",
+      "weaponType": "Neutral Staff",
       "hp": 30,
       "atk": 38,
       "spd": 32,
@@ -1633,8 +1633,8 @@
     },
     {
       "name": "Eliwood",
-      "move_type": "Cavalry",
-      "weapon_type": "Red Sword",
+      "moveType": "Cavalry",
+      "weaponType": "Red Sword",
       "hp": 39,
       "atk": 47,
       "spd": 30,
@@ -1700,8 +1700,8 @@
     },
     {
       "name": "Ephraim",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Infantry",
+      "weaponType": "Blue Lance",
       "hp": 45,
       "atk": 51,
       "spd": 25,
@@ -1767,8 +1767,8 @@
     },
     {
       "name": "Est",
-      "move_type": "Flying",
-      "weapon_type": "Blue Lance",
+      "moveType": "Flying",
+      "weaponType": "Blue Lance",
       "hp": 36,
       "atk": 47,
       "spd": 30,
@@ -1829,8 +1829,8 @@
     },
     {
       "name": "Fae",
-      "move_type": "Infantry",
-      "weapon_type": "Green Beast",
+      "moveType": "Infantry",
+      "weaponType": "Green Beast",
       "hp": 46,
       "atk": 46,
       "spd": 28,
@@ -1891,8 +1891,8 @@
     },
     {
       "name": "Felicia",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Shuriken",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Shuriken",
       "hp": 34,
       "atk": 33,
       "spd": 37,
@@ -1958,8 +1958,8 @@
     },
     {
       "name": "Fir",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 41,
       "atk": 33,
       "spd": 39,
@@ -2025,8 +2025,8 @@
     },
     {
       "name": "Florina",
-      "move_type": "Flying",
-      "weapon_type": "Blue Lance",
+      "moveType": "Flying",
+      "weaponType": "Blue Lance",
       "hp": 42,
       "atk": 41,
       "spd": 28,
@@ -2087,8 +2087,8 @@
     },
     {
       "name": "Frederick",
-      "move_type": "Cavalry",
-      "weapon_type": "Green Axe",
+      "moveType": "Cavalry",
+      "weaponType": "Green Axe",
       "hp": 43,
       "atk": 47,
       "spd": 25,
@@ -2154,8 +2154,8 @@
     },
     {
       "name": "Gaius",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Shuriken",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Shuriken",
       "hp": 39,
       "atk": 39,
       "spd": 36,
@@ -2219,8 +2219,8 @@
     },
     {
       "name": "Gordin",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Bow",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Bow",
       "hp": 43,
       "atk": 41,
       "spd": 20,
@@ -2281,8 +2281,8 @@
     },
     {
       "name": "Gunter",
-      "move_type": "Cavalry",
-      "weapon_type": "Green Axe",
+      "moveType": "Cavalry",
+      "weaponType": "Green Axe",
       "hp": 43,
       "atk": 43,
       "spd": 24,
@@ -2343,8 +2343,8 @@
     },
     {
       "name": "Gwendolyn",
-      "move_type": "Armored",
-      "weapon_type": "Blue Lance",
+      "moveType": "Armored",
+      "weaponType": "Blue Lance",
       "hp": 49,
       "atk": 41,
       "spd": 24,
@@ -2402,8 +2402,8 @@
     },
     {
       "name": "Hana",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 37,
       "atk": 52,
       "spd": 44,
@@ -2464,8 +2464,8 @@
     },
     {
       "name": "Hawkeye",
-      "move_type": "Infantry",
-      "weapon_type": "Green Axe",
+      "moveType": "Infantry",
+      "weaponType": "Green Axe",
       "hp": 45,
       "atk": 44,
       "spd": 22,
@@ -2529,8 +2529,8 @@
     },
     {
       "name": "Hector",
-      "move_type": "Armored",
-      "weapon_type": "Green Axe",
+      "moveType": "Armored",
+      "weaponType": "Green Axe",
       "hp": 52,
       "atk": 52,
       "spd": 24,
@@ -2588,8 +2588,8 @@
     },
     {
       "name": "Henry",
-      "move_type": "Infantry",
-      "weapon_type": "Red Tome",
+      "moveType": "Infantry",
+      "weaponType": "Red Tome",
       "hp": 42,
       "atk": 34,
       "spd": 22,
@@ -2649,8 +2649,8 @@
     },
     {
       "name": "Hinata",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 47,
       "atk": 44,
       "spd": 27,
@@ -2716,8 +2716,8 @@
     },
     {
       "name": "Hinoka",
-      "move_type": "Flying",
-      "weapon_type": "Blue Lance",
+      "moveType": "Flying",
+      "weaponType": "Blue Lance",
       "hp": 41,
       "atk": 43,
       "spd": 27,
@@ -2783,8 +2783,8 @@
     },
     {
       "name": "Jagen",
-      "move_type": "Cavalry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Cavalry",
+      "weaponType": "Blue Lance",
       "hp": 36,
       "atk": 45,
       "spd": 27,
@@ -2850,8 +2850,8 @@
     },
     {
       "name": "Jakob",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Shuriken",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Shuriken",
       "hp": 39,
       "atk": 39,
       "spd": 31,
@@ -2912,8 +2912,8 @@
     },
     {
       "name": "Jeorge",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Bow",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Bow",
       "hp": 37,
       "atk": 46,
       "spd": 32,
@@ -2977,8 +2977,8 @@
     },
     {
       "name": "Julia",
-      "move_type": "Infantry",
-      "weapon_type": "Green Tome",
+      "moveType": "Infantry",
+      "weaponType": "Green Tome",
       "hp": 38,
       "atk": 49,
       "spd": 26,
@@ -3042,8 +3042,8 @@
     },
     {
       "name": "Kagero",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Shuriken",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Shuriken",
       "hp": 31,
       "atk": 40,
       "spd": 32,
@@ -3109,8 +3109,8 @@
     },
     {
       "name": "Klein",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Bow",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Bow",
       "hp": 40,
       "atk": 38,
       "spd": 28,
@@ -3176,8 +3176,8 @@
     },
     {
       "name": "Lachesis",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Staff",
       "hp": 39,
       "atk": 42,
       "spd": 25,
@@ -3236,8 +3236,8 @@
     },
     {
       "name": "Laslow",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 44,
       "atk": 50,
       "spd": 26,
@@ -3303,8 +3303,8 @@
     },
     {
       "name": "Leo",
-      "move_type": "Cavalry",
-      "weapon_type": "Red Tome",
+      "moveType": "Cavalry",
+      "weaponType": "Red Tome",
       "hp": 39,
       "atk": 43,
       "spd": 22,
@@ -3370,8 +3370,8 @@
     },
     {
       "name": "Lilina",
-      "move_type": "Infantry",
-      "weapon_type": "Red Tome",
+      "moveType": "Infantry",
+      "weaponType": "Red Tome",
       "hp": 35,
       "atk": 53,
       "spd": 25,
@@ -3437,8 +3437,8 @@
     },
     {
       "name": "Linde",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Tome",
+      "moveType": "Infantry",
+      "weaponType": "Blue Tome",
       "hp": 35,
       "atk": 49,
       "spd": 39,
@@ -3466,8 +3466,8 @@
     },
     {
       "name": "Lissa",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Staff",
       "hp": 39,
       "atk": 36,
       "spd": 25,
@@ -3526,8 +3526,8 @@
     },
     {
       "name": "Lon'qu",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 45,
       "atk": 40,
       "spd": 42,
@@ -3593,8 +3593,8 @@
     },
     {
       "name": "Lucina",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 43,
       "atk": 50,
       "spd": 36,
@@ -3665,8 +3665,8 @@
     },
     {
       "name": "Lyn",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 37,
       "atk": 44,
       "spd": 37,
@@ -3737,8 +3737,8 @@
     },
     {
       "name": "Maria",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Staff",
       "hp": 36,
       "atk": 37,
       "spd": 34,
@@ -3797,8 +3797,8 @@
     },
     {
       "name": "Marth",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 41,
       "atk": 47,
       "spd": 34,
@@ -3854,8 +3854,8 @@
     },
     {
       "name": "Matthew",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Shuriken",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Shuriken",
       "hp": 41,
       "atk": 36,
       "spd": 34,
@@ -3915,8 +3915,8 @@
     },
     {
       "name": "Merric",
-      "move_type": "Infantry",
-      "weapon_type": "Green Tome",
+      "moveType": "Infantry",
+      "weaponType": "Green Tome",
       "hp": 48,
       "atk": 40,
       "spd": 32,
@@ -3980,8 +3980,8 @@
     },
     {
       "name": "Minerva",
-      "move_type": "Flying",
-      "weapon_type": "Green Axe",
+      "moveType": "Flying",
+      "weaponType": "Green Axe",
       "hp": 40,
       "atk": 52,
       "spd": 38,
@@ -4041,8 +4041,8 @@
     },
     {
       "name": "Narcian",
-      "move_type": "Flying",
-      "weapon_type": "Green Axe",
+      "moveType": "Flying",
+      "weaponType": "Green Axe",
       "hp": 42,
       "atk": 41,
       "spd": 29,
@@ -4108,8 +4108,8 @@
     },
     {
       "name": "Niles",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Bow",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Bow",
       "hp": 37,
       "atk": 34,
       "spd": 34,
@@ -4175,8 +4175,8 @@
     },
     {
       "name": "Nino",
-      "move_type": "Infantry",
-      "weapon_type": "Green Tome",
+      "moveType": "Infantry",
+      "weaponType": "Green Tome",
       "hp": 33,
       "atk": 46,
       "spd": 36,
@@ -4232,8 +4232,8 @@
     },
     {
       "name": "Nowi",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Beast",
+      "moveType": "Infantry",
+      "weaponType": "Blue Beast",
       "hp": 45,
       "atk": 45,
       "spd": 27,
@@ -4294,8 +4294,8 @@
     },
     {
       "name": "Oboro",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Infantry",
+      "weaponType": "Blue Lance",
       "hp": 40,
       "atk": 44,
       "spd": 26,
@@ -4356,8 +4356,8 @@
     },
     {
       "name": "Odin",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Tome",
+      "moveType": "Infantry",
+      "weaponType": "Blue Tome",
       "hp": 43,
       "atk": 35,
       "spd": 32,
@@ -4423,8 +4423,8 @@
     },
     {
       "name": "Ogma",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 47,
       "atk": 43,
       "spd": 29,
@@ -4490,8 +4490,8 @@
     },
     {
       "name": "Olivia",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 36,
       "atk": 43,
       "spd": 33,
@@ -4544,8 +4544,8 @@
     },
     {
       "name": "Olwen",
-      "move_type": "Cavalry",
-      "weapon_type": "Blue Tome",
+      "moveType": "Cavalry",
+      "weaponType": "Blue Tome",
       "hp": 34,
       "atk": 35,
       "spd": 29,
@@ -4605,8 +4605,8 @@
     },
     {
       "name": "Palla",
-      "move_type": "Flying",
-      "weapon_type": "Red Sword",
+      "moveType": "Flying",
+      "weaponType": "Red Sword",
       "hp": 42,
       "atk": 43,
       "spd": 31,
@@ -4672,8 +4672,8 @@
     },
     {
       "name": "Peri",
-      "move_type": "Cavalry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Cavalry",
+      "weaponType": "Blue Lance",
       "hp": 35,
       "atk": 44,
       "spd": 33,
@@ -4739,8 +4739,8 @@
     },
     {
       "name": "Raigh",
-      "move_type": "Infantry",
-      "weapon_type": "Red Tome",
+      "moveType": "Infantry",
+      "weaponType": "Red Tome",
       "hp": 41,
       "atk": 42,
       "spd": 29,
@@ -4800,8 +4800,8 @@
     },
     {
       "name": "Raven",
-      "move_type": "Infantry",
-      "weapon_type": "Green Axe",
+      "moveType": "Infantry",
+      "weaponType": "Green Axe",
       "hp": 41,
       "atk": 42,
       "spd": 30,
@@ -4861,8 +4861,8 @@
     },
     {
       "name": "Reinhardt",
-      "move_type": "Cavalry",
-      "weapon_type": "Blue Tome",
+      "moveType": "Cavalry",
+      "weaponType": "Blue Tome",
       "hp": 38,
       "atk": 41,
       "spd": 18,
@@ -4926,8 +4926,8 @@
     },
     {
       "name": "Robin (F)",
-      "move_type": "Infantry",
-      "weapon_type": "Green Tome",
+      "moveType": "Infantry",
+      "weaponType": "Green Tome",
       "hp": 40,
       "atk": 39,
       "spd": 29,
@@ -4993,8 +4993,8 @@
     },
     {
       "name": "Robin (M)",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Tome",
+      "moveType": "Infantry",
+      "weaponType": "Blue Tome",
       "hp": 40,
       "atk": 40,
       "spd": 29,
@@ -5060,8 +5060,8 @@
     },
     {
       "name": "Roy",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 44,
       "atk": 46,
       "spd": 31,
@@ -5122,8 +5122,8 @@
     },
     {
       "name": "Ryoma",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 41,
       "atk": 50,
       "spd": 35,
@@ -5189,8 +5189,8 @@
     },
     {
       "name": "Saizo",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Shuriken",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Shuriken",
       "hp": 36,
       "atk": 38,
       "spd": 34,
@@ -5251,8 +5251,8 @@
     },
     {
       "name": "Sakura",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Staff",
       "hp": 36,
       "atk": 38,
       "spd": 30,
@@ -5311,8 +5311,8 @@
     },
     {
       "name": "Sanaki",
-      "move_type": "Infantry",
-      "weapon_type": "Red Tome",
+      "moveType": "Infantry",
+      "weaponType": "Red Tome",
       "hp": 33,
       "atk": 51,
       "spd": 26,
@@ -5373,8 +5373,8 @@
     },
     {
       "name": "Selena",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 37,
       "atk": 37,
       "spd": 35,
@@ -5434,8 +5434,8 @@
     },
     {
       "name": "Seliph",
-      "move_type": "Infantry",
-      "weapon_type": "Red Sword",
+      "moveType": "Infantry",
+      "weaponType": "Red Sword",
       "hp": 52,
       "atk": 50,
       "spd": 24,
@@ -5496,8 +5496,8 @@
     },
     {
       "name": "Serra",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Staff",
       "hp": 33,
       "atk": 37,
       "spd": 31,
@@ -5556,8 +5556,8 @@
     },
     {
       "name": "Setsuna",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Bow",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Bow",
       "hp": 39,
       "atk": 39,
       "spd": 37,
@@ -5613,8 +5613,8 @@
     },
     {
       "name": "Shanna",
-      "move_type": "Flying",
-      "weapon_type": "Blue Lance",
+      "moveType": "Flying",
+      "weaponType": "Blue Lance",
       "hp": 39,
       "atk": 37,
       "spd": 35,
@@ -5680,8 +5680,8 @@
     },
     {
       "name": "Sharena",
-      "move_type": "Infantry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Infantry",
+      "weaponType": "Blue Lance",
       "hp": 43,
       "atk": 48,
       "spd": 35,
@@ -5742,8 +5742,8 @@
     },
     {
       "name": "Sheena",
-      "move_type": "Armored",
-      "weapon_type": "Green Axe",
+      "moveType": "Armored",
+      "weaponType": "Green Axe",
       "hp": 45,
       "atk": 44,
       "spd": 25,
@@ -5795,8 +5795,8 @@
     },
     {
       "name": "Sophia",
-      "move_type": "Infantry",
-      "weapon_type": "Red Tome",
+      "moveType": "Infantry",
+      "weaponType": "Red Tome",
       "hp": 40,
       "atk": 46,
       "spd": 19,
@@ -5862,8 +5862,8 @@
     },
     {
       "name": "Stahl",
-      "move_type": "Cavalry",
-      "weapon_type": "Red Sword",
+      "moveType": "Cavalry",
+      "weaponType": "Red Sword",
       "hp": 45,
       "atk": 46,
       "spd": 26,
@@ -5924,8 +5924,8 @@
     },
     {
       "name": "Subaki",
-      "move_type": "Flying",
-      "weapon_type": "Blue Lance",
+      "moveType": "Flying",
+      "weaponType": "Blue Lance",
       "hp": 40,
       "atk": 37,
       "spd": 35,
@@ -5986,8 +5986,8 @@
     },
     {
       "name": "Sully",
-      "move_type": "Cavalry",
-      "weapon_type": "Blue Lance",
+      "moveType": "Cavalry",
+      "weaponType": "Blue Lance",
       "hp": 42,
       "atk": 38,
       "spd": 34,
@@ -6048,8 +6048,8 @@
     },
     {
       "name": "Takumi",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Bow",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Bow",
       "hp": 40,
       "atk": 46,
       "spd": 33,
@@ -6107,8 +6107,8 @@
     },
     {
       "name": "Tharja",
-      "move_type": "Infantry",
-      "weapon_type": "Red Tome",
+      "moveType": "Infantry",
+      "weaponType": "Red Tome",
       "hp": 39,
       "atk": 45,
       "spd": 34,
@@ -6168,8 +6168,8 @@
     },
     {
       "name": "Tiki",
-      "move_type": "Infantry",
-      "weapon_type": "Red Beast",
+      "moveType": "Infantry",
+      "weaponType": "Red Beast",
       "hp": 40,
       "atk": 46,
       "spd": 26,
@@ -6235,8 +6235,8 @@
     },
     {
       "name": "Tiki (Young)",
-      "move_type": "Infantry",
-      "weapon_type": "Red Beast",
+      "moveType": "Infantry",
+      "weaponType": "Red Beast",
       "hp": 41,
       "atk": 46,
       "spd": 30,
@@ -6302,8 +6302,8 @@
     },
     {
       "name": "Virion",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Bow",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Bow",
       "hp": 46,
       "atk": 44,
       "spd": 31,
@@ -6369,8 +6369,8 @@
     },
     {
       "name": "Wrys",
-      "move_type": "Infantry",
-      "weapon_type": "Neutral Staff",
+      "moveType": "Infantry",
+      "weaponType": "Neutral Staff",
       "hp": 42,
       "atk": 34,
       "spd": 23,
@@ -6430,1179 +6430,1179 @@
     {
       "name": "Brave Sword",
       "cost": "XXX SP",
-      "damage_(mt)": 5,
-      "range_(rng)": 1,
-      "special_effects": "Spd-5. Attack twice when initiating combat.",
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "specialEffects": "Spd-5. Attack twice when initiating combat.",
       "type": "WEAPON"
     },
     {
       "name": "Brave Sword+",
       "cost": "XXX SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Spd-5. Attack twice when initiating combat.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Spd-5. Attack twice when initiating combat.",
       "type": "WEAPON"
     },
     {
       "name": "Falchion",
       "cost": "400 SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
       "type": "WEAPON"
     },
     {
       "name": "Fólkvangr",
       "cost": "400 SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
       "type": "WEAPON"
     },
     {
       "name": "Sol Katti",
       "cost": "XXX SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Attack twice immediatly when initiating combat if unit's HP ≤ 50% and if can attack twice.",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Attack twice immediatly when initiating combat if unit's HP ≤ 50% and if can attack twice.",
       "type": "WEAPON"
     },
     {
       "name": "Iron Sword",
       "cost": "-",
-      "damage_(mt)": 6,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Killing Edge",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 1,
-      "special_effects": "Accelerates Special Trigger (cooldown count -1)",
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special Trigger (cooldown count -1)",
       "type": "WEAPON"
     },
     {
       "name": "Killing Edge+",
       "cost": "300 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "Accelerates Special Trigger (cooldown count -1)",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special Trigger (cooldown count -1)",
       "type": "WEAPON"
     },
     {
       "name": "Mystletainn",
       "cost": "XXX SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Accelerates Special Trigger (cooldown count -1)",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special Trigger (cooldown count -1)",
       "type": "WEAPON"
     },
     {
       "name": "Ruby Sword",
       "cost": "200 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "type": "WEAPON"
     },
     {
       "name": "Ruby Sword+",
       "cost": "300 SP",
-      "damage_(mt)": 12,
-      "range_(rng)": 1,
-      "special_effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "type": "WEAPON"
     },
     {
       "name": "Silver Sword",
       "cost": "200 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Silver Sword+",
       "cost": "300 SP",
-      "damage_(mt)": "X",
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": "X",
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Steel Sword",
       "cost": "100 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Armorslayer",
       "cost": "200 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Effective against armored units.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
       "type": "WEAPON"
     },
     {
       "name": "Armorslayer+",
       "cost": "300 SP",
-      "damage_(mt)": 12,
-      "range_(rng)": 1,
-      "special_effects": "Effective against armored units.",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
       "type": "WEAPON"
     },
     {
       "name": "Tyrfing",
       "cost": "XXX SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Grants Def+4 in battle if unit's HP ≤ 50%.",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Grants Def+4 in battle if unit's HP ≤ 50%.",
       "type": "WEAPON"
     },
     {
       "name": "Sieglinde",
       "cost": "XXX SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
       "type": "WEAPON"
     },
     {
       "name": "Fire",
       "cost": "-",
-      "damage_(mt)": 4,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Elfire",
       "cost": "100 SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Bolganone",
       "cost": "XXX SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Bolganone+",
       "cost": "400 SP",
-      "damage_(mt)": 13,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Cymbeline",
       "cost": "XXX SP",
-      "damage_(mt)": 14,
-      "range_(rng)": 2,
-      "special_effects": "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.",
       "type": "WEAPON"
     },
     {
       "name": "Flux",
       "cost": "-",
-      "damage_(mt)": 4,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Ruin",
       "cost": "100 SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Rauðrwolf",
       "cost": "200 SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "Effective against cavalry units.",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "Effective against cavalry units.",
       "type": "WEAPON"
     },
     {
       "name": "Rauðrwolf+",
       "cost": "300 SP",
-      "damage_(mt)": 10,
-      "range_(rng)": 2,
-      "special_effects": "Effective against cavalry units.",
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "specialEffects": "Effective against cavalry units.",
       "type": "WEAPON"
     },
     {
       "name": "Fenrir",
       "cost": "200 SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Fenrir+",
       "cost": "300 SP",
-      "damage_(mt)": 13,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Brynhildr",
       "cost": "XXX SP",
-      "damage_(mt)": 14,
-      "range_(rng)": 2,
-      "special_effects": "If character initiates attack, restricts enemies's next-turn movement to 1 space or less.",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "If character initiates attack, restricts enemies's next-turn movement to 1 space or less.",
       "type": "WEAPON"
     },
     {
       "name": "Rauðrraven",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 2,
-      "special_effects": "Grants weapon advantage vs. colorless enemies.",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "Grants weapon advantage vs. colorless enemies.",
       "type": "WEAPON"
     },
     {
       "name": "Rauðrraven+",
       "cost": "XXX SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 2,
-      "special_effects": "Grants weapon advantage vs. colorless enemies.",
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "specialEffects": "Grants weapon advantage vs. colorless enemies.",
       "type": "WEAPON"
     },
     {
       "name": "Rauðrblade",
       "cost": "XXX SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
       "type": "WEAPON"
     },
     {
       "name": "Rauðrblade+",
       "cost": "XXX SP",
-      "damage_(mt)": 13,
-      "range_(rng)": 2,
-      "special_effects": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
       "type": "WEAPON"
     },
     {
       "name": "Fire Breath",
       "cost": "-",
-      "damage_(mt)": 6,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Fire Breath+",
       "cost": "XXX SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Flametongue",
       "cost": "XXX SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Flametongue+",
       "cost": "XXX SP",
-      "damage_(mt)": 15,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Lightning Breath",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 1,
-      "special_effects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "specialEffects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "type": "WEAPON"
     },
     {
       "name": "Lightning Breath+",
       "cost": "300 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "type": "WEAPON"
     },
     {
       "name": "Brave Axe",
       "cost": "200 SP",
-      "damage_(mt)": 5,
-      "range_(rng)": 1,
-      "special_effects": "Spd-5. Attack twice when initiating combat.",
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "specialEffects": "Spd-5. Attack twice when initiating combat.",
       "type": "WEAPON"
     },
     {
       "name": "Brave Axe+",
       "cost": "300 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Spd-5. Attack twice when initiating combat.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Spd-5. Attack twice when initiating combat.",
       "type": "WEAPON"
     },
     {
       "name": "Iron Axe",
       "cost": "-",
-      "damage_(mt)": 6,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Emerald Axe",
       "cost": "200 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "type": "WEAPON"
     },
     {
       "name": "Emerald Axe+",
       "cost": "300 SP",
-      "damage_(mt)": 12,
-      "range_(rng)": 1,
-      "special_effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "type": "WEAPON"
     },
     {
       "name": "Silver Axe",
       "cost": "200 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Silver Axe+",
       "cost": "300 SP",
-      "damage_(mt)": 15,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Steel Axe",
       "cost": "100 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Hammer",
       "cost": "200 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Effective against armored units.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
       "type": "WEAPON"
     },
     {
       "name": "Hammer+",
       "cost": "XXX SP",
-      "damage_(mt)": 12,
-      "range_(rng)": 1,
-      "special_effects": "Effective against armored units.",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
       "type": "WEAPON"
     },
     {
       "name": "Nóatún",
       "cost": "400 SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Unit may move adjacent to any ally when HP ≤ 40%.",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Unit may move adjacent to any ally when HP ≤ 40%.",
       "type": "WEAPON"
     },
     {
       "name": "Killer Axe",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 1,
-      "special_effects": "Accelerates Special trigger (cooldown count -1)",
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special trigger (cooldown count -1)",
       "type": "WEAPON"
     },
     {
       "name": "Killer Axe+",
       "cost": "300 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "Accelerates Special trigger (cooldown count -1)",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special trigger (cooldown count -1)",
       "type": "WEAPON"
     },
     {
       "name": "Armads",
       "cost": "XXX SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%",
       "type": "WEAPON"
     },
     {
       "name": "Hauteclere",
       "cost": "XXX SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Accelerates Special trigger (cooldown count-1)",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special trigger (cooldown count-1)",
       "type": "WEAPON"
     },
     {
       "name": "Wind",
       "cost": "-",
-      "damage_(mt)": 4,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Elwind",
       "cost": "100 SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Gronnblade",
       "cost": "200 SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "type": "WEAPON"
     },
     {
       "name": "Gronnblade+",
       "cost": "300 SP",
-      "damage_(mt)": 13,
-      "range_(rng)": 2,
-      "special_effects": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "type": "WEAPON"
     },
     {
       "name": "Gronnraven",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 2,
-      "special_effects": "Grants weapon advantage vs. colorless foes.",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "Grants weapon advantage vs. colorless foes.",
       "type": "WEAPON"
     },
     {
       "name": "Gronnraven+",
       "cost": "300 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 2,
-      "special_effects": "Grants weapon advantage vs. colorless foes.",
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "specialEffects": "Grants weapon advantage vs. colorless foes.",
       "type": "WEAPON"
     },
     {
       "name": "Gronnwolf",
       "cost": "200 SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "Effective against cavalry units.",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "Effective against cavalry units.",
       "type": "WEAPON"
     },
     {
       "name": "Gronnwolf+",
       "cost": "300 SP",
-      "damage_(mt)": 10,
-      "range_(rng)": 2,
-      "special_effects": "Effective against cavalry units.",
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "specialEffects": "Effective against cavalry units.",
       "type": "WEAPON"
     },
     {
       "name": "Rexcalibur",
       "cost": "XXX SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Excalibur",
       "cost": "XXX SP",
-      "damage_(mt)": 14,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units",
       "type": "WEAPON"
     },
     {
       "name": "Naga",
       "cost": "XXX SP",
-      "damage_(mt)": 14,
-      "range_(rng)": 2,
-      "special_effects": "Effective against dragons. \nGrants Def/Res+2 when this unit is attacked.",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Effective against dragons. \nGrants Def/Res+2 when this unit is attacked.",
       "type": "WEAPON"
     },
     {
       "name": "Fire Breath",
       "cost": "-",
-      "damage_(mt)": 6,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Fire Breath+",
       "cost": "XXX SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Light Breath",
       "cost": "XXX SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 1,
-      "special_effects": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "specialEffects": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
       "type": "WEAPON"
     },
     {
       "name": "Light Breath+",
       "cost": "XXX SP",
-      "damage_(mt)": 13,
-      "range_(rng)": 1,
-      "special_effects": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "specialEffects": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
       "type": "WEAPON"
     },
     {
       "name": "Iron Lance",
       "cost": "-",
-      "damage_(mt)": 6,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Steel Lance",
       "cost": "100 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Silver Lance",
       "cost": "200 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Silver Lance+",
       "cost": "300 SP",
-      "damage_(mt)": 15,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Killer Lance",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 1,
-      "special_effects": "Speeds up special trigger by one action",
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "specialEffects": "Speeds up special trigger by one action",
       "type": "WEAPON"
     },
     {
       "name": "Killer Lance+",
       "cost": "300 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "Speeds up special trigger by one action",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "Speeds up special trigger by one action",
       "type": "WEAPON"
     },
     {
       "name": "Brave Lance",
       "cost": "200 SP",
-      "damage_(mt)": 5,
-      "range_(rng)": 1,
-      "special_effects": "Spd-5, Attack twice when initiating combat.",
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "specialEffects": "Spd-5, Attack twice when initiating combat.",
       "type": "WEAPON"
     },
     {
       "name": "Brave Lance+",
       "cost": "300 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Spd-5, Attack twice when initiating combat.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Spd-5, Attack twice when initiating combat.",
       "type": "WEAPON"
     },
     {
       "name": "Heavy Spear",
       "cost": "200 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Effective against armored units.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
       "type": "WEAPON"
     },
     {
       "name": "Heavy Spear+",
       "cost": "300 SP",
-      "damage_(mt)": 12,
-      "range_(rng)": 1,
-      "special_effects": "Effective against armored units.",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
       "type": "WEAPON"
     },
     {
       "name": "Sapphire Lance",
       "cost": "200 SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "type": "WEAPON"
     },
     {
       "name": "Sapphire Lance+",
       "cost": "300 SP",
-      "damage_(mt)": 12,
-      "range_(rng)": 1,
-      "special_effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "type": "WEAPON"
     },
     {
       "name": "Fensalir",
       "cost": "400 SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
       "type": "WEAPON"
     },
     {
       "name": "Siegmund",
       "cost": "XXX SP",
-      "damage_(mt)": 16,
-      "range_(rng)": 1,
-      "special_effects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
       "type": "WEAPON"
     },
     {
       "name": "Thunder",
       "cost": "-",
-      "damage_(mt)": 4,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Elthunder",
       "cost": "XXX SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Blárraven",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 2,
-      "special_effects": "Grants weapon advantage vs. colorless foes.",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "Grants weapon advantage vs. colorless foes.",
       "type": "WEAPON"
     },
     {
       "name": "Blárraven+",
       "cost": "300 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 2,
-      "special_effects": "Grants weapon advantage vs. colorless foes.",
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "specialEffects": "Grants weapon advantage vs. colorless foes.",
       "type": "WEAPON"
     },
     {
       "name": "Blárblade",
       "cost": "200 SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
       "type": "WEAPON"
     },
     {
       "name": "Blárblade+",
       "cost": "XXX SP",
-      "damage_(mt)": 13,
-      "range_(rng)": 2,
-      "special_effects": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
       "type": "WEAPON"
     },
     {
       "name": "Thoron",
       "cost": "XXX SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Dire Thunder",
       "cost": "XXX SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "Spd-5. Attack twice when initiating combat.",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Spd-5. Attack twice when initiating combat.",
       "type": "WEAPON"
     },
     {
       "name": "Aura",
       "cost": "XXX SP",
-      "damage_(mt)": 14,
-      "range_(rng)": 2,
-      "special_effects": "Restores 5 HP to adjacent allies after any combat this unit initiates",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Restores 5 HP to adjacent allies after any combat this unit initiates",
       "type": "WEAPON"
     },
     {
       "name": "Fire Breath",
       "cost": "-",
-      "damage_(mt)": 6,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Fire Breath+",
       "cost": "XXX SP",
-      "damage_(mt)": 8,
-      "range_(rng)": 1,
-      "special_effects": "None",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Dark Breath",
       "cost": "XXX SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 1,
-      "special_effects": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "specialEffects": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
       "type": "WEAPON"
     },
     {
       "name": "Dark Breath+",
       "cost": "XXX SP",
-      "damage_(mt)": 13,
-      "range_(rng)": 1,
-      "special_effects": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "specialEffects": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
       "type": "WEAPON"
     },
     {
       "name": "Lightning Breath",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 1,
-      "special_effects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "specialEffects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "type": "WEAPON"
     },
     {
       "name": "Lightning Breath+",
       "cost": "300 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 1,
-      "special_effects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "type": "WEAPON"
     },
     {
       "name": "Absorb",
       "cost": "150 SP",
-      "damage_(mt)": 4,
-      "range_(rng)": 2,
-      "special_effects": "Recovers HP=50% of damage dealt.",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "Recovers HP=50% of damage dealt.",
       "type": "WEAPON"
     },
     {
       "name": "Assault",
       "cost": "50 SP",
-      "damage_(mt)": 10,
-      "range_(rng)": 2,
-      "special_effects": "None",
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
       "name": "Fear",
       "cost": "150 SP",
-      "damage_(mt)": 5,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Atk-6 on targeted foe through its next action.",
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Atk-6 on targeted foe through its next action.",
       "type": "WEAPON"
     },
     {
       "name": "Gravity",
       "cost": "150 SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "After any combat, prevents foe from moving more than 1 space through its next action.",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "After any combat, prevents foe from moving more than 1 space through its next action.",
       "type": "WEAPON"
     },
     {
       "name": "Pain",
       "cost": "150 SP",
-      "damage_(mt)": 3,
-      "range_(rng)": 2,
-      "special_effects": "Inflicts 10 damage on targeted foe after combat.",
+      "damage(mt)": 3,
+      "range(rng)": 2,
+      "specialEffects": "Inflicts 10 damage on targeted foe after combat.",
       "type": "WEAPON"
     },
     {
       "name": "Panic",
       "cost": "150 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 2,
-      "special_effects": "After combat, bonuses on targeted foe become penalties through its next action.",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "After combat, bonuses on targeted foe become penalties through its next action.",
       "type": "WEAPON"
     },
     {
       "name": "Slow",
       "cost": "150 SP",
-      "damage_(mt)": 5,
-      "range_(rng)": 2,
-      "special_effects": "After any combat, inflicts Spd-6 on foe through its next action.",
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "specialEffects": "After any combat, inflicts Spd-6 on foe through its next action.",
       "type": "WEAPON"
     },
     {
       "name": "Assassin's Bow",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 2,
-      "special_effects": "Effective against fliers. If target has a dagger, it can't make a follow-up attack and this unit will.",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "Effective against fliers. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "type": "WEAPON"
     },
     {
       "name": "Assassin's Bow+",
       "cost": "300 SP",
-      "damage_(mt)": 11,
-      "range_(rng)": 2,
-      "special_effects": "Effective against fliers. If target has a dagger, it can't make a follow-up attack and this unit will.",
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "specialEffects": "Effective against fliers. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "type": "WEAPON"
     },
     {
       "name": "Brave Bow",
       "cost": "200 SP",
-      "damage_(mt)": 4,
-      "range_(rng)": 2,
-      "special_effects": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
       "type": "WEAPON"
     },
     {
       "name": "Brave Bow+",
       "cost": "300 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 2,
-      "special_effects": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
       "type": "WEAPON"
     },
     {
       "name": "Fujin Yumi",
       "cost": "XXX SP",
-      "damage_(mt)": 14,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units. Unit can pass though foes if own HP ≥ 50%.",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units. Unit can pass though foes if own HP ≥ 50%.",
       "type": "WEAPON"
     },
     {
       "name": "Iron Bow",
       "cost": "-",
-      "damage_(mt)": 4,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units",
       "type": "WEAPON"
     },
     {
       "name": "Killer Bow",
       "cost": "200 SP",
-      "damage_(mt)": 5,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
       "type": "WEAPON"
     },
     {
       "name": "Killer Bow+",
       "cost": "300 SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
       "type": "WEAPON"
     },
     {
       "name": "Parthia",
       "cost": "400 SP",
-      "damage_(mt)": 14,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units. Grants +4 Res during combat if initiating attack.",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units. Grants +4 Res during combat if initiating attack.",
       "type": "WEAPON"
     },
     {
       "name": "Silver Bow",
       "cost": "200 SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units.",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units.",
       "type": "WEAPON"
     },
     {
       "name": "Silver Bow+",
       "cost": "300 SP",
-      "damage_(mt)": 13,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units.",
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units.",
       "type": "WEAPON"
     },
     {
       "name": "Steel Bow",
       "cost": "100 SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "Effective against flying units.",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units.",
       "type": "WEAPON"
     },
     {
       "name": "Iron Dagger",
       "cost": "-",
-      "damage_(mt)": 3,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Def/Res-3 on foe through its next action.",
+      "damage(mt)": 3,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-3 on foe through its next action.",
       "type": "WEAPON"
     },
     {
       "name": "Poison Dagger",
       "cost": "XXX SP",
-      "damage_(mt)": 2,
-      "range_(rng)": 2,
-      "special_effects": "Effective against infantry units. Infantry foes suffer Def/Res-4 after combat through their next actions.",
+      "damage(mt)": 2,
+      "range(rng)": 2,
+      "specialEffects": "Effective against infantry units. Infantry foes suffer Def/Res-4 after combat through their next actions.",
       "type": "WEAPON"
     },
     {
       "name": "Poison Dagger+",
       "cost": "XXX SP",
-      "damage_(mt)": 5,
-      "range_(rng)": 2,
-      "special_effects": "Effective against infantry units. Infantry foes suffer Def/Res-6 after combat through their next actions.",
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "specialEffects": "Effective against infantry units. Infantry foes suffer Def/Res-6 after combat through their next actions.",
       "type": "WEAPON"
     },
     {
       "name": "Rogue Dagger",
       "cost": "200 SP",
-      "damage_(mt)": 4,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn.",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn.",
       "type": "WEAPON"
     },
     {
       "name": "Rogue Dagger+",
       "cost": "300 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn.",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn.",
       "type": "WEAPON"
     },
     {
       "name": "Silver Dagger",
       "cost": "200 SP",
-      "damage_(mt)": 7,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Def/Res-5 on foe through its next action.",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-5 on foe through its next action.",
       "type": "WEAPON"
     },
     {
       "name": "Silver Dagger+",
       "cost": "300 SP",
-      "damage_(mt)": 10,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Def/Res-7 on foe through its next action.",
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-7 on foe through its next action.",
       "type": "WEAPON"
     },
     {
       "name": "Steel Dagger",
       "cost": "100 SP",
-      "damage_(mt)": 5,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Def/Res-3 on foe through its next action.",
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-3 on foe through its next action.",
       "type": "WEAPON"
     },
     {
       "name": "Smoke Dagger",
       "cost": "200 SP",
-      "damage_(mt)": 6,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions.",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions.",
       "type": "WEAPON"
     },
     {
       "name": "Smoke Dagger+",
       "cost": "300 SP",
-      "damage_(mt)": 9,
-      "range_(rng)": 2,
-      "special_effects": "After combat, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions.",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions.",
       "type": "WEAPON"
     },
     {
       "name": "Ardent Sacrifice",
       "range": 1,
       "effect": "Heals adjacent ally 10 HP. Unit loses 10 HP (but cannot reach 0 this way).",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Dance",
       "range": 1,
       "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Draw Back",
       "range": 1,
       "effect": "Unit moves 1 space away from target ally, who moves to units former position.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Harsh Command",
       "range": 1,
       "effect": "Converts penalties on target into bonuses.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Heal",
       "range": 1,
       "effect": "Restores 5 HP.",
-      "sp_cost": "Default",
+      "spCost": "Default",
       "type": "ASSIST"
     },
     {
       "name": "Martyr",
       "range": 1,
       "effect": "Restores HP=7+ this units suffered damage. Unit Heals HP=half suffered damage. Slows Special trigger (cooldown count +1).",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "ASSIST"
     },
     {
       "name": "Mend",
       "range": 1,
       "effect": "Restores 10 HP.",
-      "sp_cost": "Default",
+      "spCost": "Default",
       "type": "ASSIST"
     },
     {
       "name": "Physic",
       "range": 2,
       "effect": "Restores 8 HP to a target (rest of translation wrong: \"and all allies within 2 spaces of target.\")",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "ASSIST"
     },
     {
       "name": "Pivot",
       "range": 1,
       "effect": "Unit moves to opposite side of adjacent ally.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Rally Attack",
       "range": 1,
       "effect": "Grants Atk+4 to an adjacent ally until the end of the turn.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Rally Defense",
       "range": 1,
       "effect": "Grants Def+4 to an adjacent ally until the end of the turn.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Rally Resistance",
       "range": 1,
       "effect": "Grants Res+4 to an adjacent ally until the end of the turn.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Rally Speed",
       "range": 1,
       "effect": "Grants Spd+4 to an adjacent ally until the end of the turn.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Reciprocal Aid",
       "range": 1,
       "effect": "Swap HP with adjacent ally (neither unit can go above their max HP.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Reconcile",
       "range": 1,
       "effect": "Restores 7 HP each to target and this unit.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "ASSIST"
     },
     {
       "name": "Recover",
       "range": 1,
       "effect": "Restores 15 HP. Slows Special trigger (cooldown count +1).",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "ASSIST"
     },
     {
       "name": "Rehabilitate",
       "range": 1,
       "effect": "Restores 7 HP or more the further below 50% the target's HP is. Slows Special trigger (cooldown count +1).",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "ASSIST"
     },
     {
       "name": "Reposition",
       "range": 1,
       "effect": "Moves adjacent ally to opposite side of unit.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Shove",
       "range": 1,
       "effect": "Push adjacent ally 1 space farther away.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Sing",
       "range": 1,
       "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Smite",
       "range": 1,
       "effect": "Push adjacent ally 2 spaces further away.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
       "name": "Swap",
       "range": 1,
       "effect": "Swap places with adjacent ally.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "ASSIST"
     },
     {
@@ -8031,1081 +8031,1081 @@
     {
       "name": "Armored Blow 1",
       "effects": "Grants Def+2 during combat if unit initiates the attack.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Armored Blow 2",
       "effects": "Grants Def+4 during combat if unit initiates the attack.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Armored Blow 3",
       "effects": "Grants Def+6 during combat if unit initiates the attack.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Attack +1",
       "effects": "Grants Atk+1.",
-      "sp_cost": 30,
+      "spCost": 30,
       "type": "PASSIVE"
     },
     {
       "name": "Attack +2",
       "effects": "Grants Atk+2.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Attack +3",
       "effects": "Grants Atk+3.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Close Counter",
       "effects": "Enables unit to counterattack regardless of distance to attacker.",
-      "sp_cost": 300,
+      "spCost": 300,
       "type": "PASSIVE"
     },
     {
       "name": "Darting Blow 1",
       "effects": "Grants Spd+2 during combat if unit initiates the attack.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Darting Blow 2",
       "effects": "Grants Spd+4 during combat if unit initiates the attack.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Darting Blow 3",
       "effects": "Grants Spd+6 during combat if unit initiates the attack.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Death Blow 1",
       "effects": "Grants Atk+2 during combat if unit initiates the attack.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Death Blow 2",
       "effects": "Grants Atk+4 during combat if unit initiates the attack.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Death Blow 3",
       "effects": "Grants Atk+6 during combat if unit initiates the attack.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Defense +1",
       "effects": "Grants Def+1.",
-      "sp_cost": 30,
+      "spCost": 30,
       "type": "PASSIVE"
     },
     {
       "name": "Defense +2",
       "effects": "Grants Def+2.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Defense +3",
       "effects": "Grants Def+3.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Atk 1",
       "effects": "Grants Atk+3 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Atk 2",
       "effects": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Atk 3",
       "effects": "Grants Atk+7 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Def 1",
       "effects": "Grants Def+3 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Def 2",
       "effects": "Grants Def+5 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Def 3",
       "effects": "Grants Def+7 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Res 1",
       "effects": "Grants Res+3 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Res 2",
       "effects": "Grants Res+5 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Res 3",
       "effects": "Grants Res+7 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Spd 1",
       "effects": "Grants Spd+3 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Spd 2",
       "effects": "Grants Spd+5 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Defiant Spd 3",
       "effects": "Grants Spd+7 at start of turn if unit's HP ≤ 50%.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Distant Counter",
       "effects": "Enables unit to counterattack regardless of distance to attacker.",
-      "sp_cost": 300,
+      "spCost": 300,
       "type": "PASSIVE"
     },
     {
       "name": "Fury 1",
       "effects": "Grants Atk/Spd/Def/Res+1. Unit takes 2 damage after combat.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Fury 2",
       "effects": "Grants Atk/Spd/Def/Res+2. Unit takes 4 damage after combat.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Fury 3",
       "effects": "Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "HP +3",
       "effects": "Grants +3 to max HP.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "HP +4",
       "effects": "Grants +4 to max HP.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "HP +5",
       "effects": "Grants +5 to max HP.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Life and Death 1",
       "effects": "Grants Atk/Spd+3. Inflicts Def/Res-3.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Life and Death 2",
       "effects": "Grants Atk/Spd+4. Inflicts Def/Res-4.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Life and Death 3",
       "effects": "Grants Atk/Spd+5. Inflicts Def/Res-5.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Resistance +1",
       "effects": "Grants Res+1.",
-      "sp_cost": 30,
+      "spCost": 30,
       "type": "PASSIVE"
     },
     {
       "name": "Resistance +2",
       "effects": "Grants Res+2.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Resistance +3",
       "effects": "Grants Res+3.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Speed +1",
       "effects": "Grants Spd+1.",
-      "sp_cost": 30,
+      "spCost": 30,
       "type": "PASSIVE"
     },
     {
       "name": "Speed +2",
       "effects": "Grants Spd+2.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Speed +3",
       "effects": "Grants Spd+3.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Svalinn Shield",
       "effects": "Neutralizes \"effective against\" bonuses.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Triangle Adept 1",
       "effects": "Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Triangle Adept 2",
       "effects": "Gives Atk+15% if weapon-triangle advantage, Atk-15% if disadvantage.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Triangle Adept 3",
       "effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Warding Blow 1",
       "effects": "Grants Res+2 during combat if unit initiates attack.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Warding Blow 2",
       "effects": "Grants Res+4 during combat if unit initiates attack.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Warding Blow 3",
       "effects": "Grants Res+6 during combat if unit initiates attack.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Axebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Axebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Axebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "B Tomebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "B Tomebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "B Tomebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Bowbreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Bowbreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Bowbreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Brash Assault 1",
       "effects": "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Brash Assault 2",
       "effects": "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Brash Assault 3",
       "effects": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Daggerbreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Daggerbreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Daggerbreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Desperation 1",
       "effects": "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Desperation 2",
       "effects": "If unit initiates combat with HP ≤ 50%, follow-up attacks occur immediately after unit's attack.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Desperation 3",
       "effects": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Drag Back",
       "effects": "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "PASSIVE"
     },
     {
       "name": "Escape Route 1",
       "effects": "Enables unit whose own HP is ≤ 30% to warp adjacent to any ally.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Escape Route 2",
       "effects": "Enables unit whose own HP is ≤ 40% to warp adjacent to any ally.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Escape Route 3",
       "effects": "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally.",
-      "sp_cost": 240,
+      "spCost": 240,
       "type": "PASSIVE"
     },
     {
       "name": "G Tomebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "G Tomebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "G Tomebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Knock Back",
       "effects": "If unit initiates attack, foe is moved 1 space away after combat.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "PASSIVE"
     },
     {
       "name": "Lancebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a lance user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Lancebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a lance user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Lancebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a lance user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Live to Serve 1",
       "effects": "When healing allies with a staff, unit also recovers 50% of the HP restored.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Live to Serve 2",
       "effects": "When healing allies with a staff, unit also recovers 75% of the HP restored.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Live to Serve 3",
       "effects": "When healing allies with a staff, unit also recovers the same amount.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Lunge",
       "effects": "If unit initiates attack, after combat, unit and targeted foe swap places.",
-      "sp_cost": 150,
+      "spCost": 150,
       "type": "PASSIVE"
     },
     {
       "name": "Obstruct 1",
       "effects": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Obstruct 2",
       "effects": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Obstruct 3",
       "effects": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Pass 1",
       "effects": "Units can pass through foes if its own HP ≥ 75%.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Pass 2",
       "effects": "Units can pass through foes if its own HP ≥ 50%.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Pass 3",
       "effects": "Units can pass through foes if its own HP ≥ 25%.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Poison Strike 1",
       "effects": "Inflicts 4 damage to foe after any combat this unit initiates.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Poison Strike 2",
       "effects": "Inflicts 7 damage to foe after any combat this unit initiates.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Poison Strike 3",
       "effects": "Inflicts 10 damage to foe after any combat this unit initiates.",
-      "sp_cost": 240,
+      "spCost": 240,
       "type": "PASSIVE"
     },
     {
       "name": "Quick Riposte 1",
       "effects": "Unit automatically makes a follow-up attack if attacked at HP ≥ 90%.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Quick Riposte 2",
       "effects": "Unit automatically makes a follow-up attack if attacked at HP ≥ 80%.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Quick Riposte 3",
       "effects": "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.",
-      "sp_cost": 240,
+      "spCost": 240,
       "type": "PASSIVE"
     },
     {
       "name": "R Tomebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a red tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "R Tomebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a red tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "R Tomebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a red tome user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Renewal 1",
       "effects": "At the start of every fourth turn, restores 10 HP.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Renewal 2",
       "effects": "At the start of every third turn, restores 10 HP.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Renewal 3",
       "effects": "At the start of every second turn, restores 10 HP.",
-      "sp_cost": 240,
+      "spCost": 240,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Atk 1",
       "effects": "After combat, foe suffers Atk-3 through its next action.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Atk 2",
       "effects": "After combat, foe suffers Atk-5 through its next action.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Atk 3",
       "effects": "After combat, foe suffers Atk-7 through its next action.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Def 1",
       "effects": "After combat, foe suffers Def-3 through its next action.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Def 2",
       "effects": "After combat, foe suffers Def-5 through its next action.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Def 3",
       "effects": "After combat, foe suffers Def-7 through its next action.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Res 1",
       "effects": "After combat, foe suffers Res-3 through its next action.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Res 2",
       "effects": "After combat, foe suffers Res-5 through its next action.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Res 3",
       "effects": "After combat, foe suffers Res-7 through its next action.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Spd 1",
       "effects": "After combat, foe suffers Spd-3 through its next action.",
-      "sp_cost": 40,
+      "spCost": 40,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Spd 2",
       "effects": "After combat, foe suffers Spd-5 through its next action.",
-      "sp_cost": 80,
+      "spCost": 80,
       "type": "PASSIVE"
     },
     {
       "name": "Seal Spd 3",
       "effects": "After combat, foe suffers Spd-7 through its next action.",
-      "sp_cost": 160,
+      "spCost": 160,
       "type": "PASSIVE"
     },
     {
       "name": "Swordbreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Swordbreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Swordbreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Vantage 1",
       "effects": "Unit counterattacks first when attacked at HP ≤ 25%.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Vantage 2",
       "effects": "Unit counterattacks first when attacked at HP ≤ 50%.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Vantage 3",
       "effects": "Unit counterattacks first when attacked at HP ≤ 75%.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Wary Fighter 1",
       "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 90%.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Wary Fighter 2",
       "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 80%.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Wary Fighter 3",
       "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%.",
-      "sp_cost": 240,
+      "spCost": 240,
       "type": "PASSIVE"
     },
     {
       "name": "Wings of Mercy 1",
       "effects": "Enables unit to warp adjacent to any ally with HP ≤ 30%.",
-      "sp_cost": 60,
+      "spCost": 60,
       "type": "PASSIVE"
     },
     {
       "name": "Wings of Mercy 2",
       "effects": "Enables unit to warp adjacent to any ally with HP ≤ 40%.",
-      "sp_cost": 120,
+      "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Wings of Mercy 3",
       "effects": "Enables unit to warp adjacent to any ally with HP ≤ 50%.",
-      "sp_cost": 240,
+      "spCost": 240,
       "type": "PASSIVE"
     },
     {
       "name": "Breath of Life 1",
       "effects": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Breath of Life 2",
       "effects": "If unit initiates attack, adjacent allies recover 5 HP after combat.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Breath of Life 3",
       "effects": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Armor",
       "effects": "Grants adjacent armor allies Def/Res+6 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Cavalry",
       "effects": "Grants adjacent cavalry allies Def/Res+6 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Def 1",
       "effects": "Grants adjacent allies Def+2 through their next actions at the start of each turn.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Def 2",
       "effects": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Def 3",
       "effects": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Fliers",
       "effects": "Grants adjacent flying allies Def/Res+6 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Res 1",
       "effects": "Grants adjacent allies Res+2 through their next actions at the start of each turn.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Res 2",
       "effects": "Grants adjacent allies Res+3 through their next actions at the start of each turn.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Fortify Res 3",
       "effects": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Goad Armor",
       "effects": "Grants armored allies within 2 spaces Spd/Atk+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Goad Cavalry",
       "effects": "Grants cavalry allies within 2 spaces Spd/Atk+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Goad Fliers",
       "effects": "Grants flying allies within 2 spaces Spd/Atk+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Armor",
       "effects": "Grants adjacent armored allies Atk/Spd+6 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Atk 1",
       "effects": "Grants adjacent allies Atk+2 through their next actions at the start of each turn.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Atk 2",
       "effects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Atk 3",
       "effects": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Cavalry",
       "effects": "Grants adjacent cavalry allies Atk/Spd+6 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Fliers",
       "effects": "Grants adjacent flying allies Atk/Spd+6 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Spd 1",
       "effects": "Grants adjacent allies Spd+2 through their next actions at the start of each turn.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Spd 2",
       "effects": "Grants adjacent allies Spd+3 through their next actions at the start of each turn.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Hone Spd 3",
       "effects": "Grants adjacent allies Spd+4 through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Savage Blow 1",
       "effects": "If unit initiates attack, foes within 2 spaces of target take 3 damage after combat.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Savage Blow 2",
       "effects": "If unit initiates attack, foes within 2 spaces of target take 5 damage after combat.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Savage Blow 3",
       "effects": "If unit initiates attack, foes within 2 spaces of target take 7 damage after combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Atk 1",
       "effects": "Grants adjacent allies Atk+2 during combat.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Atk 2",
       "effects": "Grants adjacent allies Atk+3 during combat.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Atk 3",
       "effects": "Grants adjacent allies Atk+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Def 1",
       "effects": "Grants adjacent allies Def+2 during combat.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Def 2",
       "effects": "Grants adjacent allies Def+3 during combat.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Def 3",
       "effects": "Grants adjacent allies Def+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Res 1",
       "effects": "Grants adjacent allies Res+2 during combat.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Res 2",
       "effects": "Grants adjacent allies Res+3 during combat.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Res 3",
       "effects": "Grants adjacent allies Res+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Spd 1",
       "effects": "Grants adjacent allies Spd+2 during combat.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Spd 2",
       "effects": "Grants adjacent allies Spd+3 during combat.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Spur Spd 3",
       "effects": "Grants adjacent allies Spd+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Atk 1",
       "effects": "Inflicts Atk-3 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Atk 2",
       "effects": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Atk 3",
       "effects": "Inflicts Atk-5 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Def 1",
       "effects": "Inflicts Def-3 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Def 2",
       "effects": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Def 3",
       "effects": "Inflicts Def-5 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Res 1",
       "effects": "Inflicts Res-3 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Res 2",
       "effects": "Inflicts Res-4 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Res 3",
       "effects": "Inflicts Res-5 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Spd 1",
       "effects": "Inflicts Spd-3 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 50,
+      "spCost": 50,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Spd 2",
       "effects": "Inflicts Spd-4 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 100,
+      "spCost": 100,
       "type": "PASSIVE"
     },
     {
       "name": "Threaten Spd 3",
       "effects": "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Ward Armor",
       "effects": "Grants armored allies within 2 spaces Def/Res+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Ward Cavalry",
       "effects": "Grants cavalry allies within 2 spaces Def/Res+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     },
     {
       "name": "Ward Fliers",
       "effects": "Grants flying allies within 2 spaces Def/Res+4 during combat.",
-      "sp_cost": 200,
+      "spCost": 200,
       "type": "PASSIVE"
     }
   ]
