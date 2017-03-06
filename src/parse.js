@@ -26,32 +26,30 @@ import { camelCase } from './util';
 export const parseTable = (tableHtml) => {
   const tableHeader = compose(
     map(compose(
-      replace('unlock', 'rarity'),  // Some tables use unlock others use rarity.
+      replace('unlock', 'rarity'),  // Some tables use unlock others use rarity
       camelCase,
       trim,
-      replace(/<.*?>/g, ''), // remove all tags. td, a, span, image, bold, etc.
+      replace(/<.*?>/g, ''),  // Remove all html tags (th, span)
     )),
-    match(/<th(\s.*?)?>(.|\n)*?<\/th.*?>/g), // needs to not match <thead>
+    match(/<th(\s.*?)?>(.|\n)*?<\/th.*?>/g),  // Match <th> tags without matching <thead>
   )(tableHtml);
 
   const tableRows = compose(
-    // START for each row
     map(compose(
-      // START for each cell
       map(compose(
-        (txt) => isNaN(txt) ? txt : parseInt(txt, 10), // convert numeric to numbers
+        (txt) => isNaN(txt) ? txt : parseInt(txt, 10),  // Convert numeric strings to numbers.
         trim,
-        replace(/<.*?>/g, ''), // remove all tags. td, a, span, image, bold, etc.
+        replace(/<.*?>/g, ''),  // Remove all html tags (td, a, span, img, b)
       )),
-      match(/<td.*?>(.|\n)*?<\/td>/g))), // END for each cell
-    tail, // remove the Header row
-    match(/<tr.*?>(.|\n)*?<\/tr.*?>/g), // END for each row
+      match(/<td.*?>(.|\n)*?<\/td>/g))),
+    tail,  // Remove the header row
+    match(/<tr.*?>(.|\n)*?<\/tr.*?>/g),
   )(tableHtml);
-  // some tables have a column of icons, ignore that.
+  // Some tables have a column of icons, ignore that.
   return map(dissoc(''), map(zipObj(tableHeader), tableRows));
 }
 
-// Takes a regex pattern and returns a function to match and parse 
+// Takes a table class name and returns a function to match and parse all tables on a page
 export const parseTables = (tableClass) => compose(
   flatten,
   map(parseTable),
@@ -59,21 +57,21 @@ export const parseTables = (tableClass) => compose(
   match(new RegExp("<table.*?" + tableClass + ".*?>(.|\n)*?<\/table>", "g")),
 );
 
-// Takes the html page for a hero and parses all skill tables.
+// Takes the html page for a hero and parses all skill tables
 export const parseHeroSkills = parseTables("skills-table");
 
-// Takes an html page and parses all tables.
+// Takes an html page and parses all tables
 export const parseSkillsPage = parseTables("wikitable");
 
-// Takes an html page and parses the only table for stats of all heroes.
+// Takes an html page and parses the only table for stats of all heroes
 export const parseHeroAggregateHtml = compose(
   parseTable,
-  // Replace move and weapon type icons with their name.
+  // Replace move and weapon type icons with their name
   replace(/\.png.*?>/g, ''),
   replace(/<img.*?Icon Class /g, ''),
   replace(/<img.*?Icon Move /g, ''),
-  replace(/<th.*?>\n*<\/th>/, '<th>Weapon Type</th>'), // The second unnamed header entry
-  replace(/<th.*?>\n*<\/th>/, '<th>Move Type</th>'), // The first unnamed header entry
-  prop(0), // match [0] is the entire matching string.
+  replace(/<th.*?>\n*<\/th>/, '<th>Weapon Type</th>'),  // The second unnamed header entry
+  replace(/<th.*?>\n*<\/th>/, '<th>Move Type</th>'),  // The first unnamed header entry
+  prop(0),  // match [0] is the entire matching string
   match(/<table(.|\n)*?\/table>/),
 );
