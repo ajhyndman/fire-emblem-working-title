@@ -49,7 +49,9 @@ async function fetchWikiStats() {
     mergeWith(
       merge,
       zipObj(heroNames, heroStats),
-      heroSkills));
+      heroSkills,
+    ),
+  );
 
 
   // COLLATE SKILL STATS
