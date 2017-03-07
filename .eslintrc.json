@@ -1,6 +1,0 @@
-{
-  "extends": "ajhyndman",
-  "rules": {
-    "no-console": "off"
-  }
-}
