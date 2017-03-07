@@ -1,23 +1,5 @@
 {
-  "name": "fire-emblem-working-title",
-  "version": "1.0.0",
-  "main": "lib/stats.json",
-  "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "babel-node src/index.js",
-    "test": "eslint **/*.js"
-  },
   "devDependencies": {
-    "babel-cli": "^6.23.0",
-    "babel-plugin-ramda": "^1.1.6",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-2": "^6.22.0",
-    "eslint": "^3.16.1",
-    "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.0.2"
-  },
-  "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
-    "ramda": "^0.23.0"
+    "lerna": "2.0.0-beta.38"
   }
 }
