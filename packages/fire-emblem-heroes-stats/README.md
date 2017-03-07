@@ -1,4 +1,4 @@
-# fire-emblem-working-title
+# fire-emblem-heroes-stats
 
 [![yarn compatible](https://img.shields.io/badge/yarn-compatible-4BC51D.svg?style=flat)](https://yarnpkg.com/)
 
@@ -14,7 +14,7 @@ To scrape the latest wiki updates yourself:
 
 ```bash
 $ git clone https://github.com/ajhyndman/fire-emblem-working-title.git
-$ cd fire-emblem-working-title
+$ cd fire-emblem-working-title/fire-emblem-heroes-stats
 $ npm install
 $ npm start
 ```
