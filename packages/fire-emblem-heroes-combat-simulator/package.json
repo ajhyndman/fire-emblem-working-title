@@ -7,7 +7,14 @@
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "GPL-3.0+",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "test": "eslint **/*.js && flow check"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "eslint": "^3.17.1",
+    "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.1.0",
+    "flow-bin": "^0.41.0"
   },
   "dependencies": {
     "next": "2.0.0-beta.36",
