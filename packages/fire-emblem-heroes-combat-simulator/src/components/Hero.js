@@ -13,6 +13,10 @@ const Hero = ({ name }: Props) => (
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         display: block;
         margin: 0 auto;
+        transition: box-shadow 0.2s;
+      }
+      img:hover {
+        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.4);
       }
     `}</style>
     <img
