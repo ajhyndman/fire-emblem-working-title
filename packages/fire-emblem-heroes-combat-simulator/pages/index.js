@@ -1,4 +1,5 @@
 // @flow
+import Head from 'next/head'
 import React from 'react';
 import stats from 'fire-emblem-heroes-stats';
 import { map, range } from 'ramda';
@@ -7,6 +8,9 @@ import Hero from '../src/components/Hero';
 
 const Home = () => (
   <div>
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
     <style jsx>{`
       .grid {
         display: flex;
