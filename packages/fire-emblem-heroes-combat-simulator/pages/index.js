@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import React from 'react';
 import stats from 'fire-emblem-heroes-stats';
-import { map, range } from 'ramda';
+import { map, range, replace } from 'ramda';
 
 import Hero from '../src/components/Hero';
 
@@ -22,20 +22,20 @@ const Home = () => (
         flex: auto;
       }
       div:empty {
-        margin: 0 10px;
-        width: 75px;
+        margin: 0 5px;
+        width: 56px;
       }
     `}</style>
     <div className="grid">
       {map(
-        (hero) => <Hero key={hero.name} name={hero.name} />,
+        (hero) => <Hero key={hero.name} name={hero.name} weaponType={replace(' ', '_', hero.weaponType)} />,
         stats.heroes,
       )}
       {/**
         * Flexbox doesn't really provide grid support.  Add enough empty
         * elements to preserve grid layout of last row on large screens.
         */}
-      {map((i) => <div key={i} />, range(0, 20))}
+      {map((i) => <div key={i} />, range(0, 30))}
     </div>
   </div>
 );

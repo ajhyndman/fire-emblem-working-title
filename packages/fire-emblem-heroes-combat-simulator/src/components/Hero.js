@@ -1,32 +1,50 @@
 // @flow
 import React from 'react';
 
-type Props = { name: string; };
+type Props = {
+  name: string;
+  weaponType: string;
+};
 
-const Hero = ({ name }: Props) => (
+const Hero = ({ name, weaponType }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
-        margin: 10px;
-      }
-      img {
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        display: block;
-        margin: 0 auto;
+        margin: 5px;
         transition: box-shadow 0.2s;
       }
-      img:hover {
+      .class {
+        position: absolute;
+      }
+      .face {
+        display: block;
+        margin: 0 auto;
+      }
+      .root:hover {
         box-shadow: 0 5px 35px rgba(0, 0, 0, 0.4);
       }
     `}</style>
     <img
+      className="class"
+      title={weaponType}
+      src={`/static/35px-Icon_Class_${weaponType}.png 35w`}
+      srcSet={`
+        /static/35px-Icon_Class_${weaponType}.png 35w,
+        /static/Icon_Class_${weaponType}.png 56w
+      `}
+      sizes="20px"
+    />
+    <img
+      className="face"
       title={name}
       alt={name}
       src={`/static/75px-Icon_Portrait_${encodeURIComponent(name)}.png`}
       srcSet={`
-        /static/113px-Icon_Portrait_${encodeURIComponent(name)}.png 1.5x,
-        /static/150px-Icon_Portrait_${encodeURIComponent(name)}.png 2x
+        /static/113px-Icon_Portrait_${encodeURIComponent(name)}.png 113w,
+        /static/150px-Icon_Portrait_${encodeURIComponent(name)}.png 150w
       `}
+      sizes="56px"
     />
   </div>
 );
