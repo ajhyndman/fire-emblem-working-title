@@ -21,6 +21,7 @@
     "next": "2.0.0-beta.36",
     "ramda": "^0.23.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "recompose": "^0.22.0"
   }
 }
