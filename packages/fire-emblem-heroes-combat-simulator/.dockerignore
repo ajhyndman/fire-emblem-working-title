@@ -1,0 +1,9 @@
+.git
+.gitignore
+.next
+.vscode
+elastic-beanstalk
+node_modules
+README.md
+flow-typed
+flow
