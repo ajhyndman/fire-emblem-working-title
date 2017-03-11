@@ -1,15 +1,17 @@
 // @flow
 import React from 'react';
-import { map, range, replace } from 'ramda';
+import { map, range } from 'ramda';
 
 import Hero from './Hero';
+import type { Dispatch } from '../reducer';
 
 
 type Props = {
+  dispatch: Dispatch;
   heroes: Array<Object>;
 };
 
-const HeroGrid = ({ heroes }: Props) => (
+const HeroGrid = ({ dispatch, heroes }: Props) => (
   <div className="grid">
     <style jsx>{`
       .grid {
@@ -21,6 +23,17 @@ const HeroGrid = ({ heroes }: Props) => (
         content: "";
         flex: auto;
       }
+      .gridSquare {
+        background: #5e7b8a;
+        box-shadow: 0 0 10px rgba(70, 183, 227, 0.4);
+        cursor: pointer;
+        margin: 5px;
+        position: relative;
+        transition: box-shadow 0.2s;
+      }
+      .gridSquare:hover {
+        box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
+      }
       div:empty {
         margin: 0 5px;
         width: 56px;
@@ -28,11 +41,19 @@ const HeroGrid = ({ heroes }: Props) => (
     `}</style>
     {map(
       (hero) => (
-        <Hero
-          key={hero.name}
-          name={hero.name}
-          weaponType={replace(' ', '_', hero.weaponType)}
-        />
+        <div
+          className="gridSquare"
+          onClick={(event) => {
+            event.stopPropagation();
+            dispatch({ type: 'SELECT_HERO', hero })
+          }}
+        >
+          <Hero
+            key={hero.name}
+            name={hero.name}
+            weaponType={hero.weaponType}
+          />
+        </div>
       ),
       heroes,
     )}
