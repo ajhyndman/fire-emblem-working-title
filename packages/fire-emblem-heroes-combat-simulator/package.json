@@ -19,7 +19,7 @@
     "flow-bin": "^0.41.0"
   },
   "dependencies": {
-    "fire-emblem-heroes-stats": "1.0.0",
+    "fire-emblem-heroes-stats": "0.1.0",
     "next": "2.0.0-beta.36",
     "ramda": "^0.23.0",
     "react": "^15.4.2",
