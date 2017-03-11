@@ -7,7 +7,9 @@
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "GPL-3.0+",
   "scripts": {
+    "build": "next build",
     "dev": "next",
+    "start": "next start",
     "test": "eslint **/*.js && flow check"
   },
   "devDependencies": {
@@ -21,6 +23,7 @@
     "next": "2.0.0-beta.36",
     "ramda": "^0.23.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "recompose": "^0.22.0"
   }
 }
