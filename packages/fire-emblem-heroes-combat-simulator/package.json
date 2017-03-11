@@ -1,6 +1,6 @@
 {
   "name": "fire-emblem-heroes-combat-simulator",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Test level 40 heroes against one another!",
   "main": "index.js",
   "repository": "git@github.com:ajhyndman/fire-emblem-working-title.git",
