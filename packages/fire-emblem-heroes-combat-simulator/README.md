@@ -11,8 +11,9 @@ To launch the Next.js dev server:
 
 ```bash
 $ git clone https://github.com/ajhyndman/fire-emblem-working-title.git
-$ cd fire-emblem-working-title/fire-emblem-heroes-combat-simulator
-$ npm install
+$ cd fire-emblem-working-title
+$ lerna bootstrap
+$ cd fire-emblem-heroes-combat-simulator
 $ npm run dev
 ```
 
