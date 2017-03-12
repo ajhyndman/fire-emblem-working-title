@@ -7,7 +7,7 @@ import type { Dispatch } from '../reducer';
 
 
 type Props = {
-  activeHeroName: string;
+  activeHeroName: ?string;
   dispatch: Dispatch;
   heroes: Array<Object>;
 };

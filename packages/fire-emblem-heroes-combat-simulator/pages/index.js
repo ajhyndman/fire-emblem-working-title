@@ -31,9 +31,9 @@ const Home = withReducer(
   <div className="root" onClick={() => dispatch({ type: 'SELECT_SLOT', slot: undefined })}>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link 
-        href="https://fonts.googleapis.com/css?family=Mandali&text=→×0123456789" 
-        rel="stylesheet" 
+      <link
+        href="https://fonts.googleapis.com/css?family=Mandali&text=→×0123456789"
+        rel="stylesheet"
       />
       <style>{`
         body {
@@ -67,10 +67,11 @@ const Home = withReducer(
       />
     </div>
     <div className="spacer" />
-    <HeroGrid 
+    <HeroGrid
+      // $FlowIssue typedef for path isn't resolving correctly
       activeHeroName={path(['activeHero', 'name'], state)}
-      dispatch={dispatch} 
-      heroes={stats.heroes} 
+      dispatch={dispatch}
+      heroes={stats.heroes}
     />
   </div>
 ));
