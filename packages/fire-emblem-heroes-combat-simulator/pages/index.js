@@ -26,10 +26,13 @@ const Home = withReducer(
   reducer,
   initialState,
 )(({ state, dispatch }: { state: State, dispatch: Dispatch }) => (
-  <div className="root" onClick={() => dispatch({ type: 'ACTIVATE_SLOT', slot: undefined })}>
+  <div className="root" onClick={() => dispatch({ type: 'SELECT_SLOT', slot: undefined })}>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link href="https://fonts.googleapis.com/css?family=Mandali&text=→×0123456789" rel="stylesheet" />
+      <link 
+        href="https://fonts.googleapis.com/css?family=Mandali&text=→×0123456789" 
+        rel="stylesheet" 
+      />
       <style>{`
         body {
           background: ${colors.elephant};
