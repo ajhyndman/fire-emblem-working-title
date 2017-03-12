@@ -1,3 +1,6 @@
 {
-  "extends": "ajhyndman/flow"
+  "extends": "ajhyndman/flow",
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }]
+  }
 }

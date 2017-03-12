@@ -53,6 +53,19 @@ const isBraveWeapon = (hero: Hero) => find(
   ),
   hero.skills,
 );
+const range = (hero: Hero) => {
+  switch (hero.weaponType) {
+    case 'Red Sword':
+    case 'Green Axe':
+    case 'Blue Lance':
+    case 'Red Beast':
+    case 'Green Beast':
+    case 'Blue Beash':
+      return 1;
+    default:
+      return 2;
+  }
+};
 const classModifier = (hero: Hero) => hero.weaponType === 'Neutral Staff' ? 0.5 : 1;
 const weaponColor = (hero: Hero) => {
   switch (hero.weaponType) {
@@ -152,7 +165,7 @@ export const calculateResult = (attacker: Hero, defender: Hero) => {
     defenderHpRemaining,
   );
 
-  if (defenderHpRemaining > 0) {
+  if (defenderHpRemaining > 0 && (range(defender) === range(attacker))) {
     // defender retaliates
     defenderNumAttacks += 1;
     attackerHpRemaining = hpRemaining(
@@ -170,7 +183,11 @@ export const calculateResult = (attacker: Hero, defender: Hero) => {
     );
   }
 
-  if (defenderHpRemaining && doesFollowUp(defender, attacker)) {
+  if (
+    defenderHpRemaining 
+    && (range(defender) === range(attacker)) 
+    && doesFollowUp(defender, attacker)
+  ) {
     // defender follow-up
     defenderNumAttacks += 1;
     attackerHpRemaining = hpRemaining(

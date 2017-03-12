@@ -24,6 +24,7 @@ const Hero = ({ name, weaponType }: Props) => {
           margin: 0 auto;
         }
         .frame {
+          pointer-events: none;
           position: absolute;
           top: -7.5%;
           left: -7.5%;

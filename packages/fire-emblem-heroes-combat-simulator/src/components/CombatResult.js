@@ -38,14 +38,14 @@ const CombatResult = ({ leftHero, rightHero }: Props) => {
           color: white;
           font-family: 'Mandali', sans-serif;
           line-height: 1;
-          margin: 0 0 10px;
+          margin: 10px 0 0;
           text-align: center;
         }
         h2 {
           color: white;
           font-family: 'Mandali', sans-serif;
           line-height: 1;
-          margin: 0 0 10px;
+          margin: 10px 0 0;
           text-align: center;
         }
       `}</style>
