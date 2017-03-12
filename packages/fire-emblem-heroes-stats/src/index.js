@@ -28,8 +28,8 @@ import {
  * (Do all the things!)
  */
 
-async function fetchWikiStats() {
-  // COLLATE HERO STATS
+// Fetches heroes and their stats/skills
+async function fetchHeroStats() {
   const heroStats = await fetchPage('http://feheroes.wiki/Stats_Table')
     .then(parseHeroAggregateHtml)
     .catch(err => console.error('fetchAggregateStats', err));
@@ -52,9 +52,11 @@ async function fetchWikiStats() {
       heroSkills,
     ),
   );
+  return heroes;
+}
 
-
-  // COLLATE SKILL STATS
+// Fetches detailed info for all skills
+async function fetchSkills() {
   const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives'];
   const skillsByType = await fetchAndParsePages(
     'http://feheroes.wiki/',
@@ -71,11 +73,17 @@ async function fetchWikiStats() {
       ),
     ),
   )(skillsByType);
+  return skills;
+}
 
-
+// Fetch new data and write it to stats.json
+async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
+  const existingStats = JSON.parse(fs.readFileSync('./lib/stats.json', 'utf8'));
+  const heroes = shouldFetchHeroes ? await fetchHeroStats() : existingStats['heroes'];
+  const skills = shouldFetchSkills ? await fetchSkills() : existingStats['skills'];
   // WRITE STATS TO FILE
   const allStats = { heroes, skills };
   fs.writeFileSync('./lib/stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchWikiStats();
+fetchWikiStats(true, true);
