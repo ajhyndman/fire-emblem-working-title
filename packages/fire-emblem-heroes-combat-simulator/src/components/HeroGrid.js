@@ -48,6 +48,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
     {map(
       (hero) => (
         <div
+          key={hero.name}
           className={`gridSquare ${activeHeroName === hero.name ? 'active' : ''}`}
           onClick={(event) => {
             event.stopPropagation();
@@ -55,7 +56,6 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
           }}
         >
           <Hero
-            key={hero.name}
             name={hero.name}
             weaponType={hero.weaponType}
           />
