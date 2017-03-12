@@ -27,9 +27,11 @@ const HeroGrid = ({ dispatch, heroes }: Props) => (
         background: #5e7b8a;
         box-shadow: 0 0 10px rgba(70, 183, 227, 0.4);
         cursor: pointer;
+        height: 56px;
         margin: 5px;
         position: relative;
         transition: box-shadow 0.2s;
+        width: 56px;
       }
       .gridSquare:hover {
         box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
