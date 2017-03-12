@@ -2,6 +2,8 @@
 import React from 'react';
 import { replace } from 'ramda';
 
+import { staticUrl } from '../../config';
+
 
 type Props = {
   name: string;
@@ -33,15 +35,15 @@ const Hero = ({ name, weaponType }: Props) => {
       `}</style>
       <img
         className="frame"
-        src="/static/Frame_Rarity_5.png"
+        src={`${staticUrl}Frame_Rarity_5.png`}
       />
       <img
         className="class"
         title={weaponType}
-        src={`/static/35px-Icon_Class_${weaponTypeUri}.png 35w`}
+        src={`${staticUrl}35px-Icon_Class_${weaponTypeUri}.png 35w`}
         srcSet={`
-          /static/35px-Icon_Class_${weaponTypeUri}.png 35w,
-          /static/Icon_Class_${weaponTypeUri}.png 56w
+          ${staticUrl}35px-Icon_Class_${weaponTypeUri}.png 35w,
+          ${staticUrl}Icon_Class_${weaponTypeUri}.png 56w
         `}
         sizes="20px"
       />
@@ -49,10 +51,10 @@ const Hero = ({ name, weaponType }: Props) => {
         className="face"
         title={name}
         alt={name}
-        src={`/static/75px-Icon_Portrait_${encodeURIComponent(name)}.png`}
+        src={`${staticUrl}75px-Icon_Portrait_${encodeURIComponent(name)}.png`}
         srcSet={`
-          /static/113px-Icon_Portrait_${encodeURIComponent(name)}.png 113w,
-          /static/150px-Icon_Portrait_${encodeURIComponent(name)}.png 150w
+          ${staticUrl}113px-Icon_Portrait_${encodeURIComponent(name)}.png 113w,
+          ${staticUrl}150px-Icon_Portrait_${encodeURIComponent(name)}.png 150w
         `}
         sizes="56px"
       />
