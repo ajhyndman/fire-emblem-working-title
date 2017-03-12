@@ -44,7 +44,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         className={`${activeSlot === 0 ? 'active' : ''} hero-slot`}
         onClick={(event) => {
           event.stopPropagation();
-          dispatch({ type: 'ACTIVATE_SLOT', slot: 0 });
+          dispatch({ type: 'SELECT_SLOT', slot: 0 });
         }}
       >
         {leftHero
@@ -55,7 +55,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         className={`${activeSlot === 1 ? 'active' : ''} hero-slot`}
         onClick={(event) => {
           event.stopPropagation();
-          dispatch({ type: 'ACTIVATE_SLOT', slot: 1 });
+          dispatch({ type: 'SELECT_SLOT', slot: 1 });
         }}
       >
         {rightHero

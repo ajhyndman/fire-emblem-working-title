@@ -6,7 +6,7 @@ export type Action = {
   type: 'SELECT_HERO';
   hero: Hero;
 } | {
-  type: 'ACTIVATE_SLOT';
+  type: 'SELECT_SLOT';
   slot: 0 | 1 | void;
 };
 
@@ -20,7 +20,7 @@ export type Dispatch = (action: Action) => void;
 
 const reducer = (state: State, action: Action) => {
   switch (action.type) {
-    case 'ACTIVATE_SLOT':
+    case 'SELECT_SLOT':
       return { ...state, activeSlot: action.slot };
     case 'SELECT_HERO':
       switch (state.activeSlot) {
