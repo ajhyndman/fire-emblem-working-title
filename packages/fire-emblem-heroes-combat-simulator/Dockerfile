@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:6.10.0
 
 # Set up environment
 RUN mkdir -p /home/node/app
