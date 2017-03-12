@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import React from 'react';
 import stats from 'fire-emblem-heroes-stats';
+import { path } from 'ramda';
 import { withReducer } from 'recompose';
 
 import HeroGrid from '../src/components/HeroGrid';
@@ -13,6 +14,7 @@ import type { Dispatch, State } from '../src/reducer';
 
 
 const initialState: State = {
+  activeHero: undefined,
   activeSlot: undefined,
   leftHero: undefined,
   rightHero: undefined,
@@ -65,7 +67,11 @@ const Home = withReducer(
       />
     </div>
     <div className="spacer" />
-    <HeroGrid dispatch={dispatch} heroes={stats.heroes} />
+    <HeroGrid 
+      activeHeroName={path(['activeHero', 'name'], state)}
+      dispatch={dispatch} 
+      heroes={stats.heroes} 
+    />
   </div>
 ));
 

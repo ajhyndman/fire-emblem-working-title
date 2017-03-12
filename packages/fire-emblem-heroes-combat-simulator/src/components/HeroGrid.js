@@ -7,11 +7,12 @@ import type { Dispatch } from '../reducer';
 
 
 type Props = {
+  activeHeroName: string;
   dispatch: Dispatch;
   heroes: Array<Object>;
 };
 
-const HeroGrid = ({ dispatch, heroes }: Props) => (
+const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
   <div className="grid">
     <style jsx>{`
       .grid {
@@ -36,6 +37,9 @@ const HeroGrid = ({ dispatch, heroes }: Props) => (
       .gridSquare:hover {
         box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
       }
+      .active, .active:hover {
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5), 0 0 2px 4px rgba(223, 110, 134, 0.9);
+      }
       div:empty {
         margin: 0 5px;
         width: 56px;
@@ -44,7 +48,7 @@ const HeroGrid = ({ dispatch, heroes }: Props) => (
     {map(
       (hero) => (
         <div
-          className="gridSquare"
+          className={`gridSquare ${activeHeroName === hero.name ? 'active' : ''}`}
           onClick={(event) => {
             event.stopPropagation();
             dispatch({ type: 'SELECT_HERO', hero })
