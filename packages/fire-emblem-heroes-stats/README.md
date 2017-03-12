@@ -10,6 +10,16 @@ https://github.com/ajhyndman/fire-emblem-working-title/blob/master/lib/stats.jso
 
 ## Usage
 
+To use the stats in your app:
+
+```bash
+$ npm install --save fire-emblem-heroes-stats
+```
+
+```js
+var stats = require('fire-emblem-heroes-stats');
+```
+
 To scrape the latest wiki updates yourself:
 
 ```bash
