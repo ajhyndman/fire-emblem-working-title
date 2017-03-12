@@ -8,6 +8,7 @@ import HeroGrid from '../src/components/HeroGrid';
 import CombatPreview from '../src/components/CombatPreview';
 import CombatResult from '../src/components/CombatResult';
 import reducer from '../src/reducer';
+import { colors } from '../src/theme';
 import type { Dispatch, State } from '../src/reducer';
 
 
@@ -16,6 +17,8 @@ const initialState: State = {
   leftHero: undefined,
   rightHero: undefined,
 };
+
+const panelHeight = 192;
 
 const Home = withReducer(
   'state',
@@ -29,20 +32,36 @@ const Home = withReducer(
       <link href="https://fonts.googleapis.com/css?family=Mandali&text=→×0123456789" rel="stylesheet" />
       <style>{`
         body {
-          background: #123346;
+          background: ${colors.elephant};
+          margin: 0;
         }
       `}</style>
     </Head>
-    <CombatResult
-      leftHero={state.leftHero}
-      rightHero={state.rightHero}
-    />
-    <CombatPreview
-      activeSlot={state.activeSlot}
-      dispatch={dispatch}
-      leftHero={state.leftHero}
-      rightHero={state.rightHero}
-    />
+    <style jsx>{`
+      .sticky-panel {
+        position: fixed;
+        width: 100%;
+        background: ${colors.elephant};
+        height: ${panelHeight}px;
+        z-index: 1;
+      }
+      .spacer {
+        height: ${panelHeight}px;
+      }
+    `}</style>
+    <div className="sticky-panel">
+      <CombatResult
+        leftHero={state.leftHero}
+        rightHero={state.rightHero}
+      />
+      <CombatPreview
+        activeSlot={state.activeSlot}
+        dispatch={dispatch}
+        leftHero={state.leftHero}
+        rightHero={state.rightHero}
+      />
+    </div>
+    <div className="spacer" />
     <HeroGrid dispatch={dispatch} heroes={stats.heroes} />
   </div>
 ));
