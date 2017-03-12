@@ -10,13 +10,14 @@ import CombatResult from '../src/components/CombatResult';
 import HeroGrid from '../src/components/HeroGrid';
 import ShareButton from '../src/components/ShareButton';
 import reducer from '../src/reducer';
-import { colors } from '../src/theme';
+import { staticUrl } from '../config';
 import type { Dispatch, State } from '../src/reducer';
 
 
 type Props = {
-  initialState: State;
+  backgroundUrl: string;
   host: string;
+  initialState: State;
 };
 
 const initialState: State = {
@@ -28,9 +29,19 @@ const initialState: State = {
 
 const panelHeight = 192;
 
+const backgroundList = [
+  '_request__fire_emblem_awakening___lon_qu_by_krukmeister-d7rlyap.png',
+  'fire_emblem_awakening___cordelia_by_krukmeister-d7rlyky.png',
+  'fire_emblem_awakening___lucina_by_krukmeister-d7rgzln.png',
+  'fire_emblem_awakening___nowi_by_krukmeister-d7rs1b8.png',
+  'fire_emblem_awakening___tiki_by_krukmeister-d7s3qqh.png',
+  'fire_emblem_awakening___tharja_by_krukmeister-d8e934d.png',
+];
+
 class Home extends React.Component {
   static async getInitialProps ({ req, query }) {
     return {
+      backgroundUrl: backgroundList[Math.floor(Math.random() * backgroundList.length)],
       host: req.headers.host,
       initialState: isEmpty(query)
         ? initialState
@@ -45,6 +56,8 @@ class Home extends React.Component {
   props: Props;
 
   render() {
+    const backgroundUrl = this.props.backgroundUrl;
+
     const App = withReducer(
       'state',
       'dispatch',
@@ -60,7 +73,7 @@ class Home extends React.Component {
           />
           <style>{`
             body {
-              background: ${colors.elephant};
+              background: top center fixed url(${staticUrl}${backgroundUrl});
               margin: 0;
             }
           `}</style>
@@ -69,7 +82,7 @@ class Home extends React.Component {
           .sticky-panel {
             position: fixed;
             width: 100%;
-            background: ${colors.elephant};
+            background: top center fixed url(${staticUrl}${backgroundUrl});
             height: ${panelHeight}px;
             z-index: 1;
           }
