@@ -7,14 +7,17 @@ import {
   map,
   match,
   not,
+  pick,
   prop,
   replace,
+  split,
   tail,
+  test,
   trim,
   zipObj,
 } from 'ramda';
 
-import { camelCase } from './util';
+import { camelCase, maybeToNumber, objectsByField } from './util';
 
 
 /**
@@ -37,13 +40,14 @@ export const parseTable = (tableHtml) => {
   const tableRows = compose(
     map(compose(
       map(compose(
-        (txt) => isNaN(txt) ? txt : parseInt(txt, 10),  // Convert numeric strings to numbers.
+        maybeToNumber,
         trim,
         replace(/<.*?>/g, ''),  // Remove all html tags (td, a, span, img, b)
       )),
       match(/<td.*?>(.|\n)*?<\/td>/g))),
     tail,  // Remove the header row
     match(/<tr.*?>(.|\n)*?<\/tr.*?>/g),
+    replace(/&#160;/g, ''),  // &nbsp, also known as \xa0
   )(tableHtml);
   // Some tables have a column of icons, ignore that.
   return map(dissoc(''), map(zipObj(tableHeader), tableRows));
@@ -58,7 +62,49 @@ export const parseTables = (tableClass) => compose(
 );
 
 // Takes the html page for a hero and parses all skill tables
-export const parseHeroSkills = parseTables("skills-table");
+const parseHeroSkills = compose(
+      map(pick(['name', 'default', 'rarity'])),
+      parseTables("skills-table"),
+);
+
+// Takes a parsed stat table and restructures it to be by rarity and have stat variants
+// [ {rarity, stat: "lo/med/high"}, ] -> {rarity: {stat: [lo, med, high]} }
+const processStatTable =  compose(
+  map(map(
+    compose(
+      map(maybeToNumber),
+      split('/'),
+      (x) => x.toString(),
+    ),
+  )),  // For each rarity and stat
+  objectsByField('rarity'),
+);
+
+// Takes the html page for a hero and parses all stat tables
+// outputs {1: {rarity: {stat: number}}, 40: {rarity: {stat: [lo med high]}}}
+const parseHeroStats = compose(
+  (processedTables) => ({
+    '1': map(  // for each rarity
+      map(  // for each stat
+        (variations) => (variations.length == 3 ? variations[1] : variations[0]),
+      ),
+      processedTables[0],
+    ),
+    '40': processedTables[1],
+  }),
+  map(processStatTable),
+  map(parseTable),
+  filter(compose(not, test(/ibox/))),
+  filter(compose(not, test(/skills-table/))),
+  match(/<table.*?>(.|\n)*?<\/table>/g),
+  replace(/(\?+|-+)/g, '-'), // standardize unknown values
+);
+
+export function parseHeroStatsAndSkills(heroPageHtml) {
+  const skills = parseHeroSkills(heroPageHtml);
+  const stats = parseHeroStats(heroPageHtml);
+  return { skills, stats };
+}
 
 // Takes an html page and parses all tables
 export const parseSkillsPage = parseTables("wikitable");
