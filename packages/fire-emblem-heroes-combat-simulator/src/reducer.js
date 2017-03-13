@@ -8,11 +8,14 @@ export type Action = {
 } | {
   type: 'SELECT_SLOT';
   slot: 0 | 1 | void;
+} | {
+  type: 'TOGGLE_AGGRESSOR';
 };
 
 export type State = {
   activeHero: ?Hero;
   activeSlot: 0 | 1 | void;
+  aggressor: 'LEFT' | 'RIGHT';
   leftHero: ?Hero;
   rightHero: ?Hero;
 };
@@ -24,7 +27,7 @@ const emptySlotAndHero = {
   activeSlot: undefined,
 };
 
-const reducer = (state: State, action: Action) => {
+const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'SELECT_SLOT':
       return (state.activeHero == null)
@@ -40,6 +43,11 @@ const reducer = (state: State, action: Action) => {
         : (state.activeSlot == 0)
           ? { ...state, ...emptySlotAndHero, leftHero: action.hero }
           : { ...state, ...emptySlotAndHero, rightHero: action.hero }
+    case 'TOGGLE_AGGRESSOR':
+      return {
+        ...state,
+        aggressor: state.aggressor === 'LEFT' ? 'RIGHT' : 'LEFT',
+      }
     default:
       return state;
   }

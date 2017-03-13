@@ -32,6 +32,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
         margin: 5px;
         position: relative;
         transition: box-shadow 0.2s;
+        user-select: none;
         width: 56px;
       }
       .gridSquare:hover {
