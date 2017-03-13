@@ -18,7 +18,7 @@ import {
 import { fetchPage, fetchAndParsePages } from './fetch';
 import {
   parseHeroAggregateHtml,
-  parseHeroSkills,
+  parseHeroStatsAndSkills,
   parseSkillsPage,
 } from './parse';
 
@@ -30,29 +30,25 @@ import {
 
 // Fetches heroes and their stats/skills
 async function fetchHeroStats() {
-  const heroStats = await fetchPage('http://feheroes.wiki/Stats_Table')
+  // TODO: switch to http://feheroes.wiki/Hero_List
+  const heroes = await fetchPage('http://feheroes.wiki/Stats_Table')
     .then(parseHeroAggregateHtml)
+    .then(map(pick(['name', 'moveType', 'weaponType', 'total'])))
     .catch(err => console.error('fetchAggregateStats', err));
-  const heroNames = map(prop('name'), heroStats);
-  const heroSkills = map(
-    compose(
-      skills => ({ skills }),
-      map(pick(['name', 'default', 'rarity'])),
-    ),
-    await fetchAndParsePages('http://feheroes.wiki/', heroNames, parseHeroSkills),
-  );
-  // console.log('Hero stats:', heroStats);
-  // console.log('Hero skills:', heroSkills);
-  
+
+  const heroNames = map(prop('name'), heroes);
+  const heroStatsAndSkills = await fetchAndParsePages(
+      'http://feheroes.wiki/', heroNames, parseHeroStatsAndSkills);
+
   // Create an object that maps hero name to the hero object in order to merge in the hero skills.
-  const heroes = values(
+  const detailedHeroes = values(
     mergeWith(
       merge,
-      zipObj(heroNames, heroStats),
-      heroSkills,
+      zipObj(heroNames, heroes),
+      heroStatsAndSkills,
     ),
   );
-  return heroes;
+  return detailedHeroes;
 }
 
 // Fetches detailed info for all skills
@@ -81,9 +77,10 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   const existingStats = JSON.parse(fs.readFileSync('./lib/stats.json', 'utf8'));
   const heroes = shouldFetchHeroes ? await fetchHeroStats() : existingStats['heroes'];
   const skills = shouldFetchSkills ? await fetchSkills() : existingStats['skills'];
+  
   // WRITE STATS TO FILE
   const allStats = { heroes, skills };
   fs.writeFileSync('./lib/stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchWikiStats(true, true);
+fetchWikiStats(true, false);
