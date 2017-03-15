@@ -1,5 +1,9 @@
 {
   "extends": "ajhyndman/flow",
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "rules": {
     "indent": ["error", 2, { "SwitchCase": 1 }]
   }
