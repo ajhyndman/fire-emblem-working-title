@@ -40,7 +40,7 @@ const CombatPreview = ({ activeSlot, aggressor, dispatch, leftHero, rightHero }:
       .container {
         align-items: center;
         display: flex;
-        height: ${56 * 2}px;
+        height: ${56 * 1.5}px;
         justify-content: space-between;
       }
       .hero-slot {

@@ -3,6 +3,9 @@ import type { Hero } from 'fire-emblem-heroes-stats';
 
 
 export type Action = {
+  type: 'SEARCH_STRING_CHANGE';
+  value: string;
+} | {
   type: 'SELECT_HERO';
   hero: Hero;
 } | {
@@ -18,6 +21,7 @@ export type State = {
   aggressor: 'LEFT' | 'RIGHT';
   leftHero: ?Hero;
   rightHero: ?Hero;
+  searchString: string;
 };
 
 export type Dispatch = (action: Action) => void;
@@ -29,6 +33,8 @@ const clearActiveState = {
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
+    case 'SEARCH_STRING_CHANGE':
+      return { ...state, searchString: action.value };
     case 'SELECT_SLOT':
       return (state.activeHero == null)
         ? { ...state, activeSlot: action.slot }

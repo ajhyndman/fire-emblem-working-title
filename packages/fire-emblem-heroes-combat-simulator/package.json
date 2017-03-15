@@ -18,6 +18,7 @@
     "flow-bin": "^0.41.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "clipboard-js": "^0.3.3",
     "fire-emblem-heroes-stats": "^0.1.1",
     "next": "2.0.0-beta.36",
