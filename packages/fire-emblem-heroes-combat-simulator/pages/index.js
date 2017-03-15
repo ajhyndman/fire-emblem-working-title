@@ -48,8 +48,8 @@ class Home extends React.Component {
         ? initialState
         : {
           ...initialState,
-          leftHero: find(propEq('name', query['0']), stats.heroes),
-          rightHero: find(propEq('name', query['1']), stats.heroes),
+          leftHero: find(propEq('name', decodeURIComponent(query['0'])), stats.heroes),
+          rightHero: find(propEq('name', decodeURIComponent(query['1'])), stats.heroes),
         },
     };
   }
@@ -118,10 +118,10 @@ class Home extends React.Component {
               this.props.host
             }/?0=${
               // $FlowIssue typedef for path isn't resolving correctly
-              path(['leftHero', 'name'], state)
+              encodeURIComponent(path(['leftHero', 'name'], state))
             }&1=${
               // $FlowIssue typedef for path isn't resolving correctly
-              path(['rightHero', 'name'], state)
+              encodeURIComponent(path(['rightHero', 'name'], state))
             }`}
           />
         </div>
