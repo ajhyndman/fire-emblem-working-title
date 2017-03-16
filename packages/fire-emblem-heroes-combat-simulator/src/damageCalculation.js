@@ -123,6 +123,15 @@ const effectiveBonus = (attacker: Hero, defender: Hero) => {
 };
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
+export const getStat = (hero: Hero, stat: string) => {
+  const values = hero["stats"]["40"]["5"][stat];
+  if (values.length == 3 && values[1] != "-") return values[1];
+  for (let val of values) {
+    if (!isNaN(val)) return val;
+  }
+  return 0;
+}
+
 /**
  * Calculate the resulting damage per hit, number of hits, and final HP for each hero.
  *
@@ -132,30 +141,30 @@ const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
  */
 export const calculateResult = (attacker: Hero, defender: Hero) => {
   const attackerDamage = hitDmg(
-    attacker.atk,
+    getStat(attacker, "atk"),
     effectiveBonus(attacker, defender),
     advantageBonus(
       weaponColor(attacker),
       weaponColor(defender),
     ),
-    defender[mitigationType(attacker)],
+    getStat(defender, mitigationType(attacker)),
     classModifier(attacker),
   );
 
   const defenderDamage = hitDmg(
-    defender.atk,
+    getStat(defender, "atk"),
     effectiveBonus(defender, attacker),
     advantageBonus(
       weaponColor(defender),
       weaponColor(attacker),
     ),
-    attacker[mitigationType(defender)],
+    getStat(attacker, mitigationType(defender)),
     classModifier(defender),
   );
 
-  let attackerHpRemaining = attacker.hp;
+  let attackerHpRemaining = getStat(attacker, "hp");
   let attackerNumAttacks = 0;
-  let defenderHpRemaining = defender.hp;
+  let defenderHpRemaining = getStat(defender, "hp");
   let defenderNumAttacks = 0;
 
   // attacker hits defender
