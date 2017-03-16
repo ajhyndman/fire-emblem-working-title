@@ -25,15 +25,51 @@ declare module 'fire-emblem-heroes-stats' {
     | 'Neutral Shuriken'
     | 'Neutral Staff';
 
+  declare type StatValue = number | '-';
+
+  declare type SingleValueStats = {
+    +hp: StatValue;
+    +atk: StatValue;
+    +spd: StatValue;
+    +def: StatValue;
+    +res: StatValue;
+  };
+
+  declare type MultiValueStats = {
+    +hp: Array<StatValue>;
+    +atk: Array<StatValue>;
+    +spd: Array<StatValue>;
+    +def: Array<StatValue>;
+    +res: Array<StatValue>;
+  };
+
+  declare type Level1Stats = {
+    '+1': SingleValueStats;
+    '+2': SingleValueStats;
+    '+3': SingleValueStats;
+    '+4': SingleValueStats;
+    '+5': SingleValueStats;
+  };
+
+  declare type Level40Stats = {
+    '+1': MultiValueStats;
+    '+2': MultiValueStats;
+    '+3': MultiValueStats;
+    '+4': MultiValueStats;
+    '+5': MultiValueStats;
+  };
+
+  declare type StatsByLevel = {
+    '+1': Level1Stats;
+    '+40': Level40Stats;
+  };
+
   declare type Hero = {
     +name: string;
     +moveType: MoveType;
     +weaponType: WeaponType;
-    +hp: number;
-    +atk: number;
-    +spd: number;
-    +def: number;
-    +res: number;
+    +total: number;
+    +stats: StatsByLevel;
     +skills: Array<{
       +name: string;
       +default?: ?number;

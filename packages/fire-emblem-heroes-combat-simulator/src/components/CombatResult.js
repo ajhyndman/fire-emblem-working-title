@@ -2,7 +2,7 @@
 import React from 'react';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
-import { calculateResult } from '../damageCalculation';
+import { calculateResult, getStat } from '../damageCalculation';
 
 
 type Props = {
@@ -53,11 +53,11 @@ const CombatResult = ({ leftHero, rightHero }: Props) => {
         ? (
           <div className="container">
             <div>
-              <h1>{`${leftHero.hp} → ${result.attackerHpRemaining}`}</h1>
+              <h1>{`${getStat(leftHero, "hp")} → ${result.attackerHpRemaining}`}</h1>
               <h2>{printDamage(result.attackerDamage, result.attackerNumAttacks)}</h2>
             </div>
             <div>
-              <h1>{`${rightHero.hp} → ${result.defenderHpRemaining}`}</h1>
+              <h1>{`${getStat(rightHero, "hp")} → ${result.defenderHpRemaining}`}</h1>
               <h2>{printDamage(result.defenderDamage, result.defenderNumAttacks)}</h2>
             </div>
           </div>
