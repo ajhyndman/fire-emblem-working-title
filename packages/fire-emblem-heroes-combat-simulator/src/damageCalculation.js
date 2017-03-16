@@ -17,9 +17,12 @@ type Color = 'RED' | 'GREEN' | 'BLUE' | 'NEUTRAL';
 type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
 
 /**
+ * A helper for getting a stat value from a hero by key.
+ * Defaults to level 40, 5 star, baseline variant.
  *
- * @param {*} hero
- * @param {*} stat
+ * @param {*} hero Hero to look up stat on
+ * @param {*} stat Key of the stat to look up
+ * @returns number the value of the stat
  */
 export const getStat = (hero: Hero, stat: Stat): number => {
   const values = hero.stats['40']['5'][stat];
