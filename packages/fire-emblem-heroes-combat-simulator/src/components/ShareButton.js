@@ -11,11 +11,6 @@ type Props = {
 const ShareButton = ({ link }: Props) => (
   <div className="root">
     <style jsx>{`
-      .root {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
       button {
         border: none;
         background: none;
