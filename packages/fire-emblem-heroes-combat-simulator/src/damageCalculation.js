@@ -60,7 +60,7 @@ const range = (hero: Hero) => {
     case 'Blue Lance':
     case 'Red Beast':
     case 'Green Beast':
-    case 'Blue Beash':
+    case 'Blue Beast':
       return 1;
     default:
       return 2;
@@ -193,8 +193,8 @@ export const calculateResult = (attacker: Hero, defender: Hero) => {
   }
 
   if (
-    defenderHpRemaining 
-    && (range(defender) === range(attacker)) 
+    defenderHpRemaining
+    && (range(defender) === range(attacker))
     && doesFollowUp(defender, attacker)
   ) {
     // defender follow-up
