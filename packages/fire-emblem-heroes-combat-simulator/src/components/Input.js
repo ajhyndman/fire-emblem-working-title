@@ -12,7 +12,7 @@ type Props = {
 
 type WithState = {
   isFocused: Boolean;
-  setFocus: (value: Boolean) => void;
+  setFocus: (value: boolean) => void;
 };
 
 const Input = withState('isFocused', 'setFocus', false)(
