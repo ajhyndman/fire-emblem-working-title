@@ -9,7 +9,7 @@
     "build": "next build",
     "dev": "next",
     "start": "next start",
-    "test": "eslint **/*.js && flow check"
+    "test": "eslint src/**/*.js pages/**/*.js && flow check"
   },
   "devDependencies": {
     "babel-plugin-transform-flow-strip-types": "^6.22.0",

@@ -7,8 +7,6 @@ import {
   filter,
   find,
   isEmpty,
-  match,
-  not,
   path,
   prop,
   propEq,
@@ -91,7 +89,8 @@ class Home extends React.Component {
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
           <meta name="theme-color" content="#ffffff" />
           <link
-            href="https://fonts.googleapis.com/css?family=Mandali&text=→×0123456789abcdefghijklmnopqrstuvwxyz"
+            href={'https://fonts.googleapis.com/css?family=Mandali&text='
+              + '→×0123456789abcdefghijklmnopqrstuvwxyz'}
             rel="stylesheet"
           />
           <style>{`

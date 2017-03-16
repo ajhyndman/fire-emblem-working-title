@@ -14,6 +14,22 @@ import type { Hero } from 'fire-emblem-heroes-stats';
 
 type Color = 'RED' | 'GREEN' | 'BLUE' | 'NEUTRAL';
 
+type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
+
+/**
+ *
+ * @param {*} hero
+ * @param {*} stat
+ */
+export const getStat = (hero: Hero, stat: Stat): number => {
+  const values = hero.stats['40']['5'][stat];
+  if (values.length === 3 && values[1] !== '-') return values[1];
+  for (let val of values) {
+    if (!isNaN(val)) return parseInt(val, 10);
+  }
+  return 0;
+}
+
 /**
  * Formula derived from:
  * http://feheroes.wiki/Damage_Calculation#Complete_formula
@@ -43,7 +59,8 @@ const hitDmg = (
   ),
 );
 
-const doesFollowUp = (heroA: Hero, heroB: Hero) => heroA.spd - heroB.spd >= 5;
+const doesFollowUp = (heroA: Hero, heroB: Hero) =>
+  (getStat(heroA, 'spd') - getStat(heroB, 'spd') >= 5);
 const isBraveWeapon = (hero: Hero) => find(
   compose(
     compose(not, isEmpty),
@@ -122,15 +139,6 @@ const effectiveBonus = (attacker: Hero, defender: Hero) => {
   else return 1;
 };
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
-
-export const getStat = (hero: Hero, stat: string) => {
-  const values = hero["stats"]["40"]["5"][stat];
-  if (values.length == 3 && values[1] != "-") return values[1];
-  for (let val of values) {
-    if (!isNaN(val)) return val;
-  }
-  return 0;
-}
 
 /**
  * Calculate the resulting damage per hit, number of hits, and final HP for each hero.

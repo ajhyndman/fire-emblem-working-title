@@ -44,24 +44,24 @@ declare module 'fire-emblem-heroes-stats' {
   };
 
   declare type Level1Stats = {
-    '+1': SingleValueStats;
-    '+2': SingleValueStats;
-    '+3': SingleValueStats;
-    '+4': SingleValueStats;
-    '+5': SingleValueStats;
+    +'1': SingleValueStats;
+    +'2': SingleValueStats;
+    +'3': SingleValueStats;
+    +'4': SingleValueStats;
+    +'5': SingleValueStats;
   };
 
   declare type Level40Stats = {
-    '+1': MultiValueStats;
-    '+2': MultiValueStats;
-    '+3': MultiValueStats;
-    '+4': MultiValueStats;
-    '+5': MultiValueStats;
+    +'1': MultiValueStats;
+    +'2': MultiValueStats;
+    +'3': MultiValueStats;
+    +'4': MultiValueStats;
+    +'5': MultiValueStats;
   };
 
   declare type StatsByLevel = {
-    '+1': Level1Stats;
-    '+40': Level40Stats;
+    +'1': Level1Stats;
+    +'40': Level40Stats;
   };
 
   declare type Hero = {
@@ -81,8 +81,8 @@ declare module 'fire-emblem-heroes-stats' {
     +type: 'WEAPON';
     +name: string;
     +cost: string;
-    '+damage(mt)': number;
-    '+range(rng)': number;
+    +'damage(mt)': number;
+    +'range(rng)': number;
     +specialEffects: string;
   };
 
@@ -118,8 +118,8 @@ declare module 'fire-emblem-heroes-stats' {
     | PassiveSkill;
 
   declare type Stats = {
-    heroes: Hero[];
-    skills: Skill[];
+    +heroes: Hero[];
+    +skills: Skill[];
   };
 
   declare module.exports: Stats;
