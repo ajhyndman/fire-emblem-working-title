@@ -1,19 +1,25 @@
 import {
   compose,
+  curry,
+  dissoc,
   head,
   join,
   juxt,
   map,
+  prop,
   split,
   tail,
   toLower,
   toUpper,
+  zipObj,
 } from 'ramda';
 
 
 /**
  * Utility functions
  */
+
+export const inspect = (x) => {console.log(x); return x};
 
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]))
 
@@ -28,4 +34,18 @@ export const camelCase = compose(
       tail)]),
   split(' '), 
   toLower,
+);
+
+// converts numeric strings to numbers
+export const maybeToNumber = (txt) => isNaN(txt) ? txt : parseInt(txt, 10);
+
+// Converts a list of objects that have a field to a map from that field to the object.
+// Assumes that the field values are all distinct.
+export const objectsByField = curry(
+  (field, objects)  => {
+    return zipObj(
+      map(prop(field), objects),
+      map(dissoc(field), objects),
+    );
+  },
 );
