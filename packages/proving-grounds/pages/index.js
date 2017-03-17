@@ -95,8 +95,13 @@ class Home extends React.Component {
           />
           <style>{`
             body {
-              background: top center fixed url(${staticUrl}${backgroundUrl});
               margin: 0;
+              background-image: -webkit-image-set(
+                url(${staticUrl}${backgroundUrl}) 1x,
+                url(${staticUrl}${backgroundUrl}) 1.5x
+              );
+              background-position: top center;
+              background-attachment: fixed;
             }
           `}</style>
         </Head>
@@ -104,7 +109,12 @@ class Home extends React.Component {
           .sticky-panel {
             position: fixed;
             width: 100%;
-            background: top center fixed url(${staticUrl}${backgroundUrl});
+            background-image: -webkit-image-set(
+              url(${staticUrl}${backgroundUrl}) 1x,
+              url(${staticUrl}${backgroundUrl}) 1.5x
+            );
+            background-position: top center;
+            background-attachment: fixed;
             height: ${panelHeight}px;
             z-index: 1;
           }
