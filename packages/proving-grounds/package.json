@@ -1,7 +1,7 @@
 {
-  "name": "fire-emblem-heroes-combat-simulator",
+  "name": "proving-grounds",
   "version": "0.2.0",
-  "description": "Test level 40 heroes against one another!",
+  "description": "Test level 40 heroes from Fire Emblem: Heroes against one another!",
   "repository": "git@github.com:ajhyndman/fire-emblem-working-title.git",
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "GPL-3.0+",

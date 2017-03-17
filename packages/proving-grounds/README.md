@@ -1,4 +1,4 @@
-# fire-emblem-heroes-combat-simulator
+# proving-grounds
 
 [![yarn compatible](https://img.shields.io/badge/yarn-compatible-4BC51D.svg?style=flat)](https://yarnpkg.com/)
 
@@ -13,7 +13,7 @@ To launch the Next.js dev server:
 $ git clone https://github.com/ajhyndman/fire-emblem-working-title.git
 $ cd fire-emblem-working-title
 $ lerna bootstrap
-$ cd fire-emblem-heroes-combat-simulator
+$ cd packages/proving-grounds
 $ npm run dev
 ```
 
