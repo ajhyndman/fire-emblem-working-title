@@ -1,27 +1,19 @@
 // @flow
 import type { Hero } from 'fire-emblem-heroes-stats';
 
+import type { State } from './store'
 
 export type Action = {
   type: 'SEARCH_STRING_CHANGE';
   value: string;
 } | {
   type: 'SELECT_HERO';
-  hero: Hero;
+  hero: ?Hero;
 } | {
   type: 'SELECT_SLOT';
   slot: 0 | 1 | void;
 } | {
   type: 'TOGGLE_AGGRESSOR';
-};
-
-export type State = {
-  activeHero: ?Hero;
-  activeSlot: 0 | 1 | void;
-  aggressor: 'LEFT' | 'RIGHT';
-  leftHero: ?Hero;
-  rightHero: ?Hero;
-  searchString: string;
 };
 
 export type Dispatch = (action: Action) => void;
