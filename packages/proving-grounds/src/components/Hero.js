@@ -16,6 +16,10 @@ const Hero = ({ name, weaponType }: Props) => {
   return (
     <div className="root">
       <style jsx>{`
+        .root {
+          position: relative;
+          width: 56px;
+        }
         .class {
           left: -2px;
           position: absolute;
