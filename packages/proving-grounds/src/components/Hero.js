@@ -44,7 +44,7 @@ const Hero = ({ name, weaponType }: Props) => {
       <img
         className="class"
         title={weaponType}
-        src={`${staticUrl}35px-Icon_Class_${weaponTypeUri}.png 35w`}
+        src={`${staticUrl}35px-Icon_Class_${weaponTypeUri}.png`}
         srcSet={`
           ${staticUrl}35px-Icon_Class_${weaponTypeUri}.png 35w,
           ${staticUrl}Icon_Class_${weaponTypeUri}.png 56w
