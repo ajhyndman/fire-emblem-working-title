@@ -6,7 +6,7 @@ import { withState } from 'recompose';
 import { colors, fontFamilies, transition } from '../theme';
 
 type Props = {
-  onChange: (event: Event) => void;
+  onChange: (value: string) => void;
   value: string;
 };
 
@@ -20,25 +20,9 @@ const Input = withState('isFocused', 'setFocus', false)(
     <div
       className={cn({ root: true, active: isFocused })}
       onClick={event => event.stopPropagation()}
+      onKeyDown={event => { if (event.keyCode === 27) onChange(''); }}
     >
       <style jsx>{`
-        input {
-          background: ${colors.elephant};
-          border: none;
-          box-sizing: border-box;
-          color: white;
-          display: block;
-          font-family: ${fontFamilies.ui};
-          height: 2em;
-          padding: 0 0.5em;
-          width: 100%;
-        }
-        input:focus {
-          outline: none;
-        }
-        input::placeholder {
-          font-family: ${fontFamilies.ui};
-        }
         .root {
           border-top: 2px solid #9ad8da;
           border-bottom: 2px solid #40737d;
@@ -74,14 +58,47 @@ const Input = withState('isFocused', 'setFocus', false)(
         .root::after {
           right: -2px;
         }
+        input {
+          background: ${colors.elephant};
+          border: none;
+          box-sizing: border-box;
+          color: white;
+          display: block;
+          font-family: ${fontFamilies.ui};
+          height: 2em;
+          padding: 0 1.5em 0 0.5em;
+          width: 100%;
+        }
+        input:focus {
+          outline: none;
+        }
+        input::placeholder {
+          font-family: ${fontFamilies.ui};
+        }
+        .close {
+          cursor: pointer;
+          color: white;
+          padding: 0 0.25em;
+          position: absolute;
+          top: 50%;
+          right: 0.25em;
+          transform: translateY(-50%);
+        }
       `}</style>
       <input
         {...rest}
         onFocus={() => setFocus(true)}
         onBlur={() => setFocus(false)}
-        onChange={onChange}
+        onChange={event => onChange(event.target.value)}
         value={value}
       />
+      <span
+        onClick={() => onChange('')}
+        className="close"
+        style={{ display: value === '' ? 'none' : 'block' }}
+      >
+        ×
+      </span>
     </div>
   ),
 );

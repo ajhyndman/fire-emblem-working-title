@@ -158,13 +158,8 @@ class Home extends React.Component {
             />
             <div className="column">
               <Input
-                onChange={(event: Event) => {
-                  if (typeof event.target.value === 'string') {
-                    dispatch({ type: 'SEARCH_STRING_CHANGE', value: event.target.value });
-                  } else {
-                    // eslint-disable-next-line no-console
-                    console.error('Unusual event value:', event.target.value);
-                  }
+                onChange={(value: string) => {
+                  dispatch({ type: 'SEARCH_STRING_CHANGE', value });
                 }}
                 placeholder="Type to filter"
                 value={state.searchString}
