@@ -7,35 +7,29 @@ import type { Dispatch } from '../reducer';
 
 type Props = {
   activeSlot: ?number;
-  aggressor: 'LEFT' | 'RIGHT';
   dispatch: Dispatch;
   leftHero: ?Object;
   rightHero: ?Object;
 };
 
-const CombatPreview = ({ activeSlot, aggressor, dispatch, leftHero, rightHero }: Props) => (
+const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
         margin: 0 auto;
         width: ${56 * 3}px
       }
-      .arrow {
+      .arrow-left {
         cursor: pointer;
         outline: none;
         padding: 5px 10px;
       }
-      .arrow::after {
+      .arrow-left::after {
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
+        border-left: 10px solid white;
         content: "";
         display: block;
-      }
-      .arrow.right::after {
-        border-left: 10px solid white;
-      }
-      .arrow.left::after {
-        border-right: 10px solid white;
       }
       .container {
         align-items: center;
@@ -77,7 +71,7 @@ const CombatPreview = ({ activeSlot, aggressor, dispatch, leftHero, rightHero }:
           : null}
       </div>
       <div
-        className={`arrow ${aggressor === 'LEFT' ? 'right' : 'left'}`}
+        className="arrow-left"
         role="button"
         tabIndex={0}
         onClick={(event) => {

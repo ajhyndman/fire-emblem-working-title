@@ -7,7 +7,6 @@ import reducer from './reducer';
 export type State = {
   activeHero: ?Hero;
   activeSlot: 0 | 1 | void;
-  aggressor: 'LEFT' | 'RIGHT';
   leftHero: ?Hero;
   rightHero: ?Hero;
   searchString: string;
@@ -16,7 +15,6 @@ export type State = {
 const emptyState: State = {
   activeHero: undefined,
   activeSlot: undefined,
-  aggressor: 'LEFT',
   leftHero: undefined,
   rightHero: undefined,
   searchString: '',

@@ -44,7 +44,8 @@ const reducer = (state: State, action: Action): State => {
     case 'TOGGLE_AGGRESSOR':
       return {
         ...state,
-        aggressor: state.aggressor === 'LEFT' ? 'RIGHT' : 'LEFT',
+        leftHero: state.rightHero,
+        rightHero: state.leftHero,
       }
     default:
       return state;

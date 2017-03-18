@@ -120,13 +120,11 @@ class Home extends React.Component {
         `}</style>
         <div className="sticky-panel">
           <CombatResult
-            aggressor={state.aggressor}
             leftHero={state.leftHero}
             rightHero={state.rightHero}
           />
           <CombatPreview
             activeSlot={state.activeSlot}
-            aggressor={state.aggressor}
             dispatch={dispatch}
             leftHero={state.leftHero}
             rightHero={state.rightHero}
