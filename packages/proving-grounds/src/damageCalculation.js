@@ -21,16 +21,36 @@ type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
  * Defaults to level 40, 5 star, baseline variant.
  *
  * @param {*} hero Hero to look up stat on
- * @param {*} stat Key of the stat to look up
+ * @param {*} statKey Key of the stat to look up
+ * @param {*} level Which level version of stat to look up
+ * @param {*} rarity Which rarity version of stat to look up
+ * @param {*} variance Which variant ('low', 'normal', 'high') to look up
  * @returns number the value of the stat
  */
-export const getStat = (hero: Hero, stat: Stat): number => {
-  const values = hero.stats['40']['5'][stat];
-  if (values.length === 3 && values[1] !== '-') return values[1];
-  for (let val of values) {
-    if (!isNaN(val)) return parseInt(val, 10);
+export const getStat = (
+  hero: Hero,
+  statKey: Stat,
+  level: '40' | '1' = '40',
+  rarity: '1' | '2' | '3' | '4' | '5' = '5',
+  variance: 'low' | 'normal' | 'high' = 'normal',
+): number => {
+  if (level === '1') {
+    const value = parseInt(hero.stats[level][rarity][statKey], 10);
+    return variance === 'normal'
+      ? value
+      : variance === 'low'
+        ? value - 1
+        : value + 1;
   }
-  return 0;
+  const values = hero.stats[level][rarity][statKey];
+  const [low, normal, high] = values.length <= 1
+    ? ['-', ...values]
+    : values;
+  return variance === 'normal'
+    ? parseInt(normal, 10)
+    : variance === 'low'
+      ? parseInt(low, 10)
+      : parseInt(high, 10)
 }
 
 /**
