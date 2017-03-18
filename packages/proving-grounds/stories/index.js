@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
+import { storiesOf } from '@kadira/storybook';
+import { withState } from 'recompose';
 
 import Hero from '../src/components/Hero';
 import Input from '../src/components/Input';
@@ -17,6 +18,15 @@ storiesOf('Input', module)
   ));
 
 storiesOf('SegmentedControl', module)
-  .add('default', () => (
-    <SegmentedControl onChange={action('SELECT_SEGMENT')} options={['Lv 1', 'Lv 40']} />
-  ));
+  .add('default', () => {
+    const SegmentedControlStory = withState('selected', 'setSelected', 0)(
+      ({ selected, setSelected }) => (
+        <SegmentedControl
+          onChange={setSelected}
+          options={['Lv 1', 'Lv 40']}
+          selected={selected}
+        />
+      ),
+    );
+    return <SegmentedControlStory />;
+  });
