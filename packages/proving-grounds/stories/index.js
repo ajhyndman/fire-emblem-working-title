@@ -5,6 +5,7 @@ import { withState } from 'recompose';
 
 import Hero from '../src/components/Hero';
 import Input from '../src/components/Input';
+import RaritySelector from '../src/components/RaritySelector';
 import SegmentedControl from '../src/components/SegmentedControl';
 
 storiesOf('Hero', module)
@@ -16,6 +17,20 @@ storiesOf('Input', module)
   .add('default', () => (
     <Input />
   ));
+
+storiesOf('RaritySelector', module)
+  .add('default', () => {
+    const RaritySelectorStory = withState('selected', 'setSelected', 4)(
+      ({ selected, setSelected }) => (
+        <RaritySelector
+          disabled={[true, true, false, false, false]}
+          onChange={setSelected}
+          selected={selected}
+        />
+      ),
+    );
+    return <RaritySelectorStory />;
+  });
 
 storiesOf('SegmentedControl', module)
   .add('default', () => {
