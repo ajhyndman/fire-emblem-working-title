@@ -33,9 +33,9 @@ export const parseTable = (tableHtml) => {
       replace('unlock', 'rarity'),  // Some tables use unlock others use rarity
       camelCase,
       trim,
-      replace(/<.*?>/g, ''),  // Remove all html tags (th, span)
+      replace(/<[^>]*?>/g, ''),  // Remove all html tags (th, span)
     )),
-    match(/<th(\s.*?)?>.*?<\/th.*?>/g),  // Match <th> tags without matching <thead>
+    match(/<th(\s[^>]*?)?>.*?<\/th[^>]*?>/g),  // Match <th> tags without matching <thead>
   )(tableHtml);
 
   const tableRows = compose(
@@ -45,9 +45,9 @@ export const parseTable = (tableHtml) => {
         trim,
         replace(/<[^>]*?>/g, ''),  // Remove all html tags (td, a, span, img, b)
       )),
-      match(/<td.*?>.*?<\/td>/g))),
+      match(/<td[^>]*?>.*?<\/td>/g))),
     tail,  // Remove the header row
-    match(/<tr.*?>.*?<\/tr.*?>/g),
+    match(/<tr[^>]*?>.*?<\/tr.*?>/g),
     replace(/&#160;/g, ''),  // &nbsp, also known as \xa0
   )(tableHtml);
   // Some tables have a column of icons, ignore that.
@@ -59,7 +59,7 @@ export const parseTables = (tableClass) => compose(
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
-  match(new RegExp("<table.*?" + tableClass + ".*?>.*?<\/table>", "g")),
+  match(new RegExp("<table[^>]*?" + tableClass + "[^>]*?>.*?<\/table>", "g")),
 );
 
 // Takes the html page for a hero and parses all skill tables
@@ -97,7 +97,7 @@ const parseHeroStats = compose(
   map(parseTable),
   filter(compose(not, test(/ibox/))),
   filter(compose(not, test(/skills-table/))),
-  match(/<table.*?>.*?<\/table>/g),
+  match(/<table[^>]*?>.*?<\/table>/g),
   replace(/(\?+|-+)/g, '-'), // standardize unknown values
 );
 
