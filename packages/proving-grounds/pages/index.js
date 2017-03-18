@@ -2,41 +2,32 @@
 import Head from 'next/head'
 import React from 'react';
 import stats from 'fire-emblem-heroes-stats';
+import withRedux from 'next-redux-wrapper';
 import {
   compose,
   filter,
-  find,
   isEmpty,
   path,
   prop,
-  propEq,
   toLower,
 } from 'ramda';
-import { withReducer } from 'recompose';
 
 import CombatPreview from '../src/components/CombatPreview';
 import CombatResult from '../src/components/CombatResult';
 import HeroGrid from '../src/components/HeroGrid';
 import ShareButton from '../src/components/ShareButton';
 import Input from '../src/components/Input';
-import reducer from '../src/reducer';
+import initStore from '../src/store';
+import { decodeHero, encodeHero } from '../src/queryCodex';
 import { staticUrl } from '../config';
-import type { Dispatch, State } from '../src/reducer';
+import type { Dispatch } from '../src/reducer';
+import type { State } from '../src/store'
 
 
 type Props = {
-  backgroundUrl: string;
+  dispatch: Dispatch;
   host: string;
-  initialState: State;
-};
-
-const initialState: State = {
-  activeHero: undefined,
-  activeSlot: undefined,
-  aggressor: 'LEFT',
-  leftHero: undefined,
-  rightHero: undefined,
-  searchString: '',
+  state: State;
 };
 
 const panelHeight = 212;
@@ -49,33 +40,29 @@ const backgroundList = [
   'fire_emblem_awakening___tiki_by_krukmeister-d7s3qqh.png',
   'fire_emblem_awakening___tharja_by_krukmeister-d8e934d.png',
 ];
+const backgroundUrl = backgroundList[4];
 
 class Home extends React.Component {
-  static async getInitialProps ({ req, query }) {
+  static async getInitialProps ({ store, req, query }) {
+    if (!isEmpty(query)) {
+      const dispatch: Dispatch = store.dispatch;
+      dispatch({ type: 'SELECT_SLOT', slot: 0 });
+      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) });
+      dispatch({ type: 'SELECT_SLOT', slot: 1 });
+      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) });
+    }
+
     return {
-      backgroundUrl: backgroundList[Math.floor(Math.random() * backgroundList.length)],
       host: req.headers.host,
-      initialState: isEmpty(query)
-        ? initialState
-        : {
-          ...initialState,
-          leftHero: find(propEq('name', decodeURIComponent(query['0'])), stats.heroes),
-          rightHero: find(propEq('name', decodeURIComponent(query['1'])), stats.heroes),
-        },
     };
   }
 
   props: Props;
 
   render() {
-    const backgroundUrl = this.props.backgroundUrl;
+    const { host, state, dispatch } = this.props;
 
-    const App = withReducer(
-      'state',
-      'dispatch',
-      reducer,
-      this.props.initialState,
-    )(({ state, dispatch }: { state: State, dispatch: Dispatch }) => (
+    return (
       <div className="root" onClick={() => dispatch({ type: 'SELECT_SLOT', slot: undefined })}>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -146,25 +133,12 @@ class Home extends React.Component {
           />
           <div className="row">
             <ShareButton
-              link={`${
-                this.props.host
-              }/?0=${
-                // $FlowIssue typedef for path isn't resolving correctly
-                encodeURIComponent(path(['leftHero', 'name'], state))
-              }&1=${
-                // $FlowIssue typedef for path isn't resolving correctly
-                encodeURIComponent(path(['rightHero', 'name'], state))
-              }`}
+              link={`${host}/?0=${encodeHero(state.leftHero)}&1=${encodeHero(state.rightHero)}`}
             />
             <div className="column">
               <Input
-                onChange={(event: Event) => {
-                  if (typeof event.target.value === 'string') {
-                    dispatch({ type: 'SEARCH_STRING_CHANGE', value: event.target.value });
-                  } else {
-                    // eslint-disable-next-line no-console
-                    console.error('Unusual event value:', event.target.value);
-                  }
+                onChange={(value: string) => {
+                  dispatch({ type: 'SEARCH_STRING_CHANGE', value });
                 }}
                 placeholder="Type to filter"
                 value={state.searchString}
@@ -188,12 +162,8 @@ class Home extends React.Component {
           )}
         />
       </div>
-    ));
-
-    return (
-      <App />
     );
   }
 }
 
-export default Home;
+export default withRedux(initStore, state => ({ state }))(Home);
