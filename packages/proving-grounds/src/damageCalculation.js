@@ -7,7 +7,7 @@ import {
   max,
   multiply,
   not,
-  prop,
+  propOr,
 } from 'ramda';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
@@ -89,7 +89,7 @@ const isBraveWeapon = (hero: Hero) => find(
     compose(not, isEmpty),
     match(/Brave|Dire/g),
     // $FlowIssue - prop() typedef doesn't reflect _which_ string it's passed.
-    prop('name'),
+    propOr('', 'name'),
   ),
   hero.skills,
 );
