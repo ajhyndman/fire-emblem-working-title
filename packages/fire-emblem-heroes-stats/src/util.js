@@ -36,8 +36,10 @@ export const camelCase = compose(
   toLower,
 );
 
-// converts numeric strings to numbers
-export const maybeToNumber = (txt) => isNaN(parseInt(txt, 10)) ? txt : parseInt(txt, 10);
+// Converts numeric strings to numbers
+// isNaN indicates that '1' is a number, '' is a number, and '1/2/3' is not
+// parseInt converts '' to null, and 1/2/3 to 1
+export const maybeToNumber = (txt) => (txt == '' || isNaN(txt)) ? txt : parseInt(txt, 10);
 
 // Converts a list of objects that have a field to a map from that field to the object.
 // Assumes that the field values are all distinct.
