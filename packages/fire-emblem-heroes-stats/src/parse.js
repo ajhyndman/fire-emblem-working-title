@@ -12,6 +12,7 @@ import {
   replace,
   split,
   tail,
+  tap,
   test,
   trim,
   zipObj,
@@ -34,7 +35,7 @@ export const parseTable = (tableHtml) => {
       trim,
       replace(/<.*?>/g, ''),  // Remove all html tags (th, span)
     )),
-    match(/<th(\s.*?)?>(.|\n)*?<\/th.*?>/g),  // Match <th> tags without matching <thead>
+    match(/<th(\s.*?)?>.*?<\/th.*?>/g),  // Match <th> tags without matching <thead>
   )(tableHtml);
 
   const tableRows = compose(
@@ -42,11 +43,11 @@ export const parseTable = (tableHtml) => {
       map(compose(
         maybeToNumber,
         trim,
-        replace(/<.*?>/g, ''),  // Remove all html tags (td, a, span, img, b)
+        replace(/<[^>]*?>/g, ''),  // Remove all html tags (td, a, span, img, b)
       )),
-      match(/<td.*?>(.|\n)*?<\/td>/g))),
+      match(/<td.*?>.*?<\/td>/g))),
     tail,  // Remove the header row
-    match(/<tr.*?>(.|\n)*?<\/tr.*?>/g),
+    match(/<tr.*?>.*?<\/tr.*?>/g),
     replace(/&#160;/g, ''),  // &nbsp, also known as \xa0
   )(tableHtml);
   // Some tables have a column of icons, ignore that.
@@ -58,13 +59,13 @@ export const parseTables = (tableClass) => compose(
   flatten,
   map(parseTable),
   filter(compose(not, isNil)),
-  match(new RegExp("<table.*?" + tableClass + ".*?>(.|\n)*?<\/table>", "g")),
+  match(new RegExp("<table.*?" + tableClass + ".*?>.*?<\/table>", "g")),
 );
 
 // Takes the html page for a hero and parses all skill tables
 const parseHeroSkills = compose(
-      map(pick(['name', 'default', 'rarity'])),
-      parseTables("skills-table"),
+  map(pick(['name', 'default', 'rarity'])),
+  parseTables("skills-table"),
 );
 
 // Takes a parsed stat table and restructures it to be by rarity and have stat variants
@@ -96,7 +97,7 @@ const parseHeroStats = compose(
   map(parseTable),
   filter(compose(not, test(/ibox/))),
   filter(compose(not, test(/skills-table/))),
-  match(/<table.*?>(.|\n)*?<\/table>/g),
+  match(/<table.*?>.*?<\/table>/g),
   replace(/(\?+|-+)/g, '-'), // standardize unknown values
 );
 
@@ -111,13 +112,17 @@ export const parseSkillsPage = parseTables("wikitable");
 
 // Takes an html page and parses the only table for stats of all heroes
 export const parseHeroAggregateHtml = compose(
+  // tap(console.log.bind(console)),
   parseTable,
+  // Lon'qu has an HTML entity in his name as of 2017-03-18
+  replace(/\&\#39\;/g, "'"),
   // Replace move and weapon type icons with their name
-  replace(/\.png.*?>/g, ''),
-  replace(/<img.*?Icon Class /g, ''),
-  replace(/<img.*?Icon Move /g, ''),
-  replace(/<th.*?>\n*<\/th>/, '<th>Weapon Type</th>'),  // The second unnamed header entry
-  replace(/<th.*?>\n*<\/th>/, '<th>Move Type</th>'),  // The first unnamed header entry
+  replace(/\.png.*?><\/a>/g, ''),
+  replace(/<a[^>]*?><img[^>]*?Icon Class /g, ''),
+  replace(/<a[^>]*?><img[^>]*?Icon Move /g, ''),
+  replace(/<th[^>]*?><\/th>/, '<th>Move Type</th>'),  // The first unnamed header entry
+  replace(/<th[^>]*?><\/th>/, '<th>Weapon Type</th>'),  // The second unnamed header entry
+  replace(/<th[^>]*?><\/th>/, '<th>Portrait</th>'),  // The first unnamed header entry
   prop(0),  // match [0] is the entire matching string
-  match(/<table(.|\n)*?\/table>/),
+  match(/<table.*?\/table>/),
 );
