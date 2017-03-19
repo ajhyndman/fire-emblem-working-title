@@ -6,10 +6,41 @@ import {
   propOr,
   test,
 } from 'ramda';
-import type { Hero } from 'fire-emblem-heroes-stats';
+import type { Hero, WeaponSkill } from 'fire-emblem-heroes-stats';
+
+import { getSkillInfo } from './skillHelpers'; 
 
 
 type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
+
+// Returns a map from skill type to the name of the skill.
+export function getDefaultSkills(hero: Hero, rarity: number) {
+  let skillsByType = {};
+  for (let skill of hero.skills) {
+    if (skill.rarity == null || skill.rarity === '-' || skill.rarity <= rarity) {
+      // Assumes that the later version of a skill is the better version
+      const skillInfo = getSkillInfo(skill.name);
+      if (skillInfo != null) {
+        skillsByType[skillInfo.type] = skill.name;
+      }
+    }
+  }
+  return skillsByType;
+}
+
+// Returns the skill object for the weapon
+// $FlowIssue flow cannot determine what type of skill this will return
+export function getWeapon(hero: Hero, rarity: number) : WeaponSkill {
+  const weaponName = getDefaultSkills(hero, rarity)['WEAPON'];
+  // Convert to any because flow was blaming line 0 for a skill->weapon conversion
+  const weaponInfo: any = getSkillInfo(weaponName);
+  return weaponInfo;
+}
+
+export const hasBraveWeapon = (hero: Hero) => compose(
+  any(test(/Brave|Dire/)),
+  map(propOr('', 'name')),
+)(hero.skills);
 
 /**
  * A helper for getting a stat value from a hero by key.
@@ -41,11 +72,18 @@ export const getStat = (
   const [low, normal, high] = values.length <= 1
     ? ['-', ...values]
     : values;
-  return variance === 'normal'
+  const baseValue = variance === 'normal'
     ? parseInt(normal, 10)
     : variance === 'low'
       ? parseInt(low, 10)
       : parseInt(high, 10)
+  let skillBonus = 0;
+  if (statKey == "atk") {
+    skillBonus += getWeapon(hero, rarity)["damage(mt)"];
+  } else if (statKey == "spd") {
+    skillBonus += hasBraveWeapon(hero) ? -5 : 0;
+  }
+  return baseValue + skillBonus;
 }
 
 export const getRange = (hero: Hero) => {
@@ -95,8 +133,3 @@ export const getWeaponColor = (hero: Hero) => {
       return 'NEUTRAL';
   }
 };
-
-export const hasBraveWeapon = (hero: Hero) => compose(
-  any(test(/Brave|Dire/)),
-  map(propOr('', 'name')),
-)(hero.skills);

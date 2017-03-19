@@ -6,10 +6,10 @@ import {
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import {
-  getStat,
-  getWeaponColor,
   getMitigationType,
   getRange,
+  getStat,
+  getWeaponColor,
   hasBraveWeapon,
 } from './heroHelpers';
 
