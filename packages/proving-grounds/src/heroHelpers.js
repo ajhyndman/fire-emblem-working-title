@@ -34,8 +34,8 @@ export function getDefaultSkills(
 // Returns the name of the skill object for the skill type
 export function getSkill(
   hero: Hero,
-  rarity: '1' | '2' | '3' | '4' | '5' = '5',
   skillType: SkillType,
+  rarity: '1' | '2' | '3' | '4' | '5' = '5',
 ): string {
   return getDefaultSkills(hero, rarity)[skillType];
 }
@@ -45,7 +45,7 @@ export function getWeapon(
   hero: Hero,
   rarity: '1' | '2' | '3' | '4' | '5' = '5',
 ): WeaponSkill {
-  const weaponName = getSkill(hero, rarity, 'WEAPON');
+  const weaponName = getSkill(hero, 'WEAPON', rarity);
   // Convert to any because flow was blaming line 0 for a skill->weapon conversion
   const weaponInfo: any = getSkillInfo(weaponName);
   return weaponInfo;
@@ -94,7 +94,7 @@ export const getStat = (
     : variance === 'low'
       ? parseInt(low, 10)
       : parseInt(high, 10)
-  const passiveSkillName = getSkill(hero, rarity, 'PASSIVE_A');
+  const passiveSkillName = getSkill(hero, 'PASSIVE_A', rarity);
   let skillBonus = 0;
   if (passiveSkillName != null) {
     skillBonus += getStatValue(passiveSkillName, statKey, isAttacker);
@@ -102,7 +102,7 @@ export const getStat = (
   if (statKey == "atk") {
     const weapon = getWeapon(hero, rarity);
     if (weapon != null) {
-      skillBonus += ["damage(mt)"];
+      skillBonus += weapon["damage(mt)"];
     }
   } else if (statKey == "spd") {
     skillBonus += hasBraveWeapon(hero) ? -5 : 0;

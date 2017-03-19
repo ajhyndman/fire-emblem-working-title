@@ -8,6 +8,7 @@ import type { Hero } from 'fire-emblem-heroes-stats';
 import {
   getMitigationType,
   getRange,
+  getSkill,
   getStat,
   getWeaponColor,
   hasBraveWeapon,
@@ -75,6 +76,19 @@ const effectiveBonus = (attacker: Hero, defender: Hero) => {
   else return 1;
 };
 
+const canRetaliate = (attacker: Hero, defender: Hero) => {
+  if (getRange(defender) === getRange(attacker)) {
+    return true;
+  }
+  const passiveA = getSkill(defender, 'PASSIVE_A');
+  const weaponName = getSkill(defender, 'WEAPON');
+  return (passiveA === 'Close Counter'
+       || passiveA === 'Distant Counter'
+       || weaponName === 'Raijinto'
+       || weaponName === 'Lightning Breath'
+       || weaponName === 'Lightning Breath+');
+}
+
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
 const hitDmg = (attacker: Hero, defender: Hero, isAttacker: boolean) => dmgFormula(
@@ -104,7 +118,7 @@ export const calculateResult = (attacker: Hero, defender: Hero) => {
     attackOrder.push(0);
   }
   // defender retaliates
-  if (getRange(defender) === getRange(attacker)) {
+  if (canRetaliate(attacker, defender)) {
     attackOrder.push(1);
   }
   // attacker follow-up
@@ -115,7 +129,8 @@ export const calculateResult = (attacker: Hero, defender: Hero) => {
     }
   }
   // defender follow-up
-  if (doesFollowUp(defender, attacker, false)) {
+  if (canRetaliate(attacker, defender)
+    && doesFollowUp(defender, attacker, false)) {
     attackOrder.push(1);
   }
 
