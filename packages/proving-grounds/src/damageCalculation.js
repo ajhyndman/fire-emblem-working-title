@@ -17,6 +17,8 @@ import {
 
 type Color = 'RED' | 'GREEN' | 'BLUE' | 'NEUTRAL';
 
+const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
+
 /**
  * Formula derived from:
  * http://feheroes.wiki/Damage_Calculation#Complete_formula
@@ -37,9 +39,11 @@ const dmgFormula = (
 ) => Math.floor(
   multiply(
     max(
-      Math.floor(
-        Math.floor(atk * eff) * adv,
-      ) - mit,
+      Math.floor(atk * eff)
+      + truncate(
+        truncate(atk * eff)
+        * adv)
+      - mit,
       0,
     ),
     classModifier,
@@ -58,15 +62,15 @@ const advantageBonus = (colorA: Color, colorB: Color) => {
     || (colorA === 'GREEN' && colorB === 'BLUE')
     || (colorA === 'BLUE' && colorB === 'RED')
   ) {
-    return 1.2;
+    return 0.2;
   } else if (
     (colorA === 'RED' && colorB === 'BLUE')
     || (colorA === 'GREEN' && colorB === 'RED')
     || (colorA === 'BLUE' && colorB === 'GREEN')
   ) {
-    return 0.8;
+    return -0.2;
   }
-  return 1;
+  return 0;
 }
 
 const effectiveBonus = (attacker: Hero, defender: Hero) => {
