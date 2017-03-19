@@ -25,24 +25,23 @@ const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]))
 export function getStatValue(skillName: string, statKey: string, isAttacker: boolean) {
   const skill = getSkillInfo(skillName);
   if (skill.type != 'PASSIVE_A') return 0;
-  const skillNumbers = map(parseInt, match(/\d+/g, skill.effect));
-  const statRegex = new RegExp(capitalize(statKey));
-  if (statKey != 'hp' && test(/Fury/, skillName)) {
-    return skillNumbers[0];
-  }
-  // Death/Darting/Armored/Warding Blow
-  if (isAttacker && test(/Blow/, skillName) && test(statRegex, skill.effect)) {
-    return skillNumbers[0];
-  }
-  // Atk/Def/Spd/Res/HP +
-  if (test(/\+/, skillName) && test(statRegex, skill.effect)) {
-    return skillNumbers[0];
-  }
-  if (test(/Life and Death/, skillName)) {
-    if (statKey == 'atk' || statKey == 'spd') {
+  const statRegex = new RegExp(statKey == 'hp' ? 'max HP' : capitalize(statKey));
+  if (test(statRegex, skill.effect)) {
+    const skillNumbers = map(parseInt, match(/\d+/g, skill.effect));
+    // Atk/Def/Spd/Res/HP+ and Fury
+    if (test(/(Fury|\+)/, skillName)) {
       return skillNumbers[0];
-    } else if (statKey == 'def' || statKey == 'res') {
-      return -skillNumbers[1];
+    }
+    // Death/Darting/Armored/Warding Blow
+    if (isAttacker && test(/Blow/, skillName)) {
+      return skillNumbers[0];
+    }
+    if (test(/Life and Death/, skillName)) {
+      if (statKey == 'atk' || statKey == 'spd') {
+        return skillNumbers[0];
+      } else if (statKey == 'def' || statKey == 'res') {
+        return -skillNumbers[1];
+      }
     }
   }
   return 0;
