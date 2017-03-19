@@ -2,7 +2,8 @@
 import React from 'react';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
-import { calculateResult, getStat } from '../damageCalculation';
+import { calculateResult } from '../damageCalculation';
+import { getStat } from '../heroHelpers';
 
 
 type Props = {

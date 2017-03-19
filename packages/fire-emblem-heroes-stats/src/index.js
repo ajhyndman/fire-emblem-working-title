@@ -10,6 +10,7 @@ import {
   mergeWith,
   pick,
   prop,
+  tap,
   toUpper,
   values,
   zipObj,
@@ -38,7 +39,10 @@ async function fetchHeroStats() {
 
   const heroNames = map(prop('name'), heroes);
   const heroStatsAndSkills = await fetchAndParsePages(
-      'http://feheroes.wiki/', heroNames, parseHeroStatsAndSkills);
+    'http://feheroes.wiki/',
+    heroNames,
+    parseHeroStatsAndSkills,
+  );
 
   // Create an object that maps hero name to the hero object in order to merge in the hero skills.
   const detailedHeroes = values(
@@ -61,7 +65,7 @@ async function fetchSkills() {
   );
   const skills = compose(
     flatten,
-    Object.values,
+    values,
     mapObjIndexed(
       (skillList, skillType) => map(
         assoc('type', dropLast(1, toUpper(skillType))),
