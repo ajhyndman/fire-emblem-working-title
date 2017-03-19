@@ -30,7 +30,8 @@ import { camelCase, maybeToNumber, objectsByField } from './util';
 export const parseTable = (tableHtml) => {
   const tableHeader = compose(
     map(compose(
-      replace('unlock', 'rarity'),  // Some tables use unlock others use rarity
+      replace(/unlock/g, 'rarity'),  // Some tables use unlock others use rarity
+      replace(/effects|specialEffects/g, 'effect'),  // Standardize phrasing
       camelCase,
       trim,
       replace(/<[^>]*?>/g, ''),  // Remove all html tags (th, span)

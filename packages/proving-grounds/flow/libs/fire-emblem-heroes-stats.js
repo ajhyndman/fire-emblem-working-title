@@ -83,7 +83,7 @@ declare module 'fire-emblem-heroes-stats' {
     +cost: string;
     +'damage(mt)': number;
     +'range(rng)': number;
-    +specialEffects: string;
+    +effect: string;
   };
 
   declare type AssistSkill = {
@@ -107,7 +107,7 @@ declare module 'fire-emblem-heroes-stats' {
   declare type PassiveSkill = {
     +type: 'PASSIVE_A' | 'PASSIVE_B' | 'PASSIVE_C';
     +name: string;
-    +effects: string;
+    +effect: string;
     +spCost: number;
   };
 
