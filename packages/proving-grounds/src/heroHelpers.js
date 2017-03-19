@@ -41,14 +41,18 @@ export function getSkill(
 }
 
 // Returns the skill object for the weapon
-export function getWeapon(
+function getWeaponMt(
   hero: Hero,
   rarity: '1' | '2' | '3' | '4' | '5' = '5',
-): WeaponSkill {
+): number {
   const weaponName = getSkill(hero, 'WEAPON', rarity);
-  // Convert to any because flow was blaming line 0 for a skill->weapon conversion
-  const weaponInfo: any = getSkillInfo(weaponName);
-  return weaponInfo;
+  // Cast skill info to any because otherwise flow blames line 0
+  const skillInfo:any = getSkillInfo(weaponName);
+  const weaponInfo:WeaponSkill = skillInfo;
+  if (weaponInfo != null) {
+    return weaponInfo["damage(mt)"];
+  }
+  return 0;
 }
 
 
@@ -100,10 +104,7 @@ export const getStat = (
     skillBonus += getStatValue(passiveSkillName, statKey, isAttacker);
   }
   if (statKey == "atk") {
-    const weapon = getWeapon(hero, rarity);
-    if (weapon != null) {
-      skillBonus += weapon["damage(mt)"];
-    }
+    skillBonus +=  getWeaponMt(hero, rarity);
   } else if (statKey == "spd") {
     skillBonus += hasBraveWeapon(hero) ? -5 : 0;
   }

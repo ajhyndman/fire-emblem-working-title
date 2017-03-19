@@ -2,6 +2,7 @@
 import {
   max,
   multiply,
+  test,
 } from 'ramda';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
@@ -14,8 +15,6 @@ import {
   hasBraveWeapon,
 } from './heroHelpers';
 
-
-type Color = 'RED' | 'GREEN' | 'BLUE' | 'NEUTRAL';
 
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
 
@@ -56,25 +55,57 @@ const doesFollowUp = (heroA: Hero, heroB: Hero, isAttacker: boolean) =>
 // Healers do half-damage
 const classModifier = (hero: Hero) => hero.weaponType === 'Neutral Staff' ? 0.5 : 1;
 
-const advantageBonus = (colorA: Color, colorB: Color) => {
+const advantageBonus = (heroA: Hero, heroB: Hero) => {
+  const colorA = getWeaponColor(heroA);
+  const colorB = getWeaponColor(heroB);
+  const weaponA = getSkill(heroA, 'WEAPON');
+  const weaponB = getSkill(heroB, 'WEAPON');
+  let advantage = 0;
   if (
     (colorA === 'RED' && colorB === 'GREEN')
     || (colorA === 'GREEN' && colorB === 'BLUE')
     || (colorA === 'BLUE' && colorB === 'RED')
   ) {
-    return 0.2;
+    advantage = 0.2;
   } else if (
     (colorA === 'RED' && colorB === 'BLUE')
     || (colorA === 'GREEN' && colorB === 'RED')
     || (colorA === 'BLUE' && colorB === 'GREEN')
   ) {
-    return -0.2;
+    advantage = -0.2;
+  } else if (colorB === 'NEUTRAL' && test(/raven/, weaponA)) {
+    advantage = 0.2;
+  } else if (colorA === 'NEUTRAL' && test(/raven/, weaponB)) {
+    advantage = -0.2;
   }
-  return 0;
+  const passiveA = getSkill(heroA, 'PASSIVE_A');
+  const passiveB = getSkill(heroB, 'PASSIVE_A');
+  // Weapon type advantage multipliers don't stack. Source:
+  // https://feheroes.wiki/Damage_Calculation#Weapon_Triangle_Advantage
+  let advantageMultiplier = 1;
+  if (test(/(Ruby|Sapphire|Emerald)/, weaponA)
+      || test(/(Ruby|Sapphire|Emerald)/, weaponB)
+      || passiveA === 'Triangle Adept 3'
+      || passiveB === 'Triangle Adept 3') {
+    advantageMultiplier = 2;  // 20%
+  } else if (passiveA === 'Triangle Adept 2' || passiveB === 'Triangle Adept 2') {
+    advantageMultiplier = 1.75;  // 15%
+  } else if (passiveA === 'Triangle Adept 1' || passiveB === 'Triangle Adept 1') {
+    advantageMultiplier = 1.5;  // 10%
+  }
+  return advantage * advantageMultiplier;
 }
 
 const effectiveBonus = (attacker: Hero, defender: Hero) => {
   if (attacker.weaponType === 'Neutral Bow' && defender.moveType === 'Flying') {
+    return 1.5;
+  }
+  const weaponName = getSkill(attacker, 'WEAPON');
+  if ((test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defender.moveType == 'Armored')
+      || (test(/wolf/, weaponName) && defender.moveType == 'Cavalry')
+      || (test(/Poison Dagger/, weaponName) && defender.moveType == 'Infantry')
+      || (test(/Excalibur/, weaponName) && defender.moveType == 'Flying')
+      || (test(/(Falchion|Naga)/, weaponName) && test(/Beast/, defender.weaponType))) {
     return 1.5;
   }
   else return 1;
@@ -98,10 +129,7 @@ const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 const hitDmg = (attacker: Hero, defender: Hero, isAttacker: boolean) => dmgFormula(
   getStat(attacker, "atk", isAttacker),
   effectiveBonus(attacker, defender),
-  advantageBonus(
-    getWeaponColor(attacker),
-    getWeaponColor(defender),
-  ),
+  advantageBonus(attacker, defender),
   getStat(defender, getMitigationType(attacker), !isAttacker),
   classModifier(attacker),
 );
