@@ -100,7 +100,10 @@ export const getStat = (
     skillBonus += getStatValue(passiveSkillName, statKey, isAttacker);
   }
   if (statKey == "atk") {
-    skillBonus += getWeapon(hero, rarity)["damage(mt)"];
+    const weapon = getWeapon(hero, rarity);
+    if (weapon != null) {
+      skillBonus += ["damage(mt)"];
+    }
   } else if (statKey == "spd") {
     skillBonus += hasBraveWeapon(hero) ? -5 : 0;
   }
