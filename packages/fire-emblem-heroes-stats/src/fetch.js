@@ -2,6 +2,7 @@ import fetch from 'isomorphic-fetch';
 import {
   compose,
   map,
+  replace,
   zipObj,
 } from 'ramda';
 
@@ -16,6 +17,7 @@ export const fetchPage = (url) =>
       if (!response.ok) return Promise.reject({ type: '404' });
       return response.text();
     })
+    .then(replace(/\n|\r/g, ''))
     .catch(() => console.error('failed to fetch: ', url),
   );
 
