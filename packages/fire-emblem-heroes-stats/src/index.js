@@ -2,15 +2,18 @@ import fs from 'fs';
 import {
   assoc,
   compose,
+  dissoc,
   dropLast,
   flatten,
+  identity,
+  ifElse,
+  has,
   map,
   mapObjIndexed,
   merge,
   mergeWith,
   pick,
   prop,
-  tap,
   toUpper,
   values,
   zipObj,
@@ -64,6 +67,16 @@ async function fetchSkills() {
     parseSkillsPage,
   );
   const skills = compose(
+    map(
+      (skill) => ifElse(
+        has('passiveSlot'),
+        compose(
+          dissoc('passiveSlot'),
+          assoc('type', skill['type'] + '_' + skill['passiveSlot']),
+        ),
+        identity,
+      )(skill),
+    ),
     flatten,
     values,
     mapObjIndexed(
@@ -81,10 +94,10 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   const existingStats = JSON.parse(fs.readFileSync('./lib/stats.json', 'utf8'));
   const heroes = shouldFetchHeroes ? await fetchHeroStats() : existingStats['heroes'];
   const skills = shouldFetchSkills ? await fetchSkills() : existingStats['skills'];
-  
+
   // WRITE STATS TO FILE
   const allStats = { heroes, skills };
   fs.writeFileSync('./lib/stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchWikiStats(true, false);
+fetchWikiStats(false, true);

@@ -105,7 +105,7 @@ declare module 'fire-emblem-heroes-stats' {
   };
 
   declare type PassiveSkill = {
-    +type: 'PASSIVE';
+    +type: 'PASSIVE_A' | 'PASSIVE_B' | 'PASSIVE_C';
     +name: string;
     +effects: string;
     +spCost: number;

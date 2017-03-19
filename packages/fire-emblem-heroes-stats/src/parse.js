@@ -1,4 +1,5 @@
 import {
+  assoc,
   compose,
   dissoc,
   filter,
@@ -12,7 +13,6 @@ import {
   replace,
   split,
   tail,
-  tap,
   test,
   trim,
   zipObj,
@@ -108,7 +108,27 @@ export function parseHeroStatsAndSkills(heroPageHtml) {
 }
 
 // Takes an html page and parses all tables
-export const parseSkillsPage = parseTables("wikitable");
+export function parseSkillsPage(pageHtml) {
+  const isPassivesPage = test(/<h[^>]*?>\s*Passives\s*<\/h/, pageHtml);
+  const tables = compose(
+    map(parseTable),
+    filter(compose(not, isNil)),
+    match(/<table[^>]*?wikitable[^>]*?>.*?<\/table>/g),
+  )(pageHtml);
+  if (isPassivesPage) {
+    // There are 3 tables. Each is a list of row objects. 
+    if (tables.length != 3) {
+      console.log('Passives page has != 3 tables!');
+    }
+    for (var i = 0; i < 3; i++) {
+      tables[i] = map(
+        assoc('passiveSlot', ['A', 'B', 'C'][i]),
+        tables[i],
+      );
+    }
+  }
+  return flatten(tables);
+}
 
 // Takes an html page and parses the only table for stats of all heroes
 export const parseHeroAggregateHtml = compose(

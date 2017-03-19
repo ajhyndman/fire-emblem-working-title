@@ -18766,1087 +18766,1087 @@
       "name": "Armored Blow 1",
       "effects": "Grants Def+2 during combat if unit initiates the attack.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Armored Blow 2",
       "effects": "Grants Def+4 during combat if unit initiates the attack.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Armored Blow 3",
       "effects": "Grants Def+6 during combat if unit initiates the attack.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Attack +1",
       "effects": "Grants Atk+1.",
       "spCost": 30,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Attack +2",
       "effects": "Grants Atk+2.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Attack +3",
       "effects": "Grants Atk+3.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Close Counter",
       "effects": "Enables unit to counterattack regardless of distance to attacker.",
       "spCost": 300,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Darting Blow 1",
       "effects": "Grants Spd+2 during combat if unit initiates the attack.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Darting Blow 2",
       "effects": "Grants Spd+4 during combat if unit initiates the attack.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Darting Blow 3",
       "effects": "Grants Spd+6 during combat if unit initiates the attack.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Death Blow 1",
       "effects": "Grants Atk+2 during combat if unit initiates the attack.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Death Blow 2",
       "effects": "Grants Atk+4 during combat if unit initiates the attack.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Death Blow 3",
       "effects": "Grants Atk+6 during combat if unit initiates the attack.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defense +1",
       "effects": "Grants Def+1.",
       "spCost": 30,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defense +2",
       "effects": "Grants Def+2.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defense +3",
       "effects": "Grants Def+3.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Atk 1",
       "effects": "Grants Atk+3 at start of turn if unit's HP ≤ 50%.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Atk 2",
       "effects": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Atk 3",
       "effects": "Grants Atk+7 at start of turn if unit's HP ≤ 50%.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Def 1",
       "effects": "Grants Def+3 at start of turn if unit's HP ≤ 50%.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Def 2",
       "effects": "Grants Def+5 at start of turn if unit's HP ≤ 50%.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Def 3",
       "effects": "Grants Def+7 at start of turn if unit's HP ≤ 50%.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Res 1",
       "effects": "Grants Res+3 at start of turn if unit's HP ≤ 50%.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Res 2",
       "effects": "Grants Res+5 at start of turn if unit's HP ≤ 50%.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Res 3",
       "effects": "Grants Res+7 at start of turn if unit's HP ≤ 50%.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Spd 1",
       "effects": "Grants Spd+3 at start of turn if unit's HP ≤ 50%.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Spd 2",
       "effects": "Grants Spd+5 at start of turn if unit's HP ≤ 50%.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Defiant Spd 3",
       "effects": "Grants Spd+7 at start of turn if unit's HP ≤ 50%.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Distant Counter",
       "effects": "Enables unit to counterattack regardless of distance to attacker.",
       "spCost": 300,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Fury 1",
       "effects": "Grants Atk/Spd/Def/Res+1. Unit takes 2 damage after combat.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Fury 2",
       "effects": "Grants Atk/Spd/Def/Res+2. Unit takes 4 damage after combat.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Fury 3",
       "effects": "Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "HP +3",
       "effects": "Grants +3 to max HP.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "HP +4",
       "effects": "Grants +4 to max HP.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "HP +5",
       "effects": "Grants +5 to max HP.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Life and Death 1",
       "effects": "Grants Atk/Spd+3. Inflicts Def/Res-3.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Life and Death 2",
       "effects": "Grants Atk/Spd+4. Inflicts Def/Res-4.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Life and Death 3",
       "effects": "Grants Atk/Spd+5. Inflicts Def/Res-5.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Resistance +1",
       "effects": "Grants Res+1.",
       "spCost": 30,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Resistance +2",
       "effects": "Grants Res+2.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Resistance +3",
       "effects": "Grants Res+3.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Speed +1",
       "effects": "Grants Spd+1.",
       "spCost": 30,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Speed +2",
       "effects": "Grants Spd+2.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Speed +3",
       "effects": "Grants Spd+3.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Svalinn Shield",
       "effects": "Neutralizes \"effective against\" bonuses.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Triangle Adept 1",
       "effects": "Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Triangle Adept 2",
       "effects": "Gives Atk+15% if weapon-triangle advantage, Atk-15% if disadvantage.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Triangle Adept 3",
       "effects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Warding Blow 1",
       "effects": "Grants Res+2 during combat if unit initiates attack.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Warding Blow 2",
       "effects": "Grants Res+4 during combat if unit initiates attack.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Warding Blow 3",
       "effects": "Grants Res+6 during combat if unit initiates attack.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_A"
     },
     {
       "name": "Axebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Axebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Axebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "B Tomebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "B Tomebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "B Tomebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Bowbreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Bowbreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Bowbreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Brash Assault 1",
       "effects": "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Brash Assault 2",
       "effects": "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Brash Assault 3",
       "effects": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Daggerbreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Daggerbreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Daggerbreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Desperation 1",
       "effects": "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Desperation 2",
       "effects": "If unit initiates combat with HP ≤ 50%, follow-up attacks occur immediately after unit's attack.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Desperation 3",
       "effects": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Drag Back",
       "effects": "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space.",
       "spCost": 150,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Escape Route 1",
       "effects": "Enables unit whose own HP is ≤ 30% to warp adjacent to any ally.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Escape Route 2",
       "effects": "Enables unit whose own HP is ≤ 40% to warp adjacent to any ally.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Escape Route 3",
       "effects": "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally.",
       "spCost": 240,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "G Tomebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "G Tomebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "G Tomebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Knock Back",
       "effects": "If unit initiates attack, foe is moved 1 space away after combat.",
       "spCost": 150,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Lancebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a lance user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Lancebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a lance user, unit makes a follow-up attack and foe cannot.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Lancebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a lance user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Live to Serve 1",
       "effects": "When healing allies with a staff, unit also recovers 50% of the HP restored.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Live to Serve 2",
       "effects": "When healing allies with a staff, unit also recovers 75% of the HP restored.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Live to Serve 3",
       "effects": "When healing allies with a staff, unit also recovers the same amount.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Lunge",
       "effects": "If unit initiates attack, after combat, unit and targeted foe swap places.",
       "spCost": 150,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Obstruct 1",
       "effects": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Obstruct 2",
       "effects": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Obstruct 3",
       "effects": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Pass 1",
       "effects": "Units can pass through foes if its own HP ≥ 75%.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Pass 2",
       "effects": "Units can pass through foes if its own HP ≥ 50%.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Pass 3",
       "effects": "Units can pass through foes if its own HP ≥ 25%.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Poison Strike 1",
       "effects": "Inflicts 4 damage to foe after any combat this unit initiates.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Poison Strike 2",
       "effects": "Inflicts 7 damage to foe after any combat this unit initiates.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Poison Strike 3",
       "effects": "Inflicts 10 damage to foe after any combat this unit initiates.",
       "spCost": 240,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Quick Riposte 1",
       "effects": "Unit automatically makes a follow-up attack if attacked at HP ≥ 90%.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Quick Riposte 2",
       "effects": "Unit automatically makes a follow-up attack if attacked at HP ≥ 80%.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Quick Riposte 3",
       "effects": "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.",
       "spCost": 240,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "R Tomebreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a red tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "R Tomebreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a red tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "R Tomebreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a red tome user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Renewal 1",
       "effects": "At the start of every fourth turn, restores 10 HP.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Renewal 2",
       "effects": "At the start of every third turn, restores 10 HP.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Renewal 3",
       "effects": "At the start of every second turn, restores 10 HP.",
       "spCost": 240,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Atk 1",
       "effects": "After combat, foe suffers Atk-3 through its next action.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Atk 2",
       "effects": "After combat, foe suffers Atk-5 through its next action.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Atk 3",
       "effects": "After combat, foe suffers Atk-7 through its next action.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Def 1",
       "effects": "After combat, foe suffers Def-3 through its next action.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Def 2",
       "effects": "After combat, foe suffers Def-5 through its next action.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Def 3",
       "effects": "After combat, foe suffers Def-7 through its next action.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Res 1",
       "effects": "After combat, foe suffers Res-3 through its next action.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Res 2",
       "effects": "After combat, foe suffers Res-5 through its next action.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Res 3",
       "effects": "After combat, foe suffers Res-7 through its next action.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Spd 1",
       "effects": "After combat, foe suffers Spd-3 through its next action.",
       "spCost": 40,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Spd 2",
       "effects": "After combat, foe suffers Spd-5 through its next action.",
       "spCost": 80,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Seal Spd 3",
       "effects": "After combat, foe suffers Spd-7 through its next action.",
       "spCost": 160,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Swordbreaker 1",
       "effects": "If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Swordbreaker 2",
       "effects": "If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Swordbreaker 3",
       "effects": "If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Vantage 1",
       "effects": "Unit counterattacks first when attacked at HP ≤ 25%.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Vantage 2",
       "effects": "Unit counterattacks first when attacked at HP ≤ 50%.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Vantage 3",
       "effects": "Unit counterattacks first when attacked at HP ≤ 75%.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Wary Fighter 1",
       "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 90%.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Wary Fighter 2",
       "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Wary Fighter 3",
       "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%.",
       "spCost": 240,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Wings of Mercy 1",
       "effects": "Enables unit to warp adjacent to any ally with HP ≤ 30%.",
       "spCost": 60,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Wings of Mercy 2",
       "effects": "Enables unit to warp adjacent to any ally with HP ≤ 40%.",
       "spCost": 120,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Wings of Mercy 3",
       "effects": "Enables unit to warp adjacent to any ally with HP ≤ 50%.",
       "spCost": 240,
-      "type": "PASSIVE"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Breath of Life 1",
       "effects": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Breath of Life 2",
       "effects": "If unit initiates attack, adjacent allies recover 5 HP after combat.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Breath of Life 3",
       "effects": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Armor",
       "effects": "Grants adjacent armor allies Def/Res+6 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Cavalry",
       "effects": "Grants adjacent cavalry allies Def/Res+6 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Def 1",
       "effects": "Grants adjacent allies Def+2 through their next actions at the start of each turn.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Def 2",
       "effects": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Def 3",
       "effects": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Dragons",
       "effects": "Grants adjacent Dragon allies Def/Res+6 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Fliers",
       "effects": "Grants adjacent flying allies Def/Res+6 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Res 1",
       "effects": "Grants adjacent allies Res+2 through their next actions at the start of each turn.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Res 2",
       "effects": "Grants adjacent allies Res+3 through their next actions at the start of each turn.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Fortify Res 3",
       "effects": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Goad Armor",
       "effects": "Grants armored allies within 2 spaces Spd/Atk+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Goad Cavalry",
       "effects": "Grants cavalry allies within 2 spaces Spd/Atk+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Goad Fliers",
       "effects": "Grants flying allies within 2 spaces Spd/Atk+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Armor",
       "effects": "Grants adjacent armored allies Atk/Spd+6 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Atk 1",
       "effects": "Grants adjacent allies Atk+2 through their next actions at the start of each turn.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Atk 2",
       "effects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Atk 3",
       "effects": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Cavalry",
       "effects": "Grants adjacent cavalry allies Atk/Spd+6 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Fliers",
       "effects": "Grants adjacent flying allies Atk/Spd+6 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Spd 1",
       "effects": "Grants adjacent allies Spd+2 through their next actions at the start of each turn.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Spd 2",
       "effects": "Grants adjacent allies Spd+3 through their next actions at the start of each turn.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Hone Spd 3",
       "effects": "Grants adjacent allies Spd+4 through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Savage Blow 1",
       "effects": "If unit initiates attack, foes within 2 spaces of target take 3 damage after combat.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Savage Blow 2",
       "effects": "If unit initiates attack, foes within 2 spaces of target take 5 damage after combat.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Savage Blow 3",
       "effects": "If unit initiates attack, foes within 2 spaces of target take 7 damage after combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Atk 1",
       "effects": "Grants adjacent allies Atk+2 during combat.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Atk 2",
       "effects": "Grants adjacent allies Atk+3 during combat.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Atk 3",
       "effects": "Grants adjacent allies Atk+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Def 1",
       "effects": "Grants adjacent allies Def+2 during combat.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Def 2",
       "effects": "Grants adjacent allies Def+3 during combat.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Def 3",
       "effects": "Grants adjacent allies Def+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Res 1",
       "effects": "Grants adjacent allies Res+2 during combat.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Res 2",
       "effects": "Grants adjacent allies Res+3 during combat.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Res 3",
       "effects": "Grants adjacent allies Res+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Spd 1",
       "effects": "Grants adjacent allies Spd+2 during combat.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Spd 2",
       "effects": "Grants adjacent allies Spd+3 during combat.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Spur Spd 3",
       "effects": "Grants adjacent allies Spd+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Atk 1",
       "effects": "Inflicts Atk-3 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Atk 2",
       "effects": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Atk 3",
       "effects": "Inflicts Atk-5 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Def 1",
       "effects": "Inflicts Def-3 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Def 2",
       "effects": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Def 3",
       "effects": "Inflicts Def-5 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Res 1",
       "effects": "Inflicts Res-3 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Res 2",
       "effects": "Inflicts Res-4 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Res 3",
       "effects": "Inflicts Res-5 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Spd 1",
       "effects": "Inflicts Spd-3 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 50,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Spd 2",
       "effects": "Inflicts Spd-4 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 100,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Threaten Spd 3",
       "effects": "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Ward Armor",
       "effects": "Grants armored allies within 2 spaces Def/Res+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Ward Cavalry",
       "effects": "Grants cavalry allies within 2 spaces Def/Res+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Ward Fliers",
       "effects": "Grants flying allies within 2 spaces Def/Res+4 during combat.",
       "spCost": 200,
-      "type": "PASSIVE"
+      "type": "PASSIVE_C"
     }
   ]
 }
