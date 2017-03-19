@@ -6239,19 +6239,29 @@
         "40": {
           "3": {
             "hp": [
-              34
+              "-",
+              34,
+              "-"
             ],
             "atk": [
-              31
+              "-",
+              31,
+              "-"
             ],
             "spd": [
-              32
+              "-",
+              32,
+              "-"
             ],
             "def": [
+              "-",
+              "-",
               23
             ],
             "res": [
-              19
+              19,
+              "-",
+              "-"
             ]
           },
           "4": {
@@ -6652,7 +6662,7 @@
             "hp": [
               39,
               42,
-              43
+              "-"
             ],
             "atk": [
               19,
@@ -7053,22 +7063,22 @@
             "hp": [
               38,
               41,
-              44
+              "-"
             ],
             "atk": [
               23,
               26,
-              29
+              30
             ],
             "spd": [
-              30,
+              "-",
               33,
               36
             ],
             "def": [
-              22,
+              "-",
               25,
-              28
+              "-"
             ],
             "res": [
               19,
@@ -12126,14 +12136,14 @@
         "40": {
           "5": {
             "hp": [
+              "-",
               33,
-              36,
-              39
+              36
             ],
             "atk": [
-              26,
+              "-",
               29,
-              32
+              "-"
             ],
             "spd": [
               26,
@@ -12141,13 +12151,13 @@
               "-"
             ],
             "def": [
-              19,
+              "-",
               22,
-              25
+              "-"
             ],
             "res": [
-              25,
               29,
+              "-",
               36
             ]
           }
@@ -16629,28 +16639,18 @@
           },
           "2": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
@@ -17065,8 +17065,32 @@
   ],
   "skills": [
     {
+      "name": "Armorslayer",
+      "cost": "200 SP",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Armorslayer+",
+      "cost": "300 SP",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Binding Blade",
+      "cost": "400 SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Grants Def/Res+2 when this unit is attacked.",
+      "type": "WEAPON"
+    },
+    {
       "name": "Brave Sword",
-      "cost": "XXX SP",
+      "cost": "200 SP",
       "damage(mt)": 5,
       "range(rng)": 1,
       "specialEffects": "Spd-5. Attack twice when initiating combat.",
@@ -17074,10 +17098,18 @@
     },
     {
       "name": "Brave Sword+",
-      "cost": "XXX SP",
+      "cost": "300 SP",
       "damage(mt)": 8,
       "range(rng)": 1,
       "specialEffects": "Spd-5. Attack twice when initiating combat.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Durandal",
+      "cost": "400 SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Grants Atk+4 during combat if unit initiates attack..",
       "type": "WEAPON"
     },
     {
@@ -17094,14 +17126,6 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "specialEffects": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Sol Katti",
-      "cost": "XXX SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "specialEffects": "Attack twice immediatly when initiating combat if unit's HP ≤ 50% and if can attack twice.",
       "type": "WEAPON"
     },
     {
@@ -17153,6 +17177,14 @@
       "type": "WEAPON"
     },
     {
+      "name": "Sieglinde",
+      "cost": "400 SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "type": "WEAPON"
+    },
+    {
       "name": "Silver Sword",
       "cost": "200 SP",
       "damage(mt)": 11,
@@ -17163,9 +17195,17 @@
     {
       "name": "Silver Sword+",
       "cost": "300 SP",
-      "damage(mt)": "X",
+      "damage(mt)": 15,
       "range(rng)": 1,
       "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Sol Katti",
+      "cost": "XXX SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Attack twice immediatly when initiating combat if unit's HP ≤ 50% and if can attack twice.",
       "type": "WEAPON"
     },
     {
@@ -17177,51 +17217,43 @@
       "type": "WEAPON"
     },
     {
-      "name": "Armorslayer",
-      "cost": "200 SP",
-      "damage(mt)": 8,
+      "name": "Raijinto",
+      "cost": "XXX SP",
+      "damage(mt)": 16,
       "range(rng)": 1,
-      "specialEffects": "Effective against armored units.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Armorslayer+",
-      "cost": "300 SP",
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "specialEffects": "Effective against armored units.",
+      "specialEffects": "Enables counterattack regardless of distance if this unit is attacked.",
       "type": "WEAPON"
     },
     {
       "name": "Tyrfing",
-      "cost": "XXX SP",
+      "cost": "400 SP",
       "damage(mt)": 16,
       "range(rng)": 1,
       "specialEffects": "Grants Def+4 in battle if unit's HP ≤ 50%.",
       "type": "WEAPON"
     },
     {
-      "name": "Sieglinde",
-      "cost": "XXX SP",
+      "name": "Wo Dao",
+      "cost": "200 SP",
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "specialEffects": "Grants +10 to damage when Special triggers.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Wo Dao+",
+      "cost": "300 SP",
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "specialEffects": "Grants +10 to damage when Special triggers.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Yato",
+      "cost": "400 SP",
       "damage(mt)": 16,
       "range(rng)": 1,
-      "specialEffects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Fire",
-      "cost": "-",
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Elfire",
-      "cost": "100 SP",
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "specialEffects": "None",
+      "specialEffects": "Grants Spd+4 during combat if unit initiates attack.",
       "type": "WEAPON"
     },
     {
@@ -17241,6 +17273,14 @@
       "type": "WEAPON"
     },
     {
+      "name": "Brynhildr",
+      "cost": "XXX SP",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "If character initiates attack, restricts enemies's next-turn movement to 1 space or less.",
+      "type": "WEAPON"
+    },
+    {
       "name": "Cymbeline",
       "cost": "XXX SP",
       "damage(mt)": 14,
@@ -17249,35 +17289,11 @@
       "type": "WEAPON"
     },
     {
-      "name": "Flux",
-      "cost": "-",
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Ruin",
+      "name": "Elfire",
       "cost": "100 SP",
       "damage(mt)": 6,
       "range(rng)": 2,
       "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Rauðrwolf",
-      "cost": "200 SP",
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "specialEffects": "Effective against cavalry units.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Rauðrwolf+",
-      "cost": "300 SP",
-      "damage(mt)": 10,
-      "range(rng)": 2,
-      "specialEffects": "Effective against cavalry units.",
       "type": "WEAPON"
     },
     {
@@ -17297,11 +17313,35 @@
       "type": "WEAPON"
     },
     {
-      "name": "Brynhildr",
-      "cost": "XXX SP",
-      "damage(mt)": 14,
+      "name": "Fire",
+      "cost": "-",
+      "damage(mt)": 4,
       "range(rng)": 2,
-      "specialEffects": "If character initiates attack, restricts enemies's next-turn movement to 1 space or less.",
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Flux",
+      "cost": "-",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Rauðrblade",
+      "cost": "200 SP",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Rauðrblade+",
+      "cost": "300 SP",
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
       "type": "WEAPON"
     },
     {
@@ -17314,26 +17354,34 @@
     },
     {
       "name": "Rauðrraven+",
-      "cost": "XXX SP",
+      "cost": "300 SP",
       "damage(mt)": 11,
       "range(rng)": 2,
       "specialEffects": "Grants weapon advantage vs. colorless enemies.",
       "type": "WEAPON"
     },
     {
-      "name": "Rauðrblade",
-      "cost": "XXX SP",
-      "damage(mt)": 9,
+      "name": "Rauðrwolf",
+      "cost": "200 SP",
+      "damage(mt)": 6,
       "range(rng)": 2,
-      "specialEffects": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
+      "specialEffects": "Effective against cavalry units.",
       "type": "WEAPON"
     },
     {
-      "name": "Rauðrblade+",
-      "cost": "XXX SP",
-      "damage(mt)": 13,
+      "name": "Rauðrwolf+",
+      "cost": "300 SP",
+      "damage(mt)": 10,
       "range(rng)": 2,
-      "specialEffects": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
+      "specialEffects": "Effective against cavalry units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Ruin",
+      "cost": "100 SP",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
@@ -17354,7 +17402,7 @@
     },
     {
       "name": "Flametongue",
-      "cost": "XXX SP",
+      "cost": "200 SP",
       "damage(mt)": 11,
       "range(rng)": 1,
       "specialEffects": "None",
@@ -17362,7 +17410,7 @@
     },
     {
       "name": "Flametongue+",
-      "cost": "XXX SP",
+      "cost": "300 SP",
       "damage(mt)": 15,
       "range(rng)": 1,
       "specialEffects": "None",
@@ -17385,6 +17433,278 @@
       "type": "WEAPON"
     },
     {
+      "name": "Brave Lance",
+      "cost": "200 SP",
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "specialEffects": "Spd-5, Attack twice when initiating combat.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Brave Lance+",
+      "cost": "300 SP",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Spd-5, Attack twice when initiating combat.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Fensalir",
+      "cost": "400 SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Heavy Spear",
+      "cost": "200 SP",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Heavy Spear+",
+      "cost": "300 SP",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Iron Lance",
+      "cost": "-",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Killer Lance",
+      "cost": "200 SP",
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "specialEffects": "Speeds up special trigger by one action",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Killer Lance+",
+      "cost": "300 SP",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "Speeds up special trigger by one action",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Sapphire Lance",
+      "cost": "200 SP",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Sapphire Lance+",
+      "cost": "300 SP",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Siegmund",
+      "cost": "XXX SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Silver Lance",
+      "cost": "200 SP",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Silver Lance+",
+      "cost": "300 SP",
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Steel Lance",
+      "cost": "100 SP",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Aura",
+      "cost": "XXX SP",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Restores 5 HP to adjacent allies after any combat this unit initiates.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Blárblade",
+      "cost": "200 SP",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Blárblade+",
+      "cost": "300 SP",
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "specialEffects": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Blárraven",
+      "cost": "200 SP",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "specialEffects": "Grants weapon advantage vs. colorless foes.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Blárraven+",
+      "cost": "300 SP",
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "specialEffects": "Grants weapon advantage vs. colorless foes.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Blárwolf",
+      "cost": "200 SP",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "Effective against cavalry units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Blárwolf+",
+      "cost": "300 SP",
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "specialEffects": "Effective against cavalry units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Dire Thunder",
+      "cost": "XXX SP",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "Spd-5. Attack twice when initiating combat.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Elthunder",
+      "cost": "XXX SP",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Thoron",
+      "cost": "200 SP",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Thunder",
+      "cost": "-",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Dark Breath",
+      "cost": "200 SP",
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "specialEffects": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Dark Breath+",
+      "cost": "300 SP",
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "specialEffects": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Fire Breath",
+      "cost": "-",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Fire Breath+",
+      "cost": "XXX SP",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Light Breath",
+      "cost": "200 SP",
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "specialEffects": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Light Breath+",
+      "cost": "300 SP",
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "specialEffects": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Lightning Breath",
+      "cost": "200 SP",
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "specialEffects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Lightning Breath+",
+      "cost": "300 SP",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Armads",
+      "cost": "XXX SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%",
+      "type": "WEAPON"
+    },
+    {
       "name": "Brave Axe",
       "cost": "200 SP",
       "damage(mt)": 5,
@@ -17401,14 +17721,6 @@
       "type": "WEAPON"
     },
     {
-      "name": "Iron Axe",
-      "cost": "-",
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
       "name": "Emerald Axe",
       "cost": "200 SP",
       "damage(mt)": 8,
@@ -17422,6 +17734,62 @@
       "damage(mt)": 12,
       "range(rng)": 1,
       "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Hammer",
+      "cost": "200 SP",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Hammer+",
+      "cost": "300 SP",
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "specialEffects": "Effective against armored units.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Hauteclere",
+      "cost": "XXX SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special trigger (cooldown count-1)",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Iron Axe",
+      "cost": "-",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Killer Axe",
+      "cost": "200 SP",
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special trigger (cooldown count -1)",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Killer Axe+",
+      "cost": "300 SP",
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "specialEffects": "Accelerates Special trigger (cooldown count -1)",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Nóatún",
+      "cost": "400 SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "specialEffects": "Unit may move adjacent to any ally when HP ≤ 40%.",
       "type": "WEAPON"
     },
     {
@@ -17449,75 +17817,19 @@
       "type": "WEAPON"
     },
     {
-      "name": "Hammer",
-      "cost": "200 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "specialEffects": "Effective against armored units.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Hammer+",
-      "cost": "XXX SP",
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "specialEffects": "Effective against armored units.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Nóatún",
-      "cost": "400 SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "specialEffects": "Unit may move adjacent to any ally when HP ≤ 40%.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Killer Axe",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "specialEffects": "Accelerates Special trigger (cooldown count -1)",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Killer Axe+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "specialEffects": "Accelerates Special trigger (cooldown count -1)",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Armads",
-      "cost": "XXX SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "specialEffects": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Hauteclere",
-      "cost": "XXX SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "specialEffects": "Accelerates Special trigger (cooldown count-1)",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Wind",
-      "cost": "-",
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
       "name": "Elwind",
       "cost": "100 SP",
       "damage(mt)": 6,
       "range(rng)": 2,
       "specialEffects": "None",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Excalibur",
+      "cost": "400 SP",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Effective against flying units",
       "type": "WEAPON"
     },
     {
@@ -17569,27 +17881,27 @@
       "type": "WEAPON"
     },
     {
-      "name": "Rexcalibur",
+      "name": "Naga",
       "cost": "XXX SP",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "specialEffects": "Effective against dragons. Grants Def/Res+2 when this unit is attacked.",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Rexcalibur",
+      "cost": "200 SP",
       "damage(mt)": 9,
       "range(rng)": 2,
       "specialEffects": "None",
       "type": "WEAPON"
     },
     {
-      "name": "Excalibur",
-      "cost": "XXX SP",
-      "damage(mt)": 14,
+      "name": "Wind",
+      "cost": "-",
+      "damage(mt)": 4,
       "range(rng)": 2,
-      "specialEffects": "Effective against flying units",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Naga",
-      "cost": "XXX SP",
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "specialEffects": "Effective against dragons. \nGrants Def/Res+2 when this unit is attacked.",
+      "specialEffects": "None",
       "type": "WEAPON"
     },
     {
@@ -17610,7 +17922,7 @@
     },
     {
       "name": "Light Breath",
-      "cost": "XXX SP",
+      "cost": "200 SP",
       "damage(mt)": 9,
       "range(rng)": 1,
       "specialEffects": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
@@ -17618,242 +17930,10 @@
     },
     {
       "name": "Light Breath+",
-      "cost": "XXX SP",
+      "cost": "300 SP",
       "damage(mt)": 13,
       "range(rng)": 1,
       "specialEffects": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Iron Lance",
-      "cost": "-",
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Steel Lance",
-      "cost": "100 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Silver Lance",
-      "cost": "200 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Silver Lance+",
-      "cost": "300 SP",
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Killer Lance",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "specialEffects": "Speeds up special trigger by one action",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Killer Lance+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "specialEffects": "Speeds up special trigger by one action",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Brave Lance",
-      "cost": "200 SP",
-      "damage(mt)": 5,
-      "range(rng)": 1,
-      "specialEffects": "Spd-5, Attack twice when initiating combat.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Brave Lance+",
-      "cost": "300 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "specialEffects": "Spd-5, Attack twice when initiating combat.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Heavy Spear",
-      "cost": "200 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "specialEffects": "Effective against armored units.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Heavy Spear+",
-      "cost": "300 SP",
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "specialEffects": "Effective against armored units.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Sapphire Lance",
-      "cost": "200 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Sapphire Lance+",
-      "cost": "300 SP",
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "specialEffects": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Fensalir",
-      "cost": "400 SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "specialEffects": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Siegmund",
-      "cost": "XXX SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "specialEffects": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Thunder",
-      "cost": "-",
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Elthunder",
-      "cost": "XXX SP",
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Blárraven",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "specialEffects": "Grants weapon advantage vs. colorless foes.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Blárraven+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "specialEffects": "Grants weapon advantage vs. colorless foes.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Blárblade",
-      "cost": "200 SP",
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "specialEffects": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Blárblade+",
-      "cost": "XXX SP",
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "specialEffects": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Thoron",
-      "cost": "XXX SP",
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Dire Thunder",
-      "cost": "XXX SP",
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "specialEffects": "Spd-5. Attack twice when initiating combat.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Aura",
-      "cost": "XXX SP",
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "specialEffects": "Restores 5 HP to adjacent allies after any combat this unit initiates",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Fire Breath",
-      "cost": "-",
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Fire Breath+",
-      "cost": "XXX SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "specialEffects": "None",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Dark Breath",
-      "cost": "XXX SP",
-      "damage(mt)": 9,
-      "range(rng)": 1,
-      "specialEffects": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Dark Breath+",
-      "cost": "XXX SP",
-      "damage(mt)": 13,
-      "range(rng)": 1,
-      "specialEffects": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Lightning Breath",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "specialEffects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Lightning Breath+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "specialEffects": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "type": "WEAPON"
     },
     {
@@ -18009,6 +18089,14 @@
       "type": "WEAPON"
     },
     {
+      "name": "Deathly Dagger",
+      "cost": "XXX SP",
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "specialEffects": "After combat, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, 7 damage to foe after battle.",
+      "type": "WEAPON"
+    },
+    {
       "name": "Iron Dagger",
       "cost": "-",
       "damage(mt)": 3,
@@ -18018,7 +18106,7 @@
     },
     {
       "name": "Poison Dagger",
-      "cost": "XXX SP",
+      "cost": "200 SP",
       "damage(mt)": 2,
       "range(rng)": 2,
       "specialEffects": "Effective against infantry units. Infantry foes suffer Def/Res-4 after combat through their next actions.",
@@ -18026,7 +18114,7 @@
     },
     {
       "name": "Poison Dagger+",
-      "cost": "XXX SP",
+      "cost": "300 SP",
       "damage(mt)": 5,
       "range(rng)": 2,
       "specialEffects": "Effective against infantry units. Infantry foes suffer Def/Res-6 after combat through their next actions.",
@@ -18140,7 +18228,7 @@
     {
       "name": "Physic",
       "range": 2,
-      "effect": "Restores 8 HP to a target (rest of translation wrong: \"and all allies within 2 spaces of target.\")",
+      "effect": "Restores 8 HP. Rng:2.",
       "spCost": 200,
       "type": "ASSIST"
     },
@@ -18649,10 +18737,19 @@
     },
     {
       "name": "Rising Thunder",
-      "cost": "-",
+      "cost": "150 SP",
       "charge": 5,
       "trigger": "Initiate Attack",
       "effect": "Before initiating a combat, foes in an area near target take damage equal to unit's Atk minus foe's Def or Res.",
+      "target": "Enemies",
+      "type": "SPECIAL"
+    },
+    {
+      "name": "Growing Thunder",
+      "cost": "300 SP",
+      "charge": 5,
+      "trigger": "Initiate Attack",
+      "effect": "Before initiating a combat, foes in a wide area around target take damage equal to (unit's Atk minus foe's Def or Res).",
       "target": "Enemies",
       "type": "SPECIAL"
     },
@@ -19393,13 +19490,13 @@
     },
     {
       "name": "Wary Fighter 2",
-      "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 80%.",
+      "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%.",
       "spCost": 120,
       "type": "PASSIVE"
     },
     {
       "name": "Wary Fighter 3",
-      "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%.",
+      "effects": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%.",
       "spCost": 240,
       "type": "PASSIVE"
     },
@@ -19466,6 +19563,12 @@
     {
       "name": "Fortify Def 3",
       "effects": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "type": "PASSIVE"
+    },
+    {
+      "name": "Fortify Dragons",
+      "effects": "Grants adjacent Dragon allies Def/Res+6 through their next actions at the start of each turn.",
       "spCost": 200,
       "type": "PASSIVE"
     },
