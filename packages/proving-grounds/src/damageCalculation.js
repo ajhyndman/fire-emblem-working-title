@@ -1,57 +1,20 @@
 // @flow
 import {
-  compose,
-  find,
-  isEmpty,
-  match,
   max,
   multiply,
-  not,
-  propOr,
 } from 'ramda';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
+import {
+  getStat,
+  getWeaponColor,
+  getMitigationType,
+  getRange,
+  hasBraveWeapon,
+} from './heroHelpers';
+
 
 type Color = 'RED' | 'GREEN' | 'BLUE' | 'NEUTRAL';
-
-type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
-
-/**
- * A helper for getting a stat value from a hero by key.
- * Defaults to level 40, 5 star, baseline variant.
- *
- * @param {*} hero Hero to look up stat on
- * @param {*} statKey Key of the stat to look up
- * @param {*} level Which level version of stat to look up
- * @param {*} rarity Which rarity version of stat to look up
- * @param {*} variance Which variant ('low', 'normal', 'high') to look up
- * @returns number the value of the stat
- */
-export const getStat = (
-  hero: Hero,
-  statKey: Stat,
-  level: '40' | '1' = '40',
-  rarity: '1' | '2' | '3' | '4' | '5' = '5',
-  variance: 'low' | 'normal' | 'high' = 'normal',
-): number => {
-  if (level === '1') {
-    const value = parseInt(hero.stats[level][rarity][statKey], 10);
-    return variance === 'normal'
-      ? value
-      : variance === 'low'
-        ? value - 1
-        : value + 1;
-  }
-  const values = hero.stats[level][rarity][statKey];
-  const [low, normal, high] = values.length <= 1
-    ? ['-', ...values]
-    : values;
-  return variance === 'normal'
-    ? parseInt(normal, 10)
-    : variance === 'low'
-      ? parseInt(low, 10)
-      : parseInt(high, 10)
-}
 
 /**
  * Formula derived from:
@@ -64,7 +27,7 @@ export const getStat = (
  * @param {number} classModifier At this time, Neutral Staff has a 0.5x net damage reduction.
  * @returns {number} the damage a single hit will effect
  */
-const hitDmg = (
+const dmgFormula = (
   atk: number,
   eff: number,
   adv: number,
@@ -84,61 +47,10 @@ const hitDmg = (
 
 const doesFollowUp = (heroA: Hero, heroB: Hero) =>
   (getStat(heroA, 'spd') - getStat(heroB, 'spd') >= 5);
-const isBraveWeapon = (hero: Hero) => find(
-  compose(
-    compose(not, isEmpty),
-    match(/Brave|Dire/g),
-    // $FlowIssue - prop() typedef doesn't reflect _which_ string it's passed.
-    propOr('', 'name'),
-  ),
-  hero.skills,
-);
-const range = (hero: Hero) => {
-  switch (hero.weaponType) {
-    case 'Red Sword':
-    case 'Green Axe':
-    case 'Blue Lance':
-    case 'Red Beast':
-    case 'Green Beast':
-    case 'Blue Beast':
-      return 1;
-    default:
-      return 2;
-  }
-};
+
+// Healers do half-damage
 const classModifier = (hero: Hero) => hero.weaponType === 'Neutral Staff' ? 0.5 : 1;
-const weaponColor = (hero: Hero) => {
-  switch (hero.weaponType) {
-    case 'Red Sword':
-    case 'Red Tome':
-    case 'Red Beast':
-      return 'RED';
-    case 'Green Axe':
-    case 'Green Tome':
-    case 'Green Beast':
-      return 'GREEN';
-    case 'Blue Lance':
-    case 'Blue Tome':
-    case 'Blue Beast':
-      return 'BLUE';
-    default:
-      return 'NEUTRAL';
-  }
-};
-const mitigationType = (hero: Hero) => {
-  switch (hero.weaponType) {
-    case 'Red Tome':
-    case 'Red Beast':
-    case 'Green Tome':
-    case 'Green Beast':
-    case 'Blue Tome':
-    case 'Blue Beast':
-    case 'Neutral Staff':
-      return 'res';
-    default:
-      return 'def';
-  }
-};
+
 const advantageBonus = (colorA: Color, colorB: Color) => {
   if (
     (colorA === 'RED' && colorB === 'GREEN')
@@ -155,13 +67,26 @@ const advantageBonus = (colorA: Color, colorB: Color) => {
   }
   return 1;
 }
+
 const effectiveBonus = (attacker: Hero, defender: Hero) => {
   if (attacker.weaponType === 'Neutral Bow' && defender.moveType === 'Flying') {
     return 1.5;
   }
   else return 1;
 };
+
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
+
+const hitDmg = (attacker: Hero, defender: Hero) => dmgFormula(
+  getStat(attacker, "atk"),
+  effectiveBonus(attacker, defender),
+  advantageBonus(
+    getWeaponColor(attacker),
+    getWeaponColor(defender),
+  ),
+  getStat(defender, getMitigationType(attacker)),
+  classModifier(attacker),
+);
 
 /**
  * Calculate the resulting damage per hit, number of hits, and final HP for each hero.
@@ -171,77 +96,46 @@ const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
  * @returns {object}
  */
 export const calculateResult = (attacker: Hero, defender: Hero) => {
-  const attackerDamage = hitDmg(
-    getStat(attacker, "atk"),
-    effectiveBonus(attacker, defender),
-    advantageBonus(
-      weaponColor(attacker),
-      weaponColor(defender),
-    ),
-    getStat(defender, mitigationType(attacker)),
-    classModifier(attacker),
-  );
-
-  const defenderDamage = hitDmg(
-    getStat(defender, "atk"),
-    effectiveBonus(defender, attacker),
-    advantageBonus(
-      weaponColor(defender),
-      weaponColor(attacker),
-    ),
-    getStat(attacker, mitigationType(defender)),
-    classModifier(defender),
-  );
-
-  let attackerHpRemaining = getStat(attacker, "hp");
-  let attackerNumAttacks = 0;
-  let defenderHpRemaining = getStat(defender, "hp");
-  let defenderNumAttacks = 0;
-
+  // a list of 0s and 1s for attacker and defender.
+  let attackOrder = [];
   // attacker hits defender
-  attackerNumAttacks += isBraveWeapon(attacker) ? 2 : 1;
-  defenderHpRemaining = hpRemaining(
-    attackerDamage * (isBraveWeapon(attacker) ? 2 : 1),
-    defenderHpRemaining,
-  );
-
-  if (defenderHpRemaining > 0 && (range(defender) === range(attacker))) {
-    // defender retaliates
-    defenderNumAttacks += 1;
-    attackerHpRemaining = hpRemaining(
-      defenderDamage,
-      attackerHpRemaining,
-    );
+  attackOrder.push(0);
+  if (hasBraveWeapon(attacker)) {
+    attackOrder.push(0);
+  }
+  // defender retaliates
+  if (getRange(defender) === getRange(attacker)) {
+    attackOrder.push(1);
+  }
+  // attacker follow-up
+  if (doesFollowUp(attacker, defender)) {
+    attackOrder.push(0);
+    if (hasBraveWeapon(attacker)) {
+      attackOrder.push(0);
+    }
+  }
+  // defender follow-up
+  if (doesFollowUp(defender, attacker)) {
+    attackOrder.push(1);
   }
 
-  if (attackerHpRemaining && doesFollowUp(attacker, defender)) {
-    // attacker follow-up
-    attackerNumAttacks += isBraveWeapon(attacker) ? 2 : 1;
-    defenderHpRemaining = hpRemaining(
-      attackerDamage * (isBraveWeapon(attacker) ? 2 : 1),
-      defenderHpRemaining,
-    );
-  }
-
-  if (
-    defenderHpRemaining
-    && (range(defender) === range(attacker))
-    && doesFollowUp(defender, attacker)
-  ) {
-    // defender follow-up
-    defenderNumAttacks += 1;
-    attackerHpRemaining = hpRemaining(
-      defenderDamage,
-      attackerHpRemaining,
-    );
+  let damages = [hitDmg(attacker, defender), hitDmg(defender, attacker)];
+  let numAttacks = [0, 0];
+  let healths = [getStat(attacker, "hp"), getStat(defender, "hp")];
+  for (let attackingHeroIndex of attackOrder) {
+    numAttacks[attackingHeroIndex]++;
+    if (healths[attackingHeroIndex] > 0) {
+      const otherHeroIndex = 1 - attackingHeroIndex;
+      healths[otherHeroIndex] = hpRemaining(damages[attackingHeroIndex], healths[otherHeroIndex]);
+    }
   }
 
   return {
-    attackerNumAttacks,
-    attackerDamage,
-    attackerHpRemaining,
-    defenderNumAttacks,
-    defenderDamage,
-    defenderHpRemaining,
+    attackerNumAttacks: numAttacks[0],
+    attackerDamage: damages[0],
+    attackerHpRemaining: healths[0],
+    defenderNumAttacks: numAttacks[1],
+    defenderDamage: damages[1],
+    defenderHpRemaining: healths[1],
   };
 };
