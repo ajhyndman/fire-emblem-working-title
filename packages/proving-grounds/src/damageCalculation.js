@@ -45,8 +45,8 @@ const dmgFormula = (
   ),
 );
 
-const doesFollowUp = (heroA: Hero, heroB: Hero) =>
-  (getStat(heroA, 'spd') - getStat(heroB, 'spd') >= 5);
+const doesFollowUp = (heroA: Hero, heroB: Hero, isAttacker: boolean) =>
+  (getStat(heroA, 'spd', isAttacker) - getStat(heroB, 'spd', !isAttacker) >= 5);
 
 // Healers do half-damage
 const classModifier = (hero: Hero) => hero.weaponType === 'Neutral Staff' ? 0.5 : 1;
@@ -77,14 +77,14 @@ const effectiveBonus = (attacker: Hero, defender: Hero) => {
 
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
-const hitDmg = (attacker: Hero, defender: Hero) => dmgFormula(
-  getStat(attacker, "atk"),
+const hitDmg = (attacker: Hero, defender: Hero, isAttacker: boolean) => dmgFormula(
+  getStat(attacker, "atk", isAttacker),
   effectiveBonus(attacker, defender),
   advantageBonus(
     getWeaponColor(attacker),
     getWeaponColor(defender),
   ),
-  getStat(defender, getMitigationType(attacker)),
+  getStat(defender, getMitigationType(attacker), !isAttacker),
   classModifier(attacker),
 );
 
@@ -108,20 +108,20 @@ export const calculateResult = (attacker: Hero, defender: Hero) => {
     attackOrder.push(1);
   }
   // attacker follow-up
-  if (doesFollowUp(attacker, defender)) {
+  if (doesFollowUp(attacker, defender, true)) {
     attackOrder.push(0);
     if (hasBraveWeapon(attacker)) {
       attackOrder.push(0);
     }
   }
   // defender follow-up
-  if (doesFollowUp(defender, attacker)) {
+  if (doesFollowUp(defender, attacker, false)) {
     attackOrder.push(1);
   }
 
-  let damages = [hitDmg(attacker, defender), hitDmg(defender, attacker)];
+  let damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
   let numAttacks = [0, 0];
-  let healths = [getStat(attacker, "hp"), getStat(defender, "hp")];
+  let healths = [getStat(attacker, "hp", true), getStat(defender, "hp", false)];
   for (let attackingHeroIndex of attackOrder) {
     numAttacks[attackingHeroIndex]++;
     if (healths[attackingHeroIndex] > 0) {

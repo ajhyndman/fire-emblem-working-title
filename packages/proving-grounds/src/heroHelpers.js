@@ -6,18 +6,21 @@ import {
   propOr,
   test,
 } from 'ramda';
-import type { Hero, WeaponSkill } from 'fire-emblem-heroes-stats';
+import type { Hero, SkillType, WeaponSkill } from 'fire-emblem-heroes-stats';
 
-import { getSkillInfo } from './skillHelpers'; 
+import { getSkillInfo, getStatValue } from './skillHelpers';
 
 
 type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
 
 // Returns a map from skill type to the name of the skill.
-export function getDefaultSkills(hero: Hero, rarity: number) {
+export function getDefaultSkills(
+  hero: Hero,
+  rarity: '1' | '2' | '3' | '4' | '5' = '5',
+) {
   let skillsByType = {};
   for (let skill of hero.skills) {
-    if (skill.rarity == null || skill.rarity === '-' || skill.rarity <= rarity) {
+    if (skill.rarity == null || skill.rarity === '-' || skill.rarity <= parseInt(rarity)) {
       // Assumes that the later version of a skill is the better version
       const skillInfo = getSkillInfo(skill.name);
       if (skillInfo != null) {
@@ -28,14 +31,26 @@ export function getDefaultSkills(hero: Hero, rarity: number) {
   return skillsByType;
 }
 
+// Returns the name of the skill object for the skill type
+export function getSkill(
+  hero: Hero,
+  rarity: '1' | '2' | '3' | '4' | '5' = '5',
+  skillType: SkillType,
+): string {
+  return getDefaultSkills(hero, rarity)[skillType];
+}
+
 // Returns the skill object for the weapon
-// $FlowIssue flow cannot determine what type of skill this will return
-export function getWeapon(hero: Hero, rarity: number) : WeaponSkill {
-  const weaponName = getDefaultSkills(hero, rarity)['WEAPON'];
+export function getWeapon(
+  hero: Hero,
+  rarity: '1' | '2' | '3' | '4' | '5' = '5',
+): WeaponSkill {
+  const weaponName = getSkill(hero, rarity, 'WEAPON');
   // Convert to any because flow was blaming line 0 for a skill->weapon conversion
   const weaponInfo: any = getSkillInfo(weaponName);
   return weaponInfo;
 }
+
 
 export const hasBraveWeapon = (hero: Hero) => compose(
   any(test(/Brave|Dire/)),
@@ -51,11 +66,13 @@ export const hasBraveWeapon = (hero: Hero) => compose(
  * @param {*} level Which level version of stat to look up
  * @param {*} rarity Which rarity version of stat to look up
  * @param {*} variance Which variant ('low', 'normal', 'high') to look up
+ * @param {*} isAttacker Whether or not the hero is the attacker.
  * @returns number the value of the stat
  */
 export const getStat = (
   hero: Hero,
   statKey: Stat,
+  isAttacker: boolean = false,
   level: '40' | '1' = '40',
   rarity: '1' | '2' | '3' | '4' | '5' = '5',
   variance: 'low' | 'normal' | 'high' = 'normal',
@@ -77,7 +94,11 @@ export const getStat = (
     : variance === 'low'
       ? parseInt(low, 10)
       : parseInt(high, 10)
+  const passiveSkillName = getSkill(hero, rarity, 'PASSIVE_A');
   let skillBonus = 0;
+  if (passiveSkillName != null) {
+    skillBonus += getStatValue(passiveSkillName, statKey, isAttacker);
+  }
   if (statKey == "atk") {
     skillBonus += getWeapon(hero, rarity)["damage(mt)"];
   } else if (statKey == "spd") {
