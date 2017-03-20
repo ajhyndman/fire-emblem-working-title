@@ -1,12 +1,8 @@
 // @flow
 import {
-  any,
-  compose,
-  map,
-  propOr,
   test,
 } from 'ramda';
-import type { Hero, SkillType, WeaponSkill } from 'fire-emblem-heroes-stats';
+import type { Hero, SkillType } from 'fire-emblem-heroes-stats';
 
 import { getSkillInfo, getStatValue } from './skillHelpers';
 
@@ -40,27 +36,6 @@ export function getSkill(
   return getDefaultSkills(hero, rarity)[skillType];
 }
 
-// Returns the skill object for the weapon
-function getWeaponMt(
-  hero: Hero,
-  rarity: '1' | '2' | '3' | '4' | '5' = '5',
-): number {
-  const weaponName = getSkill(hero, 'WEAPON', rarity);
-  // Cast skill info to any because otherwise flow blames line 0
-  const skillInfo:any = getSkillInfo(weaponName);
-  const weaponInfo:WeaponSkill = skillInfo;
-  if (weaponInfo != null) {
-    return weaponInfo["damage(mt)"];
-  }
-  return 0;
-}
-
-
-export const hasBraveWeapon = (hero: Hero) => compose(
-  any(test(/Brave|Dire/)),
-  map(propOr('', 'name')),
-)(hero.skills);
-
 /**
  * A helper for getting a stat value from a hero by key.
  * Defaults to level 40, 5 star, baseline variant.
@@ -93,22 +68,18 @@ export const getStat = (
   const [low, normal, high] = values.length <= 1
     ? ['-', ...values]
     : values;
-  const baseValue = variance === 'normal'
+  let statValue = variance === 'normal'
     ? parseInt(normal, 10)
     : variance === 'low'
       ? parseInt(low, 10)
       : parseInt(high, 10)
-  const passiveSkillName = getSkill(hero, 'PASSIVE_A', rarity);
-  let skillBonus = 0;
-  if (passiveSkillName != null) {
-    skillBonus += getStatValue(passiveSkillName, statKey, isAttacker);
+  for (let skillType of ['PASSIVE_A', 'WEAPON']) {
+    const skillName = getSkill(hero, skillType, rarity);
+    if (skillName != null) {
+      statValue += getStatValue(skillName, statKey, isAttacker);
+    }
   }
-  if (statKey == "atk") {
-    skillBonus +=  getWeaponMt(hero, rarity);
-  } else if (statKey == "spd") {
-    skillBonus += hasBraveWeapon(hero) ? -5 : 0;
-  }
-  return baseValue + skillBonus;
+  return statValue;
 }
 
 export const getRange = (hero: Hero) => {
@@ -158,3 +129,17 @@ export const getWeaponColor = (hero: Hero) => {
       return 'NEUTRAL';
   }
 };
+
+export const hasBraveWeapon = (hero: Hero) => {
+  const weaponName = getSkill(hero, 'WEAPON') || '';
+  return test(/(Brave|Dire)/, weaponName);
+}
+
+// Can be called with substings of the skill name
+export const hasSkill = (hero: Hero, skillType: SkillType, expectedName: string) => {
+  const skillName = getSkill(hero, skillType);
+  if (skillName != null) {
+    return test(new RegExp(expectedName), skillName);
+  }
+  return false;
+}

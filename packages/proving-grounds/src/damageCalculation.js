@@ -2,6 +2,7 @@
 import {
   max,
   multiply,
+  replace,
   test,
 } from 'ramda';
 import type { Hero } from 'fire-emblem-heroes-stats';
@@ -13,6 +14,7 @@ import {
   getStat,
   getWeaponColor,
   hasBraveWeapon,
+  hasSkill,
 } from './heroHelpers';
 
 
@@ -49,8 +51,39 @@ const dmgFormula = (
   ),
 );
 
-const doesFollowUp = (heroA: Hero, heroB: Hero, isAttacker: boolean) =>
-  (getStat(heroA, 'spd', isAttacker) - getStat(heroB, 'spd', !isAttacker) >= 5);
+const hasWeaponBreaker = (heroA: Hero, heroB: Hero) => {
+  let necessaryBreaker = replace(/(Red|Green|Blue|Neutral)\s/, '', heroB.weaponType) + 'breaker';
+  if (test(/Tome/, heroB.weaponType)) {
+    // R Tomebreaker, G Tomebreaker, B Tomebreaker
+    necessaryBreaker = heroB.weaponType[0] + ' ' + necessaryBreaker
+  }
+  if (hasSkill(heroA, 'PASSIVE_B', necessaryBreaker)) {
+    return true;
+  }
+  if (necessaryBreaker === 'Daggerbreaker') {
+    return hasSkill(heroA, 'WEAPON', 'Assassin\'s Bow');
+  }
+  return false;
+}
+
+// Whether or not a unit will perform a follow-up attack.
+const doesFollowUp = (heroA: Hero, heroB: Hero, isAttacker: boolean) => {
+  // Supposedly x-breaker overrides wary-fighter, and multiple x-breakers cancel out.
+  const aHasBreaker = hasWeaponBreaker(heroA, heroB);
+  const bHasBreaker = hasWeaponBreaker(heroB, heroA);
+  if (aHasBreaker && !bHasBreaker) {
+    return true;
+  } else if (bHasBreaker && !aHasBreaker) {
+    return false;
+  } else if (hasSkill(heroA, 'PASSIVE_B', 'Wary Fighter')
+             || hasSkill(heroB, 'PASSIVE_B', 'Wary Fighter')) {
+    return false;
+  } else if (!isAttacker && (hasSkill(heroA, 'WEAPON', 'Armads')
+             || hasSkill(heroA, 'PASSIVE_B', 'Quick Riposte'))) {
+    return true;
+  }
+  return (getStat(heroA, 'spd', isAttacker) - getStat(heroB, 'spd', !isAttacker) >= 5);
+}
 
 // Healers do half-damage
 const classModifier = (hero: Hero) => hero.weaponType === 'Neutral Staff' ? 0.5 : 1;
