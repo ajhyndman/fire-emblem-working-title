@@ -66,32 +66,32 @@ const advantageBonus = (heroA: Hero, heroB: Hero) => {
     || (colorA === 'GREEN' && colorB === 'BLUE')
     || (colorA === 'BLUE' && colorB === 'RED')
   ) {
-    advantage = 0.2;
+    advantage = 1;
   } else if (
     (colorA === 'RED' && colorB === 'BLUE')
     || (colorA === 'GREEN' && colorB === 'RED')
     || (colorA === 'BLUE' && colorB === 'GREEN')
   ) {
-    advantage = -0.2;
+    advantage = -1;
   } else if (colorB === 'NEUTRAL' && test(/raven/, weaponA)) {
-    advantage = 0.2;
+    advantage = 1;
   } else if (colorA === 'NEUTRAL' && test(/raven/, weaponB)) {
-    advantage = -0.2;
+    advantage = -1;
   }
   const passiveA = getSkill(heroA, 'PASSIVE_A');
   const passiveB = getSkill(heroB, 'PASSIVE_A');
   // Weapon type advantage multipliers don't stack. Source:
   // https://feheroes.wiki/Damage_Calculation#Weapon_Triangle_Advantage
-  let advantageMultiplier = 1;
+  let advantageMultiplier = 0.2;
   if (test(/(Ruby|Sapphire|Emerald)/, weaponA)
       || test(/(Ruby|Sapphire|Emerald)/, weaponB)
       || passiveA === 'Triangle Adept 3'
       || passiveB === 'Triangle Adept 3') {
-    advantageMultiplier = 2;  // 20%
+    advantageMultiplier = 0.4;  // 20%
   } else if (passiveA === 'Triangle Adept 2' || passiveB === 'Triangle Adept 2') {
-    advantageMultiplier = 1.75;  // 15%
+    advantageMultiplier = 0.35;  // 15%
   } else if (passiveA === 'Triangle Adept 1' || passiveB === 'Triangle Adept 1') {
-    advantageMultiplier = 1.5;  // 10%
+    advantageMultiplier = 0.3;  // 10%
   }
   return advantage * advantageMultiplier;
 }
