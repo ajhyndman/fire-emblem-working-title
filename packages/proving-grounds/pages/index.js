@@ -32,15 +32,7 @@ type Props = {
 
 const panelHeight = 212;
 
-const backgroundList = [
-  '_request__fire_emblem_awakening___lon_qu_by_krukmeister-d7rlyap.png',
-  'fire_emblem_awakening___cordelia_by_krukmeister-d7rlyky.png',
-  'fire_emblem_awakening___lucina_by_krukmeister-d7rgzln.png',
-  'fire_emblem_awakening___nowi_by_krukmeister-d7rs1b8.png',
-  'fire_emblem_awakening___tiki_by_krukmeister-d7s3qqh.png',
-  'fire_emblem_awakening___tharja_by_krukmeister-d8e934d.png',
-];
-const backgroundUrl = backgroundList[4];
+const backgroundUrl = 'triskel_by_codysymes-d7ewlm9.png';
 
 class Home extends React.Component {
   static async getInitialProps ({ store, req, query }) {
