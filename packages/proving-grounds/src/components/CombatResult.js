@@ -57,13 +57,17 @@ const CombatResult = ({ leftHero, rightHero }: Props) => {
         ? (
           <div className="container">
             <div>
-              <h1>{`${getStat(leftHero, 'hp')} → ${
+              <h1>{`${
+                !isNaN(getStat(leftHero, 'hp')) ? getStat(leftHero, 'hp') : '?'
+              } → ${
                 !isNaN(result.attackerHpRemaining) ? result.attackerHpRemaining : '?'
               }`}</h1>
               <h2>{printDamage(result.attackerDamage, result.attackerNumAttacks)}</h2>
             </div>
             <div>
-              <h1>{`${getStat(rightHero, 'hp')} → ${
+              <h1>{`${
+                !isNaN(getStat(rightHero, 'hp')) ? getStat(rightHero, 'hp') : '?'
+              } → ${
                 !isNaN(result.defenderHpRemaining) ? result.defenderHpRemaining : '?'
               }`}</h1>
               <h2>{printDamage(result.defenderDamage, result.defenderNumAttacks)}</h2>

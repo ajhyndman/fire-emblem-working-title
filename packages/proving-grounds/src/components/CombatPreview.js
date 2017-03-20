@@ -2,6 +2,7 @@
 import React from 'react';
 
 import Hero from './Hero';
+import { colors } from '../theme';
 import type { Dispatch } from '../reducer';
 
 
@@ -38,7 +39,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         justify-content: space-between;
       }
       .hero-slot {
-        background: #27606f;
+        background: ${colors.frostedGlass};
         cursor: pointer;
         height: 56px;
         position: relative;

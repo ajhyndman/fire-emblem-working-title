@@ -1,9 +1,10 @@
 // @flow
 import React from 'react';
 import cn from 'classnames';
+import Color from 'color-js';
 import { withState } from 'recompose';
 
-import { colors, fontFamilies, transition } from '../theme';
+import { colors, activateColor, fontFamilies, transition } from '../theme';
 
 type Props = {
   onChange: (value: string) => void;
@@ -24,8 +25,8 @@ const Input = withState('isFocused', 'setFocus', false)(
     >
       <style jsx>{`
         .root {
-          border-top: 2px solid #9ad8da;
-          border-bottom: 2px solid #40737d;
+          border-top: 2px solid ${colors.aquaIsland};
+          border-bottom: 2px solid ${colors.fadedJade};
           position: relative;
           transition:
             box-shadow ${transition},
@@ -33,14 +34,14 @@ const Input = withState('isFocused', 'setFocus', false)(
             border-bottom ${transition};
         }
         .root.active {
-          border-top: 2px solid #dcf2f3;
-          border-bottom: 2px solid #92d3d7;
+          border-top: 2px solid ${activateColor(colors.aquaIsland)};
+          border-bottom: 2px solid ${activateColor(colors.fadedJade)};
         }
         .root:hover, .root.active {
           box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
         }
         .root::before, .root::after {
-          background-image: linear-gradient(to bottom, #9ad8da, #40737d);
+          background-image: linear-gradient(to bottom, ${colors.aquaIsland}, ${colors.fadedJade});
           content: "";
           display: block;
           position: absolute;
@@ -50,7 +51,11 @@ const Input = withState('isFocused', 'setFocus', false)(
           width: 2px;
         }
         .root.active::before, .root.active::after {
-          background-image: linear-gradient(to bottom, #dcf2f3, #92d3d7);
+          background-image: linear-gradient(
+            to bottom,
+            ${activateColor(colors.aquaIsland)},
+            ${activateColor(colors.fadedJade)}
+          );
         }
         .root::before {
           left: -2px;
@@ -66,13 +71,14 @@ const Input = withState('isFocused', 'setFocus', false)(
           display: block;
           font-family: ${fontFamilies.ui};
           height: 2em;
-          padding: 0 1.5em 0 0.5em;
+          padding: 0 0.5em;
           width: 100%;
         }
         input:focus {
           outline: none;
         }
-        input::placeholder {
+        input::-webkit-input-placeholder {
+          color: ${Color(colors.elephant).setValue(0.7).setSaturation(0.1).toString()};
           font-family: ${fontFamilies.ui};
         }
         .close {

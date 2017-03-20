@@ -2,6 +2,7 @@
 import React from 'react';
 import { replace } from 'ramda';
 
+import { colors, gridSize } from '../theme';
 import { staticUrl } from '../../config';
 
 
@@ -16,21 +17,26 @@ const Hero = ({ name, weaponType }: Props) => {
   return (
     <div className="root">
       <style jsx>{`
+        .root {
+          position: relative;
+          width: ${gridSize}px;
+        }
         .class {
           left: -2px;
           position: absolute;
           top: -2px;
         }
-        .face {
+        .portrait {
+          background-image: linear-gradient(170deg, ${colors.fadedJade}, ${colors.aquaIsland});
           display: block;
           margin: 0 auto;
         }
         .frame {
           pointer-events: none;
           position: absolute;
-          top: -7.5%;
-          left: -7.5%;
-          width: 115%;
+          top: ${-(0.075 * gridSize)}px;
+          left: ${-(0.075 * gridSize)}px;
+          width: ${1.15 * gridSize}px;
         }
       `}</style>
       <img
@@ -40,7 +46,7 @@ const Hero = ({ name, weaponType }: Props) => {
       <img
         className="class"
         title={weaponType}
-        src={`${staticUrl}35px-Icon_Class_${weaponTypeUri}.png 35w`}
+        src={`${staticUrl}35px-Icon_Class_${weaponTypeUri}.png`}
         srcSet={`
           ${staticUrl}35px-Icon_Class_${weaponTypeUri}.png 35w,
           ${staticUrl}Icon_Class_${weaponTypeUri}.png 56w
@@ -48,7 +54,7 @@ const Hero = ({ name, weaponType }: Props) => {
         sizes="20px"
       />
       <img
-        className="face"
+        className="portrait"
         title={name}
         alt={name}
         src={`${staticUrl}75px-Icon_Portrait_${encodeURIComponent(name)}.png`}
@@ -56,7 +62,7 @@ const Hero = ({ name, weaponType }: Props) => {
           ${staticUrl}113px-Icon_Portrait_${encodeURIComponent(name)}.png 113w,
           ${staticUrl}150px-Icon_Portrait_${encodeURIComponent(name)}.png 150w
         `}
-        sizes="56px"
+        sizes={`${gridSize}px`}
       />
     </div>
   );
