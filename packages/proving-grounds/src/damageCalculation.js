@@ -130,6 +130,9 @@ const advantageBonus = (heroA: Hero, heroB: Hero) => {
 }
 
 const effectiveBonus = (attacker: Hero, defender: Hero) => {
+  if (hasSkill(defender, 'PASSIVE_A', 'Shield')) {
+    return 1;
+  }
   if (attacker.weaponType === 'Neutral Bow' && defender.moveType === 'Flying') {
     return 1.5;
   }
@@ -199,14 +202,23 @@ export const calculateResult = (attacker: Hero, defender: Hero) => {
     attackOrder.push(1);
   }
 
-  let damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
+  const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
+  const heroes = [attacker, defender];
   let numAttacks = [0, 0];
-  let healths = [getStat(attacker, "hp", true), getStat(defender, "hp", false)];
-  for (let attackingHeroIndex of attackOrder) {
-    numAttacks[attackingHeroIndex]++;
-    if (healths[attackingHeroIndex] > 0) {
-      const otherHeroIndex = 1 - attackingHeroIndex;
-      healths[otherHeroIndex] = hpRemaining(damages[attackingHeroIndex], healths[otherHeroIndex]);
+  let healths = [getStat(attacker, "hp"), getStat(defender, "hp")];
+  for (let heroIndex of attackOrder) {
+    // heroIndex hits otherHeroIndex.
+    numAttacks[heroIndex]++;
+    if (healths[heroIndex] > 0) {
+      const otherHeroIndex = 1 - heroIndex;
+      const stillFighting = healths[0] > 0 && healths[1] > 0;
+      healths[otherHeroIndex] = hpRemaining(damages[heroIndex], healths[otherHeroIndex]);
+      if (stillFighting && hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb')) {
+        healths[heroIndex] = Math.min(
+          healths[heroIndex] + Math.floor(damages[heroIndex] / 2),
+          getStat(heroes[heroIndex], "hp"),
+        );
+      }
     }
   }
 
