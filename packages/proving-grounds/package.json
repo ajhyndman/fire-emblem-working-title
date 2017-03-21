@@ -7,6 +7,7 @@
   "license": "GPL-3.0+",
   "scripts": {
     "build": "next build",
+    "deploy": "now --docker",
     "dev": "next",
     "start": "next start",
     "test": "eslint src/**/*.js pages/**/*.js && flow check",
@@ -27,6 +28,7 @@
     "fire-emblem-heroes-stats": "^0.2.1",
     "next": "2.0.0-beta.36",
     "next-redux-wrapper": "^1.0.0",
+    "now": "^4.10.0",
     "ramda": "^0.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
