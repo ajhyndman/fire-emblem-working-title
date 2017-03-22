@@ -5,6 +5,8 @@
     "node": true
   },
   "rules": {
-    "indent": ["error", 2, { "SwitchCase": 1 }]
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "eqeqeq": ["error", "always", {"null": "ignore"}],
+    "quotes": ["error", "single"]
   }
 }
