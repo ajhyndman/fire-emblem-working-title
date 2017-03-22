@@ -69,7 +69,7 @@ class Home extends React.Component {
           <meta name="theme-color" content="#ffffff" />
           <link
             href={'https://fonts.googleapis.com/css?family=Mandali&text='
-              + '→×0123456789abcdefghijklmnopqrstuvwxyz'}
+              + '→×—0123456789abcdefghijklmnopqrstuvwxyz'}
             rel="stylesheet"
           />
           <style>{`
