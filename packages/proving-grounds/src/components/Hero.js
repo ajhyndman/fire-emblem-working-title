@@ -8,11 +8,12 @@ import { staticUrl } from '../../config';
 
 type Props = {
   name: string;
-  weaponType: string;
+  weaponType: ?string;
+  rarity?: 1 | 2 | 4 | 4 | 5;
 };
 
-const Hero = ({ name, weaponType }: Props) => {
-  const weaponTypeUri = replace(' ', '_', weaponType);
+const Hero = ({ name, weaponType, rarity = 5 }: Props) => {
+  const weaponTypeUri = weaponType ? replace(' ', '_', weaponType) : '';
 
   return (
     <div className="root">
@@ -41,9 +42,9 @@ const Hero = ({ name, weaponType }: Props) => {
       `}</style>
       <img
         className="frame"
-        src={`${staticUrl}Frame_Rarity_5.png`}
+        src={`${staticUrl}Frame_Rarity_${rarity}.png`}
       />
-      <img
+      {weaponType && <img
         className="class"
         title={weaponType}
         src={`${staticUrl}35px-Icon_Class_${weaponTypeUri}.png`}
@@ -52,7 +53,7 @@ const Hero = ({ name, weaponType }: Props) => {
           ${staticUrl}Icon_Class_${weaponTypeUri}.png 56w
         `}
         sizes="20px"
-      />
+      />}
       <img
         className="portrait"
         title={name}

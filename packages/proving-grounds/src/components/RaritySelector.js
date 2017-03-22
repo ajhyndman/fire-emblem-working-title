@@ -13,7 +13,7 @@ type Props = {
   onChange: (rarity: Rarity) => void;
 }
 
-const RaritySelector = ({ 
+const RaritySelector = ({
   disabled = [false, false, false, false, false],
   selected,
   onChange,

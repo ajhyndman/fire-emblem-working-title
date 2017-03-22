@@ -78,7 +78,7 @@ const effectiveBonus = (attacker: Hero, defender: Hero) => {
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
 const hitDmg = (attacker: Hero, defender: Hero) => dmgFormula(
-  getStat(attacker, "atk"),
+  getStat(attacker, 'atk'),
   effectiveBonus(attacker, defender),
   advantageBonus(
     getWeaponColor(attacker),
@@ -121,7 +121,7 @@ export const calculateResult = (attacker: Hero, defender: Hero) => {
 
   let damages = [hitDmg(attacker, defender), hitDmg(defender, attacker)];
   let numAttacks = [0, 0];
-  let healths = [getStat(attacker, "hp"), getStat(defender, "hp")];
+  let healths = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
   for (let attackingHeroIndex of attackOrder) {
     numAttacks[attackingHeroIndex]++;
     if (healths[attackingHeroIndex] > 0) {
