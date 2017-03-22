@@ -2,16 +2,64 @@
 import {
   any,
   compose,
+  find,
   map,
+  propEq,
   propOr,
   test,
 } from 'ramda';
-import type { Hero, WeaponSkill } from 'fire-emblem-heroes-stats';
+import stats from 'fire-emblem-heroes-stats';
+import type {
+  Hero,
+  AssistSkill,
+  // MoveType,
+  PassiveSkill,
+  SpecialSkill,
+  WeaponSkill,
+  // WeaponType,
+} from 'fire-emblem-heroes-stats';
 
-import { getSkillInfo } from './skillHelpers'; 
+import { getSkillInfo } from './skillHelpers';
 
 
 type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
+
+type Rarity = 1 | 2 | 3 | 4 | 5;
+
+export type HeroInstance = {
+  // custom: false,
+  name: string;
+  rarity: Rarity;
+  boon: ?Stat;
+  bane: ?Stat;
+  weapon: ?WeaponSkill;
+  assist: ?AssistSkill;
+  special: ?SpecialSkill;
+  passiveA: ?PassiveSkill;
+  passiveB: ?PassiveSkill;
+  passiveC: ?PassiveSkill;
+};
+
+// NOT USED YET: Just conjecture for potential future support of
+// user custom unit creation.
+
+// export type CustomHero = {
+//   custom: true,
+//   weaponType: WeaponType,
+//   moveType: MoveType,
+//   name: string;
+//   hp: number;
+//   atk: number;
+//   spd: number;
+//   def: number;
+//   res: number;
+//   weapon: WeaponSkill;
+//   assist: AssistSkill;
+//   special: SpecialSkill;
+//   passiveA: PassiveSkill;
+//   passiveB: PassiveSkill;
+//   passiveC: PassiveSkill;
+// };
 
 // Returns a map from skill type to the name of the skill.
 export function getDefaultSkills(hero: Hero, rarity: number) {
@@ -30,7 +78,7 @@ export function getDefaultSkills(hero: Hero, rarity: number) {
 
 // Returns the skill object for the weapon
 // $FlowIssue flow cannot determine what type of skill this will return
-export function getWeapon(hero: Hero, rarity: number) : WeaponSkill {
+export function getWeapon(hero: Hero, rarity: number): WeaponSkill {
   const weaponName = getDefaultSkills(hero, rarity)['WEAPON'];
   // Convert to any because flow was blaming line 0 for a skill->weapon conversion
   const weaponInfo: any = getSkillInfo(weaponName);
@@ -54,21 +102,31 @@ export const hasBraveWeapon = (hero: Hero) => compose(
  * @returns number the value of the stat
  */
 export const getStat = (
-  hero: Hero,
+  heroInstance: HeroInstance,
   statKey: Stat,
-  level: '40' | '1' = '40',
-  rarity: '1' | '2' | '3' | '4' | '5' = '5',
-  variance: 'low' | 'normal' | 'high' = 'normal',
+  level: 1 | 40 = 40,
+  // rarity: '1' | '2' | '3' | '4' | '5' = '5',
+  // variance: 'low' | 'normal' | 'high' = 'normal',
 ): number => {
-  if (level === '1') {
-    const value = parseInt(hero.stats[level][rarity][statKey], 10);
+  // $FlowIssue: Flowtype for find is too generic.
+  const hero: Hero = find(propEq('name', heroInstance.name), stats.heroes);
+  const { rarity } = heroInstance;
+  const variance = (heroInstance.boon === statKey
+    ? 'high'
+    : heroInstance.bane === statKey
+      ? 'low'
+      : 'normal');
+
+  if (level === 1) {
+    const value = parseInt(hero.stats[`${level}`][rarity][statKey], 10);
     return variance === 'normal'
       ? value
       : variance === 'low'
         ? value - 1
         : value + 1;
   }
-  const values = hero.stats[level][rarity][statKey];
+
+  const values = hero.stats[`${level}`][rarity][statKey];
   const [low, normal, high] = values.length <= 1
     ? ['-', ...values]
     : values;
@@ -77,14 +135,14 @@ export const getStat = (
     : variance === 'low'
       ? parseInt(low, 10)
       : parseInt(high, 10)
-  let skillBonus = 0;
-  if (statKey == "atk") {
-    skillBonus += getWeapon(hero, rarity)["damage(mt)"];
-  } else if (statKey == "spd") {
-    skillBonus += hasBraveWeapon(hero) ? -5 : 0;
-  }
+  const skillBonus = statKey === 'atk'
+    ? getWeapon(hero, rarity)['damage(mt)']
+    : hasBraveWeapon(hero)
+      ? -5
+      : 0
+
   return baseValue + skillBonus;
-}
+};
 
 export const getRange = (hero: Hero) => {
   switch (hero.weaponType) {
@@ -132,4 +190,8 @@ export const getWeaponColor = (hero: Hero) => {
     default:
       return 'NEUTRAL';
   }
+};
+
+export const hasStatsForRarity = (hero: Hero, rarity: Rarity, level): boolean => {
+  return Boolean(hero.stats['1'][`${rarity}`] && hero.stats['40'][`${rarity}`]);
 };
