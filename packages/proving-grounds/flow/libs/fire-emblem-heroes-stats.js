@@ -122,6 +122,7 @@ declare module 'fire-emblem-heroes-stats' {
 
   declare type Stats = {
     +heroes: Hero[];
+    +grand_battle_heroes: Hero[];
     +skills: Skill[];
   };
 

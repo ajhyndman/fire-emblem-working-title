@@ -76,7 +76,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
             }}
           >
             <Hero
-              name={hero.name}
+              name={hero.imageName || hero.name}
               weaponType={hero.weaponType}
             />
           </div>

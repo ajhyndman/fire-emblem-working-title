@@ -68,7 +68,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         }}
       >
         {leftHero
-          ? <Hero name={leftHero.name} weaponType={leftHero.weaponType} />
+          ? <Hero name={leftHero.imageName || leftHero.name} weaponType={leftHero.weaponType} />
           : null}
       </div>
       <div
@@ -88,7 +88,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         }}
       >
         {rightHero
-          ? <Hero name={rightHero.name} weaponType={rightHero.weaponType} />
+          ? <Hero name={rightHero.imageName || rightHero.name} weaponType={rightHero.weaponType} />
           : null}
       </div>
     </div>

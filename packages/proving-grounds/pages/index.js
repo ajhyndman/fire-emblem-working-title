@@ -148,7 +148,7 @@ class Home extends React.Component {
               toLower,
               prop('name'),
             ),
-            stats.heroes,
+            stats.grand_battle_heroes.concat(stats.heroes),
           )}
         />
       </div>
