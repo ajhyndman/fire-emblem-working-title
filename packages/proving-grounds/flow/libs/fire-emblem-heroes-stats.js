@@ -44,19 +44,19 @@ declare module 'fire-emblem-heroes-stats' {
   };
 
   declare type Level1Stats = {
-    +'1': SingleValueStats;
-    +'2': SingleValueStats;
-    +'3': SingleValueStats;
-    +'4': SingleValueStats;
-    +'5': SingleValueStats;
+    +'1'?: SingleValueStats;
+    +'2'?: SingleValueStats;
+    +'3'?: SingleValueStats;
+    +'4'?: SingleValueStats;
+    +'5'?: SingleValueStats;
   };
 
   declare type Level40Stats = {
-    +'1': MultiValueStats;
-    +'2': MultiValueStats;
-    +'3': MultiValueStats;
-    +'4': MultiValueStats;
-    +'5': MultiValueStats;
+    +'1'?: MultiValueStats;
+    +'2'?: MultiValueStats;
+    +'3'?: MultiValueStats;
+    +'4'?: MultiValueStats;
+    +'5'?: MultiValueStats;
   };
 
   declare type StatsByLevel = {
