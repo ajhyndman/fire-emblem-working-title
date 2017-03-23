@@ -13,6 +13,9 @@ export type Action = {
   type: 'SELECT_SLOT';
   slot: 0 | 1 | void;
 } | {
+  type: 'SET_HOST';
+  host: string;
+} | {
   type: 'SET_PREVIEW_LEVEL';
 } | {
   type: 'TOGGLE_AGGRESSOR';
@@ -49,6 +52,8 @@ const reducer = (state: State, action: Action): State => {
         : (state.activeSlot === 0)
           ? { ...state, ...clearActiveState, leftHero: action.hero }
           : { ...state, ...clearActiveState, rightHero: action.hero };
+    case 'SET_HOST':
+      return { ...state, host: action.host };
     case 'TOGGLE_AGGRESSOR':
       return {
         ...state,

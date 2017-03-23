@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import Router from 'next/router';
 
 import Hero from './Hero';
 import { colors } from '../theme';
@@ -67,6 +68,10 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
           event.stopPropagation();
           dispatch({ type: 'SELECT_SLOT', slot: 0 });
         }}
+        onContextMenu={event => {
+          event.preventDefault();
+          Router.push('/configure');
+        }}
       >
         {leftHero
           ? <Hero name={leftHero.name} weaponType={lookupStats(leftHero.name).weaponType} />
@@ -86,6 +91,10 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         onClick={(event) => {
           event.stopPropagation();
           dispatch({ type: 'SELECT_SLOT', slot: 1 });
+        }}
+        onContextMenu={event => {
+          event.preventDefault();
+          Router.push('/configure');
         }}
       >
         {rightHero

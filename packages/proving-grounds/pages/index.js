@@ -1,5 +1,6 @@
 // @flow
 import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
 import stats from 'fire-emblem-heroes-stats';
 import withRedux from 'next-redux-wrapper';
@@ -27,7 +28,6 @@ import type { State } from '../src/store';
 type Props = {
   children?: React.Element<*>;
   dispatch: Dispatch;
-  host: string;
   state: State;
 };
 
@@ -39,21 +39,19 @@ class Home extends React.Component {
   props: Props;
 
   static async getInitialProps ({ store, req, query }) {
+    const dispatch: Dispatch = store.dispatch;
     if (!isEmpty(query)) {
-      const dispatch: Dispatch = store.dispatch;
       dispatch({ type: 'SELECT_SLOT', slot: 0 });
       dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) });
       dispatch({ type: 'SELECT_SLOT', slot: 1 });
       dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) });
     }
 
-    return {
-      host: req.headers.host,
-    };
+    if (req) dispatch({ type: 'SET_HOST', host: req.headers.host });
   }
 
   render() {
-    const { children, host, state, dispatch } = this.props;
+    const { children, state, dispatch } = this.props;
 
     return (
       <div className="root" onClick={() => dispatch({ type: 'SELECT_SLOT', slot: undefined })}>
@@ -124,7 +122,13 @@ class Home extends React.Component {
           />
           <div className="row">
             <ShareButton
-              link={`${host}/?0=${encodeHero(state.leftHero)}&1=${encodeHero(state.rightHero)}`}
+              link={`${
+                state.host
+              }/?0=${
+                encodeHero(state.leftHero)
+              }&1=${
+                encodeHero(state.rightHero)
+              }`}
             />
             <div className="column">
               <Input
@@ -152,6 +156,7 @@ class Home extends React.Component {
             stats.heroes,
           )}
         />
+        <Link href="/configure" prefetch>Configure</Link>
         {children}
       </div>
     );
