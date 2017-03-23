@@ -1,8 +1,8 @@
 // @flow
 import React from 'react';
-import stats from 'fire-emblem-heroes-stats';
+// import stats from 'fire-emblem-heroes-stats';
 import { storiesOf } from '@kadira/storybook';
-import { find, propEq } from 'ramda';
+// import { find, propEq } from 'ramda';
 import { withReducer, withState } from 'recompose';
 
 import Hero from '../src/components/Hero';
@@ -13,21 +13,25 @@ import Select from '../src/components/Select';
 import SegmentedControl from '../src/components/SegmentedControl';
 import StatSheet from '../src/components/StatSheet';
 import { colors } from '../src/theme';
+import { getDefaultSkills } from '../src/heroHelpers';
 import type { HeroInstance } from '../src/heroHelpers';
 
 
-// $FlowIssue: find is trying to account for transducer case.
+// FlowIssue: flowtype for find is too generic.
 const heroInstance: HeroInstance = {
   name: 'Anna',
   boon: undefined,
   bane: undefined,
   rarity: 5,
-  weapon: find(propEq('name', 'Nóatún'), stats.skills),
-  assist: undefined,
-  special: find(propEq('name', 'Astra'), stats.skills),
-  passiveA: undefined,
-  passiveB: find(propEq('name', 'Vantage 3'), stats.skills),
-  passiveC: find(propEq('name', 'Spur Res 3'), stats.skills),
+  skills: getDefaultSkills('Anna', 5),
+  // skills: {
+  //   weapon: (find(propEq('name', 'Nóatún'), stats.skills): any),
+  //   assist: undefined,
+  //   special: (find(propEq('name', 'Astra'), stats.skills): any),
+  //   passiveA: undefined,
+  //   passiveB: (find(propEq('name', 'Vantage 3'), stats.skills): any),
+  //   passiveC: (find(propEq('name', 'Spur Res 3'), stats.skills): any),
+  // },
 };
 
 storiesOf('Hero', module)
@@ -73,7 +77,12 @@ storiesOf('HeroConfigurer', module)
       }
     };
 
-    const HeroConfigurerStory = withReducer('state', 'dispatch', reducer, { heroInstance, level: 1 })(
+    const HeroConfigurerStory = withReducer(
+      'state',
+      'dispatch',
+      reducer,
+      { heroInstance, level: 1 },
+    )(
       ({ state, dispatch }) => (
         <HeroConfigurer
           dispatch={dispatch}
@@ -83,7 +92,7 @@ storiesOf('HeroConfigurer', module)
       ),
     );
 
-    return <HeroConfigurerStory />
+    return <HeroConfigurerStory />;
   });
 
 storiesOf('Input', module)

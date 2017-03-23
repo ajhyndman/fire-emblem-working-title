@@ -35,6 +35,7 @@ const HeroConfigurer = ({
   heroInstance,
   level,
 }: Props) => {
+  // $FlowIssue flowtype for find is too generic
   const hero: Hero = find(propEq('name', heroInstance.name), stats.heroes);
 
   const varianceOptions = {
@@ -121,8 +122,14 @@ const HeroConfigurer = ({
                 type: 'UPDATE_BOON',
                 boon: varianceOptions[selected],
               })}
-              options={['—', ...keys(filter(compose(not, equals(heroInstance.bane)), varianceOptions))]}
-              selected={invertObject(varianceOptions)[heroInstance.boon] || '—'}
+              options={[
+                '—',
+                ...keys(filter(compose(not, equals(heroInstance.bane)), varianceOptions)),
+              ]}
+              selected={heroInstance.boon
+                // $FlowIssue: Flow isn't confident that invertObject doesn't have side effects.
+                ? invertObject(varianceOptions)[heroInstance.boon]
+                : '—'}
             />
           </div>
         </div>
@@ -134,8 +141,14 @@ const HeroConfigurer = ({
                 type: 'UPDATE_BANE',
                 bane: varianceOptions[selected],
               })}
-              options={['—', ...keys(filter(compose(not, equals(heroInstance.boon)), varianceOptions))]}
-              selected={invertObject(varianceOptions)[heroInstance.bane] || '—'}
+              options={[
+                '—',
+                ...keys(filter(compose(not, equals(heroInstance.boon)), varianceOptions)),
+              ]}
+              selected={heroInstance.bane
+                // $FlowIssue: Flow isn't confident that invertObject doesn't have side effects.
+                ? invertObject(varianceOptions)[heroInstance.bane]
+                : '—'}
             />
           </div>
         </div>
@@ -147,6 +160,6 @@ const HeroConfigurer = ({
       </div>
     </div>
   );
-}
+};
 
 export default HeroConfigurer;

@@ -5,14 +5,15 @@ import { replace } from 'ramda';
 import { colors, gridSize } from '../theme';
 import { staticUrl } from '../../config';
 
+type Rarity = 1 | 2 | 3 | 4 | 5;
 
 type Props = {
   name: string;
   weaponType: ?string;
-  rarity?: 1 | 2 | 4 | 4 | 5;
+  rarity?: Rarity;
 };
 
-const Hero = ({ name, weaponType, rarity = 5 }: Props) => {
+const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
   const weaponTypeUri = weaponType ? replace(' ', '_', weaponType) : '';
 
   return (
@@ -69,4 +70,4 @@ const Hero = ({ name, weaponType, rarity = 5 }: Props) => {
   );
 };
 
-export default Hero;
+export default HeroPortrait;

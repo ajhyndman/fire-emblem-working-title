@@ -3,6 +3,7 @@ import React from 'react';
 
 import Hero from './Hero';
 import { colors } from '../theme';
+import { lookupStats } from '../heroHelpers';
 import type { Dispatch } from '../reducer';
 
 
@@ -68,7 +69,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         }}
       >
         {leftHero
-          ? <Hero name={leftHero.name} weaponType={leftHero.weaponType} />
+          ? <Hero name={leftHero.name} weaponType={lookupStats(leftHero.name).weaponType} />
           : null}
       </div>
       <div
@@ -88,7 +89,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         }}
       >
         {rightHero
-          ? <Hero name={rightHero.name} weaponType={rightHero.weaponType} />
+          ? <Hero name={rightHero.name} weaponType={lookupStats(rightHero.name).weaponType} />
           : null}
       </div>
     </div>

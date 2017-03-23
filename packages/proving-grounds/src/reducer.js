@@ -1,19 +1,27 @@
 // @flow
-import type { Hero } from 'fire-emblem-heroes-stats';
+import type { State } from './store';
+import type { HeroInstance } from './heroHelpers';
 
-import type { State } from './store'
 
 export type Action = {
   type: 'SEARCH_STRING_CHANGE';
   value: string;
 } | {
   type: 'SELECT_HERO';
-  hero: ?Hero;
+  hero: ?HeroInstance;
 } | {
   type: 'SELECT_SLOT';
   slot: 0 | 1 | void;
 } | {
+  type: 'SET_PREVIEW_LEVEL';
+} | {
   type: 'TOGGLE_AGGRESSOR';
+} | {
+  type: 'UPDATE_RARITY';
+} | {
+  type: 'UPDATE_BANE';
+} | {
+  type: 'UPDATE_BOON';
 };
 
 export type Dispatch = (action: Action) => void;
@@ -34,19 +42,19 @@ const reducer = (state: State, action: Action): State => {
           ? { ...state, ...clearActiveState }
           : (action.slot === 0)
             ? { ...state, ...clearActiveState, leftHero: state.activeHero }
-            : { ...state, ...clearActiveState, rightHero: state.activeHero }
+            : { ...state, ...clearActiveState, rightHero: state.activeHero };
     case 'SELECT_HERO':
       return (state.activeSlot == null)
         ? { ...state, activeHero: action.hero }
-        : (state.activeSlot == 0)
+        : (state.activeSlot === 0)
           ? { ...state, ...clearActiveState, leftHero: action.hero }
-          : { ...state, ...clearActiveState, rightHero: action.hero }
+          : { ...state, ...clearActiveState, rightHero: action.hero };
     case 'TOGGLE_AGGRESSOR':
       return {
         ...state,
         leftHero: state.rightHero,
         rightHero: state.leftHero,
-      }
+      };
     default:
       return state;
   }

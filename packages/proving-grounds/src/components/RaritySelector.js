@@ -11,7 +11,7 @@ type Props = {
   disabled?: [boolean, boolean, boolean, boolean, boolean];
   selected: Rarity;
   onChange: (rarity: Rarity) => void;
-}
+};
 
 const RaritySelector = ({
   disabled = [false, false, false, false, false],

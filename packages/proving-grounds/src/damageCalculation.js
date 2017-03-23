@@ -3,7 +3,6 @@ import {
   max,
   multiply,
 } from 'ramda';
-import type { Hero } from 'fire-emblem-heroes-stats';
 
 import {
   getMitigationType,
@@ -11,7 +10,9 @@ import {
   getStat,
   getWeaponColor,
   hasBraveWeapon,
+  lookupStats,
 } from './heroHelpers';
+import type { HeroInstance } from './heroHelpers';
 
 
 type Color = 'RED' | 'GREEN' | 'BLUE' | 'NEUTRAL';
@@ -45,11 +46,14 @@ const dmgFormula = (
   ),
 );
 
-const doesFollowUp = (heroA: Hero, heroB: Hero) =>
+const doesFollowUp = (heroA: HeroInstance, heroB: HeroInstance) =>
   (getStat(heroA, 'spd') - getStat(heroB, 'spd') >= 5);
 
 // Healers do half-damage
-const classModifier = (hero: Hero) => hero.weaponType === 'Neutral Staff' ? 0.5 : 1;
+const classModifier = (instance: HeroInstance) => {
+  const hero = lookupStats(instance.name);
+  return (hero && (hero.weaponType === 'Neutral Staff')) ? 0.5 : 1;
+};
 
 const advantageBonus = (colorA: Color, colorB: Color) => {
   if (
@@ -66,10 +70,13 @@ const advantageBonus = (colorA: Color, colorB: Color) => {
     return 0.8;
   }
   return 1;
-}
+};
 
-const effectiveBonus = (attacker: Hero, defender: Hero) => {
-  if (attacker.weaponType === 'Neutral Bow' && defender.moveType === 'Flying') {
+const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
+  if (
+    lookupStats(attacker.name).weaponType === 'Neutral Bow'
+    && lookupStats(defender.name).moveType === 'Flying'
+  ) {
     return 1.5;
   }
   else return 1;
@@ -77,7 +84,7 @@ const effectiveBonus = (attacker: Hero, defender: Hero) => {
 
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
-const hitDmg = (attacker: Hero, defender: Hero) => dmgFormula(
+const hitDmg = (attacker: HeroInstance, defender: HeroInstance) => dmgFormula(
   getStat(attacker, 'atk'),
   effectiveBonus(attacker, defender),
   advantageBonus(
@@ -95,7 +102,7 @@ const hitDmg = (attacker: Hero, defender: Hero) => dmgFormula(
  * @param {Hero} defender
  * @returns {object}
  */
-export const calculateResult = (attacker: Hero, defender: Hero) => {
+export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) => {
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
   // attacker hits defender

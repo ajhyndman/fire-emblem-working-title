@@ -20,6 +20,7 @@ const StatSheet = ({
   heroInstance,
   level,
 }: Props) => {
+  // $FlowIssue: flowtype for find is too generic
   const hero: ?Hero = find(
     propEq('name', heroInstance.name),
     stats.heroes,

@@ -2,8 +2,9 @@
 import React from 'react';
 import Color from 'color-js';
 import { map, range } from 'ramda';
+import type { Hero } from 'fire-emblem-heroes-stats';
 
-import Hero from './Hero';
+import HeroPortrait from './Hero';
 import {
   colors,
   fontFamilies,
@@ -11,6 +12,7 @@ import {
   gridSize,
   lineHeights,
 } from '../theme';
+import { getDefaultSkills } from '../heroHelpers';
 import type { Dispatch } from '../reducer';
 
 
@@ -65,17 +67,25 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
       }
     `}</style>
     {map(
-      (hero) => (
-        <div>
+      (hero: Hero) => (
+        <div key={hero.name}>
           <div
-            key={hero.name}
             className={`gridSquare ${activeHeroName === hero.name ? 'active' : ''}`}
             onClick={(event) => {
               event.stopPropagation();
-              dispatch({ type: 'SELECT_HERO', hero })
+              dispatch({
+                type: 'SELECT_HERO',
+                hero: {
+                  name: hero.name,
+                  bane: undefined,
+                  boon: undefined,
+                  rarity: 5,
+                  skills: getDefaultSkills(hero.name, 5),
+                },
+              });
             }}
           >
-            <Hero
+            <HeroPortrait
               name={hero.name}
               weaponType={hero.weaponType}
             />

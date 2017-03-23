@@ -1,14 +1,14 @@
 // @flow
 import { createStore } from 'redux';
-import type { Hero } from 'fire-emblem-heroes-stats';
 
 import reducer from './reducer';
+import type { HeroInstance } from './heroHelpers';
 
 export type State = {
-  activeHero: ?Hero;
+  activeHero: ?HeroInstance;
   activeSlot: 0 | 1 | void;
-  leftHero: ?Hero;
-  rightHero: ?Hero;
+  leftHero: ?HeroInstance;
+  rightHero: ?HeroInstance;
   searchString: string;
 };
 

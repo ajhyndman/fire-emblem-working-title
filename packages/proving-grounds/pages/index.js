@@ -1,5 +1,5 @@
 // @flow
-import Head from 'next/head'
+import Head from 'next/head';
 import React from 'react';
 import stats from 'fire-emblem-heroes-stats';
 import withRedux from 'next-redux-wrapper';
@@ -21,10 +21,11 @@ import initStore from '../src/store';
 import { decodeHero, encodeHero } from '../src/queryCodex';
 import { staticUrl } from '../config';
 import type { Dispatch } from '../src/reducer';
-import type { State } from '../src/store'
+import type { State } from '../src/store';
 
 
 type Props = {
+  children?: React.Element<*>;
   dispatch: Dispatch;
   host: string;
   state: State;
@@ -35,6 +36,8 @@ const panelHeight = 212;
 const backgroundUrl = 'triskel_by_codysymes-d7ewlm9.png';
 
 class Home extends React.Component {
+  props: Props;
+
   static async getInitialProps ({ store, req, query }) {
     if (!isEmpty(query)) {
       const dispatch: Dispatch = store.dispatch;
@@ -49,10 +52,8 @@ class Home extends React.Component {
     };
   }
 
-  props: Props;
-
   render() {
-    const { host, state, dispatch } = this.props;
+    const { children, host, state, dispatch } = this.props;
 
     return (
       <div className="root" onClick={() => dispatch({ type: 'SELECT_SLOT', slot: undefined })}>
@@ -151,6 +152,7 @@ class Home extends React.Component {
             stats.heroes,
           )}
         />
+        {children}
       </div>
     );
   }

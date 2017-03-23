@@ -2,9 +2,9 @@
 import React from 'react';
 import Color from 'color-js';
 import cn from 'classnames';
-import { addIndex, map } from 'ramda';
+import { map } from 'ramda';
 
-import { colors, fontFamilies, transition } from '../theme';
+import { colors, fontFamilies } from '../theme';
 
 type Props = {
   onChange: (option: string) => void;
@@ -50,7 +50,7 @@ class Select extends React.Component {
         ref={node => { this.input = node; }}
         onBlur={this.blur}
         onFocus={this.focus}
-        onMouseDown={event => { event.preventDefault() }}
+        onMouseDown={event => { event.preventDefault(); }}
       >
         <style jsx>{`
           .root {
@@ -111,7 +111,9 @@ class Select extends React.Component {
         `}</style>
         <div
           className={cn('options', { active: this.state.active })}
-          style={{ transform: `translateY(-${(options.indexOf(selected) / options.length) * 100}%)` }}
+          style={{
+            transform: `translateY(-${(options.indexOf(selected) / options.length) * 100}%)`,
+          }}
         >
           {map(
             (option) => (
