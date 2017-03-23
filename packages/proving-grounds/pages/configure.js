@@ -52,7 +52,7 @@ class Configure extends React.Component {
           <div className="container">
             <HeroConfigurer
               dispatch={this.props.dispatch}
-              heroInstance={this.props.state.leftHero}
+              heroInstance={this.props.state.slot0}
               level={40}
             />
           </div>

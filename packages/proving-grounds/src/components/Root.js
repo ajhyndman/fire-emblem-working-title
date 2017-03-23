@@ -88,23 +88,23 @@ const Root = ({ state, dispatch }: Props) => (
     `}</style>
     <div className="sticky-panel">
       <CombatResult
-        leftHero={state.leftHero}
-        rightHero={state.rightHero}
+        leftHero={state.slot0}
+        rightHero={state.slot1}
       />
       <CombatPreview
         activeSlot={state.activeSlot}
         dispatch={dispatch}
-        leftHero={state.leftHero}
-        rightHero={state.rightHero}
+        leftHero={state.slot0}
+        rightHero={state.slot1}
       />
       <div className="row">
         <ShareButton
           link={`${
             state.host
           }/?0=${
-            encodeHero(state.leftHero)
+            encodeHero(state.slot0)
           }&1=${
-            encodeHero(state.rightHero)
+            encodeHero(state.slot1)
           }`}
         />
         <div className="column">

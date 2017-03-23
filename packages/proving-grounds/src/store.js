@@ -8,8 +8,8 @@ export type State = {
   host: string;
   activeHero: ?HeroInstance;
   activeSlot: 0 | 1 | void;
-  leftHero: ?HeroInstance;
-  rightHero: ?HeroInstance;
+  slot0: ?HeroInstance;
+  slot1: ?HeroInstance;
   searchString: string;
 };
 
@@ -17,8 +17,8 @@ const emptyState: State = {
   activeHero: undefined,
   activeSlot: undefined,
   host: '',
-  leftHero: undefined,
-  rightHero: undefined,
+  slot0: undefined,
+  slot1: undefined,
   searchString: '',
 };
 

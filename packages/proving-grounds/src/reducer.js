@@ -44,21 +44,21 @@ const reducer = (state: State, action: Action): State => {
         : (action.slot == null)
           ? { ...state, ...clearActiveState }
           : (action.slot === 0)
-            ? { ...state, ...clearActiveState, leftHero: state.activeHero }
-            : { ...state, ...clearActiveState, rightHero: state.activeHero };
+            ? { ...state, ...clearActiveState, slot0: state.activeHero }
+            : { ...state, ...clearActiveState, slot1: state.activeHero };
     case 'SELECT_HERO':
       return (state.activeSlot == null)
         ? { ...state, activeHero: action.hero }
         : (state.activeSlot === 0)
-          ? { ...state, ...clearActiveState, leftHero: action.hero }
-          : { ...state, ...clearActiveState, rightHero: action.hero };
+          ? { ...state, ...clearActiveState, slot0: action.hero }
+          : { ...state, ...clearActiveState, slot1: action.hero };
     case 'SET_HOST':
       return { ...state, host: action.host };
     case 'TOGGLE_AGGRESSOR':
       return {
         ...state,
-        leftHero: state.rightHero,
-        rightHero: state.leftHero,
+        slot0: state.slot1,
+        slot1: state.slot0,
       };
     default:
       return state;
