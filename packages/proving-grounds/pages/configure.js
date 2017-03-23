@@ -1,28 +1,62 @@
 // @flow
-import Link from 'next/link';
 import React from 'react';
+import Router from 'next/router';
 import withRedux from 'next-redux-wrapper';
+// import { isEmpty } from 'ramda';
 
-// import Home from './index';
+import Root, { panelHeight } from '../src/components/Root';
+import HeroConfigurer from '../src/components/HeroConfigurer';
+import Overlay from '../src/components/Overlay';
 import initStore from '../src/store';
+// import { decodeHero } from '../src/queryCodex';
+import type { Dispatch } from '../src/reducer';
+import type { State } from '../src/store';
 
 
-type State = {};
+type Props = {
+  dispatch: Dispatch;
+  state: State;
+};
 
 class Configure extends React.Component {
-  state: State;
+  props: Props;
 
-  constructor(props) {
-    super(props);
+  static async getInitialProps ({ store, req }) {
+    const dispatch: Dispatch = store.dispatch;
+    // if (!isEmpty(query)) {
+    //   dispatch({ type: 'SELECT_SLOT', slot: 0 });
+    //   dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) });
+    //   dispatch({ type: 'SELECT_SLOT', slot: 1 });
+    //   dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) });
+    // }
 
-    this.state = {};
+    if (req) dispatch({ type: 'SET_HOST', host: req.headers.host });
   }
 
   render() {
     return (
       <div>
-        <h1>Configure</h1>
-        <Link href="/" prefetch>Go back</Link>
+        <style jsx>{`
+          .container {
+            margin: ${panelHeight / 2}px auto 0;
+            width: 275px;
+          }
+        `}</style>
+        <Root {...this.props} />
+        <Overlay
+          onClick={event => {
+            event.stopPropagation();
+            Router.push('/');
+          }}
+        >
+          <div className="container">
+            <HeroConfigurer
+              dispatch={this.props.dispatch}
+              heroInstance={this.props.state.leftHero}
+              level={40}
+            />
+          </div>
+        </Overlay>
       </div>
     );
   }
