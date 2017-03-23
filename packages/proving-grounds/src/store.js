@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import reducer from './reducer';
 import type { HeroInstance } from './heroHelpers';
 
+
 export type State = {
   host: string;
   activeHero: ?HeroInstance;
@@ -11,6 +12,7 @@ export type State = {
   slot0: ?HeroInstance;
   slot1: ?HeroInstance;
   searchString: string;
+  previewLevel: 1 | 40;
 };
 
 const emptyState: State = {
@@ -20,6 +22,7 @@ const emptyState: State = {
   slot0: undefined,
   slot1: undefined,
   searchString: '',
+  previewLevel: 1,
 };
 
 const initStore = (initialState: State = emptyState) => {

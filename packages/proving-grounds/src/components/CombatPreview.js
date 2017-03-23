@@ -70,11 +70,16 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         }}
         onContextMenu={event => {
           event.preventDefault();
+          dispatch({ type: 'SELECT_SLOT', slot: 0 });
           Router.push('/configure');
         }}
       >
         {leftHero
-          ? <Hero name={leftHero.name} weaponType={lookupStats(leftHero.name).weaponType} />
+          ? <Hero
+            name={leftHero.name}
+            weaponType={lookupStats(leftHero.name).weaponType}
+            rarity={leftHero.rarity}
+          />
           : null}
       </div>
       <div
@@ -94,11 +99,16 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         }}
         onContextMenu={event => {
           event.preventDefault();
+          dispatch({ type: 'SELECT_SLOT', slot: 1 });
           Router.push('/configure');
         }}
       >
         {rightHero
-          ? <Hero name={rightHero.name} weaponType={lookupStats(rightHero.name).weaponType} />
+          ? <Hero
+            name={rightHero.name}
+            weaponType={lookupStats(rightHero.name).weaponType}
+            rarity={rightHero.rarity}
+          />
           : null}
       </div>
     </div>

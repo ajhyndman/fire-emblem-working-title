@@ -52,8 +52,8 @@ class Configure extends React.Component {
           <div className="container">
             <HeroConfigurer
               dispatch={this.props.dispatch}
-              heroInstance={this.props.state.slot0}
-              level={40}
+              heroInstance={this.props.state[`slot${this.props.state.activeSlot}`]}
+              level={this.props.state.previewLevel}
             />
           </div>
         </Overlay>

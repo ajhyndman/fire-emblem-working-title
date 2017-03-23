@@ -120,7 +120,7 @@ const HeroConfigurer = ({
             <Select
               onChange={selected => dispatch({
                 type: 'UPDATE_BOON',
-                boon: varianceOptions[selected],
+                stat: varianceOptions[selected],
               })}
               options={[
                 '—',
@@ -139,7 +139,7 @@ const HeroConfigurer = ({
             <Select
               onChange={selected => dispatch({
                 type: 'UPDATE_BANE',
-                bane: varianceOptions[selected],
+                stat: varianceOptions[selected],
               })}
               options={[
                 '—',

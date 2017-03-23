@@ -26,11 +26,11 @@ import type {
 import { getSkillInfo } from './skillHelpers';
 
 
-type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
+export type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
 
-type Rarity = 1 | 2 | 3 | 4 | 5;
+export type Rarity = 1 | 2 | 3 | 4 | 5;
 
-type InstanceSkills = {
+export type InstanceSkills = {
   weapon: ?WeaponSkill;
   assist: ?AssistSkill;
   special: ?SpecialSkill;

@@ -47,6 +47,7 @@ const RaritySelector = ({
         const isDisabled = disabled[i - 1];
         return (
           <img
+            key={`${i}`}
             role="button"
             tabIndex="0"
             className={cn({
