@@ -162,8 +162,8 @@ declare module ramda {
   declare function all<T>(fn: UnaryPredicateFn<T>, xs: Array<T>): boolean;
   declare function all<T>(fn: UnaryPredicateFn<T>, ...rest: Array<void>): (xs: Array<T>) => boolean;
 
-  declare function any<T>(fn: UnaryPredicateFn<T>, xs: Array<T>): boolean;
-  declare function any<T>(fn: UnaryPredicateFn<T>, ...rest: Array<void>): (xs: Array<T>) => boolean;
+  declare function any<T>(fn: UnaryPredicateFn<T>, xs: Iterable<T>): boolean;
+  declare function any<T>(fn: UnaryPredicateFn<T>, ...rest: Array<void>): (xs: Iterable<T>) => boolean;
 
   declare function aperture<T>(n: number, xs: Array<T>): Array<Array<T>>;
   declare function aperture<T>(n: number, ...rest: Array<void>): (xs: Array<T>) => Array<Array<T>>;
@@ -174,87 +174,86 @@ declare module ramda {
   declare function prepend<E>(x: E, xs: Array<E>): Array<E>
   declare function prepend<E>(x: E, ...rest: Array<void>): (xs: Array<E>) => Array<E>
 
-  declare function concat<V,T:Array<V>|string>(x: T, y: T): T;
-  declare function concat<V,T:Array<V>|string>(x: T): (y: T) => T;
+  declare function concat<V,T:Iterable<V>|string>(x: T, y: T): T;
+  declare function concat<V,T:Iterable<V>|string>(x: T): (y: T) => T;
 
-  declare function contains<E,T:Array<E>|string>(x: E, xs: T): boolean
-  declare function contains<E,T:Array<E>|string>(x: E, ...rest: Array<void>): (xs: T) => boolean
+  declare function contains<E,T:Iterable<E>|string>(x: E, xs: T): boolean
+  declare function contains<E,T:Iterable<E>|string>(x: E, ...rest: Array<void>): (xs: T) => boolean
 
-  declare function drop<V,T:Array<V>|string>(n: number, ...rest: Array<void>):(xs: T) => T;
-  declare function drop<V,T:Array<V>|string>(n: number, xs: T): T;
+  declare function drop<V,T:Iterable<V>|string>(n: number, ...rest: Array<void>):(xs: T) => T;
+  declare function drop<V,T:Iterable<V>|string>(n: number, xs: T): T;
 
-  declare function dropLast<V,T:Array<V>|string>(n: number, ...rest: Array<void>):(xs: T) => T;
-  declare function dropLast<V,T:Array<V>|string>(n: number, xs: T): T;
+  declare function dropLast<V,T:Iterable<V>|string>(n: number, ...rest: Array<void>):(xs: T) => T;
+  declare function dropLast<V,T:Iterable<V>|string>(n: number, xs: T): T;
 
-  declare function dropLastWhile<V,T:Array<V>>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => T;
-  declare function dropLastWhile<V,T:Array<V>>(fn: UnaryPredicateFn<V>, xs:T): T;
+  declare function dropLastWhile<V,T:Iterable<V>>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => T;
+  declare function dropLastWhile<V,T:Iterable<V>>(fn: UnaryPredicateFn<V>, xs:T): T;
 
-  declare function dropWhile<V,T:Array<V>>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => T;
-  declare function dropWhile<V,T:Array<V>>(fn: UnaryPredicateFn<V>, xs:T): T;
+  declare function dropWhile<V,T:Iterable<V>>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => T;
+  declare function dropWhile<V,T:Iterable<V>>(fn: UnaryPredicateFn<V>, xs:T): T;
 
-  declare function dropRepeats<V,T:Array<V>>(xs:T): T;
+  declare function dropRepeats<V,T:Iterable<V>>(xs:T): T;
 
-  declare function dropRepeatsWith<V,T:Array<V>>(fn: BinaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => T;
-  declare function dropRepeatsWith<V,T:Array<V>>(fn: BinaryPredicateFn<V>, xs:T): T;
+  declare function dropRepeatsWith<V,T:Iterable<V>>(fn: BinaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => T;
+  declare function dropRepeatsWith<V,T:Iterable<V>>(fn: BinaryPredicateFn<V>, xs:T): T;
 
   declare function groupBy<T>(fn: (x: T) => string, xs: Array<T>): {[key: string]: Array<T>}
   declare function groupBy<T>(fn: (x: T) => string, ...rest: Array<void>): (xs: Array<T>) => {[key: string]: Array<T>}
 
-  declare function groupWith<T,V:Array<T>|string>(fn: BinaryPredicateFn<T>, xs: V): Array<V>
-  declare function groupWith<T,V:Array<T>|string>(fn: BinaryPredicateFn<T>, ...rest: Array<void>): (xs: V) => Array<V>
+  declare function groupWith<T,V:Iterable<T>|string>(fn: BinaryPredicateFn<T>, xs: V): Array<V>
+  declare function groupWith<T,V:Iterable<T>|string>(fn: BinaryPredicateFn<T>, ...rest: Array<void>): (xs: V) => Array<V>
 
-  declare function head<T,V:Array<T>>(xs: V): ?T
+  declare function head<T,V:Iterable<T>>(xs: V): ?T
   declare function head<T,V:string>(xs: V): V
 
-  declare function into<I,T,A:Array<T>,R:Array<*>|string|Object>(accum: R, xf: (a: A) => I, input: A): R
-  declare function into<I,T,A:Array<T>,R>(accum: Transformer<I,R>, xf: (a: A) => R, input: A): R
+  declare function into<I,T,A:Iterable<T>,R:Iterable<*>|string|Object>(accum: R, xf: (a: A) => I, input: A): R
+  declare function into<I,T,A:Iterable<T>,R>(accum: Transformer<I,R>, xf: (a: A) => R, input: A): R
 
-  declare function indexOf<E>(x: E, xs: Array<E>): number
-  declare function indexOf<E>(x: E, ...rest: Array<void>): (xs: Array<E>) => number
+  declare function indexOf<E>(x: E, xs: Iterable<E>): number
+  declare function indexOf<E>(x: E, ...rest: Array<void>): (xs: Iterable<E>) => number
 
-  declare function indexBy<V,T:{[key: string]:*}>(fn: (x: T) => string, ...rest: Array<void>): (xs: Array<T>) => {[key: string]: T}
-  declare function indexBy<V,T:{[key: string]:*}>(fn: (x: T) => string, xs: Array<T>): {[key: string]: T}
+  declare function indexBy<V,T:{[key: string]:*}>(fn: (x: T) => string, ...rest: Array<void>): (xs: Iterable<T>) => {[key: string]: T}
+  declare function indexBy<V,T:{[key: string]:*}>(fn: (x: T) => string, xs: Iterable<T>): {[key: string]: T}
 
-  declare function insert<T>(index: number, ...rest: Array<void>): (elem: T) => (src: Array<T>) => Array<T>
-  declare function insert<T>(index: number, elem: T, ...rest: Array<void>): (src: Array<T>) => Array<T>
-  declare function insert<T>(index: number, elem: T, src: Array<T>): Array<T>
-
-  declare function insertAll<T,S>(index: number, ...rest: Array<void>): (elem: Array<S>) => (src: Array<T>) => Array<S|T>
-  declare function insertAll<T,S>(index: number, elems: Array<S>, ...rest: Array<void>): (src: Array<T>) => Array<S|T>
-  declare function insertAll<T,S>(index: number, elems: Array<S>, src: Array<T>): Array<S|T>
+  declare function insert<T>(index: number, ...rest: Array<void>): (elem: T) => (src: Iterable<T>) => Iterable<T>
+  declare function insert<T>(index: number, elem: T, ...rest: Array<void>): (src: Iterable<T>) => Iterable<T>
+  declare function insert<T>(index: number, elem: T, src: Iterable<T>): Iterable<T>
+  declare function insertAll<T,S>(index: number, ...rest: Array<void>): (elem: Iterable<S>) => (src: Iterable<T>) => Iterable<S|T>
+  declare function insertAll<T,S>(index: number, elems: Iterable<S>, ...rest: Array<void>): (src: Iterable<T>) => Iterable<S|T>
+  declare function insertAll<T,S>(index: number, elems: Iterable<S>, src: Iterable<T>): Iterable<S|T>
 
   declare function join(x: string, xs: Array<any>): string
   declare function join(x: string, ...rest: Array<void>): (xs: Array<any>) => string
 
-  declare function last<T,V:Array<T>>(xs: V): ?T
+  declare function last<T,V:Iterable<T>>(xs: V): ?T
   declare function last<T,V:string>(xs: V): V
 
   declare function none<T>(fn: UnaryPredicateFn<T>, xs: Array<T>): boolean;
   declare function none<T>(fn: UnaryPredicateFn<T>, ...rest: Array<void>): (xs: Array<T>) => boolean;
 
-  declare function nth<V,T:Array<V>>(i: number, xs: T): ?V
-  declare function nth<V,T:Array<V>|string>(i: number, ...rest: Array<void>): ((xs: string) => string)&((xs: T) => ?V)
+  declare function nth<V,T:Iterable<V>>(i: number, xs: T): ?V
+  declare function nth<V,T:Iterable<V>|string>(i: number, ...rest: Array<void>): ((xs: string) => string)&((xs: T) => ?V)
   declare function nth<T:string>(i: number, xs: T):  T
 
-  declare function find<V,O:{[key:string]:*},T:Array<V>|O>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T|O) => ?V|O;
-  declare function find<V,O:{[key:string]:*},T:Array<V>|O>(fn: UnaryPredicateFn<V>, xs:T|O): ?V|O;
-  declare function findLast<V,O:{[key:string]:*},T:Array<V>|O>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T|O) => ?V|O;
-  declare function findLast<V,O:{[key:string]:*},T:Array<V>|O>(fn: UnaryPredicateFn<V>, xs:T|O): ?V|O;
+  declare function find<V,O:{[key:string]:*},T:Iterable<V>|O>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T|O) => ?V|O;
+  declare function find<V,O:{[key:string]:*},T:Iterable<V>|O>(fn: UnaryPredicateFn<V>, xs:T|O): ?V|O;
+  declare function findLast<V,O:{[key:string]:*},T:Iterable<V>|O>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T|O) => ?V|O;
+  declare function findLast<V,O:{[key:string]:*},T:Iterable<V>|O>(fn: UnaryPredicateFn<V>, xs:T|O): ?V|O;
 
-  declare function findIndex<K,V,T:Array<V>|{[key:K]:V}>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => number
-  declare function findIndex<K,V,T:Array<V>|{[key:K]:V}>(fn: UnaryPredicateFn<V>, xs:T): number
-  declare function findLastIndex<K,V,T:Array<V>|{[key:K]:V}>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => number
-  declare function findLastIndex<K,V,T:Array<V>|{[key:K]:V}>(fn: UnaryPredicateFn<V>, xs:T): number
+  declare function findIndex<K,V,T:Iterable<V>|{[key:K]:V}>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => number
+  declare function findIndex<K,V,T:Iterable<V>|{[key:K]:V}>(fn: UnaryPredicateFn<V>, xs:T): number
+  declare function findLastIndex<K,V,T:Iterable<V>|{[key:K]:V}>(fn: UnaryPredicateFn<V>, ...rest: Array<void>): (xs:T) => number
+  declare function findLastIndex<K,V,T:Iterable<V>|{[key:K]:V}>(fn: UnaryPredicateFn<V>, xs:T): number
 
-  declare function forEach<T,V>(fn:(x:T) => ?V, xs: Array<T>): Array<T>
-  declare function forEach<T,V>(fn:(x:T) => ?V, ...rest: Array<void>): (xs: Array<T>) => Array<T>
+  declare function forEach<T,V>(fn:(x:T) => ?V, xs: Iterable<T>): Iterable<T>
+  declare function forEach<T,V>(fn:(x:T) => ?V, ...rest: Array<void>): (xs: Iterable<T>) => Iterable<T>
 
-  declare function lastIndexOf<E>(x: E, xs: Array<E>): number
-  declare function lastIndexOf<E>(x: E, ...rest: Array<void>): (xs: Array<E>) => number
+  declare function lastIndexOf<E>(x: E, xs: Iterable<E>): number
+  declare function lastIndexOf<E>(x: E, ...rest: Array<void>): (xs: Iterable<E>) => number
 
-  declare function map<T,R>(fn: (x:T) => R, xs: Array<T>): Array<R>;
+  declare function map<T,R>(fn: (x:T) => R, xs: Iterable<T>): Iterable<R>;
   declare function map<T,R,S:{map:Function}>(fn: (x:T) => R, xs: S): S;
-  declare function map<T,R>(fn: (x:T) => R, ...rest: Array<void>): ((xs: {[key: string]: T}) => {[key: string]: R}) & ((xs: Array<T>) => Array<R>)
+  declare function map<T,R>(fn: (x:T) => R, ...rest: Array<void>): ((xs: {[key: string]: T}) => {[key: string]: R}) & ((xs: Iterable<T>) => Iterable<R>)
   declare function map<T,R,S:{map:Function}>(fn: (x:T) => R, ...rest: Array<void>): ((xs:S) => S) & ((xs: S) => S)
   declare function map<T,R>(fn: (x:T) => R, xs: {[key: string]: T}): {[key: string]: R}
 
@@ -311,15 +310,15 @@ declare module ramda {
   declare function unfold<T,R>(fn: (seed: T) => [R, T]|boolean, ...rest: Array<void>): (seed: T) => Array<R>
   declare function unfold<T,R>(fn: (seed: T) => [R, T]|boolean, seed: T): Array<R>
 
-  declare function uniqBy<T,V>(fn:(x: T) => V, ...rest: Array<void>): (xs: Array<T>) => Array<T>
-  declare function uniqBy<T,V>(fn:(x: T) => V, xs: Array<T>): Array<T>
+  declare function uniqBy<T,V>(fn:(x: T) => V, ...rest: Array<void>): (xs: Iterable<T>) => Iterable<T>
+  declare function uniqBy<T,V>(fn:(x: T) => V, xs: Iterable<T>): Iterable<T>
 
   declare function uniqWith<T>(fn: BinaryPredicateFn<T>, ...rest: Array<void>): (xs: Array<T>) => Array<T>
   declare function uniqWith<T>(fn: BinaryPredicateFn<T>, xs: Array<T>): Array<T>
 
-  declare function update<T>(index: number, ...rest: Array<void>): ((elem: T, ...rest: Array<void>) => (src: Array<T>) => Array<T>) & ((elem: T, src: Array<T>) => Array<T>)
-  declare function update<T>(index: number, elem: T, ...rest: Array<void>): (src: Array<T>) => Array<T>
-  declare function update<T>(index: number, elem: T, src: Array<T>): Array<T>
+  declare function update<T: Iterable<any>>(index: number, ...rest: Array<void>): ((elem: any, ...rest: Array<void>) => (src: T) => T) & ((elem: any, src: T) => T)
+  declare function update<T: Iterable<any>>(index: number, elem: any, ...rest: Array<void>): (src: T) => T
+  declare function update<T: Iterable<any>>(index: number, elem: any, src: T): T
 
   // TODO `without` as a transducer
   declare function without<T>(xs: Array<T>, src: Array<T>): Array<T>
@@ -345,7 +344,7 @@ declare module ramda {
 
   declare function mergeAll(objs: Array<{[key: string]: any}>):{[key: string]: any};
 
-  declare function reverse<T,V:Array<T>|string>(xs: V): V;
+  declare function reverse<T,V:Iterable<T>|string>(xs: V): V;
 
   declare function reduce<A, B>(fn: (acc: A, elem: B) => A, ...rest: Array<void>): ((init: A, xs: Array<B>) => A) & ((init: A, ...rest: Array<void>) => (xs: Array<B>) => A);
   declare function reduce<A, B>(fn: (acc: A, elem: B) => A, init: A, ...rest: Array<void>): (xs: Array<B>) => A;
@@ -615,7 +614,7 @@ declare module ramda {
   declare var T: (_: any) => boolean;
   declare var F: (_: any) => boolean;
 
-  declare function addIndex<A,B>(iterFn:(fn:(x:A) => B, xs: Array<A>) => Array<B>): (fn: (x: A, idx: number, xs: Array<A>) => B, xs: Array<A>) => Array<B>;
+  declare function addIndex<A,B>(iterFn:(fn:(x:A) => B, xs: Iterable<A>) => Iterable<B>): (fn: (x: A, idx: number, xs: Iterable<A>) => B, xs: Iterable<A>) => Iterable<B>;
 
   declare function always<T>(x:T): (x: any) => T;
 
