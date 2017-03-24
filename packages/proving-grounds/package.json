@@ -17,11 +17,11 @@
     "docker-start": "docker run -d -p 80:3000 proving-grounds"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "eslint": "^3.17.1",
     "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.1.0",
-    "flow-bin": "^0.41.0",
-    "@kadira/storybook": "^2.21.0"
+    "flow-bin": "^0.42.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",

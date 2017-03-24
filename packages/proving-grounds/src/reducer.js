@@ -1,6 +1,6 @@
 // @flow
 import type { Hero } from 'fire-emblem-heroes-stats';
-import { any, findIndex, isNil, update } from 'ramda';
+import { any, findIndex, isNil, reverse, update } from 'ramda';
 
 import type { State } from './store'
 
@@ -76,8 +76,7 @@ const reducer = (state: State, action: Action): State => {
     case 'TOGGLE_AGGRESSOR':
       return {
         ...state,
-        leftHero: state.rightHero,
-        rightHero: state.leftHero,
+        heroSlots: reverse(state.heroSlots),
       }
     default:
       return state;
