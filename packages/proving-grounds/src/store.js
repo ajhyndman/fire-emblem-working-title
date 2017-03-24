@@ -7,7 +7,7 @@ import reducer from './reducer';
 export type State = {
   activeHero: ?Hero;
   activeSlot: 0 | 1 | void;
-  heroSlots: Array<?Hero>;
+  heroSlots: [?Hero, ?Hero];
   searchString: string;
 };
 
