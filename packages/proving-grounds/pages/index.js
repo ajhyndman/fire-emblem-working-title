@@ -112,18 +112,19 @@ class Home extends React.Component {
         `}</style>
         <div className="sticky-panel">
           <CombatResult
-            leftHero={state.leftHero}
-            rightHero={state.rightHero}
+            leftHero={state.heroSlots[0]}
+            rightHero={state.heroSlots[1]}
           />
           <CombatPreview
             activeSlot={state.activeSlot}
             dispatch={dispatch}
-            leftHero={state.leftHero}
-            rightHero={state.rightHero}
+            leftHero={state.heroSlots[0]}
+            rightHero={state.heroSlots[1]}
           />
           <div className="row">
             <ShareButton
-              link={`${host}/?0=${encodeHero(state.leftHero)}&1=${encodeHero(state.rightHero)}`}
+              link={`${host}/?0=${encodeHero(state.heroSlots[0])}`
+                  + `&1=${encodeHero(state.heroSlots[1])}`}
             />
             <div className="column">
               <Input

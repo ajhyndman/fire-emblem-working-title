@@ -7,16 +7,14 @@ import reducer from './reducer';
 export type State = {
   activeHero: ?Hero;
   activeSlot: 0 | 1 | void;
-  leftHero: ?Hero;
-  rightHero: ?Hero;
+  heroSlots: Array<?Hero>;
   searchString: string;
 };
 
 const emptyState: State = {
   activeHero: undefined,
   activeSlot: undefined,
-  leftHero: undefined,
-  rightHero: undefined,
+  heroSlots: [undefined, undefined],
   searchString: '',
 };
 

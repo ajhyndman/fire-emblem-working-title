@@ -1,5 +1,6 @@
 // @flow
 import type { Hero } from 'fire-emblem-heroes-stats';
+import { any, findIndex, isNil, update } from 'ramda';
 
 import type { State } from './store'
 
@@ -23,24 +24,55 @@ const clearActiveState = {
   activeSlot: undefined,
 };
 
+const hasEmptySlot = (state: State) => any(isNil, state.heroSlots);
+const getEmptySlot = (state: State) => findIndex(isNil, state.heroSlots);
+
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'SEARCH_STRING_CHANGE':
       return { ...state, searchString: action.value };
     case 'SELECT_SLOT':
-      return (state.activeHero == null)
-        ? { ...state, activeSlot: action.slot }
-        : (action.slot == null)
-          ? { ...state, ...clearActiveState }
-          : (action.slot === 0)
-            ? { ...state, ...clearActiveState, leftHero: state.activeHero }
-            : { ...state, ...clearActiveState, rightHero: state.activeHero }
+      if (state.activeHero == null) {
+        // Selected a slot.
+        return { ...state, activeSlot: action.slot }
+      } else if (action.slot == null){
+        // Deselected a slot.
+        return { ...state, ...clearActiveState }
+      } else {
+        // Move selected hero to the slot
+        return {
+          ...state,
+          ...clearActiveState,
+          heroSlots: update(
+            action.slot,
+            state.activeHero,
+            state.heroSlots),
+        };
+      }
     case 'SELECT_HERO':
-      return (state.activeSlot == null)
-        ? { ...state, activeHero: action.hero }
-        : (state.activeSlot == 0)
-          ? { ...state, ...clearActiveState, leftHero: action.hero }
-          : { ...state, ...clearActiveState, rightHero: action.hero }
+      if (state.activeSlot == null) {
+        // Move hero to first empty slot or select hero.
+        return hasEmptySlot(state)
+          ? {
+            ...state,
+            ...clearActiveState,
+            heroSlots: update(
+              getEmptySlot(state),
+              action.hero,
+              state.heroSlots),
+          }
+          : { ...state, activeHero: action.hero }
+      } else {
+        // Move hero to selected slot.
+        return {
+          ...state,
+          ...clearActiveState,
+          heroSlots: update(
+            state.activeSlot,
+            action.hero,
+            state.heroSlots),
+        };
+      }
     case 'TOGGLE_AGGRESSOR':
       return {
         ...state,
