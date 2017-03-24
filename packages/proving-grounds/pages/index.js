@@ -142,13 +142,27 @@ class Home extends React.Component {
           activeHeroName={path(['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
-              // $FlowIssue typedef for prop isn't resolving correctly
+            // $FlowIssue typedef for prop isn't resolving correctly
             compose(
               name => (name.indexOf(toLower(state.searchString)) !== -1),
               toLower,
               prop('name'),
             ),
-            stats.grand_battle_heroes.concat(stats.heroes),
+            stats.grand_battle_heroes,
+          )}
+        />
+        <HeroGrid
+          // $FlowIssue typedef for path isn't resolving correctly
+          activeHeroName={path(['activeHero', 'name'], state)}
+          dispatch={dispatch}
+          heroes={filter(
+            // $FlowIssue typedef for prop isn't resolving correctly
+            compose(
+              name => (name.indexOf(toLower(state.searchString)) !== -1),
+              toLower,
+              prop('name'),
+            ),
+            stats.heroes,
           )}
         />
       </div>
