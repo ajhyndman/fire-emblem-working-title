@@ -3,8 +3,8 @@ import type { Hero } from 'fire-emblem-heroes-stats';
 
 const michalisUnits: Array<Hero> = [
   {
-    "name": "Flier",
-    "imageName": "Lance Flier",
+    "shortName": "Flier",
+    "name": "Lance Flier",
     "moveType": "Flying",
     "weaponType": "Blue Lance",
     "skills": [
@@ -94,8 +94,8 @@ const michalisUnits: Array<Hero> = [
     },
   },
   {
-    "name": "Flier",
-    "imageName": "Sword Flier",
+    "shortName": "Flier",
+    "name": "Sword Flier",
     "moveType": "Flying",
     "weaponType": "Red Sword",
     "skills": [
@@ -142,8 +142,8 @@ const michalisUnits: Array<Hero> = [
     },
   },
   {
-    "name": "Cavalier",
-    "imageName": "Sword Cavalier",
+    "shortName": "Cavalier",
+    "name": "Sword Cavalier",
     "moveType": "Cavalry",
     "weaponType": "Red Sword",
     "skills": [
@@ -186,8 +186,8 @@ const michalisUnits: Array<Hero> = [
     },
   },
   {
-    "name": "Fighter",
-    "imageName": "Lance Fighter",
+    "shortName": "Fighter",
+    "name": "Lance Fighter",
     "moveType": "Infantry",
     "weaponType": "Blue Lance",
     "skills": [
