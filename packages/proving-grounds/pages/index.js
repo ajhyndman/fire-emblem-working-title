@@ -21,7 +21,8 @@ import initStore from '../src/store';
 import { decodeHero, encodeHero } from '../src/queryCodex';
 import { staticUrl } from '../config';
 import type { Dispatch } from '../src/reducer';
-import type { State } from '../src/store'
+import type { State } from '../src/store';
+import michalisUnits from '../src/temporal/2017.03.25-michalis';
 
 
 type Props = {
@@ -148,7 +149,7 @@ class Home extends React.Component {
               toLower,
               prop('name'),
             ),
-            stats.grand_battle_heroes,
+            michalisUnits,
           )}
         />
         <HeroGrid
