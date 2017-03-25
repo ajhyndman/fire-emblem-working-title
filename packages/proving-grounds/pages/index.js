@@ -21,7 +21,8 @@ import initStore from '../src/store';
 import { decodeHero, encodeHero } from '../src/queryCodex';
 import { staticUrl } from '../config';
 import type { Dispatch } from '../src/reducer';
-import type { State } from '../src/store'
+import type { State } from '../src/store';
+import michalisUnits from '../src/temporal/2017.03.25-michalis';
 
 
 type Props = {
@@ -143,7 +144,21 @@ class Home extends React.Component {
           activeHeroName={path(['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
-              // $FlowIssue typedef for prop isn't resolving correctly
+            // $FlowIssue typedef for prop isn't resolving correctly
+            compose(
+              name => (name.indexOf(toLower(state.searchString)) !== -1),
+              toLower,
+              prop('name'),
+            ),
+            michalisUnits,
+          )}
+        />
+        <HeroGrid
+          // $FlowIssue typedef for path isn't resolving correctly
+          activeHeroName={path(['activeHero', 'name'], state)}
+          dispatch={dispatch}
+          heroes={filter(
+            // $FlowIssue typedef for prop isn't resolving correctly
             compose(
               name => (name.indexOf(toLower(state.searchString)) !== -1),
               toLower,

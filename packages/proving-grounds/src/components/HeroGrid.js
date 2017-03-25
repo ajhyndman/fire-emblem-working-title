@@ -80,7 +80,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
               weaponType={hero.weaponType}
             />
           </div>
-          <div className="name">{hero.name}</div>
+          <div className="name">{hero.shortName || hero.name}</div>
         </div>
       ),
       heroes,
