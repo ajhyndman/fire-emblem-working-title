@@ -2,6 +2,7 @@
 import stats from 'fire-emblem-heroes-stats';
 import {
   compose,
+  concat,
   filter,
   find,
   indexBy,
@@ -25,6 +26,7 @@ import type {
 } from 'fire-emblem-heroes-stats';
 
 import { getSkillInfo, getStatValue } from './skillHelpers';
+import michalisHeros from './temporal/2017.03.25-michalis';
 
 
 export type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
@@ -32,21 +34,21 @@ export type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
 export type Rarity = 1 | 2 | 3 | 4 | 5;
 
 export type InstanceSkills = {
-  weapon: ?WeaponSkill;
-  assist: ?AssistSkill;
-  special: ?SpecialSkill;
-  passiveA: ?PassiveSkill;
-  passiveB: ?PassiveSkill;
-  passiveC: ?PassiveSkill;
+  +WEAPON: ?WeaponSkill;
+  +ASSIST: ?AssistSkill;
+  +SPECIAL: ?SpecialSkill;
+  +PASSIVE_A: ?PassiveSkill;
+  +PASSIVE_B: ?PassiveSkill;
+  +PASSIVE_C: ?PassiveSkill;
 };
 
 export type HeroInstance = {
   // custom: false,
-  name: string;
-  rarity: Rarity;
-  boon: ?Stat;
-  bane: ?Stat;
-  skills: InstanceSkills;
+  +name: string;
+  +rarity: Rarity;
+  +boon: ?Stat;
+  +bane: ?Stat;
+  +skills: InstanceSkills;
 };
 
 // NOT USED YET: Just conjecture for potential future support of
@@ -70,6 +72,8 @@ export type HeroInstance = {
 //   passiveC: PassiveSkill;
 // };
 
+const allHeroes = concat(stats.heroes, michalisHeros);
+
 /**
  * Look up a hero's base stats by name.
  *
@@ -78,7 +82,7 @@ export type HeroInstance = {
  */
 export const lookupStats = (name: string): Hero => {
   // $FlowIssue: Flowtype for find is too generic
-  const hero: ?Hero = find(propEq('name', name), stats.heroes);
+  const hero: ?Hero = find(propEq('name', name), allHeroes);
   return hero || {
     name,
     weaponType: 'Red Sword',
@@ -94,36 +98,28 @@ export function getSkill(
   instance: HeroInstance,
   skillType: SkillType,
 ): string {
-  return instance.skills[skillType];
+  return instance.skills[skillType] ? instance.skills[skillType].name : '';
 }
 
 // Returns a map from skill type to the name of the skill.
 export function getDefaultSkills(name: string, rarity: 1 | 2 | 3 | 4 | 5): InstanceSkills {
   const hero = lookupStats(name);
 
-  const skillKeys = {
-    WEAPON: 'weapon',
-    ASSIST: 'assist',
-    SPECIAL: 'special',
-    // TODO: We aren't splitting passives by slot yet.
-    PASSIVE: 'passiveC',
-  };
-
   // Flow can't follow this compose chain, so cast it to any.
   const skillsByType = (compose(
-    indexBy((skill: Skill) => skillKeys[skill.type]),
+    indexBy((skill: Skill) => skill.type),
     filter(compose(not, isNil)),
     map(skill => getSkillInfo(skill.name)),
     filter(skill => (skill.rarity == null || skill.rarity === '-' || skill.rarity <= rarity)),
   )(hero.skills): any);
 
   return {
-    weapon: undefined,
-    assist: undefined,
-    special: undefined,
-    passiveA: undefined,
-    passiveB: undefined,
-    passiveC: undefined,
+    WEAPON: undefined,
+    ASSIST: undefined,
+    SPECIAL: undefined,
+    PASSIVE_A: undefined,
+    PASSIVE_B: undefined,
+    PASSIVE_C: undefined,
     ...skillsByType,
   };
 }
@@ -148,8 +144,8 @@ export const hasBraveWeapon: (instance: HeroInstance) => boolean = compose(
 export const getStat = (
   instance: HeroInstance,
   statKey: Stat,
-  isAttacker: boolean = false,
   level: 1 | 40 = 40,
+  isAttacker: boolean = false,
 ): number => {
   const hero = lookupStats(instance.name);
   const { rarity } = instance;
@@ -178,8 +174,8 @@ export const getStat = (
       ? parseInt(low, 10)
       : parseInt(high, 10);
 
-  const passiveA: Skill = getSkill(hero, 'PASSIVE_A', rarity);
-  const weapon: Skill = getSkill(hero, 'WEAPON', rarity);
+  const passiveA = getSkill(instance, 'PASSIVE_A');
+  const weapon = getSkill(instance, 'WEAPON');
 
   return baseValue
     + (passiveA ? getStatValue(passiveA, statKey, isAttacker) : 0)

@@ -67,8 +67,8 @@ const reducer = (state: State, action: Action): State => {
           : { ...state, activeHero: action.hero }
         // Move hero to selected slot.
         : (state.activeSlot === 0)
-          ? { ...state, ...clearActiveState, slot0: action.hero }
-          : { ...state, ...clearActiveState, slot1: action.hero };
+          ? { ...state, ...clearActiveState, heroSlots: update(0, action.hero, state.heroSlots) }
+          : { ...state, ...clearActiveState, heroSlots: update(1, action.hero, state.heroSlots) };
     case 'SET_HOST':
       return { ...state, host: action.host };
     case 'SET_PREVIEW_LEVEL':

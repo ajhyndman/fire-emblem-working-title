@@ -19,6 +19,7 @@ import { encodeHero } from '../queryCodex';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 import type { State } from '../store';
+import michalisUnits from '../temporal/2017.03.25-michalis';
 
 
 type Props = {
@@ -88,23 +89,23 @@ const Root = ({ state, dispatch }: Props) => (
     `}</style>
     <div className="sticky-panel">
       <CombatResult
-        leftHero={state.slot0}
-        rightHero={state.slot1}
+        leftHero={state.heroSlots[0]}
+        rightHero={state.heroSlots[1]}
       />
       <CombatPreview
         activeSlot={state.activeSlot}
         dispatch={dispatch}
-        leftHero={state.slot0}
-        rightHero={state.slot1}
+        leftHero={state.heroSlots[0]}
+        rightHero={state.heroSlots[1]}
       />
       <div className="row">
         <ShareButton
           link={`${
             state.host
           }/?0=${
-            encodeHero(state.slot0)
+            encodeHero(state.heroSlots[0])
           }&1=${
-            encodeHero(state.slot1)
+            encodeHero(state.heroSlots[1])
           }`}
         />
         <div className="column">
@@ -124,7 +125,21 @@ const Root = ({ state, dispatch }: Props) => (
       activeHeroName={path(['activeHero', 'name'], state)}
       dispatch={dispatch}
       heroes={filter(
-          // $FlowIssue typedef for prop isn't resolving correctly
+        // $FlowIssue typedef for prop isn't resolving correctly
+        compose(
+          name => (name.indexOf(toLower(state.searchString)) !== -1),
+          toLower,
+          prop('name'),
+        ),
+        michalisUnits,
+      )}
+    />
+    <HeroGrid
+      // $FlowIssue typedef for path isn't resolving correctly
+      activeHeroName={path(['activeHero', 'name'], state)}
+      dispatch={dispatch}
+      heroes={filter(
+        // $FlowIssue typedef for prop isn't resolving correctly
         compose(
           name => (name.indexOf(toLower(state.searchString)) !== -1),
           toLower,

@@ -52,38 +52,43 @@ const dmgFormula = (
   ),
 );
 
-const hasWeaponBreaker = (heroA: HeroInstance, heroB: HeroInstance) => {
+const hasWeaponBreaker = (instanceA: HeroInstance, instanceB: HeroInstance) => {
+  const heroB = lookupStats(instanceB.name);
   let necessaryBreaker = replace(/(Red|Green|Blue|Neutral)\s/, '', heroB.weaponType) + 'breaker';
   if (test(/Tome/, heroB.weaponType)) {
     // R Tomebreaker, G Tomebreaker, B Tomebreaker
     necessaryBreaker = heroB.weaponType[0] + ' ' + necessaryBreaker;
   }
-  if (hasSkill(heroA, 'PASSIVE_B', necessaryBreaker)) {
+  if (hasSkill(instanceA, 'PASSIVE_B', necessaryBreaker)) {
     return true;
   }
   if (necessaryBreaker === 'Daggerbreaker') {
-    return hasSkill(heroA, 'WEAPON', 'Assassin\'s Bow');
+    return hasSkill(instanceA, 'WEAPON', 'Assassin\'s Bow');
   }
   return false;
 };
 
 // Whether or not a unit will perform a follow-up attack.
-const doesFollowUp = (heroA: HeroInstance, heroB: HeroInstance, isAttacker: boolean) => {
+const doesFollowUp = (instanceA: HeroInstance, instanceB: HeroInstance, isAttacker: boolean) => {
   // Supposedly x-breaker overrides wary-fighter, and multiple x-breakers cancel out.
-  const aHasBreaker = hasWeaponBreaker(heroA, heroB);
-  const bHasBreaker = hasWeaponBreaker(heroB, heroA);
+  const aHasBreaker = hasWeaponBreaker(instanceA, instanceB);
+  const bHasBreaker = hasWeaponBreaker(instanceB, instanceA);
   if (aHasBreaker && !bHasBreaker) {
     return true;
   } else if (bHasBreaker && !aHasBreaker) {
     return false;
-  } else if (hasSkill(heroA, 'PASSIVE_B', 'Wary Fighter')
-             || hasSkill(heroB, 'PASSIVE_B', 'Wary Fighter')) {
+  } else if (hasSkill(instanceA, 'PASSIVE_B', 'Wary Fighter')
+             || hasSkill(instanceB, 'PASSIVE_B', 'Wary Fighter')) {
     return false;
-  } else if (!isAttacker && (hasSkill(heroA, 'WEAPON', 'Armads')
-             || hasSkill(heroA, 'PASSIVE_B', 'Quick Riposte'))) {
+  } else if (!isAttacker && (hasSkill(instanceA, 'WEAPON', 'Armads')
+             || hasSkill(instanceA, 'PASSIVE_B', 'Quick Riposte'))) {
     return true;
   }
-  return (getStat(heroA, 'spd', isAttacker) - getStat(heroB, 'spd', !isAttacker) >= 5);
+  return (
+    (getStat(instanceA, 'spd', 40, isAttacker)
+    - getStat(instanceB, 'spd', 40, !isAttacker))
+    >= 5
+  );
 };
 
 // Healers do half-damage
@@ -148,7 +153,9 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
       || (test(/wolf/, weaponName) && defender.moveType === 'Cavalry')
       || (test(/Poison Dagger/, weaponName) && defender.moveType === 'Infantry')
       || (test(/Excalibur/, weaponName) && defender.moveType === 'Flying')
-      || (test(/(Falchion|Naga)/, weaponName) && test(/Beast/, defender.weaponType))) {
+      || (test(/(Falchion|Naga)/, weaponName)
+          && test(/Beast/, lookupStats(defender.name).weaponType))
+    ) {
     return 1.5;
   }
   else return 1;
@@ -173,7 +180,7 @@ const hitDmg = (attacker: HeroInstance, defender: HeroInstance, isAttacker: bool
   getStat(attacker, 'atk'),
   effectiveBonus(attacker, defender),
   advantageBonus(attacker, defender),
-  getStat(defender, getMitigationType(attacker), !isAttacker),
+  getStat(defender, getMitigationType(attacker), 40, !isAttacker),
   classModifier(attacker),
 );
 
