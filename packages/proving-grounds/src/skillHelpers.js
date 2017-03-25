@@ -1,13 +1,13 @@
 // @flow
 import {
   compose,
-  find,
   head,
+  indexBy,
   join,
   juxt,
   map,
   match,
-  propEq,
+  prop,
   tail,
   test,
   toUpper,
@@ -15,10 +15,13 @@ import {
 import stats from 'fire-emblem-heroes-stats';
 import type { Skill } from 'fire-emblem-heroes-stats';
 
+export type SkillsByName = { [key: string]: Skill };
 
-// $FlowIssue flow thinks this will return an Array
-export const getSkillInfo = (skillName: string): Skill =>
-    find(propEq('name', skillName), stats.skills);
+
+// $FlowIssue indexBy confuses flow
+const skillsByName: SkillsByName = indexBy(prop('name'), stats.skills);
+
+export const getSkillInfo = (skillName: string): Skill => skillsByName[skillName];
 
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 

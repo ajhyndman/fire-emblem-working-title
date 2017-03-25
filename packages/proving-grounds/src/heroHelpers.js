@@ -4,13 +4,12 @@ import {
   compose,
   concat,
   filter,
-  find,
   indexBy,
   isNil,
   map,
   not,
+  prop,
   pathOr,
-  propEq,
   test,
 } from 'ramda';
 import type {
@@ -51,6 +50,8 @@ export type HeroInstance = {
   +skills: InstanceSkills;
 };
 
+export type HeroesByName = { [key: string]: Hero };
+
 // NOT USED YET: Just conjecture for potential future support of
 // user custom unit creation.
 
@@ -72,7 +73,9 @@ export type HeroInstance = {
 //   passiveC: PassiveSkill;
 // };
 
-const allHeroes = concat(stats.heroes, michalisHeros);
+
+// $FlowIssue indexBy confuses flow
+const heroesByName: HeroesByName = indexBy(prop('name'), concat(stats.heroes, michalisHeros));
 
 /**
  * Look up a hero's base stats by name.
@@ -81,8 +84,7 @@ const allHeroes = concat(stats.heroes, michalisHeros);
  * @returns {Hero} A raw hero object, from fire-emblem-heroes-stats.
  */
 export const lookupStats = (name: string): Hero => {
-  // $FlowIssue: Flowtype for find is too generic
-  const hero: ?Hero = find(propEq('name', name), allHeroes);
+  const hero: ?Hero = heroesByName[name];
   return hero || {
     name,
     weaponType: 'Red Sword',
