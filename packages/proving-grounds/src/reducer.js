@@ -85,15 +85,15 @@ const reducer = (state: State, action: Action): State => {
     case 'UPDATE_BANE':
       if (state.activeSlot == null) return state;
       // $FlowIssue: Flowtype definition for assocPath is too generic.
-      return assocPath([`slot${state.activeSlot}`, 'bane'], action.stat, state);
+      return assocPath(['heroSlots', state.activeSlot, 'bane'], action.stat, state);
     case 'UPDATE_BOON':
       if (state.activeSlot == null) return state;
       // $FlowIssue: Flowtype definition for assocPath is too generic.
-      return assocPath([`slot${state.activeSlot}`, 'boon'], action.stat, state);
+      return assocPath(['heroSlots', state.activeSlot, 'boon'], action.stat, state);
     case 'UPDATE_RARITY':
       if (state.activeSlot == null) return state;
       // $FlowIssue: Flowtype definition for assocPath is too generic.
-      return assocPath([`slot${state.activeSlot}`, 'rarity'], action.rarity, state);
+      return assocPath(['heroSlots', state.activeSlot, 'rarity'], action.rarity, state);
     default:
       return state;
   }
