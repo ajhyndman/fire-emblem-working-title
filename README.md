@@ -21,4 +21,4 @@ dependencies and link them to each other with:
 Check out the README for each package for further information.
 
 * [fire-emblem-heroes-stats](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-stats/)
-* [proving-grounds](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/proving-groundsr/)
+* [proving-grounds](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/proving-grounds/)
