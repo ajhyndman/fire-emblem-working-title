@@ -144,10 +144,10 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
     return 1.5;
   }
   const weaponName = getSkill(attacker, 'WEAPON');
-  if ((test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defender.moveType == 'Armored')
-      || (test(/wolf/, weaponName) && defender.moveType == 'Cavalry')
-      || (test(/Poison Dagger/, weaponName) && defender.moveType == 'Infantry')
-      || (test(/Excalibur/, weaponName) && defender.moveType == 'Flying')
+  if ((test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defender.moveType === 'Armored')
+      || (test(/wolf/, weaponName) && defender.moveType === 'Cavalry')
+      || (test(/Poison Dagger/, weaponName) && defender.moveType === 'Infantry')
+      || (test(/Excalibur/, weaponName) && defender.moveType === 'Flying')
       || (test(/(Falchion|Naga)/, weaponName) && test(/Beast/, defender.weaponType))) {
     return 1.5;
   }
@@ -212,7 +212,7 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
   const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
   const heroes = [attacker, defender];
   let numAttacks = [0, 0];
-  let healths = [getStat(attacker, "hp"), getStat(defender, "hp")];
+  let healths = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
   for (let heroIndex of attackOrder) {
     // heroIndex hits otherHeroIndex.
     numAttacks[heroIndex]++;
@@ -223,7 +223,7 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
       if (stillFighting && hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb')) {
         healths[heroIndex] = Math.min(
           healths[heroIndex] + Math.floor(damages[heroIndex] / 2),
-          getStat(heroes[heroIndex], "hp"),
+          getStat(heroes[heroIndex], 'hp'),
         );
       }
     }
