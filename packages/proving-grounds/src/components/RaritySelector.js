@@ -11,9 +11,9 @@ type Props = {
   disabled?: [boolean, boolean, boolean, boolean, boolean];
   selected: Rarity;
   onChange: (rarity: Rarity) => void;
-}
+};
 
-const RaritySelector = ({ 
+const RaritySelector = ({
   disabled = [false, false, false, false, false],
   selected,
   onChange,
@@ -47,6 +47,7 @@ const RaritySelector = ({
         const isDisabled = disabled[i - 1];
         return (
           <img
+            key={`${i}`}
             role="button"
             tabIndex="0"
             className={cn({

@@ -1,14 +1,14 @@
 // @flow
 import React from 'react';
-import type { Hero } from 'fire-emblem-heroes-stats';
 
 import { calculateResult } from '../damageCalculation';
 import { getStat } from '../heroHelpers';
+import type { HeroInstance } from '../heroHelpers';
 
 
 type Props = {
-  leftHero: ?Hero;
-  rightHero: ?Hero;
+  leftHero: ?HeroInstance;
+  rightHero: ?HeroInstance;
 };
 
 const printDamage = (damage, numAttacks) => (
@@ -77,6 +77,6 @@ const CombatResult = ({ leftHero, rightHero }: Props) => {
         : null}
     </div>
   );
-}
+};
 
 export default CombatResult;

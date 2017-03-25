@@ -31,7 +31,6 @@ const SegmentedControl = ({
         font-family: ${fontFamilies.ui};
         font-weight: bold;
         font-size: 16px;
-        flex-basis: ${(1 / (options.length + 1)) * 100}%;
         letter-spacing: 0.05em;
         border-top: 2px solid ${colors.aquaIsland};
         border-bottom: 2px solid ${colors.fadedJade};
@@ -82,6 +81,7 @@ const SegmentedControl = ({
       (option, i) => (
         <button
           className={cn({ active: (selected === i) })}
+          style={{ flexBasis: `${(1 / (options.length + 1)) * 100}%` }}
           onClick={() => onChange(i)}
         >
           {option}

@@ -22,6 +22,7 @@ export const fontFamilies = Object.freeze({
 
 export const fontSizes = Object.freeze({
   small: 13,
+  medium: 16,
 });
 
 export const gridSize = 56;

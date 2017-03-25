@@ -1,21 +1,26 @@
 // @flow
 import { createStore } from 'redux';
-import type { Hero } from 'fire-emblem-heroes-stats';
 
 import reducer from './reducer';
+import type { HeroInstance } from './heroHelpers';
+
 
 export type State = {
-  activeHero: ?Hero;
+  host: string;
+  activeHero: ?HeroInstance;
   activeSlot: 0 | 1 | void;
-  heroSlots: [?Hero, ?Hero];
+  heroSlots: [?HeroInstance, ?HeroInstance];
   searchString: string;
+  previewLevel: 1 | 40;
 };
 
 const emptyState: State = {
   activeHero: undefined,
   activeSlot: undefined,
   heroSlots: [undefined, undefined],
+  host: '',
   searchString: '',
+  previewLevel: 1,
 };
 
 const initStore = (initialState: State = emptyState) => {

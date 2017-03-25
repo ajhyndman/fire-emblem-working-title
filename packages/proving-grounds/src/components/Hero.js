@@ -5,14 +5,16 @@ import { replace } from 'ramda';
 import { colors, gridSize } from '../theme';
 import { staticUrl } from '../../config';
 
+type Rarity = 1 | 2 | 3 | 4 | 5;
 
 type Props = {
   name: string;
-  weaponType: string;
+  weaponType: ?string;
+  rarity?: Rarity;
 };
 
-const Hero = ({ name, weaponType }: Props) => {
-  const weaponTypeUri = replace(' ', '_', weaponType);
+const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
+  const weaponTypeUri = weaponType ? replace(' ', '_', weaponType) : '';
 
   return (
     <div className="root">
@@ -41,9 +43,9 @@ const Hero = ({ name, weaponType }: Props) => {
       `}</style>
       <img
         className="frame"
-        src={`${staticUrl}Frame_Rarity_5.png`}
+        src={`${staticUrl}Frame_Rarity_${rarity}.png`}
       />
-      <img
+      {weaponType && <img
         className="class"
         title={weaponType}
         src={`${staticUrl}35px-Icon_Class_${weaponTypeUri}.png`}
@@ -52,7 +54,7 @@ const Hero = ({ name, weaponType }: Props) => {
           ${staticUrl}Icon_Class_${weaponTypeUri}.png 56w
         `}
         sizes="20px"
-      />
+      />}
       <img
         className="portrait"
         title={name}
@@ -68,4 +70,4 @@ const Hero = ({ name, weaponType }: Props) => {
   );
 };
 
-export default Hero;
+export default HeroPortrait;

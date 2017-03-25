@@ -1,8 +1,10 @@
 // @flow
 import React from 'react';
+import Router from 'next/router';
 
 import Hero from './Hero';
 import { colors } from '../theme';
+import { lookupStats } from '../heroHelpers';
 import type { Dispatch } from '../reducer';
 
 
@@ -66,9 +68,18 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
           event.stopPropagation();
           dispatch({ type: 'SELECT_SLOT', slot: 0 });
         }}
+        onContextMenu={event => {
+          event.preventDefault();
+          dispatch({ type: 'SELECT_SLOT', slot: 0 });
+          Router.push('/configure');
+        }}
       >
         {leftHero
-          ? <Hero name={leftHero.imageName || leftHero.name} weaponType={leftHero.weaponType} />
+          ? <Hero
+            name={leftHero.name}
+            weaponType={lookupStats(leftHero.name).weaponType}
+            rarity={leftHero.rarity}
+          />
           : null}
       </div>
       <div
@@ -86,9 +97,18 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
           event.stopPropagation();
           dispatch({ type: 'SELECT_SLOT', slot: 1 });
         }}
+        onContextMenu={event => {
+          event.preventDefault();
+          dispatch({ type: 'SELECT_SLOT', slot: 1 });
+          Router.push('/configure');
+        }}
       >
         {rightHero
-          ? <Hero name={rightHero.imageName || rightHero.name} weaponType={rightHero.weaponType} />
+          ? <Hero
+            name={rightHero.name}
+            weaponType={lookupStats(rightHero.name).weaponType}
+            rarity={rightHero.rarity}
+          />
           : null}
       </div>
     </div>

@@ -5,7 +5,6 @@ import {
   replace,
   test,
 } from 'ramda';
-import type { Hero } from 'fire-emblem-heroes-stats';
 
 import {
   getMitigationType,
@@ -15,7 +14,9 @@ import {
   getWeaponColor,
   hasBraveWeapon,
   hasSkill,
+  lookupStats,
 } from './heroHelpers';
+import type { HeroInstance } from './heroHelpers';
 
 
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
@@ -51,11 +52,11 @@ const dmgFormula = (
   ),
 );
 
-const hasWeaponBreaker = (heroA: Hero, heroB: Hero) => {
+const hasWeaponBreaker = (heroA: HeroInstance, heroB: HeroInstance) => {
   let necessaryBreaker = replace(/(Red|Green|Blue|Neutral)\s/, '', heroB.weaponType) + 'breaker';
   if (test(/Tome/, heroB.weaponType)) {
     // R Tomebreaker, G Tomebreaker, B Tomebreaker
-    necessaryBreaker = heroB.weaponType[0] + ' ' + necessaryBreaker
+    necessaryBreaker = heroB.weaponType[0] + ' ' + necessaryBreaker;
   }
   if (hasSkill(heroA, 'PASSIVE_B', necessaryBreaker)) {
     return true;
@@ -64,10 +65,10 @@ const hasWeaponBreaker = (heroA: Hero, heroB: Hero) => {
     return hasSkill(heroA, 'WEAPON', 'Assassin\'s Bow');
   }
   return false;
-}
+};
 
 // Whether or not a unit will perform a follow-up attack.
-const doesFollowUp = (heroA: Hero, heroB: Hero, isAttacker: boolean) => {
+const doesFollowUp = (heroA: HeroInstance, heroB: HeroInstance, isAttacker: boolean) => {
   // Supposedly x-breaker overrides wary-fighter, and multiple x-breakers cancel out.
   const aHasBreaker = hasWeaponBreaker(heroA, heroB);
   const bHasBreaker = hasWeaponBreaker(heroB, heroA);
@@ -83,12 +84,15 @@ const doesFollowUp = (heroA: Hero, heroB: Hero, isAttacker: boolean) => {
     return true;
   }
   return (getStat(heroA, 'spd', isAttacker) - getStat(heroB, 'spd', !isAttacker) >= 5);
-}
+};
 
 // Healers do half-damage
-const classModifier = (hero: Hero) => hero.weaponType === 'Neutral Staff' ? 0.5 : 1;
+const classModifier = (instance: HeroInstance) => {
+  const hero = lookupStats(instance.name);
+  return (hero && (hero.weaponType === 'Neutral Staff')) ? 0.5 : 1;
+};
 
-const advantageBonus = (heroA: Hero, heroB: Hero) => {
+const advantageBonus = (heroA: HeroInstance, heroB: HeroInstance) => {
   const colorA = getWeaponColor(heroA);
   const colorB = getWeaponColor(heroB);
   const weaponA = getSkill(heroA, 'WEAPON');
@@ -127,13 +131,16 @@ const advantageBonus = (heroA: Hero, heroB: Hero) => {
     advantageMultiplier = 0.3;  // 10%
   }
   return advantage * advantageMultiplier;
-}
+};
 
-const effectiveBonus = (attacker: Hero, defender: Hero) => {
+const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
   if (hasSkill(defender, 'PASSIVE_A', 'Shield')) {
     return 1;
   }
-  if (attacker.weaponType === 'Neutral Bow' && defender.moveType === 'Flying') {
+  if (
+    lookupStats(attacker.name).weaponType === 'Neutral Bow'
+    && lookupStats(defender.name).moveType === 'Flying'
+  ) {
     return 1.5;
   }
   const weaponName = getSkill(attacker, 'WEAPON');
@@ -147,7 +154,7 @@ const effectiveBonus = (attacker: Hero, defender: Hero) => {
   else return 1;
 };
 
-const canRetaliate = (attacker: Hero, defender: Hero) => {
+const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
   if (getRange(defender) === getRange(attacker)) {
     return true;
   }
@@ -158,12 +165,12 @@ const canRetaliate = (attacker: Hero, defender: Hero) => {
        || weaponName === 'Raijinto'
        || weaponName === 'Lightning Breath'
        || weaponName === 'Lightning Breath+');
-}
+};
 
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
-const hitDmg = (attacker: Hero, defender: Hero, isAttacker: boolean) => dmgFormula(
-  getStat(attacker, "atk", isAttacker),
+const hitDmg = (attacker: HeroInstance, defender: HeroInstance, isAttacker: boolean) => dmgFormula(
+  getStat(attacker, 'atk'),
   effectiveBonus(attacker, defender),
   advantageBonus(attacker, defender),
   getStat(defender, getMitigationType(attacker), !isAttacker),
@@ -177,7 +184,7 @@ const hitDmg = (attacker: Hero, defender: Hero, isAttacker: boolean) => dmgFormu
  * @param {Hero} defender
  * @returns {object}
  */
-export const calculateResult = (attacker: Hero, defender: Hero) => {
+export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) => {
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
   // attacker hits defender
