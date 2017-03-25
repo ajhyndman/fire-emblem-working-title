@@ -52,9 +52,11 @@ const reducer = (state: State, action: Action): State => {
         ? { ...state, activeSlot: action.slot }
         : (action.slot == null)
           ? { ...state, ...clearActiveState }
-          : (action.slot === 0)
-            ? { ...state, ...clearActiveState, slot0: state.activeHero }
-            : { ...state, ...clearActiveState, slot1: state.activeHero };
+          : {
+            ...state,
+            ...clearActiveState,
+            heroSlots: update(action.slot, state.activeHero, state.heroSlots),
+          };
     case 'SELECT_HERO':
       return (state.activeSlot == null)
         // Move hero to first empty slot or select hero.
@@ -66,9 +68,11 @@ const reducer = (state: State, action: Action): State => {
           }
           : { ...state, activeHero: action.hero }
         // Move hero to selected slot.
-        : (state.activeSlot === 0)
-          ? { ...state, ...clearActiveState, heroSlots: update(0, action.hero, state.heroSlots) }
-          : { ...state, ...clearActiveState, heroSlots: update(1, action.hero, state.heroSlots) };
+        : {
+          ...state,
+          ...clearActiveState,
+          heroSlots: update(state.activeSlot, action.hero, state.heroSlots),
+        };
     case 'SET_HOST':
       return { ...state, host: action.host };
     case 'SET_PREVIEW_LEVEL':
