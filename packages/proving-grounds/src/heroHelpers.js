@@ -126,7 +126,7 @@ export function getDefaultSkills(name: string, rarity: 1 | 2 | 3 | 4 | 5): Insta
 
 export const hasBraveWeapon: (instance: HeroInstance) => boolean = compose(
   test(/Brave|Dire/),
-  pathOr('', ['weapon', 'name']),
+  pathOr('', ['skills', 'WEAPON', 'name']),
 );
 
 /**
