@@ -34,7 +34,7 @@ const backgroundUrl = 'triskel_by_codysymes-d7ewlm9.png';
 class Root extends React.Component {
   props: Props;
 
-  shouldComponentUpdate(nextProps) {
+  shouldComponentUpdate(nextProps: Props) {
     return (
       this.props.state.heroSlots !== nextProps.state.heroSlots
       || this.props.state.activeSlot !== nextProps.state.activeSlot
