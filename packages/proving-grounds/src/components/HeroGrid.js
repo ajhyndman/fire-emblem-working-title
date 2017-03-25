@@ -20,6 +20,8 @@ type Props = {
   heroes: Array<Object>;
 };
 
+const gutterWidth = 5;
+
 const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
   <div className="grid">
     <style jsx>{`
@@ -36,7 +38,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
         box-shadow: 0 0 10px rgba(70, 183, 227, 0.4);
         cursor: pointer;
         height: ${gridSize}px;
-        margin: 5px;
+        margin: ${gutterWidth}px;
         position: relative;
         transition: box-shadow 0.2s;
         user-select: none;
@@ -44,6 +46,12 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
       }
       .gridSquare:hover {
         box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
+      }
+      .gridSquareOuter {
+        align-items: center;
+        display: flex;
+        flex-basis: ${gridSize + gutterWidth}px;
+        flex-direction: column;
       }
       .active, .active:hover {
         box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5), 0 0 2px 4px rgba(223, 110, 134, 0.9);
@@ -66,7 +74,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
     `}</style>
     {map(
       (hero) => (
-        <div>
+        <div className="gridSquareOuter">
           <div
             key={hero.name}
             className={`gridSquare ${activeHeroName === hero.name ? 'active' : ''}`}
