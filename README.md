@@ -3,7 +3,7 @@
 This is a lerna repo managing two packages:
 
 * fire-emblem-heroes-stats
-* fire-emblem-heroes-combat-simulator
+* proving-grounds
 
 ## Getting started
 
