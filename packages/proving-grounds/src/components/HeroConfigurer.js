@@ -1,14 +1,11 @@
 // @flow
 import React from 'react';
-import stats from 'fire-emblem-heroes-stats';
 import {
   compose,
   equals,
   filter,
-  find,
   keys,
   not,
-  propEq,
   values,
   zipObj,
 } from 'ramda';
@@ -19,7 +16,7 @@ import SegmentedControl from './SegmentedControl';
 import Select from './Select';
 import StatSheet from './StatSheet';
 import { colors, fontFamilies, fontSizes } from '../theme';
-import { hasStatsForRarity } from '../heroHelpers';
+import { hasStatsForRarity, lookupStats } from '../heroHelpers';
 import type { HeroInstance } from '../heroHelpers';
 import type { Dispatch } from '../reducer';
 
@@ -35,8 +32,7 @@ const HeroConfigurer = ({
   heroInstance,
   level,
 }: Props) => {
-  // $FlowIssue flowtype for find is too generic
-  const hero: Hero = find(propEq('name', heroInstance.name), stats.heroes);
+  const hero: Hero = lookupStats(heroInstance.name);
 
   const varianceOptions = {
     HP: 'hp',
