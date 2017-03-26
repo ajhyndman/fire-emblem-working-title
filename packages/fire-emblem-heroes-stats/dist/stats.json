@@ -16284,7 +16284,8 @@
       "range(rng)": 1,
       "effect": "Effective against armored units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Armorslayer+",
@@ -16293,7 +16294,8 @@
       "range(rng)": 1,
       "effect": "Effective against armored units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Binding Blade",
@@ -16302,7 +16304,8 @@
       "range(rng)": 1,
       "effect": "Grants Def/Res+2 when this unit is attacked.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Brave Sword",
@@ -16311,7 +16314,8 @@
       "range(rng)": 1,
       "effect": "Spd-5. Attack twice when initiating combat.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Brave Sword+",
@@ -16320,7 +16324,8 @@
       "range(rng)": 1,
       "effect": "Spd-5. Attack twice when initiating combat.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Durandal",
@@ -16329,7 +16334,8 @@
       "range(rng)": 1,
       "effect": "Grants Atk+4 during combat if unit initiates attack.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Eckesachs",
@@ -16347,7 +16353,8 @@
       "range(rng)": 1,
       "effect": "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Fólkvangr",
@@ -16356,7 +16363,8 @@
       "range(rng)": 1,
       "effect": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Iron Sword",
@@ -16365,7 +16373,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Killing Edge",
@@ -16374,7 +16383,8 @@
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Killing Edge+",
@@ -16383,7 +16393,8 @@
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Mystletainn",
@@ -16392,7 +16403,8 @@
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Raijinto",
@@ -16401,7 +16413,8 @@
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of distance if this unit is attacked",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Ruby Sword",
@@ -16410,7 +16423,8 @@
       "range(rng)": 1,
       "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Ruby Sword+",
@@ -16419,7 +16433,8 @@
       "range(rng)": 1,
       "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Siegfried",
@@ -16437,7 +16452,8 @@
       "range(rng)": 1,
       "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Silver Sword",
@@ -16446,7 +16462,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Silver Sword+",
@@ -16455,7 +16472,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Sol Katti",
@@ -16464,7 +16482,8 @@
       "range(rng)": 1,
       "effect": "If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Steel Sword",
@@ -16473,7 +16492,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Tyrfing",
@@ -16482,7 +16502,8 @@
       "range(rng)": 1,
       "effect": "Grants Def+4 in battle if unit's HP ≤ 50%.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Wo Dao",
@@ -16491,7 +16512,8 @@
       "range(rng)": 1,
       "effect": "Grants +10 to damage when Special triggers.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Wo Dao+",
@@ -16500,7 +16522,8 @@
       "range(rng)": 1,
       "effect": "Grants +10 to damage when Special triggers.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Yato",
@@ -16509,7 +16532,8 @@
       "range(rng)": 1,
       "effect": "Grants Spd+4 during combat if unit initiates attack.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Bolganone",
@@ -16518,7 +16542,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Bolganone+",
@@ -16527,7 +16552,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Brynhildr",
@@ -16536,7 +16562,8 @@
       "range(rng)": 2,
       "effect": "If character initiates attack, restricts enemies's next-turn movement to 1 space or less.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Cymbeline",
@@ -16545,7 +16572,8 @@
       "range(rng)": 2,
       "effect": "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Elfire",
@@ -16554,7 +16582,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Fenrir",
@@ -16563,7 +16592,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Fenrir+",
@@ -16572,7 +16602,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Fire",
@@ -16581,7 +16612,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Flux",
@@ -16590,7 +16622,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Rauðrblade",
@@ -16599,7 +16632,8 @@
       "range(rng)": 2,
       "effect": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Rauðrblade+",
@@ -16608,7 +16642,8 @@
       "range(rng)": 2,
       "effect": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Rauðrraven",
@@ -16617,7 +16652,8 @@
       "range(rng)": 2,
       "effect": "Grants weapon advantage vs. colorless foes.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Rauðrraven+",
@@ -16626,7 +16662,8 @@
       "range(rng)": 2,
       "effect": "Grants weapon advantage vs. colorless foes.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Rauðrwolf",
@@ -16635,7 +16672,8 @@
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Rauðrwolf+",
@@ -16644,7 +16682,8 @@
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Ruin",
@@ -16653,7 +16692,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Fire Breath",
@@ -16662,7 +16702,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Fire Breath+",
@@ -16671,7 +16712,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Flametongue",
@@ -16680,7 +16722,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Flametongue+",
@@ -16689,7 +16732,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Lightning Breath",
@@ -16698,7 +16742,8 @@
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Lightning Breath+",
@@ -16707,7 +16752,8 @@
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Brave Lance",
@@ -16716,7 +16762,8 @@
       "range(rng)": 1,
       "effect": "Spd-5. Attack twice when initiating combat.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Brave Lance+",
@@ -16725,7 +16772,8 @@
       "range(rng)": 1,
       "effect": "Spd-5. Attack twice when initiating combat.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Fensalir",
@@ -16734,7 +16782,8 @@
       "range(rng)": 1,
       "effect": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Gradivus",
@@ -16752,7 +16801,8 @@
       "range(rng)": 1,
       "effect": "Effective against armored units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Heavy Spear+",
@@ -16761,7 +16811,8 @@
       "range(rng)": 1,
       "effect": "Effective against armored units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Iron Lance",
@@ -16770,7 +16821,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Killer Lance",
@@ -16779,7 +16831,8 @@
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Killer Lance+",
@@ -16788,7 +16841,8 @@
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Sapphire Lance",
@@ -16797,7 +16851,8 @@
       "range(rng)": 1,
       "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Sapphire Lance+",
@@ -16806,7 +16861,8 @@
       "range(rng)": 1,
       "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Siegmund",
@@ -16815,7 +16871,8 @@
       "range(rng)": 1,
       "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Silver Lance",
@@ -16824,7 +16881,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Silver Lance+",
@@ -16833,7 +16891,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Steel Lance",
@@ -16842,7 +16901,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Aura",
@@ -16851,7 +16911,8 @@
       "range(rng)": 2,
       "effect": "Restores 5 HP to adjacent allies after any combat this unit initiates",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Blárblade",
@@ -16860,7 +16921,8 @@
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Blárblade+",
@@ -16869,7 +16931,8 @@
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Blárraven",
@@ -16878,7 +16941,8 @@
       "range(rng)": 2,
       "effect": "Grants weapon advantage vs. colorless foes.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Blárraven+",
@@ -16887,7 +16951,8 @@
       "range(rng)": 2,
       "effect": "Grants weapon advantage vs. colorless foes.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Blárwolf",
@@ -16896,7 +16961,8 @@
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Blárwolf+",
@@ -16905,7 +16971,8 @@
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Dire Thunder",
@@ -16914,7 +16981,8 @@
       "range(rng)": 2,
       "effect": "Spd-5. Attack twice when initiating combat.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Elthunder",
@@ -16923,7 +16991,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Thoron",
@@ -16932,7 +17001,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Thoron+",
@@ -16950,7 +17020,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Valaskjálf",
@@ -16968,7 +17039,8 @@
       "range(rng)": 1,
       "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Dark Breath+",
@@ -16977,7 +17049,8 @@
       "range(rng)": 1,
       "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Fire Breath",
@@ -16986,7 +17059,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Fire Breath+",
@@ -16995,7 +17069,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Lightning Breath",
@@ -17004,7 +17079,8 @@
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Lightning Breath+",
@@ -17013,7 +17089,8 @@
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Armads",
@@ -17022,7 +17099,8 @@
       "range(rng)": 1,
       "effect": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Brave Axe",
@@ -17031,7 +17109,8 @@
       "range(rng)": 1,
       "effect": "Spd-5. Attack twice when initiating combat.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Brave Axe+",
@@ -17040,7 +17119,8 @@
       "range(rng)": 1,
       "effect": "Spd-5. Attack twice when initiating combat.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Emerald Axe",
@@ -17049,7 +17129,8 @@
       "range(rng)": 1,
       "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Emerald Axe+",
@@ -17058,7 +17139,8 @@
       "range(rng)": 1,
       "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Hammer",
@@ -17067,7 +17149,8 @@
       "range(rng)": 1,
       "effect": "Effective against armored units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Hammer+",
@@ -17076,7 +17159,8 @@
       "range(rng)": 1,
       "effect": "Effective against armored units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Hauteclere",
@@ -17085,7 +17169,8 @@
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Iron Axe",
@@ -17094,7 +17179,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Killer Axe",
@@ -17103,7 +17189,8 @@
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Killer Axe+",
@@ -17112,7 +17199,8 @@
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Nóatún",
@@ -17121,7 +17209,8 @@
       "range(rng)": 1,
       "effect": "Unit may move adjacent to any ally when HP &lt;= 40%",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Silver Axe",
@@ -17130,7 +17219,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Silver Axe+",
@@ -17139,7 +17229,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Steel Axe",
@@ -17148,7 +17239,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Elwind",
@@ -17157,7 +17249,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Excalibur",
@@ -17166,7 +17259,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Gronnblade",
@@ -17175,7 +17269,8 @@
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Gronnblade+",
@@ -17184,7 +17279,8 @@
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Gronnraven",
@@ -17193,7 +17289,8 @@
       "range(rng)": 2,
       "effect": "Grants weapon advantage vs. colorless foes.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Gronnraven+",
@@ -17202,7 +17299,8 @@
       "range(rng)": 2,
       "effect": "Grants weapon advantage vs. colorless foes.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Gronnwolf",
@@ -17211,7 +17309,8 @@
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Gronnwolf+",
@@ -17220,7 +17319,8 @@
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Naga",
@@ -17229,7 +17329,8 @@
       "range(rng)": 2,
       "effect": "Effective against dragons. Grants Def/Res+2 when this unit is attacked.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Rexcalibur",
@@ -17238,7 +17339,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Rexcalibur+",
@@ -17256,7 +17358,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Élivágar",
@@ -17274,7 +17377,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Fire Breath+",
@@ -17283,7 +17387,8 @@
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Light Breath",
@@ -17292,7 +17397,8 @@
       "range(rng)": 1,
       "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Light Breath+",
@@ -17301,7 +17407,8 @@
       "range(rng)": 1,
       "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Absorb",
@@ -17310,7 +17417,8 @@
       "range(rng)": 2,
       "effect": "Recovers HP=50% of damage dealt.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Assault",
@@ -17319,7 +17427,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Fear",
@@ -17328,7 +17437,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Atk-6 on targeted foe throught its next action.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Gravity",
@@ -17337,7 +17447,8 @@
       "range(rng)": 2,
       "effect": "After any combat, prevents foe from moving more than 1 space through its next action.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Pain",
@@ -17346,7 +17457,8 @@
       "range(rng)": 2,
       "effect": "Inflicts 10 damage on targeted foe after combat.  Cannot drop enemy hit points below 1.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Panic",
@@ -17355,7 +17467,8 @@
       "range(rng)": 2,
       "effect": "After combat, bonuses on targeted foe become penalties through its next action.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Slow",
@@ -17364,7 +17477,8 @@
       "range(rng)": 2,
       "effect": "After any combat, inflicts Spd-6 on foe through its next action.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Assassin's Bow",
@@ -17373,7 +17487,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Assassin's Bow+",
@@ -17382,7 +17497,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Brave Bow",
@@ -17391,7 +17507,8 @@
       "range(rng)": 2,
       "effect": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Brave Bow+",
@@ -17400,7 +17517,8 @@
       "range(rng)": 2,
       "effect": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Deathly Dagger",
@@ -17409,7 +17527,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, 7 damage to foe after battle.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Fujin Yumi",
@@ -17418,7 +17537,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. Unit can pass though foes if own HP ≥ 50%.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Iron Bow",
@@ -17427,7 +17547,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Killer Bow",
@@ -17436,7 +17557,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units.Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Killer Bow+",
@@ -17445,7 +17567,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units.Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Parthia",
@@ -17454,7 +17577,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. Grants +4 Res during combat if initiating attack.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Silver Bow",
@@ -17463,7 +17587,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Silver Bow+",
@@ -17472,7 +17597,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Steel Bow",
@@ -17481,7 +17607,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Iron Dagger",
@@ -17490,7 +17617,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Poison Dagger",
@@ -17499,7 +17627,8 @@
       "range(rng)": 2,
       "effect": "Effective against infantry units . Infantry foes suffer Def/Res-4 after combat through their next actions.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Poison Dagger+",
@@ -17508,7 +17637,8 @@
       "range(rng)": 2,
       "effect": "Effective against infantry units . Infantry foes suffer Def/Res-6 after combat through their next actions.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Rogue Dagger",
@@ -17517,7 +17647,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-3 on foe through its next action.Grants unit Def/Res+3 for 1 turn.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Rogue Dagger+",
@@ -17526,7 +17657,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-5 on foe through its next action.Grants unit Def/Res+5 for 1 turn.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Silver Dagger",
@@ -17535,7 +17667,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-5 on foe through its next action.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Silver Dagger+",
@@ -17544,7 +17677,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-7 on foe through its next action.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Smoke Dagger",
@@ -17553,7 +17687,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Smoke Dagger+",
@@ -17562,7 +17697,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Steel Dagger",
@@ -17571,7 +17707,8 @@
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
     },
     {
       "name": "Ardent Sacrifice",

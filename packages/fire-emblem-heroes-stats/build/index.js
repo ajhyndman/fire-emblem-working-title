@@ -7,6 +7,7 @@ import {
   flatten,
   identity,
   ifElse,
+  indexBy,
   has,
   map,
   mapObjIndexed,
@@ -14,6 +15,8 @@ import {
   mergeWith,
   pick,
   prop,
+  propEq,
+  test,
   toUpper,
   values,
   zipObj,
@@ -89,14 +92,43 @@ async function fetchSkills() {
   return skills;
 }
 
+// Look at the weapons available to each hero to figure out weapon types.
+function skillsWithWeaponsTypes(heroes, skills) {
+  const skillsByName = indexBy(prop('name'), skills);
+  var weaponTypeByName = {};
+  for (let hero of heroes) {
+    const heroWeaponType = test(/Beast/, hero.weaponType) ? 'Breath' : hero.weaponType;
+    for (let skill of hero.skills) {
+      const skillInfo = skillsByName[skill.name];
+      if (skillInfo == null) {
+        console.log('Warning: unknown skill: ' + skill.name);
+      }
+      if (skillInfo.type === 'WEAPON') {
+        weaponTypeByName[skill.name] = heroWeaponType;
+      }
+    }
+  }
+  return map(
+    ifElse(
+      propEq('type', 'WEAPON'),
+      (skill) => assoc('weaponType', weaponTypeByName[skill.name], skill),
+      identity,
+    ),
+    skills
+  );
+}
+
 // Fetch new data and write it to stats.json
 async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   const existingStats = JSON.parse(fs.readFileSync('./dist/stats.json', 'utf8'));
   const heroes = shouldFetchHeroes ? await fetchHeroStats() : existingStats['heroes'];
   const skills = shouldFetchSkills ? await fetchSkills() : existingStats['skills'];
 
+  // Infer weapon subtypes from the heroes that own them.
+  const skillsV2 = skillsWithWeaponsTypes(heroes, skills);
+
   // WRITE STATS TO FILE
-  const allStats = { heroes, skills };
+  const allStats = { heroes, skills: skillsV2 };
   fs.writeFileSync('./dist/stats.json', JSON.stringify(allStats, null, 2));
 }
 
