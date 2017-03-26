@@ -48,6 +48,10 @@ class Configure extends React.Component {
             event.stopPropagation();
             Router.push('/');
           }}
+          onMouseEnter={() => {
+            // The root route is going to be frequently switched to and from.
+            Router.prefetch('/');
+          }}
         >
           <div className="container">
             <HeroConfigurer
