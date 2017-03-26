@@ -4,6 +4,7 @@ import {
   dissoc,
   filter,
   flatten,
+  identity,
   isNil,
   map,
   match,
@@ -39,6 +40,10 @@ export const parseTable = (tableHtml) => {
     match(/<th(\s[^>]*?)?>.*?<\/th[^>]*?>/g),  // Match <th> tags without matching <thead>
   )(tableHtml);
 
+  // Some tables wrap the header in <tr> tags and others do not.
+  const firstRow = match(/<tr[^>]*?>.*?<\/tr.*?>/g, tableHtml)[0];
+  const isFirstRowHeader = test(/<th(\s[^>]*?)?>.*?<\/th[^>]*?>/g, firstRow);
+  
   const tableRows = compose(
     map(compose(
       map(compose(
@@ -47,7 +52,7 @@ export const parseTable = (tableHtml) => {
         replace(/<[^>]*?>/g, ''),  // Remove all html tags (td, a, span, img, b)
       )),
       match(/<td[^>]*?>.*?<\/td>/g))),
-    tail,  // Remove the header row
+    (isFirstRowHeader ? tail : identity),
     match(/<tr[^>]*?>.*?<\/tr.*?>/g),
     replace(/&#160;/g, ''),  // &nbsp, also known as \xa0
   )(tableHtml);

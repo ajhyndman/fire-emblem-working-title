@@ -1,11 +1,152 @@
 {
   "heroes": [
     {
+      "name": "Abel",
+      "moveType": "Cavalry",
+      "weaponType": "Blue Lance",
+      "total": 154,
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Brave Lance",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Brave Lance+",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Holy Vestments",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Aegis",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "HP +3",
+          "rarity": "-"
+        },
+        {
+          "name": "HP +4",
+          "rarity": 4
+        },
+        {
+          "name": "HP +5",
+          "rarity": 5
+        },
+        {
+          "name": "Swordbreaker 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 4
+        }
+      ],
+      "stats": {
+        "1": {
+          "4": {
+            "hp": 16,
+            "atk": 6,
+            "spd": 8,
+            "def": 8,
+            "res": 5
+          },
+          "5": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 8,
+            "def": 8,
+            "res": 6
+          }
+        },
+        "40": {
+          "4": {
+            "hp": [
+              33,
+              36,
+              39
+            ],
+            "atk": [
+              "-",
+              30,
+              33
+            ],
+            "spd": [
+              27,
+              30,
+              33
+            ],
+            "def": [
+              21,
+              24,
+              27
+            ],
+            "res": [
+              20,
+              23,
+              26
+            ]
+          },
+          "5": {
+            "hp": [
+              35,
+              39,
+              42
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              22,
+              25,
+              28
+            ],
+            "res": [
+              22,
+              25,
+              29
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Alfonse",
       "moveType": "Infantry",
       "weaponType": "Red Sword",
       "total": 157,
       "skills": [
+        {
+          "name": "Iron Sword",
+          "default": 2,
+          "rarity": "-"
+        },
         {
           "name": "Steel Sword",
           "default": "-",
@@ -22,13 +163,18 @@
           "rarity": 5
         },
         {
+          "name": "Daylight",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Sol",
           "default": "-",
           "rarity": 4
         },
         {
           "name": "Death Blow 1",
-          "rarity": 2
+          "rarity": 1
         },
         {
           "name": "Death Blow 2",
@@ -161,6 +307,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": "-",
           "rarity": 2
@@ -174,6 +325,11 @@
           "name": "Nóatún",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Night Sky",
+          "default": 2,
+          "rarity": "-"
         },
         {
           "name": "Astra",
@@ -194,7 +350,7 @@
         },
         {
           "name": "Spur Res 1",
-          "rarity": 2
+          "rarity": 1
         },
         {
           "name": "Spur Res 2",
@@ -315,6 +471,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": "-"
@@ -328,6 +489,11 @@
           "name": "Emerald Axe+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Swap",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "HP +3",
@@ -470,7 +636,17 @@
       "total": 147,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Pain",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
           "default": "-",
           "rarity": "-"
         },
@@ -483,6 +659,11 @@
           "name": "Martyr",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Imbue",
+          "default": 3,
+          "rarity": "-"
         },
         {
           "name": "Solid-Earth Balm",
@@ -618,6 +799,11 @@
       "total": 149,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": "-",
           "rarity": "-"
@@ -629,6 +815,11 @@
         },
         {
           "name": "Sapphire Lance+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Sing",
           "default": 5,
           "rarity": "-"
         },
@@ -705,6 +896,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": "-"
@@ -720,12 +916,17 @@
           "rarity": 5
         },
         {
+          "name": "Reposition",
+          "default": 4,
+          "rarity": 3
+        },
+        {
           "name": "Knock Back",
           "rarity": 3
         },
         {
           "name": "Spur Atk 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Spur Atk 2",
@@ -852,6 +1053,11 @@
       "total": 156,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": "-"
@@ -865,6 +1071,11 @@
           "name": "Hammer+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Smite",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Fury 1",
@@ -1007,6 +1218,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": "-"
@@ -1020,6 +1236,11 @@
           "name": "Killer Axe+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Night Sky",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Glimmer",
@@ -1159,6 +1380,11 @@
       "total": 156,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -1172,6 +1398,11 @@
           "name": "Armorslayer+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Rally Speed",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Darting Blow 1",
@@ -1195,7 +1426,7 @@
         },
         {
           "name": "Fortify Fliers",
-          "rarity": 4
+          "rarity": 5
         }
       ],
       "stats": {
@@ -1280,6 +1511,11 @@
       "total": 154,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -1293,6 +1529,11 @@
           "name": "Brave Sword+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Buckler",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Escutcheon",
@@ -1406,6 +1647,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": "-",
           "rarity": "-"
@@ -1419,6 +1665,11 @@
           "name": "Brave Axe+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Draconic Aura",
@@ -1532,6 +1783,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": "-",
           "rarity": "-"
@@ -1545,6 +1801,11 @@
           "name": "Killer Lance+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Luna",
@@ -1658,6 +1919,11 @@
       "total": 144,
       "skills": [
         {
+          "name": "Wind",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Elwind",
           "default": 3,
           "rarity": 2
@@ -1671,6 +1937,11 @@
           "name": "Gronnraven+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Rally Resistance",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Attack +1",
@@ -1778,11 +2049,11 @@
             ],
             "atk": [
               "-",
-              29,
+              28,
               "-"
             ],
             "spd": [
-              "-",
+              19,
               22,
               25
             ],
@@ -1861,6 +2132,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": "-"
@@ -1874,6 +2150,11 @@
           "name": "Hammer+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Pivot",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Attack +1",
@@ -2016,6 +2297,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -2029,6 +2315,11 @@
           "name": "Falchion",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Daylight",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Sol",
@@ -2147,8 +2438,18 @@
       "total": 144,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Fear",
           "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
+          "default": 3,
           "rarity": "-"
         },
         {
@@ -2160,6 +2461,11 @@
           "name": "Martyr",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Imbue",
+          "default": 3,
+          "rarity": "-"
         },
         {
           "name": "Swift-Winds Balm",
@@ -2295,6 +2601,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": "-",
           "rarity": "-"
@@ -2310,6 +2621,11 @@
           "rarity": 5
         },
         {
+          "name": "Night Sky",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
           "name": "Astra",
           "default": "-",
           "rarity": 4
@@ -2321,7 +2637,7 @@
         },
         {
           "name": "Triangle Adept 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Triangle Adept 2",
@@ -2333,11 +2649,11 @@
         },
         {
           "name": "Pass 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Pass 2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Pass 3",
@@ -2426,6 +2742,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Fire Breath+",
           "default": 3,
           "rarity": "-"
@@ -2439,6 +2760,11 @@
           "name": "Dark Breath+",
           "default": 5,
           "rarity": "-"
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Draconic Aura",
@@ -2459,7 +2785,7 @@
         },
         {
           "name": "Hone Atk 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Hone Atk 2",
@@ -2586,6 +2912,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -2599,6 +2930,11 @@
           "name": "Yato",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Draconic Aura",
@@ -2712,6 +3048,11 @@
       "total": 162,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": 2
@@ -2725,6 +3066,11 @@
           "name": "Brave Lance+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Reciprocal Aid",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "HP +3",
@@ -2907,6 +3253,11 @@
       "total": 169,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": 2
@@ -2920,11 +3271,6 @@
           "name": "Brave Sword+",
           "default": 5,
           "rarity": 5
-        },
-        {
-          "name": "Pavise",
-          "default": "-",
-          "rarity": 4
         },
         {
           "name": "Buckler",
@@ -2942,7 +3288,7 @@
         },
         {
           "name": "Spur Def 1",
-          "rarity": 2
+          "rarity": "-"
         },
         {
           "name": "Spur Def 2",
@@ -3093,6 +3439,11 @@
       "total": 168,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": "-",
           "rarity": "-"
@@ -3106,6 +3457,11 @@
           "name": "Silver Lance+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Smite",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Death Blow 1",
@@ -3214,6 +3570,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -3229,16 +3590,21 @@
           "rarity": 5
         },
         {
+          "name": "Pivot",
+          "default": 5,
+          "rarity": 4
+        },
+        {
           "name": "Drag Back",
           "rarity": 4
         },
         {
           "name": "Hone Spd 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Hone Spd 2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Hone Spd 3",
@@ -3327,6 +3693,11 @@
       "total": 154,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -3339,6 +3710,11 @@
         {
           "name": "Mystletainn",
           "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rising Light",
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -3411,7 +3787,17 @@
       "total": 145,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Gravity",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
           "default": "-",
           "rarity": "-"
         },
@@ -3423,6 +3809,11 @@
         {
           "name": "Recover",
           "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Imbue",
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -3491,6 +3882,11 @@
       "total": 155,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": "-"
@@ -3504,6 +3900,11 @@
           "name": "Durandal",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Holy Vestments",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Sacred Cowl",
@@ -3524,7 +3925,7 @@
         },
         {
           "name": "Spur Res 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Spur Res 2",
@@ -3651,6 +4052,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": "-",
           "rarity": "-"
@@ -3662,6 +4068,11 @@
         },
         {
           "name": "Siegmund",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "New Moon",
           "default": 5,
           "rarity": "-"
         },
@@ -3743,6 +4154,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": "-"
@@ -3756,6 +4172,11 @@
           "name": "Heavy Spear+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Shove",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Defiant Res 1",
@@ -3898,6 +4319,11 @@
       "total": 162,
       "skills": [
         {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Fire Breath+",
           "default": "-",
           "rarity": "-"
@@ -3911,6 +4337,11 @@
           "name": "Light Breath+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Draw Back",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Renewal 1",
@@ -4019,6 +4450,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Iron Dagger",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Dagger",
           "default": 3,
           "rarity": 2
@@ -4032,6 +4468,11 @@
           "name": "Silver Dagger+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Glacies",
@@ -4193,6 +4634,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": "-"
@@ -4206,6 +4652,11 @@
           "name": "Killing Edge+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Glacies",
@@ -4353,6 +4804,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": "-"
@@ -4368,8 +4824,13 @@
           "rarity": 5
         },
         {
-          "name": "Darting Blow 1",
+          "name": "Ardent Sacrifice",
+          "default": 4,
           "rarity": 3
+        },
+        {
+          "name": "Darting Blow 1",
+          "rarity": "-"
         },
         {
           "name": "Darting Blow 2",
@@ -4388,7 +4849,7 @@
           "rarity": 4
         },
         {
-          "name": "Breath of Life 3",
+          "name": "Breath of Life 2",
           "rarity": 5
         }
       ],
@@ -4446,7 +4907,7 @@
           },
           "4": {
             "hp": [
-              "-",
+              36,
               39,
               "-"
             ],
@@ -4463,7 +4924,7 @@
             "def": [
               20,
               23,
-              "-"
+              26
             ],
             "res": [
               "-",
@@ -4508,6 +4969,11 @@
       "total": 153,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": "-"
@@ -4521,6 +4987,11 @@
           "name": "Hammer+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Luna",
@@ -4668,6 +5139,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Dagger",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Dagger",
           "default": 3,
           "rarity": "-"
@@ -4683,6 +5159,11 @@
           "rarity": 5
         },
         {
+          "name": "Rally Speed",
+          "default": 4,
+          "rarity": 3
+        },
+        {
           "name": "Defiant Atk 1",
           "rarity": 3
         },
@@ -4696,7 +5177,7 @@
         },
         {
           "name": "Pass 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Pass 2",
@@ -4823,6 +5304,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Bow",
           "default": 3,
           "rarity": "-"
@@ -4838,8 +5324,13 @@
           "rarity": 5
         },
         {
-          "name": "Attack +1",
+          "name": "Shove",
+          "default": "-",
           "rarity": 3
+        },
+        {
+          "name": "Attack +1",
+          "rarity": "-"
         },
         {
           "name": "Attack +2",
@@ -4978,6 +5469,11 @@
       "total": 150,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": 2
@@ -4991,6 +5487,11 @@
           "name": "Silver Axe+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Harsh Command",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Armored Blow 1",
@@ -5181,6 +5682,11 @@
       "total": 169,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": "-"
@@ -5196,6 +5702,11 @@
           "rarity": 5
         },
         {
+          "name": "Buckler",
+          "default": 4,
+          "rarity": 3
+        },
+        {
           "name": "Escutcheon",
           "default": "-",
           "rarity": 4
@@ -5206,15 +5717,15 @@
         },
         {
           "name": "Hone Atk 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Hone Atk 2",
-          "rarity": 3
+          "rarity": 4
         },
         {
           "name": "Hone Armor",
-          "rarity": 4
+          "rarity": 5
         }
       ],
       "stats": {
@@ -5333,6 +5844,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": 2
@@ -5346,6 +5862,11 @@
           "name": "Armorslayer+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Rally Attack",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Life and Death 1",
@@ -5536,6 +6057,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": "-",
           "rarity": "-"
@@ -5549,6 +6075,11 @@
           "name": "Killer Axe+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Rising Light",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Growing Light",
@@ -5573,7 +6104,7 @@
         },
         {
           "name": "Threaten Atk 2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Threaten Atk 3",
@@ -5662,6 +6193,11 @@
       "total": 168,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 5,
           "rarity": "-"
@@ -5677,6 +6213,11 @@
           "rarity": "-"
         },
         {
+          "name": "Buckler",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
           "name": "Pavise",
           "default": "-",
           "rarity": 5
@@ -5687,11 +6228,11 @@
         },
         {
           "name": "Spur Atk 1",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Spur Atk 2",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Goad Armor",
@@ -5746,6 +6287,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Flux",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Ruin",
           "default": 3,
           "rarity": "-"
@@ -5759,6 +6305,11 @@
           "name": "Rauðrraven+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Glowing Ember",
+          "default": "-",
+          "rarity": 3
         },
         {
           "name": "Ignis",
@@ -5779,7 +6330,7 @@
         },
         {
           "name": "G Tomebreaker 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "G Tomebreaker 2",
@@ -5906,6 +6457,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": 1
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": 2
@@ -5919,6 +6475,11 @@
           "name": "Ruby Sword+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Buckler",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Pavise",
@@ -6066,6 +6627,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": "-",
           "rarity": "-"
@@ -6077,6 +6643,11 @@
         },
         {
           "name": "Brave Lance+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rising Wind",
           "default": 5,
           "rarity": "-"
         },
@@ -6158,6 +6729,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Iron Dagger",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Dagger",
           "default": "-",
           "rarity": "-"
@@ -6170,6 +6746,11 @@
         {
           "name": "Deathly Dagger",
           "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Night Sky",
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -6250,6 +6831,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": "-"
@@ -6263,6 +6849,11 @@
           "name": "Silver Lance+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Holy Vestments",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Aegis",
@@ -6410,6 +7001,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Dagger",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Dagger",
           "default": "-",
           "rarity": "-"
@@ -6425,12 +7021,17 @@
           "rarity": 5
         },
         {
+          "name": "Rally Resistance",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
           "name": "Defense +1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Defense +2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Defense +3",
@@ -6438,7 +7039,7 @@
         },
         {
           "name": "Renewal 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Renewal 2",
@@ -6531,6 +7132,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Bow",
           "default": "-",
           "rarity": "-"
@@ -6546,6 +7152,11 @@
           "rarity": 5
         },
         {
+          "name": "Rising Flame",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
           "name": "Blazing Flame",
           "default": "-",
           "rarity": 4
@@ -6556,7 +7167,7 @@
         },
         {
           "name": "Seal Atk 2",
-          "rarity": ""
+          "rarity": "-"
         },
         {
           "name": "Seal Atk 3",
@@ -6657,6 +7268,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elwind",
           "default": "-",
           "rarity": "-"
@@ -6668,6 +7284,11 @@
         },
         {
           "name": "Naga",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dragon Gaze",
           "default": 5,
           "rarity": "-"
         },
@@ -6749,6 +7370,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Dagger",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Dagger",
           "default": "-",
           "rarity": "-"
@@ -6762,6 +7388,11 @@
           "name": "Poison Dagger+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Retribution",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Reprisal",
@@ -6789,7 +7420,7 @@
           "rarity": "-"
         },
         {
-          "name": "Daggerbreaker 3",
+          "name": "Daggerbreaker 2",
           "rarity": 4
         }
       ],
@@ -6875,6 +7506,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -6890,29 +7526,34 @@
           "rarity": 5
         },
         {
+          "name": "Retribution",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
           "name": "Reprisal",
           "default": "-",
           "rarity": 5
         },
         {
           "name": "Defiant Atk 1",
-          "rarity": 5
+          "rarity": "-"
+        },
+        {
+          "name": "Defiant Atk 2",
+          "rarity": "-"
         },
         {
           "name": "Defiant Atk 2",
           "rarity": 5
         },
         {
-          "name": "Defiant Atk 3",
-          "rarity": 5
-        },
-        {
           "name": "Desperation 1",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Desperation 2",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Desperation 3",
@@ -6967,6 +7608,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Bow",
           "default": "-",
           "rarity": "-"
@@ -6980,6 +7626,11 @@
           "name": "Brave Bow+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Glacies",
@@ -7093,7 +7744,17 @@
       "total": 148,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Absorb",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
           "default": "-",
           "rarity": "-"
         },
@@ -7108,6 +7769,11 @@
           "rarity": "-"
         },
         {
+          "name": "Imbue",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Solid-Earth Balm",
           "default": 5,
           "rarity": "-"
@@ -7118,7 +7784,7 @@
         },
         {
           "name": "Spur Res 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Spur Res 3",
@@ -7207,6 +7873,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": "-"
@@ -7220,6 +7891,11 @@
           "name": "Silver Sword+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Daylight",
+          "default": "-",
+          "rarity": "-"
         },
         {
           "name": "Noontime",
@@ -7367,6 +8043,11 @@
       "total": 145,
       "skills": [
         {
+          "name": "Flux",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Ruin",
           "default": "-",
           "rarity": "-"
@@ -7382,17 +8063,22 @@
           "rarity": "-"
         },
         {
+          "name": "Rising Light",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
           "name": "Blazing Light",
           "default": "-",
           "rarity": 5
         },
         {
           "name": "Quick Riposte 1",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Quick Riposte 2",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Quick Riposte 3",
@@ -7400,11 +8086,11 @@
         },
         {
           "name": "Savage Blow 1",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Savage Blow 2",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Savage Blow 3",
@@ -7459,6 +8145,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Fire",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elfire",
           "default": "-",
           "rarity": "-"
@@ -7474,13 +8165,18 @@
           "rarity": 5
         },
         {
+          "name": "Rising Flame",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
           "name": "Growing Flame",
           "default": "-",
           "rarity": 4
         },
         {
           "name": "Attack +1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Attack +2",
@@ -7492,11 +8188,11 @@
         },
         {
           "name": "Spur Atk 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Spur Atk 2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Spur Atk 3",
@@ -7585,6 +8281,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elthunder",
           "default": "-",
           "rarity": "-"
@@ -7600,12 +8301,17 @@
           "rarity": "-"
         },
         {
+          "name": "Ardent Sacrifice",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
           "name": "Speed +1",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Speed +2",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Speed +3",
@@ -7613,11 +8319,11 @@
         },
         {
           "name": "Fortify Res 1",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Fortify Res 2",
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Fortify Res 3",
@@ -7672,8 +8378,18 @@
       "total": 148,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Gravity",
           "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
+          "default": 1,
           "rarity": "-"
         },
         {
@@ -7685,6 +8401,11 @@
           "name": "Rehabilitate",
           "default": "-",
           "rarity": 4
+        },
+        {
+          "name": "Imbue",
+          "default": 4,
+          "rarity": 2
         },
         {
           "name": "Kindled-Fire Balm",
@@ -7786,10 +8507,10 @@
             "atk": [
               20,
               23,
-              "-"
+              26
             ],
             "spd": [
-              "-",
+              19,
               22,
               "-"
             ],
@@ -7868,6 +8589,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": "-"
@@ -7881,6 +8607,11 @@
           "name": "Killing Edge+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Night Sky",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Glimmer",
@@ -8028,6 +8759,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -8039,6 +8775,11 @@
         },
         {
           "name": "Falchion",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "New Moon",
           "default": 5,
           "rarity": "-"
         },
@@ -8125,7 +8866,17 @@
       "total": 147,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Pain",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
           "default": "-",
           "rarity": "-"
         },
@@ -8137,6 +8888,11 @@
         {
           "name": "Martyr",
           "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Imbue",
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -8205,6 +8961,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -8216,6 +8977,11 @@
         },
         {
           "name": "Sol Katti",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Night Sky",
           "default": 5,
           "rarity": "-"
         },
@@ -8302,7 +9068,17 @@
       "total": 148,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Panic",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
           "default": "-",
           "rarity": "-"
         },
@@ -8315,6 +9091,11 @@
           "name": "Physic",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Imbue",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Miracle",
@@ -8416,6 +9197,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -8431,12 +9217,17 @@
           "rarity": 5
         },
         {
+          "name": "Pivot",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Escape Route 1",
-          "rarity": ""
+          "rarity": "-"
         },
         {
           "name": "Escape Route 2",
-          "rarity": ""
+          "rarity": 4
         },
         {
           "name": "Escape Route 3",
@@ -8444,15 +9235,15 @@
         },
         {
           "name": "Spur Spd 1",
-          "rarity": ""
+          "rarity": "-"
         },
         {
           "name": "Spur Spd 2",
-          "rarity": ""
+          "rarity": "-"
         },
         {
           "name": "Spur Spd 3",
-          "rarity": ""
+          "rarity": 4
         }
       ],
       "stats": {
@@ -8537,6 +9328,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Dagger",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Dagger",
           "default": 3,
           "rarity": 2
@@ -8552,6 +9348,11 @@
           "rarity": 5
         },
         {
+          "name": "Reciprocal Aid",
+          "default": 4,
+          "rarity": 3
+        },
+        {
           "name": "Poison Strike 1",
           "rarity": 3
         },
@@ -8565,7 +9366,7 @@
         },
         {
           "name": "Hone Spd 1",
-          "rarity": 2
+          "rarity": "-"
         },
         {
           "name": "Hone Spd 2",
@@ -8726,6 +9527,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elwind",
           "default": "-",
           "rarity": "-"
@@ -8741,20 +9547,25 @@
           "rarity": 5
         },
         {
+          "name": "Rising Wind",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
           "name": "Growing Wind",
           "default": "-",
           "rarity": 4
         },
         {
-          "name": "HP+3",
+          "name": "HP +3",
           "rarity": "-"
         },
         {
-          "name": "HP+4",
-          "rarity": "-"
+          "name": "HP +4",
+          "rarity": 4
         },
         {
-          "name": "HP+5",
+          "name": "HP +5",
           "rarity": 5
         },
         {
@@ -8767,7 +9578,7 @@
         },
         {
           "name": "Spur Res 3",
-          "rarity": "-"
+          "rarity": 4
         }
       ],
       "stats": {
@@ -8852,6 +9663,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": "-"
@@ -8867,6 +9683,11 @@
           "rarity": 5
         },
         {
+          "name": "Rising Thunder",
+          "default": "-",
+          "rarity": 3
+        },
+        {
           "name": "Blazing Thunder",
           "default": "-",
           "rarity": 4
@@ -8877,7 +9698,7 @@
         },
         {
           "name": "Threaten Def 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Threaten Def 2",
@@ -8974,6 +9795,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": "-",
           "rarity": "-"
@@ -8989,17 +9815,22 @@
           "rarity": 5
         },
         {
+          "name": "Holy Vestments",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
           "name": "Sacred Cowl",
           "default": "-",
           "rarity": 5
         },
         {
           "name": "Life and Death 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Life and Death 2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Life and Death 3",
@@ -9015,7 +9846,7 @@
         },
         {
           "name": "Ward Fliers",
-          "rarity": "-"
+          "rarity": 5
         }
       ],
       "stats": {
@@ -9066,6 +9897,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": 3,
           "rarity": 2
@@ -9079,6 +9915,11 @@
           "name": "Emerald Axe+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Retribution",
+          "default": "-",
+          "rarity": 3
         },
         {
           "name": "Vengeance",
@@ -9220,6 +10061,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Bow",
           "default": 3,
           "rarity": "-"
@@ -9235,13 +10081,18 @@
           "rarity": 5
         },
         {
+          "name": "Chilling Wind",
+          "default": 4,
+          "rarity": 3
+        },
+        {
           "name": "Iceberg",
           "default": "-",
           "rarity": 4
         },
         {
           "name": "Warding Blow 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Warding Blow 2",
@@ -9380,6 +10231,11 @@
       "total": 149,
       "skills": [
         {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Fire Breath+",
           "default": "-",
           "rarity": "-"
@@ -9391,6 +10247,11 @@
         },
         {
           "name": "Light Breath+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dance",
           "default": 5,
           "rarity": "-"
         },
@@ -9467,6 +10328,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elwind",
           "default": 3,
           "rarity": "-"
@@ -9480,6 +10346,11 @@
           "name": "Gronnblade+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Draw Back",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Resistance +1",
@@ -9622,6 +10493,11 @@
       "total": 163,
       "skills": [
         {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Fire Breath+",
           "default": "-",
           "rarity": "-"
@@ -9635,6 +10511,11 @@
           "name": "Lightning Breath+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Rally Defense",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Defense +1",
@@ -9662,7 +10543,9 @@
         }
       ],
       "stats": {
-        "1": {},
+        "1": {
+          "undefined": {}
+        },
         "40": {
           "4": {
             "hp": [
@@ -9728,6 +10611,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": "-"
@@ -9741,6 +10629,11 @@
           "name": "Heavy Spear+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Rally Defense",
+          "default": "-",
+          "rarity": "-"
         },
         {
           "name": "Seal Def 1",
@@ -9883,6 +10776,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elthunder",
           "default": 3,
           "rarity": "-"
@@ -9896,6 +10794,11 @@
           "name": "Blárblade+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Moonbow",
@@ -10043,6 +10946,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -10056,6 +10964,11 @@
           "name": "Brave Sword+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Daylight",
+          "default": 5,
+          "rarity": 4
         },
         {
           "name": "Noontime",
@@ -10169,6 +11082,11 @@
       "total": 150,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": 2
@@ -10182,6 +11100,11 @@
           "name": "Silver Sword+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Dance",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Knock Back",
@@ -10364,6 +11287,11 @@
       "total": 144,
       "skills": [
         {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elthunder",
           "default": "-",
           "rarity": "-"
@@ -10375,6 +11303,11 @@
         },
         {
           "name": "Dire Thunder",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Reposition",
           "default": 5,
           "rarity": "-"
         },
@@ -10451,6 +11384,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": "-"
@@ -10464,6 +11402,11 @@
           "name": "Ruby Sword+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Moonbow",
@@ -10611,6 +11554,11 @@
       "total": 154,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": "-",
           "rarity": "-"
@@ -10624,6 +11572,11 @@
           "name": "Killer Lance+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Night Sky",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Glimmer",
@@ -10737,7 +11690,17 @@
       "total": 145,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Panic",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
           "default": "-",
           "rarity": "-"
         },
@@ -10749,6 +11712,11 @@
         {
           "name": "Rehabilitate",
           "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Imbue",
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -10817,6 +11785,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Flux",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Ruin",
           "default": 3,
           "rarity": 2
@@ -10832,6 +11805,11 @@
           "rarity": 5
         },
         {
+          "name": "Rally Attack",
+          "default": 4,
+          "rarity": 3
+        },
+        {
           "name": "HP +3",
           "rarity": 3
         },
@@ -10845,7 +11823,7 @@
         },
         {
           "name": "Seal Res 1",
-          "rarity": 2
+          "rarity": "-"
         },
         {
           "name": "Seal Res 2",
@@ -10996,6 +11974,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": "-",
           "rarity": "-"
@@ -11011,17 +11994,22 @@
           "rarity": 5
         },
         {
+          "name": "Daylight",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
           "name": "Sol",
           "default": "-",
           "rarity": 4
         },
         {
           "name": "Defiant Spd 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Defiant Spd 2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Defiant Spd 3",
@@ -11029,7 +12017,7 @@
         },
         {
           "name": "Threaten Def 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Threaten Def 2",
@@ -11122,6 +12110,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Bow",
           "default": "-",
           "rarity": "-"
@@ -11133,6 +12126,11 @@
         },
         {
           "name": "Silver Bow+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Ardent Sacrifice",
           "default": 5,
           "rarity": "-"
         },
@@ -11209,6 +12207,11 @@
       "total": 145,
       "skills": [
         {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elthunder",
           "default": "-",
           "rarity": "-"
@@ -11222,6 +12225,11 @@
           "name": "Dire Thunder",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Rising Thunder",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Blazing Thunder",
@@ -11246,7 +12254,7 @@
         },
         {
           "name": "Spur Atk 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Goad Cavalry",
@@ -11335,6 +12343,11 @@
       "total": 149,
       "skills": [
         {
+          "name": "Wind",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Elwind",
           "default": 3,
           "rarity": 2
@@ -11348,6 +12361,11 @@
           "name": "Gronnwolf+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Glowing Ember",
+          "default": "-",
+          "rarity": 3
         },
         {
           "name": "Ignis",
@@ -11368,11 +12386,11 @@
         },
         {
           "name": "B Tomebreaker 1",
-          "rarity": "-"
+          "rarity": 2
         },
         {
           "name": "B Tomebreaker 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "B Tomebreaker 3",
@@ -11489,6 +12507,11 @@
       "total": 149,
       "skills": [
         {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elthunder",
           "default": 3,
           "rarity": "-"
@@ -11502,6 +12525,11 @@
           "name": "Blárraven+",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Glowing Ember",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Bonfire",
@@ -11649,6 +12677,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -11662,6 +12695,11 @@
           "name": "Binding Blade",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Shove",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Triangle Adept 1",
@@ -11770,6 +12808,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -11781,6 +12824,11 @@
         },
         {
           "name": "Raijinto",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Night Sky",
           "default": 5,
           "rarity": "-"
         },
@@ -11802,7 +12850,7 @@
           "rarity": 5
         },
         {
-          "name": "Hone Spd 1",
+          "name": "Hone Spd 2",
           "rarity": "-"
         },
         {
@@ -11862,6 +12910,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Dagger",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Dagger",
           "default": 3,
           "rarity": "-"
@@ -11875,6 +12928,11 @@
           "name": "Smoke Dagger+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Harsh Command",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Poison Strike 1",
@@ -12017,7 +13075,17 @@
       "total": 148,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Fear",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
           "default": "-",
           "rarity": "-"
         },
@@ -12032,13 +13100,18 @@
           "rarity": 4
         },
         {
+          "name": "Imbue",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
           "name": "Still-Water Balm",
           "default": 5,
           "rarity": 4
         },
         {
           "name": "Fortify Def 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Fortify Def 2",
@@ -12131,6 +13204,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Fire",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elfire",
           "default": "-",
           "rarity": "-"
@@ -12142,6 +13220,11 @@
         },
         {
           "name": "Cymbeline",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Harsh Command",
           "default": 5,
           "rarity": "-"
         },
@@ -12218,6 +13301,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": "-"
@@ -12231,6 +13319,11 @@
           "name": "Armorslayer+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Reposition",
+          "default": "-",
+          "rarity": "-"
         },
         {
           "name": "Triangle Adept 1",
@@ -12254,7 +13347,7 @@
         },
         {
           "name": "Threaten Spd 3",
-          "rarity": 4
+          "rarity": 5
         }
       ],
       "stats": {
@@ -12373,6 +13466,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
@@ -12386,6 +13484,11 @@
           "name": "Tyrfing",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "Rally Speed",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "HP +3",
@@ -12405,7 +13508,7 @@
         },
         {
           "name": "Brash Assault 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Brash Assault 3",
@@ -12494,8 +13597,18 @@
       "total": 148,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Absorb",
           "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
+          "default": 3,
           "rarity": "-"
         },
         {
@@ -12507,6 +13620,11 @@
           "name": "Recover",
           "default": "-",
           "rarity": 4
+        },
+        {
+          "name": "Imbue",
+          "default": "-",
+          "rarity": 3
         },
         {
           "name": "Swift-Winds Balm",
@@ -12558,8 +13676,8 @@
               33
             ],
             "atk": [
-              "-",
               23,
+              26,
               "-"
             ],
             "spd": [
@@ -12568,7 +13686,7 @@
               30
             ],
             "def": [
-              "-",
+              15,
               18,
               "-"
             ],
@@ -12642,6 +13760,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Bow",
           "default": 3,
           "rarity": "-"
@@ -12657,6 +13780,11 @@
           "rarity": 5
         },
         {
+          "name": "Reciprocal Aid",
+          "default": "-",
+          "rarity": 3
+        },
+        {
           "name": "HP +3",
           "rarity": 3
         },
@@ -12670,7 +13798,7 @@
         },
         {
           "name": "Bowbreaker 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Bowbreaker 2",
@@ -12797,6 +13925,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": "-"
@@ -12810,6 +13943,11 @@
           "name": "Killer Lance+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Iceberg",
@@ -12897,7 +14035,7 @@
             "hp": [
               33,
               36,
-              "-"
+              39
             ],
             "atk": [
               25,
@@ -12957,6 +14095,11 @@
       "total": 158,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": "-",
           "rarity": 2
@@ -12972,8 +14115,13 @@
           "rarity": 5
         },
         {
+          "name": "Rally Attack",
+          "default": 2,
+          "rarity": "-"
+        },
+        {
           "name": "Speed +1",
-          "rarity": 2
+          "rarity": 1
         },
         {
           "name": "Speed +2",
@@ -13106,6 +14254,11 @@
       "total": 169,
       "skills": [
         {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Axe",
           "default": "-",
           "rarity": "-"
@@ -13121,6 +14274,11 @@
           "rarity": "-"
         },
         {
+          "name": "Buckler",
+          "default": "-",
+          "rarity": 4
+        },
+        {
           "name": "Escutcheon",
           "default": "-",
           "rarity": 4
@@ -13131,11 +14289,11 @@
         },
         {
           "name": "Fortify Def 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Fortify Def 2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Fortify Armor",
@@ -13224,6 +14382,11 @@
       "total": 149,
       "skills": [
         {
+          "name": "Flux",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Ruin",
           "default": 3,
           "rarity": 2
@@ -13237,6 +14400,11 @@
           "name": "Fenrir+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Dragon Fang",
@@ -13432,6 +14600,11 @@
       "total": 154,
       "skills": [
         {
+          "name": "Iron Sword",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Sword",
           "default": 3,
           "rarity": 2
@@ -13445,6 +14618,11 @@
           "name": "Ruby Sword+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Swap",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Defense +1",
@@ -13635,6 +14813,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": 2
@@ -13648,6 +14831,11 @@
           "name": "Sapphire Lance+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Swap",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Resistance +1",
@@ -13858,6 +15046,11 @@
       "total": 154,
       "skills": [
         {
+          "name": "Iron Lance",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Lance",
           "default": 3,
           "rarity": 2
@@ -13871,6 +15064,11 @@
           "name": "Sapphire Lance+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Draw Back",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Swordbreaker 1",
@@ -14013,6 +15211,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Steel Bow",
           "default": "-",
           "rarity": "-"
@@ -14026,6 +15229,11 @@
           "name": "Fujin Yumi",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Retribution",
+          "default": 5,
+          "rarity": "-"
         },
         {
           "name": "Vengeance",
@@ -14097,6 +15305,11 @@
       "total": 148,
       "skills": [
         {
+          "name": "Flux",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Ruin",
           "default": "-",
           "rarity": "-"
@@ -14110,6 +15323,11 @@
           "name": "Rauðrblade+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Retribution",
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Vengeance",
@@ -14223,6 +15441,11 @@
       "total": 157,
       "skills": [
         {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Fire Breath+",
           "default": 3,
           "rarity": "-"
@@ -14236,6 +15459,11 @@
           "name": "Lightning Breath+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Glowing Ember",
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Bonfire",
@@ -14383,6 +15611,11 @@
       "total": 163,
       "skills": [
         {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Fire Breath+",
           "default": "-",
           "rarity": "-"
@@ -14394,6 +15627,11 @@
         },
         {
           "name": "Flametongue+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rising Flame",
           "default": 5,
           "rarity": "-"
         },
@@ -14475,6 +15713,11 @@
       "total": 145,
       "skills": [
         {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Elthunder",
           "default": 3,
           "rarity": "-"
@@ -14490,13 +15733,18 @@
           "rarity": 5
         },
         {
+          "name": "Rising Thunder",
+          "default": 4,
+          "rarity": 3
+        },
+        {
           "name": "Growing Thunder",
           "default": "-",
           "rarity": 4
         },
         {
           "name": "Death Blow 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Death Blow 2",
@@ -14512,7 +15760,7 @@
         },
         {
           "name": "Threaten Res 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Threaten Res 3",
@@ -14605,6 +15853,11 @@
       "total": 147,
       "skills": [
         {
+          "name": "Iron Bow",
+          "default": 1,
+          "rarity": "-"
+        },
+        {
           "name": "Steel Bow",
           "default": 3,
           "rarity": 2
@@ -14618,6 +15871,11 @@
           "name": "Silver Bow+",
           "default": "-",
           "rarity": 5
+        },
+        {
+          "name": "Night Sky",
+          "default": "-",
+          "rarity": 3
         },
         {
           "name": "Astra",
@@ -14813,8 +16071,18 @@
       "total": 147,
       "skills": [
         {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
           "name": "Slow",
           "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
+          "default": 1,
           "rarity": "-"
         },
         {
@@ -14826,6 +16094,11 @@
           "name": "Rehabilitate",
           "default": "-",
           "rarity": 4
+        },
+        {
+          "name": "Imbue",
+          "default": "-",
+          "rarity": 2
         },
         {
           "name": "Heavenly Light",
@@ -15004,6 +16277,15 @@
     }
   ],
   "skills": [
+    {
+      "name": "Armorslayer",
+      "cost": "200 SP",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
     {
       "name": "Armorslayer+",
       "cost": "300 SP",
@@ -15230,6 +16512,15 @@
       "type": "WEAPON"
     },
     {
+      "name": "Bolganone",
+      "cost": "200 SP",
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Bolganone+",
       "cost": "300 SP",
       "damage(mt)": 13,
@@ -15365,6 +16656,15 @@
       "type": "WEAPON"
     },
     {
+      "name": "Fire Breath",
+      "cost": "XXX SP",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Fire Breath+",
       "cost": "XXX SP",
       "damage(mt)": 8,
@@ -15406,6 +16706,15 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Brave Lance",
+      "cost": "200 SP",
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
       "exclusive?": "No",
       "type": "WEAPON"
     },
@@ -15536,6 +16845,15 @@
       "type": "WEAPON"
     },
     {
+      "name": "Aura",
+      "cost": "400 SP",
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Restores 5 HP to adjacent allies after any combat this unit initiates",
+      "exclusive?": "Yes",
+      "type": "WEAPON"
+    },
+    {
       "name": "Blárblade",
       "cost": "200 SP",
       "damage(mt)": 9,
@@ -15644,6 +16962,15 @@
       "type": "WEAPON"
     },
     {
+      "name": "Dark Breath",
+      "cost": "200 SP",
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Dark Breath+",
       "cost": "300 SP",
       "damage(mt)": 13,
@@ -15686,6 +17013,15 @@
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Armads",
+      "cost": "400 SP",
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.",
+      "exclusive?": "Yes",
       "type": "WEAPON"
     },
     {
@@ -15815,6 +17151,15 @@
       "type": "WEAPON"
     },
     {
+      "name": "Elwind",
+      "cost": "100 SP",
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Excalibur",
       "cost": "400 SP",
       "damage(mt)": 14,
@@ -15923,6 +17268,15 @@
       "type": "WEAPON"
     },
     {
+      "name": "Fire Breath",
+      "cost": "XXX SP",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Fire Breath+",
       "cost": "XXX SP",
       "damage(mt)": 8,
@@ -15946,6 +17300,15 @@
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Absorb",
+      "cost": "150 SP",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "Recovers HP=50% of damage dealt.",
       "exclusive?": "No",
       "type": "WEAPON"
     },
@@ -16000,6 +17363,15 @@
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "After any combat, inflicts Spd-6 on foe through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Assassin's Bow",
+      "cost": "200 SP",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
       "type": "WEAPON"
     },
@@ -16112,6 +17484,15 @@
       "type": "WEAPON"
     },
     {
+      "name": "Iron Dagger",
+      "cost": "XXX SP",
+      "damage(mt)": 3,
+      "range(rng)": 2,
+      "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Poison Dagger",
       "cost": "200 SP",
       "damage(mt)": 2,
@@ -16191,6 +17572,14 @@
       "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
       "exclusive?": "No",
       "type": "WEAPON"
+    },
+    {
+      "name": "Ardent Sacrifice",
+      "range": 1,
+      "effect": "Heals adjacent ally 10 HP.Unit loses 10 HP (but cannot reach 0 this way).",
+      "spCost": 150,
+      "inheritRestriction": "Excludes Staves",
+      "type": "ASSIST"
     },
     {
       "name": "Dance",
@@ -16359,6 +17748,14 @@
       "spCost": 150,
       "inheritRestriction": "Excludes Staves",
       "type": "ASSIST"
+    },
+    {
+      "name": "Aegis",
+      "cooldown": 3,
+      "effect": "Reduces damage inflicted by attacks from foes 2 spaces away by 50%.",
+      "spCost": 200,
+      "inheritRestriction": "Melee Weapons Only",
+      "type": "SPECIAL"
     },
     {
       "name": "Aether",
@@ -16737,6 +18134,13 @@
       "type": "SPECIAL"
     },
     {
+      "name": "Armored Blow 1",
+      "effect": "Grants Def+2 during combat if unit initiates the attack.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Staves",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Armored Blow 2",
       "effect": "Grants Def+4 during combat if unit initiates the attack.",
       "spCost": 100,
@@ -17099,6 +18503,13 @@
       "spCost": 200,
       "inheritRestriction": "Excludes Staves",
       "type": "PASSIVE_A"
+    },
+    {
+      "name": "Axebreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Blue Weapons",
+      "type": "PASSIVE_B"
     },
     {
       "name": "Axebreaker 2",
@@ -17617,6 +19028,13 @@
       "spCost": 240,
       "inheritRestriction": "None",
       "type": "PASSIVE_B"
+    },
+    {
+      "name": "Breath of Life 1",
+      "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
     },
     {
       "name": "Breath of Life 2",
