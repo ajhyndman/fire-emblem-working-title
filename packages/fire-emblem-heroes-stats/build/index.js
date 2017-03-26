@@ -91,13 +91,13 @@ async function fetchSkills() {
 
 // Fetch new data and write it to stats.json
 async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
-  const existingStats = JSON.parse(fs.readFileSync('./lib/stats.json', 'utf8'));
+  const existingStats = JSON.parse(fs.readFileSync('./dist/stats.json', 'utf8'));
   const heroes = shouldFetchHeroes ? await fetchHeroStats() : existingStats['heroes'];
   const skills = shouldFetchSkills ? await fetchSkills() : existingStats['skills'];
 
   // WRITE STATS TO FILE
   const allStats = { heroes, skills };
-  fs.writeFileSync('./lib/stats.json', JSON.stringify(allStats, null, 2));
+  fs.writeFileSync('./dist/stats.json', JSON.stringify(allStats, null, 2));
 }
 
 fetchWikiStats(false, true);

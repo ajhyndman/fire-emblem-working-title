@@ -1,11 +1,11 @@
 {
   "name": "fire-emblem-heroes-stats",
   "version": "0.2.1",
-  "main": "lib/stats.json",
+  "main": "dist/stats.json",
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node src/index.js",
+    "start": "babel-node build/index.js",
     "test": "eslint **/*.js"
   },
   "devDependencies": {
