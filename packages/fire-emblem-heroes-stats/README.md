@@ -4,9 +4,9 @@
 
 Scrapes http://feheroes.wiki/Stats_Table for all available heroes and their average level 50 stats.
 
-Latest scraped stats are available in JSON format here:
+Latest scraped stats are available in raw JSON format here:
 
-https://github.com/ajhyndman/fire-emblem-working-title/blob/master/lib/stats.json
+https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-stats/dist/stats.json
 
 ## Usage
 
