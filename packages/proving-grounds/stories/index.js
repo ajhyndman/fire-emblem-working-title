@@ -12,6 +12,7 @@ import RaritySelector from '../src/components/RaritySelector';
 import Select from '../src/components/Select';
 import SegmentedControl from '../src/components/SegmentedControl';
 import Skill from '../src/components/Skill';
+import SkillSelector from '../src/components/SkillSelector';
 import StatSheet from '../src/components/StatSheet';
 import { colors } from '../src/theme';
 import { getDefaultSkills } from '../src/heroHelpers';
@@ -25,14 +26,6 @@ const heroInstance: HeroInstance = {
   bane: undefined,
   rarity: 5,
   skills: getDefaultSkills('Anna', 5),
-  // skills: {
-  //   weapon: (find(propEq('name', 'Nóatún'), stats.skills): any),
-  //   assist: undefined,
-  //   special: (find(propEq('name', 'Astra'), stats.skills): any),
-  //   passiveA: undefined,
-  //   passiveB: (find(propEq('name', 'Vantage 3'), stats.skills): any),
-  //   passiveC: (find(propEq('name', 'Spur Res 3'), stats.skills): any),
-  // },
 };
 
 storiesOf('Hero', module)
@@ -42,6 +35,7 @@ storiesOf('Hero', module)
 
 storiesOf('HeroConfigurer', module)
   .add('default', () => {
+    const ACTION = action;
     const reducer = (state, action) => {
       switch (action.type) {
         case 'SET_PREVIEW_LEVEL':
@@ -74,6 +68,7 @@ storiesOf('HeroConfigurer', module)
             },
           };
         default:
+          ACTION(action.type)(action);
           return state;
       }
     };
@@ -185,6 +180,35 @@ storiesOf('Skill', module)
   .add('Invalid skillname', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <Skill active name="Something Else" onClick={action('CLICKED_SKILL')} showGuide />
+    </div>
+  ));
+
+storiesOf('SkillSelector', module)
+  .add('Anna, Weapon', () => (
+    <div style={{ background: colors.elephant, padding: '30px' }}>
+      <SkillSelector
+        dispatch={action('UPDATE_SKILL')}
+        heroInstance={heroInstance}
+        skillType="WEAPON"
+      />
+    </div>
+  ))
+  .add('Anna, Special', () => (
+    <div style={{ background: colors.elephant, padding: '30px' }}>
+      <SkillSelector
+        dispatch={action('UPDATE_SKILL')}
+        heroInstance={heroInstance}
+        skillType="SPECIAL"
+      />
+    </div>
+  ))
+  .add('Anna, Passive A', () => (
+    <div style={{ background: colors.elephant, padding: '30px' }}>
+      <SkillSelector
+        dispatch={action('UPDATE_SKILL')}
+        heroInstance={heroInstance}
+        skillType="PASSIVE_A"
+      />
     </div>
   ));
 
