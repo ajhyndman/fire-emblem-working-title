@@ -70,6 +70,7 @@ class Root extends React.Component {
           <style>{`
             body {
               margin: 0;
+              background-image: url(${staticUrl}${backgroundUrl});
               background-image: -webkit-image-set(
                 url(${staticUrl}${backgroundUrl}) 1x,
                 url(${staticUrl}${backgroundUrl}) 1.5x
@@ -101,10 +102,12 @@ class Root extends React.Component {
           .sticky-panel {
             position: fixed;
             width: 100%;
-            background-image: -webkit-image-set(
-              url(${staticUrl}${backgroundUrl}) 1x,
-              url(${staticUrl}${backgroundUrl}) 1.5x
-            );
+            background-image: url(${staticUrl}${backgroundUrl});
+            background-image:
+              -webkit-image-set(
+                url(${staticUrl}${backgroundUrl}) 1x,
+                url(${staticUrl}${backgroundUrl}) 1.5x
+              );
             background-position: top center;
             background-attachment: fixed;
             height: ${panelHeight}px;
