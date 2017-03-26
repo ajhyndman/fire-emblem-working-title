@@ -100,4 +100,4 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   fs.writeFileSync('./dist/stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchWikiStats(false, true);
+fetchWikiStats(true, true);
