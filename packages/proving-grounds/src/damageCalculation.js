@@ -142,17 +142,18 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
   if (hasSkill(defender, 'PASSIVE_A', 'Shield')) {
     return 1;
   }
+  const defenderMoveType = lookupStats(defender.name).moveType
   if (
     lookupStats(attacker.name).weaponType === 'Neutral Bow'
-    && lookupStats(defender.name).moveType === 'Flying'
+    && defenderMoveType === 'Flying'
   ) {
     return 1.5;
   }
   const weaponName = getSkill(attacker, 'WEAPON');
-  if ((test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defender.moveType === 'Armored')
-      || (test(/wolf/, weaponName) && defender.moveType === 'Cavalry')
-      || (test(/Poison Dagger/, weaponName) && defender.moveType === 'Infantry')
-      || (test(/Excalibur/, weaponName) && defender.moveType === 'Flying')
+  if ((test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defenderMoveType === 'Armored')
+      || (test(/wolf/, weaponName) && defenderMoveType === 'Cavalry')
+      || (test(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry')
+      || (test(/Excalibur/, weaponName) && defenderMoveType === 'Flying')
       || (test(/(Falchion|Naga)/, weaponName)
           && test(/Beast/, lookupStats(defender.name).weaponType))
     ) {
