@@ -18,6 +18,7 @@ function makeHero(name: string, rarity: 1 | 2 | 3 | 4 | 5 = 5): HeroInstance {
 }
 
 function simulateCombat(
+  t, // test object
   hero1: HeroInstance,
   hero2: HeroInstance,
   expectedHp1: number,
@@ -25,40 +26,26 @@ function simulateCombat(
 ) {
   const result = calculateResult(hero1, hero2);
   if (result.attackerHpRemaining != expectedHp1 || result.defenderHpRemaining != expectedHp2) {
-    console.log(
-      'Unexpected combat result.',
-      '\nHero1:', dissoc('skills', hero1),
-      '\nHero2:', dissoc('skills', hero2),
-      '\nExpected:', expectedHp1, expectedHp2,
-      '\nResult:', result,
-      '\n',
-    );
-    return 1;
+    console.log('Combat Result:\n', result);
   }
-  return 0;
+  t.equal(result.attackerHpRemaining, expectedHp1);
+  t.equal(result.defenderHpRemaining, expectedHp2);
 }
 
-test('calculateResult', (t) => {
-  t.equal(
-    simulateCombat(makeHero('Lilina'), makeHero('Takumi'), 0, 40-35),
-    0,
-  );
+// Basic test
+test('normalCombat', (t) => {
+  t.plan(2);
+  simulateCombat(t, makeHero('Lilina'), makeHero('Takumi'), 0, 40-35);
+});
 
-  // Triangle adept
-  t.equal(
-    simulateCombat(makeHero('Sanaki'), makeHero('Hector'), 33, 0),
-    0,
-  );
+test('triangleAdept', (t) => {
+  t.plan(2);
+  simulateCombat(t, makeHero('Sanaki'), makeHero('Hector'), 33, 0);
+});
 
-  t.equal(
-    simulateCombat(makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4)),
-    0,
-  );
-
-  t.equal(
-    simulateCombat(makeHero('Bartre'), makeHero('Camilla'), 49-2,  37-23),
-    0,
-  );
-
-  t.end();
+test('braveWeaponAndDartingBlow', (t) => {
+  t.plan(4);
+  // Camilla attacks 4 times while attacking and once when attacked
+  simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4));
+  simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2,  37-23);
 });
