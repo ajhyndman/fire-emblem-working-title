@@ -10,7 +10,8 @@
     "deploy": "now --docker",
     "dev": "next",
     "start": "next start",
-    "test": "eslint src/**/*.js pages/**/*.js && flow check",
+    "lint": "eslint src/**/*.js pages/**/*.js && flow check && node tests/combatTest.js",
+    "test": "tape -r babel-register tests/**/*.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "docker-build": "docker build -t proving-grounds .",
@@ -19,9 +20,12 @@
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.24.0",
     "eslint": "^3.17.1",
     "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.1.0",
-    "flow-bin": "^0.42.0"
+    "flow-bin": "^0.42.0",
+    "tape": "^4.6.3"
   },
   "dependencies": {
     "classnames": "^2.2.5",
