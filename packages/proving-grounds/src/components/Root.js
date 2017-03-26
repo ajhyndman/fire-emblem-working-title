@@ -1,6 +1,7 @@
 // @flow
 import Head from 'next/head';
 import React from 'react';
+import MarkGithub from 'react-icons/lib/go/mark-github';
 import stats from 'fire-emblem-heroes-stats';
 import {
   compose,
@@ -15,6 +16,7 @@ import CombatResult from './CombatResult';
 import HeroGrid from './HeroGrid';
 import ShareButton from './ShareButton';
 import Input from './Input';
+import { fontFamilies } from '../theme';
 import { encodeHero } from '../queryCodex';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
@@ -78,6 +80,24 @@ class Root extends React.Component {
           `}</style>
         </Head>
         <style jsx>{`
+          .footer {
+            color: rgba(255, 255, 255, 0.2);
+            font-family: ${fontFamilies.ui};
+            font-size: 10px;
+            padding: 20px 15px 10px;
+            text-align: right;
+          }
+          .footer a:link, .footer a:visited, .footer a:active, .footer a:focus {
+            color: rgba(255, 255, 255, 0.3) !important;
+            font-size: 16px;
+            margin-left: 1em;
+          }
+          .footer a:link:hover,
+          .footer a:visited:hover,
+          .footer a:active:hover,
+          .footer a:focus:hover {
+            color: rgba(255, 255, 255, 0.6) !important;
+          }
           .sticky-panel {
             position: fixed;
             width: 100%;
@@ -164,6 +184,12 @@ class Root extends React.Component {
             stats.heroes,
           )}
         />
+        <div className="footer">
+          Proving Grounds is an open source project licensed under GPL-3.0+
+          <a href="https://github.com/ajhyndman/fire-emblem-working-title/issues">
+            <MarkGithub />
+          </a>
+        </div>
       </div>
     );
   }
