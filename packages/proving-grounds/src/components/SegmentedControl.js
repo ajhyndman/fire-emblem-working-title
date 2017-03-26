@@ -80,6 +80,7 @@ const SegmentedControl = ({
     {addIndex(map)(
       (option, i) => (
         <button
+          key={option}
           className={cn({ active: (selected === i) })}
           style={{ flexBasis: `${(1 / (options.length + 1)) * 100}%` }}
           onClick={() => onChange(i)}
