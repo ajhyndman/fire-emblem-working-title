@@ -1,4 +1,5 @@
 // @flow
+import test from 'tape';
 import { dissoc } from 'ramda';
 
 import { calculateResult } from '../src/damageCalculation';
@@ -6,14 +7,14 @@ import { getDefaultSkills } from '../src/heroHelpers';
 import type { HeroInstance } from '../src/heroHelpers';
 
 
-function makeHero(name: string, rarity: number = 5): HeroInstance {
+function makeHero(name: string, rarity: 1 | 2 | 3 | 4 | 5 = 5): HeroInstance {
   return {
     name: name,
     bane: undefined,
     boon: undefined,
     rarity: rarity,
     skills: getDefaultSkills(name, rarity),
-  }
+  };
 }
 
 function simulateCombat(
@@ -37,17 +38,27 @@ function simulateCombat(
   return 0;
 }
 
-var errorCount = 0;
-// Atk + 3
-errorCount += simulateCombat(makeHero('Lilina'), makeHero('Takumi'), 0, 40-35);
-// Triangle adept
-errorCount += simulateCombat(makeHero('Sanaki'), makeHero('Hector'), 33, 0);
-// Brave Axe and Darting blow vs Fury
-errorCount += simulateCombat(makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4));
-errorCount += simulateCombat(makeHero('Bartre'), makeHero('Camilla'), 49-2,  37-23);
+test('calculateResult', (t) => {
+  t.equal(
+    simulateCombat(makeHero('Lilina'), makeHero('Takumi'), 0, 40-35),
+    0,
+  );
 
-if (errorCount == 0) {
-  console.log('PASS: All tests passed.');
-} else {
-  console.log('ERROR: ' + errorCount + ' tests failed.');
-}
+  // Triangle adept
+  t.equal(
+    simulateCombat(makeHero('Sanaki'), makeHero('Hector'), 33, 0),
+    0,
+  );
+
+  t.equal(
+    simulateCombat(makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4)),
+    0,
+  );
+
+  t.equal(
+    simulateCombat(makeHero('Bartre'), makeHero('Camilla'), 49-2,  37-23),
+    0,
+  );
+
+  t.end();
+});
