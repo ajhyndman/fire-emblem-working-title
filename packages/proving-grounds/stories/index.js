@@ -16,7 +16,8 @@ import SkillSelector from '../src/components/SkillSelector';
 import StatSheet from '../src/components/StatSheet';
 import { colors } from '../src/theme';
 import { getDefaultSkills } from '../src/heroHelpers';
-import type { HeroInstance } from '../src/heroHelpers';
+import type { HeroInstance } from '../src/store';
+import type { Dispatch } from '../src/reducer';
 
 
 // FlowIssue: flowtype for find is too generic.
@@ -79,7 +80,7 @@ storiesOf('HeroConfigurer', module)
       reducer,
       { heroInstance, level: 1 },
     )(
-      ({ state, dispatch }) => (
+      ({ state, dispatch }: { state: Object; dispatch: Dispatch }) => (
         <HeroConfigurer
           dispatch={dispatch}
           heroInstance={state.heroInstance}
@@ -187,7 +188,7 @@ storiesOf('SkillSelector', module)
   .add('Anna, Weapon', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        dispatch={action('UPDATE_SKILL')}
+        onClose={action('UPDATE_SKILL')}
         heroInstance={heroInstance}
         skillType="WEAPON"
       />
@@ -196,7 +197,7 @@ storiesOf('SkillSelector', module)
   .add('Anna, Special', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        dispatch={action('UPDATE_SKILL')}
+        onClose={action('UPDATE_SKILL')}
         heroInstance={heroInstance}
         skillType="SPECIAL"
       />
@@ -205,7 +206,7 @@ storiesOf('SkillSelector', module)
   .add('Anna, Passive A', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        dispatch={action('UPDATE_SKILL')}
+        onClose={action('UPDATE_SKILL')}
         heroInstance={heroInstance}
         skillType="PASSIVE_A"
       />

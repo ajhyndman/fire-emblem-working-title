@@ -23,7 +23,7 @@ const Skill = ({ active, name, onClick, showGuide }: Props) => {
   return (
     <div
       className={cn('root', { active })}
-      onClick={() => { if (skill && onClick) onClick(skill.name); }}
+      onClick={() => { if (onClick) onClick(name); }}
     >
       <style jsx>{`
         .root {
@@ -77,7 +77,7 @@ const Skill = ({ active, name, onClick, showGuide }: Props) => {
         }
       `}</style>
       {(() => {
-        if (!skill) return <div className="exception">??? ({name})</div>;
+        if (!skill) return <div className="exception">--</div>;
         switch (skill.type) {
           case 'ASSIST':
             return <Assist showGuide={showGuide} skill={skill} />;

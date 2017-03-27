@@ -48,8 +48,14 @@ class Configure extends React.Component {
       <div>
         <style jsx>{`
           .container {
-            margin: ${panelHeight / 2}px auto 0;
-            width: 275px;
+            bottom: 10px;
+            left: 50%;
+            max-width: 90%;
+            overflow: auto;
+            position: absolute;
+            top: ${panelHeight / 4}px;
+            transform: translateX(-50%);
+            width: 400px;
           }
         `}</style>
         <Root {...this.props} />

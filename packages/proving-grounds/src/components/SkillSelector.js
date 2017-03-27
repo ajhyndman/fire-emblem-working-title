@@ -13,17 +13,16 @@ import type { SkillType } from 'fire-emblem-heroes-stats';
 
 import Skill from './Skill';
 import { getInheritableSkills } from '../heroHelpers';
-import type { HeroInstance } from '../heroHelpers';
-import type { Dispatch } from '../reducer';
+import type { HeroInstance } from '../store';
 
 
 type Props = {
-  dispatch: Dispatch;
+  onClose: (skill: Object) => void;
   heroInstance: HeroInstance;
   skillType: SkillType;
 };
 
-const SkillSelector = ({ dispatch, heroInstance, skillType }: Props) => (
+const SkillSelector = ({ onClose, heroInstance, skillType }: Props) => (
   <div className="root">
     <style jsx>{`
       .skill-option:not(:last-of-type) {
@@ -33,14 +32,9 @@ const SkillSelector = ({ dispatch, heroInstance, skillType }: Props) => (
     {map(
       skill => (
         <div
+          key={skill.name}
           className="skill-option"
-          onClick={() => {
-            dispatch({
-              type: 'UPDATE_SKILL',
-              skillType: skill.type,
-              skill,
-            });
-          }}
+          onClick={() => onClose(skill)}
         >
           <Skill
             showGuide
