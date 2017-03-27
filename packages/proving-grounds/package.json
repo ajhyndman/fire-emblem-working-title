@@ -10,7 +10,7 @@
     "deploy": "now --docker",
     "dev": "next",
     "start": "next start",
-    "lint": "eslint src/**/*.js pages/**/*.js && flow check && node tests/combatTest.js",
+    "lint": "eslint src/**/*.js pages/**/*.js && flow check",
     "test": "tape -r babel-register tests/**/*.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
