@@ -8,6 +8,7 @@ import Root, { panelHeight } from '../src/components/Root';
 import HeroConfigurer from '../src/components/HeroConfigurer';
 import Overlay from '../src/components/Overlay';
 import initStore from '../src/store';
+import { getDefaultSkills } from '../src/heroHelpers';
 // import { decodeHero } from '../src/queryCodex';
 import type { Dispatch } from '../src/reducer';
 import type { State } from '../src/store';
@@ -16,6 +17,14 @@ import type { State } from '../src/store';
 type Props = {
   dispatch: Dispatch;
   state: State;
+};
+
+const defaultInstance = {
+  name: 'Anna',
+  bane: undefined,
+  boon: undefined,
+  rarity: 5,
+  skills: getDefaultSkills('Anna', 5),
 };
 
 class Configure extends React.Component {
@@ -56,7 +65,8 @@ class Configure extends React.Component {
           <div className="container">
             <HeroConfigurer
               dispatch={this.props.dispatch}
-              heroInstance={this.props.state.heroSlots[this.props.state.activeSlot]}
+              heroInstance={this.props.state.heroSlots[this.props.state.activeSlot || 0]
+                || defaultInstance}
               level={this.props.state.previewLevel}
             />
           </div>
