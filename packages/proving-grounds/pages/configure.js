@@ -19,6 +19,7 @@ type Props = {
   state: State;
 };
 
+// TODO: redirect to non-configure page instead of showing an Anna configuration.
 const defaultInstance = {
   name: 'Anna',
   bane: undefined,
