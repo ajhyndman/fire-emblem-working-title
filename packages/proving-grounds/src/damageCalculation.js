@@ -142,7 +142,7 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
   if (hasSkill(defender, 'PASSIVE_A', 'Shield')) {
     return 1;
   }
-  const defenderMoveType = lookupStats(defender.name).moveType
+  const defenderMoveType = lookupStats(defender.name).moveType;
   if (
     lookupStats(attacker.name).weaponType === 'Neutral Bow'
     && defenderMoveType === 'Flying'

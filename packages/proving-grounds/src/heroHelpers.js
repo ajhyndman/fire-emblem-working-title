@@ -1,16 +1,24 @@
 // @flow
 import stats from 'fire-emblem-heroes-stats';
 import {
+  allPass,
+  // $FlowIssue flow does not think that ascend exists.
+  ascend,
   compose,
   concat,
+  curry,
   filter,
   indexBy,
   isNil,
   map,
   not,
   prop,
+  propEq,
+  propOr,
   pathOr,
+  sort,
   test,
+  union,
 } from 'ramda';
 import type {
   Hero,
@@ -124,6 +132,77 @@ export function getDefaultSkills(name: string, rarity: 1 | 2 | 3 | 4 | 5): Insta
     PASSIVE_C: undefined,
     ...skillsByType,
   };
+}
+
+// skill is 'any' because some fields are weapon/passive specific
+const canInherit = curry((hero: Hero, skill: any): boolean => {
+  const moveType = hero.moveType;
+  const weaponType = hero.weaponType ;
+  if (propEq('exclusive?', 'Yes', skill)) {
+    return false;
+  }
+  // Unobtainable weapons (story only) currently have no weapon type.
+  // Hero has weaponType 'Red Beast' and weapon has weaponType 'Breath'
+  if (skill.type === 'WEAPON' && (skill.weaponType == null
+    || (test(/Beast/, weaponType) ? 'Breath' : weaponType) !== skill.weaponType)) {
+    return false;
+  }
+  const restriction = propOr('None', 'inheritRestriction', skill);
+  switch (restriction) {
+    case 'Fliers Only':
+      return moveType === 'Flying';
+    case 'Cavalry Only':
+      return moveType === 'Cavalry';
+    case 'Armored Only':
+      return moveType === 'Armored';
+    case 'Excludes Fliers':
+      return moveType !== 'Flying';
+    case 'Melee Weapons Only':
+      return test(/(Sword|Axe|Lance|Breath)/, weaponType);
+    case 'Ranged Weapons Only':
+      return test(/(Staff|Tome|Bow|Shuriken)/, weaponType);
+    case 'Breath Users Only':
+      return test(/Breath/, weaponType);
+    case 'Staff Only':
+      return weaponType === 'Neutral Staff';
+    case 'Excludes Staves':
+      return weaponType !== 'Neutral Staff';
+    case 'Excludes Colorless Weapons':
+      return !test(/Neutral/, weaponType);
+    case 'Excludes Blue Weapons':
+      return !test(/Blue/, weaponType);
+    case 'Excludes Red Weapons':
+      return !test(/Red/, weaponType);
+    case 'Excludes Green Weapons':
+      return !test(/Green/, weaponType);
+    case 'Is exclusive':
+      return false;
+    case 'None':
+      return true;
+    default:
+      // console.log('Warning: unknown inherit restriction: ' + restriction);
+  }
+  return true;
+});
+
+// Returns a list of skills that a hero can obtain.
+export function getInheritableSkills(name: string, skillType: SkillType): Array<Skill> {
+  const hero = lookupStats(name);
+  // Cast to any to prevent flow issues
+  const allSkills: any = stats.skills;
+  const inheritable = filter(
+    allPass([
+      // $FlowIssue canInherit is curried
+      canInherit(hero),
+      propEq('type', skillType),
+    ]),
+    allSkills,
+  );
+  const ownSkills = compose(
+    filter(propEq('type', skillType)),
+    map((skill: any) => getSkillInfo(skill.name)),
+  )(hero.skills);
+  return sort(ascend(prop('name')), union(inheritable, ownSkills));
 }
 
 export const hasBraveWeapon: (instance: HeroInstance) => boolean = compose(
