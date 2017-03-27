@@ -88,6 +88,9 @@ declare module 'fire-emblem-heroes-stats' {
     +'damage(mt)': number;
     +'range(rng)': number;
     +effect: string;
+    // Hero is Red Beast, weapon is Breath
+    +weaponType: WeaponType | 'Breath';
+    +'exclusive?': 'Yes' | 'No';
   };
 
   declare type AssistSkill = {
@@ -96,16 +99,19 @@ declare module 'fire-emblem-heroes-stats' {
     +range: number;
     +effect: string;
     +spCost: number;
+    +inheritRestriction: string;
   };
 
   declare type SpecialSkill = {
     +type: 'SPECIAL';
     +name: string;
-    +cost: string;
-    +charge: number;
-    +trigger: 'Assist (Staff)' | 'Attack' | 'Enemy Attack';
+    +cooldown: number;
     +effect: string;
-    +target: 'Ally' | 'Allies' | 'Enemies' | 'Self';
+    +spCost: number;
+    // The wiki no longer has trigger/target fields, but we likely want these in he future.
+    // +trigger: 'Assist (Staff)' | 'Attack' | 'Enemy Attack';
+    // +target: 'Ally' | 'Allies' | 'Enemies' | 'Self';
+    +inheritRestriction: string;
   };
 
   declare type PassiveSkill = {
@@ -113,6 +119,7 @@ declare module 'fire-emblem-heroes-stats' {
     +name: string;
     +effect: string;
     +spCost: number;
+    +inheritRestriction: string;
   };
 
   declare type Skill =
