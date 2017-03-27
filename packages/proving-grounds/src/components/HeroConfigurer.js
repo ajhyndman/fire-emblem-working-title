@@ -87,6 +87,9 @@ const HeroConfigurer = withState(
           margin: 0 0 25px;
           max-width: 100%;
         }
+        .skill-selector {
+          width: 100%;
+        }
         .center {
           display: flex;
           justify-content: space-around;

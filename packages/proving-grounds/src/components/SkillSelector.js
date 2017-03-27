@@ -37,7 +37,7 @@ const SkillSelector = ({ onClose, heroInstance, skillType }: Props) => (
           onClick={() => onClose(skill)}
         >
           <Skill
-            showGuide
+            // showGuide
             name={skill.name}
           />
         </div>
