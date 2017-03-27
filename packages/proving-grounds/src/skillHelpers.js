@@ -15,8 +15,8 @@ import {
 import stats from 'fire-emblem-heroes-stats';
 import type { Skill } from 'fire-emblem-heroes-stats';
 
-export type SkillsByName = { [key: string]: Skill };
 
+export type SkillsByName = { [key: string]: Skill };
 
 // $FlowIssue indexBy confuses flow
 const skillsByName: SkillsByName = indexBy(prop('name'), stats.skills);

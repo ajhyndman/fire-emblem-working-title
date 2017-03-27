@@ -78,8 +78,13 @@ declare module 'fire-emblem-heroes-stats' {
     }>;
   };
 
-  declare type SkillType = 'WEAPON' | 'ASSIST' | 'SPECIAL'
-                         | 'PASSIVE_A' | 'PASSIVE_B' | 'PASSIVE_C';
+  declare type SkillType =
+    | 'WEAPON'
+    | 'ASSIST'
+    | 'SPECIAL'
+    | 'PASSIVE_A'
+    | 'PASSIVE_B'
+    | 'PASSIVE_C';
 
   declare type WeaponSkill = {
     +type: 'WEAPON';
