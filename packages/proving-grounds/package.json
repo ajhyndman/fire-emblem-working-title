@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": "eslint src/**/*.js pages/**/*.js && flow check",
     "test": "tape -r babel-register tests/**/*.js",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s .",
     "build-storybook": "build-storybook",
     "docker-build": "docker build -t proving-grounds .",
     "docker-start": "docker run -d -p 80:3000 proving-grounds"
