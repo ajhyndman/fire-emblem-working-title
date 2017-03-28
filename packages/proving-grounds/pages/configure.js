@@ -62,6 +62,10 @@ class Configure extends React.Component {
         <Overlay
           onClick={event => {
             event.stopPropagation();
+            this.props.dispatch({
+              type: 'SELECT_SLOT',
+              slot: undefined,
+            });
             Router.push('/');
           }}
           onMouseEnter={() => {
