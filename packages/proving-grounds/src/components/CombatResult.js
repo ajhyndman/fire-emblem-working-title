@@ -3,7 +3,7 @@ import React from 'react';
 
 import { calculateResult } from '../damageCalculation';
 import { getStat } from '../heroHelpers';
-import type { HeroInstance } from '../heroHelpers';
+import type { HeroInstance } from '../store';
 
 
 type Props = {

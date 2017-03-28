@@ -25,12 +25,14 @@ import type { HeroInstance } from '../store';
 import type { Dispatch } from '../reducer';
 
 
-type Props = {
+// eslint-disable-next-line
+type Props = {|
   +dispatch: Dispatch;
-  heroInstance: HeroInstance;
-  level: 1 | 40;
-};
+  +heroInstance: HeroInstance;
+  +level: 1 | 40;
+|};
 
+// eslint-disable-next-line
 type State = {
   open: true;
   skillType: SkillType;
@@ -49,7 +51,8 @@ const HeroConfigurer = withState(
   level,
   state,
   setState,
-}: Props & { setState: (state: State) => void; state: State; }) => {
+  // eslint can't parse type spreads yet: https://github.com/babel/babylon/pull/418
+}/* : { ...Props, +setState: (state: State) => void; +state: State; } */) => {
   const hero: Hero = lookupStats(heroInstance.name);
 
   const varianceOptions = {
@@ -141,7 +144,7 @@ const HeroConfigurer = withState(
                       ...keys(filter(compose(not, equals(heroInstance.bane)), varianceOptions)),
                     ]}
                     selected={heroInstance.boon
-                      // $FlowIssue: Flow isn't confident that invertObject doesn't have side effects.
+                      // $FlowIssue: Flow isn't thinks invertObject might have side effects
                       ? invertObject(varianceOptions)[heroInstance.boon]
                       : '—'}
                   />
@@ -160,7 +163,7 @@ const HeroConfigurer = withState(
                       ...keys(filter(compose(not, equals(heroInstance.boon)), varianceOptions)),
                     ]}
                     selected={heroInstance.bane
-                      // $FlowIssue: Flow isn't confident that invertObject doesn't have side effects.
+                      // $FlowIssue: Flow isn't thinks invertObject might have side effects
                       ? invertObject(varianceOptions)[heroInstance.bane]
                       : '—'}
                   />
@@ -192,6 +195,9 @@ const HeroConfigurer = withState(
           <div className="skill-selector">
             <SkillSelector
               onClose={skill => {
+                // This one is technically correct, skillType could be voided before the
+                // callback is triggered.  But I know it won't be.
+                // $FlowIssue
                 dispatch({
                   type: 'UPDATE_SKILL',
                   skillType: state.skillType,

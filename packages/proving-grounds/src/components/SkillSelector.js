@@ -6,7 +6,7 @@ import {
   filter,
   map,
   not,
-  prop,
+  propOr,
   test,
 } from 'ramda';
 import type { SkillType } from 'fire-emblem-heroes-stats';
@@ -53,7 +53,7 @@ const SkillSelector = ({ onClose, heroInstance, skillType }: Props) => (
             test(new RegExp('Iron')),
             test(new RegExp('Steel')),
           ]),
-          prop('name'),
+          propOr('', 'name'),
         ),
         getInheritableSkills(heroInstance.name, skillType),
       ),

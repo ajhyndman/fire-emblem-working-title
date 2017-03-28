@@ -1,10 +1,9 @@
 // @flow
 import test from 'tape';
-import { dissoc } from 'ramda';
 
 import { calculateResult } from '../src/damageCalculation';
 import { getDefaultSkills } from '../src/heroHelpers';
-import type { HeroInstance } from '../src/heroHelpers';
+import type { HeroInstance } from '../src/store';
 
 
 function makeHero(name: string, rarity: 1 | 2 | 3 | 4 | 5 = 5): HeroInstance {
@@ -25,7 +24,7 @@ function simulateCombat(
   expectedHp2: number,
 ) {
   const result = calculateResult(hero1, hero2);
-  if (result.attackerHpRemaining != expectedHp1 || result.defenderHpRemaining != expectedHp2) {
+  if (result.attackerHpRemaining !== expectedHp1 || result.defenderHpRemaining !== expectedHp2) {
     console.log('Combat Result:\n', result);
   }
   t.equal(result.attackerHpRemaining, expectedHp1);

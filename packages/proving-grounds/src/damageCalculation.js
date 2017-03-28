@@ -16,7 +16,7 @@ import {
   hasSkill,
   lookupStats,
 } from './heroHelpers';
-import type { HeroInstance } from './heroHelpers';
+import type { HeroInstance } from './store';
 
 
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);

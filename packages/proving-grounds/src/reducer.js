@@ -2,8 +2,7 @@
 import { any, assocPath, findIndex, isNil, reverse, update } from 'ramda';
 import type { Skill, SkillType } from 'fire-emblem-heroes-stats';
 
-import type { State } from './store';
-import type { HeroInstance, Stat } from './store';
+import type { HeroInstance, Stat, State } from './store';
 
 
 export type Action = {
@@ -89,9 +88,11 @@ const reducer = (state: State, action: Action): State => {
       };
     case 'UPDATE_BANE':
       if (state.activeSlot == null) return state;
+      // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'bane'], action.stat, state);
     case 'UPDATE_BOON':
       if (state.activeSlot == null) return state;
+      // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'boon'], action.stat, state);
     case 'UPDATE_RARITY':
       if (state.activeSlot == null) return state;

@@ -3,7 +3,7 @@ import stats from 'fire-emblem-heroes-stats';
 import { findIndex, prop, propEq } from 'ramda';
 
 import { getDefaultSkills } from './heroHelpers';
-import type { HeroInstance } from './heroHelpers';
+import type { HeroInstance } from './store';
 
 
 export const decodeHero = (heroCode: string): ?HeroInstance => {
