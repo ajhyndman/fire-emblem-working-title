@@ -178,7 +178,7 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
 const hitDmg = (attacker: HeroInstance, defender: HeroInstance, isAttacker: boolean) => dmgFormula(
-  getStat(attacker, 'atk'),
+  getStat(attacker, 'atk', 40, isAttacker),
   effectiveBonus(attacker, defender),
   advantageBonus(attacker, defender),
   getStat(defender, getMitigationType(attacker), 40, !isAttacker),
