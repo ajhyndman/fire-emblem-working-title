@@ -48,10 +48,10 @@ const SkillSelector = ({ onClose, heroInstance, skillType }: Props) => (
         compose(
           not,
           anyPass([
-            test(new RegExp('1')),
-            test(new RegExp('2')),
-            test(new RegExp('Iron')),
-            test(new RegExp('Steel')),
+            test(/(1|2)$/),
+            test(/HP \+(3|4)$/),
+            test(/Iron/),
+            test(/Steel/),
           ]),
           propOr('', 'name'),
         ),
