@@ -21,12 +21,12 @@ const mockInstance: HeroInstance = {
   name: 'Anna',
   rarity: 5,
   skills: {
+    WEAPON: getSkillInfo('Nóatún'),
     ASSIST: undefined,
+    SPECIAL: getSkillInfo('Astra'),
     PASSIVE_A: undefined,
     PASSIVE_B: getSkillInfo('Vantage 3'),
     PASSIVE_C: getSkillInfo('Spur Res 3'),
-    SPECIAL: getSkillInfo('Astra'),
-    WEAPON: getSkillInfo('Nóatún'),
   },
 };
 

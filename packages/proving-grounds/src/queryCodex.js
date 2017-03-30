@@ -60,17 +60,17 @@ export const extractInstance = ([
     // Technically, if we get bogus skill names somehow, this could
     // return a corrupt hero instance.
     // $FlowIssue
+    WEAPON: weapon && getSkillInfo(weapon),
+    // $FlowIssue
     ASSIST: assist && getSkillInfo(assist),
+    // $FlowIssue
+    SPECIAL: special && getSkillInfo(special),
     // $FlowIssue
     PASSIVE_A: passiveA && getSkillInfo(passiveA),
     // $FlowIssue
     PASSIVE_B: passiveB && getSkillInfo(passiveB),
     // $FlowIssue
     PASSIVE_C: passiveC && getSkillInfo(passiveC),
-    // $FlowIssue
-    SPECIAL: special && getSkillInfo(special),
-    // $FlowIssue
-    WEAPON: weapon && getSkillInfo(weapon),
   },
 });
 
