@@ -1,7 +1,6 @@
 // @flow
 import test from 'tape';
 import stats from 'fire-emblem-heroes-stats';
-import { indexOf, lastIndexOf } from 'ramda';
 
 import { getSkillInfo } from '../src/skillHelpers';
 import {
