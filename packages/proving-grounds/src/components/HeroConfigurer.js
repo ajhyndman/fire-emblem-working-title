@@ -87,7 +87,7 @@ const HeroConfigurer = withState(
         }
         .section {
           width: 250px;
-          margin: 0 0 25px;
+          margin: 0 auto 25px;
           max-width: 100%;
         }
         .skill-selector {
