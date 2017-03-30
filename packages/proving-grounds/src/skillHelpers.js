@@ -49,6 +49,9 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
     } else if ((skill.name === 'Binding Blade' || skill.name === 'Naga') && !isAttacker) {
       return 2;
     }
+    if (statKey === 'res' && skill.name === 'Parthia' && isAttacker) {
+      return 4;
+    }
   } else if (skill.type === 'PASSIVE_A') {
     const statRegex = new RegExp(statKey === 'hp' ? 'max HP' : capitalize(statKey));
     if (test(statRegex, skill.effect)) {
