@@ -48,6 +48,7 @@ const hasEmptySlot = (state: State) => any(isNil, state.heroSlots);
 const getEmptySlot = (state: State) => findIndex(isNil, state.heroSlots);
 
 const reducer = (state: State, action: Action): State => {
+  console.log('state:', state);
   switch (action.type) {
     case 'SEARCH_STRING_CHANGE':
       return { ...state, searchString: action.value };
