@@ -86,12 +86,14 @@ export const hash = (value: any): string => (
       : take(4, SHA1(value).toString())
 );
 
-const names = map(prop('name'));
+const values = flatten([
+  range(1, 999),
+  ['hp', 'atk', 'spd', 'def', 'res'],
+  map(prop('name'), stats.skills),
+  map(prop('name'), stats.heroes),
+]);
 
-export const hashTable = zipObj(
-  map(hash, flatten([range(1, 999), names(stats.skills), names(stats.heroes)])),
-  flatten([range(1, 999), names(stats.skills), names(stats.heroes)]),
-);
+export const hashTable = zipObj(map(hash, values), values);
 
 /**
  * These do everything above.
