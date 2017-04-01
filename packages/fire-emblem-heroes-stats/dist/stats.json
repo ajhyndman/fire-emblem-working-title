@@ -638,16 +638,16 @@
         {
           "name": "Assault",
           "default": "-",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Pain",
           "default": "-",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Heal",
-          "default": "-",
+          "default": 3,
           "rarity": "-"
         },
         {
@@ -662,12 +662,12 @@
         },
         {
           "name": "Imbue",
-          "default": 3,
-          "rarity": "-"
+          "default": "-",
+          "rarity": 3
         },
         {
           "name": "Solid-Earth Balm",
-          "default": 5,
+          "default": "-",
           "rarity": 3
         },
         {
@@ -966,22 +966,22 @@
             "hp": [
               39,
               42,
-              "-"
+              45
             ],
             "atk": [
-              "-",
+              26,
               29,
               32
             ],
             "spd": [
-              "-",
+              25,
               28,
-              "-"
+              31
             ],
             "def": [
-              "-",
+              23,
               26,
-              "-"
+              29
             ],
             "res": [
               11,
@@ -991,7 +991,7 @@
           },
           "4": {
             "hp": [
-              "-",
+              40,
               43,
               46
             ],
@@ -1003,15 +1003,15 @@
             "spd": [
               27,
               30,
-              "-"
+              33
             ],
             "def": [
-              "-",
+              24,
               27,
-              "-"
+              30
             ],
             "res": [
-              "-",
+              12,
               15,
               18
             ]
@@ -1320,7 +1320,7 @@
             "hp": [
               40,
               43,
-              "-"
+              46
             ],
             "atk": [
               24,
@@ -1771,6 +1771,95 @@
               28,
               31,
               34
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Camilla (Spring Festival)",
+      "moveType": "Flying",
+      "weaponType": "Green Tome",
+      "total": 148,
+      "skills": [
+        {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elwind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Green Egg",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Green Egg+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Attack",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Defiant Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Defiant Spd 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Defiant Spd 3",
+          "rarity": "-"
+        },
+        {
+          "name": "Live for Bounty",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 6,
+            "def": 8,
+            "res": 4
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              35,
+              39,
+              42
+            ],
+            "atk": [
+              32,
+              35,
+              38
+            ],
+            "spd": [
+              22,
+              25,
+              29
+            ],
+            "def": [
+              26,
+              30,
+              33
+            ],
+            "res": [
+              16,
+              19,
+              22
             ]
           }
         }
@@ -2423,9 +2512,106 @@
               34
             ],
             "res": [
-              14,
+              13,
               17,
               20
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Chrom (Spring Festival)",
+      "moveType": "Infantry",
+      "weaponType": "Green Axe",
+      "total": 158,
+      "skills": [
+        {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Carrot Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Carrot Axe+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Shove",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Defense +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Attack Def +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Attack Def +2",
+          "rarity": "-"
+        },
+        {
+          "name": "Axe Experience 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Axe Experience 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Axe Experience 3",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 19,
+            "atk": 9,
+            "spd": 8,
+            "def": 6,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              40,
+              43,
+              46
+            ],
+            "atk": [
+              32,
+              35,
+              38
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              24,
+              28,
+              31
+            ],
+            "res": [
+              17,
+              20,
+              23
             ]
           }
         }
@@ -2743,7 +2929,7 @@
       "skills": [
         {
           "name": "Fire Breath",
-          "default": "-",
+          "default": 3,
           "rarity": "-"
         },
         {
@@ -2758,8 +2944,8 @@
         },
         {
           "name": "Dark Breath+",
-          "default": 5,
-          "rarity": "-"
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Dragon Gaze",
@@ -2785,7 +2971,7 @@
         },
         {
           "name": "Hone Atk 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Hone Atk 2",
@@ -2937,7 +3123,7 @@
           "rarity": "-"
         },
         {
-          "name": "Draconic Aura",
+          "name": "Dragon Fang",
           "default": "-",
           "rarity": 4
         },
@@ -3203,22 +3389,22 @@
             "spd": [
               23,
               26,
-              "-"
+              29
             ],
             "def": [
               27,
               30,
-              "-"
+              33
             ],
             "res": [
-              "-",
+              18,
               21,
               24
             ]
           },
           "5": {
             "hp": [
-              "-",
+              40,
               43,
               46
             ],
@@ -3379,7 +3565,7 @@
             "hp": [
               "-",
               47,
-              "-"
+              50
             ],
             "atk": [
               "-",
@@ -3399,17 +3585,17 @@
             "res": [
               13,
               16,
-              "-"
+              19
             ]
           },
           "5": {
             "hp": [
-              "-",
+              47,
               50,
-              "-"
+              53
             ],
             "atk": [
-              "-",
+              26,
               30,
               33
             ],
@@ -3419,14 +3605,14 @@
               35
             ],
             "def": [
-              "-",
+              36,
               39,
-              "-"
+              42
             ],
             "res": [
               15,
               18,
-              "-"
+              21
             ]
           }
         }
@@ -3633,10 +3819,10 @@
             "hp": [
               36,
               39,
-              "-"
+              42
             ],
             "atk": [
-              "-",
+              22,
               25,
               28
             ],
@@ -3646,14 +3832,14 @@
               "-"
             ],
             "def": [
-              "-",
+              21,
               24,
               27
             ],
             "res": [
               22,
               25,
-              "-"
+              28
             ]
           },
           "5": {
@@ -4262,7 +4448,7 @@
               "-"
             ],
             "atk": [
-              "-",
+              30,
               33,
               36
             ],
@@ -4543,11 +4729,45 @@
           }
         },
         "40": {
+          "1": {
+            "hp": [
+              27
+            ],
+            "atk": [
+              17
+            ],
+            "spd": [
+              28
+            ],
+            "def": [
+              12
+            ],
+            "res": [
+              26
+            ]
+          },
+          "2": {
+            "hp": [
+              "-"
+            ],
+            "atk": [
+              "-"
+            ],
+            "spd": [
+              "-"
+            ],
+            "def": [
+              "-"
+            ],
+            "res": [
+              "-"
+            ]
+          },
           "3": {
             "hp": [
               "-",
               31,
-              "-"
+              34
             ],
             "atk": [
               17,
@@ -4560,7 +4780,7 @@
               36
             ],
             "def": [
-              "-",
+              12,
               15,
               18
             ],
@@ -4577,7 +4797,7 @@
               35
             ],
             "atk": [
-              "-",
+              18,
               21,
               24
             ],
@@ -4742,7 +4962,7 @@
           },
           "4": {
             "hp": [
-              "-",
+              35,
               38,
               "-"
             ],
@@ -4789,7 +5009,7 @@
               "-"
             ],
             "res": [
-              "-",
+              28,
               31,
               "-"
             ]
@@ -4849,7 +5069,7 @@
           "rarity": 4
         },
         {
-          "name": "Breath of Life 2",
+          "name": "Breath of Life 3",
           "rarity": 5
         }
       ],
@@ -5215,54 +5435,54 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              41,
-              "-"
+              35,
+              38,
+              41
             ],
             "atk": [
-              "-",
               22,
-              "-"
+              25,
+              28
             ],
             "spd": [
-              "-",
+              29,
               32,
-              "-"
+              35
             ],
             "def": [
-              "-",
+              16,
               19,
-              "-"
+              22
             ],
             "res": [
-              "-",
+              13,
               16,
-              "-"
+              19
             ]
           },
           "4": {
             "hp": [
               36,
               39,
-              "-"
+              42
             ],
             "atk": [
-              "-",
+              24,
               27,
               30
             ],
             "spd": [
               31,
               34,
-              "-"
+              37
             ],
             "def": [
               17,
               20,
-              "-"
+              23
             ],
             "res": [
-              "-",
+              14,
               17,
               20
             ]
@@ -5271,27 +5491,27 @@
             "hp": [
               39,
               42,
-              "-"
+              45
             ],
             "atk": [
-              "-",
+              25,
               29,
               32
             ],
             "spd": [
-              "-",
+              33,
               36,
               39
             ],
             "def": [
               19,
               22,
-              "-"
+              25
             ],
             "res": [
-              "-",
+              16,
               19,
-              "-"
+              22
             ]
           }
         }
@@ -5381,28 +5601,28 @@
           "3": {
             "hp": [
               "-",
-              "-",
+              39,
               "-"
             ],
             "atk": [
               "-",
-              "-",
-              "-"
+              27,
+              30
             ],
             "spd": [
-              "-",
+              19,
               "-",
               "-"
             ],
             "def": [
               "-",
-              "-",
+              28,
               "-"
             ],
             "res": [
               "-",
-              "-",
-              "-"
+              14,
+              17
             ]
           },
           "4": {
@@ -5717,15 +5937,15 @@
         },
         {
           "name": "Hone Atk 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Hone Atk 2",
-          "rarity": 4
+          "rarity": 3
         },
         {
           "name": "Hone Armor",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "stats": {
@@ -5809,7 +6029,7 @@
           },
           "5": {
             "hp": [
-              "-",
+              46,
               49,
               "-"
             ],
@@ -5831,7 +6051,7 @@
             "res": [
               24,
               28,
-              "-"
+              31
             ]
           }
         }
@@ -5934,19 +6154,19 @@
         "40": {
           "1": {
             "hp": [
-              "-"
+              30
             ],
             "atk": [
-              "-"
+              26
             ],
             "spd": [
-              "-"
+              27
             ],
             "def": [
-              "-"
+              17
             ],
             "res": [
-              "-"
+              18
             ]
           },
           "2": {
@@ -5973,7 +6193,7 @@
               "-"
             ],
             "atk": [
-              27,
+              28,
               31,
               34
             ],
@@ -5984,7 +6204,7 @@
             ],
             "def": [
               "-",
-              "-",
+              20,
               23
             ],
             "res": [
@@ -6002,7 +6222,7 @@
             "atk": [
               "-",
               33,
-              "-"
+              36
             ],
             "spd": [
               31,
@@ -6405,7 +6625,7 @@
               "-"
             ],
             "spd": [
-              "-",
+              17,
               20,
               23
             ],
@@ -6415,9 +6635,9 @@
               "-"
             ],
             "res": [
+              "-",
               23,
-              26,
-              "-"
+              26
             ]
           },
           "5": {
@@ -6570,14 +6790,14 @@
               47
             ],
             "atk": [
-              "-",
+              27,
               30,
               33
             ],
             "spd": [
               19,
               22,
-              "-"
+              25
             ],
             "def": [
               31,
@@ -6959,7 +7179,7 @@
               26
             ],
             "res": [
-              "-",
+              30,
               33,
               36
             ]
@@ -7080,7 +7300,7 @@
               30
             ],
             "spd": [
-              "-",
+              26,
               29,
               "-"
             ],
@@ -7092,7 +7312,7 @@
             "res": [
               "-",
               22,
-              "-"
+              25
             ]
           },
           "5": {
@@ -7228,7 +7448,7 @@
             "res": [
               17,
               20,
-              "-"
+              23
             ]
           },
           "5": {
@@ -7371,12 +7591,12 @@
       "skills": [
         {
           "name": "Iron Dagger",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Steel Dagger",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -7401,7 +7621,7 @@
         },
         {
           "name": "Warding Blow 1",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Warding Blow 2",
@@ -7413,14 +7633,14 @@
         },
         {
           "name": "Daggerbreaker 1",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Daggerbreaker 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
-          "name": "Daggerbreaker 2",
+          "name": "Daggerbreaker 3",
           "rarity": 4
         }
       ],
@@ -7544,7 +7764,7 @@
           "rarity": "-"
         },
         {
-          "name": "Defiant Atk 2",
+          "name": "Defiant Atk 3",
           "rarity": 5
         },
         {
@@ -7682,7 +7902,7 @@
         "40": {
           "4": {
             "hp": [
-              "-",
+              34,
               37,
               "-"
             ],
@@ -7766,7 +7986,7 @@
         {
           "name": "Physic",
           "default": 5,
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Imbue",
@@ -7812,35 +8032,35 @@
           "4": {
             "hp": [
               "-",
-              "-",
+              36,
               "-"
             ],
             "atk": [
               "-",
-              "-",
+              29,
               "-"
             ],
             "spd": [
               "-",
-              "-",
+              24,
               "-"
             ],
             "def": [
-              "-",
+              17,
               "-",
               "-"
             ],
             "res": [
               "-",
               "-",
-              "-"
+              31
             ]
           },
           "5": {
             "hp": [
               35,
               39,
-              "-"
+              42
             ],
             "atk": [
               29,
@@ -8590,7 +8810,7 @@
       "skills": [
         {
           "name": "Iron Sword",
-          "default": "-",
+          "default": 3,
           "rarity": "-"
         },
         {
@@ -8620,7 +8840,7 @@
         },
         {
           "name": "Speed +1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Speed +2",
@@ -8632,11 +8852,11 @@
         },
         {
           "name": "Vantage 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Vantage 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Vantage 3",
@@ -8680,7 +8900,7 @@
               "-"
             ],
             "spd": [
-              "-",
+              33,
               35,
               "-"
             ],
@@ -8692,7 +8912,7 @@
             "res": [
               "-",
               16,
-              "-"
+              19
             ]
           },
           "4": {
@@ -8739,7 +8959,7 @@
               42
             ],
             "def": [
-              "-",
+              19,
               22,
               "-"
             ],
@@ -8860,6 +9080,103 @@
       }
     },
     {
+      "name": "Lucina (Spring Festival)",
+      "moveType": "Infantry",
+      "weaponType": "Blue Tome",
+      "total": 147,
+      "skills": [
+        {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elthunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blue Egg",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blue Egg+",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Speed",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Darting Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Sparrow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Sparrow 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Seal Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Seal Res 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Seal Res 3",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 10,
+            "def": 5,
+            "res": 6
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              32,
+              35,
+              39
+            ],
+            "atk": [
+              25,
+              29,
+              32
+            ],
+            "spd": [
+              33,
+              36,
+              39
+            ],
+            "def": [
+              19,
+              22,
+              25
+            ],
+            "res": [
+              22,
+              25,
+              29
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Lucius",
       "moveType": "Infantry",
       "weaponType": "Neutral Staff",
@@ -8868,12 +9185,12 @@
         {
           "name": "Assault",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Pain",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Heal",
@@ -8882,23 +9199,23 @@
         },
         {
           "name": "Reconcile",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Martyr",
           "default": 5,
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Imbue",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Miracle",
           "default": 5,
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "HP +3",
@@ -8906,7 +9223,7 @@
         },
         {
           "name": "HP +4",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "HP +5",
@@ -8915,6 +9232,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 17,
+            "atk": 4,
+            "spd": 8,
+            "def": 2,
+            "res": 9
+          },
           "5": {
             "hp": 18,
             "atk": 6,
@@ -8924,6 +9248,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
           "5": {
             "hp": [
               34,
@@ -9466,7 +9817,7 @@
           "4": {
             "hp": [
               "-",
-              "-",
+              38,
               41
             ],
             "atk": [
@@ -9476,7 +9827,7 @@
             ],
             "spd": [
               29,
-              "-",
+              32,
               "-"
             ],
             "def": [
@@ -9606,7 +9957,7 @@
               43
             ],
             "atk": [
-              "-",
+              22,
               25,
               28
             ],
@@ -9664,7 +10015,7 @@
       "skills": [
         {
           "name": "Iron Axe",
-          "default": "-",
+          "default": 3,
           "rarity": "-"
         },
         {
@@ -9684,7 +10035,7 @@
         },
         {
           "name": "Rising Thunder",
-          "default": "-",
+          "default": 4,
           "rarity": 3
         },
         {
@@ -9698,7 +10049,7 @@
         },
         {
           "name": "Threaten Def 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Threaten Def 2",
@@ -9978,7 +10329,7 @@
             "hp": 18,
             "atk": 7,
             "spd": 7,
-            "def": 9,
+            "def": 8,
             "res": 7
           }
         },
@@ -10062,7 +10413,7 @@
       "skills": [
         {
           "name": "Iron Bow",
-          "default": "-",
+          "default": 3,
           "rarity": "-"
         },
         {
@@ -10092,7 +10443,7 @@
         },
         {
           "name": "Warding Blow 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Warding Blow 2",
@@ -10544,61 +10895,74 @@
       ],
       "stats": {
         "1": {
-          "undefined": {}
+          "4": {
+            "hp": 16,
+            "atk": 6,
+            "spd": 4,
+            "def": 6,
+            "res": 4
+          },
+          "5": {
+            "hp": 17,
+            "atk": 6,
+            "spd": 5,
+            "def": 6,
+            "res": 5
+          }
         },
         "40": {
           "4": {
             "hp": [
-              15,
-              16,
-              17
+              39,
+              42,
+              45
             ],
             "atk": [
-              5,
-              6,
-              7
+              29,
+              32,
+              35
             ],
             "spd": [
-              3,
-              4,
-              5
+              21,
+              24,
+              27
             ],
             "def": [
-              5,
-              6,
-              7
+              25,
+              28,
+              31
             ],
             "res": [
-              3,
-              4,
-              5
+              21,
+              24,
+              27
             ]
           },
           "5": {
             "hp": [
-              16,
-              17,
-              18
+              42,
+              45,
+              48
             ],
             "atk": [
-              5,
-              6,
-              7
+              31,
+              34,
+              37
             ],
             "spd": [
-              4,
-              5,
-              6
+              23,
+              27,
+              30
             ],
             "def": [
-              5,
-              6,
-              7
+              27,
+              30,
+              33
             ],
             "res": [
-              4,
-              5,
-              6
+              23,
+              27,
+              30
             ]
           }
         }
@@ -10716,7 +11080,7 @@
             "hp": [
               34,
               37,
-              "-"
+              40
             ],
             "atk": [
               27,
@@ -11037,7 +11401,7 @@
             "def": [
               22,
               25,
-              "-"
+              28
             ],
             "res": [
               9,
@@ -11213,7 +11577,7 @@
               "-"
             ],
             "def": [
-              "-",
+              20,
               23,
               "-"
             ],
@@ -11467,25 +11831,25 @@
             "hp": [
               "-",
               "-",
-              "-"
+              41
             ],
             "atk": [
               "-",
-              "-",
+              27,
               "-"
             ],
             "spd": [
               "-",
-              "-",
+              27,
               "-"
             ],
             "def": [
               "-",
-              "-",
+              24,
               "-"
             ],
             "res": [
-              "-",
+              20,
               "-",
               "-"
             ]
@@ -11494,7 +11858,7 @@
             "hp": [
               36,
               39,
-              "-"
+              42
             ],
             "atk": [
               26,
@@ -11692,12 +12056,12 @@
         {
           "name": "Assault",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Panic",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Heal",
@@ -11706,23 +12070,23 @@
         },
         {
           "name": "Reconcile",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Rehabilitate",
           "default": 5,
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Imbue",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Still-Water Balm",
           "default": 5,
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Spur Def 1",
@@ -11730,7 +12094,7 @@
         },
         {
           "name": "Spur Def 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Spur Def 3",
@@ -11739,6 +12103,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 6,
+            "def": 3,
+            "res": 8
+          },
           "5": {
             "hp": 17,
             "atk": 7,
@@ -11748,6 +12119,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
           "5": {
             "hp": [
               33,
@@ -12116,13 +12514,13 @@
         },
         {
           "name": "Steel Bow",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Silver Bow",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Silver Bow+",
@@ -12131,7 +12529,7 @@
         },
         {
           "name": "Ardent Sacrifice",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -12144,7 +12542,7 @@
         },
         {
           "name": "Darting Blow 3",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Seal Atk 1",
@@ -12152,7 +12550,7 @@
         },
         {
           "name": "Seal Atk 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Seal Atk 3",
@@ -12161,6 +12559,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 8,
+            "def": 5,
+            "res": 4
+          },
           "5": {
             "hp": 18,
             "atk": 7,
@@ -12170,6 +12575,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
           "5": {
             "hp": [
               34,
@@ -12286,14 +12718,14 @@
               "-"
             ],
             "atk": [
-              "-",
+              27,
               "-",
               33
             ],
             "spd": [
               18,
               21,
-              "-"
+              24
             ],
             "def": [
               21,
@@ -13019,11 +13451,11 @@
             ],
             "atk": [
               23,
-              27,
-              "-"
+              26,
+              31
             ],
             "spd": [
-              "-",
+              29,
               32,
               "-"
             ],
@@ -13164,7 +13596,7 @@
             "res": [
               25,
               28,
-              "-"
+              31
             ]
           },
           "5": {
@@ -13347,7 +13779,7 @@
         },
         {
           "name": "Threaten Spd 3",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "stats": {
@@ -13377,28 +13809,28 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              31,
               "-",
               "-"
             ],
             "atk": [
               "-",
-              "-",
+              22,
               "-"
             ],
             "spd": [
               "-",
               "-",
-              "-"
+              34
             ],
             "def": [
               "-",
-              "-",
+              28,
               "-"
             ],
             "res": [
               "-",
-              "-",
+              24,
               "-"
             ]
           },
@@ -13406,10 +13838,10 @@
             "hp": [
               32,
               35,
-              "-"
+              38
             ],
             "atk": [
-              "-",
+              20,
               23,
               26
             ],
@@ -13691,7 +14123,7 @@
               "-"
             ],
             "res": [
-              "-",
+              26,
               29,
               "-"
             ]
@@ -14327,7 +14759,7 @@
             "atk": [
               25,
               28,
-              "-"
+              31
             ],
             "spd": [
               20,
@@ -14340,7 +14772,7 @@
               37
             ],
             "res": [
-              "-",
+              27,
               30,
               33
             ]
@@ -15777,14 +16209,14 @@
             "res": 7
           },
           "4": {
-            "hp": 16,
+            "hp": 15,
             "atk": 6,
             "spd": 8,
             "def": 3,
             "res": 8
           },
           "5": {
-            "hp": 17,
+            "hp": 16,
             "atk": 7,
             "spd": 8,
             "def": 4,
@@ -16198,14 +16630,14 @@
               "-"
             ],
             "atk": [
-              "-",
+              18,
               21,
               "-"
             ],
             "spd": [
               "-",
               20,
-              "-"
+              23
             ],
             "def": [
               "-",
@@ -16274,12 +16706,101 @@
           }
         }
       }
+    },
+    {
+      "name": "Xander (Spring Festival)",
+      "moveType": "Cavalry",
+      "weaponType": "Blue Lance",
+      "total": 154,
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Carrot Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Carrot Lance+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Swap",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Live for Honor",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortify Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortify Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortify Def 3",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 6,
+            "spd": 6,
+            "def": 9,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              36,
+              40,
+              43
+            ],
+            "atk": [
+              22,
+              25,
+              29
+            ],
+            "spd": [
+              24,
+              28,
+              31
+            ],
+            "def": [
+              32,
+              35,
+              38
+            ],
+            "res": [
+              23,
+              26,
+              30
+            ]
+          }
+        }
+      }
     }
   ],
   "skills": [
     {
       "name": "Armorslayer",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Effective against armored units.",
@@ -16289,7 +16810,7 @@
     },
     {
       "name": "Armorslayer+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "Effective against armored units.",
@@ -16299,7 +16820,7 @@
     },
     {
       "name": "Binding Blade",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Def/Res+2 when this unit is attacked.",
@@ -16309,7 +16830,7 @@
     },
     {
       "name": "Brave Sword",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 5,
       "range(rng)": 1,
       "effect": "Spd-5. Attack twice when initiating combat.",
@@ -16319,7 +16840,7 @@
     },
     {
       "name": "Brave Sword+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Spd-5. Attack twice when initiating combat.",
@@ -16329,7 +16850,7 @@
     },
     {
       "name": "Durandal",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Atk+4 during combat if unit initiates attack.",
@@ -16339,7 +16860,7 @@
     },
     {
       "name": "Eckesachs",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
@@ -16348,7 +16869,7 @@
     },
     {
       "name": "Falchion",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
@@ -16358,7 +16879,7 @@
     },
     {
       "name": "Fólkvangr",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
@@ -16368,7 +16889,7 @@
     },
     {
       "name": "Iron Sword",
-      "cost": "XXX SP",
+      "spCost": "-",
       "damage(mt)": 6,
       "range(rng)": 1,
       "effect": "-",
@@ -16378,7 +16899,7 @@
     },
     {
       "name": "Killing Edge",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
@@ -16388,7 +16909,7 @@
     },
     {
       "name": "Killing Edge+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
@@ -16398,7 +16919,7 @@
     },
     {
       "name": "Mystletainn",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
@@ -16408,7 +16929,7 @@
     },
     {
       "name": "Raijinto",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of distance if this unit is attacked",
@@ -16418,7 +16939,7 @@
     },
     {
       "name": "Ruby Sword",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
@@ -16428,7 +16949,7 @@
     },
     {
       "name": "Ruby Sword+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
@@ -16438,7 +16959,7 @@
     },
     {
       "name": "Siegfried",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of distance if this unit is attacked",
@@ -16447,7 +16968,7 @@
     },
     {
       "name": "Sieglinde",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
@@ -16457,7 +16978,7 @@
     },
     {
       "name": "Silver Sword",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "-",
@@ -16467,7 +16988,7 @@
     },
     {
       "name": "Silver Sword+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 15,
       "range(rng)": 1,
       "effect": "-",
@@ -16477,7 +16998,7 @@
     },
     {
       "name": "Sol Katti",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately.",
@@ -16487,7 +17008,7 @@
     },
     {
       "name": "Steel Sword",
-      "cost": "100 SP",
+      "spCost": 100,
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "-",
@@ -16497,7 +17018,7 @@
     },
     {
       "name": "Tyrfing",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Def+4 in battle if unit's HP ≤ 50%.",
@@ -16507,7 +17028,7 @@
     },
     {
       "name": "Wo Dao",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "Grants +10 to damage when Special triggers.",
@@ -16517,7 +17038,7 @@
     },
     {
       "name": "Wo Dao+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "Grants +10 to damage when Special triggers.",
@@ -16527,7 +17048,7 @@
     },
     {
       "name": "Yato",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Spd+4 during combat if unit initiates attack.",
@@ -16537,7 +17058,7 @@
     },
     {
       "name": "Bolganone",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "-",
@@ -16547,7 +17068,7 @@
     },
     {
       "name": "Bolganone+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "-",
@@ -16557,7 +17078,7 @@
     },
     {
       "name": "Brynhildr",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "If character initiates attack, restricts enemies's next-turn movement to 1 space or less.",
@@ -16567,7 +17088,7 @@
     },
     {
       "name": "Cymbeline",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.",
@@ -16577,7 +17098,7 @@
     },
     {
       "name": "Elfire",
-      "cost": "100 SP",
+      "spCost": 100,
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "-",
@@ -16587,7 +17108,7 @@
     },
     {
       "name": "Fenrir",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "-",
@@ -16597,7 +17118,7 @@
     },
     {
       "name": "Fenrir+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "-",
@@ -16607,7 +17128,7 @@
     },
     {
       "name": "Fire",
-      "cost": "XXX SP",
+      "spCost": "-",
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "-",
@@ -16617,7 +17138,7 @@
     },
     {
       "name": "Flux",
-      "cost": "XXX SP",
+      "spCost": "-",
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "-",
@@ -16627,7 +17148,7 @@
     },
     {
       "name": "Rauðrblade",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
@@ -16637,7 +17158,7 @@
     },
     {
       "name": "Rauðrblade+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
@@ -16647,7 +17168,7 @@
     },
     {
       "name": "Rauðrraven",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Grants weapon advantage vs. colorless foes.",
@@ -16657,7 +17178,7 @@
     },
     {
       "name": "Rauðrraven+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "Grants weapon advantage vs. colorless foes.",
@@ -16667,7 +17188,7 @@
     },
     {
       "name": "Rauðrwolf",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
@@ -16677,7 +17198,7 @@
     },
     {
       "name": "Rauðrwolf+",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
@@ -16687,7 +17208,7 @@
     },
     {
       "name": "Ruin",
-      "cost": "100 SP",
+      "spCost": 100,
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "-",
@@ -16697,7 +17218,7 @@
     },
     {
       "name": "Fire Breath",
-      "cost": "XXX SP",
+      "spCost": "-",
       "damage(mt)": 6,
       "range(rng)": 1,
       "effect": "-",
@@ -16707,7 +17228,7 @@
     },
     {
       "name": "Fire Breath+",
-      "cost": "XXX SP",
+      "spCost": "-",
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "-",
@@ -16717,7 +17238,7 @@
     },
     {
       "name": "Flametongue",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "-",
@@ -16727,663 +17248,8 @@
     },
     {
       "name": "Flametongue+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Lightning Breath",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Lightning Breath+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Brave Lance",
-      "cost": "200 SP",
-      "damage(mt)": 5,
-      "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Brave Lance+",
-      "cost": "300 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Fensalir",
-      "cost": "400 SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Gradivus",
-      "cost": "400 SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "???",
-      "exclusive?": "Yes",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Heavy Spear",
-      "cost": "200 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Effective against armored units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Heavy Spear+",
-      "cost": "300 SP",
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "effect": "Effective against armored units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Iron Lance",
-      "cost": "XXX SP",
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Killer Lance",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Killer Lance+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Sapphire Lance",
-      "cost": "200 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Sapphire Lance+",
-      "cost": "300 SP",
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Siegmund",
-      "cost": "400 SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Silver Lance",
-      "cost": "200 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Silver Lance+",
-      "cost": "300 SP",
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Steel Lance",
-      "cost": "100 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Aura",
-      "cost": "400 SP",
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Restores 5 HP to adjacent allies after any combat this unit initiates",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blárblade",
-      "cost": "200 SP",
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blárblade+",
-      "cost": "300 SP",
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blárraven",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "Grants weapon advantage vs. colorless foes.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blárraven+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "Grants weapon advantage vs. colorless foes.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blárwolf",
-      "cost": "200 SP",
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blárwolf+",
-      "cost": "300 SP",
-      "damage(mt)": 10,
-      "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Dire Thunder",
-      "cost": "400 SP",
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Elthunder",
-      "cost": "100 SP",
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Thoron",
-      "cost": "200 SP",
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Thoron+",
-      "cost": "300 SP",
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Thunder",
-      "cost": "XXX SP",
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Valaskjálf",
-      "cost": "400 SP",
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Enables unit at ≤ 50% HP to strike first, even when attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Dark Breath",
-      "cost": "200 SP",
-      "damage(mt)": 9,
-      "range(rng)": 1,
-      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Dark Breath+",
-      "cost": "300 SP",
-      "damage(mt)": 13,
-      "range(rng)": 1,
-      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Fire Breath",
-      "cost": "XXX SP",
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Fire Breath+",
-      "cost": "XXX SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Lightning Breath",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Lightning Breath+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Armads",
-      "cost": "400 SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Brave Axe",
-      "cost": "200 SP",
-      "damage(mt)": 5,
-      "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Brave Axe+",
-      "cost": "300 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Emerald Axe",
-      "cost": "200 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Emerald Axe+",
-      "cost": "300 SP",
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Hammer",
-      "cost": "200 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Effective against armored units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Hammer+",
-      "cost": "200 SP",
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "effect": "Effective against armored units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Hauteclere",
-      "cost": "400 SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Iron Axe",
-      "cost": "XXX SP",
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Killer Axe",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Killer Axe+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Nóatún",
-      "cost": "400 SP",
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Unit may move adjacent to any ally when HP &lt;= 40%",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Silver Axe",
-      "cost": "200 SP",
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Silver Axe+",
-      "cost": "300 SP",
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Steel Axe",
-      "cost": "100 SP",
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Elwind",
-      "cost": "100 SP",
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Excalibur",
-      "cost": "400 SP",
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Effective against flying units",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Gronnblade",
-      "cost": "200 SP",
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Gronnblade+",
-      "cost": "300 SP",
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Gronnraven",
-      "cost": "200 SP",
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "Grants weapon advantage vs. colorless foes.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Gronnraven+",
-      "cost": "300 SP",
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "Grants weapon advantage vs. colorless foes.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Gronnwolf",
-      "cost": "200 SP",
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Gronnwolf+",
-      "cost": "300 SP",
-      "damage(mt)": 10,
-      "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Naga",
-      "cost": "400 SP",
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Effective against dragons. Grants Def/Res+2 when this unit is attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Rexcalibur",
-      "cost": "200 SP",
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Rexcalibur+",
-      "cost": "300 SP",
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Wind",
-      "cost": "XXX SP",
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Élivágar",
-      "cost": "400 SP",
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.",
-      "exclusive?": "Yes",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Fire Breath",
-      "cost": "XXX SP",
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Fire Breath+",
-      "cost": "XXX SP",
-      "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
@@ -17392,7 +17258,7 @@
     },
     {
       "name": "Light Breath",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
@@ -17402,7 +17268,782 @@
     },
     {
       "name": "Light Breath+",
-      "cost": "300 SP",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Lightning Breath",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Lightning Breath+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Brave Lance",
+      "spCost": 200,
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Brave Lance+",
+      "spCost": 300,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Carrot Lance",
+      "spCost": "-",
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Carrot Lance+",
+      "spCost": "-",
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Fensalir",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Gradivus",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "???",
+      "exclusive?": "Yes",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Heavy Spear",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Heavy Spear+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Iron Lance",
+      "spCost": "-",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Killer Lance",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Killer Lance+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Sapphire Lance",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Sapphire Lance+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Siegmund",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Silver Lance",
+      "spCost": 200,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Silver Lance+",
+      "spCost": 300,
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Steel Lance",
+      "spCost": 100,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Aura",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Restores 5 HP to adjacent allies after any combat this unit initiates",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blue Egg",
+      "spCost": "-",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blue Egg+",
+      "spCost": "-",
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blárblade",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blárblade+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blárraven",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "Grants weapon advantage vs. colorless foes.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blárraven+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "Grants weapon advantage vs. colorless foes.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blárwolf",
+      "spCost": 200,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blárwolf+",
+      "spCost": 300,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Dire Thunder",
+      "spCost": 400,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Elthunder",
+      "spCost": 100,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Thoron",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Thoron+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Thunder",
+      "spCost": "-",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Valaskjálf",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Enables unit at ≤ 50% HP to strike first, even when attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Dark Breath",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Dark Breath+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Fire Breath",
+      "spCost": "-",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Fire Breath+",
+      "spCost": "-",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Light Breath",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Light Breath+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Lightning Breath",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Lightning Breath+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Armads",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Brave Axe",
+      "spCost": 200,
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Brave Axe+",
+      "spCost": 300,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Carrot Axe",
+      "spCost": "-",
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Carrot Axe+",
+      "spCost": "-",
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Emerald Axe",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Emerald Axe+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Hammer",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Hammer+",
+      "spCost": 200,
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Hauteclere",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Iron Axe",
+      "spCost": "-",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Killer Axe",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Killer Axe+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Nóatún",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Unit may move adjacent to any ally when HP &lt;= 40%",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Silver Axe",
+      "spCost": 200,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Silver Axe+",
+      "spCost": 300,
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Steel Axe",
+      "spCost": 100,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Elwind",
+      "spCost": 100,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Excalibur",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against flying units",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Green Egg",
+      "spCost": "-",
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Green Egg+",
+      "spCost": "-",
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Gronnblade",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Gronnblade+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Gronnraven",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "Grants weapon advantage vs. colorless foes.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Gronnraven+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "Grants weapon advantage vs. colorless foes.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Gronnwolf",
+      "spCost": 200,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Gronnwolf+",
+      "spCost": 300,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Naga",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against dragons. Grants Def/Res+2 when this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Rexcalibur",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Rexcalibur+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Wind",
+      "spCost": "-",
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Élivágar",
+      "spCost": 400,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.",
+      "exclusive?": "Yes",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Fire Breath",
+      "spCost": "-",
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Fire Breath+",
+      "spCost": "-",
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Light Breath",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Light Breath+",
+      "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
@@ -17412,7 +18053,7 @@
     },
     {
       "name": "Absorb",
-      "cost": "150 SP",
+      "spCost": 150,
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "Recovers HP=50% of damage dealt.",
@@ -17422,7 +18063,7 @@
     },
     {
       "name": "Assault",
-      "cost": "50 SP",
+      "spCost": 50,
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "-",
@@ -17432,7 +18073,7 @@
     },
     {
       "name": "Fear",
-      "cost": "150 SP",
+      "spCost": 150,
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "After combat, inflicts Atk-6 on targeted foe throught its next action.",
@@ -17442,7 +18083,7 @@
     },
     {
       "name": "Gravity",
-      "cost": "150 SP",
+      "spCost": 150,
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "After any combat, prevents foe from moving more than 1 space through its next action.",
@@ -17452,7 +18093,7 @@
     },
     {
       "name": "Pain",
-      "cost": "150 SP",
+      "spCost": 150,
       "damage(mt)": 3,
       "range(rng)": 2,
       "effect": "Inflicts 10 damage on targeted foe after combat.  Cannot drop enemy hit points below 1.",
@@ -17462,7 +18103,7 @@
     },
     {
       "name": "Panic",
-      "cost": "150 SP",
+      "spCost": 150,
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "After combat, bonuses on targeted foe become penalties through its next action.",
@@ -17472,7 +18113,7 @@
     },
     {
       "name": "Slow",
-      "cost": "150 SP",
+      "spCost": 150,
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "After any combat, inflicts Spd-6 on foe through its next action.",
@@ -17482,7 +18123,7 @@
     },
     {
       "name": "Assassin's Bow",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
@@ -17492,7 +18133,7 @@
     },
     {
       "name": "Assassin's Bow+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
@@ -17502,7 +18143,7 @@
     },
     {
       "name": "Brave Bow",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
@@ -17512,7 +18153,7 @@
     },
     {
       "name": "Brave Bow+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
@@ -17521,18 +18162,8 @@
       "weaponType": "Neutral Bow"
     },
     {
-      "name": "Deathly Dagger",
-      "cost": "400 SP",
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "After combat, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, 7 damage to foe after battle.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
       "name": "Fujin Yumi",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against flying units. Unit can pass though foes if own HP ≥ 50%.",
@@ -17542,7 +18173,7 @@
     },
     {
       "name": "Iron Bow",
-      "cost": "XXX SP",
+      "spCost": "-",
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "Effective against flying units.",
@@ -17552,7 +18183,7 @@
     },
     {
       "name": "Killer Bow",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "Effective against flying units.Accelerates Special trigger (cooldown count-1).",
@@ -17562,7 +18193,7 @@
     },
     {
       "name": "Killer Bow+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Effective against flying units.Accelerates Special trigger (cooldown count-1).",
@@ -17572,7 +18203,7 @@
     },
     {
       "name": "Parthia",
-      "cost": "400 SP",
+      "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against flying units. Grants +4 Res during combat if initiating attack.",
@@ -17582,7 +18213,7 @@
     },
     {
       "name": "Silver Bow",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Effective against flying units.",
@@ -17592,7 +18223,7 @@
     },
     {
       "name": "Silver Bow+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "Effective against flying units.",
@@ -17602,7 +18233,7 @@
     },
     {
       "name": "Steel Bow",
-      "cost": "100 SP",
+      "spCost": 100,
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "Effective against flying units.",
@@ -17611,8 +18242,18 @@
       "weaponType": "Neutral Bow"
     },
     {
+      "name": "Deathly Dagger",
+      "spCost": 400,
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "After combat, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, 7 damage to foe after battle.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
       "name": "Iron Dagger",
-      "cost": "XXX SP",
+      "spCost": "-",
       "damage(mt)": 3,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
@@ -17622,7 +18263,7 @@
     },
     {
       "name": "Poison Dagger",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 2,
       "range(rng)": 2,
       "effect": "Effective against infantry units . Infantry foes suffer Def/Res-4 after combat through their next actions.",
@@ -17632,7 +18273,7 @@
     },
     {
       "name": "Poison Dagger+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "Effective against infantry units . Infantry foes suffer Def/Res-6 after combat through their next actions.",
@@ -17642,7 +18283,7 @@
     },
     {
       "name": "Rogue Dagger",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-3 on foe through its next action.Grants unit Def/Res+3 for 1 turn.",
@@ -17652,7 +18293,7 @@
     },
     {
       "name": "Rogue Dagger+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-5 on foe through its next action.Grants unit Def/Res+5 for 1 turn.",
@@ -17662,7 +18303,7 @@
     },
     {
       "name": "Silver Dagger",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-5 on foe through its next action.",
@@ -17672,7 +18313,7 @@
     },
     {
       "name": "Silver Dagger+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-7 on foe through its next action.",
@@ -17682,7 +18323,7 @@
     },
     {
       "name": "Smoke Dagger",
-      "cost": "200 SP",
+      "spCost": 200,
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions.",
@@ -17692,7 +18333,7 @@
     },
     {
       "name": "Smoke Dagger+",
-      "cost": "300 SP",
+      "spCost": 300,
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions.",
@@ -17702,7 +18343,7 @@
     },
     {
       "name": "Steel Dagger",
-      "cost": "100 SP",
+      "spCost": 100,
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
@@ -18292,6 +18933,20 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Attack Def +1",
+      "effect": "Grants Atk/Def+1.",
+      "spCost": 30,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Attack Def +2",
+      "effect": "Grants Atk/Def+2.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Attack +1",
       "effect": "Grants Atk+1.",
       "spCost": 30,
@@ -18600,6 +19255,20 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Swift Sparrow 1",
+      "effect": "If unit initiates combat, unit granted Atk/Spd+2 during battle.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Staves",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Swift Sparrow 2",
+      "effect": "If unit initiates combat, unit granted Atk/Spd+4 during battle.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staves",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Triangle Adept 1",
       "effect": "Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage.",
       "spCost": 50,
@@ -18842,6 +19511,20 @@
       "effect": "If unit's HP ≥ 50% in combat against a lance user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
       "inheritRestriction": "Excludes Red Weapons",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Live for Bounty",
+      "effect": "If unit survives, get 1.5x normal badges from a Training Tower map. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Live for Honor",
+      "effect": "If unit survives, get 1.5x normal badges from a Training Tower map. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 100,
+      "inheritRestriction": "None",
       "type": "PASSIVE_B"
     },
     {
@@ -19165,6 +19848,27 @@
       "spCost": 240,
       "inheritRestriction": "None",
       "type": "PASSIVE_B"
+    },
+    {
+      "name": "Axe Experience 1",
+      "effect": "If unit survives, unit gets 1.5x EXP. (If similar skill effects also used, only highest multipler applied.)",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Axe Experience 2",
+      "effect": "If unit survives, all axe users on team get 1.5x EXP. (If similar skill effects also used, only highest multipler applied.)",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Axe Experience 3",
+      "effect": "If unit survives, all axe users on team get 2x EXP. (If similar skill effects also used, only highest multipler applied.)",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
     },
     {
       "name": "Breath of Life 1",
