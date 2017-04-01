@@ -92,6 +92,40 @@ async function fetchSkills() {
   return skills;
 }
 
+// log warnings if data looks suspicious
+function validate(heroes, skills) {
+  const heroNames = map(prop('name'), heroes);
+  const skillsByName = indexBy(prop('name'), skills);
+  for (let hero of heroes) {
+    for (let skill of hero.skills) {
+      if (skillsByName[skill.name] == null) {
+        console.log('Warning: ' + hero.name + ' has unknown skill: ' + skill.name);
+      }
+    }
+    var level1Rarities = 0;
+    var level40Rarities = 0;
+    for (let rarity of [1,2,3,4,5]) {
+      // level 1 stats:
+      if (hero.stats[1][rarity] != null) {
+        level1Rarities++;
+      }
+      // level 40 stats:
+      if (hero.stats[40][rarity] != null) {
+        level40Rarities++;
+      }
+    }
+    if (level1Rarities != level40Rarities || level1Rarities == 0) {
+      console.log('Warning: ' + hero.name + ' has level 1/40 stats for ' + level1Rarities
+        + '/' + level40Rarities + ' rarities.');
+    }
+  }
+  for (let skill of skills) {
+    if (skill.type === 'WEAPON' && skill.weaponType == null) {
+      console.log('Warning: Skill is unobtainable: ', skill.name);
+    }
+  }
+}
+
 // Look at the weapons available to each hero to figure out weapon types.
 function skillsWithWeaponsTypes(heroes, skills) {
   const skillsByName = indexBy(prop('name'), skills);
@@ -100,15 +134,12 @@ function skillsWithWeaponsTypes(heroes, skills) {
     const heroWeaponType = test(/Beast/, hero.weaponType) ? 'Breath' : hero.weaponType;
     for (let skill of hero.skills) {
       const skillInfo = skillsByName[skill.name];
-      if (skillInfo == null) {
-        console.log('Warning: unknown skill: ' + skill.name);
-      }
-      if (skillInfo.type === 'WEAPON') {
+      if (skillInfo != null && skillInfo.type === 'WEAPON') {
         weaponTypeByName[skill.name] = heroWeaponType;
       }
     }
   }
-  return map(
+  const withWeaponTypes = map(
     ifElse(
       propEq('type', 'WEAPON'),
       (skill) => assoc('weaponType', weaponTypeByName[skill.name], skill),
@@ -116,6 +147,7 @@ function skillsWithWeaponsTypes(heroes, skills) {
     ),
     skills
   );
+  return withWeaponTypes;
 }
 
 // Fetch new data and write it to stats.json
@@ -126,6 +158,7 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
 
   // Infer weapon subtypes from the heroes that own them.
   const skillsV2 = skillsWithWeaponsTypes(heroes, skills);
+  validate(heroes, skillsV2);
 
   // WRITE STATS TO FILE
   const allStats = { heroes, skills: skillsV2 };
