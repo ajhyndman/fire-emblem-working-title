@@ -88,7 +88,7 @@ export type SkillType =
 export type WeaponSkill = {
   +type: 'WEAPON';
   +name: string;
-  +cost: string;
+  +spCost: number;
   +'damage(mt)': number;
   +'range(rng)': number;
   +effect: string;
