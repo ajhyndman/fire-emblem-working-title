@@ -101,6 +101,7 @@ const parseHeroStats = compose(
   }),
   map(processStatTable),
   map(parseTable),
+  filter(test(/Rarity/)), // Exclude unrelated tables
   filter(compose(not, test(/ibox/))),
   filter(compose(not, test(/skills-table/))),
   match(/<table[^>]*?>.*?<\/table>/g),
