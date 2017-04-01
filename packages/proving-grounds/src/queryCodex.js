@@ -59,18 +59,12 @@ export const extractInstance = ([
   skills: {
     // Technically, if we get bogus skill names somehow, this could
     // return a corrupt hero instance.
-    // $FlowIssue
-    WEAPON: weapon && getSkillInfo(weapon),
-    // $FlowIssue
-    ASSIST: assist && getSkillInfo(assist),
-    // $FlowIssue
-    SPECIAL: special && getSkillInfo(special),
-    // $FlowIssue
-    PASSIVE_A: passiveA && getSkillInfo(passiveA),
-    // $FlowIssue
-    PASSIVE_B: passiveB && getSkillInfo(passiveB),
-    // $FlowIssue
-    PASSIVE_C: passiveC && getSkillInfo(passiveC),
+    WEAPON: (weapon && getSkillInfo(weapon): any),
+    ASSIST: (assist && getSkillInfo(assist): any),
+    SPECIAL: (special && getSkillInfo(special): any),
+    PASSIVE_A: (passiveA && getSkillInfo(passiveA): any),
+    PASSIVE_B: (passiveB && getSkillInfo(passiveB): any),
+    PASSIVE_C: (passiveC && getSkillInfo(passiveC): any),
   },
 });
 
@@ -92,10 +86,13 @@ const values = flatten([
   null,
   range(1, 999),
   ['hp', 'atk', 'spd', 'def', 'res'],
+  // $FlowIssue: flowtypes for ramda aren't precise
   map(prop('name'), stats.skills),
+  // $FlowIssue: flowtypes for ramda aren't precise
   map(prop('name'), stats.heroes),
 ]);
 
+// $FlowIssue: flowtypes for ramda aren't precise
 export const hashTable = zipObj(map(hash, values), values);
 
 /**
@@ -104,13 +101,13 @@ export const hashTable = zipObj(map(hash, values), values);
 
 export const decodeHero = (heroCode: string): ?HeroInstance => (
   heroCode
-   ? compose(
-     extractInstance,
-     map(hash => hashTable[hash]),
-     string => string.split('+'),
-     lzString.decompressFromBase64,
-   )(heroCode)
-   : undefined
+    ? compose(
+      extractInstance,
+      map(hash => hashTable[hash]),
+      string => string.split('+'),
+      lzString.decompressFromBase64,
+    )(heroCode)
+    : undefined
 );
 
 export const encodeHero = (instance: ?HeroInstance): string => (

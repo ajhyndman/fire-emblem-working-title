@@ -14,19 +14,19 @@ import {
 import type { HeroInstance } from '../src/store';
 
 
-// $FlowIssue: getSkillInfo's typedef can't infer which skill type will be returned.
 const mockInstance: HeroInstance = {
   bane: null,
   boon: null,
   name: 'Anna',
   rarity: 5,
   skills: {
-    WEAPON: getSkillInfo('Nóatún'),
+    // FlowIssue: getSkillInfo's typedef can't infer which skill type will be returned.
+    WEAPON: (getSkillInfo('Nóatún'): any),
     ASSIST: null,
-    SPECIAL: getSkillInfo('Astra'),
+    SPECIAL: (getSkillInfo('Astra'): any),
     PASSIVE_A: null,
-    PASSIVE_B: getSkillInfo('Vantage 3'),
-    PASSIVE_C: getSkillInfo('Spur Res 3'),
+    PASSIVE_B: (getSkillInfo('Vantage 3'): any),
+    PASSIVE_C: (getSkillInfo('Spur Res 3'): any),
   },
 };
 
