@@ -75,7 +75,7 @@ test('braveWeaponAndSwordBreaker', (t) => {
 
 test('waryFighter', (t) => {
   t.plan(2);
-  simulateCombat(t, makeHero('Effie'), makeHero('Catria'), 50-9, 39-26);
+  simulateCombat(t, makeHero('Effie'), makeHero('Catria'), 50-9, 39-32);
 });
 
 test('braveWeaponAndDartingBlow', (t) => {

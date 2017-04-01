@@ -30,7 +30,7 @@ test('inheritableTomes', (t) => {
     'Rauðrraven+',
     'Rauðrwolf',
     'Rauðrwolf+',
-    'Ruin'
+    'Ruin',
   ]);
 });
 
