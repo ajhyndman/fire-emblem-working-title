@@ -87,6 +87,9 @@ export const hash = (value: any): string => (
 );
 
 const values = flatten([
+  // Explicitly add `null` to the hash table.
+  // This is a workaround for issue #52
+  null,
   range(1, 999),
   ['hp', 'atk', 'spd', 'def', 'res'],
   map(prop('name'), stats.skills),

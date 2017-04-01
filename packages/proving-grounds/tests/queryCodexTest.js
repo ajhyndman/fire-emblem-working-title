@@ -16,15 +16,15 @@ import type { HeroInstance } from '../src/store';
 
 // $FlowIssue: getSkillInfo's typedef can't infer which skill type will be returned.
 const mockInstance: HeroInstance = {
-  bane: undefined,
-  boon: undefined,
+  bane: null,
+  boon: null,
   name: 'Anna',
   rarity: 5,
   skills: {
     WEAPON: getSkillInfo('Nóatún'),
-    ASSIST: undefined,
+    ASSIST: null,
     SPECIAL: getSkillInfo('Astra'),
-    PASSIVE_A: undefined,
+    PASSIVE_A: null,
     PASSIVE_B: getSkillInfo('Vantage 3'),
     PASSIVE_C: getSkillInfo('Spur Res 3'),
   },
@@ -35,12 +35,12 @@ test('flattenInstance', (t) => {
     assert.deepEqual(
       flattenInstance(mockInstance),
       [
-        undefined,
-        undefined,
+        null,
+        null,
         'Anna',
         5,
-        undefined,
-        undefined,
+        null,
+        null,
         'Vantage 3',
         'Spur Res 3',
         'Astra',
