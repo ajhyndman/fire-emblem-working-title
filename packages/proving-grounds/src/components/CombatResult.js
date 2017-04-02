@@ -47,6 +47,7 @@ const CombatResult = ({ leftHero, rightHero }: Props) => {
         }
         .result {
           align-self: stretch;
+          flex-basis: 40%;
         }
         h1 {
           color: white;
