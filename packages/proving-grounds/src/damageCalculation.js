@@ -218,7 +218,7 @@ const hitDmg = (
     getSpecialNonLethalDamageAmount(attackerSpecial, attacker, defender, isAttacker),
     defenderHpRemaining - 1,
   ),
-  getSpecialBonusDamageAmount(attackerSpecial, attacker, isAttacker),
+  getSpecialBonusDamageAmount(attackerSpecial, attacker, isAttacker, attackerMissingHp),
   getSpecialOffensiveMultiplier(attackerSpecial),
   getSpecialDefensiveMultiplier(defenderSpecial),
   getSpecialMitigationMultiplier(attackerSpecial),
@@ -304,9 +304,11 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
       const dmg = hitDmg(
         heroes[heroIndex],
         heroes[otherHeroIndex],
-        heroIndex === 0,
+        heroIndex === 0,  // isAttacker
         attackerSpecial,
         defenderSpecial,
+        getStat(heroes[heroIndex], 'hp') - healths[heroIndex],  // attacker missing hp
+        healths[otherHeroIndex],  // defender hp remaining
       );
       healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex]);
       if (stillFighting) {

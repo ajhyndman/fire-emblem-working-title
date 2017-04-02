@@ -103,22 +103,41 @@ export function getSpecialNonLethalDamageAmount(
   const atk = getStat(attacker, 'atk', 40, isAttacker);
   const def = getStat(defender, getMitigationType(attacker), 40, !isAttacker);
   const multiplier = test(/(Blazing)/, skillName) ? 1.5
-    : (test(/(Growing)/, skillName) ? 1.0 : 0);
+    : (test(/(Growing|Rising)/, skillName) ? 1.0 : 0);
   return Math.floor(multiplier * (atk - def));
 }
-// Returns a flat amount of bonus damage for a stat-based special
+// Returns a flat amount of bonus damage for a stat-based special (or missing HP special)
 export function getSpecialBonusDamageAmount(
-    skillName: string, attacker: HeroInstance, isAttacker: boolean): number {
-  let stat = 'atk';
-  const ratio = test(/Bonfire/, skillName) ? 0.5 : 0.0;
+    skillName: string,
+    attacker: HeroInstance,
+    isAttacker: boolean,
+    attackerMissingHp: number,
+): number {
+  let stat = 'def';
+  if (test(/Dra(c|g)on/, skillName)) stat = 'atk';
+  if (test(/(Bonfire|Glowing E|Ignis)/, skillName)) stat = 'def';
+  if (test(/(Glacies|Chilling W|Iceberg)/, skillName)) stat = 'res';
+  let ratio = 0.0;
+  if (test(/(Glacies|Ignis)/, skillName)) ratio = 0.8;
+  if (test(/(Bonfire|Glowing E|Chilling W|Iceberg|Dragon F|Vengeance)/, skillName)) ratio = 0.5;
+  if (test(/(Draconic A|Dragon G|Reprisal|Retribution)/, skillName)) ratio = 0.3;
+  if (test(/(Reprisal|Retribution|Vengeance)/, skillName)) {
+    return Math.floor(attackerMissingHp * ratio);
+  }
   return Math.floor(getStat(attacker, stat, 40, isAttacker) * ratio);
 }
 // Returns the percent of damage increased by a special
 export function getSpecialOffensiveMultiplier(skillName: string): number {
-  return test(/(Draconic)/, skillName) ? 0.3 : 0;
+  return test(/Astra/, skillName) ? 1.5
+    : (test(/(Glimmer|Night Sky)/, skillName) ? 0.5 : 0);
 }
 // Returns the percent of damage reduced by a special.
 export function getSpecialDefensiveMultiplier(skillName: string): number {
-  return test(/(Pavise|Aegis)/, skillName) ? 0.3
-    : (test(/(Buckler|Escutcheon|Holy Vestments|Sacred Cowl)/, skillName) ? 0.5 : 0);
+  return test(/(Pavise|Aegis)/, skillName) ? 0.5
+    : (test(/(Buckler|Escutcheon|Holy Vestments|Sacred Cowl)/, skillName) ? 0.3 : 0);
+}
+// Returns the percent of damage increased by a special
+export function getSpecialLifestealPercent(skillName: string): number {
+  return test(/(Aether|Sol)/, skillName) ? 0.5
+    : (test(/(Daylight|Noontime)/, skillName) ? 0.3 : 0.0);
 }

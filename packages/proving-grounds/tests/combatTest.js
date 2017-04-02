@@ -3,17 +3,29 @@ import test from 'tape';
 
 import { calculateResult } from '../src/damageCalculation';
 import { getDefaultSkills } from '../src/heroHelpers';
-import type { HeroInstance } from '../src/store';
+import { getSkillInfo } from '../src/skillHelpers';
+import type { HeroInstance, InstanceSkills } from '../src/store';
 
 
-function makeHero(name: string, rarity: 1 | 2 | 3 | 4 | 5 = 5): HeroInstance {
+function makeHero(
+  name: string,
+  rarity: 1 | 2 | 3 | 4 | 5 = 5,
+  customSkills: InstanceSkills = {},
+): HeroInstance {
   return {
     name: name,
     bane: undefined,
     boon: undefined,
     rarity: rarity,
-    skills: getDefaultSkills(name, rarity),
+    skills: {
+      ...getDefaultSkills(name, rarity),
+      ...customSkills,
+    },
   };
+}
+
+function withSpecial(specialName: string): InstanceSkills {
+  return {SPECIAL: getSkillInfo(specialName)};
 }
 
 function simulateCombat(
@@ -78,15 +90,30 @@ test('waryFighter', (t) => {
   simulateCombat(t, makeHero('Effie'), makeHero('Catria'), 50-9, 39-32);
 });
 
-test('braveWeaponAndDartingBlow', (t) => {
-  t.plan(4);
-  // Camilla attacks 4 times while attacking and once when attacked
-  simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4));
-  simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2,  37-23);
-});
-
-test('special', (t) => {
+test('defReductionSpecial', (t) => {
   t.plan(2);
   // 43 attack, 31 def => 12 dmg and 21 dmg.
   simulateCombat(t, makeHero('Palla'), makeHero('Chrom'), 42-25, 47-12-21);
 });
+
+test('statBasedSpecialAndKillerWeapon', (t) => {
+  t.plan(4);
+  // Killer weapon and atk, attacked, atk pattern => 3CD Special will trigger.
+  // 41 attack, 32 def, weapon disadvantage => 1x2
+  // 25 def, 29 res => 12 from Bonfire and 14 from Iceberg.
+  // Cherche hits for 63-25 = 38.
+  simulateCombat(t, makeHero('Shanna', 5, withSpecial('Iceberg')), makeHero('Cherche'), 39-38, 46-(1*2)-14);
+  simulateCombat(t, makeHero('Shanna', 5, withSpecial('Bonfire')), makeHero('Cherche'), 39-38, 46-(1*2)-12);
+});
+
+test('braveWeaponAndDartingBlowAndDamageSpecial', (t) => {
+  t.plan(4);
+  // Camilla attacks 4 times while attacking and once when attacked
+  // Draconic Aura will trigger and give +30% of atk = 11 bonus damage
+  simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4)-11);
+  simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2,  37-23);
+});
+
+// other special types
+// lifesteal
+// miracle
