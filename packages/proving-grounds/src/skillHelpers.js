@@ -14,7 +14,10 @@ import {
 } from 'ramda';
 import stats from 'fire-emblem-heroes-stats';
 import type { Skill } from 'fire-emblem-heroes-stats';
+
 import { getStat, getMitigationType } from './heroHelpers';
+import type { HeroInstance } from './store';
+
 
 export type SkillsByName = { [key: string]: Skill };
 
@@ -77,7 +80,6 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
 }
 
 
-
 /*
  * Special Related Helpers
  * https://feheroes.wiki/Specials
@@ -85,8 +87,8 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
 
 // Only considers damage reduction specials
 export function doesDefenseSpecialApply(skillName: string, attackRange: 1 | 2) {
-  return (attackRange == 1 && test(/(Pavise|Buckler|Escutcheon)/, skillName))
-    || (attackRange == 2 && test(/(Aegis|Holy Vestments|Sacred Cowl)/, skillName));
+  return (attackRange === 1 && test(/(Pavise|Buckler|Escutcheon)/, skillName))
+    || (attackRange === 2 && test(/(Aegis|Holy Vestments|Sacred Cowl)/, skillName));
 }
 // Returns the percent of defense reduced by a special.
 export function getSpecialMitigationMultiplier(skillName: string): number {
@@ -100,7 +102,7 @@ export function getSpecialAOEDamageAmount(
     defender: HeroInstance,
 ): number {
   const atk = getStat(attacker, 'atk', 40, true);
-  const def = getStat(defender, getMitigationType(attacker), 40, !isAttacker);
+  const def = getStat(defender, getMitigationType(attacker), 40, false);
   const multiplier = test(/(Blazing)/, skillName) ? 1.5
     : (test(/(Growing|Rising)/, skillName) ? 1.0 : 0);
   return Math.floor(multiplier * (atk - def));

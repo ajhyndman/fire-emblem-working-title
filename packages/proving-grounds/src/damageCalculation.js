@@ -2,7 +2,6 @@
 import {
   map,
   max,
-  multiply,
   replace,
   test,
 } from 'ramda';
@@ -201,7 +200,6 @@ const hitDmg = (
   isAttacker: boolean,
   attackerSpecial: ?string = null,
   attackerMissingHp: number = 0,
-  defenderHpRemaining: number = 100,
 ) => dmgFormula(
   getStat(attacker, 'atk', 40, isAttacker),
   effectiveBonus(attacker, defender),
@@ -255,7 +253,8 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
   let numAttacks = [0, 0];
   let healths = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
   // AOE Specials
-  const aoeDamage = specialCds[0] == 0 ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;
+  const aoeDamage = specialCds[0] === 0
+    ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;
   healths[1] -= Math.min(aoeDamage, healths[1] - 1);
   // Main combat loop.
   for (let heroIndex of attackOrder) {
@@ -265,12 +264,12 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
       const otherHeroIndex = 1 - heroIndex;
       const stillFighting = healths[0] > 0 && healths[1] > 0;
 
-      let lifestealAmount = 0;   // From Spring weapons
+      let lifestealAmount = 0;  // TODO: Spring weapons
       let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb') ? 0.5 : 0.0;
             
       // Attacker Special
       let attackerSpecial = null;
-      if (specialCds[heroIndex] == 0 && specialTypes[heroIndex] === 'ATTACK') {
+      if (specialCds[heroIndex] === 0 && specialTypes[heroIndex] === 'ATTACK') {
         attackerSpecial = specialNames[heroIndex];
         lifestealPercent += getSpecialLifestealPercent(attackerSpecial);
         specialCds[heroIndex] = getSpecialCooldown(heroes[heroIndex]);
@@ -282,12 +281,11 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
         heroes[otherHeroIndex],
         heroIndex === 0,  // isAttacker
         attackerSpecial,
-        getStat(heroes[heroIndex], 'hp') - healths[heroIndex],  // attacker missing hp
-        healths[otherHeroIndex],  // defender hp remaining
+        getStat(heroes[heroIndex], 'hp') - healths[heroIndex],  // missing hp
       );
 
       // Defender Special
-      if (specialCds[otherHeroIndex] == 0 && specialTypes[otherHeroIndex] === 'ATTACKED') {
+      if (specialCds[otherHeroIndex] === 0 && specialTypes[otherHeroIndex] === 'ATTACKED') {
         const specialName = specialNames[otherHeroIndex];
         if (specialName === 'Miracle' && dmg >= healths[otherHeroIndex]) {
           dmg = healths[otherHeroIndex] - 1;
@@ -304,7 +302,7 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
       healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex]);
       if (stillFighting) {
         healths[heroIndex] = Math.min(
-          healths[heroIndex] + Math.floor(damages[heroIndex] * lifestealPercent),
+          healths[heroIndex] + Math.floor(damages[heroIndex] * lifestealPercent) + lifestealAmount,
           getStat(heroes[heroIndex], 'hp'),
         );
         // TODO: Fury Pain and Poison Strike

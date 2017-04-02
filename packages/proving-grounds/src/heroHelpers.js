@@ -63,7 +63,7 @@ export function getSkill(
 }
 
 // Returns a map from skill type to the name of the skill.
-export function getDefaultSkills(name: string, rarity: 1 | 2 | 3 | 4 | 5): InstanceSkills {
+export function getDefaultSkills(name: string, rarity: Rarity): InstanceSkills {
   const hero = lookupStats(name);
 
   // Flow can't follow this compose chain, so cast it to any.
@@ -279,8 +279,9 @@ export const hasStatsForRarity = (hero: Hero, rarity: Rarity/* , level?: 1 | 40 
 };
 
 // Returns the condition for the special to trigger. (Other is for Galefore)
-export function getSpecialType(instance: HeroInstance):
-    'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null {
+export function getSpecialType(
+  instance: HeroInstance,
+): 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null {
   if (instance.skills['SPECIAL'] == null) return null;
   if (test(/When healing/, instance.skills['SPECIAL'].effect)) return 'HEAL';
   if (test(/Galeforce/, instance.skills['SPECIAL'].name)) return 'OTHER';
