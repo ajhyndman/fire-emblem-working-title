@@ -94,13 +94,12 @@ export function getSpecialMitigationMultiplier(skillName: string): number {
     : (test(/(Luna|Aether)/, skillName) ? 0.5 : 0);
 }
 // Returns a flat amount of nonLethal damage for an AOE special.
-export function getSpecialNonLethalDamageAmount(
+export function getSpecialAOEDamageAmount(
     skillName: string,
     attacker: HeroInstance,
     defender: HeroInstance,
-    isAttacker,
 ): number {
-  const atk = getStat(attacker, 'atk', 40, isAttacker);
+  const atk = getStat(attacker, 'atk', 40, true);
   const def = getStat(defender, getMitigationType(attacker), 40, !isAttacker);
   const multiplier = test(/(Blazing)/, skillName) ? 1.5
     : (test(/(Growing|Rising)/, skillName) ? 1.0 : 0);

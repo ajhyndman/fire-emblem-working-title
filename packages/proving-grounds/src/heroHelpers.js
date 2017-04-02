@@ -280,12 +280,13 @@ export const hasStatsForRarity = (hero: Hero, rarity: Rarity/* , level?: 1 | 40 
 
 // Returns the condition for the special to trigger. (Other is for Galefore)
 export function getSpecialType(instance: HeroInstance):
-    'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null {
+    'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null {
   if (instance.skills['SPECIAL'] == null) return null;
   if (test(/When healing/, instance.skills['SPECIAL'].effect)) return 'HEAL';
   if (test(/Galeforce/, instance.skills['SPECIAL'].name)) return 'OTHER';
   if (test(/Reduces damage/, instance.skills['SPECIAL'].effect)) return 'ATTACKED';
   if (test(/Miracle/, instance.skills['SPECIAL'].name)) return 'ATTACKED';
+  if (test(/(Blazing|Growing|Rising)/, instance.skills['SPECIAL'].name)) return 'INITIATE';
   return 'ATTACK';
 }
  
