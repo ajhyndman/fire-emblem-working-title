@@ -3,8 +3,9 @@ import React from 'react';
 import Router from 'next/router';
 
 import Hero from './Hero';
-import { colors } from '../theme';
+import { colors, gridSize } from '../theme';
 import { lookupStats } from '../heroHelpers';
+import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 
 
@@ -15,12 +16,18 @@ type Props = {
   rightHero: ?Object;
 };
 
+const openConfig = (event, dispatch, slot) => {
+  event.preventDefault();
+  dispatch({ type: 'SELECT_SLOT', slot: slot });
+  Router.push('/configure');
+};
+
 const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
         margin: 0 auto;
-        width: ${56 * 3}px
+        width: ${gridSize * 3}px
       }
       .arrow-left {
         cursor: pointer;
@@ -34,20 +41,27 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         content: "";
         display: block;
       }
+      .configure-button {
+        cursor: pointer;
+        position: absolute;
+        bottom: -${gridSize / 6}px;
+        left: -${gridSize / 6}px;
+        width: ${gridSize / 2}px;
+      }
       .container {
         align-items: center;
         display: flex;
-        height: ${56 * 1.5}px;
+        height: ${gridSize * 1.5}px;
         justify-content: space-between;
       }
       .hero-slot {
         background: ${colors.frostedGlass};
         cursor: pointer;
-        height: 56px;
+        height: ${gridSize}px;
         position: relative;
         transition: box-shadow 0.2s;
         user-select: none;
-        width: 56px;
+        width: ${gridSize}px;
       }
       .hero-slot:hover {
         box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
@@ -68,18 +82,28 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
           event.stopPropagation();
           dispatch({ type: 'SELECT_SLOT', slot: 0 });
         }}
-        onContextMenu={event => {
-          event.preventDefault();
-          dispatch({ type: 'SELECT_SLOT', slot: 0 });
-          Router.push('/configure');
-        }}
+        onContextMenu={event => openConfig(event, dispatch, 0)}
       >
         {leftHero
-          ? <Hero
-            name={leftHero.name}
-            weaponType={lookupStats(leftHero.name).weaponType}
-            rarity={leftHero.rarity}
-          />
+          ? (
+            <div>
+              <Hero
+                name={leftHero.name}
+                weaponType={lookupStats(leftHero.name).weaponType}
+                rarity={leftHero.rarity}
+              />
+              <img
+                className="configure-button"
+                onClick={event => openConfig(event, dispatch, 0)}
+                src={`${staticUrl}Button_Configure.png`}
+                srcSet={`
+                  ${staticUrl}28px-Button_Configure.png 28w,
+                  ${staticUrl}56px-Button_Configure.png 56w
+                `}
+                sizes={`${gridSize / 2}px`}
+              />
+            </div>
+          )
           : null}
       </div>
       <div
@@ -97,18 +121,28 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
           event.stopPropagation();
           dispatch({ type: 'SELECT_SLOT', slot: 1 });
         }}
-        onContextMenu={event => {
-          event.preventDefault();
-          dispatch({ type: 'SELECT_SLOT', slot: 1 });
-          Router.push('/configure');
-        }}
+        onContextMenu={event => openConfig(event, dispatch, 1)}
       >
         {rightHero
-          ? <Hero
-            name={rightHero.name}
-            weaponType={lookupStats(rightHero.name).weaponType}
-            rarity={rightHero.rarity}
-          />
+          ? (
+            <div>
+              <Hero
+                name={rightHero.name}
+                weaponType={lookupStats(rightHero.name).weaponType}
+                rarity={rightHero.rarity}
+              />
+              <img
+                className="configure-button"
+                onClick={event => openConfig(event, dispatch, 1)}
+                src={`${staticUrl}Button_Configure.png`}
+                srcSet={`
+                  ${staticUrl}28px-Button_Configure.png 28w,
+                  ${staticUrl}56px-Button_Configure.png 56w
+                `}
+                sizes={`${gridSize / 2}px`}
+              />
+            </div>
+          )
           : null}
       </div>
     </div>
