@@ -202,8 +202,11 @@ storiesOf('SkillSelector', module)
   .add('Anna, Weapon', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        onClose={action('UPDATE_SKILL')}
+        activeSkillName=""
+        dispatch={() => {}}
         heroInstance={heroInstance}
+        onClose={action('UPDATE_SKILL')}
+        showGuide
         skillType="WEAPON"
       />
     </div>
@@ -211,8 +214,11 @@ storiesOf('SkillSelector', module)
   .add('Anna, Special', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        onClose={action('UPDATE_SKILL')}
+        activeSkillName=""
+        dispatch={() => {}}
         heroInstance={heroInstance}
+        onClose={action('UPDATE_SKILL')}
+        showGuide
         skillType="SPECIAL"
       />
     </div>
@@ -220,8 +226,11 @@ storiesOf('SkillSelector', module)
   .add('Anna, Passive A', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        onClose={action('UPDATE_SKILL')}
+        activeSkillName=""
+        dispatch={() => {}}
         heroInstance={heroInstance}
+        onClose={action('UPDATE_SKILL')}
+        showGuide
         skillType="PASSIVE_A"
       />
     </div>

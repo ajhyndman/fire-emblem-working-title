@@ -10,11 +10,11 @@ class Overlay extends React.Component {
   props: Props;
 
   componentDidMount() {
-    document.body.style.overflowY = 'hidden';
+    if (document.body) document.body.style.overflowY = 'hidden';
   }
 
   componentWillUnmount() {
-    document.body.style.overflowY = 'auto';
+    if (document.body) document.body.style.overflowY = 'auto';
   }
 
   render() {
@@ -45,6 +45,6 @@ class Overlay extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default Overlay;
