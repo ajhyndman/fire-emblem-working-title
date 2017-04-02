@@ -21,7 +21,7 @@ import { encodeHero } from '../queryCodex';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 import type { State } from '../store';
-import michalisUnits from '../temporal/2017.03.25-michalis';
+// import eventUnits from '../temporal/2017.03.25-michalis';
 
 
 type Props = {
@@ -31,7 +31,7 @@ type Props = {
 
 export const panelHeight = 212;
 
-const backgroundUrl = 'triskel_by_codysymes-d7ewlm9.png';
+const backgroundUrl = 'Bg_WorldMap2.png';
 
 class Root extends React.Component {
   props: Props;
@@ -69,14 +69,16 @@ class Root extends React.Component {
           />
           <style>{`
             body {
-              margin: 0;
               background-image: url(${staticUrl}${backgroundUrl});
               background-image: -webkit-image-set(
                 url(${staticUrl}${backgroundUrl}) 1x,
                 url(${staticUrl}${backgroundUrl}) 1.5x
               );
               background-position: top center;
+              background-size: 100% auto;
               background-attachment: fixed;
+              margin: 0;
+              position: relative;
             }
           `}</style>
         </Head>
@@ -109,6 +111,7 @@ class Root extends React.Component {
                 url(${staticUrl}${backgroundUrl}) 1.5x
               );
             background-position: top center;
+            background-size: 100% auto;
             background-attachment: fixed;
             height: ${panelHeight}px;
             z-index: 1;
@@ -159,20 +162,18 @@ class Root extends React.Component {
           </div>
         </div>
         <div className="spacer" />
-        <HeroGrid
-          // $FlowIssue typedef for path isn't resolving correctly
+        {/* <HeroGrid
           activeHeroName={path(['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
-            // $FlowIssue typedef for prop isn't resolving correctly
             compose(
               name => (name.indexOf(toLower(state.searchString)) !== -1),
               toLower,
               prop('name'),
             ),
-            michalisUnits,
+            eventUnits,
           )}
-        />
+        /> */}
         <HeroGrid
           // $FlowIssue typedef for path isn't resolving correctly
           activeHeroName={path(['activeHero', 'name'], state)}

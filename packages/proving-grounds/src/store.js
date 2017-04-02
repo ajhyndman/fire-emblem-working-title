@@ -58,8 +58,9 @@ export type State = {
   activeHero: ?HeroInstance;
   activeSlot: 0 | 1 | void;
   heroSlots: [?HeroInstance, ?HeroInstance];
-  searchString: string;
   previewLevel: 1 | 40;
+  searchString: string;
+  showGuide: boolean;
 };
 
 const emptyState: State = {
@@ -67,8 +68,9 @@ const emptyState: State = {
   activeSlot: undefined,
   heroSlots: [undefined, undefined],
   host: '',
-  searchString: '',
   previewLevel: 1,
+  searchString: '',
+  showGuide: false,
 };
 
 const initStore = (initialState: State = emptyState) => {
