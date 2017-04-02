@@ -48,10 +48,8 @@ class Configure extends React.Component {
       <div>
         <style jsx>{`
           .container {
-            bottom: 10px;
             left: 50%;
             max-width: 90%;
-            overflow: auto;
             position: absolute;
             top: ${panelHeight / 4}px;
             transform: translateX(-50%);

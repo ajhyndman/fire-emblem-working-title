@@ -19,7 +19,7 @@ import Select from './Select';
 import Skill from './Skill';
 import SkillSelector from './SkillSelector';
 import StatSheet from './StatSheet';
-import { colors, fontFamilies, fontSizes } from '../theme';
+import { colors, fontFamilies, fontSizes, lineHeights } from '../theme';
 import { hasStatsForRarity, lookupStats } from '../heroHelpers';
 import { staticUrl } from '../../config';
 import type { HeroInstance } from '../store';
@@ -101,6 +101,14 @@ const HeroConfigurer = withState(
         .active-skill:not(:last-of-type) {
           margin-bottom: 10px;
         }
+        .name {
+          color: ${colors.iceberg};
+          font-family: ${fontFamilies.ui};
+          font-size: ${fontSizes.medium}px;
+          line-height: ${lineHeights.body};
+          margin: 0;
+          text-align: center;
+        }
       `}</style>
       {!state.open
         ? (
@@ -111,6 +119,9 @@ const HeroConfigurer = withState(
                 selected={level === 1 ? 0 : 1}
                 onChange={i => dispatch({ type: 'SET_PREVIEW_LEVEL', level: ([1, 40])[i] })}
               />
+            </div>
+            <div className="section">
+              <h1 className="name">{heroInstance.name}</h1>
             </div>
             <div className="section">
               <StatSheet

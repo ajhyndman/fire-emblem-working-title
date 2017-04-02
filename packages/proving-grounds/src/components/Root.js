@@ -69,7 +69,6 @@ class Root extends React.Component {
           />
           <style>{`
             body {
-              margin: 0;
               background-image: url(${staticUrl}${backgroundUrl});
               background-image: -webkit-image-set(
                 url(${staticUrl}${backgroundUrl}) 1x,
@@ -78,6 +77,8 @@ class Root extends React.Component {
               background-position: top center;
               background-size: 100% auto;
               background-attachment: fixed;
+              margin: 0;
+              position: relative;
             }
           `}</style>
         </Head>

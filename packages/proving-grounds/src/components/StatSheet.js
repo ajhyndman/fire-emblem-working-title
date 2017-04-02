@@ -86,7 +86,7 @@ const StatSheet = ({
       </div>
       <div className="right col">
         <div className="row">
-          <div className="stat"><div className="name">{heroInstance.name}</div></div>
+          <div className="stat"></div>
           <div className="stat">
             <span className="key">HP</span>
             {getStat(heroInstance, 'hp', level)}
