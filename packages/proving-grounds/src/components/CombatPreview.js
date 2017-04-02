@@ -47,6 +47,13 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         left: -${gridSize / 6}px;
         width: ${gridSize / 2}px;
       }
+      .configure-button-active {
+        opacity: 0;
+        transition: opacity ${transition};
+      }
+      .configure-button-active:hover {
+        opacity: 1;
+      }
       .container {
         align-items: center;
         display: flex;
@@ -111,11 +118,20 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
               />
               <img
                 className="configure-button"
-                onClick={event => openConfig(event, dispatch, 0)}
                 src={`${staticUrl}Button_Configure.png`}
                 srcSet={`
                   ${staticUrl}28px-Button_Configure.png 28w,
                   ${staticUrl}56px-Button_Configure.png 56w
+                `}
+                sizes={`${gridSize / 2}px`}
+              />
+              <img
+                className="configure-button configure-button-active"
+                onClick={event => openConfig(event, dispatch, 0)}
+                src={`${staticUrl}Button_Configure_Active.png`}
+                srcSet={`
+                  ${staticUrl}28px-Button_Configure_Active.png 28w,
+                  ${staticUrl}56px-Button_Configure_Active.png 56w
                 `}
                 sizes={`${gridSize / 2}px`}
               />
@@ -157,11 +173,20 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
               />
               <img
                 className="configure-button"
-                onClick={event => openConfig(event, dispatch, 1)}
                 src={`${staticUrl}Button_Configure.png`}
                 srcSet={`
                   ${staticUrl}28px-Button_Configure.png 28w,
                   ${staticUrl}56px-Button_Configure.png 56w
+                `}
+                sizes={`${gridSize / 2}px`}
+              />
+              <img
+                className="configure-button configure-button-active"
+                onClick={event => openConfig(event, dispatch, 1)}
+                src={`${staticUrl}Button_Configure_Active.png`}
+                srcSet={`
+                  ${staticUrl}28px-Button_Configure_Active.png 28w,
+                  ${staticUrl}56px-Button_Configure_Active.png 56w
                 `}
                 sizes={`${gridSize / 2}px`}
               />
