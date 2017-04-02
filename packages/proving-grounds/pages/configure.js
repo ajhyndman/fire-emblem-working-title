@@ -55,7 +55,7 @@ class Configure extends React.Component {
             position: absolute;
             top: ${panelHeight / 4}px;
             transform: translateX(-50%);
-            width: 400px;
+            width: 350px;
           }
         `}</style>
         <Root {...this.props} />

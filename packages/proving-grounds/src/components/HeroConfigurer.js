@@ -21,6 +21,7 @@ import SkillSelector from './SkillSelector';
 import StatSheet from './StatSheet';
 import { colors, fontFamilies, fontSizes } from '../theme';
 import { hasStatsForRarity, lookupStats } from '../heroHelpers';
+import { staticUrl } from '../../config';
 import type { HeroInstance } from '../store';
 import type { Dispatch } from '../reducer';
 
@@ -70,10 +71,10 @@ const HeroConfigurer = withState(
       <style jsx>{`
         .root {
           align-items: center;
-          background: ${colors.elephant};
+          border: 46px solid transparent;
+          border-image: url(${staticUrl}Border_Blue.png) 46 fill stretch;
           display: flex;
           flex-direction: column;
-          padding: 1.5em 1em;
         }
         .row {
           align-items: baseline;
