@@ -14,7 +14,7 @@ import {
 } from 'ramda';
 import stats from 'fire-emblem-heroes-stats';
 import type { Skill } from 'fire-emblem-heroes-stats';
-
+import { getStat, getMitigationType } from './heroHelpers';
 
 export type SkillsByName = { [key: string]: Skill };
 
@@ -74,4 +74,51 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
     }
   }
   return 0;
+}
+
+
+
+/*
+ * Special Related Helpers
+ * https://feheroes.wiki/Specials
+ */
+
+// Only considers damage reduction specials
+export function doesDefenseSpecialApply(skillName: string, attackRange: 1 | 2) {
+  return (attackRange == 1 && test(/(Pavise|Buckler|Escutcheon)/, skillName))
+    || (attackRange == 2 && test(/(Aegis|Holy Vestments|Sacred Cowl)/, skillName));
+}
+// Returns the percent of defense reduced by a special.
+export function getSpecialMitigationMultiplier(skillName: string): number {
+  return test(/(Luna|Moonbow)/, skillName) ? 0.3
+    : (test(/(|)/, skillName) ? 0.5 : 0);
+}
+// Returns a flat amount of nonLethal damage for an AOE special.
+export function getSpecialNonLethalDamageAmount(
+    skillName: string,
+    attacker: HeroInstance,
+    defender: HeroInstance,
+    isAttacker,
+): number {
+  const atk = getStat(attacker, 'atk', 40, isAttacker);
+  const def = getStat(defender, getMitigationType(attacker), 40, !isAttacker);
+  const multiplier = test(/(|)/, skillName) ? 1.5
+    : (test(/(|)/, skillName) ? 1.0 : 0);
+  return Math.floor(multiplier * (atk - def));
+}
+// Returns a flat amount of bonus damage for a stat-based special
+export function getSpecialBonusDamageAmount(
+    skillName: string, attacker: HeroInstance, isAttacker: boolean): number {
+  let stat = 'atk';
+  const ratio = test(/Bonfire/, skillName) ? 0.5 : 0.0;
+  return Math.floor(getStat(attacker, stat, 40, isAttacker) * ratio);
+}
+// Returns the percent of damage increased by a special
+export function getSpecialOffensiveMultiplier(skillName: string): number {
+  return test(/(Draconic)/, skillName) ? 0.3 : 0;
+}
+// Returns the percent of damage reduced by a special.
+export function getSpecialDefensiveMultiplier(skillName: string): number {
+  return test(/(Pavise|Aegis)/, skillName) ? 0.3
+    : (test(/(Buckler|Escutcheon|Holy Vestments|Sacred Cowl)/, skillName) ? 0.5 : 0);
 }

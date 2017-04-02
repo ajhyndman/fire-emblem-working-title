@@ -1,5 +1,6 @@
 // @flow
 import {
+  map,
   max,
   multiply,
   replace,
@@ -10,15 +11,24 @@ import {
   getMitigationType,
   getRange,
   getSkill,
+  getSpecialCooldown,
+  getSpecialType,
   getStat,
   getWeaponColor,
   hasBraveWeapon,
   hasSkill,
   lookupStats,
 } from './heroHelpers';
+import {
+  doesDefenseSpecialApply,
+  getSpecialNonLethalDamageAmount,
+  getSpecialBonusDamageAmount,
+  getSpecialOffensiveMultiplier,
+  getSpecialDefensiveMultiplier,
+  getSpecialMitigationMultiplier,
+} from './skillHelpers';
 import type { HeroInstance } from './store';
-
-
+  
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
 
 /**
@@ -30,26 +40,39 @@ const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
  * @param {number} adv Color advantage bonus (red > green > blue)
  * @param {number} mit Damage mitigation value (comes from resist or defence)
  * @param {number} classModifier At this time, Neutral Staff has a 0.5x net damage reduction.
+ * @param {number} precombatDamage = 0;   // From AOE specials
+ * @param {number} bonusDamage = 0;       // From skills like Bonfire
+ * @param {number} offensiveMult = 0.0;   // From skills like Glimmer
+ * @param {number} defensiveMult = 0.0;   // From skills like Aegis
+ * @param {number} mitigationMult = 0.0;  // From skills like Luna
  * @returns {number} the damage a single hit will effect
  */
 const dmgFormula = (
   atk: number,
-  eff: number,
-  adv: number,
-  mit: number,
-  classModifier: number,
-) => Math.floor(
-  multiply(
-    max(
-      Math.floor(atk * eff)
-      + truncate(
+  eff: number = 1.0,
+  adv: number = 0.0,
+  mit: number = 0,
+  classModifier: number = 1.0,
+  precombatDamage: number = 0,   // From AOE specials
+  bonusDamage: number = 0,       // From skills like Bonfire
+  offensiveMult: number = 0.0,   // From skills like Glimmer
+  defensiveMult: number = 0.0,   // From skills like Aegis
+  mitigationMult: number = 0.0,  // From skills like Luna
+) => Math.ceil(
+  (1 - defensiveMult) * 
+  truncate(
+    (1 + offensiveMult) * 
+    truncate(
+      (classModifier) * 
+      max(
         truncate(atk * eff)
-        * adv)
-      - mit,
-      0,
+        + truncate(truncate(atk * eff) * adv)
+        + truncate(bonusDamage)
+        - (mit + truncate(mit * mitigationMult)),
+        0,
+      ),
     ),
-    classModifier,
-  ),
+  )
 );
 
 const hasWeaponBreaker = (instanceA: HeroInstance, instanceB: HeroInstance) => {
@@ -177,12 +200,28 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
 
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
-const hitDmg = (attacker: HeroInstance, defender: HeroInstance, isAttacker: boolean) => dmgFormula(
+const hitDmg = (
+  attacker: HeroInstance,
+  defender: HeroInstance,
+  isAttacker: boolean,
+  attackerSpecial: ?string = null,
+  defenderSpecial: ?string = null,
+  attackerMissingHp: number = 0,
+  defenderHpRemaining: number = 100,
+) => dmgFormula(
   getStat(attacker, 'atk', 40, isAttacker),
   effectiveBonus(attacker, defender),
   advantageBonus(attacker, defender),
   getStat(defender, getMitigationType(attacker), 40, !isAttacker),
   classModifier(attacker),
+  Math.min(
+    getSpecialNonLethalDamageAmount(attackerSpecial, attacker, defender, isAttacker),
+    defenderHpRemaining - 1,
+  ),
+  getSpecialBonusDamageAmount(attackerSpecial, attacker, isAttacker),
+  getSpecialOffensiveMultiplier(attackerSpecial),
+  getSpecialDefensiveMultiplier(defenderSpecial),
+  getSpecialMitigationMultiplier(attackerSpecial),
 );
 
 /**
@@ -216,9 +255,13 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
     && doesFollowUp(defender, attacker, false)) {
     attackOrder.push(1);
   }
+  // TODO: decide if Galeforce will trigger.
 
   const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
   const heroes = [attacker, defender];
+  const specialNames = [getSkill(attacker, 'SPECIAL'), getSkill(defender, 'SPECIAL')];
+  let specialCds = map(getSpecialCooldown, specialNames);
+  let specialTypes = map(getSpecialType, specialNames);
   let numAttacks = [0, 0];
   let healths = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
   for (let heroIndex of attackOrder) {
@@ -227,17 +270,56 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
     if (healths[heroIndex] > 0) {
       const otherHeroIndex = 1 - heroIndex;
       const stillFighting = healths[0] > 0 && healths[1] > 0;
-      healths[otherHeroIndex] = hpRemaining(damages[heroIndex], healths[otherHeroIndex]);
-      if (stillFighting && hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb')) {
+
+      let lifestealAmount = 0;   // From Spring weapons
+      let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb') ? 0.5 : 0.0;
+            
+      // Attacker Special
+      let attackerSpecial = null;
+      if (specialCds[heroIndex] == 0 && specialTypes[heroIndex] === 'ATTACK') {
+        attackerSpecial = specialNames[heroIndex];
+        console.log('Offensive Special triggers!', attackerSpecial);
+        // TODO: Lifesteal specials
+        specialCds[heroIndex] = getSpecialCooldown(specialNames[heroIndex]);
+      } else if (specialTypes[heroIndex] !== 'HEAL') {
+        specialCds[heroIndex]--;
+      }
+      // Defender Special
+      let defenderSpecial = null;
+      if (specialCds[otherHeroIndex] == 0 && specialTypes[otherHeroIndex] === 'ATTACKED') {
+        const specialName = specialNames[otherHeroIndex];
+        // TODO: Use tentative damage to decide if Miracle applies.
+        // const tentativeDamage = hitDmg()
+        // The unit that initiated combat decided the range of the battle.
+        if (doesDefenseSpecialApply(getRange(attacker), specialName)) {
+          defenderSpecial = specialName;
+          console.log('Defensive Special triggers!', attackerSpecial);
+          specialCds[otherHeroIndex] = getSpecialCooldown(specialName);
+        }
+      } else if (specialTypes[heroIndex] !== 'HEAL') {
+        specialCds[otherHeroIndex]--;
+      }
+      // Compute and apply damage
+      const dmg = hitDmg(
+        heroes[heroIndex],
+        heroes[otherHeroIndex],
+        heroIndex === 0,
+        attackerSpecial,
+        defenderSpecial,
+      );
+      healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex]);
+      if (stillFighting) {
         healths[heroIndex] = Math.min(
-          healths[heroIndex] + Math.floor(damages[heroIndex] / 2),
+          healths[heroIndex] + Math.floor(damages[heroIndex] * lifestealPercent),
           getStat(heroes[heroIndex], 'hp'),
         );
+        // TODO: Fury Pain and Poison Strike
       }
     }
   }
 
   return {
+    aoeDamage: 0, // TODO: return a number for precombat damage
     attackerNumAttacks: numAttacks[0],
     attackerDamage: damages[0],
     attackerHpRemaining: healths[0],

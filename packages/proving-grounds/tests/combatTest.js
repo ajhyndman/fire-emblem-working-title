@@ -84,3 +84,9 @@ test('braveWeaponAndDartingBlow', (t) => {
   simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4));
   simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2,  37-23);
 });
+
+test('special', (t) => {
+  t.plan(2);
+  // 43 attack, 31 def => 12 dmg and 21 dmg.
+  simulateCombat(t, makeHero('Palla'), makeHero('Chrom'), 42-25, 47-12-21);
+});
