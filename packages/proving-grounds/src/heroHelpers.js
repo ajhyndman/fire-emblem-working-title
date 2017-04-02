@@ -27,14 +27,18 @@ import type {
 } from 'fire-emblem-heroes-stats';
 
 import { getSkillInfo, getStatValue } from './skillHelpers';
-import michalisHeros from './temporal/2017.03.25-michalis';
+// import eventHeroes from './temporal/2017.03.25-michalis';
 import type { HeroInstance, InstanceSkills, Rarity, Stat } from './store';
 
 
 export type HeroesByName = { [key: string]: Hero };
 
 // $FlowIssue indexBy confuses flow
-const heroesByName: HeroesByName = indexBy(prop('name'), concat(stats.heroes, michalisHeros));
+const heroesByName: HeroesByName = indexBy(
+  prop('name'),
+  stats.heroes,
+  // concat(stats.heroes, eventHeroes),
+);
 
 /**
  * Look up a hero's base stats by name.
