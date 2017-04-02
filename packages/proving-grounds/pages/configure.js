@@ -49,6 +49,7 @@ class Configure extends React.Component {
         <style jsx>{`
           .container {
             left: 50%;
+            margin-bottom: 2em;
             max-width: 90%;
             position: absolute;
             top: ${panelHeight / 4}px;
