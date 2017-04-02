@@ -2,13 +2,14 @@ import fs from 'fs';
 import {
   assoc,
   compose,
+  contains,
   dissoc,
   dropLast,
   flatten,
+  has,
   identity,
   ifElse,
   indexBy,
-  has,
   map,
   mapObjIndexed,
   merge,
@@ -16,6 +17,7 @@ import {
   pick,
   prop,
   propEq,
+  replace,
   test,
   toUpper,
   values,
@@ -58,7 +60,18 @@ async function fetchHeroStats() {
       heroStatsAndSkills,
     ),
   );
-  return detailedHeroes;
+
+  // Add short names to each hero for display purposes.
+  const truncateParenthetical = replace(/\((.).*\)/, '($1)');
+  const detailedHeroesWithShortNames = map(
+    hero => (contains('(', hero.name)
+      ? { ...hero, shortName: truncateParenthetical(hero.name) }
+      : hero
+    ),
+    detailedHeroes,
+  );
+
+  return detailedHeroesWithShortNames;
 }
 
 // Fetches detailed info for all skills
@@ -94,7 +107,6 @@ async function fetchSkills() {
 
 // log warnings if data looks suspicious
 function validate(heroes, skills) {
-  const heroNames = map(prop('name'), heroes);
   const skillsByName = indexBy(prop('name'), skills);
   for (let hero of heroes) {
     for (let skill of hero.skills) {
@@ -145,7 +157,7 @@ function skillsWithWeaponsTypes(heroes, skills) {
       (skill) => assoc('weaponType', weaponTypeByName[skill.name], skill),
       identity,
     ),
-    skills
+    skills,
   );
   return withWeaponTypes;
 }
