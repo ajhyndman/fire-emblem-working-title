@@ -21,6 +21,9 @@ export type Action = {
   type: 'SET_PREVIEW_LEVEL';
   level: 1 | 40;
 } | {
+  type: 'SHOW_GUIDE_CHANGE';
+  value: boolean;
+} | {
   type: 'TOGGLE_AGGRESSOR';
 } | {
   type: 'UPDATE_BANE';
@@ -81,6 +84,8 @@ const reducer = (state: State, action: Action): State => {
       return { ...state, host: action.host };
     case 'SET_PREVIEW_LEVEL':
       return { ...state, previewLevel: action.level };
+    case 'SHOW_GUIDE_CHANGE':
+      return { ...state, showGuide: action.value };
     case 'TOGGLE_AGGRESSOR':
       return {
         ...state,

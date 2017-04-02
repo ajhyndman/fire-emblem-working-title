@@ -78,6 +78,7 @@ class Configure extends React.Component {
               heroInstance={this.props.state.heroSlots[this.props.state.activeSlot || 0]
                 || defaultInstance}
               level={this.props.state.previewLevel}
+              showGuide={this.props.state.showGuide}
             />
           </div>
         </Overlay>

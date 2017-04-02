@@ -7,6 +7,7 @@ import {
   keys,
   mapObjIndexed,
   not,
+  path,
   values,
   zipObj,
 } from 'ramda';
@@ -30,6 +31,7 @@ import type { Dispatch } from '../reducer';
 type Props = {|
   +dispatch: Dispatch;
   +heroInstance: HeroInstance;
+  +showGuide: boolean;
   +level: 1 | 40;
 |};
 
@@ -50,8 +52,9 @@ const HeroConfigurer = withState(
   dispatch,
   heroInstance,
   level,
-  state,
   setState,
+  showGuide,
+  state,
   // eslint can't parse type spreads yet: https://github.com/babel/babylon/pull/418
 }/* : { ...Props, +setState: (state: State) => void; +state: State; } */) => {
   const hero: Hero = lookupStats(heroInstance.name);
@@ -206,6 +209,11 @@ const HeroConfigurer = withState(
         : (
           <div className="skill-selector">
             <SkillSelector
+              // $FlowIssue: Flowtype for path isn't precise.
+              activeSkillName={path(
+                ['skills', state.skillType, 'name'],
+                heroInstance,
+              )}
               onClose={skill => {
                 // This one is technically correct, skillType could be voided before the
                 // callback is triggered.  But I know it won't be.
@@ -217,6 +225,8 @@ const HeroConfigurer = withState(
                 });
                 setState({ open: false, skillType: undefined });
               }}
+              dispatch={dispatch}
+              showGuide={showGuide}
               heroInstance={heroInstance}
               skillType={state.skillType}
             />
