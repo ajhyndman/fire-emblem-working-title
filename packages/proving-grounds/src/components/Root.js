@@ -31,7 +31,7 @@ type Props = {
 
 export const panelHeight = 212;
 
-const backgroundUrl = 'triskel_by_codysymes-d7ewlm9.png';
+const backgroundUrl = 'Bg_WorldMap2.png';
 
 class Root extends React.Component {
   props: Props;
@@ -76,6 +76,7 @@ class Root extends React.Component {
                 url(${staticUrl}${backgroundUrl}) 1.5x
               );
               background-position: top center;
+              background-size: 100% auto;
               background-attachment: fixed;
             }
           `}</style>
@@ -109,6 +110,7 @@ class Root extends React.Component {
                 url(${staticUrl}${backgroundUrl}) 1.5x
               );
             background-position: top center;
+            background-size: 100% auto;
             background-attachment: fixed;
             height: ${panelHeight}px;
             z-index: 1;
