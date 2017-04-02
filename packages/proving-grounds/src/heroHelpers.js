@@ -156,7 +156,7 @@ export function getInheritableSkills(name: string, skillType: SkillType): Array<
   return sort(ascend(prop('name')), union(inheritable, ownSkills));
 }
 
-export const hasBraveWeapon = (instance: HeroInstance): boolean => compose(
+export const hasBraveWeapon: (instance: HeroInstance)=> boolean = compose(
   test(/Brave|Dire/),
   pathOr('', ['skills', 'WEAPON', 'name']),
 );
@@ -209,6 +209,9 @@ export const getStat = (
   const passiveA = getSkill(instance, 'PASSIVE_A');
   const weapon = getSkill(instance, 'WEAPON');
 
+  //console.log('GetStat.', instance.name, statKey, baseValue
+  //  + (passiveA ? getStatValue(passiveA, statKey, isAttacker) : 0)
+  //  + (weapon ? getStatValue(weapon, statKey, isAttacker) : 0));
   return baseValue
     + (passiveA ? getStatValue(passiveA, statKey, isAttacker) : 0)
     + (weapon ? getStatValue(weapon, statKey, isAttacker) : 0);
@@ -276,19 +279,19 @@ export const hasStatsForRarity = (hero: Hero, rarity: Rarity/* , level?: 1 | 40 
 };
 
 // Returns the condition for the special to trigger. (Other is for Galefore)
-export const getSpecialType = (instance: HeroInstance):
-    'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null => {
-  if (instance['SPECIAL'] == null) return null;
-  if (test(/When healing/, instance['SPECIAL'].effect)) return 'HEAL';
-  if (test(/Galeforce/, instance['SPECIAL'].name)) return 'OTHER';
-  if (test(/Reduces damage/, instance['SPECIAL'].effect)) return 'ATTACKED';
-  if (test(/Miracle/, instance['SPECIAL'].name)) return 'ATTACKED';
+export function getSpecialType(instance: HeroInstance):
+    'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null {
+  if (instance.skills['SPECIAL'] == null) return null;
+  if (test(/When healing/, instance.skills['SPECIAL'].effect)) return 'HEAL';
+  if (test(/Galeforce/, instance.skills['SPECIAL'].name)) return 'OTHER';
+  if (test(/Reduces damage/, instance.skills['SPECIAL'].effect)) return 'ATTACKED';
+  if (test(/Miracle/, instance.skills['SPECIAL'].name)) return 'ATTACKED';
   return 'ATTACK';
 }
  
 // Returns the cooldown of the special or -1. Accounts for killer weapons.
 export const getSpecialCooldown = (instance: HeroInstance) => 
-  instance['SPECIAL'] == null ? -1
-    : instance[/SPECIAL/].cooldown
-    + (test(/Accelerates S/, instance['WEAPON'].effect) ? -1 : 0)
-    + (test(/Slows Special/, instance['WEAPON'].effect) ? +1 : 0);
+  instance.skills['SPECIAL'] == null ? -1
+    : instance.skills['SPECIAL'].cooldown
+    + (test(/Accelerates S/, instance.skills['WEAPON'].effect) ? -1 : 0)
+    + (test(/Slows Special/, instance.skills['WEAPON'].effect) ? +1 : 0);

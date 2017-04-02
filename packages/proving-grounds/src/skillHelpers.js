@@ -90,8 +90,8 @@ export function doesDefenseSpecialApply(skillName: string, attackRange: 1 | 2) {
 }
 // Returns the percent of defense reduced by a special.
 export function getSpecialMitigationMultiplier(skillName: string): number {
-  return test(/(Luna|Moonbow)/, skillName) ? 0.3
-    : (test(/(|)/, skillName) ? 0.5 : 0);
+  return test(/(New Moon|Moonbow)/, skillName) ? 0.3
+    : (test(/(Luna|Aether)/, skillName) ? 0.5 : 0);
 }
 // Returns a flat amount of nonLethal damage for an AOE special.
 export function getSpecialNonLethalDamageAmount(
@@ -102,8 +102,8 @@ export function getSpecialNonLethalDamageAmount(
 ): number {
   const atk = getStat(attacker, 'atk', 40, isAttacker);
   const def = getStat(defender, getMitigationType(attacker), 40, !isAttacker);
-  const multiplier = test(/(|)/, skillName) ? 1.5
-    : (test(/(|)/, skillName) ? 1.0 : 0);
+  const multiplier = test(/(Blazing)/, skillName) ? 1.5
+    : (test(/(Growing)/, skillName) ? 1.0 : 0);
   return Math.floor(multiplier * (atk - def));
 }
 // Returns a flat amount of bonus damage for a stat-based special

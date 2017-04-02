@@ -58,7 +58,7 @@ const dmgFormula = (
   offensiveMult: number = 0.0,   // From skills like Glimmer
   defensiveMult: number = 0.0,   // From skills like Aegis
   mitigationMult: number = 0.0,  // From skills like Luna
-) => Math.ceil(
+) => precombatDamage + Math.ceil(
   (1 - defensiveMult) * 
   truncate(
     (1 + offensiveMult) * 
@@ -68,7 +68,7 @@ const dmgFormula = (
         truncate(atk * eff)
         + truncate(truncate(atk * eff) * adv)
         + truncate(bonusDamage)
-        - (mit + truncate(mit * mitigationMult)),
+        - (mit - truncate(mit * mitigationMult)),
         0,
       ),
     ),
@@ -260,8 +260,8 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
   const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
   const heroes = [attacker, defender];
   const specialNames = [getSkill(attacker, 'SPECIAL'), getSkill(defender, 'SPECIAL')];
-  let specialCds = map(getSpecialCooldown, specialNames);
-  let specialTypes = map(getSpecialType, specialNames);
+  let specialCds = map(getSpecialCooldown, heroes);
+  let specialTypes = map(getSpecialType, heroes);
   let numAttacks = [0, 0];
   let healths = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
   for (let heroIndex of attackOrder) {
@@ -280,8 +280,8 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
         attackerSpecial = specialNames[heroIndex];
         console.log('Offensive Special triggers!', attackerSpecial);
         // TODO: Lifesteal specials
-        specialCds[heroIndex] = getSpecialCooldown(specialNames[heroIndex]);
-      } else if (specialTypes[heroIndex] !== 'HEAL') {
+        specialCds[heroIndex] = getSpecialCooldown(heroes[heroIndex]);
+      } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[heroIndex] > 0) {
         specialCds[heroIndex]--;
       }
       // Defender Special
@@ -293,12 +293,13 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
         // The unit that initiated combat decided the range of the battle.
         if (doesDefenseSpecialApply(getRange(attacker), specialName)) {
           defenderSpecial = specialName;
-          console.log('Defensive Special triggers!', attackerSpecial);
-          specialCds[otherHeroIndex] = getSpecialCooldown(specialName);
+          console.log('Defensive Special triggers!', defenderSpecial);
+          specialCds[otherHeroIndex] = getSpecialCooldown(heroes[otherHeroIndex]);
         }
-      } else if (specialTypes[heroIndex] !== 'HEAL') {
+      } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[otherHeroIndex] > 0) {
         specialCds[otherHeroIndex]--;
       }
+      console.log('Special cds are now: ', specialCds[0], specialCds[1]);
       // Compute and apply damage
       const dmg = hitDmg(
         heroes[heroIndex],
