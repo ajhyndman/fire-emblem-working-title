@@ -31,6 +31,7 @@ import michalisHeros from './temporal/2017.03.25-michalis';
 import type { HeroInstance, InstanceSkills, Rarity, Stat } from './store';
 
 
+export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null;
 export type HeroesByName = { [key: string]: Hero };
 
 // $FlowIssue indexBy confuses flow
@@ -55,11 +56,19 @@ export const lookupStats = (name: string): Hero => {
 };
 
 // Returns the name of the skill object for the skill type
-export function getSkill(
+export function getSkillName(
   instance: HeroInstance,
   skillType: SkillType,
 ): string {
   return instance.skills[skillType] ? instance.skills[skillType].name : '';
+}
+
+// Returns the effect description of a skill
+export function getSkillEffect(
+  instance: HeroInstance,
+  skillType: SkillType,
+): string {
+  return instance.skills[skillType] ? instance.skills[skillType].effect : '';
 }
 
 // Returns a map from skill type to the name of the skill.
@@ -206,8 +215,8 @@ export const getStat = (
       ? parseInt(low, 10)
       : parseInt(high, 10);
 
-  const passiveA = getSkill(instance, 'PASSIVE_A');
-  const weapon = getSkill(instance, 'WEAPON');
+  const passiveA = getSkillName(instance, 'PASSIVE_A');
+  const weapon = getSkillName(instance, 'WEAPON');
 
   //console.log('GetStat.', instance.name, statKey, baseValue
   //  + (passiveA ? getStatValue(passiveA, statKey, isAttacker) : 0)
@@ -267,7 +276,7 @@ export const getWeaponColor = (instance: HeroInstance) => {
 
 // Can be called with substrings of the skill name
 export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedName: string) => {
-  const skillName = getSkill(instance, skillType);
+  const skillName = getSkillName(instance, skillType);
   if (skillName != null) {
     return test(new RegExp(expectedName), skillName);
   }
@@ -279,21 +288,19 @@ export const hasStatsForRarity = (hero: Hero, rarity: Rarity/* , level?: 1 | 40 
 };
 
 // Returns the condition for the special to trigger. (Other is for Galefore)
-export function getSpecialType(
-  instance: HeroInstance,
-): 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null {
+export function getSpecialType(instance: HeroInstance): SpecialType {
   if (instance.skills['SPECIAL'] == null) return null;
-  if (test(/When healing/, instance.skills['SPECIAL'].effect)) return 'HEAL';
-  if (test(/Galeforce/, instance.skills['SPECIAL'].name)) return 'OTHER';
-  if (test(/Reduces damage/, instance.skills['SPECIAL'].effect)) return 'ATTACKED';
-  if (test(/Miracle/, instance.skills['SPECIAL'].name)) return 'ATTACKED';
-  if (test(/(Blazing|Growing|Rising)/, instance.skills['SPECIAL'].name)) return 'INITIATE';
+  if (test(/When healing/, getSkillEffect(instance, 'SPECIAL'))) return 'HEAL';
+  if (test(/Galeforce/, getSkillName(instance, 'SPECIAL'))) return 'OTHER';
+  if (test(/Reduces damage/, getSkillEffect(instance, 'SPECIAL'))) return 'ATTACKED';
+  if (test(/Miracle/, getSkillName(instance, 'SPECIAL'))) return 'ATTACKED';
+  if (test(/(Blazing|Growing|Rising)/, getSkillName(instance, 'SPECIAL'))) return 'INITIATE';
   return 'ATTACK';
 }
  
 // Returns the cooldown of the special or -1. Accounts for killer weapons.
 export const getSpecialCooldown = (instance: HeroInstance) => 
   instance.skills['SPECIAL'] == null ? -1
-    : instance.skills['SPECIAL'].cooldown
-    + (test(/Accelerates S/, instance.skills['WEAPON'].effect) ? -1 : 0)
-    + (test(/Slows Special/, instance.skills['WEAPON'].effect) ? +1 : 0);
+    : (instance.skills['SPECIAL'].cooldown
+    + (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0)
+    + (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0));

@@ -9,7 +9,7 @@ import {
 import {
   getMitigationType,
   getRange,
-  getSkill,
+  getSkillName,
   getSpecialCooldown,
   getSpecialType,
   getStat,
@@ -28,6 +28,7 @@ import {
   getSpecialOffensiveMultiplier,
 } from './skillHelpers';
 import type { HeroInstance } from './store';
+import type { SpecialType } from './heroHelpers';
   
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
 
@@ -117,8 +118,8 @@ const classModifier = (instance: HeroInstance) => {
 const advantageBonus = (heroA: HeroInstance, heroB: HeroInstance) => {
   const colorA = getWeaponColor(heroA);
   const colorB = getWeaponColor(heroB);
-  const weaponA = getSkill(heroA, 'WEAPON');
-  const weaponB = getSkill(heroB, 'WEAPON');
+  const weaponA = getSkillName(heroA, 'WEAPON');
+  const weaponB = getSkillName(heroB, 'WEAPON');
   let advantage = 0;
   if (
     (colorA === 'RED' && colorB === 'GREEN')
@@ -137,8 +138,8 @@ const advantageBonus = (heroA: HeroInstance, heroB: HeroInstance) => {
   } else if (colorA === 'NEUTRAL' && test(/raven/, weaponB)) {
     advantage = -1;
   }
-  const passiveA = getSkill(heroA, 'PASSIVE_A');
-  const passiveB = getSkill(heroB, 'PASSIVE_A');
+  const passiveA = getSkillName(heroA, 'PASSIVE_A');
+  const passiveB = getSkillName(heroB, 'PASSIVE_A');
   // Weapon type advantage multipliers don't stack. Source:
   // https://feheroes.wiki/Damage_Calculation#Weapon_Triangle_Advantage
   let advantageMultiplier = 0.2;
@@ -166,7 +167,7 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
   ) {
     return 1.5;
   }
-  const weaponName = getSkill(attacker, 'WEAPON');
+  const weaponName = getSkillName(attacker, 'WEAPON');
   if ((test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defenderMoveType === 'Armored')
       || (test(/wolf/, weaponName) && defenderMoveType === 'Cavalry')
       || (test(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry')
@@ -183,8 +184,8 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
   if (getRange(defender) === getRange(attacker)) {
     return true;
   }
-  const passiveA = getSkill(defender, 'PASSIVE_A');
-  const weaponName = getSkill(defender, 'WEAPON');
+  const passiveA = getSkillName(defender, 'PASSIVE_A');
+  const weaponName = getSkillName(defender, 'WEAPON');
   return (passiveA === 'Close Counter'
        || passiveA === 'Distant Counter'
        || weaponName === 'Raijinto'
@@ -198,7 +199,7 @@ const hitDmg = (
   attacker: HeroInstance,
   defender: HeroInstance,
   isAttacker: boolean,
-  attackerSpecial: ?string = null,
+  attackerSpecial: string = '',
   attackerMissingHp: number = 0,
 ) => dmgFormula(
   getStat(attacker, 'atk', 40, isAttacker),
@@ -247,9 +248,12 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
 
   const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
   const heroes = [attacker, defender];
-  const specialNames = [getSkill(attacker, 'SPECIAL'), getSkill(defender, 'SPECIAL')];
-  let specialCds = map(getSpecialCooldown, heroes);
-  let specialTypes = map(getSpecialType, heroes);
+  const specialNames: Array<string> =
+    [getSkillName(attacker, 'SPECIAL'), getSkillName(defender, 'SPECIAL')];
+  // $FlowIssue $Iterable. This type is incompatible with array type
+  const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
+  // $FlowIssue $Iterable. This type is incompatible with array type
+  let specialCds: Array<number> = map(getSpecialCooldown, heroes);
   let numAttacks = [0, 0];
   let healths = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
   // AOE Specials
@@ -257,18 +261,18 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
     ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;
   healths[1] -= Math.min(aoeDamage, healths[1] - 1);
   // Main combat loop.
-  for (let heroIndex of attackOrder) {
+  for (let heroIndex: number of attackOrder) {
     // heroIndex hits otherHeroIndex.
     numAttacks[heroIndex]++;
     if (healths[heroIndex] > 0) {
-      const otherHeroIndex = 1 - heroIndex;
+      const otherHeroIndex: number = 1 - heroIndex;
       const stillFighting = healths[0] > 0 && healths[1] > 0;
 
       let lifestealAmount = 0;  // TODO: Spring weapons
       let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb') ? 0.5 : 0.0;
             
-      // Attacker Special
-      let attackerSpecial = null;
+      // Attacker Special. Use '' for no special.
+      let attackerSpecial = '';
       if (specialCds[heroIndex] === 0 && specialTypes[heroIndex] === 'ATTACK') {
         attackerSpecial = specialNames[heroIndex];
         lifestealPercent += getSpecialLifestealPercent(attackerSpecial);
@@ -291,7 +295,7 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
           dmg = healths[otherHeroIndex] - 1;
           specialCds[otherHeroIndex] = getSpecialCooldown(heroes[otherHeroIndex]);
         // The unit that initiated combat decided the range of the battle.
-        } else if (doesDefenseSpecialApply(getRange(attacker), specialName)) {
+        } else if (doesDefenseSpecialApply(specialName, getRange(attacker))) {
           dmg = Math.ceil(dmg * (1 - getSpecialDefensiveMultiplier(specialName)));
           specialCds[otherHeroIndex] = getSpecialCooldown(heroes[otherHeroIndex]);
         }
