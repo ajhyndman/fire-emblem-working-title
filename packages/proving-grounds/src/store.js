@@ -68,7 +68,7 @@ const emptyState: State = {
   activeSlot: undefined,
   heroSlots: [undefined, undefined],
   host: '',
-  previewLevel: 1,
+  previewLevel: 40,
   searchString: '',
   showGuide: false,
 };

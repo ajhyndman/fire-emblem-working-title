@@ -1,7 +1,7 @@
 // @flow
 import {
+  map,
   max,
-  multiply,
   replace,
   test,
 } from 'ramda';
@@ -9,46 +9,64 @@ import {
 import {
   getMitigationType,
   getRange,
-  getSkill,
+  getSkillName,
+  getSpecialCooldown,
+  getSpecialType,
   getStat,
   getWeaponColor,
   hasBraveWeapon,
   hasSkill,
   lookupStats,
 } from './heroHelpers';
+import {
+  doesDefenseSpecialApply,
+  getSpecialAOEDamageAmount,
+  getSpecialBonusDamageAmount,
+  getSpecialDefensiveMultiplier,
+  getSpecialLifestealPercent,
+  getSpecialMitigationMultiplier,
+  getSpecialOffensiveMultiplier,
+} from './skillHelpers';
 import type { HeroInstance } from './store';
-
-
+import type { SpecialType } from './heroHelpers';
+  
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
 
 /**
  * Formula derived from:
  * http://feheroes.wiki/Damage_Calculation#Complete_formula
+ * Defensive multiplier and precombat specials are applied separately.
  *
  * @param {number} atk Hero's attack
  * @param {number} eff Effective against bonus (e.g. Bow vs Flying Unit)
  * @param {number} adv Color advantage bonus (red > green > blue)
  * @param {number} mit Damage mitigation value (comes from resist or defence)
  * @param {number} classModifier At this time, Neutral Staff has a 0.5x net damage reduction.
+ * @param {number} bonusDamage = 0;       // From skills like Bonfire
+ * @param {number} offensiveMult = 0.0;   // From skills like Glimmer
+ * @param {number} mitigationMult = 0.0;  // From skills like Luna
  * @returns {number} the damage a single hit will effect
  */
 const dmgFormula = (
   atk: number,
-  eff: number,
-  adv: number,
-  mit: number,
-  classModifier: number,
-) => Math.floor(
-  multiply(
+  eff: number = 1.0,
+  adv: number = 0.0,
+  mit: number = 0,
+  classModifier: number = 1.0,
+  bonusDamage: number = 0,       // From skills like Bonfire
+  offensiveMult: number = 0.0,   // From skills like Glimmer
+  mitigationMult: number = 0.0,  // From skills like Luna
+) => truncate(
+  (1 + offensiveMult) * 
+  truncate(
+    (classModifier) * 
     max(
-      Math.floor(atk * eff)
-      + truncate(
-        truncate(atk * eff)
-        * adv)
-      - mit,
+      truncate(atk * eff)
+      + truncate(truncate(atk * eff) * adv)
+      + truncate(bonusDamage)
+      - (mit - truncate(mit * mitigationMult)),
       0,
     ),
-    classModifier,
   ),
 );
 
@@ -100,8 +118,8 @@ const classModifier = (instance: HeroInstance) => {
 const advantageBonus = (heroA: HeroInstance, heroB: HeroInstance) => {
   const colorA = getWeaponColor(heroA);
   const colorB = getWeaponColor(heroB);
-  const weaponA = getSkill(heroA, 'WEAPON');
-  const weaponB = getSkill(heroB, 'WEAPON');
+  const weaponA = getSkillName(heroA, 'WEAPON');
+  const weaponB = getSkillName(heroB, 'WEAPON');
   let advantage = 0;
   if (
     (colorA === 'RED' && colorB === 'GREEN')
@@ -120,8 +138,8 @@ const advantageBonus = (heroA: HeroInstance, heroB: HeroInstance) => {
   } else if (colorA === 'NEUTRAL' && test(/raven/, weaponB)) {
     advantage = -1;
   }
-  const passiveA = getSkill(heroA, 'PASSIVE_A');
-  const passiveB = getSkill(heroB, 'PASSIVE_A');
+  const passiveA = getSkillName(heroA, 'PASSIVE_A');
+  const passiveB = getSkillName(heroB, 'PASSIVE_A');
   // Weapon type advantage multipliers don't stack. Source:
   // https://feheroes.wiki/Damage_Calculation#Weapon_Triangle_Advantage
   let advantageMultiplier = 0.2;
@@ -149,7 +167,7 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
   ) {
     return 1.5;
   }
-  const weaponName = getSkill(attacker, 'WEAPON');
+  const weaponName = getSkillName(attacker, 'WEAPON');
   if ((test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defenderMoveType === 'Armored')
       || (test(/wolf/, weaponName) && defenderMoveType === 'Cavalry')
       || (test(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry')
@@ -166,8 +184,8 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
   if (getRange(defender) === getRange(attacker)) {
     return true;
   }
-  const passiveA = getSkill(defender, 'PASSIVE_A');
-  const weaponName = getSkill(defender, 'WEAPON');
+  const passiveA = getSkillName(defender, 'PASSIVE_A');
+  const weaponName = getSkillName(defender, 'WEAPON');
   return (passiveA === 'Close Counter'
        || passiveA === 'Distant Counter'
        || weaponName === 'Raijinto'
@@ -177,12 +195,21 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
 
 const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
 
-const hitDmg = (attacker: HeroInstance, defender: HeroInstance, isAttacker: boolean) => dmgFormula(
+const hitDmg = (
+  attacker: HeroInstance,
+  defender: HeroInstance,
+  isAttacker: boolean,
+  attackerSpecial: string = '',
+  attackerMissingHp: number = 0,
+) => dmgFormula(
   getStat(attacker, 'atk', 40, isAttacker),
   effectiveBonus(attacker, defender),
   advantageBonus(attacker, defender),
   getStat(defender, getMitigationType(attacker), 40, !isAttacker),
   classModifier(attacker),
+  getSpecialBonusDamageAmount(attackerSpecial, attacker, isAttacker, attackerMissingHp),
+  getSpecialOffensiveMultiplier(attackerSpecial),
+  getSpecialMitigationMultiplier(attackerSpecial),
 );
 
 /**
@@ -216,28 +243,79 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
     && doesFollowUp(defender, attacker, false)) {
     attackOrder.push(1);
   }
+  
+  // TODO: decide if Galeforce will trigger.
 
   const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
   const heroes = [attacker, defender];
+  const specialNames: Array<string> =
+    [getSkillName(attacker, 'SPECIAL'), getSkillName(defender, 'SPECIAL')];
+  // $FlowIssue $Iterable. This type is incompatible with array type
+  const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
+  // $FlowIssue $Iterable. This type is incompatible with array type
+  let specialCds: Array<number> = map(getSpecialCooldown, heroes);
   let numAttacks = [0, 0];
   let healths = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
-  for (let heroIndex of attackOrder) {
+  // AOE Specials
+  const aoeDamage = specialCds[0] === 0
+    ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;
+  healths[1] -= Math.min(aoeDamage, healths[1] - 1);
+  // Main combat loop.
+  for (let heroIndex: number of attackOrder) {
     // heroIndex hits otherHeroIndex.
     numAttacks[heroIndex]++;
     if (healths[heroIndex] > 0) {
-      const otherHeroIndex = 1 - heroIndex;
+      const otherHeroIndex: number = 1 - heroIndex;
       const stillFighting = healths[0] > 0 && healths[1] > 0;
-      healths[otherHeroIndex] = hpRemaining(damages[heroIndex], healths[otherHeroIndex]);
-      if (stillFighting && hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb')) {
+
+      let lifestealAmount = 0;  // TODO: Spring weapons
+      let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb') ? 0.5 : 0.0;
+            
+      // Attacker Special. Use '' for no special.
+      let attackerSpecial = '';
+      if (specialCds[heroIndex] === 0 && specialTypes[heroIndex] === 'ATTACK') {
+        attackerSpecial = specialNames[heroIndex];
+        lifestealPercent += getSpecialLifestealPercent(attackerSpecial);
+        specialCds[heroIndex] = getSpecialCooldown(heroes[heroIndex]);
+      } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[heroIndex] > 0) {
+        specialCds[heroIndex]--;
+      }
+      let dmg = hitDmg(
+        heroes[heroIndex],
+        heroes[otherHeroIndex],
+        heroIndex === 0,  // isAttacker
+        attackerSpecial,
+        getStat(heroes[heroIndex], 'hp') - healths[heroIndex],  // missing hp
+      );
+
+      // Defender Special
+      if (specialCds[otherHeroIndex] === 0 && specialTypes[otherHeroIndex] === 'ATTACKED') {
+        const specialName = specialNames[otherHeroIndex];
+        if (specialName === 'Miracle' && dmg >= healths[otherHeroIndex]) {
+          dmg = healths[otherHeroIndex] - 1;
+          specialCds[otherHeroIndex] = getSpecialCooldown(heroes[otherHeroIndex]);
+        // The unit that initiated combat decided the range of the battle.
+        } else if (doesDefenseSpecialApply(specialName, getRange(attacker))) {
+          dmg = Math.ceil(dmg * (1 - getSpecialDefensiveMultiplier(specialName)));
+          specialCds[otherHeroIndex] = getSpecialCooldown(heroes[otherHeroIndex]);
+        }
+      } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[otherHeroIndex] > 0) {
+        specialCds[otherHeroIndex]--;
+      }
+      // Apply damage
+      healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex]);
+      if (stillFighting) {
         healths[heroIndex] = Math.min(
-          healths[heroIndex] + Math.floor(damages[heroIndex] / 2),
+          healths[heroIndex] + Math.floor(damages[heroIndex] * lifestealPercent) + lifestealAmount,
           getStat(heroes[heroIndex], 'hp'),
         );
+        // TODO: Fury Pain and Poison Strike
       }
     }
   }
 
   return {
+    aoeDamage: aoeDamage,
     attackerNumAttacks: numAttacks[0],
     attackerDamage: damages[0],
     attackerHpRemaining: healths[0],
