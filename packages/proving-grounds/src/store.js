@@ -68,7 +68,7 @@ const emptyState: State = {
   heroSlots: [undefined, undefined],
   host: '',
   searchString: '',
-  previewLevel: 1,
+  previewLevel: 40,
 };
 
 const initStore = (initialState: State = emptyState) => {
