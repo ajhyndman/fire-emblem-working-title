@@ -7,7 +7,7 @@ import {
   keys,
   mapObjIndexed,
   not,
-  path,
+  pathOr,
   values,
   zipObj,
 } from 'ramda';
@@ -209,8 +209,9 @@ const HeroConfigurer = withState(
         : (
           <div className="skill-selector">
             <SkillSelector
-              // $FlowIssue: Flowtype for path isn't precise.
-              activeSkillName={path(
+              // $FlowIssue: Flowtype for pathOr isn't precise.
+              activeSkillName={pathOr(
+                '',
                 ['skills', state.skillType, 'name'],
                 heroInstance,
               )}

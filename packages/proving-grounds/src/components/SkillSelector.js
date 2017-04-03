@@ -53,7 +53,7 @@ const SkillSelector = ({
       }
     `}</style>
     <div className="section">
-      <h1 className="title">Show guide:</h1>
+      <h1 className="title">Show detail:</h1>
     </div>
     <div className="section">
       <SegmentedControl
@@ -71,14 +71,14 @@ const SkillSelector = ({
     {map(
       skill => (
         <div
-          key={skill.name}
+          key={skill ? skill.name : ''}
           className="skill-option"
           onClick={() => onClose(skill)}
         >
           <Skill
-            active={skill.name === activeSkillName}
+            active={(skill ? skill.name : '') === activeSkillName}
             showGuide={showGuide}
-            name={skill.name}
+            name={skill ? skill.name : '--'}
           />
         </div>
       ),
@@ -95,7 +95,7 @@ const SkillSelector = ({
           ]),
           propOr('', 'name'),
         ),
-        getInheritableSkills(heroInstance.name, skillType),
+        [null].concat(getInheritableSkills(heroInstance.name, skillType)),
       ),
     )}
   </div>
