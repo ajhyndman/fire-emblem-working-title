@@ -181,6 +181,9 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
 };
 
 const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
+  if (getSkillName(defender, 'WEAPON') === '') {
+    return false;
+  }
   if (getRange(defender) === getRange(attacker)) {
     return true;
   }
@@ -222,28 +225,29 @@ const hitDmg = (
 export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) => {
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
-  // attacker hits defender
-  attackOrder.push(0);
-  if (hasBraveWeapon(attacker)) {
-    attackOrder.push(0);
-  }
-  // defender retaliates
-  if (canRetaliate(attacker, defender)) {
-    attackOrder.push(1);
-  }
-  // attacker follow-up
-  if (doesFollowUp(attacker, defender, true)) {
+  if (getSkillName(attacker, 'WEAPON') !== '') {
+    // attacker hits defender
     attackOrder.push(0);
     if (hasBraveWeapon(attacker)) {
       attackOrder.push(0);
     }
+    // defender retaliates
+    if (canRetaliate(attacker, defender)) {
+      attackOrder.push(1);
+    }
+    // attacker follow-up
+    if (doesFollowUp(attacker, defender, true)) {
+      attackOrder.push(0);
+      if (hasBraveWeapon(attacker)) {
+        attackOrder.push(0);
+      }
+    }
+    // defender follow-up
+    if (canRetaliate(attacker, defender)
+      && doesFollowUp(defender, attacker, false)) {
+      attackOrder.push(1);
+    }
   }
-  // defender follow-up
-  if (canRetaliate(attacker, defender)
-    && doesFollowUp(defender, attacker, false)) {
-    attackOrder.push(1);
-  }
-  
   // TODO: decide if Galeforce will trigger.
 
   const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
