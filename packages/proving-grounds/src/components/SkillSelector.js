@@ -22,7 +22,7 @@ import type { HeroInstance } from '../store';
 type Props = {
   activeSkillName: string;
   dispatch: Dispatch;
-  onClose: (skill: Object) => void;
+  onClose: (skill: ?Object) => void;
   heroInstance: HeroInstance;
   showGuide: boolean;
   skillType: SkillType;

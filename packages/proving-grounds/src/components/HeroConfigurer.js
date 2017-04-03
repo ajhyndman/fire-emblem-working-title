@@ -44,6 +44,15 @@ type State = {
   skillType: void;
 };
 
+const skillIcons = {
+  ASSIST: 'Icon_Skill_Assist.png',
+  PASSIVE_A: 'Passive_Icon_A.png',
+  PASSIVE_B: 'Passive_Icon_B.png',
+  PASSIVE_C: 'Passive_Icon_C.png',
+  SPECIAL: 'Icon_Skill_Special.png',
+  WEAPON: 'Icon_Skill_Weapon.png',
+};
+
 const HeroConfigurer = withState(
   'state',
   'setState',
@@ -79,6 +88,12 @@ const HeroConfigurer = withState(
           display: flex;
           flex-direction: column;
         }
+        .active-skill {
+          position: relative;
+        }
+        .active-skill:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
         .row {
           align-items: baseline;
           color: ${colors.iceberg};
@@ -94,15 +109,22 @@ const HeroConfigurer = withState(
           margin: 0 auto 25px;
           max-width: 100%;
         }
+        .skill-icon {
+          height: 30px;
+          pointer-events: none;
+          position: absolute;
+          width: 30px;
+          z-index: 1;
+          right: 20px;
+          top: 50%;
+          transform: translate(50%, -50%);
+        }
         .skill-selector {
           width: 100%;
         }
         .center {
           display: flex;
           justify-content: space-around;
-        }
-        .active-skill:not(:last-of-type) {
-          margin-bottom: 10px;
         }
         .name {
           color: ${colors.iceberg};
@@ -194,6 +216,15 @@ const HeroConfigurer = withState(
                       key={skillType}
                       className="active-skill"
                     >
+                      <img
+                        className="skill-icon"
+                        src={`${staticUrl}30px-${skillIcons[skillType]}`}
+                        srcSet={`
+                          ${staticUrl}30px-${skillIcons[skillType]} 30w,
+                          ${staticUrl}60px-${skillIcons[skillType]} 60w
+                        `}
+                        sizes="30px"
+                      />
                       <Skill
                         name={skill ? skill.name : '--'}
                         onClick={() => { setState({ open: true, skillType: skillType }); }}
