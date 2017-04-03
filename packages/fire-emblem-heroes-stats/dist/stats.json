@@ -1863,7 +1863,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Camilla (S)"
     },
     {
       "name": "Catria",
@@ -2615,7 +2616,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Chrom (S)"
     },
     {
       "name": "Clarine",
@@ -3089,7 +3091,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Corrin (F)"
     },
     {
       "name": "Corrin (M)",
@@ -3225,7 +3228,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Corrin (M)"
     },
     {
       "name": "Donnel",
@@ -9174,7 +9178,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Lucina (S)"
     },
     {
       "name": "Lucius",
@@ -12930,7 +12935,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Robin (F)"
     },
     {
       "name": "Robin (M)",
@@ -13100,7 +13106,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Robin (M)"
     },
     {
       "name": "Roy",
@@ -16136,7 +16143,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Tiki (Y)"
     },
     {
       "name": "Ursula",
@@ -16794,7 +16802,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Xander (S)"
     }
   ],
   "skills": [

@@ -106,6 +106,7 @@ export const decodeHero = (heroCode: string): ?HeroInstance => (
       map(hash => hashTable[hash]),
       string => string.split('+'),
       lzString.decompressFromBase64,
+      decodeURIComponent,
     )(heroCode)
     : undefined
 );
@@ -113,6 +114,7 @@ export const decodeHero = (heroCode: string): ?HeroInstance => (
 export const encodeHero = (instance: ?HeroInstance): string => (
   instance
     ? compose(
+      encodeURIComponent,
       lzString.compressToBase64,
       hashes => [...hashes].join('+'),
       map(hash),

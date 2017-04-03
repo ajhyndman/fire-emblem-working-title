@@ -2,6 +2,7 @@
 import React from 'react';
 import { replace } from 'ramda';
 
+import Frame from './Frame';
 import { colors, gridSize } from '../theme';
 import { staticUrl } from '../../config';
 
@@ -36,15 +37,14 @@ const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
         .frame {
           pointer-events: none;
           position: absolute;
-          top: ${-(0.075 * gridSize)}px;
-          left: ${-(0.075 * gridSize)}px;
-          width: ${1.15 * gridSize}px;
+          top: ${-(0.07 * gridSize)}px;
+          left: ${-(0.07 * gridSize)}px;
+          width: ${1.14 * gridSize}px;
         }
       `}</style>
-      <img
-        className="frame"
-        src={`${staticUrl}Frame_Rarity_${rarity}.png`}
-      />
+      <div className="frame">
+        <Frame rarity={rarity} />
+      </div>
       {weaponType && <img
         className="class"
         title={weaponType}

@@ -22,7 +22,7 @@ const SegmentedControl = ({
     <style jsx>{`
       .root {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
       }
       button {
         background: ${colors.elephant};
@@ -82,7 +82,7 @@ const SegmentedControl = ({
         <button
           key={option}
           className={cn({ active: (selected === i) })}
-          style={{ flexBasis: `${(1 / (options.length + 1)) * 100}%` }}
+          style={{ flexBasis: `${(1 / (options.length + 0.5)) * 100}%` }}
           onClick={() => onChange(i)}
         >
           {option}

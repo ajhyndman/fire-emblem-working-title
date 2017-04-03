@@ -8,6 +8,7 @@ import Special from './Special';
 import Weapon from './Weapon';
 import { getSkillInfo } from '../../skillHelpers';
 import { activateColor, colors, fontFamilies, fontSizes, transition } from '../../theme';
+import { staticUrl } from '../../../config';
 
 
 type Props = {
@@ -66,7 +67,6 @@ const Skill = ({ active, name, onClick, showGuide }: Props) => {
         .root::after {
           right: -2px;
         }
-
         .exception {
           color: ${colors.iceberg};
           font-family: ${fontFamilies.ui};
@@ -74,6 +74,15 @@ const Skill = ({ active, name, onClick, showGuide }: Props) => {
           font-weight: bold;
           line-height: 1;
           padding: 10px;
+        }
+        .active-indicator {
+          display: block;
+          right: 0;
+          position: absolute;
+          top: 50%;
+          transform: translate(25%, -50%);
+          width: 30px;
+          z-index: 1;
         }
       `}</style>
       {(() => {
@@ -91,6 +100,16 @@ const Skill = ({ active, name, onClick, showGuide }: Props) => {
             return <Weapon showGuide={showGuide} skill={skill} />;
         }
       })()}
+      {active && <img
+        className="active-indicator"
+        src={`${staticUrl}Checkmark.png`}
+        srcSet={`
+          ${staticUrl}30px-Checkmark.png 30w,
+          ${staticUrl}60px-Checkmark.png 60w,
+          ${staticUrl}Checkmark.png 79w
+        `}
+        sizes="30px"
+      />}
     </div>
   );
 };

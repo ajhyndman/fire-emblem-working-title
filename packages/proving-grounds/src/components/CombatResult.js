@@ -3,6 +3,7 @@ import React from 'react';
 
 import { calculateResult } from '../damageCalculation';
 import { getStat } from '../heroHelpers';
+import { staticUrl } from '../../config';
 import type { HeroInstance } from '../store';
 
 
@@ -32,11 +33,21 @@ const CombatResult = ({ leftHero, rightHero }: Props) => {
         .root {
           height: 80px;
         }
+        .attack-indicator {
+          display: block;
+          width: 40px;
+          filter: grayscale(100%);
+        }
         .container {
+          align-items: center;
           display: flex;
           justify-content: space-between;
           margin: 0 auto;
           width: 320px;
+        }
+        .result {
+          align-self: stretch;
+          flex-basis: 40%;
         }
         h1 {
           color: white;
@@ -56,7 +67,7 @@ const CombatResult = ({ leftHero, rightHero }: Props) => {
       {leftHero && rightHero && result
         ? (
           <div className="container">
-            <div>
+            <div className="result">
               <h1>{`${
                 !isNaN(getStat(leftHero, 'hp')) ? getStat(leftHero, 'hp') : '?'
               } → ${
@@ -64,7 +75,17 @@ const CombatResult = ({ leftHero, rightHero }: Props) => {
               }`}</h1>
               <h2>{printDamage(result.attackerDamage, result.attackerNumAttacks)}</h2>
             </div>
-            <div>
+            <img
+              className="attack-indicator"
+              role="presentation"
+              src={`${staticUrl}Attack.png`}
+              srcSet={`
+                ${staticUrl}40px-Attack.png 40w,
+                ${staticUrl}Attack.png 71w
+              `}
+              sizes="40px"
+            />
+            <div className="result">
               <h1>{`${
                 !isNaN(getStat(rightHero, 'hp')) ? getStat(rightHero, 'hp') : '?'
               } → ${

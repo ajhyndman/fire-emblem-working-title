@@ -5,6 +5,7 @@ import { action, storiesOf } from '@kadira/storybook';
 // import { find, propEq } from 'ramda';
 import { withReducer, withState } from 'recompose';
 
+import Frame from '../src/components/Frame';
 import Hero from '../src/components/Hero';
 import HeroConfigurer from '../src/components/HeroConfigurer';
 import Input from '../src/components/Input';
@@ -28,6 +29,19 @@ const heroInstance: HeroInstance = {
   rarity: 5,
   skills: getDefaultSkills('Anna', 5),
 };
+
+storiesOf('Frame', module)
+  .add('default', () => (
+    <div className="root">
+      <style jsx>{`
+        .root {
+          display: inline-block;
+          border: 2px solid black;
+          }
+      `}</style>
+      <Frame rarity={5} />
+    </div>
+  ));
 
 storiesOf('Hero', module)
   .add('default', () => (
@@ -188,8 +202,11 @@ storiesOf('SkillSelector', module)
   .add('Anna, Weapon', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        onClose={action('UPDATE_SKILL')}
+        activeSkillName=""
+        dispatch={() => {}}
         heroInstance={heroInstance}
+        onClose={action('UPDATE_SKILL')}
+        showGuide
         skillType="WEAPON"
       />
     </div>
@@ -197,8 +214,11 @@ storiesOf('SkillSelector', module)
   .add('Anna, Special', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        onClose={action('UPDATE_SKILL')}
+        activeSkillName=""
+        dispatch={() => {}}
         heroInstance={heroInstance}
+        onClose={action('UPDATE_SKILL')}
+        showGuide
         skillType="SPECIAL"
       />
     </div>
@@ -206,8 +226,11 @@ storiesOf('SkillSelector', module)
   .add('Anna, Passive A', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
       <SkillSelector
-        onClose={action('UPDATE_SKILL')}
+        activeSkillName=""
+        dispatch={() => {}}
         heroInstance={heroInstance}
+        onClose={action('UPDATE_SKILL')}
+        showGuide
         skillType="PASSIVE_A"
       />
     </div>

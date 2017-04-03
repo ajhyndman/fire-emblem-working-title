@@ -48,14 +48,13 @@ class Configure extends React.Component {
       <div>
         <style jsx>{`
           .container {
-            bottom: 10px;
             left: 50%;
+            margin-bottom: 2em;
             max-width: 90%;
-            overflow: auto;
             position: absolute;
             top: ${panelHeight / 4}px;
             transform: translateX(-50%);
-            width: 400px;
+            width: 350px;
           }
         `}</style>
         <Root {...this.props} />
@@ -79,6 +78,7 @@ class Configure extends React.Component {
               heroInstance={this.props.state.heroSlots[this.props.state.activeSlot || 0]
                 || defaultInstance}
               level={this.props.state.previewLevel}
+              showGuide={this.props.state.showGuide}
             />
           </div>
         </Overlay>
