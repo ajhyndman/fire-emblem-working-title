@@ -2,7 +2,7 @@
 import React from 'react';
 import Router from 'next/router';
 import Color from 'color-js';
-import { map, range } from 'ramda';
+import { map, range, addIndex } from 'ramda';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import HeroPortrait from './Hero';
@@ -75,9 +75,9 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
         white-space: nowrap;
       }
     `}</style>
-    {map(
-      (hero: Hero) => (
-        <div className="gridSquareOuter" key={hero.name}>
+    {addIndex(map)(
+      (hero: Hero, i: number) => (
+        <div className="gridSquareOuter" key={`${i}-${hero.name}`}>
           <div
             className={`gridSquare ${activeHeroName === hero.name ? 'active' : ''}`}
             onClick={(event) => {
