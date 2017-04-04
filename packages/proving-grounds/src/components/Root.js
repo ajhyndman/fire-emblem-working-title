@@ -21,7 +21,7 @@ import { encodeHero } from '../queryCodex';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 import type { State } from '../store';
-// import eventUnits from '../temporal/2017.03.25-michalis';
+import eventUnits from '../temporal/2017.04.04-navarre';
 
 
 type Props = {
@@ -162,10 +162,12 @@ class Root extends React.Component {
           </div>
         </div>
         <div className="spacer" />
-        {/* <HeroGrid
+        <HeroGrid
+            // $FlowIssue typedef for path isn't resolving correctly
           activeHeroName={path(['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
+            // $FlowIssue typedef for prop isn't resolving correctly
             compose(
               name => (name.indexOf(toLower(state.searchString)) !== -1),
               toLower,
@@ -173,7 +175,7 @@ class Root extends React.Component {
             ),
             eventUnits,
           )}
-        /> */}
+        />
         <HeroGrid
           // $FlowIssue typedef for path isn't resolving correctly
           activeHeroName={path(['activeHero', 'name'], state)}
