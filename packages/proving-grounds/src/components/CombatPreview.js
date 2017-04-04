@@ -17,6 +17,7 @@ type Props = {
 };
 
 const openConfig = (event, dispatch, slot) => {
+  dispatch({ type: 'SELECT_HERO', hero: undefined });
   event.preventDefault();
   dispatch({ type: 'SELECT_SLOT', slot: slot });
   Router.push('/configure');
