@@ -26,8 +26,8 @@ import type {
   SkillType,
 } from 'fire-emblem-heroes-stats';
 
+import { getEventHeroes } from './temporal/events';
 import { getSkillInfo, getStatValue } from './skillHelpers';
-import eventHeroes from './temporal/2017.04.04-navarre';
 import type { HeroInstance, InstanceSkills, Rarity, Stat } from './store';
 
 
@@ -37,7 +37,7 @@ export type HeroesByName = { [key: string]: Hero };
 const heroesByName: HeroesByName = indexBy(
   prop('name'),
   // stats.heroes,
-  concat(stats.heroes, eventHeroes),
+  concat(stats.heroes, getEventHeroes()),
 );
 
 /**

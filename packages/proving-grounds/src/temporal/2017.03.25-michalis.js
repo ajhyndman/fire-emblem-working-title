@@ -1,7 +1,11 @@
 // @flow
 import type { Hero } from 'fire-emblem-heroes-stats';
 
-const michalisUnits: Array<Hero> = [
+// Times were entered in PDT (UTC - 7)
+const startTime = new Date('2017-03-24T00:00:00-07:00');
+const endTime = new Date('2017-03-27T23:59:00-07:00');
+
+const unitList: Array<Hero> = [
   {
     'shortName': 'Flier',
     'name': 'Lance Flier',
@@ -231,4 +235,4 @@ const michalisUnits: Array<Hero> = [
   },
 ];
 
-export default michalisUnits;
+export default {unitList, startTime, endTime};

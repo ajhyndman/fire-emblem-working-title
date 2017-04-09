@@ -21,7 +21,7 @@ import { encodeHero } from '../queryCodex';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 import type { State } from '../store';
-import eventUnits from '../temporal/2017.04.04-navarre';
+import { getEventHeroes } from '../temporal/events';
 
 
 type Props = {
@@ -173,7 +173,7 @@ class Root extends React.Component {
               toLower,
               prop('name'),
             ),
-            eventUnits,
+            getEventHeroes(),
           )}
         />
         <HeroGrid

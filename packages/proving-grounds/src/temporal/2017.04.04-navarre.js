@@ -1,7 +1,11 @@
 // @flow
 import type { Hero } from 'fire-emblem-heroes-stats';
 
-const navarreUnits: Array<Hero> = [
+// Times were entered in PDT (UTC - 7)
+const startTime = new Date('2017-04-04T00:00:00-07:00');
+const endTime = new Date('2017-04-08T23:59:00-07:00');
+
+const unitList: Array<Hero> = [
   {
     'name': 'Navarre',
     'moveType': 'Infantry',
@@ -236,4 +240,4 @@ const navarreUnits: Array<Hero> = [
   },
 ];
 
-export default navarreUnits;
+export default {unitList, startTime, endTime};
