@@ -29,6 +29,7 @@ export const getSkillInfo = (skillName: string): Skill => skillsByName[skillName
 
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 
+// Returns a list of numbers from the effect of the skill, or [0].
 export function getSkillNumbers(skillName: string) {
   const skill = getSkillInfo(skillName);
   if (skill == null) {
@@ -86,6 +87,31 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
     }
   }
   return 0;
+}
+
+
+/*
+ * Helpers to check a property of a skill by name.
+ */
+ 
+// Checks whether or not a skill (ex: Wary Fighter 3) is the final form of the skill.
+export function isMaxTier(skillName: string): boolean {
+  if (isFreeSkill(skillName)) {
+    return false;
+  }
+  if (test(/(Swift Sparrow 2|Attack Def \+2)/, skillName)) {
+    return true;
+  }
+  if (test(/HP \+(3|4)$/, skillName)) {
+    return false;
+  }
+  // TODO: for weapons check if a + version of the skill exists.
+  return !test(/(1|2)$/, skillName);
+}
+
+// Checks for skills that cost 0 SP.
+export function isFreeSkill(skillName: string): boolean {
+  return test(/(Iron|Steel|Fire Breath|Fire|Flux|Wind|Thunder)/, skillName);
 }
 
 

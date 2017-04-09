@@ -15,6 +15,7 @@ import SegmentedControl from './SegmentedControl';
 import Skill from './Skill';
 import { colors, fontFamilies, fontSizes } from '../theme';
 import { getInheritableSkills } from '../heroHelpers';
+import { isMaxTier } from '../skillHelpers';
 import type { Dispatch } from '../reducer';
 import type { HeroInstance } from '../store';
 
@@ -86,13 +87,7 @@ const SkillSelector = ({
       // Maybe the tradeoff in power for simplicity isn't worthwhile.
       filter(
         compose(
-          not,
-          anyPass([
-            test(/(1|2)$/),
-            test(/HP \+(3|4)$/),
-            test(/Iron/),
-            test(/Steel/),
-          ]),
+          isMaxTier,
           propOr('', 'name'),
         ),
         [null].concat(getInheritableSkills(heroInstance.name, skillType)),
