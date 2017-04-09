@@ -1,13 +1,10 @@
 // @flow
 import React from 'react';
 import {
-  anyPass,
   compose,
   filter,
   map,
-  not,
   propOr,
-  test,
 } from 'ramda';
 import type { SkillType } from 'fire-emblem-heroes-stats';
 

@@ -30,11 +30,12 @@ export const getSkillInfo = (skillName: string): Skill => skillsByName[skillName
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 
 // Returns a list of numbers from the effect of the skill, or [0].
-export function getSkillNumbers(skillName: string) {
+export function getSkillNumbers(skillName: string): Array<number> {
   const skill = getSkillInfo(skillName);
   if (skill == null) {
     return [0];
   }
+  // $FlowIssue $Iterable. This type is incompatible with ... Array<number>
   return map(parseInt, match(/\d+/g, skill.effect));
 }
 

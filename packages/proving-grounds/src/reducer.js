@@ -36,7 +36,7 @@ export type Action = {
   rarity: Rarity;
 } | {
   type: 'UPDATE_SKILL';
-  skill: Skill;
+  skill: ?Skill;
   skillType: SkillType;
 };
 
