@@ -31,7 +31,6 @@ import eventHeroes from './temporal/2017.04.04-navarre';
 import type { HeroInstance, InstanceSkills, Rarity, Stat } from './store';
 
 
-export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null;
 export type HeroesByName = { [key: string]: Hero };
 
 // $FlowIssue indexBy confuses flow
@@ -57,6 +56,15 @@ export const lookupStats = (name: string): Hero => {
     moveType: 'Infantry',
     total: 0,
   };
+};
+
+// Can be called with substrings of the skill name
+export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedName: string) => {
+  const skillName = getSkillName(instance, skillType);
+  if (skillName != null) {
+    return test(new RegExp(expectedName), skillName);
+  }
+  return false;
 };
 
 // Returns the name of the skill object for the skill type
@@ -278,33 +286,6 @@ export const getWeaponColor = (instance: HeroInstance) => {
   }
 };
 
-// Can be called with substrings of the skill name
-export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedName: string) => {
-  const skillName = getSkillName(instance, skillType);
-  if (skillName != null) {
-    return test(new RegExp(expectedName), skillName);
-  }
-  return false;
-};
-
 export const hasStatsForRarity = (hero: Hero, rarity: Rarity/* , level?: 1 | 40 */): boolean => {
   return Boolean(hero.stats['1'][`${rarity}`] && hero.stats['40'][`${rarity}`]);
 };
-
-// Returns the condition for the special to trigger. (Other is for Galefore)
-export function getSpecialType(instance: HeroInstance): SpecialType {
-  if (instance.skills['SPECIAL'] == null) return null;
-  if (test(/When healing/, getSkillEffect(instance, 'SPECIAL'))) return 'HEAL';
-  if (test(/Galeforce/, getSkillName(instance, 'SPECIAL'))) return 'OTHER';
-  if (test(/Reduces damage/, getSkillEffect(instance, 'SPECIAL'))) return 'ATTACKED';
-  if (test(/Miracle/, getSkillName(instance, 'SPECIAL'))) return 'ATTACKED';
-  if (test(/(Blazing|Growing|Rising)/, getSkillName(instance, 'SPECIAL'))) return 'INITIATE';
-  return 'ATTACK';
-}
-
-// Returns the cooldown of the special or -1. Accounts for killer weapons.
-export const getSpecialCooldown = (instance: HeroInstance) =>
-  instance.skills['SPECIAL'] == null ? -1
-    : (instance.skills['SPECIAL'].cooldown
-    + (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0)
-    + (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0));

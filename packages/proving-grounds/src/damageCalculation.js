@@ -10,8 +10,6 @@ import {
   getMitigationType,
   getRange,
   getSkillName,
-  getSpecialCooldown,
-  getSpecialType,
   getStat,
   getWeaponColor,
   hasBraveWeapon,
@@ -20,12 +18,15 @@ import {
 } from './heroHelpers';
 import {
   doesDefenseSpecialApply,
+  getSkillNumbers,
   getSpecialAOEDamageAmount,
   getSpecialBonusDamageAmount,
+  getSpecialCooldown,
   getSpecialDefensiveMultiplier,
   getSpecialLifestealPercent,
   getSpecialMitigationMultiplier,
   getSpecialOffensiveMultiplier,
+  getSpecialType,
 } from './skillHelpers';
 import type { HeroInstance } from './store';
 import type { SpecialType } from './heroHelpers';
@@ -196,7 +197,7 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
        || weaponName === 'Lightning Breath+');
 };
 
-const hpRemaining = (dmg, hp) => max(hp - dmg, 0);
+const hpRemaining = (dmg, hp, canBeLethal = true) => max(hp - dmg, canBeLethal ? 0 : 1);
 
 const hitDmg = (
   attacker: HeroInstance,
@@ -250,8 +251,9 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
   }
   // TODO: decide if Galeforce will trigger.
 
-  const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
   const heroes = [attacker, defender];
+  const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
+  const maxHps = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
   const specialNames: Array<string> =
     [getSkillName(attacker, 'SPECIAL'), getSkillName(defender, 'SPECIAL')];
   // $FlowIssue $Iterable. This type is incompatible with array type
@@ -259,11 +261,11 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
   // $FlowIssue $Iterable. This type is incompatible with array type
   let specialCds: Array<number> = map(getSpecialCooldown, heroes);
   let numAttacks = [0, 0];
-  let healths = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
+  let healths = [maxHps[0], maxHps[1]];
   // AOE Specials
   const aoeDamage = specialCds[0] === 0
     ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;
-  healths[1] -= Math.min(aoeDamage, healths[1] - 1);
+  healths[1] = hpRemaining(aoeDamage, healths[1], false);
   // Main combat loop.
   for (let heroIndex: number of attackOrder) {
     // heroIndex hits otherHeroIndex.
@@ -271,8 +273,6 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
     if (healths[heroIndex] > 0) {
       const otherHeroIndex: number = 1 - heroIndex;
       const stillFighting = healths[0] > 0 && healths[1] > 0;
-
-      let lifestealAmount = 0;  // TODO: Spring weapons
       let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb') ? 0.5 : 0.0;
             
       // Attacker Special. Use '' for no special.
@@ -307,14 +307,42 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
         specialCds[otherHeroIndex]--;
       }
       // Apply damage
-      healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex]);
+      healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex], true);
       if (stillFighting) {
         healths[heroIndex] = Math.min(
-          healths[heroIndex] + Math.floor(damages[heroIndex] * lifestealPercent) + lifestealAmount,
-          getStat(heroes[heroIndex], 'hp'),
+          healths[heroIndex] + Math.floor(dmg * lifestealPercent),
+          maxHps[heroIndex],
         );
-        // TODO: Fury Pain and Poison Strike
       }
+    }
+  }
+  
+  // Post combat damage and healing. These effects are simultaneous and nonlethal.
+  let postCombatDmg = [0, 0];
+  if (hasSkill(heroes[0], 'WEAPON', '(Egg|Carrot)')) {
+    postCombatDmg[0] = -4;
+  }
+  // Poison Strike (only trigger while attacking and only if the attacker survived)
+  if (healths[0] > 0 && hasSkill(heroes[0], 'PASSIVE_B', 'Poison Strike')) {
+    postCombatDmg[1] += getSkillNumbers(getSkillName(heroes[0], 'PASSIVE_B'))[0];
+  }
+  for (let heroIndex of [0, 1]) {
+    // Fury
+    if (hasSkill(heroes[heroIndex], 'PASSIVE_A', 'Fury')) {
+      postCombatDmg[heroIndex] += getSkillNumbers(getSkillName(heroes[heroIndex], 'PASSIVE_A'))[0];
+    }
+    // Pain (only triggers if the staff user survived and was able to retaliate)
+    const otherHeroI = 1 - heroIndex;
+    if (healths[otherHeroI] > 0
+        && numAttacks[otherHeroI] > 0 && hasSkill(heroes[otherHeroI], 'WEAPON', 'Pain')) {
+      postCombatDmg[heroIndex] += getSkillNumbers(getSkillName(heroes[otherHeroI], 'WEAPON'))[0];
+    }
+    // Only apply postcombat damage to living units
+    if (healths[heroIndex] > 0) {
+      healths[heroIndex] = Math.min(
+        hpRemaining(postCombatDmg[heroIndex], healths[heroIndex], false),
+        maxHps[heroIndex],
+      );
     }
   }
 

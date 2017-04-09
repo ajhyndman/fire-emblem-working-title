@@ -15,10 +15,11 @@ import {
 import stats from 'fire-emblem-heroes-stats';
 import type { Skill } from 'fire-emblem-heroes-stats';
 
-import { getStat, getMitigationType } from './heroHelpers';
+import { getStat, getMitigationType, hasSkill, getSkillName, getSkillEffect } from './heroHelpers';
 import type { HeroInstance } from './store';
 
 
+export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null;
 export type SkillsByName = { [key: string]: Skill };
 
 // $FlowIssue indexBy confuses flow
@@ -27,6 +28,14 @@ const skillsByName: SkillsByName = indexBy(prop('name'), stats.skills);
 export const getSkillInfo = (skillName: string): Skill => skillsByName[skillName];
 
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
+
+export function getSkillNumbers(skillName: string) {
+  const skill = getSkillInfo(skillName);
+  if (skill == null) {
+    return [0];
+  }
+  return map(parseInt, match(/\d+/g, skill.effect));
+}
 
 // Returns the value for a stat provided by a passive skill
 export function getStatValue(skillName: string, statKey: string, isAttacker: boolean) {
@@ -58,13 +67,13 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
   } else if (skill.type === 'PASSIVE_A') {
     const statRegex = new RegExp(statKey === 'hp' ? 'max HP' : capitalize(statKey));
     if (test(statRegex, skill.effect)) {
-      const skillNumbers = map(parseInt, match(/\d+/g, skill.effect));
-      // Atk/Def/Spd/Res/HP+ and Fury
+      const skillNumbers = getSkillNumbers(skillName);
+      // Atk/Def/Spd/Res/HP+, 'Attack Def+', and Fury
       if (test(/(Fury|\+)/, skillName)) {
         return skillNumbers[0];
       }
       // Death/Darting/Armored/Warding Blow
-      if (isAttacker && test(/Blow/, skillName)) {
+      if (isAttacker && test(/(Blow|Sparrow)/, skillName)) {
         return skillNumbers[0];
       }
       if (test(/Life and Death/, skillName)) {
@@ -84,6 +93,24 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
  * Special Related Helpers
  * https://feheroes.wiki/Specials
  */
+
+// Returns the condition for the special to trigger. (Other is for Galefore)
+export function getSpecialType(instance: HeroInstance): SpecialType {
+  if (instance.skills['SPECIAL'] == null) return null;
+  if (test(/When healing/, getSkillEffect(instance, 'SPECIAL'))) return 'HEAL';
+  if (test(/Galeforce/, getSkillName(instance, 'SPECIAL'))) return 'OTHER';
+  if (test(/Reduces damage/, getSkillEffect(instance, 'SPECIAL'))) return 'ATTACKED';
+  if (test(/Miracle/, getSkillName(instance, 'SPECIAL'))) return 'ATTACKED';
+  if (test(/(Blazing|Growing|Rising)/, getSkillName(instance, 'SPECIAL'))) return 'INITIATE';
+  return 'ATTACK';
+}
+
+// Returns the cooldown of the special or -1. Accounts for killer weapons.
+export const getSpecialCooldown = (instance: HeroInstance) =>
+  instance.skills['SPECIAL'] == null ? -1
+    : (instance.skills['SPECIAL'].cooldown
+    + (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0)
+    + (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0));
 
 // Only considers damage reduction specials
 export function doesDefenseSpecialApply(skillName: string, attackRange: 1 | 2) {
@@ -114,6 +141,9 @@ export function getSpecialBonusDamageAmount(
     isAttacker: boolean,
     attackerMissingHp: number,
 ): number {
+  const woDaoBonus = (skillName !== '' && skillName != null
+                      && getSpecialType(attacker) === 'ATTACK'
+                      && hasSkill(attacker, 'WEAPON', 'Wo Dao')) ? 10 : 0;
   let stat = 'def';
   if (test(/Dra(c|g)on/, skillName)) stat = 'atk';
   if (test(/(Bonfire|Glowing E|Ignis)/, skillName)) stat = 'def';
@@ -123,9 +153,9 @@ export function getSpecialBonusDamageAmount(
   if (test(/(Bonfire|Glowing E|Chilling W|Iceberg|Dragon F|Vengeance)/, skillName)) ratio = 0.5;
   if (test(/(Draconic A|Dragon G|Reprisal|Retribution)/, skillName)) ratio = 0.3;
   if (test(/(Reprisal|Retribution|Vengeance)/, skillName)) {
-    return Math.floor(attackerMissingHp * ratio);
+    return woDaoBonus + Math.floor(attackerMissingHp * ratio);
   }
-  return Math.floor(getStat(attacker, stat, 40, isAttacker) * ratio);
+  return woDaoBonus + Math.floor(getStat(attacker, stat, 40, isAttacker) * ratio);
 }
 // Returns the percent of damage increased by a special
 export function getSpecialOffensiveMultiplier(skillName: string): number {

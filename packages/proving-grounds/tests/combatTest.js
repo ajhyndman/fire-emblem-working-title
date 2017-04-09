@@ -40,6 +40,7 @@ function simulateCombat(
 ) {
   const result = calculateResult(hero1, hero2);
   if (result.attackerHpRemaining !== expectedHp1 || result.defenderHpRemaining !== expectedHp2) {
+    console.log(hero1.name, 'vs', hero2.name);
     console.log('Combat Result:\n', result);
   }
   t.equal(result.attackerHpRemaining, expectedHp1);
@@ -47,12 +48,12 @@ function simulateCombat(
   return result;
 }
 
-test('normalCombat', (t) => {
+test('Normal Combat', (t) => {
   t.plan(2);
   simulateCombat(t, makeHero('Lilina'), makeHero('Takumi'), 0, 40-35);
 });
 
-test('quickRiposteAndGemWeapon', (t) => {
+test('Quick Riposte and Gem Weapon', (t) => {
   t.plan(5);
   const result = simulateCombat(t, makeHero('Hana'), makeHero('Subaki'), 0, 40-(2*0));
   t.equal(result.attackerNumAttacks, 2);
@@ -60,46 +61,46 @@ test('quickRiposteAndGemWeapon', (t) => {
   t.equal(result.defenderDamage, 33);
 });
 
-test('ravenWeapon', (t) => {
+test('Raven Weapon', (t) => {
   t.plan(2);
   simulateCombat(t, makeHero('Robin (M)'), makeHero('Takumi'), 40-8, 40-30);
 });
 
-test('triangleAdept', (t) => {
+test('Triangle Adept', (t) => {
   t.plan(2);
   simulateCombat(t, makeHero('Sanaki'), makeHero('Hector'), 33, 0);
 });
 
-test('armads', (t) => {
+test('Armads', (t) => {
   t.plan(2);
   simulateCombat(t, makeHero('Lilina'), makeHero('Hector'), 0, 52-44);
 });
 
-test('effectiveWeapons', (t) => {
+test('Effective Weapons', (t) => {
   t.plan(4);
   simulateCombat(t, makeHero('Kagero'), makeHero('Lyn'), 31, 37-34);
   simulateCombat(t, makeHero('Niles'), makeHero('Catria'), 37, 39-22);
 });
 
-test('braveWeaponAndSwordBreaker', (t) => {
+test('Brave Weapon and Sword Breaker', (t) => {
   t.plan(4);
   const result = simulateCombat(t, makeHero('Abel'), makeHero('Hana'), 44, 0);
   t.equal(result.attackerNumAttacks, 4);
   t.equal(result.defenderNumAttacks, 1);
 });
 
-test('waryFighter', (t) => {
+test('Wary Fighter', (t) => {
   t.plan(2);
   simulateCombat(t, makeHero('Effie'), makeHero('Catria'), 50-9, 39-32);
 });
 
-test('defReductionSpecial', (t) => {
+test('Defense Reduction Special', (t) => {
   t.plan(2);
   // 43 attack, 31 def => 12 dmg and 21 dmg.
   simulateCombat(t, makeHero('Palla'), makeHero('Chrom'), 42-25, 47-12-21);
 });
 
-test('statBasedSpecialAndKillerWeapon', (t) => {
+test('Stat Based Special and Killer Weapon', (t) => {
   t.plan(4);
   // Killer weapon and atk, attacked, atk pattern => 3CD Special will trigger.
   // 41 attack, 32 def, weapon disadvantage => 1x2
@@ -109,14 +110,33 @@ test('statBasedSpecialAndKillerWeapon', (t) => {
   simulateCombat(t, makeHero('Shanna', 5, withSpecial('Bonfire')), makeHero('Cherche'), 39-38, 46-(1*2)-12);
 });
 
-test('braveWeaponAndDartingBlowAndDamageSpecial', (t) => {
+test('Brave Weapon, Darting Blow, Fury and Damage Special', (t) => {
   t.plan(4);
   // Camilla attacks 4 times while attacking and once when attacked
   // Draconic Aura will trigger and give +30% of atk = 11 bonus damage
-  simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4)-11);
-  simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2,  37-23);
+  simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4)-11-3);
+  simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2-3,  37-23);
+});
+
+test('Wo Dao and Damage-Taken Special', (t) => {
+  t.plan(2);
+  // Karel attacks for 12, Chrom for 28. Karel's special does 8 and Wo Dao does 10.
+  simulateCombat(t, makeHero('Karel'), makeHero('Chrom'), 47-28, 47-12-(12+8+10));
+});
+
+test('Pain and Poison Strike', (t) => {
+  t.plan(10);
+  // Pain/Poison do not trigger if Azama/Matthew die
+  simulateCombat(t, makeHero('Azama'), makeHero('Linde'), 0, 35);
+  simulateCombat(t, makeHero('Matthew'), makeHero('Linde'), 0, 35-18);
+  // Pain does not trigger if Azama cannot retaliate
+  simulateCombat(t, makeHero('Chrom'), makeHero('Azama'), 47, 43-21);
+  // Pain triggers both when Attacking and when Attacked. Poison only triggers when attacking.
+  simulateCombat(t, makeHero('Azama'), makeHero('Matthew'), 43-0,    41-3-10);
+  simulateCombat(t, makeHero('Matthew'), makeHero('Azama'), 41-3-10, 43-0-10);
 });
 
 // other special types
-// lifesteal
+// lifesteal (+ fury, no overheal, only if survives)
+// pain (when attacked from a distance and only if survives)
 // miracle
