@@ -67,11 +67,21 @@ export const extractInstance = ([
  */
 
 export function decodeHero(b64EncodedHero: string): ?HeroInstance {
-  const charlist = new Buffer(b64EncodedHero, 'base64').toString().split("");
-  return extractInstance(charlist.map(function(c) {return c.charCodeAt(0); }));
+  if (b64EncodedHero.length !== 12) {
+    return null;
+  }
+  try {
+    const charlist = new Buffer(b64EncodedHero, 'base64').toString().split("");
+    return extractInstance(charlist.map(function(c) {return c.charCodeAt(0); }));
+  } catch(e) {
+    return null;
+  }
 }
 
 export function encodeHero(instance: ?HeroInstance): string {
+  if (instance == null) {
+    return '';
+  }
   const u8 = new Uint8Array(flattenInstance(instance));
   // Converts numbers to characters and character list to a base64 string
   return new Buffer(String.fromCharCode.apply(null, u8), 'binary').toString('base64');

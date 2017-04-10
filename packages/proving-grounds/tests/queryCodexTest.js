@@ -85,3 +85,13 @@ test('encodeHero', (t) => {
 
   t.end();
 });
+
+test('encode null', (t) => {
+  t.plan(1);
+  t.equal(decodeHero(encodeHero(null)), null);
+});
+
+test('decode invalid', (t) => {
+  t.plan(1);
+  t.equal(decodeHero('abc123'), null);
+});
