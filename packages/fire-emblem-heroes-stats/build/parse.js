@@ -55,6 +55,8 @@ export const parseTable = (tableHtml) => {
     (isFirstRowHeader ? tail : identity),
     match(/<tr[^>]*?>.*?<\/tr.*?>/g),
     replace(/&#160;/g, ''),  // &nbsp, also known as \xa0
+    replace(/<img[^>]*?Green check[^>]*?>/g, 'Yes'),  // Replace Checkmark with Yes.
+    replace(/<img[^>]*?Dark Red x[^>]*?>/g, 'No'),  // Replace red X with No.
   )(tableHtml);
   // Some tables have a column of icons, ignore that.
   return map(dissoc(''), map(zipObj(tableHeader), tableRows));
@@ -144,12 +146,11 @@ export const parseHeroAggregateHtml = compose(
   // Lon'qu has an HTML entity in his name as of 2017-03-18
   replace(/\&\#39\;/g, "'"),
   // Replace move and weapon type icons with their name
-  replace(/\.png.*?><\/a>/g, ''),
+  replace(/\.png[^>]*?>/g, ''),
   replace(/<a[^>]*?><img[^>]*?Icon Class /g, ''),
   replace(/<a[^>]*?><img[^>]*?Icon Move /g, ''),
-  replace(/<th[^>]*?><\/th>/, '<th>Move Type</th>'),  // The first unnamed header entry
-  replace(/<th[^>]*?><\/th>/, '<th>Weapon Type</th>'),  // The second unnamed header entry
-  replace(/<th[^>]*?><\/th>/, '<th>Portrait</th>'),  // The first unnamed header entry
+  replace(/Movement Type/, 'Move Type'),
+  replace(/Character Name/, 'Name'),
   prop(0),  // match [0] is the entire matching string
   match(/<table.*?\/table>/),
 );

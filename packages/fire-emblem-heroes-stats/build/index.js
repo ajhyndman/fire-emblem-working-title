@@ -39,11 +39,10 @@ import {
 
 // Fetches heroes and their stats/skills
 async function fetchHeroStats() {
-  // TODO: switch to http://feheroes.wiki/Hero_List
-  const heroes = await fetchPage('http://feheroes.wiki/Stats_Table')
+  const heroes = await fetchPage('http://feheroes.wiki/Hero_List')
     .then(parseHeroAggregateHtml)
-    .then(map(pick(['name', 'moveType', 'weaponType', 'total'])))
-    .catch(err => console.error('fetchAggregateStats', err));
+    .then(map(dissoc('icon')))
+    .catch(err => console.error('parseHeroAggregateHtml', err));
 
   const heroNames = map(prop('name'), heroes);
   const heroStatsAndSkills = await fetchAndParsePages(

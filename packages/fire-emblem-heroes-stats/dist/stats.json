@@ -1,10 +1,205 @@
 {
   "heroes": [
     {
-      "name": "Abel",
+      "name": "???",
+      "title": "Masked Knight",
+      "origin": "Fire Emblem Heroes",
+      "weaponType": "Blue Tome",
       "moveType": "Cavalry",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "skills": [
+        {
+          "name": "Valaskjálf",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "1": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "2": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "3": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          }
+        },
+        "40": {
+          "1": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "2": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "3": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Abel",
+      "title": "The Panther",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Lance",
-      "total": 154,
+      "moveType": "Cavalry",
+      "rarities": "4- 5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -86,7 +281,7 @@
               39
             ],
             "atk": [
-              "-",
+              27,
               30,
               33
             ],
@@ -138,9 +333,12 @@
     },
     {
       "name": "Alfonse",
-      "moveType": "Infantry",
+      "title": "Prince of Askr",
+      "origin": "Fire Emblem Heroes",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "2- Story",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -231,19 +429,19 @@
         "40": {
           "2": {
             "hp": [
-              "-"
+              36
             ],
             "atk": [
-              "-"
+              29
             ],
             "spd": [
-              "-"
+              19
             ],
             "def": [
-              "-"
+              26
             ],
             "res": [
-              "-"
+              17
             ]
           },
           "3": {
@@ -302,9 +500,12 @@
     },
     {
       "name": "Anna",
-      "moveType": "Infantry",
+      "title": "Commander",
+      "origin": "Fire Emblem Heroes",
       "weaponType": "Green Axe",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": "2- Story",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -350,7 +551,7 @@
         },
         {
           "name": "Spur Res 1",
-          "rarity": 1
+          "rarity": "-"
         },
         {
           "name": "Spur Res 2",
@@ -466,9 +667,12 @@
     },
     {
       "name": "Arthur",
-      "moveType": "Infantry",
+      "title": "Hapless Hero",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Green Axe",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -547,41 +751,41 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              36,
+              39,
+              42
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              25,
+              28,
+              31
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              22,
+              25,
+              28
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              23,
+              26,
+              29
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              18,
+              21,
+              24
             ]
           },
           "4": {
             "hp": [
               37,
               40,
-              "-"
+              43
             ],
             "atk": [
-              "-",
+              27,
               30,
-              "-"
+              33
             ],
             "spd": [
               23,
@@ -611,7 +815,7 @@
               35
             ],
             "spd": [
-              26,
+              25,
               29,
               32
             ],
@@ -631,9 +835,12 @@
     },
     {
       "name": "Azama",
-      "moveType": "Infantry",
+      "title": "Carefree Monk",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Staff",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -657,7 +864,7 @@
         },
         {
           "name": "Martyr",
-          "default": 5,
+          "default": "-",
           "rarity": 4
         },
         {
@@ -717,12 +924,12 @@
             "atk": [
               15,
               18,
-              "-"
+              21
             ],
             "spd": [
-              "-",
+              20,
               23,
-              "-"
+              26
             ],
             "def": [
               25,
@@ -730,7 +937,7 @@
               31
             ],
             "res": [
-              "-",
+              19,
               22,
               25
             ]
@@ -744,7 +951,7 @@
             "atk": [
               16,
               19,
-              "-"
+              22
             ],
             "spd": [
               22,
@@ -752,7 +959,7 @@
               28
             ],
             "def": [
-              "-",
+              27,
               30,
               33
             ],
@@ -764,27 +971,27 @@
           },
           "5": {
             "hp": [
-              "-",
+              40,
               43,
-              "-"
+              46
             ],
             "atk": [
               18,
               21,
-              "-"
+              24
             ],
             "spd": [
-              "-",
+              23,
               26,
               30
             ],
             "def": [
               29,
               32,
-              "-"
+              35
             ],
             "res": [
-              "-",
+              22,
               25,
               29
             ]
@@ -794,9 +1001,12 @@
     },
     {
       "name": "Azura",
-      "moveType": "Infantry",
+      "title": "Lady of the Lake",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
-      "total": 149,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -891,9 +1101,12 @@
     },
     {
       "name": "Barst",
-      "moveType": "Infantry",
+      "title": "The Hatchet",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Green Axe",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -1028,14 +1241,14 @@
               36
             ],
             "spd": [
-              "-",
+              29,
               32,
               35
             ],
             "def": [
-              "-",
+              27,
               30,
-              "-"
+              33
             ],
             "res": [
               13,
@@ -1048,9 +1261,12 @@
     },
     {
       "name": "Bartre",
-      "moveType": "Infantry",
+      "title": "Fearless Warrior",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Green Axe",
-      "total": 156,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -1131,7 +1347,7 @@
             "hp": [
               42,
               45,
-              "-"
+              48
             ],
             "atk": [
               29,
@@ -1139,19 +1355,19 @@
               35
             ],
             "spd": [
-              "-",
+              19,
               22,
-              "-"
+              25
             ],
             "def": [
               26,
-              "-",
-              "-"
+              29,
+              32
             ],
             "res": [
-              "-",
+              8,
               11,
-              "-"
+              14
             ]
           },
           "4": {
@@ -1166,7 +1382,7 @@
               37
             ],
             "spd": [
-              "-",
+              20,
               23,
               26
             ],
@@ -1185,7 +1401,7 @@
             "hp": [
               46,
               49,
-              "-"
+              52
             ],
             "atk": [
               33,
@@ -1198,14 +1414,14 @@
               29
             ],
             "def": [
-              "-",
+              30,
               33,
               36
             ],
             "res": [
               10,
               13,
-              "-"
+              17
             ]
           }
         }
@@ -1213,9 +1429,12 @@
     },
     {
       "name": "Beruka",
-      "moveType": "Flying",
+      "title": "Quiet Assassin",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Green Axe",
-      "total": 157,
+      "moveType": "Flying",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -1234,7 +1453,7 @@
         },
         {
           "name": "Killer Axe+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -1291,28 +1510,28 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              39,
               42,
-              "-"
+              45
             ],
             "atk": [
-              "-",
+              22,
               25,
-              "-"
+              28
             ],
             "spd": [
-              "-",
+              17,
               20,
-              "-"
+              23
             ],
             "def": [
               30,
-              "-",
-              "-"
+              33,
+              36
             ],
             "res": [
-              "-",
-              "-",
+              16,
+              19,
               22
             ]
           },
@@ -1333,7 +1552,7 @@
               24
             ],
             "def": [
-              "-",
+              32,
               35,
               38
             ],
@@ -1347,22 +1566,22 @@
             "hp": [
               43,
               46,
-              "-"
+              49
             ],
             "atk": [
-              "-",
+              25,
               29,
               32
             ],
             "spd": [
-              "-",
+              20,
               23,
               26
             ],
             "def": [
-              "-",
+              34,
               37,
-              "-"
+              40
             ],
             "res": [
               19,
@@ -1375,9 +1594,12 @@
     },
     {
       "name": "Caeda",
-      "moveType": "Flying",
+      "title": "Talys's Heart",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
-      "total": 156,
+      "moveType": "Flying",
+      "rarities": "4- 5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -1426,7 +1648,7 @@
         },
         {
           "name": "Fortify Fliers",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "stats": {
@@ -1454,7 +1676,7 @@
               37
             ],
             "atk": [
-              "-",
+              20,
               23,
               26
             ],
@@ -1466,7 +1688,7 @@
             "def": [
               19,
               22,
-              "-"
+              25
             ],
             "res": [
               29,
@@ -1506,9 +1728,12 @@
     },
     {
       "name": "Cain",
-      "moveType": "Cavalry",
+      "title": "The Bull",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
-      "total": 154,
+      "moveType": "Cavalry",
+      "rarities": "4- 5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -1587,27 +1812,27 @@
             "hp": [
               36,
               39,
-              "-"
+              42
             ],
             "atk": [
-              "-",
+              27,
               30,
               33
             ],
             "spd": [
-              "-",
+              26,
               29,
               32
             ],
             "def": [
               23,
               26,
-              "-"
+              29
             ],
             "res": [
-              "-",
+              16,
               19,
-              "-"
+              22
             ]
           },
           "5": {
@@ -1642,9 +1867,12 @@
     },
     {
       "name": "Camilla",
-      "moveType": "Flying",
+      "title": "Bewitching Beauty",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Green Axe",
-      "total": 158,
+      "moveType": "Flying",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -1778,9 +2006,12 @@
     },
     {
       "name": "Camilla (Spring Festival)",
-      "moveType": "Flying",
+      "title": "Spring Princess",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Green Tome",
-      "total": 148,
+      "moveType": "Flying",
+      "rarities": 5,
+      "releaseDate": "Mar 30, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -1804,7 +2035,7 @@
         },
         {
           "name": "Rally Attack",
-          "default": "-",
+          "default": 5,
           "rarity": "-"
         },
         {
@@ -1817,11 +2048,11 @@
         },
         {
           "name": "Defiant Spd 3",
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Live for Bounty",
-          "rarity": "-"
+          "rarity": 5
         }
       ],
       "stats": {
@@ -1867,10 +2098,205 @@
       "shortName": "Camilla (S)"
     },
     {
-      "name": "Catria",
-      "moveType": "Flying",
+      "name": "Camus",
+      "title": "Sable Knight",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Lance",
-      "total": 158,
+      "moveType": "Cavalry",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "skills": [
+        {
+          "name": "Gradivus",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "1": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "2": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "3": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          }
+        },
+        "40": {
+          "1": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "2": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "3": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Catria",
+      "title": "Middle Whitewing",
+      "origin": "Fire Emblem: Mystery of the Emblem",
+      "weaponType": "Blue Lance",
+      "moveType": "Flying",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -2004,9 +2430,12 @@
     },
     {
       "name": "Cecilia",
-      "moveType": "Cavalry",
+      "title": "Etrurian General",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Green Tome",
-      "total": 144,
+      "moveType": "Cavalry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -2099,19 +2528,19 @@
         "40": {
           "1": {
             "hp": [
-              "-"
+              29
             ],
             "atk": [
-              "-"
+              24
             ],
             "spd": [
-              "-"
+              18
             ],
             "def": [
-              "-"
+              16
             ],
             "res": [
-              "-"
+              21
             ]
           },
           "2": {
@@ -2133,14 +2562,14 @@
           },
           "3": {
             "hp": [
-              "-",
+              30,
               33,
-              "-"
+              36
             ],
             "atk": [
-              "-",
+              25,
               28,
-              "-"
+              31
             ],
             "spd": [
               19,
@@ -2148,14 +2577,14 @@
               25
             ],
             "def": [
-              "-",
+              16,
               19,
-              "-"
+              22
             ],
             "res": [
               22,
               25,
-              "-"
+              28
             ]
           },
           "4": {
@@ -2217,9 +2646,12 @@
     },
     {
       "name": "Cherche",
-      "moveType": "Flying",
+      "title": "Wyvern Friend",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Green Axe",
-      "total": 157,
+      "moveType": "Flying",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -2238,7 +2670,7 @@
         },
         {
           "name": "Hammer+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -2300,20 +2732,20 @@
             "hp": [
               39,
               42,
-              "-"
+              45
             ],
             "atk": [
               31,
               34,
-              "-"
+              37
             ],
             "spd": [
-              "-",
+              19,
               22,
               25
             ],
             "def": [
-              "-",
+              25,
               28,
               31
             ],
@@ -2354,22 +2786,22 @@
             "hp": [
               43,
               46,
-              "-"
+              49
             ],
             "atk": [
-              "-",
+              35,
               38,
               41
             ],
             "spd": [
-              "-",
+              22,
               25,
-              "-"
+              29
             ],
             "def": [
-              "-",
+              29,
               32,
-              "-"
+              35
             ],
             "res": [
               12,
@@ -2382,9 +2814,12 @@
     },
     {
       "name": "Chrom",
-      "moveType": "Infantry",
+      "title": "Exalted Prince",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "4- 5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -2483,7 +2918,7 @@
             "def": [
               26,
               29,
-              "-"
+              32
             ],
             "res": [
               12,
@@ -2523,9 +2958,12 @@
     },
     {
       "name": "Chrom (Spring Festival)",
-      "moveType": "Infantry",
+      "title": "Spring Exalt",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Green Axe",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Mar 30, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -2549,7 +2987,7 @@
         },
         {
           "name": "Shove",
-          "default": "-",
+          "default": 5,
           "rarity": "-"
         },
         {
@@ -2562,7 +3000,7 @@
         },
         {
           "name": "Attack Def +2",
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Axe Experience 1",
@@ -2574,7 +3012,7 @@
         },
         {
           "name": "Axe Experience 3",
-          "rarity": "-"
+          "rarity": 5
         }
       ],
       "stats": {
@@ -2621,9 +3059,12 @@
     },
     {
       "name": "Clarine",
-      "moveType": "Cavalry",
+      "title": "Refined Noble",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Neutral Staff",
-      "total": 144,
+      "moveType": "Cavalry",
+      "rarities": "3- 4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -2633,11 +3074,11 @@
         {
           "name": "Fear",
           "default": "-",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Heal",
-          "default": 3,
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -2700,14 +3141,14 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              29,
               32,
-              "-"
+              35
             ],
             "atk": [
-              17,
+              19,
               22,
-              "-"
+              25
             ],
             "spd": [
               26,
@@ -2715,7 +3156,7 @@
               32
             ],
             "def": [
-              "-",
+              16,
               19,
               22
             ],
@@ -2754,14 +3195,14 @@
           },
           "5": {
             "hp": [
-              "-",
+              32,
               35,
               39
             ],
             "atk": [
               22,
               25,
-              "-"
+              29
             ],
             "spd": [
               30,
@@ -2784,9 +3225,12 @@
     },
     {
       "name": "Cordelia",
-      "moveType": "Flying",
+      "title": "Knight Paragon",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Blue Lance",
-      "total": 157,
+      "moveType": "Flying",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -2917,7 +3361,7 @@
             "res": [
               22,
               25,
-              28
+              29
             ]
           }
         }
@@ -2925,13 +3369,16 @@
     },
     {
       "name": "Corrin (F)",
-      "moveType": "Infantry",
+      "title": "Fateful Princess",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Beast",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
-          "default": 3,
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -2973,7 +3420,7 @@
         },
         {
           "name": "Hone Atk 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Hone Atk 2",
@@ -3016,24 +3463,24 @@
               40
             ],
             "atk": [
-              "-",
+              21,
               24,
               27
             ],
             "spd": [
               27,
               30,
-              "-"
+              33
             ],
             "def": [
-              "-",
+              27,
               30,
-              "-"
+              33
             ],
             "res": [
-              "-",
+              15,
               18,
-              "-"
+              21
             ]
           },
           "4": {
@@ -3096,9 +3543,12 @@
     },
     {
       "name": "Corrin (M)",
-      "moveType": "Infantry",
+      "title": "Fateful Prince",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -3177,7 +3627,7 @@
             "hp": [
               36,
               39,
-              "-"
+              42
             ],
             "atk": [
               27,
@@ -3233,9 +3683,12 @@
     },
     {
       "name": "Donnel",
-      "moveType": "Infantry",
+      "title": "Village Hero",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Blue Lance",
-      "total": 162,
+      "moveType": "Infantry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -3320,63 +3773,63 @@
         "40": {
           "1": {
             "hp": [
-              "-"
+              34
             ],
             "atk": [
-              "-"
+              26
             ],
             "spd": [
-              "-"
+              21
             ],
             "def": [
-              "-"
+              23
             ],
             "res": [
-              "-"
+              16
             ]
           },
           "2": {
             "hp": [
-              "-"
+              36
             ],
             "atk": [
-              "-"
+              29
             ],
             "spd": [
-              "-"
+              22
             ],
             "def": [
-              "-"
+              26
             ],
             "res": [
-              "-"
+              17
             ]
           },
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              36,
+              39,
+              42
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              28,
+              31,
+              34
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              22,
+              25,
+              28
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              25,
+              28,
+              31
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              17,
+              20,
+              23
             ]
           },
           "4": {
@@ -3413,14 +3866,14 @@
               46
             ],
             "atk": [
-              "-",
+              32,
               35,
               38
             ],
             "spd": [
               26,
               29,
-              "-"
+              32
             ],
             "def": [
               29,
@@ -3430,7 +3883,7 @@
             "res": [
               20,
               23,
-              "-"
+              27
             ]
           }
         }
@@ -3438,9 +3891,12 @@
     },
     {
       "name": "Draug",
-      "moveType": "Armored",
+      "title": "Gentle Giant",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
-      "total": 169,
+      "moveType": "Armored",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -3540,39 +3996,39 @@
           },
           "3": {
             "hp": [
-              "-",
+              43,
               46,
-              "-"
+              49
             ],
             "atk": [
-              "-",
+              23,
               26,
-              "-"
+              29
             ],
             "spd": [
-              "-",
-              "-",
+              25,
+              28,
               31
             ],
             "def": [
-              "-",
+              32,
               35,
-              "-"
+              38
             ],
             "res": [
               12,
-              "-",
-              "-"
+              15,
+              18
             ]
           },
           "4": {
             "hp": [
-              "-",
+              44,
               47,
               50
             ],
             "atk": [
-              "-",
+              25,
               28,
               31
             ],
@@ -3624,9 +4080,12 @@
     },
     {
       "name": "Effie",
-      "moveType": "Armored",
+      "title": "Army of One",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
-      "total": 168,
+      "moveType": "Armored",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -3755,9 +4214,12 @@
     },
     {
       "name": "Eirika",
-      "moveType": "Infantry",
+      "title": "Restoration Lady",
+      "origin": "Fire Emblem: The Sacred Stones",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 15, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -3831,9 +4293,9 @@
               28
             ],
             "spd": [
-              "-",
+              30,
               33,
-              "-"
+              36
             ],
             "def": [
               21,
@@ -3878,9 +4340,12 @@
     },
     {
       "name": "Eldigan",
-      "moveType": "Cavalry",
+      "title": "Lionheart",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
       "weaponType": "Red Sword",
-      "total": 154,
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -3972,9 +4437,12 @@
     },
     {
       "name": "Elise",
-      "moveType": "Cavalry",
+      "title": "Budding Flower",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Staff",
-      "total": 145,
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -4067,9 +4535,12 @@
     },
     {
       "name": "Eliwood",
-      "moveType": "Cavalry",
+      "title": "Knight of Lycia",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Red Sword",
-      "total": 155,
+      "moveType": "Cavalry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -4088,7 +4559,7 @@
         },
         {
           "name": "Durandal",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -4153,36 +4624,36 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              32,
               35,
-              "-"
+              38
             ],
             "atk": [
-              "-",
+              24,
               27,
-              "-"
+              30
             ],
             "spd": [
-              "-",
+              23,
               26,
-              "-"
+              29
             ],
             "def": [
-              "-",
-              "-",
+              17,
+              20,
               23
             ],
             "res": [
               25,
-              "-",
-              "-"
+              28,
+              31
             ]
           },
           "4": {
             "hp": [
               33,
               36,
-              "-"
+              39
             ],
             "atk": [
               25,
@@ -4237,9 +4708,12 @@
     },
     {
       "name": "Ephraim",
-      "moveType": "Infantry",
+      "title": "Restoration Lord",
+      "origin": "Fire Emblem: The Sacred Stones",
       "weaponType": "Blue Lance",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 15, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -4339,9 +4813,12 @@
     },
     {
       "name": "Est",
-      "moveType": "Flying",
+      "title": "Junior Whitewing",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Lance",
-      "total": 157,
+      "moveType": "Flying",
+      "rarities": "3- 4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -4420,36 +4897,36 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              30,
+              33,
+              36
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              28,
+              31,
+              34
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              23,
+              26,
+              29
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              18,
+              21,
+              24
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              25,
+              28,
+              31
             ]
           },
           "4": {
             "hp": [
               31,
               34,
-              "-"
+              37
             ],
             "atk": [
               30,
@@ -4464,10 +4941,10 @@
             "def": [
               19,
               22,
-              "-"
+              25
             ],
             "res": [
-              "-",
+              26,
               29,
               32
             ]
@@ -4476,7 +4953,7 @@
             "hp": [
               33,
               36,
-              "-"
+              40
             ],
             "atk": [
               32,
@@ -4484,17 +4961,17 @@
               38
             ],
             "spd": [
-              "-",
+              26,
               30,
               33
             ],
             "def": [
               21,
               24,
-              "-"
+              28
             ],
             "res": [
-              "-",
+              29,
               32,
               35
             ]
@@ -4504,9 +4981,12 @@
     },
     {
       "name": "Fae",
-      "moveType": "Infantry",
+      "title": "Divine Dragon",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Green Beast",
-      "total": 162,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -4635,9 +5115,12 @@
     },
     {
       "name": "Felicia",
-      "moveType": "Infantry",
+      "title": "Maid Mayhem",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Shuriken",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -4656,7 +5139,7 @@
         },
         {
           "name": "Silver Dagger+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -4752,31 +5235,31 @@
           },
           "2": {
             "hp": [
-              "-"
+              28
             ],
             "atk": [
-              "-"
+              18
             ],
             "spd": [
-              "-"
+              31
             ],
             "def": [
-              "-"
+              13
             ],
             "res": [
-              "-"
+              29
             ]
           },
           "3": {
             "hp": [
-              "-",
+              28,
               31,
               34
             ],
             "atk": [
               17,
               20,
-              "-"
+              23
             ],
             "spd": [
               30,
@@ -4789,9 +5272,9 @@
               18
             ],
             "res": [
-              "-",
+              28,
               31,
-              "-"
+              34
             ]
           },
           "4": {
@@ -4825,22 +5308,22 @@
             "hp": [
               31,
               34,
-              "-"
+              38
             ],
             "atk": [
-              "-",
+              20,
               23,
-              "-"
+              26
             ],
             "spd": [
-              "-",
+              34,
               37,
               40
             ],
             "def": [
               15,
               18,
-              "-"
+              21
             ],
             "res": [
               32,
@@ -4853,9 +5336,12 @@
     },
     {
       "name": "Fir",
-      "moveType": "Infantry",
+      "title": "Sword Student",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -4939,36 +5425,36 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              34,
               37,
-              "-"
+              40
             ],
             "atk": [
-              "-",
+              19,
               22,
-              "-"
+              25
             ],
             "spd": [
-              "-",
-              "-",
-              36
+              29,
+              32,
+              35
             ],
             "def": [
               18,
-              "-",
-              "-"
+              21,
+              24
             ],
             "res": [
-              "-",
+              24,
               27,
-              "-"
+              30
             ]
           },
           "4": {
             "hp": [
               35,
               38,
-              "-"
+              41
             ],
             "atk": [
               20,
@@ -4976,14 +5462,14 @@
               26
             ],
             "spd": [
-              "-",
+              31,
               34,
               37
             ],
             "def": [
               19,
               22,
-              "-"
+              25
             ],
             "res": [
               26,
@@ -5008,14 +5494,14 @@
               39
             ],
             "def": [
-              "-",
+              21,
               24,
-              "-"
+              28
             ],
             "res": [
               28,
               31,
-              "-"
+              34
             ]
           }
         }
@@ -5023,9 +5509,12 @@
     },
     {
       "name": "Florina",
-      "moveType": "Flying",
+      "title": "Lovely Flier",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Blue Lance",
-      "total": 157,
+      "moveType": "Flying",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -5104,46 +5593,46 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
+              35,
+              38,
               41
             ],
             "atk": [
-              "-",
+              22,
               25,
-              "-"
+              28
             ],
             "spd": [
-              "-",
+              21,
               24,
-              "-"
+              27
             ],
             "def": [
-              "-",
+              19,
               22,
-              "-"
+              25
             ],
             "res": [
               27,
-              "-",
-              "-"
+              30,
+              33
             ]
           },
           "4": {
             "hp": [
               36,
               39,
-              "-"
+              42
             ],
             "atk": [
-              "-",
+              23,
               26,
               29
             ],
             "spd": [
               23,
               26,
-              "-"
+              29
             ],
             "def": [
               20,
@@ -5151,36 +5640,36 @@
               26
             ],
             "res": [
-              "-",
+              29,
               32,
               35
             ]
           },
           "5": {
             "hp": [
-              "-",
+              39,
               42,
-              "-"
+              45
             ],
             "atk": [
-              "-",
+              25,
               29,
               32
             ],
             "spd": [
-              "-",
+              24,
               27,
               31
             ],
             "def": [
               22,
               25,
-              "-"
+              29
             ],
             "res": [
               31,
               34,
-              "-"
+              37
             ]
           }
         }
@@ -5188,9 +5677,12 @@
     },
     {
       "name": "Frederick",
-      "moveType": "Cavalry",
+      "title": "Polite Knight",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Green Axe",
-      "total": 153,
+      "moveType": "Cavalry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -5224,7 +5716,7 @@
         },
         {
           "name": "Wings of Mercy 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Wings of Mercy 2",
@@ -5240,7 +5732,7 @@
         },
         {
           "name": "Fortify Def 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Fortify Def 3",
@@ -5274,29 +5766,29 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              36,
+              39,
+              42
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              28,
+              31,
+              34
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              19,
+              22,
+              25
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              29,
+              32,
+              35
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              9,
+              12,
+              15
             ]
           },
           "4": {
@@ -5330,7 +5822,7 @@
             "hp": [
               40,
               43,
-              "-"
+              46
             ],
             "atk": [
               32,
@@ -5343,14 +5835,14 @@
               29
             ],
             "def": [
-              "-",
+              33,
               36,
               39
             ],
             "res": [
               11,
               14,
-              "-"
+              18
             ]
           }
         }
@@ -5358,9 +5850,12 @@
     },
     {
       "name": "Gaius",
-      "moveType": "Infantry",
+      "title": "Candy Stealer",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Neutral Shuriken",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -5523,9 +6018,12 @@
     },
     {
       "name": "Gordin",
-      "moveType": "Infantry",
+      "title": "Altean Archer",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Neutral Bow",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "3- 4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -5544,12 +6042,12 @@
         },
         {
           "name": "Brave Bow+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
           "name": "Shove",
-          "default": "-",
+          "default": 4,
           "rarity": 3
         },
         {
@@ -5604,27 +6102,27 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              36,
               39,
-              "-"
+              42
             ],
             "atk": [
-              "-",
+              24,
               27,
               30
             ],
             "spd": [
               19,
-              "-",
-              "-"
+              22,
+              25
             ],
             "def": [
-              "-",
+              25,
               28,
-              "-"
+              31
             ],
             "res": [
-              "-",
+              11,
               14,
               17
             ]
@@ -5663,14 +6161,14 @@
               46
             ],
             "atk": [
-              "-",
+              28,
               31,
               34
             ],
             "spd": [
               22,
               25,
-              "-"
+              29
             ],
             "def": [
               29,
@@ -5688,9 +6186,12 @@
     },
     {
       "name": "Gunter",
-      "moveType": "Cavalry",
+      "title": "Inveterate Soldier",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Green Axe",
-      "total": 150,
+      "moveType": "Cavalry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -5783,63 +6284,63 @@
         "40": {
           "1": {
             "hp": [
-              "-"
+              35
             ],
             "atk": [
-              "-"
+              24
             ],
             "spd": [
-              "-"
+              18
             ],
             "def": [
-              "-"
+              25
             ],
             "res": [
-              "-"
+              12
             ]
           },
           "2": {
             "hp": [
-              "-"
+              36
             ],
             "atk": [
-              "-"
+              26
             ],
             "spd": [
-              "-"
+              19
             ],
             "def": [
-              "-"
+              27
             ],
             "res": [
-              "-"
+              13
             ]
           },
           "3": {
             "hp": [
-              "-",
+              36,
               39,
-              "-"
+              42
             ],
             "atk": [
-              "-",
+              25,
               28,
               31
             ],
             "spd": [
-              "-",
+              18,
               21,
               24
             ],
             "def": [
               26,
               29,
-              "-"
+              32
             ],
             "res": [
               12,
               15,
-              "-"
+              18
             ]
           },
           "4": {
@@ -5901,9 +6402,12 @@
     },
     {
       "name": "Gwendolyn",
-      "moveType": "Armored",
+      "title": "Adorable Knight",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Blue Lance",
-      "total": 169,
+      "moveType": "Armored",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -5941,7 +6445,7 @@
         },
         {
           "name": "Hone Atk 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Hone Atk 2",
@@ -5979,29 +6483,29 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              42,
+              45,
+              48
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              23,
+              26,
+              29
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              18,
+              21,
+              24
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              31,
+              34,
+              37
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              21,
+              24,
+              27
             ]
           },
           "4": {
@@ -6035,7 +6539,7 @@
             "hp": [
               46,
               49,
-              "-"
+              52
             ],
             "atk": [
               26,
@@ -6043,9 +6547,9 @@
               33
             ],
             "spd": [
-              "-",
+              21,
               24,
-              "-"
+              28
             ],
             "def": [
               35,
@@ -6063,9 +6567,12 @@
     },
     {
       "name": "Hana",
-      "moveType": "Infantry",
+      "title": "Focused Samurai",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -6175,26 +6682,26 @@
           },
           "2": {
             "hp": [
-              "-"
+              31
             ],
             "atk": [
-              "-"
+              29
             ],
             "spd": [
-              "-"
+              30
             ],
             "def": [
-              "-"
+              18
             ],
             "res": [
-              "-"
+              19
             ]
           },
           "3": {
             "hp": [
-              "-",
+              31,
               34,
-              "-"
+              37
             ],
             "atk": [
               28,
@@ -6202,19 +6709,19 @@
               34
             ],
             "spd": [
-              "-",
+              29,
               32,
-              "-"
+              35
             ],
             "def": [
-              "-",
+              17,
               20,
               23
             ],
             "res": [
               19,
               22,
-              "-"
+              25
             ]
           },
           "4": {
@@ -6224,7 +6731,7 @@
               38
             ],
             "atk": [
-              "-",
+              30,
               33,
               36
             ],
@@ -6248,7 +6755,7 @@
             "hp": [
               34,
               37,
-              "-"
+              41
             ],
             "atk": [
               32,
@@ -6276,9 +6783,12 @@
     },
     {
       "name": "Hawkeye",
-      "moveType": "Infantry",
+      "title": "Desert Guardian",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Green Axe",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -6365,19 +6875,19 @@
               34
             ],
             "spd": [
-              "-",
+              17,
               20,
               23
             ],
             "def": [
               23,
               26,
-              "-"
+              29
             ],
             "res": [
-              "-",
+              24,
               27,
-              "-"
+              30
             ]
           },
           "5": {
@@ -6412,23 +6922,26 @@
     },
     {
       "name": "Hector",
-      "moveType": "Armored",
+      "title": "General of Ostia",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Green Axe",
-      "total": 168,
+      "moveType": "Armored",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
-          "default": 5,
+          "default": "-",
           "rarity": "-"
         },
         {
           "name": "Steel Axe",
-          "default": 5,
+          "default": "-",
           "rarity": "-"
         },
         {
           "name": "Silver Axe",
-          "default": 5,
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -6506,9 +7019,12 @@
     },
     {
       "name": "Henry",
-      "moveType": "Infantry",
+      "title": "Twisted Mind",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Red Tome",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3- 4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -6532,7 +7048,7 @@
         },
         {
           "name": "Glowing Ember",
-          "default": "-",
+          "default": 4,
           "rarity": 3
         },
         {
@@ -6592,41 +7108,41 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              38,
+              41,
+              44
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              17,
+              20,
+              23
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              16,
+              19,
+              22
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              25,
+              28,
+              31
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              19,
+              22,
+              25
             ]
           },
           "4": {
             "hp": [
               39,
               42,
-              "-"
+              45
             ],
             "atk": [
               19,
               22,
-              "-"
+              25
             ],
             "spd": [
               17,
@@ -6634,12 +7150,12 @@
               23
             ],
             "def": [
-              "-",
+              27,
               30,
-              "-"
+              33
             ],
             "res": [
-              "-",
+              20,
               23,
               26
             ]
@@ -6648,22 +7164,22 @@
             "hp": [
               42,
               45,
-              "-"
+              48
             ],
             "atk": [
-              "-",
+              20,
               23,
               26
             ],
             "spd": [
-              "-",
+              19,
               22,
-              "-"
+              25
             ],
             "def": [
               29,
               32,
-              "-"
+              35
             ],
             "res": [
               22,
@@ -6676,14 +7192,17 @@
     },
     {
       "name": "Hinata",
-      "moveType": "Infantry",
+      "title": "Wild Samurai",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
-          "default": "-",
-          "rarity": 1
+          "default": 1,
+          "rarity": "-"
         },
         {
           "name": "Steel Sword",
@@ -6703,7 +7222,7 @@
         {
           "name": "Buckler",
           "default": 4,
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Pavise",
@@ -6762,29 +7281,29 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              40,
+              43,
+              46
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              25,
+              28,
+              31
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              18,
+              21,
+              24
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              29,
+              32,
+              35
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              12,
+              15,
+              18
             ]
           },
           "4": {
@@ -6816,29 +7335,29 @@
           },
           "5": {
             "hp": [
-              "-",
+              44,
               47,
-              "-"
+              50
             ],
             "atk": [
               29,
               32,
-              "-"
+              35
             ],
             "spd": [
               21,
               24,
-              "-"
+              28
             ],
             "def": [
-              "-",
+              33,
               36,
               39
             ],
             "res": [
-              "-",
+              15,
               18,
-              "-"
+              21
             ]
           }
         }
@@ -6846,9 +7365,12 @@
     },
     {
       "name": "Hinoka",
-      "moveType": "Flying",
+      "title": "Warrior Princess",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
-      "total": 157,
+      "moveType": "Flying",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -6948,9 +7470,12 @@
     },
     {
       "name": "Jaffar",
-      "moveType": "Infantry",
+      "title": "Angel of Death",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Shuriken",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -7050,9 +7575,12 @@
     },
     {
       "name": "Jagen",
-      "moveType": "Cavalry",
+      "title": "Veteran Knight",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Lance",
-      "total": 148,
+      "moveType": "Cavalry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -7102,7 +7630,7 @@
         },
         {
           "name": "Fortify Res 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Fortify Cavalry",
@@ -7137,28 +7665,28 @@
           "3": {
             "hp": [
               31,
-              "-",
-              "-"
+              34,
+              37
             ],
             "atk": [
-              "-",
-              23,
-              "-"
+              21,
+              24,
+              27
             ],
             "spd": [
-              "-",
-              20,
-              "-"
-            ],
-            "def": [
-              "-",
-              "-",
+              18,
+              21,
               24
             ],
+            "def": [
+              19,
+              22,
+              25
+            ],
             "res": [
-              "-",
-              30,
-              "-"
+              28,
+              31,
+              34
             ]
           },
           "4": {
@@ -7197,7 +7725,7 @@
             "atk": [
               24,
               27,
-              30
+              31
             ],
             "spd": [
               21,
@@ -7220,9 +7748,12 @@
     },
     {
       "name": "Jakob",
-      "moveType": "Infantry",
+      "title": "Devoted Servant",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Shuriken",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -7241,7 +7772,7 @@
         },
         {
           "name": "Silver Dagger+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -7296,42 +7827,42 @@
             "hp": [
               33,
               36,
-              "-"
+              39
             ],
             "atk": [
-              "-",
+              24,
               27,
               30
             ],
             "spd": [
               26,
               29,
-              "-"
+              32
             ],
             "def": [
-              "-",
+              20,
               23,
               26
             ],
             "res": [
-              "-",
+              19,
               22,
               25
             ]
           },
           "5": {
             "hp": [
-              36,
+              35,
               39,
               42
             ],
             "atk": [
-              26,
+              25,
               29,
               32
             ],
             "spd": [
-              28,
+              27,
               31,
               34
             ],
@@ -7351,9 +7882,12 @@
     },
     {
       "name": "Jeorge",
-      "moveType": "Infantry",
+      "title": "Perfect Shot",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Neutral Bow",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "4- 5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -7432,7 +7966,7 @@
             "hp": [
               32,
               35,
-              "-"
+              38
             ],
             "atk": [
               27,
@@ -7445,7 +7979,7 @@
               33
             ],
             "def": [
-              "-",
+              19,
               22,
               25
             ],
@@ -7487,9 +8021,12 @@
     },
     {
       "name": "Julia",
-      "moveType": "Infantry",
+      "title": "Naga's Blood",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
       "weaponType": "Green Tome",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 15, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -7589,18 +8126,21 @@
     },
     {
       "name": "Kagero",
-      "moveType": "Infantry",
+      "title": "Honorable Ninja",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Shuriken",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
-          "default": 4,
+          "default": "-",
           "rarity": "-"
         },
         {
           "name": "Steel Dagger",
-          "default": 4,
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -7625,7 +8165,7 @@
         },
         {
           "name": "Warding Blow 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Warding Blow 2",
@@ -7637,11 +8177,11 @@
         },
         {
           "name": "Daggerbreaker 1",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Daggerbreaker 2",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Daggerbreaker 3",
@@ -7725,9 +8265,12 @@
     },
     {
       "name": "Karel",
-      "moveType": "Infantry",
+      "title": "Sword Demon",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -7746,8 +8289,8 @@
         },
         {
           "name": "Wo Dao+",
-          "default": "-",
-          "rarity": 5
+          "default": 5,
+          "rarity": "-"
         },
         {
           "name": "Retribution",
@@ -7827,9 +8370,12 @@
     },
     {
       "name": "Klein",
-      "moveType": "Infantry",
+      "title": "Silver Nobleman",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Neutral Bow",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4 - 5",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -7908,17 +8454,17 @@
             "hp": [
               34,
               37,
-              "-"
+              40
             ],
             "atk": [
-              "-",
+              26,
               29,
               32
             ],
             "spd": [
               28,
               31,
-              "-"
+              34
             ],
             "def": [
               15,
@@ -7926,9 +8472,9 @@
               21
             ],
             "res": [
-              "-",
+              19,
               22,
-              "-"
+              25
             ]
           },
           "5": {
@@ -7963,9 +8509,12 @@
     },
     {
       "name": "Lachesis",
-      "moveType": "Infantry",
+      "title": "Lionheart's Sister",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
       "weaponType": "Neutral Staff",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -7975,7 +8524,7 @@
         {
           "name": "Absorb",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Heal",
@@ -7984,7 +8533,7 @@
         },
         {
           "name": "Mend",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -7994,13 +8543,13 @@
         },
         {
           "name": "Imbue",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Solid-Earth Balm",
           "default": 5,
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Spur Res 1",
@@ -8035,28 +8584,28 @@
         "40": {
           "4": {
             "hp": [
-              "-",
+              33,
               36,
-              "-"
+              39
             ],
             "atk": [
-              "-",
+              26,
               29,
-              "-"
+              32
             ],
             "spd": [
-              "-",
+              21,
               24,
-              "-"
+              27
             ],
             "def": [
               17,
-              "-",
-              "-"
+              20,
+              23
             ],
             "res": [
-              "-",
-              "-",
+              25,
+              28,
               31
             ]
           },
@@ -8072,7 +8621,7 @@
               35
             ],
             "spd": [
-              "-",
+              22,
               25,
               28
             ],
@@ -8092,9 +8641,12 @@
     },
     {
       "name": "Laslow",
-      "moveType": "Infantry",
+      "title": "Dancing Duelist",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -8119,12 +8671,12 @@
         {
           "name": "Daylight",
           "default": "-",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Noontime",
           "default": 4,
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Axebreaker 1",
@@ -8132,7 +8684,7 @@
         },
         {
           "name": "Axebreaker 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Axebreaker 3",
@@ -8140,7 +8692,7 @@
         },
         {
           "name": "Hone Spd 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Hone Spd 2",
@@ -8178,34 +8730,34 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              37,
+              40,
+              43
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              28,
+              31,
+              34
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              20,
+              23,
+              26
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              23,
+              26,
+              29
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              16,
+              19,
+              22
             ]
           },
           "4": {
             "hp": [
-              "-",
+              38,
               41,
               44
             ],
@@ -8220,41 +8772,41 @@
               28
             ],
             "def": [
-              "-",
+              24,
               27,
-              "-"
+              30
             ],
             "res": [
               17,
               20,
-              "-"
+              23
             ]
           },
           "5": {
             "hp": [
               41,
               44,
-              "-"
+              47
             ],
             "atk": [
-              "-",
+              32,
               35,
               38
             ],
             "spd": [
-              "-",
+              23,
               26,
-              "-"
+              30
             ],
             "def": [
-              "-",
+              27,
               30,
               33
             ],
             "res": [
               19,
               22,
-              "-"
+              25
             ]
           }
         }
@@ -8262,9 +8814,12 @@
     },
     {
       "name": "Leo",
-      "moveType": "Cavalry",
+      "title": "Sorcerous Prince",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Red Tome",
-      "total": 145,
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -8364,9 +8919,12 @@
     },
     {
       "name": "Lilina",
-      "moveType": "Infantry",
+      "title": "Delightful Noble",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Red Tome",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire",
@@ -8500,9 +9058,12 @@
     },
     {
       "name": "Linde",
-      "moveType": "Infantry",
+      "title": "Light Mage",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Tome",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -8597,19 +9158,22 @@
     },
     {
       "name": "Lissa",
-      "moveType": "Infantry",
+      "title": "Sprightly Cleric",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Neutral Staff",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
           "default": "-",
-          "rarity": "-"
+          "rarity": 1
         },
         {
           "name": "Gravity",
           "default": "-",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Heal",
@@ -8724,9 +9288,9 @@
           },
           "3": {
             "hp": [
-              "-",
+              32,
               35,
-              "-"
+              38
             ],
             "atk": [
               20,
@@ -8736,7 +9300,7 @@
             "spd": [
               19,
               22,
-              "-"
+              25
             ],
             "def": [
               21,
@@ -8780,12 +9344,12 @@
             "hp": [
               35,
               39,
-              "-"
+              42
             ],
             "atk": [
               23,
               26,
-              "-"
+              30
             ],
             "spd": [
               22,
@@ -8793,7 +9357,7 @@
               29
             ],
             "def": [
-              "-",
+              24,
               28,
               31
             ],
@@ -8808,13 +9372,16 @@
     },
     {
       "name": "Lon'qu",
-      "moveType": "Infantry",
+      "title": "Solitary Blade",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
-          "default": 3,
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -8856,7 +9423,7 @@
         },
         {
           "name": "Vantage 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Vantage 2",
@@ -8894,29 +9461,29 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              38,
               41,
-              "-"
+              44
             ],
             "atk": [
-              "-",
+              22,
               25,
-              "-"
+              28
             ],
             "spd": [
-              33,
+              32,
               35,
-              "-"
+              38
             ],
             "def": [
-              "-",
-              22,
-              "-"
+              16,
+              19,
+              22
             ],
             "res": [
-              "-",
               16,
-              19
+              19,
+              22
             ]
           },
           "4": {
@@ -8926,51 +9493,51 @@
               45
             ],
             "atk": [
-              "-",
+              24,
               27,
               30
             ],
             "spd": [
-              "-",
+              34,
               37,
               40
             ],
             "def": [
               17,
               20,
-              "-"
+              23
             ],
             "res": [
-              "-",
+              17,
               20,
-              "-"
+              23
             ]
           },
           "5": {
             "hp": [
               42,
               45,
-              "-"
+              48
             ],
             "atk": [
-              "-",
+              25,
               29,
               32
             ],
             "spd": [
-              "-",
+              36,
               39,
               42
             ],
             "def": [
               19,
               22,
-              "-"
+              25
             ],
             "res": [
               19,
               22,
-              "-"
+              25
             ]
           }
         }
@@ -8978,9 +9545,12 @@
     },
     {
       "name": "Lucina",
-      "moveType": "Infantry",
+      "title": "Future Witness",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -9085,9 +9655,12 @@
     },
     {
       "name": "Lucina (Spring Festival)",
-      "moveType": "Infantry",
+      "title": "Spring Exalt",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Blue Tome",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Mar 30, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -9106,7 +9679,7 @@
         },
         {
           "name": "Blue Egg+",
-          "default": "-",
+          "default": 5,
           "rarity": "-"
         },
         {
@@ -9124,7 +9697,7 @@
         },
         {
           "name": "Swift Sparrow 2",
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Seal Res 1",
@@ -9136,7 +9709,7 @@
         },
         {
           "name": "Seal Res 3",
-          "rarity": "-"
+          "rarity": 5
         }
       ],
       "stats": {
@@ -9183,9 +9756,12 @@
     },
     {
       "name": "Lucius",
-      "moveType": "Infantry",
+      "title": "The Light",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Staff",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "4 - 5",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -9239,7 +9815,7 @@
         "1": {
           "4": {
             "hp": 17,
-            "atk": 4,
+            "atk": 5,
             "spd": 8,
             "def": 2,
             "res": 9
@@ -9255,29 +9831,29 @@
         "40": {
           "4": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              32,
+              35,
+              38
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              26,
+              29,
+              32
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              25,
+              28,
+              31
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              9,
+              12,
+              15
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              30,
+              33,
+              36
             ]
           },
           "5": {
@@ -9287,7 +9863,7 @@
               41
             ],
             "atk": [
-              "-",
+              29,
               32,
               35
             ],
@@ -9312,9 +9888,12 @@
     },
     {
       "name": "Lyn",
-      "moveType": "Infantry",
+      "title": "Lady of the Plains",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -9419,19 +9998,22 @@
     },
     {
       "name": "Maria",
-      "moveType": "Infantry",
+      "title": "Minerva's Sister",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Neutral Staff",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Panic",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Heal",
@@ -9518,7 +10100,7 @@
           },
           "5": {
             "hp": [
-              "-",
+              33,
               36,
               40
             ],
@@ -9538,7 +10120,7 @@
               22
             ],
             "res": [
-              29,
+              28,
               32,
               35
             ]
@@ -9548,9 +10130,12 @@
     },
     {
       "name": "Marth",
-      "moveType": "Infantry",
+      "title": "Altean Prince",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -9574,7 +10159,7 @@
         },
         {
           "name": "Pivot",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -9627,7 +10212,7 @@
               41
             ],
             "atk": [
-              "-",
+              26,
               29,
               32
             ],
@@ -9642,9 +10227,9 @@
               29
             ],
             "res": [
-              "-",
+              18,
               21,
-              "-"
+              24
             ]
           },
           "5": {
@@ -9679,9 +10264,12 @@
     },
     {
       "name": "Matthew",
-      "moveType": "Infantry",
+      "title": "Faithful Spy",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Shuriken",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -9767,105 +10355,95 @@
         "40": {
           "2": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              34
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              20
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              28
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              23
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              13
             ]
           },
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              34,
+              37,
+              40
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              19,
+              22,
+              25
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              27,
+              30,
+              33
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              23,
+              26,
+              29
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              12,
+              15,
+              18
             ]
           },
           "4": {
             "hp": [
-              "-",
+              35,
               38,
               41
             ],
             "atk": [
-              "-",
+              21,
               24,
-              "-"
+              27
             ],
             "spd": [
               29,
               32,
-              "-"
+              35
             ],
             "def": [
-              "-",
+              24,
               27,
-              "-"
+              30
             ],
             "res": [
-              "-",
+              13,
               16,
-              "-"
+              19
             ]
           },
           "5": {
             "hp": [
-              "-",
+              38,
               41,
-              "-"
+              44
             ],
             "atk": [
-              "-",
+              22,
               25,
               29
             ],
             "spd": [
-              "-",
+              31,
               34,
               37
             ],
             "def": [
               27,
               30,
-              "-"
+              33
             ],
             "res": [
               14,
@@ -9878,9 +10456,12 @@
     },
     {
       "name": "Merric",
-      "moveType": "Infantry",
+      "title": "Wind Mage",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Green Tome",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -9979,7 +10560,7 @@
             "res": [
               14,
               17,
-              "-"
+              20
             ]
           },
           "5": {
@@ -10014,13 +10595,16 @@
     },
     {
       "name": "Michalis",
-      "moveType": "Flying",
+      "title": "Ambitious King",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Green Axe",
-      "total": 157,
+      "moveType": "Flying",
+      "rarities": "3-4Event: Grand Hero Battle",
+      "releaseDate": "Mar 20, 2017",
       "skills": [
         {
           "name": "Iron Axe",
-          "default": 3,
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -10054,7 +10638,7 @@
         },
         {
           "name": "Threaten Def 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Threaten Def 2",
@@ -10146,9 +10730,12 @@
     },
     {
       "name": "Minerva",
-      "moveType": "Flying",
+      "title": "Red Dragoon",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Green Axe",
-      "total": 158,
+      "moveType": "Flying",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -10162,13 +10749,13 @@
         },
         {
           "name": "Silver Axe",
-          "default": 4,
+          "default": "-",
           "rarity": "-"
         },
         {
           "name": "Hauteclere",
           "default": 5,
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Holy Vestments",
@@ -10248,9 +10835,12 @@
     },
     {
       "name": "Narcian",
-      "moveType": "Flying",
+      "title": "Wyvern General",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Green Axe",
-      "total": 158,
+      "moveType": "Flying",
+      "rarities": "2-3Event: Grand Hero Battle",
+      "releaseDate": "Feb 10, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -10341,19 +10931,19 @@
         "40": {
           "2": {
             "hp": [
-              "-"
+              35
             ],
             "atk": [
-              "-"
+              23
             ],
             "spd": [
-              "-"
+              22
             ],
             "def": [
-              "-"
+              26
             ],
             "res": [
-              "-"
+              20
             ]
           },
           "3": {
@@ -10411,14 +11001,160 @@
       }
     },
     {
-      "name": "Niles",
+      "name": "Navarre",
+      "title": "Scarlet Sword",
+      "origin": "Fire Emblem: Mystery of the Emblem",
+      "weaponType": "Red Sword",
       "moveType": "Infantry",
+      "rarities": "3-4Event: Grand Hero Battle",
+      "releaseDate": "Apr 04, 2017",
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Killing Edge",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Killing Edge+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Rising Wind",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Blazing Wind",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Desperation 1",
+          "rarity": 3
+        },
+        {
+          "name": "Desperation 2",
+          "rarity": 4
+        },
+        {
+          "name": "Desperation 3",
+          "rarity": 5
+        },
+        {
+          "name": "Threaten Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Threaten Spd 2",
+          "rarity": 3
+        },
+        {
+          "name": "Threaten Spd 3",
+          "rarity": 4
+        }
+      ],
+      "stats": {
+        "1": {
+          "3": {
+            "hp": 17,
+            "atk": 6,
+            "spd": 10,
+            "def": 5,
+            "res": 4
+          },
+          "4": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 11,
+            "def": 5,
+            "res": 4
+          },
+          "5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 11,
+            "def": 6,
+            "res": 5
+          }
+        },
+        "40": {
+          "3": {
+            "hp": [
+              38
+            ],
+            "atk": [
+              27
+            ],
+            "spd": [
+              33
+            ],
+            "def": [
+              20
+            ],
+            "res": [
+              21
+            ]
+          },
+          "4": {
+            "hp": [
+              39
+            ],
+            "atk": [
+              29
+            ],
+            "spd": [
+              35
+            ],
+            "def": [
+              21
+            ],
+            "res": [
+              22
+            ]
+          },
+          "5": {
+            "hp": [
+              42
+            ],
+            "atk": [
+              31
+            ],
+            "spd": [
+              37
+            ],
+            "def": [
+              23
+            ],
+            "res": [
+              24
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Niles",
+      "title": "Cruel to Be Kind",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Bow",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
-          "default": 3,
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -10448,7 +11184,7 @@
         },
         {
           "name": "Warding Blow 1",
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Warding Blow 2",
@@ -10498,34 +11234,34 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              31,
+              34,
+              37
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              19,
+              22,
+              25
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              27,
+              30,
+              33
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              11,
+              14,
+              17
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              27,
+              30,
+              33
             ]
           },
           "4": {
             "hp": [
-              "-",
+              32,
               35,
               38
             ],
@@ -10537,15 +11273,15 @@
             "spd": [
               29,
               32,
-              "-"
+              35
             ],
             "def": [
               12,
               15,
-              "-"
+              18
             ],
             "res": [
-              "-",
+              29,
               32,
               35
             ]
@@ -10554,7 +11290,7 @@
             "hp": [
               34,
               37,
-              40
+              41
             ],
             "atk": [
               22,
@@ -10582,9 +11318,12 @@
     },
     {
       "name": "Ninian",
-      "moveType": "Infantry",
+      "title": "Oracle of Destiny",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Blue Beast",
-      "total": 149,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -10679,9 +11418,12 @@
     },
     {
       "name": "Nino",
-      "moveType": "Infantry",
+      "title": "Pious Mage",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Green Tome",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -10765,19 +11507,19 @@
               33
             ],
             "atk": [
-              "-",
+              26,
               29,
-              "-"
+              32
             ],
             "spd": [
-              "-",
+              29,
               32,
               35
             ],
             "def": [
               13,
               16,
-              "-"
+              19
             ],
             "res": [
               20,
@@ -10844,9 +11586,12 @@
     },
     {
       "name": "Nowi",
-      "moveType": "Infantry",
+      "title": "Eternal Youth",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Blue Beast",
-      "total": 163,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -10975,9 +11720,12 @@
     },
     {
       "name": "Oboro",
-      "moveType": "Infantry",
+      "title": "Fierce Fighter",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -11001,8 +11749,8 @@
         },
         {
           "name": "Rally Defense",
-          "default": "-",
-          "rarity": "-"
+          "default": 4,
+          "rarity": 3
         },
         {
           "name": "Seal Def 1",
@@ -11010,7 +11758,7 @@
         },
         {
           "name": "Seal Def 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Seal Def 3",
@@ -11018,7 +11766,7 @@
         },
         {
           "name": "Threaten Res 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Threaten Res 2",
@@ -11058,26 +11806,26 @@
             "hp": [
               33,
               36,
-              "-"
+              39
             ],
             "atk": [
-              "-",
+              25,
               28,
-              "-"
+              31
             ],
             "spd": [
-              "-",
+              20,
               23,
               26
             ],
             "def": [
-              "-",
+              28,
               31,
-              "-"
+              34
             ],
             "res": [
               18,
-              "-",
+              21,
               24
             ]
           },
@@ -11090,7 +11838,7 @@
             "atk": [
               27,
               30,
-              "-"
+              33
             ],
             "spd": [
               21,
@@ -11105,7 +11853,7 @@
             "res": [
               19,
               22,
-              "-"
+              25
             ]
           },
           "5": {
@@ -11115,7 +11863,7 @@
               43
             ],
             "atk": [
-              "-",
+              29,
               32,
               35
             ],
@@ -11132,7 +11880,7 @@
             "res": [
               21,
               24,
-              "-"
+              28
             ]
           }
         }
@@ -11140,9 +11888,12 @@
     },
     {
       "name": "Odin",
-      "moveType": "Infantry",
+      "title": "Potent Force",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Tome",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -11297,12 +12048,12 @@
             "def": [
               22,
               25,
-              28
+              29
             ],
             "res": [
               22,
               25,
-              28
+              29
             ]
           }
         }
@@ -11310,9 +12061,12 @@
     },
     {
       "name": "Ogma",
-      "moveType": "Infantry",
+      "title": "Loyal Blade",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -11336,13 +12090,13 @@
         },
         {
           "name": "Daylight",
-          "default": 5,
-          "rarity": 4
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Noontime",
           "default": "-",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Defiant Atk 1",
@@ -11446,9 +12200,12 @@
     },
     {
       "name": "Olivia",
-      "moveType": "Infantry",
+      "title": "Blushing Beauty",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Red Sword",
-      "total": 150,
+      "moveType": "Infantry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -11569,22 +12326,22 @@
             "hp": [
               30,
               33,
-              "-"
+              36
             ],
             "atk": [
-              "-",
+              21,
               24,
               27
             ],
             "spd": [
-              "-",
+              26,
               29,
-              "-"
+              32
             ],
             "def": [
               20,
               23,
-              "-"
+              26
             ],
             "res": [
               19,
@@ -11651,9 +12408,12 @@
     },
     {
       "name": "Olwen",
-      "moveType": "Cavalry",
+      "title": "Blue Mage Knight",
+      "origin": "Fire Emblem: Thracia 776",
       "weaponType": "Blue Tome",
-      "total": 144,
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -11748,9 +12508,12 @@
     },
     {
       "name": "Palla",
-      "moveType": "Flying",
+      "title": "Eldest Whitewing",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
-      "total": 158,
+      "moveType": "Flying",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -11769,7 +12532,7 @@
         },
         {
           "name": "Ruby Sword+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -11800,7 +12563,7 @@
         },
         {
           "name": "Spur Spd 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Goad Fliers",
@@ -11834,29 +12597,29 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
+              35,
+              38,
               41
             ],
             "atk": [
-              "-",
+              24,
               27,
-              "-"
+              30
             ],
             "spd": [
-              "-",
+              24,
               27,
-              "-"
+              30
             ],
             "def": [
-              "-",
+              21,
               24,
-              "-"
+              27
             ],
             "res": [
               20,
-              "-",
-              "-"
+              23,
+              26
             ]
           },
           "4": {
@@ -11890,10 +12653,10 @@
             "hp": [
               39,
               42,
-              "-"
+              45
             ],
             "atk": [
-              "-",
+              28,
               31,
               34
             ],
@@ -11905,7 +12668,7 @@
             "def": [
               24,
               28,
-              "-"
+              31
             ],
             "res": [
               23,
@@ -11918,9 +12681,12 @@
     },
     {
       "name": "Peri",
-      "moveType": "Cavalry",
+      "title": "Playful Slayer",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
-      "total": 154,
+      "moveType": "Cavalry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -11939,7 +12705,7 @@
         },
         {
           "name": "Killer Lance+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -12019,7 +12785,7 @@
             "res": [
               24,
               27,
-              "-"
+              30
             ]
           },
           "5": {
@@ -12054,9 +12820,12 @@
     },
     {
       "name": "Priscilla",
-      "moveType": "Cavalry",
+      "title": "Delicate Princess",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Staff",
-      "total": 145,
+      "moveType": "Cavalry",
+      "rarities": "4 - 5",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -12126,29 +12895,29 @@
         "40": {
           "4": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              31,
+              34,
+              37
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              24,
+              27,
+              30
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              23,
+              26,
+              29
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              14,
+              17,
+              20
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              27,
+              30,
+              33
             ]
           },
           "5": {
@@ -12183,9 +12952,12 @@
     },
     {
       "name": "Raigh",
-      "moveType": "Infantry",
+      "title": "Dark Child",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Red Tome",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -12271,19 +13043,19 @@
         "40": {
           "2": {
             "hp": [
-              "-"
+              30
             ],
             "atk": [
-              "-"
+              26
             ],
             "spd": [
-              "-"
+              23
             ],
             "def": [
-              "-"
+              17
             ],
             "res": [
-              "-"
+              22
             ]
           },
           "3": {
@@ -12293,78 +13065,78 @@
               36
             ],
             "atk": [
-              "-",
+              25,
               28,
-              "-"
+              31
             ],
             "spd": [
-              "-",
+              22,
               25,
               28
             ],
             "def": [
               16,
               19,
-              "-"
+              22
             ],
             "res": [
-              "-",
+              22,
               25,
-              "-"
+              28
             ]
           },
           "4": {
             "hp": [
               31,
               34,
-              "-"
+              37
             ],
             "atk": [
-              "-",
+              27,
               30,
-              "-"
+              33
             ],
             "spd": [
-              "-",
+              24,
               27,
               30
             ],
             "def": [
-              "-",
+              17,
               20,
               23
             ],
             "res": [
               23,
               26,
-              "-"
+              29
             ]
           },
           "5": {
             "hp": [
               33,
               36,
-              "-"
+              40
             ],
             "atk": [
-              "-",
+              29,
               32,
               35
             ],
             "spd": [
-              "-",
+              25,
               29,
-              "-"
+              32
             ],
             "def": [
               19,
               22,
-              "-"
+              25
             ],
             "res": [
-              "-",
+              25,
               29,
-              "-"
+              32
             ]
           }
         }
@@ -12372,9 +13144,12 @@
     },
     {
       "name": "Raven",
-      "moveType": "Infantry",
+      "title": "Peerless Fighter",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Green Axe",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -12508,9 +13283,12 @@
     },
     {
       "name": "Rebecca",
-      "moveType": "Infantry",
+      "title": "Wildflower",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Bow",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4 - 5",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -12519,18 +13297,18 @@
         },
         {
           "name": "Steel Bow",
-          "default": 4,
+          "default": "-",
           "rarity": "-"
         },
         {
           "name": "Silver Bow",
-          "default": "-",
-          "rarity": 4
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Silver Bow+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Ardent Sacrifice",
@@ -12582,29 +13360,29 @@
         "40": {
           "4": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              32,
+              35,
+              38
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              24,
+              27,
+              30
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              29,
+              32,
+              35
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              16,
+              19,
+              22
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              21,
+              24,
+              27
             ]
           },
           "5": {
@@ -12639,9 +13417,12 @@
     },
     {
       "name": "Reinhardt",
-      "moveType": "Cavalry",
+      "title": "Thunder's Fist",
+      "origin": "Fire Emblem: Thracia 776",
       "weaponType": "Blue Tome",
-      "total": 145,
+      "moveType": "Cavalry",
+      "rarities": "4 - 5",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -12718,13 +13499,13 @@
         "40": {
           "4": {
             "hp": [
-              "-",
+              32,
               35,
-              "-"
+              38
             ],
             "atk": [
               27,
-              "-",
+              30,
               33
             ],
             "spd": [
@@ -12735,12 +13516,12 @@
             "def": [
               21,
               24,
-              "-"
+              27
             ],
             "res": [
-              "-",
+              21,
               24,
-              "-"
+              27
             ]
           },
           "5": {
@@ -12775,9 +13556,12 @@
     },
     {
       "name": "Robin (F)",
-      "moveType": "Infantry",
+      "title": "Mystery Tactician",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Green Tome",
-      "total": 149,
+      "moveType": "Infantry",
+      "rarities": "2-3 Event: Grand Hero Battle",
+      "releaseDate": "Feb 23, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -12868,19 +13652,19 @@
         "40": {
           "2": {
             "hp": [
-              "-"
+              33
             ],
             "atk": [
-              "-"
+              23
             ],
             "spd": [
-              "-"
+              23
             ],
             "def": [
-              "-"
+              22
             ],
             "res": [
-              "-"
+              17
             ]
           },
           "3": {
@@ -12940,9 +13724,12 @@
     },
     {
       "name": "Robin (M)",
-      "moveType": "Infantry",
+      "title": "High Deliverer",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Blue Tome",
-      "total": 149,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -13111,9 +13898,12 @@
     },
     {
       "name": "Roy",
-      "moveType": "Infantry",
+      "title": "Young Lion",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Red Sword",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -13190,19 +13980,19 @@
               44
             ],
             "atk": [
-              "-",
+              25,
               28,
               31
             ],
             "spd": [
-              "-",
+              26,
               29,
-              "-"
+              32
             ],
             "def": [
               20,
               23,
-              "-"
+              26
             ],
             "res": [
               22,
@@ -13242,9 +14032,12 @@
     },
     {
       "name": "Ryoma",
-      "moveType": "Infantry",
+      "title": "Peerless Samurai",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -13289,7 +14082,7 @@
           "rarity": 5
         },
         {
-          "name": "Hone Spd 2",
+          "name": "Hone Spd 1",
           "rarity": "-"
         },
         {
@@ -13344,9 +14137,12 @@
     },
     {
       "name": "Saizo",
-      "moveType": "Infantry",
+      "title": "Angry Ninja",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Shuriken",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -13425,46 +14221,46 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              30,
+              33,
+              36
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              22,
+              25,
+              28
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              27,
+              30,
+              33
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              26,
+              29,
+              32
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              10,
+              13,
+              16
             ]
           },
           "4": {
             "hp": [
-              "-",
+              31,
               34,
               37
             ],
             "atk": [
               23,
               26,
-              31
+              29
             ],
             "spd": [
               29,
               32,
-              "-"
+              35
             ],
             "def": [
               28,
@@ -13472,14 +14268,14 @@
               34
             ],
             "res": [
-              "-",
+              11,
               14,
               17
             ]
           },
           "5": {
             "hp": [
-              "-",
+              33,
               36,
               40
             ],
@@ -13494,7 +14290,7 @@
               37
             ],
             "def": [
-              "-",
+              30,
               33,
               36
             ],
@@ -13509,9 +14305,12 @@
     },
     {
       "name": "Sakura",
-      "moveType": "Infantry",
+      "title": "Loving Priestess",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Staff",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -13521,7 +14320,7 @@
         {
           "name": "Fear",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Heal",
@@ -13638,9 +14437,12 @@
     },
     {
       "name": "Sanaki",
-      "moveType": "Infantry",
+      "title": "Begnion's Apostle",
+      "origin": "Fire Emblem: Radiant Dawn",
       "weaponType": "Red Tome",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Fire",
@@ -13735,9 +14537,12 @@
     },
     {
       "name": "Selena",
-      "moveType": "Infantry",
+      "title": "Cutting Wit",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -13756,17 +14561,17 @@
         },
         {
           "name": "Armorslayer+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
           "name": "Reposition",
           "default": "-",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Triangle Adept 1",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Triangle Adept 2",
@@ -13782,7 +14587,7 @@
         },
         {
           "name": "Threaten Spd 2",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Threaten Spd 3",
@@ -13817,28 +14622,28 @@
           "3": {
             "hp": [
               31,
-              "-",
-              "-"
+              34,
+              37
             ],
             "atk": [
-              "-",
+              19,
               22,
-              "-"
+              25
             ],
             "spd": [
-              "-",
-              "-",
+              28,
+              31,
               34
             ],
             "def": [
-              "-",
+              25,
               28,
-              "-"
+              31
             ],
             "res": [
-              "-",
+              21,
               24,
-              "-"
+              27
             ]
           },
           "4": {
@@ -13900,9 +14705,12 @@
     },
     {
       "name": "Seliph",
-      "moveType": "Infantry",
+      "title": "Heir of Light",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
       "weaponType": "Red Sword",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 15, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -13974,29 +14782,29 @@
         "40": {
           "4": {
             "hp": [
-              "-",
-              "-",
+              41,
+              44,
               47
             ],
             "atk": [
               29,
-              "-",
-              "-"
+              32,
+              35
             ],
             "spd": [
-              "-",
+              19,
               22,
-              "-"
+              25
             ],
             "def": [
-              "-",
+              25,
               28,
-              "-"
+              31
             ],
             "res": [
-              "-",
+              17,
               20,
-              "-"
+              23
             ]
           },
           "5": {
@@ -14016,7 +14824,7 @@
               27
             ],
             "def": [
-              27,
+              26,
               30,
               33
             ],
@@ -14031,9 +14839,12 @@
     },
     {
       "name": "Serra",
-      "moveType": "Infantry",
+      "title": "Outspoken Cleric",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Staff",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -14043,11 +14854,11 @@
         {
           "name": "Absorb",
           "default": "-",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Heal",
-          "default": 3,
+          "default": "-",
           "rarity": "-"
         },
         {
@@ -14062,8 +14873,8 @@
         },
         {
           "name": "Imbue",
-          "default": "-",
-          "rarity": 3
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Swift-Winds Balm",
@@ -14110,29 +14921,29 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              27,
               30,
               33
             ],
             "atk": [
               23,
               26,
-              "-"
+              29
             ],
             "spd": [
-              "-",
+              24,
               27,
               30
             ],
             "def": [
               15,
               18,
-              "-"
+              21
             ],
             "res": [
               26,
               29,
-              "-"
+              32
             ]
           },
           "4": {
@@ -14164,27 +14975,27 @@
           },
           "5": {
             "hp": [
-              "-",
+              30,
               33,
               36
             ],
             "atk": [
               27,
               30,
-              "-"
+              33
             ],
             "spd": [
-              "-",
+              27,
               31,
-              "-"
+              34
             ],
             "def": [
               18,
               21,
-              "-"
+              24
             ],
             "res": [
-              "-",
+              30,
               33,
               36
             ]
@@ -14194,9 +15005,12 @@
     },
     {
       "name": "Setsuna",
-      "moveType": "Infantry",
+      "title": "Absent Archer",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Bow",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -14215,12 +15029,12 @@
         },
         {
           "name": "Assassin's Bow+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
           "name": "Reciprocal Aid",
-          "default": "-",
+          "default": 4,
           "rarity": 3
         },
         {
@@ -14275,29 +15089,29 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              31,
               34,
               37
             ],
             "atk": [
               21,
               24,
-              "-"
+              27
             ],
             "spd": [
-              "-",
+              30,
               33,
               36
             ],
             "def": [
               16,
               19,
-              "-"
+              22
             ],
             "res": [
               17,
               20,
-              "-"
+              23
             ]
           },
           "4": {
@@ -14307,7 +15121,7 @@
               38
             ],
             "atk": [
-              "-",
+              23,
               26,
               29
             ],
@@ -14359,9 +15173,12 @@
     },
     {
       "name": "Shanna",
-      "moveType": "Flying",
+      "title": "Sprightly Flier",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Blue Lance",
-      "total": 158,
+      "moveType": "Flying",
+      "rarities": "3- 4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -14445,29 +15262,29 @@
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              32,
+              35,
+              38
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              23,
+              26,
+              29
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              28,
+              31,
+              34
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              19,
+              22,
+              25
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              22,
+              25,
+              28
             ]
           },
           "4": {
@@ -14529,9 +15346,12 @@
     },
     {
       "name": "Sharena",
-      "moveType": "Infantry",
+      "title": "Princess of Askr",
+      "origin": "Fire Emblem Heroes",
       "weaponType": "Blue Lance",
-      "total": 158,
+      "moveType": "Infantry",
+      "rarities": "2- Story",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -14688,9 +15508,12 @@
     },
     {
       "name": "Sheena",
-      "moveType": "Armored",
+      "title": "Princess of Gra",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Green Axe",
-      "total": 169,
+      "moveType": "Armored",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -14704,18 +15527,18 @@
         },
         {
           "name": "Killer Axe",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Killer Axe+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Buckler",
-          "default": "-",
-          "rarity": 4
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Escutcheon",
@@ -14816,9 +15639,12 @@
     },
     {
       "name": "Sophia",
-      "moveType": "Infantry",
+      "title": "Nabata Prophet",
+      "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Red Tome",
-      "total": 149,
+      "moveType": "Infantry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -14916,63 +15742,63 @@
         "40": {
           "1": {
             "hp": [
-              "-"
+              32
             ],
             "atk": [
-              "-"
+              25
             ],
             "spd": [
-              "-"
+              13
             ],
             "def": [
-              "-"
+              20
             ],
             "res": [
-              "-"
+              21
             ]
           },
           "2": {
             "hp": [
-              "-"
+              33
             ],
             "atk": [
-              "-"
+              27
             ],
             "spd": [
-              "-"
+              14
             ],
             "def": [
-              "-"
+              21
             ],
             "res": [
-              "-"
+              23
             ]
           },
           "3": {
             "hp": [
-              "-",
+              33,
               36,
-              "-"
+              39
             ],
             "atk": [
-              "-",
+              26,
               29,
-              "-"
+              32
             ],
             "spd": [
-              "-",
+              13,
               16,
-              "-"
+              19
             ],
             "def": [
-              "-",
+              21,
               24,
-              "-"
+              27
             ],
             "res": [
-              "-",
+              22,
               25,
-              "-"
+              28
             ]
           },
           "4": {
@@ -14982,7 +15808,7 @@
               40
             ],
             "atk": [
-              "-",
+              28,
               31,
               34
             ],
@@ -15004,29 +15830,29 @@
           },
           "5": {
             "hp": [
-              "-",
+              36,
               40,
-              "-"
+              43
             ],
             "atk": [
-              "-",
+              30,
               33,
-              "-"
+              36
             ],
             "spd": [
-              "-",
+              16,
               19,
-              "-"
+              22
             ],
             "def": [
-              "-",
+              24,
               28,
-              "-"
+              31
             ],
             "res": [
-              "-",
+              25,
               29,
-              "-"
+              32
             ]
           }
         }
@@ -15034,9 +15860,12 @@
     },
     {
       "name": "Stahl",
-      "moveType": "Cavalry",
+      "title": "Viridian Knight",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Red Sword",
-      "total": 154,
+      "moveType": "Cavalry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -15129,75 +15958,75 @@
         "40": {
           "1": {
             "hp": [
-              "-"
+              36
             ],
             "atk": [
-              "-"
+              23
             ],
             "spd": [
-              "-"
+              19
             ],
             "def": [
-              "-"
+              22
             ],
             "res": [
-              "-"
+              16
             ]
           },
           "2": {
             "hp": [
-              "-"
+              38
             ],
             "atk": [
-              "-"
+              25
             ],
             "spd": [
-              "-"
+              20
             ],
             "def": [
-              "-"
+              24
             ],
             "res": [
-              "-"
+              17
             ]
           },
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              38,
+              41,
+              44
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              24,
+              27,
+              30
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              20,
+              23,
+              26
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              23,
+              26,
+              29
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              16,
+              19,
+              22
             ]
           },
           "4": {
             "hp": [
-              "-",
+              39,
               42,
               45
             ],
             "atk": [
               26,
               29,
-              "-"
+              32
             ],
             "spd": [
               21,
@@ -15205,41 +16034,41 @@
               27
             ],
             "def": [
-              "-",
+              25,
               28,
               31
             ],
             "res": [
               17,
               20,
-              "-"
+              23
             ]
           },
           "5": {
             "hp": [
-              "-",
+              42,
               45,
-              "-"
+              48
             ],
             "atk": [
-              "-",
+              28,
               31,
               34
             ],
             "spd": [
-              "-",
+              23,
               26,
               30
             ],
             "def": [
               26,
               30,
-              "-"
+              33
             ],
             "res": [
               19,
               22,
-              "-"
+              25
             ]
           }
         }
@@ -15247,9 +16076,12 @@
     },
     {
       "name": "Subaki",
-      "moveType": "Flying",
+      "title": "Perfect Expert",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
-      "total": 157,
+      "moveType": "Flying",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -15268,7 +16100,7 @@
         },
         {
           "name": "Sapphire Lance+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -15342,71 +16174,51 @@
         "40": {
           "1": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              32
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              18
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              26
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              26
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              16
             ]
           },
           "2": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              33
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              19
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              29
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              29
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              17
             ]
           },
           "3": {
             "hp": [
-              "-",
+              33,
               36,
               39
             ],
             "atk": [
-              "-",
+              19,
               22,
               25
             ],
             "spd": [
-              "-",
+              28,
               31,
               34
             ],
@@ -15418,7 +16230,7 @@
             "res": [
               16,
               19,
-              "-"
+              22
             ]
           },
           "4": {
@@ -15480,9 +16292,12 @@
     },
     {
       "name": "Sully",
-      "moveType": "Cavalry",
+      "title": "Crimson Knight",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Blue Lance",
-      "total": 154,
+      "moveType": "Cavalry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -15561,28 +16376,28 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              35,
               38,
-              "-"
+              41
             ],
             "atk": [
-              "-",
+              20,
               23,
-              "-"
+              26
             ],
             "spd": [
-              "-",
+              27,
               30,
-              "-"
+              33
             ],
             "def": [
               18,
-              "-",
-              "-"
+              21,
+              24
             ],
             "res": [
-              "-",
-              "-",
+              21,
+              24,
               27
             ]
           },
@@ -15615,14 +16430,14 @@
           },
           "5": {
             "hp": [
-              "-",
+              39,
               42,
-              "-"
+              45
             ],
             "atk": [
-              "-",
+              23,
               26,
-              "-"
+              30
             ],
             "spd": [
               31,
@@ -15635,9 +16450,9 @@
               27
             ],
             "res": [
-              "-",
+              24,
               28,
-              "-"
+              31
             ]
           }
         }
@@ -15645,9 +16460,12 @@
     },
     {
       "name": "Takumi",
-      "moveType": "Infantry",
+      "title": "Wild Card",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Neutral Bow",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -15666,8 +16484,8 @@
         },
         {
           "name": "Fujin Yumi",
-          "default": "-",
-          "rarity": 5
+          "default": 5,
+          "rarity": "-"
         },
         {
           "name": "Retribution",
@@ -15739,9 +16557,12 @@
     },
     {
       "name": "Tharja",
-      "moveType": "Infantry",
+      "title": "Dark Shadow",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Red Tome",
-      "total": 148,
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -15760,7 +16581,7 @@
         },
         {
           "name": "Rauðrblade+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -15875,9 +16696,12 @@
     },
     {
       "name": "Tiki",
-      "moveType": "Infantry",
+      "title": "Naga's Voice",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Red Beast",
-      "total": 157,
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -15896,7 +16720,7 @@
         },
         {
           "name": "Lightning Breath+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -15961,9 +16785,9 @@
         "40": {
           "3": {
             "hp": [
-              "-",
+              33,
               36,
-              "-"
+              39
             ],
             "atk": [
               28,
@@ -15971,19 +16795,19 @@
               34
             ],
             "spd": [
-              "-",
+              17,
               20,
               23
             ],
             "def": [
               28,
               31,
-              "-"
+              34
             ],
             "res": [
-              "-",
+              18,
               21,
-              "-"
+              24
             ]
           },
           "4": {
@@ -16045,9 +16869,12 @@
     },
     {
       "name": "Tiki (Young)",
-      "moveType": "Infantry",
+      "title": "Dragon Scion",
+      "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Beast",
-      "total": 163,
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -16148,9 +16975,12 @@
     },
     {
       "name": "Ursula",
-      "moveType": "Cavalry",
+      "title": "Blue Crow",
+      "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Blue Tome",
-      "total": 145,
+      "moveType": "Cavalry",
+      "rarities": "3-4Event: Grand Hero Battle",
+      "releaseDate": "Mar 10, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -16287,10 +17117,205 @@
       }
     },
     {
-      "name": "Virion",
+      "name": "Veronica",
+      "title": "Emblian Princess",
+      "origin": "Fire Emblem Heroes",
+      "weaponType": "Green Tome",
       "moveType": "Infantry",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "skills": [
+        {
+          "name": "Élivágar",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "1": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "2": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "3": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          }
+        },
+        "40": {
+          "1": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "2": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "3": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Virion",
+      "title": "Elite Archer",
+      "origin": "Fire Emblem Awakening",
       "weaponType": "Neutral Bow",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -16314,7 +17339,7 @@
         },
         {
           "name": "Night Sky",
-          "default": "-",
+          "default": 4,
           "rarity": 3
         },
         {
@@ -16391,7 +17416,7 @@
               37
             ],
             "atk": [
-              27
+              23
             ],
             "spd": [
               23
@@ -16405,46 +17430,46 @@
           },
           "2": {
             "hp": [
-              "-"
+              39
             ],
             "atk": [
-              "-"
+              25
             ],
             "spd": [
-              "-"
+              25
             ],
             "def": [
-              "-"
+              20
             ],
             "res": [
-              "-"
+              9
             ]
           },
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              39,
+              42,
+              45
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              24,
+              27,
+              30
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              24,
+              27,
+              30
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              20,
+              23,
+              26
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              8,
+              11,
+              14
             ]
           },
           "4": {
@@ -16454,36 +17479,36 @@
               46
             ],
             "atk": [
-              "-",
+              26,
               29,
               32
             ],
             "spd": [
-              "-",
+              26,
               29,
-              "-"
+              32
             ],
             "def": [
-              "-",
+              21,
               24,
-              "-"
+              27
             ],
             "res": [
               9,
               12,
-              "-"
+              15
             ]
           },
           "5": {
             "hp": [
               43,
               46,
-              "-"
+              49
             ],
             "atk": [
-              "-",
+              28,
               31,
-              "-"
+              34
             ],
             "spd": [
               28,
@@ -16491,14 +17516,14 @@
               34
             ],
             "def": [
-              "-",
+              23,
               26,
               30
             ],
             "res": [
-              "-",
+              10,
               13,
-              "-"
+              17
             ]
           }
         }
@@ -16506,19 +17531,22 @@
     },
     {
       "name": "Wrys",
-      "moveType": "Infantry",
+      "title": "Kindly Priest",
+      "origin": "Fire Emblem: Shadow Dragon and the Blade of Light",
       "weaponType": "Neutral Staff",
-      "total": 147,
+      "moveType": "Infantry",
+      "rarities": "3-4 *",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
           "default": "-",
-          "rarity": "-"
+          "rarity": 1
         },
         {
           "name": "Slow",
           "default": "-",
-          "rarity": "-"
+          "rarity": 3
         },
         {
           "name": "Heal",
@@ -16527,7 +17555,7 @@
         },
         {
           "name": "Reconcile",
-          "default": "-",
+          "default": 3,
           "rarity": 2
         },
         {
@@ -16537,7 +17565,7 @@
         },
         {
           "name": "Imbue",
-          "default": "-",
+          "default": 4,
           "rarity": 2
         },
         {
@@ -16616,46 +17644,46 @@
           },
           "2": {
             "hp": [
-              "-"
+              35
             ],
             "atk": [
-              "-"
+              18
             ],
             "spd": [
-              "-"
+              19
             ],
             "def": [
-              "-"
+              17
             ],
             "res": [
-              "-"
+              30
             ]
           },
           "3": {
             "hp": [
-              "-",
+              35,
               38,
-              "-"
+              41
             ],
             "atk": [
               18,
               21,
-              "-"
+              24
             ],
             "spd": [
-              "-",
+              17,
               20,
               23
             ],
             "def": [
-              "-",
+              16,
               19,
-              "-"
+              22
             ],
             "res": [
-              "-",
+              29,
               32,
-              "-"
+              35
             ]
           },
           "4": {
@@ -16687,28 +17715,220 @@
           },
           "5": {
             "hp": [
-              "-",
+              39,
               42,
               45
             ],
             "atk": [
-              20,
+              21,
               24,
-              "-"
+              28
             ],
             "spd": [
-              "-",
+              20,
               23,
               26
             ],
             "def": [
-              "-",
+              19,
               22,
               25
             ],
             "res": [
               33,
               36,
+              39
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Xander",
+      "title": "Paragon Knight",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Red Sword",
+      "moveType": "Cavalry",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "skills": [
+        {
+          "name": "Siegfried",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "1": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "2": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "3": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          }
+        },
+        "40": {
+          "1": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "2": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "3": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
               "-"
             ]
           }
@@ -16717,9 +17937,12 @@
     },
     {
       "name": "Xander (Spring Festival)",
-      "moveType": "Cavalry",
+      "title": "Spring Prince",
+      "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
-      "total": 154,
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Mar 30, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -16743,12 +17966,12 @@
         },
         {
           "name": "Swap",
-          "default": "-",
+          "default": 5,
           "rarity": "-"
         },
         {
           "name": "Live for Honor",
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Fortify Def 1",
@@ -16760,7 +17983,7 @@
         },
         {
           "name": "Fortify Def 3",
-          "rarity": "-"
+          "rarity": 5
         }
       ],
       "stats": {
@@ -16804,6 +18027,198 @@
         }
       },
       "shortName": "Xander (S)"
+    },
+    {
+      "name": "Zephiel",
+      "title": "The Liberator",
+      "origin": "Fire Emblem: The Binding Blade",
+      "weaponType": "Red Sword",
+      "moveType": "Armored",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "skills": [
+        {
+          "name": "Eckesachs",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "1": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "2": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "3": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          }
+        },
+        "40": {
+          "1": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "2": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "3": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          }
+        }
+      }
     }
   ],
   "skills": [
@@ -16874,7 +18289,8 @@
       "range(rng)": 1,
       "effect": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Falchion",
@@ -16973,7 +18389,8 @@
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of distance if this unit is attacked",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Sieglinde",
@@ -17160,7 +18577,7 @@
       "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 2,
-      "effect": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Red Tome"
@@ -17170,7 +18587,7 @@
       "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 2,
-      "effect": "Slows Special trigger (CD count+1). Adds total bonuses on character to damage dealt",
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Red Tome"
@@ -17327,7 +18744,7 @@
     },
     {
       "name": "Carrot Lance",
-      "spCost": "-",
+      "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
@@ -17337,7 +18754,7 @@
     },
     {
       "name": "Carrot Lance+",
-      "spCost": "-",
+      "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
@@ -17362,7 +18779,8 @@
       "range(rng)": 1,
       "effect": "???",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
     },
     {
       "name": "Heavy Spear",
@@ -17486,7 +18904,7 @@
     },
     {
       "name": "Blue Egg",
-      "spCost": "-",
+      "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
@@ -17496,7 +18914,7 @@
     },
     {
       "name": "Blue Egg+",
-      "spCost": "-",
+      "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
@@ -17620,7 +19038,8 @@
       "range(rng)": 2,
       "effect": "Enables unit at ≤ 50% HP to strike first, even when attacked.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
     },
     {
       "name": "Dark Breath",
@@ -17734,7 +19153,7 @@
     },
     {
       "name": "Carrot Axe",
-      "spCost": "-",
+      "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
@@ -17744,7 +19163,7 @@
     },
     {
       "name": "Carrot Axe+",
-      "spCost": "-",
+      "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
@@ -17894,7 +19313,7 @@
     },
     {
       "name": "Green Egg",
-      "spCost": "-",
+      "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
@@ -17904,7 +19323,7 @@
     },
     {
       "name": "Green Egg+",
-      "spCost": "-",
+      "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
@@ -18018,7 +19437,8 @@
       "range(rng)": 2,
       "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Fire Breath",
@@ -18195,7 +19615,7 @@
       "spCost": 200,
       "damage(mt)": 5,
       "range(rng)": 2,
-      "effect": "Effective against flying units.Accelerates Special trigger (cooldown count-1).",
+      "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -18205,7 +19625,7 @@
       "spCost": 300,
       "damage(mt)": 9,
       "range(rng)": 2,
-      "effect": "Effective against flying units.Accelerates Special trigger (cooldown count-1).",
+      "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -18365,7 +19785,7 @@
       "range": 1,
       "effect": "Heals adjacent ally 10 HP.Unit loses 10 HP (but cannot reach 0 this way).",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18381,7 +19801,7 @@
       "range": 1,
       "effect": "Unit moves 1 space away from target ally, who moves to unit's former position.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18389,7 +19809,7 @@
       "range": 1,
       "effect": "Converts penalties on target into bonuses.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18397,7 +19817,7 @@
       "range": 1,
       "effect": "Restores 5 HP.",
       "spCost": 0,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
     {
@@ -18405,7 +19825,7 @@
       "range": 1,
       "effect": "Restores HP=7+ this unit's suffered damage. Unit heals HP=half suffered damage. Slows Special trigger (cooldown count+1).",
       "spCost": 200,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
     {
@@ -18413,7 +19833,7 @@
       "range": 1,
       "effect": "Restores 10 HP.",
       "spCost": 0,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
     {
@@ -18421,7 +19841,7 @@
       "range": 2,
       "effect": "Restores 8 HP. Rng:2.",
       "spCost": 200,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
     {
@@ -18429,7 +19849,7 @@
       "range": 1,
       "effect": "Unit moves to opposite side of adjacent ally.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18437,7 +19857,7 @@
       "range": 1,
       "effect": "Grants Atk+4 to an adjacent ally until the end of the turn.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18445,7 +19865,7 @@
       "range": 1,
       "effect": "Grants Def+4 to an adjacent ally until the end of the turn.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18453,7 +19873,7 @@
       "range": 1,
       "effect": "Grants Res+4 to an adjacent ally until the end of the turn.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18461,7 +19881,7 @@
       "range": 1,
       "effect": "Grants Spd+4 to an adjacent ally until the end of the turn.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18469,7 +19889,7 @@
       "range": 1,
       "effect": "Swap HP with adjacent ally (neither unit can go above their max HP).",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18477,7 +19897,7 @@
       "range": 1,
       "effect": "Restores 7 HP each to target and this unit.",
       "spCost": 100,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
     {
@@ -18485,7 +19905,7 @@
       "range": 1,
       "effect": "Restores 15 HP. Slows Special trigger (cooldown count +1)",
       "spCost": 200,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
     {
@@ -18493,7 +19913,7 @@
       "range": 1,
       "effect": "Restores 7 HP or more the further below 50% the target's HP is.Slows special trigger (cooldown count+1).",
       "spCost": 200,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
     {
@@ -18501,7 +19921,7 @@
       "range": 1,
       "effect": "Moves adjacent ally to opposite side of unit.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18509,7 +19929,7 @@
       "range": 1,
       "effect": "Push adjacent ally 1 space farther away.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18525,7 +19945,7 @@
       "range": 1,
       "effect": "Push adjacent ally 2 spaces farther away.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18533,7 +19953,7 @@
       "range": 1,
       "effect": "Swap places with an adjacent ally.",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
     {
@@ -18541,7 +19961,7 @@
       "cooldown": 3,
       "effect": "Reduces damage inflicted by attacks from foes 2 spaces away by 50%.",
       "spCost": 200,
-      "inheritRestriction": "Melee Weapons Only",
+      "inheritRestriction": "Melee Weapon Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18549,7 +19969,7 @@
       "cooldown": 5,
       "effect": "Resolve combat as if foe suffered Def/Res-50%. Unit recovers HP=half damage dealt.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18557,7 +19977,7 @@
       "cooldown": 5,
       "effect": "Grants +150% to damage dealt.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18565,7 +19985,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's ATK minus foe's DEF or RES).",
       "spCost": 300,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18573,7 +19993,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res).",
       "spCost": 300,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18581,7 +20001,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's ATK minus foe's DEF or RES).",
       "spCost": 300,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18589,7 +20009,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5x (unit's Atk minus foe's Def or Res).",
       "spCost": 300,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18597,7 +20017,7 @@
       "cooldown": 3,
       "effect": "Boosts damage dealt by 50% of unit's Def.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18605,7 +20025,7 @@
       "cooldown": 3,
       "effect": "Reduces damage inflicted by attacks from adjacent foes by 30%.",
       "spCost": 100,
-      "inheritRestriction": "Melee Weapons Only",
+      "inheritRestriction": "Melee Weapon Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18613,7 +20033,7 @@
       "cooldown": 4,
       "effect": "Boosts damage dealt by 50% of unit's Res.",
       "spCost": 100,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18621,7 +20041,7 @@
       "cooldown": 4,
       "effect": "Heal 30% of damage dealt.",
       "spCost": 100,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18629,7 +20049,7 @@
       "cooldown": 3,
       "effect": "Grants +30% to Atk.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18637,7 +20057,7 @@
       "cooldown": 4,
       "effect": "Grants +50% to Atk.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18645,7 +20065,7 @@
       "cooldown": 4,
       "effect": "Grants +30% to Atk.",
       "spCost": 100,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18653,7 +20073,7 @@
       "cooldown": 2,
       "effect": "Reduces damage inflicted by attacks from adjacent foes by 30%.",
       "spCost": 200,
-      "inheritRestriction": "Melee Weapons Only",
+      "inheritRestriction": "Melee Weapon Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18661,7 +20081,7 @@
       "cooldown": 5,
       "effect": "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)",
       "spCost": 500,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18669,7 +20089,7 @@
       "cooldown": 4,
       "effect": "Boosts damage dealt by 80% of unit's Res.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18677,7 +20097,7 @@
       "cooldown": 3,
       "effect": "Grants +50% to damage dealt.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18685,7 +20105,7 @@
       "cooldown": 4,
       "effect": "Boosts damage dealt by 50% of unit's Def.",
       "spCost": 100,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18693,7 +20113,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in a wide area around target take damage equal to (unit's ATK minus foe's DEF or RES).",
       "spCost": 300,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18701,7 +20121,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in a wide area near target take damage equal to (unit's Atk - foe's Def or Res)",
       "spCost": 300,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18709,7 +20129,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in a wide area around target take damage equal to (unit's Atk minus foe's Def or Res).",
       "spCost": 300,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18717,7 +20137,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in a wide area near target take damage equal to (unit's Atk minus foe's Def or Res).",
       "spCost": 300,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18725,7 +20145,7 @@
       "cooldown": 2,
       "effect": "When healing an ally with a staff, all other allies recover 10 HP.",
       "spCost": 150,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18733,7 +20153,7 @@
       "cooldown": 3,
       "effect": "Reduces damage inflicted by attacks from foes 2 spaces away by 30%.",
       "spCost": 100,
-      "inheritRestriction": "Melee Weapons Only",
+      "inheritRestriction": "Melee Weapon Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18741,7 +20161,7 @@
       "cooldown": 3,
       "effect": "Boosts damage dealt by 50% of unit's Res.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18749,7 +20169,7 @@
       "cooldown": 4,
       "effect": "Boosts damage dealt by 80% of unit's Def.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18757,7 +20177,7 @@
       "cooldown": 1,
       "effect": "When healing an ally with a staff, increases recovered HP by 10.",
       "spCost": 50,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18765,7 +20185,7 @@
       "cooldown": 1,
       "effect": "When healing an ally with a staff, grants all allies Atk+4 for 1 turn.",
       "spCost": 150,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18773,7 +20193,7 @@
       "cooldown": 3,
       "effect": "Resolve combat as if foe suffered Def/Res-50%.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18789,7 +20209,7 @@
       "cooldown": 2,
       "effect": "Resolve combat as if foe suffered Def/Res-30%.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18797,7 +20217,7 @@
       "cooldown": 3,
       "effect": "Resolve combat as if foe suffered Def/Res-30%.",
       "spCost": 100,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18805,7 +20225,7 @@
       "cooldown": 4,
       "effect": "Grants +50% to damage dealt.",
       "spCost": 100,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18813,7 +20233,7 @@
       "cooldown": 3,
       "effect": "Heal 30% of damage dealt.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18821,7 +20241,7 @@
       "cooldown": 3,
       "effect": "Reduces damage inflicted by attacks from adjacent foes by 50%.",
       "spCost": 200,
-      "inheritRestriction": "Melee Weapons Only",
+      "inheritRestriction": "Melee Weapon Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18829,7 +20249,7 @@
       "cooldown": 2,
       "effect": "Grants bonus to damage dealt equal to 30% of damage suffered.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18837,7 +20257,7 @@
       "cooldown": 3,
       "effect": "Grants bonus to damage dealt equal to 30% of damage suffered.",
       "spCost": 100,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18845,7 +20265,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in an area near target take damage equal to (unit's ATK minus foe's DEF or RES).",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18853,7 +20273,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res).",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18861,7 +20281,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in an area near target take damage equal to (unit's ATK minus foe's DEF or RES).",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18869,7 +20289,7 @@
       "cooldown": 5,
       "effect": "Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res).",
       "spCost": 150,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18877,7 +20297,7 @@
       "cooldown": 2,
       "effect": "Reduces damage inflicted by attacks from foes 2 spaces away by 30%.",
       "spCost": 200,
-      "inheritRestriction": "Melee Weapons Only",
+      "inheritRestriction": "Melee Weapon Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18885,7 +20305,7 @@
       "cooldown": 4,
       "effect": "Heal 50% of damage dealt.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {
@@ -18893,7 +20313,7 @@
       "cooldown": 1,
       "effect": "When healing an ally with a staff, grants all allies Def+4 for 1 turn.",
       "spCost": 150,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18901,7 +20321,7 @@
       "cooldown": 1,
       "effect": "When healing an ally with a staff, grants all allies Res+4 for 1 turn.",
       "spCost": 150,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18909,7 +20329,7 @@
       "cooldown": 1,
       "effect": "When healing an ally with a staff, grants all allies Spd+4 for 1 turn.",
       "spCost": 150,
-      "inheritRestriction": "Staff Only",
+      "inheritRestriction": "Staff Users Only",
       "type": "SPECIAL"
     },
     {
@@ -18917,7 +20337,7 @@
       "cooldown": 3,
       "effect": "Grants bonus to damage dealt equal to 50% of damage suffered.",
       "spCost": 200,
-      "inheritRestriction": "Excludes Staves",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
     },
     {

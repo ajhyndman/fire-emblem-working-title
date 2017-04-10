@@ -4,10 +4,12 @@ import React from 'react';
 import MarkGithub from 'react-icons/lib/go/mark-github';
 import stats from 'fire-emblem-heroes-stats';
 import {
+  allPass,
   compose,
   filter,
   path,
   prop,
+  propOr,
   toLower,
 } from 'ramda';
 
@@ -182,11 +184,15 @@ class Root extends React.Component {
           dispatch={dispatch}
           heroes={filter(
             // $FlowIssue typedef for prop isn't resolving correctly
-            compose(
-              name => (name.indexOf(toLower(state.searchString)) !== -1),
-              toLower,
-              prop('name'),
-            ),
+            allPass([
+              // Exclude unreleased heroes.
+              (hero) => propOr('N/A', 'releaseDate', hero) != 'N/A',
+              compose(
+                name => (name.indexOf(toLower(state.searchString)) !== -1),
+                toLower,
+                prop('name'),
+              ),
+            ]),
             stats.heroes,
           )}
         />

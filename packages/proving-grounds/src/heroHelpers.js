@@ -54,7 +54,6 @@ export const lookupStats = (name: string): Hero => {
     stats: { '1': {}, '40': {} },
     skills: [],
     moveType: 'Infantry',
-    total: 0,
   };
 };
 
