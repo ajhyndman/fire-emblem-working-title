@@ -48,8 +48,8 @@ class Toast extends React.Component {
     );
   }
 
-  componentDidUpdate(nextProps: Props) {
-    if (nextProps.messages.length > 0 && this.state.isReady) {
+  componentDidUpdate() {
+    if (this.props.messages.length > 0 && this.state.isReady) {
       this.show();
     }
   }

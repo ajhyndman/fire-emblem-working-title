@@ -58,6 +58,7 @@ export type State = {
   activeHero: ?HeroInstance;
   activeSlot: 0 | 1 | void;
   heroSlots: [?HeroInstance, ?HeroInstance];
+  notifications: Array<string>;
   previewLevel: 1 | 40;
   searchString: string;
   showGuide: boolean;
@@ -68,6 +69,7 @@ const emptyState: State = {
   activeSlot: undefined,
   heroSlots: [undefined, undefined],
   host: '',
+  notifications: [],
   previewLevel: 40,
   searchString: '',
   showGuide: false,
