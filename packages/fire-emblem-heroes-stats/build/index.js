@@ -187,7 +187,7 @@ function computeIds(heroes, skills) {
   let nextIdsByType = zipObj(types, repeat(0, types.length));
   const releasedHeroes = filter(compose(not, propEq('releaseDate', 'N/A')), heroes);
   const sortedHeroes = sortWith([
-    ascend(prop('releaseDate')),
+    ascend((h) => new Date(prop('releaseDate', h))),
     ascend(prop('name')),
   ])(releasedHeroes)
   for (let hero of sortedHeroes) {
@@ -245,4 +245,4 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   fs.writeFileSync('./dist/stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchWikiStats(false, false);
+fetchWikiStats(true, true);
