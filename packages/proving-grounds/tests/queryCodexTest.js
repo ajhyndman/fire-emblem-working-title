@@ -15,7 +15,7 @@ import type { HeroInstance } from '../src/store';
 
 
 const mockInstance: HeroInstance = {
-  bane: null,
+  bane: 'spd',
   boon: null,
   name: 'Anna',
   rarity: 5,
@@ -35,16 +35,14 @@ test('flattenInstance', (t) => {
     assert.deepEqual(
       flattenInstance(mockInstance),
       [
-        null,
-        null,
-        'Anna',
-        5,
-        null,
-        null,
-        'Vantage 3',
-        'Spur Res 3',
-        'Astra',
-        'Nóatún',
+        3,  // Name
+        null,  // Assist
+        null,  // A
+        6,  // B
+        6,  // C
+        6,  // Special
+        12,  // Weapon
+        5 + 6*3 + 36*0,  // Rarity + 6xBane (spd=3) + 36xBoon (null=0)
       ],
     );
     assert.end();
@@ -61,49 +59,16 @@ test('flattenInstance', (t) => {
   t.end();
 });
 
-test('hash', (t) => {
-  t.test('hashes to a unicode string four characters long', (assert) => {
-    assert.equal(hash('Anna').length, 4);
-    assert.end();
-  });
-
-  t.test('doesn\'t collide', (assert) => {
-    // console.log('raw:', stats.skills.map(skill => skill.name));
-    // console.log('hashed:', stats.skills.map(skill => hash(skill.name)));
-
-    // no collisions within skills
-    assert.equal(
-      new Set(stats.skills.map(skill => hash(skill.name))).size,
-      new Set(stats.skills.map(skill => skill.name)).size,
-    );
-
-    // no collisions within heroes
-    assert.equal(
-      new Set(stats.heroes.map(hero => hash(hero.name))).size,
-      new Set(stats.heroes.map(hero => hero.name)).size,
-    );
-
-    // no destructive collisions between heroes and skills
-    assert.equal(
-      new Set(stats.heroes.concat(stats.skills).map(item => hash(item.name))).size,
-      new Set(stats.heroes.concat(stats.skills).map(item => item.name)).size,
-    );
-
-    assert.end();
-  });
-
-  t.end();
-});
-
 test('encodeHero', (t) => {
   t.test('tranforms a hero instance to a string', (assert) => {
     assert.equal(
       typeof encodeHero(mockInstance),
       'string',
     );
+    console.log('encoded hero is:', encodeHero(mockInstance));
     assert.equal(
       encodeHero(mockInstance),
-      'AwalwEwYwZhBWMSBMA2eUEEMqpDdLELGCLIA',
+      'AwAABgYGDBc=',
     );
     assert.end();
   });
