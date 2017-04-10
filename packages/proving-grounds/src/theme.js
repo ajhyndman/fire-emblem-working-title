@@ -1,6 +1,10 @@
 // @flow
 import Color from 'color-js';
 
+export const breakPoints = Object.freeze({
+  small: 480,
+});
+
 export const colors = Object.freeze({
   elephant: '#123346',
   aquaIsland: '#9ad8da',

@@ -3,12 +3,15 @@ import React from 'react';
 import clipboard from 'clipboard-js';
 import Link from 'react-icons/lib/go/link';
 
+import type { Dispatch } from '../reducer';
+
 
 type Props = {
+  dispatch: Dispatch;
   link: string;
 };
 
-const ShareButton = ({ link }: Props) => (
+const ShareButton = ({ dispatch, link }: Props) => (
   <div className="root">
     <style jsx>{`
       button {
@@ -26,7 +29,15 @@ const ShareButton = ({ link }: Props) => (
         outline: none;
       }
     `}</style>
-    <button onClick={() => clipboard.copy(link)}>
+    <button
+      onClick={() => {
+        clipboard.copy(link);
+        dispatch({
+          type: 'ENQUEUE_NOTIFICATION',
+          value: 'Link copied to clipboard!',
+        });
+      }}
+    >
       <Link />
     </button>
   </div>

@@ -16,6 +16,7 @@ import CombatResult from './CombatResult';
 import HeroGrid from './HeroGrid';
 import ShareButton from './ShareButton';
 import Input from './Input';
+import Toast from './Toast';
 import { fontFamilies } from '../theme';
 import { encodeHero } from '../queryCodex';
 import { staticUrl } from '../../config';
@@ -42,6 +43,7 @@ class Root extends React.Component {
       || this.props.state.activeSlot !== nextProps.state.activeSlot
       || this.props.state.activeHero !== nextProps.state.activeHero
       || this.props.state.searchString !== nextProps.state.searchString
+      || this.props.state.notifications !== nextProps.state.notifications
       || this.props.state.previewLevel !== nextProps.state.previewLevel
     );
   }
@@ -142,6 +144,7 @@ class Root extends React.Component {
           />
           <div className="row">
             <ShareButton
+              dispatch={dispatch}
               link={`${
                 state.host
               }/?0=${
@@ -196,6 +199,7 @@ class Root extends React.Component {
             <MarkGithub />
           </a>
         </div>
+        <Toast dispatch={dispatch} messages={state.notifications} />
       </div>
     );
   }
