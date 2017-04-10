@@ -184,7 +184,7 @@ function computeIds(heroes, skills) {
   ];
   let idsByName = {};
   let namesByTypeAndId = zipObj(types, map((x) => {return {}}, types));
-  let nextIdsByType = zipObj(types, repeat(0, types.length));
+  let nextIdsByType = zipObj(types, repeat(1, types.length));
   const releasedHeroes = filter(compose(not, propEq('releaseDate', 'N/A')), heroes);
   const sortedHeroes = sortWith([
     ascend((h) => new Date(prop('releaseDate', h))),
