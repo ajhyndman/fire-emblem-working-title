@@ -1,10 +1,12 @@
 import fs from 'fs';
 import {
   assoc,
+  ascend,
   compose,
   contains,
   dissoc,
   dropLast,
+  filter,
   flatten,
   has,
   identity,
@@ -14,10 +16,13 @@ import {
   mapObjIndexed,
   merge,
   mergeWith,
+  not,
   pick,
   prop,
   propEq,
+  repeat,
   replace,
+  sortWith,
   test,
   toUpper,
   values,
@@ -161,6 +166,61 @@ function skillsWithWeaponsTypes(heroes, skills) {
   return withWeaponTypes;
 }
 
+// Provides maps from id -> name for [heroes, weapons, assists, specials, a, b, c]
+// Orders the heroes by id, name and skills in order of the heroes that.
+// Unreleased heroes and unobtainable skills have no id.
+// This will generate the same ids even after new heroes and skills are released,
+// but it will fail if old content is renamed.
+function computeIds(heroes, skills) {
+  const skillsByName = indexBy(prop('name'), skills);
+  const types = [
+    'HERO',
+    'WEAPON',
+    'ASSIST',
+    'SPECIAL',
+    'PASSIVE_A',
+    'PASSIVE_B',
+    'PASSIVE_C',
+  ];
+  let idsByName = {};
+  let namesByTypeAndId = zipObj(types, map((x) => {return {}}, types));
+  let nextIdsByType = zipObj(types, repeat(0, types.length));
+  const releasedHeroes = filter(compose(not, propEq('releaseDate', 'N/A')), heroes);
+  const sortedHeroes = sortWith([
+    ascend(prop('releaseDate')),
+    ascend(prop('name')),
+  ])(releasedHeroes)
+  for (let hero of sortedHeroes) {
+    const heroId = nextIdsByType['HERO']++;
+    idsByName[hero.name] = heroId;
+    namesByTypeAndId['HERO'][heroId] = hero.name;
+    for (let skillName of map(prop('name'), hero.skills)) {
+      const sType = skillsByName[skillName].type;
+      if (idsByName[skillName] == null) {
+        const skillId = nextIdsByType[sType]++;
+        idsByName[skillName] = skillId;
+        namesByTypeAndId[sType][skillId] = skillName;
+      }
+    }
+  }
+  return {idsByName, namesByTypeAndId};
+}
+
+function validateIdsPreserved(oldIds, newIds) {
+  if (oldIds == null) {
+    return true;
+  }
+  let idsOk = true;
+  for (let name in oldIds.idsByName) {
+    if (oldIds.idsByName[name] != newIds.idsByName[name]) {
+      console.log('Warning: id for', name, 'changed from',
+                  oldIds.idsByName[name], 'to', newIds.idsByName[name]);
+      idsOk = false;
+    }
+  }
+  return idsOk;
+}
+
 // Fetch new data and write it to stats.json
 async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   const existingStats = JSON.parse(fs.readFileSync('./dist/stats.json', 'utf8'));
@@ -170,10 +230,19 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   // Infer weapon subtypes from the heroes that own them.
   const skillsV2 = skillsWithWeaponsTypes(heroes, skills);
   validate(heroes, skillsV2);
+  
+  let ids = computeIds(heroes, skills);
+  const oldIds = existingStats['ids'];
+  const idsOk = validateIdsPreserved(oldIds, ids);
+  if (!idsOk) {
+    // If any ids have changed, continue to use all of the old ids.
+    ids = oldIds;
+    console.log("Warning: Using old ids.");
+  }
 
   // WRITE STATS TO FILE
-  const allStats = { heroes, skills: skillsV2 };
+  const allStats = { heroes, skills: skillsV2, ids };
   fs.writeFileSync('./dist/stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchWikiStats(true, true);
+fetchWikiStats(false, false);
