@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import Router from 'next/router';
 import withRedux from 'next-redux-wrapper';
 // import { isEmpty } from 'ramda';
 
@@ -10,7 +9,7 @@ import Overlay from '../src/components/Overlay';
 import initStore from '../src/store';
 import { getDefaultSkills } from '../src/heroHelpers';
 // import { decodeHero } from '../src/queryCodex';
-import { push } from '../src/router';
+import Router from '../src/router';
 import type { Dispatch } from '../src/reducer';
 import type { State } from '../src/store';
 
@@ -66,7 +65,7 @@ class Configure extends React.Component {
               type: 'SELECT_SLOT',
               slot: undefined,
             });
-            push('/');
+            Router.push('/');
           }}
           onMouseEnter={() => {
             // The root route is going to be frequently switched to and from.

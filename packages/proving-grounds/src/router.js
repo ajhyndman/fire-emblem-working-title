@@ -1,8 +1,18 @@
 // @flow
 import Router from 'next/router';
+import ReactGA from 'react-ga';
 
-export const push = (route: string) => {
-  ga('set', 'page', route);
-  ga('send', 'pageview');
-  Router.push(route);
-};
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+}
+
+if (
+  typeof window !== 'undefined'
+  && window.location.hostname === 'proving-grounds.ajhyndman.com'
+) {
+  ReactGA.initialize('UA-97182834-1');
+  Router.onRouteChangeComplete = logPageView;
+}
+
+export default Router;

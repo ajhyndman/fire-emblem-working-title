@@ -1,11 +1,11 @@
 // @flow
 import React from 'react';
-import Router from 'next/router';
 import Color from 'color-js';
 import { map, range, addIndex } from 'ramda';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import HeroPortrait from './Hero';
+import Router from '../router';
 import {
   colors,
   fontFamilies,
