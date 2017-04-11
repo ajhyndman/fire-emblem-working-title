@@ -4,6 +4,9 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "ga": false
+  },
   "rules": {
     "eqeqeq": ["error", "always", {"null": "ignore"}],
     "indent": ["error", 2, { "SwitchCase": 1 }],

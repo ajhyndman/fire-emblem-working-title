@@ -85,6 +85,20 @@ class Root extends React.Component {
               position: relative;
             }
           `}</style>
+          <script>{`
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-97182834-1', 'auto');
+
+            if (window.location.hostname !== 'proving-grounds.ajhyndman.com') {
+              ga('set', 'sendHitTask', null);
+            }
+
+            ga('send', 'pageview');
+          `}</script>
         </Head>
         <style jsx>{`
           .footer {
@@ -186,10 +200,11 @@ class Root extends React.Component {
           activeHeroName={path(['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
-            // $FlowIssue typedef for prop isn't resolving correctly
             allPass([
               // Exclude unreleased heroes.
-              (hero) => propOr('N/A', 'releaseDate', hero) != 'N/A',
+              // $FlowIssue typedef for propOr isn't resolving correctly
+              (hero) => propOr('N/A', 'releaseDate', hero) !== 'N/A',
+              // $FlowIssue typedef for prop isn't resolving correctly
               compose(
                 name => (name.indexOf(toLower(state.searchString)) !== -1),
                 toLower,

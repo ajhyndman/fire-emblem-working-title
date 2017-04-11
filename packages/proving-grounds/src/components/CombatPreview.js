@@ -1,11 +1,11 @@
 // @flow
 import React from 'react';
-import Router from 'next/router';
 
 import Hero from './Hero';
 import { colors, gridSize, transition } from '../theme';
 import { lookupStats } from '../heroHelpers';
 import { staticUrl } from '../../config';
+import { push } from '../router';
 import type { Dispatch } from '../reducer';
 
 
@@ -20,7 +20,7 @@ const openConfig = (event, dispatch, slot) => {
   dispatch({ type: 'SELECT_HERO', hero: undefined });
   event.preventDefault();
   dispatch({ type: 'SELECT_SLOT', slot: slot });
-  Router.push('/configure');
+  push('/configure');
 };
 
 const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => (
