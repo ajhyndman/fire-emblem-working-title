@@ -1,11 +1,16 @@
 // @flow
-import { any, assocPath, findIndex, isNil, reverse, update } from 'ramda';
+import { any, assocPath, concat, drop, findIndex, isNil, reverse, update } from 'ramda';
 import type { Skill, SkillType } from 'fire-emblem-heroes-stats';
 
 import type { HeroInstance, Rarity, Stat, State } from './store';
 
 
 export type Action = {
+  type: 'DEQUEUE_NOTIFICATION';
+} | {
+  type: 'ENQUEUE_NOTIFICATION';
+  value: string;
+} | {
   type: 'SEARCH_STRING_CHANGE';
   value: string;
 } | {
@@ -52,6 +57,10 @@ const getEmptySlot = (state: State) => findIndex(isNil, state.heroSlots);
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
+    case 'DEQUEUE_NOTIFICATION':
+      return { ...state, notifications: drop(1, state.notifications) };
+    case 'ENQUEUE_NOTIFICATION':
+      return { ...state, notifications: concat(state.notifications, [action.value]) };
     case 'SEARCH_STRING_CHANGE':
       return { ...state, searchString: action.value };
     case 'SELECT_SLOT':

@@ -1,8 +1,7 @@
 // @flow
 import React from 'react';
-// import stats from 'fire-emblem-heroes-stats';
 import { action, storiesOf } from '@kadira/storybook';
-// import { find, propEq } from 'ramda';
+import { drop } from 'ramda';
 import { withReducer, withState } from 'recompose';
 
 import Frame from '../src/components/Frame';
@@ -15,6 +14,7 @@ import SegmentedControl from '../src/components/SegmentedControl';
 import Skill from '../src/components/Skill';
 import SkillSelector from '../src/components/SkillSelector';
 import StatSheet from '../src/components/StatSheet';
+import Toast from '../src/components/Toast';
 import { colors } from '../src/theme';
 import { getDefaultSkills } from '../src/heroHelpers';
 import type { HeroInstance } from '../src/store';
@@ -246,3 +246,32 @@ storiesOf('StatSheet', module)
       />
     </div>
   ));
+
+storiesOf('Toast', module)
+  .add('default', () => {
+    const reducer = (messages, action) => {
+      if (action.type === 'DEQUEUE_NOTIFICATION') {
+        return drop(1, messages);
+      }
+      return messages;
+    };
+
+    const init = ['Not enough energy', 'You must construct additional pylons!'];
+
+    const ToastDemo = withReducer('messages', 'dispatch', reducer, init)(
+      ({ dispatch, messages }) => (
+        <div className="root">
+          <style jsx>{`
+            .root {
+              border: 1px solid violet;
+              height: 200px;
+              position: relative;
+            }
+          `}</style>
+          <Toast dispatch={dispatch} messages={messages} />
+        </div>
+      ),
+    );
+
+    return <ToastDemo />;
+  });
