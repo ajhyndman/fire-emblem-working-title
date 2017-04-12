@@ -223,7 +223,15 @@ const hitDmg = (
  * @param {Hero} defender
  * @returns {object}
  */
-export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) => {
+export const calculateResult = (
+  attacker: HeroInstance,
+  defender: HeroInstance,
+  // Note: current implementation of skills assumes full health.
+  attackerInitialHp: ?number = null,
+  defenderInitialHp: ?number = null,
+  attackerInitialCooldown: ?number = null,
+  defenderInitialCooldown: ?number = null,
+) => {
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
   if (getSkillName(attacker, 'WEAPON') !== '') {
@@ -259,9 +267,12 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
   // $FlowIssue $Iterable. This type is incompatible with array type
   const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
   // $FlowIssue $Iterable. This type is incompatible with array type
-  let specialCds: Array<number> = map(getSpecialCooldown, heroes);
+  let specialCds: Array<number> = [
+    attackerInitialCooldown == null ? getSpecialCooldown(attacker) : attackerInitialCooldown,
+    defenderInitialCooldown == null ? getSpecialCooldown(defender) : defenderInitialCooldown,
+  ]
   let numAttacks = [0, 0];
-  let healths = [maxHps[0], maxHps[1]];
+  let healths = [attackerInitialHp || maxHps[0], defenderInitialHp || maxHps[1]];
   // AOE Damage
   const aoeDamage = specialCds[0] === 0
     ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;

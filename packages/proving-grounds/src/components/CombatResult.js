@@ -28,8 +28,14 @@ const DamageInfo = ({damage, numAttacks, specialDamage}) => (
 
 const CombatResult = ({ leftHero, rightHero }: Props) => {
   let result = leftHero && rightHero
-    ? calculateResult(leftHero, rightHero)
-    : undefined;
+    ? calculateResult(
+      leftHero,
+      rightHero,
+      getStat(leftHero, 'hp'),
+      getStat(rightHero, 'hp'),
+      getSpecialCooldown(leftHero),
+      getSpecialCooldown(rightHero),
+    ) : undefined;
 
   return (
     <div className="root">
