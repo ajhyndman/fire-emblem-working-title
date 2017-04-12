@@ -8,12 +8,18 @@ import type { HeroInstance } from '../store';
 import { colors } from '../theme';
 
 
-type Props = {
+type DamageInfoProps = {
+  damage: number;
+  numAttacks: number;
+  specialDamage: number;
+};
+
+type CombatResultProps = {
   leftHero: ?HeroInstance;
   rightHero: ?HeroInstance;
 };
 
-const DamageInfo = ({damage, numAttacks, specialDamage}) => (
+const DamageInfo = ({damage, numAttacks, specialDamage}: DamageInfoProps) => (
   <span>
     <style jsx>{`
       .special-damage {
@@ -22,11 +28,11 @@ const DamageInfo = ({damage, numAttacks, specialDamage}) => (
     `}</style>
     {(isNaN(damage) ? '?' : numAttacks > 0 ? `${damage}` : '')}
     {(numAttacks > 1 ? ` × ${numAttacks}` : '')}
-    <span className="special-damage">{(specialDamage > 0 ? ` (+${specialDamage})` : '')}</span>
+    <span className="special-damage">{(specialDamage > 0 ? ` +${specialDamage}` : '')}</span>
   </span>
 );
 
-const CombatResult = ({ leftHero, rightHero }: Props) => {
+const CombatResult = ({ leftHero, rightHero }: CombatResultProps) => {
   let result = leftHero && rightHero
     ? calculateResult(
       leftHero,

@@ -270,7 +270,7 @@ export const calculateResult = (
   let specialCds: Array<number> = [
     attackerInitialCooldown == null ? getSpecialCooldown(attacker) : attackerInitialCooldown,
     defenderInitialCooldown == null ? getSpecialCooldown(defender) : defenderInitialCooldown,
-  ]
+  ];
   let numAttacks = [0, 0];
   let healths = [attackerInitialHp || maxHps[0], defenderInitialHp || maxHps[1]];
   // AOE Damage
