@@ -262,9 +262,10 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
   let specialCds: Array<number> = map(getSpecialCooldown, heroes);
   let numAttacks = [0, 0];
   let healths = [maxHps[0], maxHps[1]];
-  // AOE Specials
+  // AOE Damage
   const aoeDamage = specialCds[0] === 0
     ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;
+  let specialDamages = [aoeDamage, 0];
   healths[1] = hpRemaining(aoeDamage, healths[1], false);
   // Main combat loop.
   for (let heroIndex: number of attackOrder) {
@@ -277,6 +278,11 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
             
       // Attacker Special. Use '' for no special.
       let attackerSpecial = '';
+      let dmgWithoutSpecial = hitDmg(
+        heroes[heroIndex],
+        heroes[otherHeroIndex],
+        heroIndex === 0,  // isAttacker
+      );
       if (specialCds[heroIndex] === 0 && specialTypes[heroIndex] === 'ATTACK') {
         attackerSpecial = specialNames[heroIndex];
         lifestealPercent += getSpecialLifestealPercent(attackerSpecial);
@@ -291,6 +297,7 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
         attackerSpecial,
         getStat(heroes[heroIndex], 'hp') - healths[heroIndex],  // missing hp
       );
+      specialDamages[heroIndex] += (dmg - dmgWithoutSpecial);
 
       // Defender Special
       if (specialCds[otherHeroIndex] === 0 && specialTypes[otherHeroIndex] === 'ATTACKED') {
@@ -347,7 +354,8 @@ export const calculateResult = (attacker: HeroInstance, defender: HeroInstance) 
   }
 
   return {
-    aoeDamage: aoeDamage,
+    attackerSpecialDamage: specialDamages[0],
+    defenderSpecialDamage: specialDamages[1],
     attackerNumAttacks: numAttacks[0],
     attackerDamage: damages[0],
     attackerHpRemaining: healths[0],

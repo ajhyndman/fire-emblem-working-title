@@ -11,6 +11,7 @@ export const colors = Object.freeze({
   fadedJade: '#40737d',
   frostedGlass: 'rgba(255, 255, 255, 0.2)',
   iceberg: '#dcf2f3',
+  specialColor: '#8a4da0',
 });
 
 export const activateColor = (color: string) =>
