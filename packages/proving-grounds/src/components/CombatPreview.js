@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Router from '../router';
 import { colors, gridSize, transition } from '../theme';
 import { lookupStats } from '../heroHelpers';
+import { getSpecialCooldown } from '../skillHelpers';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 
@@ -118,6 +119,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
                 name={leftHero.name}
                 weaponType={lookupStats(leftHero.name).weaponType}
                 rarity={leftHero.rarity}
+                specialCooldown={getSpecialCooldown(leftHero)}
               />
               <img
                 className="configure-button"
@@ -173,6 +175,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
                 name={rightHero.name}
                 weaponType={lookupStats(rightHero.name).weaponType}
                 rarity={rightHero.rarity}
+                specialCooldown={getSpecialCooldown(rightHero)}
               />
               <img
                 className="configure-button"

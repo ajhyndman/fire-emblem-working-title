@@ -3,18 +3,22 @@ import React from 'react';
 import { replace } from 'ramda';
 
 import Frame from './Frame';
-import { colors, gridSize } from '../theme';
+import { colors, fontFamilies, fontSizes, gridSize } from '../theme';
 import { staticUrl } from '../../config';
 
 type Rarity = 1 | 2 | 3 | 4 | 5;
 
 type Props = {
   name: string;
-  weaponType: ?string;
   rarity?: Rarity;
+  specialCooldown?: number;
+  weaponType: ?string;
 };
 
-const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
+const CLASS_ICON_SIZE = 20;
+const OVERSET = 4;
+
+const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) => {
   const weaponTypeUri = weaponType ? replace(' ', '_', weaponType) : '';
 
   return (
@@ -30,9 +34,11 @@ const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
           width: ${gridSize}px;
         }
         .class {
-          left: -2px;
+          height: ${CLASS_ICON_SIZE}px;
+          left: -${OVERSET}px;
           position: absolute;
-          top: -2px;
+          top: -${OVERSET}px;
+          width: ${CLASS_ICON_SIZE}px;
         }
         .portrait {
           display: block;
@@ -42,6 +48,24 @@ const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
           position: absolute;
           top: 0;
           width: ${gridSize}px;
+        }
+        .specialCooldown {
+          color: ${colors.blushPink};
+          font-family: ${fontFamilies.ui};
+          font-size: ${fontSizes.medium}px;
+          font-weight: bold;
+          left: -${OVERSET}px;
+          line-height: 1;
+          position: absolute;
+          text-align: center;
+          /* simulated text-stroke: https://css-tricks.com/adding-stroke-to-web-text/ */
+          text-shadow:
+             -1px -1px 0 #000,
+              1px -1px 0 #000,
+              -1px 1px 0 #000,
+               1px 1px 0 #000;
+          top: ${CLASS_ICON_SIZE - OVERSET - 2}px;
+          width: ${CLASS_ICON_SIZE}px;
         }
         .frame {
           pointer-events: none;
@@ -74,8 +98,11 @@ const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
           ${staticUrl}35px-Icon_Class_${weaponTypeUri}.png 35w,
           ${staticUrl}Icon_Class_${weaponTypeUri}.png 56w
         `}
-        sizes="20px"
+        sizes={`${CLASS_ICON_SIZE}px`}
       />}
+      {(specialCooldown != null && specialCooldown !== -1)&& <span className="specialCooldown">
+        {specialCooldown}
+      </span>}
     </div>
   );
 };
