@@ -73,6 +73,8 @@ class Root extends React.Component {
           />
           <style>{`
             body {
+              /* average of background-image color */
+              background-color: #333939;
               background-image: url(${staticUrl}${backgroundUrl});
               background-image: -webkit-image-set(
                 url(${staticUrl}${backgroundUrl}) 1x,

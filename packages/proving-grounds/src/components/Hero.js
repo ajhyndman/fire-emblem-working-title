@@ -24,15 +24,24 @@ const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
           position: relative;
           width: ${gridSize}px;
         }
+        .backing {
+          background-image: linear-gradient(170deg, ${colors.fadedJade}, ${colors.aquaIsland});
+          height: ${gridSize}px;
+          width: ${gridSize}px;
+        }
         .class {
           left: -2px;
           position: absolute;
           top: -2px;
         }
         .portrait {
-          background-image: linear-gradient(170deg, ${colors.fadedJade}, ${colors.aquaIsland});
           display: block;
+          height: ${gridSize}px;
+          left: 0;
           margin: 0 auto;
+          position: absolute;
+          top: 0;
+          width: ${gridSize}px;
         }
         .frame {
           pointer-events: none;
@@ -42,6 +51,18 @@ const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
           width: ${1.14 * gridSize}px;
         }
       `}</style>
+      <div className="backing" />
+      <img
+        className="portrait"
+        title={name}
+        alt={name}
+        src={`${staticUrl}75px-Icon_Portrait_${encodeURIComponent(name)}.png`}
+        srcSet={`
+          ${staticUrl}113px-Icon_Portrait_${encodeURIComponent(name)}.png 113w,
+          ${staticUrl}150px-Icon_Portrait_${encodeURIComponent(name)}.png 150w
+        `}
+        sizes={`${gridSize}px`}
+      />
       <div className="frame">
         <Frame rarity={rarity} />
       </div>
@@ -55,17 +76,6 @@ const HeroPortrait = ({ name, weaponType, rarity = 5 }: Props) => {
         `}
         sizes="20px"
       />}
-      <img
-        className="portrait"
-        title={name}
-        alt={name}
-        src={`${staticUrl}75px-Icon_Portrait_${encodeURIComponent(name)}.png`}
-        srcSet={`
-          ${staticUrl}113px-Icon_Portrait_${encodeURIComponent(name)}.png 113w,
-          ${staticUrl}150px-Icon_Portrait_${encodeURIComponent(name)}.png 150w
-        `}
-        sizes={`${gridSize}px`}
-      />
     </div>
   );
 };

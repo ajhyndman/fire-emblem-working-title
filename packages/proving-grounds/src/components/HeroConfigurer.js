@@ -83,6 +83,9 @@ const HeroConfigurer = withState(
       <style jsx>{`
         .root {
           align-items: center;
+          background-clip: padding-box;
+          /* average of border-image color */
+          background-color: #1c4654;
           border: 46px solid transparent;
           border-image: url(${staticUrl}Border_Blue.png) 46 fill stretch;
           display: flex;
