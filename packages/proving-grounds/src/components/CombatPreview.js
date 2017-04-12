@@ -17,8 +17,10 @@ type Props = {
 };
 
 const openConfig = (event, dispatch, slot) => {
-  dispatch({ type: 'SELECT_HERO', hero: undefined });
   event.preventDefault();
+  // Need to select the slot without putting activeHero or null in the slot.
+  dispatch({ type: 'SELECT_SLOT', slot: null });
+  dispatch({ type: 'SELECT_HERO', hero: null });
   dispatch({ type: 'SELECT_SLOT', slot: slot });
   Router.push('/configure');
 };
