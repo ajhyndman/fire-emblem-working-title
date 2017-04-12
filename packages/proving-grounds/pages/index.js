@@ -4,6 +4,7 @@ import withRedux from 'next-redux-wrapper';
 import { isEmpty } from 'ramda';
 
 import Root from '../src/components/Root';
+import Router from '../src/router';
 import initStore from '../src/store';
 import { decodeHero } from '../src/queryCodex';
 import type { Dispatch } from '../src/reducer';
@@ -26,6 +27,11 @@ class Home extends React.Component {
     }
 
     if (req) dispatch({ type: 'SET_HOST', host: req.headers.host });
+  }
+
+  componentDidMount() {
+    // The configure route is going to be frequently switched to and from.
+    Router.prefetch('/configure');
   }
 
   render() {

@@ -3,13 +3,13 @@ import React from 'react';
 import withRedux from 'next-redux-wrapper';
 // import { isEmpty } from 'ramda';
 
-import Root, { panelHeight } from '../src/components/Root';
 import HeroConfigurer from '../src/components/HeroConfigurer';
 import Overlay from '../src/components/Overlay';
+import Root, { panelHeight } from '../src/components/Root';
+import Router from '../src/router';
 import initStore from '../src/store';
 import { getDefaultSkills } from '../src/heroHelpers';
 // import { decodeHero } from '../src/queryCodex';
-import Router from '../src/router';
 import type { Dispatch } from '../src/reducer';
 import type { State } from '../src/store';
 
@@ -43,6 +43,11 @@ class Configure extends React.Component {
     if (req) dispatch({ type: 'SET_HOST', host: req.headers.host });
   }
 
+  componentDidMount() {
+    // The root route is going to be frequently switched to and from.
+    Router.prefetch('/');
+  }
+
   render() {
     return (
       <div>
@@ -66,10 +71,6 @@ class Configure extends React.Component {
               slot: undefined,
             });
             Router.push('/');
-          }}
-          onMouseEnter={() => {
-            // The root route is going to be frequently switched to and from.
-            Router.prefetch('/');
           }}
         >
           <div className="container">

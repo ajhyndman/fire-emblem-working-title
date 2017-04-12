@@ -92,8 +92,6 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
                   skills: getDefaultSkills(hero.name, 5),
                 },
               });
-              // The configure route is going to be frequently switched to and from.
-              Router.prefetch('/configure');
             }}
           >
             <HeroPortrait
