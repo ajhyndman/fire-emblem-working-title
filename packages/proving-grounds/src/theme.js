@@ -6,12 +6,12 @@ export const breakPoints = Object.freeze({
 });
 
 export const colors = Object.freeze({
-  elephant: '#123346',
   aquaIsland: '#9ad8da',
+  blushPink: '#ff79fe',
+  elephant: '#123346',
   fadedJade: '#40737d',
   frostedGlass: 'rgba(255, 255, 255, 0.2)',
   iceberg: '#dcf2f3',
-  specialColor: '#8a4da0',
 });
 
 export const activateColor = (color: string) =>

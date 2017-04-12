@@ -6,7 +6,7 @@ import { getStat } from '../heroHelpers';
 import { getSpecialCooldown } from '../skillHelpers';
 import { staticUrl } from '../../config';
 import type { HeroInstance } from '../store';
-import { colors } from '../theme';
+import { colors, fontSizes } from '../theme';
 
 
 type DamageInfoProps = {
@@ -21,10 +21,19 @@ type CombatResultProps = {
 };
 
 const DamageInfo = ({damage, numAttacks, specialDamage}: DamageInfoProps) => (
-  <span>
+  <span className="root">
     <style jsx>{`
+      .root {
+        position: relative;
+      }
       .special-damage {
-        color: ${colors.specialColor};
+        color: ${colors.blushPink};
+        font-size: ${fontSizes.medium}px;
+        position: absolute;
+        right: -5px;
+        top: 0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        transform: translate(100%, 75%);
       }
     `}</style>
     {(isNaN(damage) ? '?' : numAttacks > 0 ? `${damage}` : '')}
