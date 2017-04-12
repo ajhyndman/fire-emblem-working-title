@@ -1,4 +1,5 @@
 // @flow
+import 'babel-polyfill';
 import React from 'react';
 import withRedux from 'next-redux-wrapper';
 // import { isEmpty } from 'ramda';
