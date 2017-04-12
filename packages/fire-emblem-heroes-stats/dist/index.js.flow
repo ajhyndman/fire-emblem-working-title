@@ -66,12 +66,12 @@ export type StatsByLevel = {
 export type Hero = {
   +name: string;
   +shortName?: string;
-  +title: string;
+  +title?: string;
   +moveType: MoveType;
   +weaponType: WeaponType;
-  +releaseDate: string;
-  +origin: string;
-  +rarities: string;
+  +releaseDate?: string;
+  +origin?: string;
+  +rarities?: string;
   +stats: StatsByLevel;
   +skills: Array<{
     +name: string;

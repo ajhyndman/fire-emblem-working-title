@@ -266,7 +266,6 @@ export const calculateResult = (
     [getSkillName(attacker, 'SPECIAL'), getSkillName(defender, 'SPECIAL')];
   // $FlowIssue $Iterable. This type is incompatible with array type
   const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
-  // $FlowIssue $Iterable. This type is incompatible with array type
   let specialCds: Array<number> = [
     attackerInitialCooldown == null ? getSpecialCooldown(attacker) : attackerInitialCooldown,
     defenderInitialCooldown == null ? getSpecialCooldown(defender) : defenderInitialCooldown,
