@@ -14,7 +14,6 @@ import {
   mapObjIndexed,
   merge,
   mergeWith,
-  pick,
   prop,
   propEq,
   replace,
