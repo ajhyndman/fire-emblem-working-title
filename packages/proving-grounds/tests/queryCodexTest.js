@@ -7,6 +7,8 @@ import {
   decodeHero,
   encodeHero,
   extractInstance,
+  extractWithDefaults,
+  flattenAndIgnoreDefaults,
   flattenInstance,
   hash,
   // hashTable,
@@ -15,16 +17,16 @@ import type { HeroInstance } from '../src/heroInstance';
 import { getDefaultInstance } from '../src/heroInstance';
 
 
-const mockInstance: HeroInstance = getDefaultInstance('Anna');
+const mockInstance: HeroInstance = { ...getDefaultInstance('Anna'), bane: 'atk'};
 
 test('flattenInstance', (t) => {
   t.test('reduces an instance to an array', (assert) => {
     assert.deepEqual(
       flattenInstance(mockInstance),
       [
-        null,
-        null,
         'Anna',
+        2, // atk bane
+        6, // no boon
         5,
         null,
         null,
@@ -40,6 +42,26 @@ test('flattenInstance', (t) => {
   t.test('is reversible', (assert) => {
     assert.deepEqual(
       extractInstance(flattenInstance(mockInstance)),
+      mockInstance,
+    );
+    assert.end();
+  });
+
+  t.end();
+});
+
+test('flattenAndIgnoreDefaults', (t) => {
+  t.test('reduces an instance to an array', (assert) => {
+    assert.deepEqual(
+      flattenAndIgnoreDefaults(mockInstance),
+      ['Anna', 2 /* atk bane */, 7, 7, 7, 7, 7, 7, 7, 7],
+    );
+    assert.end();
+  });
+
+  t.test('is reversible', (assert) => {
+    assert.deepEqual(
+      extractWithDefaults(flattenAndIgnoreDefaults(mockInstance)),
       mockInstance,
     );
     assert.end();
@@ -90,7 +112,7 @@ test('encodeHero', (t) => {
     );
     assert.equal(
       encodeHero(mockInstance),
-      'AwalwEwYwZhBWMSBMA2eUEEMqpDdLELGCLIA',
+      'AwEwxgzA1ATFDsCmJcoA',
     );
     assert.end();
   });
