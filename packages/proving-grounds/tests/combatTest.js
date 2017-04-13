@@ -5,12 +5,12 @@ import type { SpecialSkill} from 'fire-emblem-heroes-stats';
 import { calculateResult } from '../src/damageCalculation';
 import { getDefaultSkills } from '../src/heroHelpers';
 import { getSkillInfo } from '../src/skillHelpers';
-import type { HeroInstance, InstanceSkills } from '../src/store';
+import type { HeroInstance, InstanceSkills, Rarity } from '../src/heroInstance';
 
 
 function makeHero(
   name: string,
-  rarity: 1 | 2 | 3 | 4 | 5 = 5,
+  rarity: Rarity = 5,
   customSkills: {} = {},
 ): HeroInstance {
   return {

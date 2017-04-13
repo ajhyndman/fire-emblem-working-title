@@ -11,24 +11,11 @@ import {
   hash,
   // hashTable,
 } from '../src/queryCodex';
-import type { HeroInstance } from '../src/store';
+import type { HeroInstance } from '../src/heroInstance';
+import { getDefaultInstance } from '../src/heroInstance';
 
 
-const mockInstance: HeroInstance = {
-  bane: null,
-  boon: null,
-  name: 'Anna',
-  rarity: 5,
-  skills: {
-    // FlowIssue: getSkillInfo's typedef can't infer which skill type will be returned.
-    WEAPON: (getSkillInfo('Nóatún'): any),
-    ASSIST: null,
-    SPECIAL: (getSkillInfo('Astra'): any),
-    PASSIVE_A: null,
-    PASSIVE_B: (getSkillInfo('Vantage 3'): any),
-    PASSIVE_C: (getSkillInfo('Spur Res 3'): any),
-  },
-};
+const mockInstance: HeroInstance = getDefaultInstance('Anna');
 
 test('flattenInstance', (t) => {
   t.test('reduces an instance to an array', (assert) => {
@@ -114,6 +101,28 @@ test('encodeHero', (t) => {
     assert.deepEqual(
       decodeHero(encodeHero(mockInstance)),
       mockInstance,
+    );
+    assert.end();
+  });
+
+  t.test('encode removed skills', (assert) => {
+    const noSkillHero: HeroInstance = {
+      bane: null,
+      boon: null,
+      name: 'Anna',
+      rarity: 5,
+      skills: {
+        WEAPON: null,
+        ASSIST: null,
+        SPECIAL: null,
+        PASSIVE_A: null,
+        PASSIVE_B: null,
+        PASSIVE_C: null,
+      },
+    };
+    assert.deepEqual(
+      decodeHero(encodeHero(noSkillHero)),
+      noSkillHero,
     );
     assert.end();
   });

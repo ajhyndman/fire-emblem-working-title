@@ -5,7 +5,6 @@ import { map, range, addIndex } from 'ramda';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import HeroPortrait from './Hero';
-import Router from '../router';
 import {
   colors,
   fontFamilies,

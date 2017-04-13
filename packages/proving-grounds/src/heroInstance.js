@@ -1,4 +1,11 @@
 // @flow
+import type {
+  AssistSkill,
+  PassiveSkill,
+  SpecialSkill,
+  WeaponSkill,
+} from 'fire-emblem-heroes-stats';
+
 import { getDefaultSkills } from './heroHelpers';
 
 
@@ -45,10 +52,10 @@ export type HeroInstance = {
 //   passiveC: PassiveSkill;
 // };
 
-export const getDefaultInstance = (name:string): HeroInstance => ({
+export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstance => ({
   name: name,
-  bane: undefined,
-  boon: undefined,
-  rarity: 5,
-  skills: getDefaultSkills(name, 5),
+  bane: null,
+  boon: null,
+  rarity: rarity,
+  skills: getDefaultSkills(name, rarity),
 });

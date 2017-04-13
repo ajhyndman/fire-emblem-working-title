@@ -1,11 +1,5 @@
 // @flow
 import { createStore } from 'redux';
-import type {
-  AssistSkill,
-  PassiveSkill,
-  SpecialSkill,
-  WeaponSkill,
-} from 'fire-emblem-heroes-stats';
 
 import reducer from './reducer';
 import type { HeroInstance } from './heroInstance';

@@ -17,7 +17,7 @@ import StatSheet from '../src/components/StatSheet';
 import Toast from '../src/components/Toast';
 import { colors } from '../src/theme';
 import { getDefaultSkills } from '../src/heroHelpers';
-import type { HeroInstance } from '../src/store';
+import type { HeroInstance } from '../src/heroInstance';
 import type { Dispatch } from '../src/reducer';
 
 

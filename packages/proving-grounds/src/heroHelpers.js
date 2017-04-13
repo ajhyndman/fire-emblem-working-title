@@ -95,12 +95,12 @@ export function getDefaultSkills(name: string, rarity: Rarity): InstanceSkills {
   )(hero.skills): any);
 
   return {
-    WEAPON: undefined,
-    ASSIST: undefined,
-    SPECIAL: undefined,
-    PASSIVE_A: undefined,
-    PASSIVE_B: undefined,
-    PASSIVE_C: undefined,
+    WEAPON: null,
+    ASSIST: null,
+    SPECIAL: null,
+    PASSIVE_A: null,
+    PASSIVE_B: null,
+    PASSIVE_C: null,
     ...skillsByType,
   };
 }
