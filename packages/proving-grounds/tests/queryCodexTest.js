@@ -34,6 +34,7 @@ test('flattenInstance', (t) => {
         'Spur Res 3',
         'Astra',
         'Nóatún',
+        null,
       ],
     );
     assert.end();
@@ -54,7 +55,7 @@ test('flattenAndIgnoreDefaults', (t) => {
   t.test('reduces an instance to an array', (assert) => {
     assert.deepEqual(
       flattenAndIgnoreDefaults(mockInstance),
-      ['Anna', 2 /* atk bane */, 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd'],
+      ['Anna', 2 /* atk bane */, 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd'],
     );
     assert.end();
   });
@@ -112,7 +113,7 @@ test('encodeHero', (t) => {
     );
     assert.equal(
       encodeHero(mockInstance),
-      'AwEwxgzA1ATFL0Q5Sg',
+      'AwEwxgzA1ATFL0Q5T5A',
     );
     assert.end();
   });

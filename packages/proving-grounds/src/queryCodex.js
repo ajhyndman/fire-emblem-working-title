@@ -76,6 +76,7 @@ export const flattenInstance = (instance: HeroInstance): SerialInstance => [
   instance.skills && instance.skills.PASSIVE_C && instance.skills.PASSIVE_C.name,
   instance.skills && instance.skills.SPECIAL && instance.skills.SPECIAL.name,
   instance.skills && instance.skills.WEAPON && instance.skills.WEAPON.name,
+  null, // S Passive
 ];
 
 export const extractInstance = ([
@@ -89,6 +90,7 @@ export const extractInstance = ([
   passiveC,
   special,
   weapon,
+  sSkill,
 // $FlowIssue bane/boon string is incompatible with ?Stat
 ]: SerialInstance): HeroInstance => ({
   bane: idToStatKey[bane.toString()],
