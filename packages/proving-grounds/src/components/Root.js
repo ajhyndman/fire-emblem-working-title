@@ -150,6 +150,8 @@ class Root extends React.Component {
             <ShareButton
               dispatch={dispatch}
               link={`${
+                typeof window !== 'undefined' ? window.location.protocol : ''
+              }//${
                 state.host
               }/?0=${
                 encodeHero(state.heroSlots[0])
