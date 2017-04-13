@@ -28,14 +28,14 @@ import { getDefaultInstance } from './heroInstance';
 
 // Convert no-stat to 6 to distinguish from null-skill which is hashed as 0
 // The actual value doesn't matter too much because no-variant will be USE_DEFAULT.
-const NO_VARIANT = 6;
+const NO_VARIANT = 'n';
 // Rarity and bane/boon will never be 7, so use 7 when a hero has a default skill.
-const USE_DEFAULT = 7; 
+const USE_DEFAULT = 'd'; 
 
 type SerialInstance = [
   string, // name
-  6 | 1 | 2 | 3 | 4 | 5, // bane
-  6 | 1 | 2 | 3 | 4 | 5, // boon
+  'n' | 1 | 2 | 3 | 4 | 5, // bane
+  'n' | 1 | 2 | 3 | 4 | 5, // boon
   Rarity, // rarity
   ?string, // assist
   ?string, // passive a
@@ -47,15 +47,15 @@ type SerialInstance = [
 
 type SerialInstanceWithDefaults = [
   string, // name
-  7 | 6 | 1 | 2 | 3 | 4 | 5, // bane
-  7 | 6 | 1 | 2 | 3 | 4 | 5, // boon
-  7 | Rarity, // rarity
-  7 | ?string, // assist
-  7 | ?string, // passive a
-  7 | ?string, // passive b
-  7 | ?string, // passive c
-  7 | ?string, // special
-  7 | ?string, // weapon
+  'd' | 'n' | 1 | 2 | 3 | 4 | 5, // bane
+  'd' | 'n' | 1 | 2 | 3 | 4 | 5, // boon
+  'd' | Rarity, // rarity
+  'd' | ?string, // assist
+  'd' | ?string, // passive a
+  'd' | ?string, // passive b
+  'd' | ?string, // passive c
+  'd' | ?string, // special
+  'd' | ?string, // weapon
 ];
 
 const statKeyToId = {'hp':1, 'atk':2, 'spd':3, 'def':4, 'res':5, 'null': NO_VARIANT};
@@ -139,7 +139,7 @@ export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefault
 export const hash = (value: any): string => (
   value == null
     ? '0'
-    : (typeof value === 'number')
+    : (typeof value === 'number' || (typeof value === 'string' && value.length < 4))
       ? value
       // 36^4 possible values and 500 items hashed => 5% chance of some collision existing.
       : take(4, SHA1(value).toString())
@@ -149,6 +149,7 @@ const values = flatten([
   // Explicitly add `null` to the hash table.
   // This is a workaround for issue #52
   null,
+  [USE_DEFAULT, NO_VARIANT],
   range(1, 99), // Rarity, Bane/Boon ids, and USE_DEFAULT are 1-7
   // $FlowIssue: flowtypes for ramda aren't precise
   map(prop('name'), stats.skills),

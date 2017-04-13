@@ -26,7 +26,7 @@ test('flattenInstance', (t) => {
       [
         'Anna',
         2, // atk bane
-        6, // no boon
+        'n', // no boon
         5,
         null,
         null,
@@ -54,7 +54,7 @@ test('flattenAndIgnoreDefaults', (t) => {
   t.test('reduces an instance to an array', (assert) => {
     assert.deepEqual(
       flattenAndIgnoreDefaults(mockInstance),
-      ['Anna', 2 /* atk bane */, 7, 7, 7, 7, 7, 7, 7, 7],
+      ['Anna', 2 /* atk bane */, 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd'],
     );
     assert.end();
   });
@@ -112,7 +112,7 @@ test('encodeHero', (t) => {
     );
     assert.equal(
       encodeHero(mockInstance),
-      'AwEwxgzA1ATFDsCmJcoA',
+      'AwEwxgzA1ATFL0Q5Sg',
     );
     assert.end();
   });
