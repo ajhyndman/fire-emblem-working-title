@@ -3,9 +3,10 @@ import React from 'react';
 
 import { gridSize } from '../theme';
 import { staticUrl } from '../../config';
+import type { Rarity } from '../heroInstance';
 
 type Props = {
-  rarity: 1 | 2 | 3 | 4 | 5;
+  rarity: Rarity;
 };
 
 const FRAME_WIDTH = gridSize * 1.14;

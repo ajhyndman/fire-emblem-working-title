@@ -23,7 +23,7 @@ import StatSheet from './StatSheet';
 import { colors, fontFamilies, fontSizes, lineHeights } from '../theme';
 import { hasStatsForRarity, lookupStats } from '../heroHelpers';
 import { staticUrl } from '../../config';
-import type { HeroInstance } from '../store';
+import type { HeroInstance } from '../heroInstance';
 import type { Dispatch } from '../reducer';
 
 

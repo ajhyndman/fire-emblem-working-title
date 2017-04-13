@@ -28,7 +28,7 @@ import type {
 
 import { getEventHeroes } from './temporal/events';
 import { getSkillInfo, getStatValue } from './skillHelpers';
-import type { HeroInstance, InstanceSkills, Rarity, Stat } from './store';
+import type { HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
 
 
 export type HeroesByName = { [key: string]: Hero };

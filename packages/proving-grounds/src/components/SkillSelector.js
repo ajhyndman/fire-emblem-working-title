@@ -14,7 +14,7 @@ import { colors, fontFamilies, fontSizes } from '../theme';
 import { getInheritableSkills } from '../heroHelpers';
 import { isMaxTier } from '../skillHelpers';
 import type { Dispatch } from '../reducer';
-import type { HeroInstance } from '../store';
+import type { HeroInstance } from '../heroInstance';
 
 
 type Props = {

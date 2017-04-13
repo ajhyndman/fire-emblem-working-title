@@ -4,8 +4,8 @@ import { map } from 'ramda';
 import cn from 'classnames';
 
 import { staticUrl } from '../../config';
+import type { Rarity } from '../heroInstance';
 
-type Rarity = 1 | 2 | 3 | 4 | 5;
 
 type Props = {
   disabled?: [boolean, boolean, boolean, boolean, boolean];

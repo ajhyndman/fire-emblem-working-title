@@ -5,7 +5,7 @@ import { calculateResult } from '../damageCalculation';
 import { getStat } from '../heroHelpers';
 import { getSpecialCooldown } from '../skillHelpers';
 import { staticUrl } from '../../config';
-import type { HeroInstance } from '../store';
+import type { HeroInstance } from '../heroInstance';
 import { colors, fontSizes } from '../theme';
 
 

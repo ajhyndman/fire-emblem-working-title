@@ -13,8 +13,8 @@ import {
   gridSize,
   lineHeights,
 } from '../theme';
-import { getDefaultSkills } from '../heroHelpers';
 import type { Dispatch } from '../reducer';
+import { getDefaultInstance } from '../heroInstance';
 
 
 type Props = {
@@ -84,13 +84,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
               event.stopPropagation();
               dispatch({
                 type: 'SELECT_HERO',
-                hero: {
-                  name: hero.name,
-                  bane: undefined,
-                  boon: undefined,
-                  rarity: 5,
-                  skills: getDefaultSkills(hero.name, 5),
-                },
+                hero: getDefaultInstance(hero.name),
               });
             }}
           >

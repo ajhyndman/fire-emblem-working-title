@@ -5,7 +5,7 @@ import stats from 'fire-emblem-heroes-stats';
 import { compose, flatten, map, prop, range, take, zipObj } from 'ramda';
 
 import { getSkillInfo } from './skillHelpers';
-import type { HeroInstance, Rarity, Stat } from './store';
+import type { HeroInstance, Rarity, Stat } from './heroInstance';
 
 
 /**

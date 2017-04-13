@@ -16,7 +16,7 @@ import stats from 'fire-emblem-heroes-stats';
 import type { Skill } from 'fire-emblem-heroes-stats';
 
 import { getStat, getMitigationType, hasSkill, getSkillName, getSkillEffect } from './heroHelpers';
-import type { HeroInstance } from './store';
+import type { HeroInstance } from './heroInstance';
 
 
 export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null;

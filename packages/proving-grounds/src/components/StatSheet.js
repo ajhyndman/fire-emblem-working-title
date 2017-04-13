@@ -8,7 +8,7 @@ import type { Hero } from 'fire-emblem-heroes-stats';
 import { colors, fontFamilies, fontSizes, gridSize, lineHeights } from '../theme';
 import { getStat } from '../heroHelpers';
 import HeroPortrait from './Hero';
-import type { HeroInstance } from '../store';
+import type { HeroInstance } from '../heroInstance';
 
 
 type Props = {

@@ -2,7 +2,8 @@
 import { any, assocPath, concat, drop, findIndex, isNil, reverse, update } from 'ramda';
 import type { Skill, SkillType } from 'fire-emblem-heroes-stats';
 
-import type { HeroInstance, Rarity, Stat, State } from './store';
+import type { State } from './store';
+import type { HeroInstance, Rarity, Stat } from './heroInstance';
 
 
 export type Action = {

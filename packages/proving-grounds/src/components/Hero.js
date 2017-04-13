@@ -5,8 +5,8 @@ import { replace } from 'ramda';
 import Frame from './Frame';
 import { colors, fontFamilies, fontSizes, gridSize } from '../theme';
 import { staticUrl } from '../../config';
+import type { Rarity } from '../heroInstance';
 
-type Rarity = 1 | 2 | 3 | 4 | 5;
 
 type Props = {
   name: string;

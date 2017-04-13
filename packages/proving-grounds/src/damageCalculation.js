@@ -28,7 +28,7 @@ import {
   getSpecialOffensiveMultiplier,
   getSpecialType,
 } from './skillHelpers';
-import type { HeroInstance } from './store';
+import type { HeroInstance } from './heroInstance';
 import type { SpecialType } from './skillHelpers';
   
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
