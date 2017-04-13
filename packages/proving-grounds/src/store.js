@@ -7,7 +7,7 @@ import type { HeroInstance } from './heroInstance';
 
 export type State = {
   host: string;
-  activeHero: ?HeroInstance;
+  activeHero: ?(HeroInstance | 'CLEAR');
   activeSlot: 0 | 1 | void;
   heroSlots: [?HeroInstance, ?HeroInstance];
   notifications: Array<string>;

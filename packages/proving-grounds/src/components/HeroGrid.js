@@ -20,11 +20,12 @@ type Props = {
   activeHeroName: ?string;
   dispatch: Dispatch;
   heroes: Array<Object>;
+  showUndo?: boolean;
 };
 
 const gutterWidth = 5;
 
-const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
+const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
   <div className="grid">
     <style jsx>{`
       .grid {
@@ -55,6 +56,19 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
         flex-basis: ${gridSize + gutterWidth}px;
         flex-direction: column;
       }
+      .undo {
+        align-items: center;
+        background-color: ${Color(colors.aquaIsland).setAlpha(0.2)};
+        box-shadow: inset 0 0 12px ${colors.aquaIsland};
+        color: white;
+        display: flex;
+        font-family: ${fontFamilies.ui};
+        font-size: ${fontSizes.medium};
+        height: ${gridSize}px;
+        justify-content: center;
+        line-height: 1;
+        width: ${gridSize}px;
+      }
       .active, .active:hover {
         box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5), 0 0 2px 4px rgba(223, 110, 134, 0.9);
       }
@@ -74,6 +88,22 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes }: Props) => (
         white-space: nowrap;
       }
     `}</style>
+    {showUndo && <div className="gridSquareOuter">
+      <div
+        className={`gridSquare ${activeHeroName === 'CLEAR' ? 'active' : ''}`}
+        onClick={(event) => {
+          event.stopPropagation();
+          dispatch({
+            type: 'SELECT_HERO',
+            hero: 'CLEAR',
+          });
+        }}
+      >
+        <div className="undo">
+          Undo
+        </div>
+      </div>
+    </div>}
     {addIndex(map)(
       (hero: Hero, i: number) => (
         <div className="gridSquareOuter" key={`${i}-${hero.name}`}>

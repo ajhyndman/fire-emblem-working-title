@@ -8,6 +8,7 @@ import {
   compose,
   filter,
   path,
+  pathOr,
   prop,
   propOr,
   toLower,
@@ -187,7 +188,7 @@ class Root extends React.Component {
         />
         <HeroGrid
           // $FlowIssue typedef for path isn't resolving correctly
-          activeHeroName={path(['activeHero', 'name'], state)}
+          activeHeroName={pathOr(state.activeHero, ['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
             allPass([
@@ -203,6 +204,7 @@ class Root extends React.Component {
             ]),
             stats.heroes,
           )}
+          showUndo
         />
         <div className="footer">
           Proving Grounds is an open source project licensed under GPL-3.0+

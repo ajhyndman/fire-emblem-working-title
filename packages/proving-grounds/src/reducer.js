@@ -16,7 +16,7 @@ export type Action = {
   value: string;
 } | {
   type: 'SELECT_HERO';
-  hero: ?HeroInstance;
+  hero: ?(HeroInstance | 'CLEAR');
 } | {
   type: 'SELECT_SLOT';
   slot: 0 | 1 | void;
@@ -65,31 +65,61 @@ const reducer = (state: State, action: Action): State => {
     case 'SEARCH_STRING_CHANGE':
       return { ...state, searchString: action.value };
     case 'SELECT_SLOT':
-      return (state.activeHero == null)
-        ? { ...state, activeSlot: action.slot }
-        : (action.slot == null)
+      return (state.activeHero === 'CLEAR')
+        ? (action.slot == null)
+          // clear active states
           ? { ...state, ...clearActiveState }
+          // clear the selected slot
           : {
             ...state,
             ...clearActiveState,
-            heroSlots: update(action.slot, state.activeHero, state.heroSlots),
-          };
-    case 'SELECT_HERO':
-      return (state.activeSlot == null)
-        // Move hero to first empty slot or select hero.
-        ? hasEmptySlot(state)
-          ? {
-            ...state,
-            ...clearActiveState,
-            heroSlots: update(getEmptySlot(state), action.hero, state.heroSlots),
+            heroSlots: update(action.slot, undefined, state.heroSlots),
           }
-          : { ...state, activeHero: action.hero }
-        // Move hero to selected slot.
-        : {
+        : (state.activeHero == null)
+          // activate slot
+          ? { ...state, activeSlot: action.slot }
+          : (action.slot == null)
+            // clear active states
+            ? { ...state, ...clearActiveState }
+            // select new hero
+            : {
+              ...state,
+              ...clearActiveState,
+              heroSlots: update(action.slot, state.activeHero, state.heroSlots),
+            };
+    case 'SELECT_HERO':
+      if (state.activeSlot != null && action.hero === 'CLEAR') {
+        // clear active slot
+        return {
+          ...state,
+          ...clearActiveState,
+          heroSlots: update(state.activeSlot, undefined, state.heroSlots),
+        };
+      } else if (action.hero === 'CLEAR') {
+        // select 'CLEAR' action
+        return {
+          ...state,
+          ...clearActiveState,
+          activeHero: 'CLEAR',
+        };
+      } else if (state.activeSlot == null && hasEmptySlot(state)) {
+        // move hero to first empty slot
+        return {
+          ...state,
+          ...clearActiveState,
+          heroSlots: update(getEmptySlot(state), action.hero, state.heroSlots),
+        };
+      } else if (state.activeSlot == null) {
+        // select hero
+        return { ...state, activeHero: action.hero };
+      } else {
+        // move hero to selected slot.
+        return {
           ...state,
           ...clearActiveState,
           heroSlots: update(state.activeSlot, action.hero, state.heroSlots),
         };
+      }
     case 'SET_HOST':
       return { ...state, host: action.host };
     case 'SET_PREVIEW_LEVEL':
