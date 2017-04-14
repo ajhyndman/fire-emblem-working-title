@@ -74,6 +74,14 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
       if (test(/(Fury|\+)/, skillName)) {
         return skillNumbers[0];
       }
+      // Fortress Def
+      if (test(/Fortress Def/, skillName)) {
+        if (statKey === 'def') {
+          return skillNumbers[0];
+        } else if (statKey === 'atk') {
+          return -skillNumbers[1];
+        }
+      }
       // Death/Darting/Armored/Warding Blow
       if (isAttacker && test(/(Blow|Sparrow)/, skillName)) {
         return skillNumbers[0];

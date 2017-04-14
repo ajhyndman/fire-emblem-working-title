@@ -89,6 +89,9 @@ const hasWeaponBreaker = (instanceA: HeroInstance, instanceB: HeroInstance) => {
 
 // Whether or not a unit will perform a follow-up attack.
 const doesFollowUp = (instanceA: HeroInstance, instanceB: HeroInstance, isAttacker: boolean) => {
+  if (isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Windsweep')) {
+    return false;
+  }
   // Supposedly x-breaker overrides wary-fighter, and multiple x-breakers cancel out.
   const aHasBreaker = hasWeaponBreaker(instanceA, instanceB);
   const bHasBreaker = hasWeaponBreaker(instanceB, instanceA);
@@ -182,8 +185,18 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
 };
 
 const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
-  if (getSkillName(defender, 'WEAPON') === '') {
+  if (getSkillName(defender, 'WEAPON') === ''
+      || hasSkill(attacker, 'WEAPON', 'Firesweep')
+      || hasSkill(defender, 'WEAPON', 'Firesweep')) {
     return false;
+  }
+  // Windsweep checks for Sword/Lance/Axe/Bow/Dagger = all physical weapons.
+  if (hasSkill(attacker, 'PASSIVE_B', 'Windsweep') && getMitigationType(defender) === 'def' ) {
+    // The attacker must also be faster than the defender.
+    const spdReq = getSkillNumbers(getSkillName(attacker, 'PASSIVE_B'))[0];
+    if (getStat(attacker, 'spd', 40, true) - getStat(defender, 'spd', 40, false) >= spdReq) {
+      return false;
+    }
   }
   if (getRange(defender) === getRange(attacker)) {
     return true;
