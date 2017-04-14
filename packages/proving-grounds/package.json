@@ -1,6 +1,6 @@
 {
   "name": "proving-grounds",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Test level 40 heroes from Fire Emblem: Heroes against one another!",
   "repository": "git@github.com:ajhyndman/fire-emblem-working-title.git",
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
@@ -34,7 +34,7 @@
     "clipboard-js": "^0.3.3",
     "color-js": "^1.0.4",
     "crypto-js": "^3.1.9-1",
-    "fire-emblem-heroes-stats": "^0.4.0",
+    "fire-emblem-heroes-stats": "^0.4.1",
     "javascript-remove-diacritics": "^1.0.0",
     "lz-string": "^1.4.4",
     "next": "2.0.0-beta.36",
