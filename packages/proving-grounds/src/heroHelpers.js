@@ -135,8 +135,10 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
     case 'Breath Users Only':
       return test(/Breath/, weaponType);
     case 'Staff Only':
+    case 'Staff Users Only':
       return weaponType === 'Neutral Staff';
     case 'Excludes Staves':
+    case 'Excludes Staff Users':
       return weaponType !== 'Neutral Staff';
     case 'Excludes Colorless Weapons':
       return !test(/Neutral/, weaponType);
