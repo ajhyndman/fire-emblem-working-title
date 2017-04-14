@@ -102,7 +102,7 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
 /*
  * Helpers to check a property of a skill by name.
  */
- 
+
 // Checks whether or not a skill (ex: Wary Fighter 3) is the final form of the skill.
 export function isMaxTier(skillName: string): boolean {
   if (isFreeSkill(skillName)) {
@@ -120,7 +120,7 @@ export function isMaxTier(skillName: string): boolean {
 
 // Checks for skills that cost 0 SP.
 export function isFreeSkill(skillName: string): boolean {
-  return test(/(Iron|Steel|Fire Breath|Fire|Flux|Wind|Thunder)/, skillName);
+  return test(/^(Iron|Steel|Fire Breath$|Fire$|Flux$|Wind$|Thunder$)/, skillName);
 }
 
 
