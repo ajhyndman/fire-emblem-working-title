@@ -83,7 +83,7 @@ export function getSkillEffect(
 }
 
 // Returns a map from skill type to the name of the skill.
-export function getDefaultSkills(name: string, rarity: Rarity): InstanceSkills {
+export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkills {
   const hero = lookupStats(name);
 
   // Flow can't follow this compose chain, so cast it to any.

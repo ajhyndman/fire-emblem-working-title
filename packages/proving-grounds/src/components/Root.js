@@ -20,6 +20,7 @@ import HeroGrid from './HeroGrid';
 import ShareButton from './ShareButton';
 import Input from './Input';
 import Toast from './Toast';
+import matchHero from '../matchHero';
 import { fontFamilies } from '../theme';
 import { encodeHero } from '../queryCodex';
 import { staticUrl } from '../../config';
@@ -165,7 +166,7 @@ class Root extends React.Component {
                 onChange={(value: string) => {
                   dispatch({ type: 'SEARCH_STRING_CHANGE', value });
                 }}
-                placeholder="Type to filter"
+                placeholder="Type a name, class, or skill"
                 value={state.searchString}
               />
             </div>
@@ -192,15 +193,10 @@ class Root extends React.Component {
           dispatch={dispatch}
           heroes={filter(
             allPass([
+              matchHero(state.searchString),
               // Exclude unreleased heroes.
               // $FlowIssue typedef for propOr isn't resolving correctly
               (hero) => propOr('N/A', 'releaseDate', hero) !== 'N/A',
-              // $FlowIssue typedef for prop isn't resolving correctly
-              compose(
-                name => (name.indexOf(toLower(state.searchString)) !== -1),
-                toLower,
-                prop('name'),
-              ),
             ]),
             stats.heroes,
           )}
