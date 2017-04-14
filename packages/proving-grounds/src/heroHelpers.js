@@ -172,7 +172,7 @@ export function getInheritableSkills(name: string, skillType: SkillType): Array<
     allSkills,
   );
   const ownSkills = compose(
-    filter((x) => propOr('type', '', x) === skillType),
+    filter((x) => propOr('', 'type', x) === skillType),
     map((skill: any) => getSkillInfo(skill.name)),
   )(hero.skills);
   return sort(ascend(prop('name')), union(inheritable, ownSkills));
