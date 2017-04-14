@@ -26,11 +26,11 @@ import { getDefaultInstance } from './heroInstance';
  * Flattening/Unflattening
  */
 
-// Convert no-stat to 6 to distinguish from null-skill which is hashed as 0
+// Convert no-stat to 'n' to distinguish from null-skill which is hashed as 0
 // The actual value doesn't matter too much because no-variant will be USE_DEFAULT.
 const NO_VARIANT = 'n';
-// Rarity and bane/boon will never be 7, so use 7 when a hero has a default skill.
-const USE_DEFAULT = 'd'; 
+// Use 'd' when a hero has a default skill.
+const USE_DEFAULT = 'd';
 
 type SerialInstance = [
   string, // name
@@ -43,6 +43,7 @@ type SerialInstance = [
   ?string, // passive c
   ?string, // special
   ?string, // weapon
+  ?string, // sacred seal
 ];
 
 type SerialInstanceWithDefaults = [
@@ -90,7 +91,6 @@ export const extractInstance = ([
   passiveC,
   special,
   weapon,
-  sSkill,
 // $FlowIssue bane/boon string is incompatible with ?Stat
 ]: SerialInstance): HeroInstance => ({
   bane: idToStatKey[bane.toString()],
@@ -159,7 +159,7 @@ const values = flatten([
   map(prop('name'), stats.heroes),
 ]);
 
-// A map from hash(x) to x 
+// A map from hash(x) to x
 // $FlowIssue: flowtypes for ramda aren't precise
 export const hashTable = zipObj(map(hash, values), values);
 
