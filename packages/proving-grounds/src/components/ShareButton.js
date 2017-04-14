@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import clipboard from 'clipboard-js';
-import Link from 'react-icons/lib/go/link';
+import Share from 'react-icons/lib/md/share';
 
 import type { Dispatch } from '../reducer';
 
@@ -38,7 +38,7 @@ const ShareButton = ({ dispatch, link }: Props) => (
         });
       }}
     >
-      <Link />
+      <Share style={{ display: 'block' }} />
     </button>
   </div>
 );
