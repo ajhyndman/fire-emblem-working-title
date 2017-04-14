@@ -7,10 +7,12 @@ import {
   allPass,
   compose,
   filter,
+  map,
   path,
   pathOr,
   prop,
   propOr,
+  split,
   toLower,
 } from 'ramda';
 
@@ -193,7 +195,10 @@ class Root extends React.Component {
           dispatch={dispatch}
           heroes={filter(
             allPass([
-              matchHero(state.searchString),
+              allPass(map(
+                matchHero,
+                split(' ', state.searchString),
+              )),
               // Exclude unreleased heroes.
               // $FlowIssue typedef for propOr isn't resolving correctly
               (hero) => propOr('N/A', 'releaseDate', hero) !== 'N/A',
