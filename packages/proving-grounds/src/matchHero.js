@@ -1,4 +1,5 @@
 // @flow
+import jdu from 'javascript-remove-diacritics';
 import {
   anyPass,
   compose,
@@ -16,26 +17,26 @@ import type { Hero } from 'fire-emblem-heroes-stats';
 import { getDefaultSkills } from './heroHelpers';
 
 
-const matchHero: (searchString: string) => (hero: Hero) => boolean =
-  (searchString) => {
-    const cleanedSearchString = toLower(trim(searchString));
+const matchHero: (searchTerm: string) => (hero: Hero) => boolean =
+  (searchTerm) => {
+    const cleanedSearchTerm = toLower(jdu.replace(searchTerm));
 
     return compose(
       anyPass([
         compose(
-          name => (name.indexOf(cleanedSearchString) !== -1),
+          name => (name.indexOf(cleanedSearchTerm) !== -1),
           toLower,
           // $FlowIssue typedef for prop isn't resolving correctly
           prop('name'),
         ),
         compose(
-          name => (name.indexOf(cleanedSearchString) !== -1),
+          name => (name.indexOf(cleanedSearchTerm) !== -1),
           toLower,
           // $FlowIssue typedef for prop isn't resolving correctly
           prop('moveType'),
         ),
         compose(
-          name => (name.indexOf(cleanedSearchString) !== -1),
+          name => (name.indexOf(cleanedSearchTerm) !== -1),
           toLower,
           // $FlowIssue typedef for prop isn't resolving correctly
           prop('weaponType'),
@@ -44,7 +45,8 @@ const matchHero: (searchString: string) => (hero: Hero) => boolean =
           compose(not, equals(-1)),
           findIndex(
             compose(
-              skillName => (skillName.indexOf(cleanedSearchString) !== -1),
+              skillName => (skillName.indexOf(cleanedSearchTerm) !== -1),
+              jdu.replace,
               toLower,
               // $FlowIssue typedef for prop isn't resolving correctly
               prop('name'),
