@@ -1,16 +1,9 @@
 // @flow
 import React from 'react';
 import clipboard from 'clipboard-js';
-import Link from 'react-icons/lib/go/link';
-import Color from 'color-js';
+import Share from 'react-icons/lib/md/share';
 
 import type { Dispatch } from '../reducer';
-import {
-  colors,
-  fontFamilies,
-  fontSizes,
-  lineHeights,
-} from '../theme';
 
 
 type Props = {
@@ -35,20 +28,6 @@ const ShareButton = ({ dispatch, link }: Props) => (
       button:focus {
         outline: none;
       }
-      .root {
-        position: relative;
-      }
-      .share-text {
-        color: ${Color(colors.iceberg).setAlpha(0.75)};
-        font-family: ${fontFamilies.ui};
-        font-size: ${fontSizes.small}px;
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        text-align: center;
-        text-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.8);
-        width: 100%;
-      }
     `}</style>
     <button
       onClick={() => {
@@ -59,8 +38,7 @@ const ShareButton = ({ dispatch, link }: Props) => (
         });
       }}
     >
-      <Link />
-      <div className="share-text">Share</div>
+      <Share style={{ display: 'block' }} />
     </button>
   </div>
 );
