@@ -195,6 +195,7 @@ class Root extends React.Component {
           dispatch={dispatch}
           heroes={filter(
             allPass([
+              // $FlowIssue iterable incompatible with array
               allPass(map(
                 matchHero,
                 split(' ', state.searchString),
