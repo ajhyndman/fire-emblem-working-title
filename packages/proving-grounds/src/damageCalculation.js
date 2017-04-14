@@ -30,7 +30,7 @@ import {
 } from './skillHelpers';
 import type { HeroInstance } from './heroInstance';
 import type { SpecialType } from './skillHelpers';
-  
+
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
 
 /**
@@ -58,9 +58,9 @@ const dmgFormula = (
   offensiveMult: number = 0.0,   // From skills like Glimmer
   mitigationMult: number = 0.0,  // From skills like Luna
 ) => truncate(
-  (1 + offensiveMult) * 
+  (1 + offensiveMult) *
   truncate(
-    (classModifier) * 
+    (classModifier) *
     max(
       truncate(atk * eff)
       + truncate(truncate(atk * eff) * adv)
@@ -298,7 +298,7 @@ export const calculateResult = (
       const otherHeroIndex: number = 1 - heroIndex;
       const stillFighting = healths[0] > 0 && healths[1] > 0;
       let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb') ? 0.5 : 0.0;
-            
+
       // Attacker Special. Use '' for no special.
       let attackerSpecial = '';
       let dmgWithoutSpecial = hitDmg(
@@ -346,7 +346,7 @@ export const calculateResult = (
       }
     }
   }
-  
+
   // Post combat damage and healing. These effects are simultaneous and nonlethal.
   let postCombatDmg = [0, 0];
   if (hasSkill(heroes[0], 'WEAPON', '(Egg|Carrot)')) {
@@ -359,7 +359,7 @@ export const calculateResult = (
   for (let heroIndex of [0, 1]) {
     // Fury
     if (hasSkill(heroes[heroIndex], 'PASSIVE_A', 'Fury')) {
-      postCombatDmg[heroIndex] += getSkillNumbers(getSkillName(heroes[heroIndex], 'PASSIVE_A'))[0];
+      postCombatDmg[heroIndex] += getSkillNumbers(getSkillName(heroes[heroIndex], 'PASSIVE_A'))[1];
     }
     // Pain (only triggers if the staff user survived and was able to retaliate)
     const otherHeroI = 1 - heroIndex;
