@@ -84,7 +84,7 @@ const SkillSelector = ({
       // Maybe the tradeoff in power for simplicity isn't worthwhile.
       filter(
         compose(
-          isMaxTier,
+          (skillName) => skillType === 'SEAL' || isMaxTier(skillName),
           propOr('', 'name'),
         ),
         [null].concat(getInheritableSkills(heroInstance.name, skillType)),

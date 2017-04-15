@@ -10,7 +10,7 @@ type Props = {
   skill: AssistSkill;
 };
 
-const Weapon = ({ showGuide, skill }: Props) => (
+const Assist = ({ showGuide, skill }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
@@ -54,4 +54,4 @@ const Weapon = ({ showGuide, skill }: Props) => (
   </div>
 );
 
-export default Weapon;
+export default Assist;

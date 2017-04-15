@@ -1,6 +1,7 @@
 // @flow
 import {
   compose,
+  filter,
   head,
   indexBy,
   join,
@@ -22,8 +23,12 @@ import type { HeroInstance } from './heroInstance';
 export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null;
 export type SkillsByName = { [key: string]: Skill };
 
+// Exclude seals for now so that getDefaultSkills doesn't give Lilina Attack +1 
 // $FlowIssue indexBy confuses flow
-const skillsByName: SkillsByName = indexBy(prop('name'), stats.skills);
+const skillsByName: SkillsByName = compose(
+  indexBy(prop('name')),
+  filter((s) => s.type !== 'SEAL'),
+)(stats.skills);
 
 export const getSkillInfo = (skillName: string): Skill => skillsByName[skillName];
 
@@ -66,7 +71,7 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
     if (statKey === 'res' && skill.name === 'Parthia' && isAttacker) {
       return 4;
     }
-  } else if (skill.type === 'PASSIVE_A') {
+  } else if (skill.type === 'PASSIVE_A' || skill.type === 'SEAL') {
     const statRegex = new RegExp(statKey === 'hp' ? 'max HP' : capitalize(statKey));
     if (test(statRegex, skill.effect)) {
       const skillNumbers = getSkillNumbers(skillName);
@@ -120,7 +125,7 @@ export function isMaxTier(skillName: string): boolean {
 
 // Checks for skills that cost 0 SP.
 export function isFreeSkill(skillName: string): boolean {
-  return test(/^(Iron|Steel|Fire Breath$|Fire$|Flux$|Wind$|Thunder$)/, skillName);
+  return test(/^(Iron|Steel|Fire Breath\+?$|Fire$|Flux$|Wind$|Thunder$)/, skillName);
 }
 
 

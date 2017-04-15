@@ -141,6 +141,7 @@ test('encodeHero', (t) => {
         PASSIVE_A: null,
         PASSIVE_B: null,
         PASSIVE_C: null,
+        SEAL: null,
       },
     };
     assert.deepEqual(

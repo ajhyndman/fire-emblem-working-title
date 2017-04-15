@@ -51,6 +51,7 @@ const skillIcons = {
   PASSIVE_C: 'Passive_Icon_C.png',
   SPECIAL: 'Icon_Skill_Special.png',
   WEAPON: 'Icon_Skill_Weapon.png',
+  SEAL: 'Seal_Icon.png',
 };
 
 const HeroConfigurer = withState(

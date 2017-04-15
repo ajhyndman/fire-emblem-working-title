@@ -101,6 +101,7 @@ export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkil
     PASSIVE_A: null,
     PASSIVE_B: null,
     PASSIVE_C: null,
+    SEAL: null,
     ...skillsByType,
   };
 }
@@ -239,6 +240,7 @@ export const getStat = (
       : parseInt(high, 10);
 
   const passiveA = getSkillName(instance, 'PASSIVE_A');
+  const seal = getSkillName(instance, 'SEAL');
   const weapon = getSkillName(instance, 'WEAPON');
 
   //console.log('GetStat.', instance.name, statKey, baseValue
@@ -246,6 +248,7 @@ export const getStat = (
   //  + (weapon ? getStatValue(weapon, statKey, isAttacker) : 0));
   return baseValue
     + (passiveA ? getStatValue(passiveA, statKey, isAttacker) : 0)
+    + (seal ? getStatValue(seal, statKey, isAttacker) : 0)
     + (weapon ? getStatValue(weapon, statKey, isAttacker) : 0);
 };
 

@@ -93,6 +93,7 @@ const Skill = ({ active, name, onClick, showGuide }: Props) => {
           case 'PASSIVE_A':
           case 'PASSIVE_B':
           case 'PASSIVE_C':
+          case 'SEAL':
             return <Passive showGuide={showGuide} skill={skill} />;
           case 'SPECIAL':
             return <Special showGuide={showGuide} skill={skill} />;

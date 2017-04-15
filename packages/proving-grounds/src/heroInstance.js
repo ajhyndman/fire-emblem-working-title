@@ -4,6 +4,7 @@ import type {
   PassiveSkill,
   SpecialSkill,
   WeaponSkill,
+  SealSkill,
 } from 'fire-emblem-heroes-stats';
 
 import { getDefaultSkills } from './heroHelpers';
@@ -20,6 +21,7 @@ export type InstanceSkills = {
   +PASSIVE_A: ?PassiveSkill;
   +PASSIVE_B: ?PassiveSkill;
   +PASSIVE_C: ?PassiveSkill;
+  +SEAL: ?SealSkill;
 };
 
 export type HeroInstance = {

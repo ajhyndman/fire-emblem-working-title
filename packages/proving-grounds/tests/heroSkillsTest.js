@@ -51,6 +51,16 @@ test('inheritableBreaths', (t) => {
   ]);
 });
 
+test('inheritableSeals', (t) => {
+  t.plan(1);
+  const seals = getSkills('Lilina', 'SEAL');
+  t.deepEqual(seals, [
+    'Attack +1',
+    'HP +3',
+    'Speed +1',
+  ]);
+});
+
 test('restrictions', (t) => {
   t.plan(10);
   const aPassives = getSkills('Catria', 'PASSIVE_A');
