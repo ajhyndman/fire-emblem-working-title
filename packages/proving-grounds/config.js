@@ -7,7 +7,7 @@ const options = {
 };
 
 export const deployTimestamp = process.env.NODE_ENV === 'production'
-  ? new Date(require('./deployTimestamp').deployTimestamp).toDateString(undefined, options)
+  ? new Date(require('./deployTimestamp').deployTimestamp).toLocaleDateString(undefined, options)
   : new Date(0).toLocaleDateString(undefined, options);
 
 export const staticUrl = process.env.NODE_ENV === 'production'
