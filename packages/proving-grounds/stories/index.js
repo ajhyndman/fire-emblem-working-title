@@ -16,19 +16,12 @@ import SkillSelector from '../src/components/SkillSelector';
 import StatSheet from '../src/components/StatSheet';
 import Toast from '../src/components/Toast';
 import { colors } from '../src/theme';
-import { getDefaultSkills } from '../src/heroHelpers';
 import type { HeroInstance } from '../src/heroInstance';
+import { getDefaultInstance } from '../src/heroInstance';
 import type { Dispatch } from '../src/reducer';
 
 
-// FlowIssue: flowtype for find is too generic.
-const heroInstance: HeroInstance = {
-  name: 'Anna',
-  boon: undefined,
-  bane: undefined,
-  rarity: 5,
-  skills: getDefaultSkills('Anna', 5),
-};
+const heroInstance: HeroInstance = getDefaultInstance('Anna');
 
 storiesOf('Frame', module)
   .add('default', () => (

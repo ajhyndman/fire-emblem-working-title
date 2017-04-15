@@ -2,13 +2,16 @@
 import stats from 'fire-emblem-heroes-stats';
 import {
   allPass,
-  // $FlowIssue flow does not think that ascend exists.
+  // $FlowIssue ... no named export called `ascend`
   ascend,
   compose,
   concat,
   curry,
+  // $FlowIssue ... no named export called `descend`
+  descend,
   filter,
   indexBy,
+  indexOf,
   isNil,
   map,
   not,
@@ -17,8 +20,12 @@ import {
   propOr,
   pathOr,
   sort,
+  // $FlowIssue ... no named export called `sortWith`
+  sortWith,
   test,
   union,
+  zipObj,
+  __,
 } from 'ramda';
 import type {
   Hero,
@@ -222,6 +229,7 @@ export const getStat = (
 
   if (level === 1) {
     const value = parseInt(hero.stats[`${level}`][rarity][statKey], 10);
+    // skills and merges are currently not included in level 1 stats.
     return variance === 'normal'
       ? value
       : variance === 'low'
@@ -243,10 +251,21 @@ export const getStat = (
   const seal = getSkillName(instance, 'SEAL');
   const weapon = getSkillName(instance, 'WEAPON');
 
+  // Every bonus level gives +1 to the next 2 stats, with stats in decreasing level 1 order
+  const statKeys = ['hp', 'atk', 'spd', 'def', 'res'];
+  // Depends on the fact that level 1 stats currently exclude skills.
+  // $FlowIssue function cannot be called on any member of intersection type.
+  const level1Stats = zipObj(statKeys, map((s) => getStat(instance, s, 1, false), statKeys));
+  const orderedStatKeys = sortWith(
+    [descend(prop(__, level1Stats)), ascend(indexOf(__, statKeys))],
+    statKeys,
+  );
+  const mergeBonus = Math.floor((2*instance.mergeLevel)/5)
+    + ((((2*instance.mergeLevel) % 5) > indexOf(statKey, orderedStatKeys)) ? 1 : 0);
+
   //console.log('GetStat.', instance.name, statKey, baseValue
-  //  + (passiveA ? getStatValue(passiveA, statKey, isAttacker) : 0)
-  //  + (weapon ? getStatValue(weapon, statKey, isAttacker) : 0));
   return baseValue
+    + mergeBonus
     + (passiveA ? getStatValue(passiveA, statKey, isAttacker) : 0)
     + (seal ? getStatValue(seal, statKey, isAttacker) : 0)
     + (weapon ? getStatValue(weapon, statKey, isAttacker) : 0);

@@ -18,7 +18,7 @@ import {
 } from 'ramda';
 
 import { getSkillInfo } from './skillHelpers';
-import type { HeroInstance, Rarity } from './heroInstance';
+import type { HeroInstance, Rarity, MergeLevel } from './heroInstance';
 import { getDefaultInstance } from './heroInstance';
 
 
@@ -44,6 +44,7 @@ type SerialInstance = [
   ?string, // special
   ?string, // weapon
   ?string, // sacred seal
+  MergeLevel, // mergeLevel
 ];
 
 type SerialInstanceWithDefaults = [
@@ -57,6 +58,8 @@ type SerialInstanceWithDefaults = [
   'd' | ?string, // passive c
   'd' | ?string, // special
   'd' | ?string, // weapon
+  'd' | ?string, // sacred seal
+  'd' | MergeLevel, // mergeLevel
 ];
 
 const statKeyToId = {'hp':1, 'atk':2, 'spd':3, 'def':4, 'res':5, 'null': NO_VARIANT};
@@ -78,6 +81,7 @@ export const flattenInstance = (instance: HeroInstance): SerialInstance => [
   instance.skills && instance.skills.SPECIAL && instance.skills.SPECIAL.name,
   instance.skills && instance.skills.WEAPON && instance.skills.WEAPON.name,
   instance.skills && instance.skills.SEAL && instance.skills.SEAL.name,
+  instance.mergeLevel,
 ];
 
 export const extractInstance = ([
@@ -92,12 +96,14 @@ export const extractInstance = ([
   special,
   weapon,
   seal,
+  mergeLevel,
 // $FlowIssue bane/boon string is incompatible with ?Stat
 ]: SerialInstance): HeroInstance => ({
+  name,
   bane: idToStatKey[bane.toString()],
   boon: idToStatKey[boon.toString()],
-  name,
   rarity,
+  mergeLevel: mergeLevel || 0,
   skills: {
     // Technically, if we get bogus skill names somehow, this could
     // return a corrupt hero instance.

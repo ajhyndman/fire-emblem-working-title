@@ -2,7 +2,6 @@
 import test from 'tape';
 import stats from 'fire-emblem-heroes-stats';
 
-import { getSkillInfo } from '../src/skillHelpers';
 import {
   decodeHero,
   encodeHero,
@@ -11,30 +10,44 @@ import {
   flattenAndIgnoreDefaults,
   flattenInstance,
   hash,
-  // hashTable,
 } from '../src/queryCodex';
 import type { HeroInstance } from '../src/heroInstance';
 import { getDefaultInstance } from '../src/heroInstance';
+import { getDefaultSkills } from '../src/heroHelpers';
+import { getSkillInfo } from '../src/skillHelpers';
 
 
-const mockInstance: HeroInstance = { ...getDefaultInstance('Anna'), bane: 'atk'};
+// $FlowIssue object literal. This type is incompatible with HeroInstance
+const customizedInstance: HeroInstance = {
+  ...getDefaultInstance('Anna'),
+  bane: 'atk',
+  mergeLevel: 3,
+  skills: {
+    ...getDefaultSkills('Anna'),
+    // $FlowIssue Skill may not be PassiveSkill
+    PASSIVE_A: getSkillInfo('Attack +3'),
+    // Convert to any because otherwise flow complains with incorrect line numbers.
+    SEAL: (getSkillInfo('Attack +1'): any),
+  }
+};
 
 test('flattenInstance', (t) => {
   t.test('reduces an instance to an array', (assert) => {
     assert.deepEqual(
-      flattenInstance(mockInstance),
+      flattenInstance(customizedInstance),
       [
         'Anna',
         2, // atk bane
         'n', // no boon
         5,
         null,
-        null,
+        'Attack +3',
         'Vantage 3',
         'Spur Res 3',
         'Astra',
         'Nóatún',
-        null,
+        'Attack +1',
+        3,
       ],
     );
     assert.end();
@@ -42,8 +55,8 @@ test('flattenInstance', (t) => {
 
   t.test('is reversible', (assert) => {
     assert.deepEqual(
-      extractInstance(flattenInstance(mockInstance)),
-      mockInstance,
+      extractInstance(flattenInstance(customizedInstance)),
+      customizedInstance,
     );
     assert.end();
   });
@@ -54,16 +67,29 @@ test('flattenInstance', (t) => {
 test('flattenAndIgnoreDefaults', (t) => {
   t.test('reduces an instance to an array', (assert) => {
     assert.deepEqual(
-      flattenAndIgnoreDefaults(mockInstance),
-      ['Anna', 2 /* atk bane */, 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd'],
+      flattenAndIgnoreDefaults(customizedInstance),
+      [
+        'Anna',
+        2, // atk bane
+        'd',
+        'd',
+        'd',
+        'Attack +3', // A Passive
+        'd',
+        'd',
+        'd',
+        'd',
+        'Attack +1', // Seal
+        3, // Merge level
+      ],
     );
     assert.end();
   });
 
   t.test('is reversible', (assert) => {
     assert.deepEqual(
-      extractWithDefaults(flattenAndIgnoreDefaults(mockInstance)),
-      mockInstance,
+      extractWithDefaults(flattenAndIgnoreDefaults(customizedInstance)),
+      customizedInstance,
     );
     assert.end();
   });
@@ -108,7 +134,7 @@ test('hash', (t) => {
 test('encodeHero', (t) => {
   t.test('tranforms a hero instance to a string', (assert) => {
     assert.equal(
-      typeof encodeHero(mockInstance),
+      typeof encodeHero(customizedInstance),
       'string',
     );
     assert.end();
@@ -116,8 +142,8 @@ test('encodeHero', (t) => {
 
   t.test('is reversible', (assert) => {
     assert.deepEqual(
-      decodeHero(encodeHero(mockInstance)),
-      mockInstance,
+      decodeHero(encodeHero(customizedInstance)),
+      customizedInstance,
     );
     assert.end();
   });
@@ -125,7 +151,7 @@ test('encodeHero', (t) => {
   t.test('decoding is backwards compatible', (assert) => {
     assert.deepEqual(
       decodeHero('AwEwxgzA1ATFL0Q5T5A'),
-      mockInstance,
+      { ...getDefaultInstance('Anna'), bane: 'atk'},
     );
     assert.deepEqual(
       decodeHero('MwRgxgrA1AJr8E4BmAjA7FALEgppqKSCwUATGmKfHDEA'),
@@ -134,6 +160,7 @@ test('encodeHero', (t) => {
         boon: null,
         name: 'Cordelia',
         rarity: 5,
+        mergeLevel: 0,
         skills: {
           WEAPON: getSkillInfo('Brave Lance+'),
           ASSIST: getSkillInfo('Pivot'),
@@ -154,6 +181,7 @@ test('encodeHero', (t) => {
       boon: null,
       name: 'Anna',
       rarity: 5,
+      mergeLevel: 0,
       skills: {
         WEAPON: null,
         ASSIST: null,

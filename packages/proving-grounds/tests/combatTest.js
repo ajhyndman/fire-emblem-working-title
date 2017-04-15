@@ -18,6 +18,7 @@ function makeHero(
     bane: undefined,
     boon: undefined,
     rarity: rarity,
+    mergeLevel: 0,
     skills: {
       ...getDefaultSkills(name, rarity),
       ...customSkills,

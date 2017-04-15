@@ -11,8 +11,8 @@ import { getDefaultSkills } from './heroHelpers';
 
 
 export type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
-
 export type Rarity = 1 | 2 | 3 | 4 | 5;
+export type MergeLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 export type InstanceSkills = {
   +WEAPON: ?WeaponSkill;
@@ -30,6 +30,7 @@ export type HeroInstance = {
   +rarity: Rarity;
   +boon: ?Stat;
   +bane: ?Stat;
+  +mergeLevel: MergeLevel;
   +skills: InstanceSkills;
 };
 
@@ -59,5 +60,6 @@ export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstan
   bane: null,
   boon: null,
   rarity: rarity,
+  mergeLevel: 0,
   skills: getDefaultSkills(name, rarity),
 });
