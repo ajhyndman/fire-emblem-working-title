@@ -13,6 +13,7 @@
     "docker-build": "docker build -t proving-grounds .",
     "docker-start": "docker run -d -p 80:3000 proving-grounds",
     "lint": "eslint src/**/*.js pages/**/*.js && flow check",
+    "stamp-deploy": "echo \"export const deployTimestamp = '$(date -I)';\" > deployTimestamp.js",
     "start": "next start",
     "storybook": "start-storybook -p 6006 -s .",
     "sync-static": "aws s3 sync ./static/cdn/ s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public",
