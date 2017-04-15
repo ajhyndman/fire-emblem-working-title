@@ -35,6 +35,14 @@ const ShareButton = ({ dispatch, link }: Props) => (
         dispatch({
           type: 'ENQUEUE_NOTIFICATION',
           value: 'Link copied to clipboard!',
+          meta: {
+            analytics: {
+              type: 'CREATED_SHARE_LINK',
+              payload: {
+                link,
+              },
+            },
+          },
         });
       }}
     >
