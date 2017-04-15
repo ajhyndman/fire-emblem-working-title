@@ -65,6 +65,7 @@ type SerialInstanceWithDefaults = [
 const statKeyToId = {'hp':1, 'atk':2, 'spd':3, 'def':4, 'res':5, 'null': NO_VARIANT};
 const idToStatKey = assoc(NO_VARIANT.toString(), null, invertObj(statKeyToId));
 
+// Converts a hero instance to a list of values.
 export const flattenInstance = (instance: HeroInstance): SerialInstance => [
   instance.name,
   // $FlowIssue ... Computed property cannot be accessed with ... null
@@ -84,6 +85,8 @@ export const flattenInstance = (instance: HeroInstance): SerialInstance => [
   instance.mergeLevel,
 ];
 
+// Converts a list of values to a hero instance.
+// If the input list is too short the remaining elements will be null or undefined.
 export const extractInstance = ([
   name,
   bane,
@@ -117,8 +120,7 @@ export const extractInstance = ([
   },
 });
 
-// Returns a map from skill type to the name of the skill.
-// Default skills are not present and null means no-skill.
+// Identical to flattenInstance except that any default values will be replaced with USE_DEFAULT
 export function flattenAndIgnoreDefaults(instance: HeroInstance): SerialInstanceWithDefaults {
   const flatDefault = flattenInstance(getDefaultInstance(instance.name));
   const flatInstance = flattenInstance(instance);
@@ -130,7 +132,7 @@ export function flattenAndIgnoreDefaults(instance: HeroInstance): SerialInstance
   )));
 }
 
-// Sets the defaults before copying from the flattened instance.
+// Identical to extractInstance except that USE_DEFAULT will be replaced with the default value
 export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefaults): HeroInstance {
   const flatDefault = flattenInstance(getDefaultInstance(flattenedInstance[0]));
   // $FlowIssue ... tuple type ... is incompatible with ... array type
