@@ -19,16 +19,16 @@ import {
 import CombatPreview from './CombatPreview';
 import CombatResult from './CombatResult';
 import HeroGrid from './HeroGrid';
-import ShareButton from './ShareButton';
 import Input from './Input';
+import ShareButton from './ShareButton';
 import Toast from './Toast';
 import matchHero from '../matchHero';
-import { fontFamilies } from '../theme';
 import { encodeHero } from '../queryCodex';
-import { staticUrl } from '../../config';
+import { fontFamilies } from '../theme';
+import { getEventHeroes } from '../temporal/events';
+import { deployTimestamp, staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 import type { State } from '../store';
-import { getEventHeroes } from '../temporal/events';
 
 
 type Props = {
@@ -76,6 +76,14 @@ class Root extends React.Component {
           <meta name="robots" content="index,follow" />
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
           <meta name="theme-color" content="#ffffff" />
+          <meta property="og:title" content="Proving Grounds — Fire Emblem: Heroes" />
+          <meta property="og:type" content="website" />
+          <meta property="og:description" content="The authoritative Fire Emblem: Heroes combat simulator" />
+          <meta property="og:url" content="https://proving-grounds.ajhyndman.com" />
+          <meta property="og:image" content="https://proving-grounds.ajhyndman.com/static/site-preview.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="564" />
+          <meta property="og:image:height" content="448" />
           <link
             href={'https://fonts.googleapis.com/css?family=Mandali&text='
               + '→×—0123456789abcdefghijklmnopqrstuvwxyz'}
@@ -100,11 +108,13 @@ class Root extends React.Component {
         </Head>
         <style jsx>{`
           .footer {
+            align-items: baseline;
             color: rgba(255, 255, 255, 0.2);
+            display: flex;
             font-family: ${fontFamilies.ui};
             font-size: 10px;
+            justify-content: space-between;
             padding: 20px 15px 10px;
-            text-align: right;
           }
           .footer a:link, .footer a:visited, .footer a:active, .footer a:focus {
             color: rgba(255, 255, 255, 0.3) !important;
@@ -215,10 +225,15 @@ class Root extends React.Component {
           showUndo
         />
         <div className="footer">
-          Proving Grounds is an open source project licensed under GPL-3.0+
-          <a href="https://github.com/ajhyndman/fire-emblem-working-title/issues">
-            <MarkGithub />
-          </a>
+          <span>
+            Last updated: {deployTimestamp}
+          </span>
+          <span>
+            Proving Grounds is an open source project licensed under GPL-3.0+
+            <a href="https://github.com/ajhyndman/fire-emblem-working-title/issues">
+              <MarkGithub />
+            </a>
+          </span>
         </div>
         <Toast dispatch={dispatch} messages={state.notifications} />
       </div>
