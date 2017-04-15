@@ -86,7 +86,8 @@ export type SkillType =
   | 'SPECIAL'
   | 'PASSIVE_A'
   | 'PASSIVE_B'
-  | 'PASSIVE_C';
+  | 'PASSIVE_C'
+  | 'SEAL';
 
 export type WeaponSkill = {
   +type: 'WEAPON';

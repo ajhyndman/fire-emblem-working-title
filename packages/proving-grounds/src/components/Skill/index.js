@@ -4,6 +4,7 @@ import cn from 'classnames';
 
 import Assist from './Assist';
 import Passive from './Passive';
+import Seal from './Seal';
 import Special from './Special';
 import Weapon from './Weapon';
 import { getSkillInfo } from '../../skillHelpers';
@@ -93,12 +94,13 @@ const Skill = ({ active, name, onClick, showGuide }: Props) => {
           case 'PASSIVE_A':
           case 'PASSIVE_B':
           case 'PASSIVE_C':
-          case 'SEAL':
             return <Passive showGuide={showGuide} skill={skill} />;
           case 'SPECIAL':
             return <Special showGuide={showGuide} skill={skill} />;
           case 'WEAPON':
             return <Weapon showGuide={showGuide} skill={skill} />;
+          case 'SEAL':
+            return <Seal showGuide={showGuide} skill={skill} />;
         }
       })()}
       {active && <img

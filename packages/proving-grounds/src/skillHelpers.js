@@ -24,8 +24,8 @@ export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' 
 export type SkillsByName = { [key: string]: Skill };
 
 // Exclude seals for now so that getDefaultSkills doesn't give Lilina Attack +1 
-// $FlowIssue indexBy confuses flow
 const skillsByName: SkillsByName = compose(
+  // $FlowIssue indexBy confuses flow
   indexBy(prop('name')),
   filter((s) => s.type !== 'SEAL'),
 )(stats.skills);
