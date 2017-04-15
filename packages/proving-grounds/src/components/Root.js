@@ -76,6 +76,14 @@ class Root extends React.Component {
           <meta name="robots" content="index,follow" />
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
           <meta name="theme-color" content="#ffffff" />
+          <meta property="og:title" content="Proving Grounds — Fire Emblem: Heroes" />
+          <meta property="og:type" content="website" />
+          <meta property="og:description" content="The authoritative Fire Emblem: Heroes combat simulator" />
+          <meta property="og:url" content="https://proving-grounds.ajhyndman.com" />
+          <meta property="og:image" content="https://proving-grounds.ajhyndman.com/static/site-preview.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="564" />
+          <meta property="og:image:height" content="448" />
           <link
             href={'https://fonts.googleapis.com/css?family=Mandali&text='
               + '→×—0123456789abcdefghijklmnopqrstuvwxyz'}
