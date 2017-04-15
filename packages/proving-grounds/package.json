@@ -7,16 +7,16 @@
   "license": "GPL-3.0+",
   "scripts": {
     "build": "next build",
+    "build-storybook": "build-storybook",
     "deploy": "now --docker",
     "dev": "next",
-    "start": "next start",
-    "lint": "eslint src/**/*.js pages/**/*.js && flow check",
-    "test": "tape -r babel-register tests/**/*.js",
-    "storybook": "start-storybook -p 6006 -s .",
-    "build-storybook": "build-storybook",
-    "sync-static": "aws s3 sync ./static/cdn/ s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public",
     "docker-build": "docker build -t proving-grounds .",
-    "docker-start": "docker run -d -p 80:3000 proving-grounds"
+    "docker-start": "docker run -d -p 80:3000 proving-grounds",
+    "lint": "eslint src/**/*.js pages/**/*.js && flow check",
+    "start": "next start",
+    "storybook": "start-storybook -p 6006 -s .",
+    "sync-static": "aws s3 sync ./static/cdn/ s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public",
+    "test": "tape -r babel-register tests/**/*.js"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
