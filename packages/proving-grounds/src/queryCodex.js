@@ -5,12 +5,16 @@ import stats from 'fire-emblem-heroes-stats';
 import {
   assoc,
   compose,
+  concat,
+  dropLastWhile,
+  equals,
   flatten,
   invertObj,
   map,
   prepend,
   prop,
   range,
+  repeat,
   tail,
   take,
   zipObj,
@@ -121,25 +125,31 @@ export const extractInstance = ([
 });
 
 // Identical to flattenInstance except that any default values will be replaced with USE_DEFAULT
+// Additionally, any trailing USE_DEFAULTS will be dropped.
 export function flattenAndIgnoreDefaults(instance: HeroInstance): SerialInstanceWithDefaults {
   const flatDefault = flattenInstance(getDefaultInstance(instance.name));
   const flatInstance = flattenInstance(instance);
-  // $FlowIssue ... tuple type ... is incompatible with ... array type
-  return prepend(instance.name, tail(zipWith(
-    (defV, actualV) => (actualV === defV ? USE_DEFAULT : actualV),
-    flatDefault,
-    flatInstance,
-  )));
+  return dropLastWhile(equals('d'),
+    prepend(instance.name, tail(
+      // $FlowIssue Function cannot be called on member of intersection type
+      zipWith(
+        (defaultV, actualV) => (actualV === defaultV ? USE_DEFAULT : actualV),
+        flatDefault,
+        flatInstance,
+      ),
+    )),
+  );
 }
 
 // Identical to extractInstance except that USE_DEFAULT will be replaced with the default value
+// Additionally, if the input is too short it will be extended with USE_DEFAULTS.
 export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefaults): HeroInstance {
   const flatDefault = flattenInstance(getDefaultInstance(flattenedInstance[0]));
   // $FlowIssue ... tuple type ... is incompatible with ... array type
   const flatInstanceWithDefaults = zipWith(
-    (defV, actualV) => (actualV === USE_DEFAULT ? defV : actualV),
+    (defaultV, actualV) => (actualV === USE_DEFAULT ? defaultV : actualV),
     flatDefault,
-    flattenedInstance,
+    concat(flattenedInstance, repeat('d', flatDefault.length - flattenedInstance.length)),
   );
   return extractInstance(flatInstanceWithDefaults);
 }

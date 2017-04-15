@@ -86,6 +86,14 @@ test('flattenAndIgnoreDefaults', (t) => {
     assert.end();
   });
 
+  t.test('trims defaults', (assert) => {
+    assert.deepEqual(
+      flattenAndIgnoreDefaults(getDefaultInstance('Anna')),
+      ['Anna'],
+    );
+    assert.end();
+  });
+
   t.test('is reversible', (assert) => {
     assert.deepEqual(
       extractWithDefaults(flattenAndIgnoreDefaults(customizedInstance)),
