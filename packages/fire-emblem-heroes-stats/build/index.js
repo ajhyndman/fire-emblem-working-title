@@ -74,7 +74,7 @@ async function fetchHeroStats() {
 
 // Fetches detailed info for all skills
 async function fetchSkills() {
-  const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives'];
+  const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives', 'Seals'];
   const skillsByType = await fetchAndParsePages(
     'http://feheroes.wiki/',
     skillPageNames,

@@ -129,11 +129,18 @@ export type PassiveSkill = {
   +inheritRestriction: string;
 };
 
+export type SealSkill = {
+  +type: 'SEAL';
+  +name: string;
+  +effect: string;
+};
+
 export type Skill =
   | WeaponSkill
   | AssistSkill
   | SpecialSkill
-  | PassiveSkill;
+  | PassiveSkill
+  | SealSkill;
 
 export type Stats = {
   +heroes: Hero[];

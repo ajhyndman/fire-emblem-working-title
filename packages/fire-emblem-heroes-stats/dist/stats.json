@@ -2115,7 +2115,7 @@
       "origin": "Fire Emblem Fates",
       "weaponType": "Green Tome",
       "moveType": "Flying",
-      "rarities": 5,
+      "rarities": "5 - Limited",
       "releaseDate": "Mar 30, 2017",
       "skills": [
         {
@@ -3067,7 +3067,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Green Axe",
       "moveType": "Infantry",
-      "rarities": 5,
+      "rarities": "5 - Limited",
       "releaseDate": "Mar 30, 2017",
       "skills": [
         {
@@ -9961,7 +9961,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Blue Tome",
       "moveType": "Infantry",
-      "rarities": 5,
+      "rarities": "5 - Limited",
       "releaseDate": "Mar 30, 2017",
       "skills": [
         {
@@ -18348,7 +18348,7 @@
       "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": 5,
+      "rarities": "5 - Limited",
       "releaseDate": "Mar 30, 2017",
       "skills": [
         {
@@ -22180,6 +22180,21 @@
       "spCost": 200,
       "inheritRestriction": "Fliers Only",
       "type": "PASSIVE_C"
+    },
+    {
+      "name": "Attack +1",
+      "effect": "Grants Atk+1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "HP +3",
+      "effect": "Grants +3 to max HP.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Speed +1",
+      "effect": "Grants Spd+1.",
+      "type": "SEAL"
     }
   ]
 }
