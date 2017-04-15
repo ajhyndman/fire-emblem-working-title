@@ -111,19 +111,39 @@ test('encodeHero', (t) => {
       typeof encodeHero(mockInstance),
       'string',
     );
-    assert.equal(
-      encodeHero(mockInstance),
-      'AwEwxgzA1ATFL0Q5T5A',
-    );
     assert.end();
   });
-
-  // console.log(hashTable);
 
   t.test('is reversible', (assert) => {
     assert.deepEqual(
       decodeHero(encodeHero(mockInstance)),
       mockInstance,
+    );
+    assert.end();
+  });
+
+  t.test('decoding is backwards compatible', (assert) => {
+    assert.deepEqual(
+      decodeHero('AwEwxgzA1ATFL0Q5T5A'),
+      mockInstance,
+    );
+    assert.deepEqual(
+      decodeHero('MwRgxgrA1AJr8E4BmAjA7FALEgppqKSCwUATGmKfHDEA'),
+      {
+        bane: null,
+        boon: null,
+        name: 'Cordelia',
+        rarity: 5,
+        skills: {
+          WEAPON: getSkillInfo('Brave Lance+'),
+          ASSIST: getSkillInfo('Pivot'),
+          SPECIAL: getSkillInfo('Galeforce'),
+          PASSIVE_A: getSkillInfo('Swift Sparrow 2'),
+          PASSIVE_B: getSkillInfo('Drag Back'),
+          PASSIVE_C: getSkillInfo('Savage Blow 3'),
+          SEAL: null,
+        },
+      },
     );
     assert.end();
   });
