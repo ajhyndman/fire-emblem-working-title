@@ -114,8 +114,8 @@ test('Brave Weapon, Darting Blow, Fury and Damage Special', (t) => {
   t.plan(4);
   // Camilla attacks 4 times while attacking and once when attacked
   // Draconic Aura will trigger and give +30% of atk = 11 bonus damage
-  simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4)-11-3);
-  simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2-3,  37-23);
+  simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4)-11-6);
+  simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2-6,  37-23);
 });
 
 test('Wo Dao and Damage-Taken Special', (t) => {

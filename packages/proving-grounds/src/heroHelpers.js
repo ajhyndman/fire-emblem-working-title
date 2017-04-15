@@ -120,6 +120,10 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
   }
   const restriction = propOr('None', 'inheritRestriction', skill);
   switch (restriction) {
+    case 'Axe Users Only':
+      return weaponType === 'Green Axe';
+    case 'Bow Users Only':
+      return weaponType === 'Neutral Bow';
     case 'Fliers Only':
       return moveType === 'Flying';
     case 'Cavalry Only':
@@ -129,8 +133,10 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
     case 'Excludes Fliers':
       return moveType !== 'Flying';
     case 'Melee Weapons Only':
+    case 'Melee Weapon Users Only':
       return test(/(Sword|Axe|Lance|Breath)/, weaponType);
     case 'Ranged Weapons Only':
+    case 'Ranged Weapon Users Only':
       return test(/(Staff|Tome|Bow|Shuriken)/, weaponType);
     case 'Breath Users Only':
       return test(/Breath/, weaponType);
@@ -141,12 +147,16 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
     case 'Excludes Staff Users':
       return weaponType !== 'Neutral Staff';
     case 'Excludes Colorless Weapons':
+    case 'Excludes Colorless Weapon Users':
       return !test(/Neutral/, weaponType);
     case 'Excludes Blue Weapons':
+    case 'Excludes Blue Weapon Users':
       return !test(/Blue/, weaponType);
     case 'Excludes Red Weapons':
+    case 'Excludes Red Weapon Users':
       return !test(/Red/, weaponType);
     case 'Excludes Green Weapons':
+    case 'Excludes Green Weapon Users':
       return !test(/Green/, weaponType);
     case 'Is exclusive':
       return false;
