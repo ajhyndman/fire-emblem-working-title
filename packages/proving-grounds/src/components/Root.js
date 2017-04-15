@@ -68,8 +68,10 @@ class Root extends React.Component {
           <link rel="manifest" href="/static/manifest.json" />
           <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <meta name="google-site-verification" content="xhsgvhTSpxLtgLXLXXULMVsyO2AKWCFdavpoMp75Ffg" />
-          <meta name="description" content="The authoritative Fire Emblem: Heroes combat simulator" />
+          <meta name="google-site-verification"
+            content="xhsgvhTSpxLtgLXLXXULMVsyO2AKWCFdavpoMp75Ffg" />
+          <meta name="description"
+            content="The authoritative Fire Emblem: Heroes combat simulator" />
           <meta name="keywords" content="damage calculator,fire emblem,combat simulator,heroes" />
           <meta name="robots" content="index,follow" />
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
