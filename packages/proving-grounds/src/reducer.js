@@ -66,7 +66,7 @@ const reducer = (state: State, action: Action): State => {
       return { ...state, searchString: action.value };
     case 'SELECT_SLOT':
       return (state.activeHero === 'CLEAR')
-        ? (action.slot == null)
+        ? (action.slot === undefined)
           // clear active states
           ? { ...state, ...clearActiveState }
           // clear the selected slot
@@ -75,10 +75,10 @@ const reducer = (state: State, action: Action): State => {
             ...clearActiveState,
             heroSlots: update(action.slot, undefined, state.heroSlots),
           }
-        : (state.activeHero == null)
+        : (state.activeHero === undefined)
           // activate slot
           ? { ...state, activeSlot: action.slot }
-          : (action.slot == null)
+          : (action.slot === undefined)
             // clear active states
             ? { ...state, ...clearActiveState }
             // select new hero
@@ -88,7 +88,7 @@ const reducer = (state: State, action: Action): State => {
               heroSlots: update(action.slot, state.activeHero, state.heroSlots),
             };
     case 'SELECT_HERO':
-      if (state.activeSlot != null && action.hero === 'CLEAR') {
+      if (state.activeSlot !== undefined && action.hero === 'CLEAR') {
         // clear active slot
         return {
           ...state,
@@ -102,14 +102,14 @@ const reducer = (state: State, action: Action): State => {
           ...clearActiveState,
           activeHero: 'CLEAR',
         };
-      } else if (state.activeSlot == null && hasEmptySlot(state)) {
+      } else if (state.activeSlot === undefined && hasEmptySlot(state)) {
         // move hero to first empty slot
         return {
           ...state,
           ...clearActiveState,
           heroSlots: update(getEmptySlot(state), action.hero, state.heroSlots),
         };
-      } else if (state.activeSlot == null) {
+      } else if (state.activeSlot === undefined) {
         // select hero
         return { ...state, activeHero: action.hero };
       } else {
@@ -132,19 +132,19 @@ const reducer = (state: State, action: Action): State => {
         heroSlots: reverse(state.heroSlots),
       };
     case 'UPDATE_BANE':
-      if (state.activeSlot == null) return state;
+      if (state.activeSlot === undefined) return state;
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'bane'], action.stat, state);
     case 'UPDATE_BOON':
-      if (state.activeSlot == null) return state;
+      if (state.activeSlot === undefined) return state;
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'boon'], action.stat, state);
     case 'UPDATE_RARITY':
-      if (state.activeSlot == null) return state;
+      if (state.activeSlot === undefined) return state;
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'rarity'], action.rarity, state);
     case 'UPDATE_SKILL':
-      if (state.activeSlot == null) return state;
+      if (state.activeSlot === undefined) return state;
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(
         ['heroSlots', state.activeSlot, 'skills', action.skillType],

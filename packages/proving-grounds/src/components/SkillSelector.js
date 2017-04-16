@@ -87,7 +87,7 @@ const SkillSelector = ({
           (skillName) => skillType === 'SEAL' || isMaxTier(skillName),
           propOr('', 'name'),
         ),
-        [null].concat(getInheritableSkills(heroInstance.name, skillType)),
+        [undefined].concat(getInheritableSkills(heroInstance.name, skillType)),
       ),
     )}
   </div>

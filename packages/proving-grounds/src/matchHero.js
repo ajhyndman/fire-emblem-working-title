@@ -34,9 +34,9 @@ const synonyms = {
   'bow': 'archer',
 };
 
-const queryMatchesKeyword = curry((cleanedSearchTerm: string, keyword: string) => 
+const queryMatchesKeyword = curry((cleanedSearchTerm: string, keyword: string) =>
   (keyword.indexOf(cleanedSearchTerm) !== -1)
-  || (synonyms[keyword] != null && synonyms[keyword].indexOf(cleanedSearchTerm) !== -1));
+  || (synonyms[keyword] !== undefined && synonyms[keyword].indexOf(cleanedSearchTerm) !== -1));
 
 const getKeywords: (hero: Hero) => Array<string> =
   (hero: Hero) => compose(

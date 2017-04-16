@@ -67,7 +67,7 @@ export const lookupStats = (name: string): Hero => {
 // Can be called with substrings of the skill name
 export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedName: string) => {
   const skillName = getSkillName(instance, skillType);
-  if (skillName != null) {
+  if (skillName !== undefined) {
     return test(new RegExp(expectedName), skillName);
   }
   return false;
@@ -98,17 +98,17 @@ export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkil
     indexBy((skill: Skill) => skill.type),
     filter(compose(not, isNil)),
     map(skill => getSkillInfo(skill.name)),
-    filter(skill => (skill.rarity == null || skill.rarity === '-' || skill.rarity <= rarity)),
+    filter(skill => (skill.rarity === undefined || skill.rarity === '-' || skill.rarity <= rarity)),
   )(hero.skills): any);
 
   return {
-    WEAPON: null,
-    ASSIST: null,
-    SPECIAL: null,
-    PASSIVE_A: null,
-    PASSIVE_B: null,
-    PASSIVE_C: null,
-    SEAL: null,
+    WEAPON: undefined,
+    ASSIST: undefined,
+    SPECIAL: undefined,
+    PASSIVE_A: undefined,
+    PASSIVE_B: undefined,
+    PASSIVE_C: undefined,
+    SEAL: undefined,
     ...skillsByType,
   };
 }
@@ -122,7 +122,7 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
   }
   // Unobtainable weapons (story only) currently have no weapon type.
   // Hero has weaponType 'Red Beast' and weapon has weaponType 'Breath'
-  if (skill.type === 'WEAPON' && (skill.weaponType == null
+  if (skill.type === 'WEAPON' && (skill.weaponType === undefined
     || (test(/Beast/, weaponType) ? 'Breath' : weaponType) !== skill.weaponType)) {
     return false;
   }

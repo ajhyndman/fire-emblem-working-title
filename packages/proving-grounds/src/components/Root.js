@@ -78,9 +78,15 @@ class Root extends React.Component {
           <meta name="theme-color" content="#ffffff" />
           <meta property="og:title" content="Proving Grounds — Fire Emblem: Heroes" />
           <meta property="og:type" content="website" />
-          <meta property="og:description" content="The authoritative Fire Emblem: Heroes combat simulator" />
+          <meta
+            property="og:description"
+            content="The authoritative Fire Emblem: Heroes combat simulator"
+          />
           <meta property="og:url" content="https://proving-grounds.ajhyndman.com" />
-          <meta property="og:image" content="https://proving-grounds.ajhyndman.com/static/site-preview.png" />
+          <meta
+            property="og:image"
+            content="https://proving-grounds.ajhyndman.com/static/site-preview.png"
+          />
           <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="564" />
           <meta property="og:image:height" content="448" />

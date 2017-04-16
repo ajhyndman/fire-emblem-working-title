@@ -17,7 +17,6 @@ import { getDefaultSkills } from '../src/heroHelpers';
 import { getSkillInfo } from '../src/skillHelpers';
 
 
-// $FlowIssue object literal. This type is incompatible with HeroInstance
 const customizedInstance: HeroInstance = {
   ...getDefaultInstance('Anna'),
   bane: 'atk',
@@ -28,7 +27,7 @@ const customizedInstance: HeroInstance = {
     PASSIVE_A: getSkillInfo('Attack +3'),
     // Convert to any because otherwise flow complains with incorrect line numbers.
     SEAL: (getSkillInfo('Attack +1'): any),
-  }
+  },
 };
 
 test('flattenInstance', (t) => {
@@ -40,7 +39,7 @@ test('flattenInstance', (t) => {
         2, // atk bane
         'n', // no boon
         5,
-        null,
+        undefined,
         'Attack +3',
         'Vantage 3',
         'Spur Res 3',
@@ -164,8 +163,8 @@ test('encodeHero', (t) => {
     assert.deepEqual(
       decodeHero('MwRgxgrA1AJr8E4BmAjA7FALEgppqKSCwUATGmKfHDEA'),
       {
-        bane: null,
-        boon: null,
+        bane: undefined,
+        boon: undefined,
         name: 'Cordelia',
         rarity: 5,
         mergeLevel: 0,
@@ -176,7 +175,7 @@ test('encodeHero', (t) => {
           PASSIVE_A: getSkillInfo('Swift Sparrow 2'),
           PASSIVE_B: getSkillInfo('Drag Back'),
           PASSIVE_C: getSkillInfo('Savage Blow 3'),
-          SEAL: null,
+          SEAL: undefined,
         },
       },
     );
@@ -185,19 +184,19 @@ test('encodeHero', (t) => {
 
   t.test('encode removed skills', (assert) => {
     const noSkillHero: HeroInstance = {
-      bane: null,
-      boon: null,
+      bane: undefined,
+      boon: undefined,
       name: 'Anna',
       rarity: 5,
       mergeLevel: 0,
       skills: {
-        WEAPON: null,
-        ASSIST: null,
-        SPECIAL: null,
-        PASSIVE_A: null,
-        PASSIVE_B: null,
-        PASSIVE_C: null,
-        SEAL: null,
+        WEAPON: undefined,
+        ASSIST: undefined,
+        SPECIAL: undefined,
+        PASSIVE_A: undefined,
+        PASSIVE_B: undefined,
+        PASSIVE_C: undefined,
+        SEAL: undefined,
       },
     };
     assert.deepEqual(

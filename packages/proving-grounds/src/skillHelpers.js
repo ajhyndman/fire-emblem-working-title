@@ -20,10 +20,10 @@ import { getStat, getMitigationType, hasSkill, getSkillName, getSkillEffect } fr
 import type { HeroInstance } from './heroInstance';
 
 
-export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | null;
+export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | void;
 export type SkillsByName = { [key: string]: Skill };
 
-// Exclude seals for now so that getDefaultSkills doesn't give Lilina Attack +1 
+// Exclude seals for now so that getDefaultSkills doesn't give Lilina Attack +1
 const skillsByName: SkillsByName = compose(
   // $FlowIssue indexBy confuses flow
   indexBy(prop('name')),
@@ -37,7 +37,7 @@ const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 // Returns a list of numbers from the effect of the skill, or [0].
 export function getSkillNumbers(skillName: string): Array<number> {
   const skill = getSkillInfo(skillName);
-  if (skill == null) {
+  if (skill === undefined) {
     return [0];
   }
   // $FlowIssue $Iterable. This type is incompatible with ... Array<number>
@@ -47,7 +47,7 @@ export function getSkillNumbers(skillName: string): Array<number> {
 // Returns the value for a stat provided by a passive skill
 export function getStatValue(skillName: string, statKey: string, isAttacker: boolean) {
   const skill = getSkillInfo(skillName);
-  if (skill == null) {
+  if (skill === undefined) {
     return 0;
   } else if (skill.type === 'WEAPON') {
     if (statKey === 'atk') {
@@ -136,7 +136,7 @@ export function isFreeSkill(skillName: string): boolean {
 
 // Returns the condition for the special to trigger. (Other is for Galefore)
 export function getSpecialType(instance: HeroInstance): SpecialType {
-  if (instance.skills['SPECIAL'] == null) return null;
+  if (instance.skills['SPECIAL'] === undefined) return undefined;
   if (test(/When healing/, getSkillEffect(instance, 'SPECIAL'))) return 'HEAL';
   if (test(/Galeforce/, getSkillName(instance, 'SPECIAL'))) return 'OTHER';
   if (test(/Reduces damage/, getSkillEffect(instance, 'SPECIAL'))) return 'ATTACKED';
@@ -147,7 +147,7 @@ export function getSpecialType(instance: HeroInstance): SpecialType {
 
 // Returns the cooldown of the special or -1. Accounts for killer weapons.
 export const getSpecialCooldown = (instance: HeroInstance) =>
-  instance.skills['SPECIAL'] == null ? -1
+  instance.skills['SPECIAL'] === undefined ? -1
     : (instance.skills['SPECIAL'].cooldown
     + (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0)
     + (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0));
@@ -181,7 +181,7 @@ export function getSpecialBonusDamageAmount(
     isAttacker: boolean,
     attackerMissingHp: number,
 ): number {
-  const woDaoBonus = (skillName !== '' && skillName != null
+  const woDaoBonus = (skillName !== '' && skillName !== undefined
                       && getSpecialType(attacker) === 'ATTACK'
                       && hasSkill(attacker, 'WEAPON', 'Wo Dao')) ? 10 : 0;
   let stat = 'def';

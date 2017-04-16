@@ -7,6 +7,9 @@
   "globals": {
     "ga": false
   },
+  "plugins": [
+    "no-null"
+  ],
   "rules": {
     "eqeqeq": ["error", "always", { "null": "ignore" }],
     "indent": ["error", 2, { "SwitchCase": 1 }],
@@ -23,6 +26,8 @@
       "error",
       "never"
     ],
+
+    "no-null/no-null": ["error"],
 
     "react/sort-comp": ["error", {
       "order": [

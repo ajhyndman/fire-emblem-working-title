@@ -100,9 +100,11 @@ const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) 
         `}
         sizes={`${CLASS_ICON_SIZE}px`}
       />}
-      {(specialCooldown != null && specialCooldown !== -1)&& <span className="specialCooldown">
-        {specialCooldown}
-      </span>}
+      {(specialCooldown !== undefined && specialCooldown !== -1) && (
+        <span className="specialCooldown">
+          {specialCooldown}
+        </span>
+      )}
     </div>
   );
 };

@@ -112,37 +112,35 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         }}
         onContextMenu={event => openConfig(event, dispatch, 0)}
       >
-        {leftHero
-          ? (
-            <div>
-              <Hero
-                name={leftHero.name}
-                weaponType={lookupStats(leftHero.name).weaponType}
-                rarity={leftHero.rarity}
-                specialCooldown={getSpecialCooldown(leftHero)}
-              />
-              <img
-                className="configure-button"
-                src={`${staticUrl}Button_Configure.png`}
-                srcSet={`
-                  ${staticUrl}28px-Button_Configure.png 28w,
-                  ${staticUrl}56px-Button_Configure.png 56w
-                `}
-                sizes={`${gridSize / 2}px`}
-              />
-              <img
-                className="configure-button configure-button-active"
-                onClick={event => openConfig(event, dispatch, 0)}
-                src={`${staticUrl}Button_Configure_Active.png`}
-                srcSet={`
-                  ${staticUrl}28px-Button_Configure_Active.png 28w,
-                  ${staticUrl}56px-Button_Configure_Active.png 56w
-                `}
-                sizes={`${gridSize / 2}px`}
-              />
-            </div>
-          )
-          : null}
+        {leftHero && (
+          <div>
+            <Hero
+              name={leftHero.name}
+              weaponType={lookupStats(leftHero.name).weaponType}
+              rarity={leftHero.rarity}
+              specialCooldown={getSpecialCooldown(leftHero)}
+            />
+            <img
+              className="configure-button"
+              src={`${staticUrl}Button_Configure.png`}
+              srcSet={`
+                ${staticUrl}28px-Button_Configure.png 28w,
+                ${staticUrl}56px-Button_Configure.png 56w
+              `}
+              sizes={`${gridSize / 2}px`}
+            />
+            <img
+              className="configure-button configure-button-active"
+              onClick={event => openConfig(event, dispatch, 0)}
+              src={`${staticUrl}Button_Configure_Active.png`}
+              srcSet={`
+                ${staticUrl}28px-Button_Configure_Active.png 28w,
+                ${staticUrl}56px-Button_Configure_Active.png 56w
+              `}
+              sizes={`${gridSize / 2}px`}
+            />
+          </div>
+        )}
       </div>
       <img
         className="swap-button"
@@ -168,37 +166,35 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         }}
         onContextMenu={event => openConfig(event, dispatch, 1)}
       >
-        {rightHero
-          ? (
-            <div>
-              <Hero
-                name={rightHero.name}
-                weaponType={lookupStats(rightHero.name).weaponType}
-                rarity={rightHero.rarity}
-                specialCooldown={getSpecialCooldown(rightHero)}
-              />
-              <img
-                className="configure-button"
-                src={`${staticUrl}Button_Configure.png`}
-                srcSet={`
-                  ${staticUrl}28px-Button_Configure.png 28w,
-                  ${staticUrl}56px-Button_Configure.png 56w
-                `}
-                sizes={`${gridSize / 2}px`}
-              />
-              <img
-                className="configure-button configure-button-active"
-                onClick={event => openConfig(event, dispatch, 1)}
-                src={`${staticUrl}Button_Configure_Active.png`}
-                srcSet={`
-                  ${staticUrl}28px-Button_Configure_Active.png 28w,
-                  ${staticUrl}56px-Button_Configure_Active.png 56w
-                `}
-                sizes={`${gridSize / 2}px`}
-              />
-            </div>
-          )
-          : null}
+        {rightHero && (
+          <div>
+            <Hero
+              name={rightHero.name}
+              weaponType={lookupStats(rightHero.name).weaponType}
+              rarity={rightHero.rarity}
+              specialCooldown={getSpecialCooldown(rightHero)}
+            />
+            <img
+              className="configure-button"
+              src={`${staticUrl}Button_Configure.png`}
+              srcSet={`
+                ${staticUrl}28px-Button_Configure.png 28w,
+                ${staticUrl}56px-Button_Configure.png 56w
+              `}
+              sizes={`${gridSize / 2}px`}
+            />
+            <img
+              className="configure-button configure-button-active"
+              onClick={event => openConfig(event, dispatch, 1)}
+              src={`${staticUrl}Button_Configure_Active.png`}
+              srcSet={`
+                ${staticUrl}28px-Button_Configure_Active.png 28w,
+                ${staticUrl}56px-Button_Configure_Active.png 56w
+              `}
+              sizes={`${gridSize / 2}px`}
+            />
+          </div>
+        )}
       </div>
     </div>
   </div>

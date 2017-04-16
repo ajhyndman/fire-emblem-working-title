@@ -157,8 +157,7 @@ export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefault
  */
 
 export const hash = (value: any): string => (
-  // eslint-disable-next-line no-null/no-null
-  value == null
+  value === undefined
     ? '0'
     : (typeof value === 'number' || (typeof value === 'string' && value.length < 4))
       ? value
@@ -167,10 +166,6 @@ export const hash = (value: any): string => (
 );
 
 const values = flatten([
-  // Explicitly add `null` to the hash table.
-  // This is a workaround for issue #52
-  // eslint-disable-next-line no-null/no-null
-  null,
   [USE_DEFAULT, NO_VARIANT],
   range(1, 99), // Rarity, Bane/Boon ids, and USE_DEFAULT are 1-7
   // $FlowIssue: flowtypes for ramda aren't precise

@@ -240,10 +240,10 @@ export const calculateResult = (
   attacker: HeroInstance,
   defender: HeroInstance,
   // Note: current implementation of skills assumes full health.
-  attackerInitialHp: ?number = null,
-  defenderInitialHp: ?number = null,
-  attackerInitialCooldown: ?number = null,
-  defenderInitialCooldown: ?number = null,
+  attackerInitialHp: number | void,
+  defenderInitialHp: number | void,
+  attackerInitialCooldown: number | void,
+  defenderInitialCooldown: number | void,
 ) => {
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
@@ -280,8 +280,8 @@ export const calculateResult = (
   // $FlowIssue $Iterable. This type is incompatible with array type
   const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
   let specialCds: Array<number> = [
-    attackerInitialCooldown == null ? getSpecialCooldown(attacker) : attackerInitialCooldown,
-    defenderInitialCooldown == null ? getSpecialCooldown(defender) : defenderInitialCooldown,
+    attackerInitialCooldown === undefined ? getSpecialCooldown(attacker) : attackerInitialCooldown,
+    defenderInitialCooldown === undefined ? getSpecialCooldown(defender) : defenderInitialCooldown,
   ];
   let numAttacks = [0, 0];
   let healths = [attackerInitialHp || maxHps[0], defenderInitialHp || maxHps[1]];

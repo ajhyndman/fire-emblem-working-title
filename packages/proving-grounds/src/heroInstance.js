@@ -15,12 +15,12 @@ export type Rarity = 1 | 2 | 3 | 4 | 5;
 export type MergeLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 export type InstanceSkills = {
-  +WEAPON: ?WeaponSkill;
-  +ASSIST: ?AssistSkill;
-  +SPECIAL: ?SpecialSkill;
-  +PASSIVE_A: ?PassiveSkill;
-  +PASSIVE_B: ?PassiveSkill;
-  +PASSIVE_C: ?PassiveSkill;
+  +WEAPON: WeaponSkill | void;
+  +ASSIST: AssistSkill | void;
+  +SPECIAL: SpecialSkill | void;
+  +PASSIVE_A: PassiveSkill | void;
+  +PASSIVE_B: PassiveSkill | void;
+  +PASSIVE_C: PassiveSkill | void;
   +SEAL: ?SealSkill;
 };
 
