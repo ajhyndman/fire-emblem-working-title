@@ -1,4 +1,6 @@
+
 # fire-emblem-working-title
+![Circle CI Status](https://circleci.com/gh/ajhyndman/fire-emblem-working-title.svg?style=shield&circle-token=:circle-token)
 
 This is a lerna repo managing two packages:
 

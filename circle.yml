@@ -1,0 +1,20 @@
+## Customize dependencies
+dependencies:
+  pre:
+    - nvm install 6.10.0
+
+  override:
+    - nvm use 6.10.0 && yarn
+    - nvm use 6.10.0 && yarn bootstrap
+
+  # we automatically cache and restore many dependencies between
+  # builds. If you need to, you can add custom paths to cache:
+  cache_directories:
+    - "node_modules"
+    - "packages/fire-emblem-heroes-stats/node_modules"
+    - "packages/proving-grounds/node_modules"
+
+## Customize test commands
+test:
+  override:
+    - nvm use 6.10.0 && yarn test
