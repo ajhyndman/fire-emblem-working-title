@@ -10,7 +10,6 @@ COPY ./ ./
 
 # Compile Application
 RUN yarn install
-RUN yarn stamp-deploy
 RUN yarn build
 
 EXPOSE 3000

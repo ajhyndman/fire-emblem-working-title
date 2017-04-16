@@ -1,0 +1,9 @@
+.git
+.gitignore
+.next
+.vscode
+node_modules
+README.md
+flow-typed
+flow
+static/cdn

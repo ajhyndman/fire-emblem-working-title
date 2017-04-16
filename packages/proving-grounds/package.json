@@ -7,9 +7,9 @@
   "license": "GPL-3.0+",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "npm run stamp-deploy && next build",
     "build-storybook": "build-storybook",
-    "deploy": "now --docker",
+    "deploy": "now",
     "dev": "next",
     "docker-build": "docker build -t proving-grounds .",
     "docker-start": "docker run -d -p 80:3000 proving-grounds",
@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-register": "^6.24.0",
     "eslint": "^3.17.1",
