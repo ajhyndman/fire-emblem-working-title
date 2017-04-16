@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "clean": "rm -r node_modules; rm -r packages/fire-emblem-heroes-stats/node_modules; rm -r packages/proving-grounds/node_modules ",
+    "clean": "rm -r node_modules packages/fire-emblem-heroes-stats/node_modules packages/proving-grounds/node_modules ",
     "pretest": "lerna bootstrap --npm-client=yarn",
     "test": "lerna run test --npm-client=yarn"
   },
