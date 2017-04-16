@@ -1,0 +1,17 @@
+## Customize dependencies
+dependencies:
+  override:
+    - yarn
+    - yarn bootstrap
+
+  # we automatically cache and restore many dependencies between
+  # builds. If you need to, you can add custom paths to cache:
+  cache_directories:
+    - "node_modules"
+    - "packages/fire-emblem-heroes-stats/node_modules"
+    - "packages/proving-grounds/node_modules"
+
+## Customize test commands
+test:
+  override:
+    - yarn test
