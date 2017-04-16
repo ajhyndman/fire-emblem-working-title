@@ -37,6 +37,7 @@ class Configure extends React.Component {
     if (!isEmpty(query)) {
       dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) });
       dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) });
+      dispatch({ type: 'SELECT_SLOT', slot: query['slot'] || 0 });
     }
 
     if (req) dispatch({ type: 'SET_HOST', host: req.headers.host });
