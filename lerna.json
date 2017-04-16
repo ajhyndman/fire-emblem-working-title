@@ -1,11 +1,5 @@
 {
   "lerna": "2.0.0-beta.38",
-  "command": {
-    "bootstrap": {
-      "concurrency": 1,
-      "includeFilteredDependencies": true
-    }
-  },
   "packages": [
     "packages/*"
   ],
