@@ -1,5 +1,10 @@
 {
+  "scripts": {
+    "pretest": "lerna bootstrap --npm-client=yarn",
+    "test": "lerna run test --npm-client=yarn"
+  },
   "devDependencies": {
-    "lerna": "2.0.0-beta.38"
+    "lerna": "2.0.0-beta.38",
+    "yarn": "0.22.0"
   }
 }

@@ -18,7 +18,8 @@
     "start": "next start",
     "storybook": "start-storybook -p 6006 -s .",
     "sync-static": "aws s3 sync ./static/cdn/ s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public",
-    "test": "tape -r babel-register tests/**/*.js"
+    "tape": "tape -r babel-register tests/**/*.js",
+    "test": "npm run lint && npm run tape"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
