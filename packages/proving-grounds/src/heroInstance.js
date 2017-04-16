@@ -57,8 +57,8 @@ export type HeroInstance = {
 
 export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstance => ({
   name: name,
-  bane: null,
-  boon: null,
+  bane: undefined,
+  boon: undefined,
   rarity: rarity,
   mergeLevel: 0,
   skills: getDefaultSkills(name, rarity),

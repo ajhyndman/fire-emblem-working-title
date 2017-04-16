@@ -66,16 +66,14 @@ type SerialInstanceWithDefaults = [
   'd' | MergeLevel, // mergeLevel
 ];
 
-const statKeyToId = {'hp':1, 'atk':2, 'spd':3, 'def':4, 'res':5, 'null': NO_VARIANT};
-const idToStatKey = assoc(NO_VARIANT.toString(), null, invertObj(statKeyToId));
+const statKeyToId = { hp: 1, atk: 2, spd: 3, def: 4, res: 5 };
+const idToStatKey = assoc(NO_VARIANT.toString(), undefined, invertObj(statKeyToId));
 
 // Converts a hero instance to a list of values.
 export const flattenInstance = (instance: HeroInstance): SerialInstance => [
   instance.name,
-  // $FlowIssue ... Computed property cannot be accessed with ... null
-  statKeyToId[instance.bane],
-  // $FlowIssue ... Computed property cannot be accessed with ... null
-  statKeyToId[instance.boon],
+  instance.bane ? statKeyToId[instance.bane] : NO_VARIANT,
+  instance.boon ? statKeyToId[instance.boon] : NO_VARIANT,
   instance.rarity,
   // I'm avoiding Ramda path() calls here, just because flow
   // does better inference this way.  :(
@@ -159,6 +157,7 @@ export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefault
  */
 
 export const hash = (value: any): string => (
+  // eslint-disable-next-line no-null/no-null
   value == null
     ? '0'
     : (typeof value === 'number' || (typeof value === 'string' && value.length < 4))
@@ -170,6 +169,7 @@ export const hash = (value: any): string => (
 const values = flatten([
   // Explicitly add `null` to the hash table.
   // This is a workaround for issue #52
+  // eslint-disable-next-line no-null/no-null
   null,
   [USE_DEFAULT, NO_VARIANT],
   range(1, 99), // Rarity, Bane/Boon ids, and USE_DEFAULT are 1-7

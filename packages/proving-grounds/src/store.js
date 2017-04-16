@@ -59,7 +59,6 @@ const gaMiddleware = analytics(({ type, payload }, state: State) => {
         },
         state.heroSlots,
       );
-      console.log('logged link share event to ga');
       break;
     default:
       // pass
