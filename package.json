@@ -1,8 +1,8 @@
 {
   "scripts": {
     "clean": "rm -r node_modules packages/fire-emblem-heroes-stats/node_modules packages/proving-grounds/node_modules ",
-    "pretest": "lerna bootstrap --npm-client=yarn --concurrency=1 --include-filtered-dependencies",
-    "test": "lerna run test --npm-client=yarn"
+    "pretest": "lerna bootstrap",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "lerna": "2.0.0-beta.38"
