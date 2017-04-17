@@ -101,7 +101,7 @@ storiesOf('HeroConfigurer', module)
 
 storiesOf('Input', module)
   .add('default', () => (
-    <Input />
+    <Input onChange={() => {}} value="" />
   ));
 
 storiesOf('RaritySelector', module)
