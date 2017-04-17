@@ -1,4 +1,5 @@
 // @flow
+import throttle from 'lodash.throttle';
 import { any, compose, isNil, not } from 'ramda';
 
 import type { State } from '.';
@@ -29,7 +30,7 @@ export const loadState = (initialState: State) => {
   }
 };
 
-export const saveState = (state: State) => {
+export const saveState = throttle((state: State) => {
   try {
     const serializedHeroSlots = JSON.stringify(state.heroSlots);
     localStorage.setItem('heroSlots', serializedHeroSlots);
@@ -37,4 +38,4 @@ export const saveState = (state: State) => {
     // eslint-disable-next-line no-console
     console.warn('saveState: Something went wrong while accessing localStorage!', error);
   }
-};
+}, 1000);
