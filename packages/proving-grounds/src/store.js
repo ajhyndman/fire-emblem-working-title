@@ -5,6 +5,7 @@ import { forEach, map } from 'ramda';
 import { applyMiddleware, createStore } from 'redux';
 
 import reducer from './reducer';
+import { loadState, saveState } from './localStorage';
 import type { HeroInstance } from './heroInstance';
 
 
@@ -66,7 +67,17 @@ const gaMiddleware = analytics(({ type, payload }, state: State) => {
 });
 
 const initStore = (initialState: State = emptyState) => {
-  return createStore(reducer, initialState, applyMiddleware(gaMiddleware));
+  // if we are on the server, init the store
+  if (typeof window === 'undefined') {
+    return createStore(reducer, initialState);
+  }
+
+  // if we are on the client, hook into localStorage and apply gaMiddleware
+  const store = createStore(reducer, loadState(initialState), applyMiddleware(gaMiddleware));
+  store.subscribe(() => {
+    saveState(store.getState());
+  });
+  return store;
 };
 
 export default initStore;
