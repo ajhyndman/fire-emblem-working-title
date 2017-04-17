@@ -5,7 +5,8 @@
     "node": true
   },
   "globals": {
-    "ga": false
+    "ga": false,
+    "ReactClass": false
   },
   "plugins": [
     "no-null"
