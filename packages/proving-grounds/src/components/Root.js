@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import React from 'react';
 import MarkGithub from 'react-icons/lib/go/mark-github';
+import Reddit from 'react-icons/lib/fa/reddit';
 import stats from 'fire-emblem-heroes-stats';
 import {
   allPass,
@@ -252,6 +253,12 @@ class Root extends React.Component {
             Proving Grounds is an open source project licensed under GPL-3.0+
             <a href="https://github.com/ajhyndman/fire-emblem-working-title/issues">
               <MarkGithub />
+            </a>
+            <a
+              href={'https://www.reddit.com/r/FireEmblemHeroes/comments/65cmhu'
+              + '/proving_grounds_yet_another_duel_simulator/'}
+            >
+              <Reddit />
             </a>
           </span>
         </div>
