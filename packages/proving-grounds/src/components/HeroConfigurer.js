@@ -236,6 +236,8 @@ const HeroConfigurer = withState(
                     </div>
                   ),
                   ({
+                    // Enumerate all properties to ensure they are all iterable.
+                    // This fixes issue #52
                     WEAPON: undefined,
                     ASSIST: undefined,
                     SPECIAL: undefined,
