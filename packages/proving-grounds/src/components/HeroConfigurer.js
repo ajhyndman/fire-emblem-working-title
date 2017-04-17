@@ -23,7 +23,7 @@ import StatSheet from './StatSheet';
 import { colors, fontFamilies, fontSizes, lineHeights } from '../theme';
 import { hasStatsForRarity, lookupStats } from '../heroHelpers';
 import { staticUrl } from '../../config';
-import type { HeroInstance } from '../heroInstance';
+import type { HeroInstance, InstanceSkills } from '../heroInstance';
 import type { Dispatch } from '../reducer';
 
 
@@ -235,7 +235,16 @@ const HeroConfigurer = withState(
                       />
                     </div>
                   ),
-                  heroInstance.skills,
+                  ({
+                    WEAPON: undefined,
+                    ASSIST: undefined,
+                    SPECIAL: undefined,
+                    PASSIVE_A: undefined,
+                    PASSIVE_B: undefined,
+                    PASSIVE_C: undefined,
+                    SEAL: undefined,
+                    ...heroInstance.skills,
+                  }: InstanceSkills),
                 ))
               }
             </div>
