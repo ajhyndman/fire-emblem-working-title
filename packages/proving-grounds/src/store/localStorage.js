@@ -1,7 +1,7 @@
 // @flow
 import { any, compose, isNil, not } from 'ramda';
 
-import type { State } from './store';
+import type { State } from '.';
 
 
 const isNotNil = compose(not, isNil);
