@@ -42,6 +42,18 @@ const backgroundUrl = 'Bg_WorldMap2.png';
 
 class Root extends React.Component {
   props: Props;
+  searchInput: ReactClass<*>;
+
+  componentDidMount() {
+    window.document.onkeydown = event => {
+      if (
+        event.getModifierState('Alt')
+        || event.getModifierState('Control')
+        || event.getModifierState('Meta')
+      ) return;
+      this.searchInput.focus();
+    };
+  }
 
   shouldComponentUpdate(nextProps: Props) {
     return (
@@ -191,6 +203,7 @@ class Root extends React.Component {
                   dispatch({ type: 'SEARCH_STRING_CHANGE', value });
                 }}
                 placeholder="Type a name, class, or skill"
+                ref={node => { this.searchInput = node; }}
                 value={state.searchString}
               />
             </div>
