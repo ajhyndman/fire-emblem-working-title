@@ -36,6 +36,7 @@ const SegmentedControl = ({
         border-bottom: 2px solid ${colors.fadedJade};
         border-right: none;
         border-left: none;
+        padding: 4.5px;
         position: relative;
         transition:
           box-shadow ${transition},
@@ -82,7 +83,7 @@ const SegmentedControl = ({
         <button
           key={option}
           className={cn({ active: (selected === i) })}
-          style={{ flexBasis: `${(1 / (options.length + 0.5)) * 100}%` }}
+          style={{ flexBasis: `${(1 / (options.length + 0.25)) * 100}%` }}
           onClick={() => onChange(i)}
         >
           {option}

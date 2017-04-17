@@ -1,5 +1,7 @@
 // @flow
 import React from 'react';
+import MinusSquare from 'react-icons/lib/fa/minus-square';
+import PlusSquare from 'react-icons/lib/fa/plus-square';
 import {
   compose,
   equals,
@@ -20,7 +22,7 @@ import Select from './Select';
 import Skill from './Skill';
 import SkillSelector from './SkillSelector';
 import StatSheet from './StatSheet';
-import { colors, fontFamilies, fontSizes, lineHeights } from '../theme';
+import { colors, fontFamilies, fontSizes, lineHeights, transition } from '../theme';
 import { hasStatsForRarity, lookupStats } from '../heroHelpers';
 import { staticUrl } from '../../config';
 import type { HeroInstance, InstanceSkills } from '../heroInstance';
@@ -77,6 +79,8 @@ const HeroConfigurer = withState(
     RES: 'res',
   };
 
+  const mergeLevel = heroInstance.mergeLevel === undefined ? 0 : heroInstance.mergeLevel;
+
   const invertObject = (obj) => zipObj(values(obj), keys(obj));
 
   return (
@@ -98,6 +102,27 @@ const HeroConfigurer = withState(
         .active-skill:not(:last-of-type) {
           margin-bottom: 10px;
         }
+        .adjust-merge-level {
+          background: none;
+          border: none;
+          color: ${colors.fadedJade};
+          cursor: pointer;
+          font-size: 24px;
+          margin: 0 -4px;
+          padding: 0 4px;
+          transition: color ${transition};
+        }
+        .adjust-merge-level:hover {
+          color: ${colors.aquaIsland};
+        }
+        .adjust-merge-level:focus {
+          outline: none;
+        }
+        .column {
+          display: flex;
+          flex-direction: column;
+          margin-left: 15px;
+        }
         .row {
           align-items: baseline;
           color: ${colors.iceberg};
@@ -107,6 +132,7 @@ const HeroConfigurer = withState(
           font-weight: bold;
           justify-content: space-between;
           padding-left: 0.75em;
+          position: relative;
         }
         .section {
           width: 250px;
@@ -143,11 +169,38 @@ const HeroConfigurer = withState(
         ? (
           <div>
             <div className="section">
-              <SegmentedControl
-                options={['Lv 1', 'Lv 40']}
-                selected={level === 1 ? 0 : 1}
-                onChange={i => dispatch({ type: 'SET_PREVIEW_LEVEL', level: ([1, 40])[i] })}
-              />
+              <div className="row" style={{ alignItems: 'center' }}>
+                <div style={{ flexGrow: 1 }}>
+                  <SegmentedControl
+                    options={[
+                      'Lv 1',
+                      `Lv 40${mergeLevel > 0 ? `+${mergeLevel}` : ''}`,
+                    ]}
+                    selected={level === 1 ? 0 : 1}
+                    onChange={i => dispatch({ type: 'SET_PREVIEW_LEVEL', level: ([1, 40])[i] })}
+                  />
+                </div>
+                <div className="column">
+                  <button
+                    className="adjust-merge-level"
+                    onClick={() => dispatch({
+                      type: 'SET_MERGE_LEVEL',
+                      value: mergeLevel + 1,
+                    })}
+                  >
+                    <PlusSquare style={{ display: 'block' }} />
+                  </button>
+                  <button
+                    className="adjust-merge-level"
+                    onClick={() => dispatch({
+                      type: 'SET_MERGE_LEVEL',
+                      value: heroInstance.mergeLevel - 1,
+                    })}
+                  >
+                    <MinusSquare style={{ display: 'block' }} />
+                  </button>
+                </div>
+              </div>
             </div>
             <div className="section">
               <h1 className="name">{heroInstance.name}</h1>

@@ -1,5 +1,5 @@
 // @flow
-import { any, assocPath, concat, drop, findIndex, isNil, reverse, update } from 'ramda';
+import { any, assocPath, clamp, concat, drop, findIndex, isNil, reverse, update } from 'ramda';
 import type { Skill, SkillType } from 'fire-emblem-heroes-stats';
 
 import type { State } from './store';
@@ -23,6 +23,9 @@ export type Action = {
 } | {
   type: 'SET_HOST';
   host: string;
+} | {
+  type: 'SET_MERGE_LEVEL';
+  value: number;
 } | {
   type: 'SET_PREVIEW_LEVEL';
   level: 1 | 40;
@@ -122,6 +125,12 @@ const reducer = (state: State, action: Action): State => {
       }
     case 'SET_HOST':
       return { ...state, host: action.host };
+    case 'SET_MERGE_LEVEL': {
+      if (state.activeSlot === undefined) return state;
+      const mergeLevel = clamp(0, 10, action.value);
+      // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
+      return assocPath(['heroSlots', state.activeSlot, 'mergeLevel'], mergeLevel, state);
+    }
     case 'SET_PREVIEW_LEVEL':
       return { ...state, previewLevel: action.level };
     case 'SHOW_GUIDE_CHANGE':
