@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import Hero from './Hero';
+import HeroPortrait from './Hero';
 import Router from '../router';
 import { colors, gridSize, transition } from '../theme';
 import { lookupStats } from '../heroHelpers';
@@ -114,7 +114,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
       >
         {leftHero && (
           <div>
-            <Hero
+            <HeroPortrait
               name={leftHero.name}
               weaponType={lookupStats(leftHero.name).weaponType}
               rarity={leftHero.rarity}
@@ -168,7 +168,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
       >
         {rightHero && (
           <div>
-            <Hero
+            <HeroPortrait
               name={rightHero.name}
               weaponType={lookupStats(rightHero.name).weaponType}
               rarity={rightHero.rarity}

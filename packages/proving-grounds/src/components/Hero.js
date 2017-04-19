@@ -20,6 +20,7 @@ const OVERSET = 4;
 
 const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) => {
   const weaponTypeUri = weaponType ? replace(' ', '_', weaponType) : '';
+  const imageName = replace(' (Grand Hero Battle)', '', name);
 
   return (
     <div className="root">
@@ -80,10 +81,10 @@ const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) 
         className="portrait"
         title={name}
         alt={name}
-        src={`${staticUrl}75px-Icon_Portrait_${encodeURIComponent(name)}.png`}
+        src={`${staticUrl}75px-Icon_Portrait_${encodeURIComponent(imageName)}.png`}
         srcSet={`
-          ${staticUrl}113px-Icon_Portrait_${encodeURIComponent(name)}.png 113w,
-          ${staticUrl}150px-Icon_Portrait_${encodeURIComponent(name)}.png 150w
+          ${staticUrl}113px-Icon_Portrait_${encodeURIComponent(imageName)}.png 113w,
+          ${staticUrl}150px-Icon_Portrait_${encodeURIComponent(imageName)}.png 150w
         `}
         sizes={`${gridSize}px`}
       />
