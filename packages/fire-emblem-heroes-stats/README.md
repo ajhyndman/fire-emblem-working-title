@@ -2,7 +2,7 @@
 
 [![yarn compatible](https://img.shields.io/badge/yarn-compatible-4BC51D.svg?style=flat)](https://yarnpkg.com/)
 
-Scrapes http://feheroes.wiki/Stats_Table for all available heroes and their average level 50 stats.
+Scrapes http://feheroes.wiki/Stats_Table for all available heroes and their average level 40 stats.
 
 Latest scraped stats are available in raw JSON format here:
 
