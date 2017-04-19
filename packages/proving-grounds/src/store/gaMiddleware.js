@@ -2,33 +2,10 @@
 import analytics from 'redux-analytics';
 import ReactGA from 'react-ga';
 import { forEach, map } from 'ramda';
-import { applyMiddleware, createStore } from 'redux';
 
-import reducer from './reducer';
-import type { HeroInstance } from './heroInstance';
+import type { HeroInstance } from '../heroInstance';
+import type { State } from '.';
 
-
-export type State = {
-  host: string;
-  activeHero: ?(HeroInstance | 'CLEAR');
-  activeSlot: 0 | 1 | void;
-  heroSlots: [?HeroInstance, ?HeroInstance];
-  notifications: Array<string>;
-  previewLevel: 1 | 40;
-  searchString: string;
-  showGuide: boolean;
-};
-
-const emptyState: State = {
-  activeHero: undefined,
-  activeSlot: undefined,
-  heroSlots: [undefined, undefined],
-  host: '',
-  notifications: [],
-  previewLevel: 40,
-  searchString: '',
-  showGuide: false,
-};
 
 const gaMiddleware = analytics(({ type, payload }, state: State) => {
   switch (type) {
@@ -65,8 +42,4 @@ const gaMiddleware = analytics(({ type, payload }, state: State) => {
   }
 });
 
-const initStore = (initialState: State = emptyState) => {
-  return createStore(reducer, initialState, applyMiddleware(gaMiddleware));
-};
-
-export default initStore;
+export default gaMiddleware;
