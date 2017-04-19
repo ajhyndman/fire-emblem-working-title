@@ -8,12 +8,14 @@ import {
   flatten,
   isNil,
   map,
+  none,
   not,
   prop,
   props,
   split,
   toLower,
 } from 'ramda';
+import stats from 'fire-emblem-heroes-stats';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import { getDefaultSkills } from './heroHelpers';
@@ -21,6 +23,7 @@ import { getDefaultSkills } from './heroHelpers';
 
 // A mapping from keywords to related words that someone might type.
 const synonyms = {
+  'armored': 'armor', // Goad armor => armor is a keyword.
   'beast': 'dragon',
   'cavalry': 'horse',
   'staff': 'healer',
@@ -34,9 +37,8 @@ const synonyms = {
   'bow': 'archer',
 };
 
-const queryMatchesKeyword = curry((cleanedSearchTerm: string, keyword: string) =>
-  (keyword.indexOf(cleanedSearchTerm) !== -1)
-  || (synonyms[keyword] !== undefined && synonyms[keyword].indexOf(cleanedSearchTerm) !== -1));
+// Ignore skills that match move/weapon types. (Armored Blow and Dragon Gaze)
+const wordsToIgnoreInSkills = new Set(['Dragon', 'Armored']);
 
 const getKeywords: (hero: Hero) => Array<string> =
   (hero: Hero) => compose(
@@ -48,6 +50,10 @@ const getKeywords: (hero: Hero) => Array<string> =
       props(['name', 'moveType', 'weaponType'], hero),
       // $FlowIssue function cannot be called on any member of intersection type.
       compose(
+        filter(compose(
+          none((word) => wordsToIgnoreInSkills.has(word)),
+          split(' '),
+        )),
         map(compose(jdu.replace, prop('name'))),
         filter(compose(not, isNil)),
         Object.values,
@@ -57,9 +63,26 @@ const getKeywords: (hero: Hero) => Array<string> =
     ]),
   );
 
+// $FlowIssue $Iterable. This type is incompatible with array type
+const allKeywords = new Set(flatten(map(getKeywords, stats.heroes)));
+
+const isKeyword = (word: string) =>
+  allKeywords.has(word) || synonyms[word] !== undefined;
+
+const keywordContainsQuery = curry((cleanedSearchTerm: string, keyword: string) =>
+  (keyword.indexOf(cleanedSearchTerm) !== -1)
+  || (synonyms[keyword] !== undefined && synonyms[keyword].indexOf(cleanedSearchTerm) !== -1));
+
+const keywordMatchesQuery = curry((cleanedSearchTerm: string, keyword: string) =>
+  (keyword === cleanedSearchTerm)
+  || (synonyms[keyword] === cleanedSearchTerm));
+
 const matchHero: (searchTerm: string) => (hero: Hero) => boolean =
   (searchTerm) => compose(
-    any(queryMatchesKeyword(toLower(jdu.replace(searchTerm)))),
+    any(
+      isKeyword(searchTerm)
+        ? keywordMatchesQuery(searchTerm)
+        : keywordContainsQuery(searchTerm)),
     getKeywords,
   );
 

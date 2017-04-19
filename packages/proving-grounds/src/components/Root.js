@@ -235,7 +235,7 @@ class Root extends React.Component {
               // $FlowIssue iterable incompatible with array
               allPass(map(
                 matchHero,
-                split(' ', state.searchString),
+                split(' ', toLower(state.searchString)),
               )),
               // Exclude unreleased heroes.
               // $FlowIssue typedef for propOr isn't resolving correctly
