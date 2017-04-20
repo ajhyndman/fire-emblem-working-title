@@ -20,7 +20,7 @@ const OVERSET = 4;
 
 const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) => {
   const weaponTypeUri = weaponType ? replace(' ', '_', weaponType) : '';
-  const imageName = replace(' (Grand Hero Battle)', '', name);
+  const imageName = replace(/ \(.*GHB\)/, '', name);
 
   return (
     <div className="root">

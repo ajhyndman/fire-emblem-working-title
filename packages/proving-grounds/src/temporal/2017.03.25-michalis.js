@@ -8,7 +8,7 @@ const endTime = new Date('2017-03-27T23:59:00-07:00');
 const unitList: Array<Hero> = [
   {
     'shortName': 'Flier',
-    'name': 'Lance Flier',
+    'name': 'Lance Flier (Michalis GHB)',
     'moveType': 'Flying',
     'weaponType': 'Blue Lance',
     'skills': [
@@ -55,7 +55,8 @@ const unitList: Array<Hero> = [
     },
   },
   {
-    'name': 'Michalis',
+    'shortName': 'Michalis',
+    'name': 'Michalis (Michalis GHB)',
     'moveType': 'Flying',
     'weaponType': 'Green Axe',
     'skills': [
@@ -99,7 +100,7 @@ const unitList: Array<Hero> = [
   },
   {
     'shortName': 'Flier',
-    'name': 'Sword Flier',
+    'name': 'Sword Flier (Michalis GHB)',
     'moveType': 'Flying',
     'weaponType': 'Red Sword',
     'skills': [
@@ -147,7 +148,7 @@ const unitList: Array<Hero> = [
   },
   {
     'shortName': 'Cavalier',
-    'name': 'Sword Cavalier',
+    'name': 'Sword Cavalier (Michalis GHB)',
     'moveType': 'Cavalry',
     'weaponType': 'Red Sword',
     'skills': [
@@ -191,7 +192,7 @@ const unitList: Array<Hero> = [
   },
   {
     'shortName': 'Fighter',
-    'name': 'Lance Fighter',
+    'name': 'Lance Fighter (Michalis GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Blue Lance',
     'skills': [

@@ -2,14 +2,78 @@
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 // Times were entered in PDT (UTC - 7)
-const startTime = new Date('2017-04-20T00:00:00-07:00');
+const startTime = new Date('2017-04-19T00:00:00-07:00');
 const endTime = new Date('2017-04-19T23:59:00-07:00');
 
 // TODO: confirm end date and stats/skills for other characters.
 const unitList: Array<Hero> = [
   {
+    'shortName': 'Blue Mage',
+    'name': 'Blue Mage (Zephiel GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Blue Tome',
+    'skills': [
+      {
+        'name': 'Thoron+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [45],
+          'atk': [30],
+          'spd': [30],
+          'def': [20],
+          'res': [20],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Knight',
+    'name': 'Axe Knight (Zephiel GHB)',
+    'moveType': 'Armored',
+    'weaponType': 'Green Axe',
+    'skills': [
+      {
+        'name': 'Brave Axe+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [67],
+          'atk': [30],
+          'spd': [30],
+          'def': [20],
+          'res': [20],
+        },
+      },
+    },
+  },
+  {
     'shortName': 'Zephiel',
-    'name': 'Zephiel (Grand Hero Battle)',
+    'name': 'Zephiel (Zephiel GHB)',
     'moveType': 'Armored',
     'weaponType': 'Red Sword',
     'skills': [
@@ -53,44 +117,12 @@ const unitList: Array<Hero> = [
   },
   {
     'shortName': 'Knight',
-    'name': 'Axe Knight',
-    'moveType': 'Armored',
-    'weaponType': 'Green Axe',
-    'skills': [
-      {
-        'name': 'Iron Axe',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [40],
-          'atk': [30],
-          'spd': [30],
-          'def': [20],
-          'res': [20],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'Knight',
-    'name': 'Lance Knight',
+    'name': 'Lance Knight (Zephiel GHB)',
     'moveType': 'Armored',
     'weaponType': 'Blue Lance',
     'skills': [
       {
-        'name': 'Iron Lance',
+        'name': 'Brave Lance+',
         'rarity': '-',
       },
     ],
@@ -106,7 +138,7 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [40],
+          'hp': [67],
           'atk': [30],
           'spd': [30],
           'def': [20],
@@ -116,45 +148,13 @@ const unitList: Array<Hero> = [
     },
   },
   {
-    'shortName': 'B Cavalier',
-    'name': 'Blue Cavalier',
-    'moveType': 'Cavalry',
-    'weaponType': 'Blue Tome',
-    'skills': [
-      {
-        'name': 'Thunder',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [40],
-          'atk': [30],
-          'spd': [30],
-          'def': [20],
-          'res': [20],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'R Cavalier',
-    'name': 'Red Cavalier',
-    'moveType': 'Cavalry',
+    'shortName': 'Red Mage',
+    'name': 'Red Mage (Zephiel GHB)',
+    'moveType': 'Infantry',
     'weaponType': 'Red Tome',
     'skills': [
       {
-        'name': 'Fire',
+        'name': 'Bolganone+',
         'rarity': '-',
       },
     ],
@@ -170,7 +170,7 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [40],
+          'hp': [45],
           'atk': [30],
           'spd': [30],
           'def': [20],

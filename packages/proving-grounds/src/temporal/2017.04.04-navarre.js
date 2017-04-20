@@ -7,7 +7,8 @@ const endTime = new Date('2017-04-08T23:59:00-07:00');
 
 const unitList: Array<Hero> = [
   {
-    'name': 'Navarre',
+    'shortName': 'Navarre',
+    'name': 'Navarre (Navarre GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Red Sword',
     'skills': [
@@ -50,7 +51,8 @@ const unitList: Array<Hero> = [
     },
   },
   {
-    'name': 'Thief',
+    'shortName': 'Thief 1',
+    'name': 'Thief 1 (Navarre GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Neutral Shuriken',
     'skills': [
@@ -97,7 +99,8 @@ const unitList: Array<Hero> = [
     },
   },
   {
-    'name': 'Thief',
+    'shortName': 'Thief 2',
+    'name': 'Thief 2 (Navarre GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Neutral Shuriken',
     'skills': [
@@ -145,7 +148,7 @@ const unitList: Array<Hero> = [
   },
   {
     'shortName': 'Fighter',
-    'name': 'Axe Fighter',
+    'name': 'Axe Fighter (Navarre GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Green Axe',
     'skills': [
@@ -192,7 +195,8 @@ const unitList: Array<Hero> = [
     },
   },
   {
-    'name': 'Cleric',
+    'shortName': 'Cleric',
+    'name': 'Cleric (Navarre GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Neutral Staff',
     'skills': [

@@ -217,13 +217,12 @@ class Root extends React.Component {
           activeHeroName={path(['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
-            // $FlowIssue typedef for prop isn't resolving correctly
-            compose(
-              name => (name.indexOf(toLower(state.searchString)) !== -1),
-              toLower,
-              prop('name'),
-            ),
-            getEventHeroes(),
+            // $FlowIssue iterable incompatible with array
+            allPass(map(
+              matchHero,
+              split(' ', state.searchString),
+            )),
+            getEventHeroes(false),
           )}
         />
         <HeroGrid

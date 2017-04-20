@@ -44,7 +44,7 @@ export type HeroesByName = { [key: string]: Hero };
 const heroesByName: HeroesByName = indexBy(
   prop('name'),
   // stats.heroes,
-  concat(stats.heroes, getEventHeroes()),
+  concat(stats.heroes, getEventHeroes(true)),
 );
 
 /**

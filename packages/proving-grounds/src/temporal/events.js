@@ -12,11 +12,11 @@ import event2 from './2017.04.04-navarre';
 import event3 from './2017.04.20-zephiel';
 
 
-export function getEventHeroes() {
+export function getEventHeroes(allEvents: boolean = false) {
   const now = new Date();
   return compose(
     flatten,
     map(prop('unitList')),
-    filter((event) => now >= event.startTime && now <= event.endTime),
+    filter((event) => allEvents || (now >= event.startTime && now <= event.endTime)),
   )([event1, event2, event3]);
 }
