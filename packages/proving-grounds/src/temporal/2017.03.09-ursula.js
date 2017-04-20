@@ -2,19 +2,30 @@
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 // Times were entered in PDT (UTC - 7)
-const startTime = new Date('2017-04-20T00:00:00-07:00');
-const endTime = new Date('2017-04-23T23:59:00-07:00');
+const startTime = new Date('2017-03-09T00:00:00-07:00');
+const endTime = new Date('2017-03-13T23:59:00-07:00');
 
-// TODO: confirm end date and stats/skills for other characters.
 const unitList: Array<Hero> = [
   {
-    'shortName': 'Blue Mage',
-    'name': 'Blue Mage (Zephiel GHB)',
-    'moveType': 'Infantry',
+    'shortName': 'Ursula',
+    'name': 'Ursula (Ursula GHB)',
+    'moveType': 'Cavalry',
     'weaponType': 'Blue Tome',
     'skills': [
       {
-        'name': 'Thoron+',
+        'name': 'Blárwolf+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Growing Thunder',
+        'rarity': '-',
+      },
+      {
+        'name': 'Death Blow 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Threaten Res 3',
         'rarity': '-',
       },
     ],
@@ -30,27 +41,35 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [45],
-          'atk': [30],
-          'spd': [30],
-          'def': [20],
-          'res': [20],
+          'hp': [50],
+          'atk': [29],
+          'spd': [32],
+          'def': [19],
+          'res': [30],
         },
       },
     },
   },
   {
     'shortName': 'Knight',
-    'name': 'Axe Knight (Zephiel GHB)',
+    'name': 'Axe Knight (Ursula GHB)',
     'moveType': 'Armored',
     'weaponType': 'Green Axe',
     'skills': [
       {
-        'name': 'Brave Axe+',
+        'name': 'Silver Axe+',
         'rarity': '-',
       },
       {
         'name': 'Aegis',
+        'rarity': '-',
+      },
+      {
+        'name': 'Wings of Mercy 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Threaten Def 3',
         'rarity': '-',
       },
     ],
@@ -76,93 +95,29 @@ const unitList: Array<Hero> = [
     },
   },
   {
-    'shortName': 'Zephiel',
-    'name': 'Zephiel (Zephiel GHB)',
-    'moveType': 'Armored',
+    'shortName': 'Cavalier',
+    'name': 'Sword Cavalier (Ursula GHB)',
+    'moveType': 'Cavalry',
     'weaponType': 'Red Sword',
     'skills': [
       {
-        'name': 'Eckesachs',
+        'name': 'Silver Sword+',
         'rarity': '-',
       },
       {
-        'name': 'Life and Death 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Wary Fighter 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Reprisal',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [78],
-          'atk': [57-5-16], // Undo Life and death / Weapon
-          'spd': [21-5],
-          'def': [34+5],
-          'res': [20+5],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'Knight',
-    'name': 'Lance Knight (Zephiel GHB)',
-    'moveType': 'Armored',
-    'weaponType': 'Blue Lance',
-    'skills': [
-      {
-        'name': 'Brave Lance+',
+        'name': 'Draw Back',
         'rarity': '-',
       },
       {
         'name': 'Aegis',
         'rarity': '-',
       },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [67],
-          'atk': [39],
-          'spd': [16],
-          'def': [41],
-          'res': [19],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'Red Mage',
-    'name': 'Red Mage (Zephiel GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Red Tome',
-    'skills': [
       {
-        'name': 'Bolganone+',
+        'name': 'Obstruct 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Threaten Spd 3',
         'rarity': '-',
       },
     ],
@@ -178,11 +133,99 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [45],
-          'atk': [30],
-          'spd': [30],
-          'def': [20],
-          'res': [20],
+          'hp': [49],
+          'atk': [35],
+          'spd': [25],
+          'def': [26],
+          'res': [30],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Thief 1',
+    'name': 'Thief 1 (Ursula GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Neutral Shuriken',
+    'skills': [
+      {
+        'name': 'Poison Dagger+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Reciprocal Aid',
+        'rarity': '-',
+      },
+      {
+        'name': 'Seal Atk 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Savage Blow 3',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [44],
+          'atk': [28],
+          'spd': [39],
+          'def': [14],
+          'res': [32],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Thief 2',
+    'name': 'Thief 2 (Ursula GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Neutral Shuriken',
+    'skills': [
+      {
+        'name': 'Poison Dagger+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Reciprocal Aid',
+        'rarity': '-',
+      },
+      {
+        'name': 'Escape Route 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Savage Blow 3',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [44],
+          'atk': [28],
+          'spd': [39],
+          'def': [14],
+          'res': [32],
         },
       },
     },

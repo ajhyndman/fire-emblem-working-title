@@ -7,6 +7,7 @@ import {
   prop,
 } from 'ramda';
 
+import event0 from './2017.03.09-ursula';
 import event1 from './2017.03.25-michalis';
 import event2 from './2017.04.04-navarre';
 import event3 from './2017.04.20-zephiel';
