@@ -38,14 +38,16 @@ import {
 
 // Fetches heroes and their stats/skills
 async function fetchHeroStats() {
-  const heroes = await fetchPage('http://feheroes.wiki/Hero_List')
+  const heroes = await fetchPage('http://feheroes.gamepedia.com/Hero_List')
     .then(parseHeroAggregateHtml)
     .then(map(dissoc('icon')))
     .catch(err => console.error('parseHeroAggregateHtml', err));
 
   const heroNames = map(prop('name'), heroes);
+
+  console.log('heroNames', heroNames);
   const heroStatsAndSkills = await fetchAndParsePages(
-    'http://feheroes.wiki/',
+    'http://feheroes.gamepedia.com/',
     heroNames,
     parseHeroStatsAndSkills,
   );
@@ -76,7 +78,7 @@ async function fetchHeroStats() {
 async function fetchSkills() {
   const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives', 'Seals'];
   const skillsByType = await fetchAndParsePages(
-    'http://feheroes.wiki/',
+    'http://feheroes.gamepedia.com/',
     skillPageNames,
     parseSkillsPage,
   );

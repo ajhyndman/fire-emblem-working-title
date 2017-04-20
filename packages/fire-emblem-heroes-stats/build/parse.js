@@ -43,7 +43,7 @@ export const parseTable = (tableHtml) => {
   // Some tables wrap the header in <tr> tags and others do not.
   const firstRow = match(/<tr[^>]*?>.*?<\/tr.*?>/g, tableHtml)[0];
   const isFirstRowHeader = test(/<th(\s[^>]*?)?>.*?<\/th[^>]*?>/g, firstRow);
-  
+
   const tableRows = compose(
     map(compose(
       map(compose(
@@ -125,7 +125,7 @@ export function parseSkillsPage(pageHtml) {
     match(/<table[^>]*?wikitable[^>]*?>.*?<\/table>/g),
   )(pageHtml);
   if (isPassivesPage) {
-    // There are 3 tables. Each is a list of row objects. 
+    // There are 3 tables. Each is a list of row objects.
     if (tables.length != 3) {
       console.log('Passives page has != 3 tables!');
     }
@@ -151,6 +151,6 @@ export const parseHeroAggregateHtml = compose(
   replace(/<a[^>]*?><img[^>]*?Icon Move /g, ''),
   replace(/Movement Type/, 'Move Type'),
   replace(/Character Name/, 'Name'),
-  prop(0),  // match [0] is the entire matching string
-  match(/<table.*?\/table>/),
+  prop(1),  // match [1] is the actual hero table
+  match(/<table.*?\/table>/g),
 );
