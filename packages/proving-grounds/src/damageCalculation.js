@@ -92,19 +92,19 @@ const doesFollowUp = (instanceA: HeroInstance, instanceB: HeroInstance, isAttack
   if (isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Windsweep')) {
     return false;
   }
-  // Supposedly x-breaker overrides wary-fighter, and multiple x-breakers cancel out.
   const aHasBreaker = hasWeaponBreaker(instanceA, instanceB);
   const bHasBreaker = hasWeaponBreaker(instanceB, instanceA);
-  if (aHasBreaker && !bHasBreaker) {
+  const guaranteedFollowup = aHasBreaker
+    || (!isAttacker && hasSkill(instanceA, 'WEAPON', 'Armads'))
+    || (!isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Quick Riposte'));
+  const cannotFollowup = bHasBreaker
+    || hasSkill(instanceA, 'PASSIVE_B', 'Wary Fighter')
+    || hasSkill(instanceB, 'PASSIVE_B', 'Wary Fighter');
+  // Guaranteed-followup and cannot-followup skills cancel out and it comes down to speed.
+  if (guaranteedFollowup && !cannotFollowup) {
     return true;
-  } else if (bHasBreaker && !aHasBreaker) {
+  } else if (cannotFollowup && !guaranteedFollowup) {
     return false;
-  } else if (hasSkill(instanceA, 'PASSIVE_B', 'Wary Fighter')
-             || hasSkill(instanceB, 'PASSIVE_B', 'Wary Fighter')) {
-    return false;
-  } else if (!isAttacker && (hasSkill(instanceA, 'WEAPON', 'Armads')
-             || hasSkill(instanceA, 'PASSIVE_B', 'Quick Riposte'))) {
-    return true;
   }
   return (
     (getStat(instanceA, 'spd', 40, isAttacker)
