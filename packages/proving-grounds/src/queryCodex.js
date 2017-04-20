@@ -24,6 +24,7 @@ import {
 import { getSkillInfo } from './skillHelpers';
 import type { HeroInstance, Rarity, MergeLevel } from './heroInstance';
 import { getDefaultInstance } from './heroInstance';
+import { getEventHeroes } from './temporal/events';
 
 
 /**
@@ -174,7 +175,7 @@ const values = flatten([
   // $FlowIssue: flowtypes for ramda aren't precise
   map(prop('name'), stats.skills),
   // $FlowIssue: flowtypes for ramda aren't precise
-  map(prop('name'), stats.heroes),
+  map(prop('name'), concat(stats.heroes, getEventHeroes(true))),
 ]);
 
 // A map from hash(x) to x

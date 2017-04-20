@@ -1,12 +1,10 @@
 // @flow
 import React from 'react';
 import Color from 'color-js';
-import stats from 'fire-emblem-heroes-stats';
-import { find, propEq } from 'ramda';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import { colors, fontFamilies, fontSizes, gridSize, lineHeights } from '../theme';
-import { getStat } from '../heroHelpers';
+import { getStat, lookupStats } from '../heroHelpers';
 import HeroPortrait from './Hero';
 import type { HeroInstance } from '../heroInstance';
 
@@ -20,11 +18,7 @@ const StatSheet = ({
   heroInstance,
   level,
 }: Props) => {
-  // $FlowIssue: flowtype for find is too generic
-  const hero: ?Hero = find(
-    propEq('name', heroInstance.name),
-    stats.heroes,
-  );
+  const hero: ?Hero = lookupStats(heroInstance.name);
 
   return (
     <div className="stats-root row">
