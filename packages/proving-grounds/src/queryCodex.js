@@ -141,7 +141,7 @@ export function flattenAndIgnoreDefaults(instance: HeroInstance): SerialInstance
 
 // Identical to extractInstance except that USE_DEFAULT will be replaced with the default value
 // Additionally, if the input is too short it will be extended with USE_DEFAULTS.
-export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefaults): HeroInstance {
+export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefaults): ?HeroInstance {
   if (flattenedInstance === undefined || flattenedInstance[0] === undefined) {
     return undefined;
   }
