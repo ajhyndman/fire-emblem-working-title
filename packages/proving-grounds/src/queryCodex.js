@@ -142,6 +142,9 @@ export function flattenAndIgnoreDefaults(instance: HeroInstance): SerialInstance
 // Identical to extractInstance except that USE_DEFAULT will be replaced with the default value
 // Additionally, if the input is too short it will be extended with USE_DEFAULTS.
 export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefaults): HeroInstance {
+  if (flattenedInstance === undefined || flattenedInstance[0] === undefined) {
+    return undefined;
+  }
   const flatDefault = flattenInstance(getDefaultInstance(flattenedInstance[0]));
   // $FlowIssue ... tuple type ... is incompatible with ... array type
   const flatInstanceWithDefaults = zipWith(
@@ -187,7 +190,7 @@ export const decodeHero = (heroCode: string): ?HeroInstance => (
     ? compose(
       extractWithDefaults,
       map(hashedValue => hashTable[hashedValue]),
-      string => string.split('+'),
+      string => (string || '').split('+'),
       lzString.decompressFromEncodedURIComponent,
     )(heroCode)
     : undefined

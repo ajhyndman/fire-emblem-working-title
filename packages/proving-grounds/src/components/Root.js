@@ -6,12 +6,10 @@ import Reddit from 'react-icons/lib/fa/reddit';
 import stats from 'fire-emblem-heroes-stats';
 import {
   allPass,
-  compose,
   filter,
   map,
   path,
   pathOr,
-  prop,
   propOr,
   split,
   toLower,

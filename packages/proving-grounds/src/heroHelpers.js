@@ -55,7 +55,7 @@ const heroesByName: HeroesByName = indexBy(
  */
 export const lookupStats = (name: string): Hero => {
   const hero: ?Hero = heroesByName[name];
-  return hero || {
+  return hero || heroesByName['Anna'] || {
     name,
     weaponType: 'Red Sword',
     stats: { '1': {}, '40': {} },

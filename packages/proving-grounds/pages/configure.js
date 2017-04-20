@@ -35,8 +35,8 @@ class Configure extends React.Component {
   static async getInitialProps ({ store, req, query }) {
     const dispatch: Dispatch = store.dispatch;
     if (!isEmpty(query)) {
-      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) });
-      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) });
+      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) || 'CLEAR' });
+      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) || 'CLEAR'});
       dispatch({ type: 'SELECT_SLOT', slot: query['slot'] || 0 });
     }
 
