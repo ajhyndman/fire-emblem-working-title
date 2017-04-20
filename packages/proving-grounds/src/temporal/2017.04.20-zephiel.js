@@ -2,8 +2,8 @@
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 // Times were entered in PDT (UTC - 7)
-const startTime = new Date('2017-04-19T00:00:00-07:00');
-const endTime = new Date('2017-04-19T23:59:00-07:00');
+const startTime = new Date('2017-04-20T00:00:00-07:00');
+const endTime = new Date('2017-04-23T23:59:00-07:00');
 
 // TODO: confirm end date and stats/skills for other characters.
 const unitList: Array<Hero> = [
