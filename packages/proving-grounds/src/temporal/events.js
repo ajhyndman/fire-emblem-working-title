@@ -19,5 +19,5 @@ export function getEventHeroes(allEvents: boolean = false) {
     flatten,
     map(prop('unitList')),
     filter((event) => allEvents || (now >= event.startTime && now <= event.endTime)),
-  )([event1, event2, event3]);
+  )([event0, event1, event2, event3]);
 }
