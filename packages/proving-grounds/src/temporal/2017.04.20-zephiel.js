@@ -5,7 +5,6 @@ import type { Hero } from 'fire-emblem-heroes-stats';
 const startTime = new Date('2017-04-20T00:00:00-07:00');
 const endTime = new Date('2017-04-23T23:59:00-07:00');
 
-// TODO: confirm end date and stats/skills for other characters.
 const unitList: Array<Hero> = [
   {
     'shortName': 'Blue Mage',
@@ -15,6 +14,18 @@ const unitList: Array<Hero> = [
     'skills': [
       {
         'name': 'Thoron+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Armored Blow 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Seal Atk 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Breath of Life 3',
         'rarity': '-',
       },
     ],
@@ -31,10 +42,10 @@ const unitList: Array<Hero> = [
       '40': {
         '5': {
           'hp': [45],
-          'atk': [30],
-          'spd': [30],
+          'atk': [31],
+          'spd': [32],
           'def': [20],
-          'res': [20],
+          'res': [28],
         },
       },
     },
@@ -50,7 +61,19 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
       {
-        'name': 'Aegis',
+        'name': 'Sol',
+        'rarity': '-',
+      },
+      {
+        'name': 'Swap',
+        'rarity': '-',
+      },
+      {
+        'name': 'Wary Fighter 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Fortify Res 3',
         'rarity': '-',
       },
     ],
@@ -130,7 +153,19 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
       {
-        'name': 'Aegis',
+        'name': 'Sol',
+        'rarity': '-',
+      },
+      {
+        'name': 'Swap',
+        'rarity': '-',
+      },
+      {
+        'name': 'Wary Fighter 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Fortify Res 3',
         'rarity': '-',
       },
     ],
@@ -165,6 +200,18 @@ const unitList: Array<Hero> = [
         'name': 'Bolganone+',
         'rarity': '-',
       },
+      {
+        'name': 'Armored Blow 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Seal Atk 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Breath of Life 3',
+        'rarity': '-',
+      },
     ],
     'stats': {
       '1': {
@@ -179,10 +226,10 @@ const unitList: Array<Hero> = [
       '40': {
         '5': {
           'hp': [45],
-          'atk': [30],
-          'spd': [30],
+          'atk': [31],
+          'spd': [32],
           'def': [20],
-          'res': [20],
+          'res': [28],
         },
       },
     },
