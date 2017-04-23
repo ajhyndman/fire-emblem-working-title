@@ -14,6 +14,7 @@ import {
   indexOf,
   isNil,
   map,
+  mapObjIndexed,
   not,
   prop,
   propEq,
@@ -89,7 +90,7 @@ export function getSkillEffect(
   return instance.skills[skillType] ? instance.skills[skillType].effect : '';
 }
 
-// Returns a map from skill type to the name of the skill.
+// Returns a map from skill type to the skill object.
 export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkills {
   const hero = lookupStats(name);
 
@@ -110,6 +111,23 @@ export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkil
     PASSIVE_C: undefined,
     SEAL: undefined,
     ...skillsByType,
+  };
+}
+
+// Updates the rarity and default skills for a hero.
+export function updateRarity(hero: HeroInstance, newRarity: Rarity): HeroInstance {
+  const oldDefault = getDefaultSkills(hero.name, hero.rarity);
+  const newDefault = getDefaultSkills(hero.name, newRarity);
+  return {
+    ...hero,
+    rarity: newRarity,
+    // $FlowIssue Function cannot be called on member of intersection type
+    skills: mapObjIndexed(
+      ((skill, skillType) =>
+        (propOr('', 'name', skill) === propOr('', 'name', oldDefault[skillType])
+          ? newDefault[skillType] : skill)),
+      hero.skills,
+    ),
   };
 }
 

@@ -4,7 +4,7 @@ import type { Skill, SkillType } from 'fire-emblem-heroes-stats';
 
 import type { State } from './store';
 import type { HeroInstance, Rarity, Stat } from './heroInstance';
-
+import { updateRarity } from './heroHelpers';
 
 export type Action = {
   type: 'DEQUEUE_NOTIFICATION';
@@ -58,6 +58,8 @@ const clearActiveState = {
 
 const hasEmptySlot = (state: State) => any(isNil, state.heroSlots);
 const getEmptySlot = (state: State) => findIndex(isNil, state.heroSlots);
+const getActiveHero = (state: State) => state.activeSlot === undefined
+  ? undefined : state.heroSlots[state.activeSlot];
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
@@ -126,7 +128,7 @@ const reducer = (state: State, action: Action): State => {
     case 'SET_HOST':
       return { ...state, host: action.host };
     case 'SET_MERGE_LEVEL': {
-      if (state.activeSlot === undefined) return state;
+      if (getActiveHero(state) === undefined) return state;
       const mergeLevel = clamp(0, 10, action.value);
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'mergeLevel'], mergeLevel, state);
@@ -141,19 +143,24 @@ const reducer = (state: State, action: Action): State => {
         heroSlots: reverse(state.heroSlots),
       };
     case 'UPDATE_BANE':
-      if (state.activeSlot === undefined) return state;
+      if (getActiveHero(state) === undefined) return state;
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'bane'], action.stat, state);
     case 'UPDATE_BOON':
-      if (state.activeSlot === undefined) return state;
+      if (getActiveHero(state) === undefined) return state;
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'boon'], action.stat, state);
     case 'UPDATE_RARITY':
-      if (state.activeSlot === undefined) return state;
+      if (getActiveHero(state) === undefined) return state;
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
-      return assocPath(['heroSlots', state.activeSlot, 'rarity'], action.rarity, state);
+      return assocPath(
+        ['heroSlots', state.activeSlot],
+        // $FlowIssue: Flow thinks that getActiveHero might be undefined or null.
+        updateRarity(getActiveHero(state), action.rarity),
+        state,
+      );
     case 'UPDATE_SKILL':
-      if (state.activeSlot === undefined) return state;
+      if (getActiveHero(state) === undefined) return state;
       // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(
         ['heroSlots', state.activeSlot, 'skills', action.skillType],
