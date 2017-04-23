@@ -1,7 +1,7 @@
 {
   "scripts": {
     "bootstrap": "lerna bootstrap --npm-client=yarn --concurrency=1 --include-filtered-dependencies",
-    "clean": "rm -r node_modules packages/fire-emblem-heroes-stats/node_modules packages/proving-grounds/node_modules ",
+    "clean": "rm -r node_modules packages/fire-emblem-heroes-calculator/node_modules packages/fire-emblem-heroes-stats/node_modules packages/proving-grounds/node_modules ",
     "test": "lerna run test"
   },
   "devDependencies": {
