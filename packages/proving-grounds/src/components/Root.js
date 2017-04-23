@@ -3,7 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 import MarkGithub from 'react-icons/lib/go/mark-github';
 import Reddit from 'react-icons/lib/fa/reddit';
-import stats from 'fire-emblem-heroes-stats';
+import stats, { getEventHeroes } from 'fire-emblem-heroes-stats';
 import {
   allPass,
   filter,
@@ -24,7 +24,6 @@ import Toast from './Toast';
 import matchHero from '../matchHero';
 import { encodeHero } from '../queryCodex';
 import { fontFamilies } from '../theme';
-import { getEventHeroes } from '../temporal/events';
 import { deployTimestamp, staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 import type { State } from '../store';

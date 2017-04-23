@@ -1,11 +1,11 @@
 // @flow
 import React from 'react';
 import { replace } from 'ramda';
+import type { Rarity } from 'fire-emblem-heroes-calculator';
 
 import Frame from './Frame';
 import { colors, fontFamilies, fontSizes, gridSize } from '../theme';
 import { staticUrl } from '../../config';
-import type { Rarity } from '../heroInstance';
 
 
 type Props = {

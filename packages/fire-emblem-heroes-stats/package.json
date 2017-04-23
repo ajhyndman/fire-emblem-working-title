@@ -5,8 +5,11 @@
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node build/index.js",
-    "test": "eslint **/*.js"
+    "compile": "babel src --out-dir dist",
+    "copy-types": "cp src/index.js.flow dist/index.js.flow",
+    "scrape-stats": "babel-node build/index.js",
+    "start": "npm run compile && npm run copy-types && npm run scrape-stats",
+    "test": "eslint src/**/*.js build/**/*.js"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
@@ -17,6 +20,7 @@
     "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.0.2"
   },
   "dependencies": {
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "isomorphic-fetch": "^2.2.1",
     "ramda": "^0.23.0"
   }

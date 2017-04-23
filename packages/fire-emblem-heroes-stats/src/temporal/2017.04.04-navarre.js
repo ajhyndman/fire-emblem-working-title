@@ -1,119 +1,27 @@
 // @flow
-import type { Hero } from 'fire-emblem-heroes-stats';
+import type { Hero } from '..';
 
 // Times were entered in PDT (UTC - 7)
-const startTime = new Date('2017-03-09T00:00:00-07:00');
-const endTime = new Date('2017-03-13T23:59:00-07:00');
+const startTime = new Date('2017-04-04T00:00:00-07:00');
+const endTime = new Date('2017-04-08T23:59:00-07:00');
 
 const unitList: Array<Hero> = [
   {
-    'shortName': 'Ursula',
-    'name': 'Ursula (Ursula GHB)',
-    'moveType': 'Cavalry',
-    'weaponType': 'Blue Tome',
-    'skills': [
-      {
-        'name': 'Blárwolf+',
-        'rarity': '-',
-      },
-      {
-        'name': 'Growing Thunder',
-        'rarity': '-',
-      },
-      {
-        'name': 'Death Blow 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Threaten Res 3',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [50],
-          'atk': [29],
-          'spd': [32],
-          'def': [19],
-          'res': [30],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'Knight',
-    'name': 'Axe Knight (Ursula GHB)',
-    'moveType': 'Armored',
-    'weaponType': 'Green Axe',
-    'skills': [
-      {
-        'name': 'Silver Axe+',
-        'rarity': '-',
-      },
-      {
-        'name': 'Aegis',
-        'rarity': '-',
-      },
-      {
-        'name': 'Wings of Mercy 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Threaten Def 3',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [67],
-          'atk': [39],
-          'spd': [16],
-          'def': [41],
-          'res': [19],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'Cavalier',
-    'name': 'Sword Cavalier (Ursula GHB)',
-    'moveType': 'Cavalry',
+    'shortName': 'Navarre',
+    'name': 'Navarre (Navarre GHB)',
+    'moveType': 'Infantry',
     'weaponType': 'Red Sword',
     'skills': [
       {
-        'name': 'Silver Sword+',
+        'name': 'Killing Edge+',
         'rarity': '-',
       },
       {
-        'name': 'Draw Back',
+        'name': 'Blazing Wind',
         'rarity': '-',
       },
       {
-        'name': 'Aegis',
-        'rarity': '-',
-      },
-      {
-        'name': 'Obstruct 3',
+        'name': 'Desperation 3',
         'rarity': '-',
       },
       {
@@ -133,35 +41,39 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [49],
-          'atk': [35],
-          'spd': [25],
-          'def': [26],
-          'res': [30],
+          'hp': [58],
+          'atk': [31],
+          'spd': [39],
+          'def': [24],
+          'res': [25],
         },
       },
     },
   },
   {
     'shortName': 'Thief 1',
-    'name': 'Thief 1 (Ursula GHB)',
+    'name': 'Thief 1 (Navarre GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Neutral Shuriken',
     'skills': [
       {
-        'name': 'Poison Dagger+',
+        'name': 'Silver Dagger+',
         'rarity': '-',
       },
       {
-        'name': 'Reciprocal Aid',
+        'name': 'Moonbow',
         'rarity': '-',
       },
       {
-        'name': 'Seal Atk 3',
+        'name': 'Death Blow 3',
         'rarity': '-',
       },
       {
-        'name': 'Savage Blow 3',
+        'name': 'Poison Strike 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Hone Atk 3',
         'rarity': '-',
       },
     ],
@@ -188,24 +100,28 @@ const unitList: Array<Hero> = [
   },
   {
     'shortName': 'Thief 2',
-    'name': 'Thief 2 (Ursula GHB)',
+    'name': 'Thief 2 (Navarre GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Neutral Shuriken',
     'skills': [
       {
-        'name': 'Poison Dagger+',
+        'name': 'Rogue Dagger+',
         'rarity': '-',
       },
       {
-        'name': 'Reciprocal Aid',
+        'name': 'Moonbow',
         'rarity': '-',
       },
       {
-        'name': 'Escape Route 3',
+        'name': 'Armored Blow 3',
         'rarity': '-',
       },
       {
-        'name': 'Savage Blow 3',
+        'name': 'Bowbreaker 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Hone Spd 3',
         'rarity': '-',
       },
     ],
@@ -226,6 +142,102 @@ const unitList: Array<Hero> = [
           'spd': [39],
           'def': [14],
           'res': [32],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Fighter',
+    'name': 'Axe Fighter (Navarre GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Green Axe',
+    'skills': [
+      {
+        'name': 'Hammer+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Ardent Sacrifice',
+        'rarity': '-',
+      },
+      {
+        'name': 'Death Blow 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Obstruct 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Spur Spd 3',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [52],
+          'atk': [31],
+          'spd': [31],
+          'def': [30],
+          'res': [23],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Cleric',
+    'name': 'Cleric (Navarre GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Neutral Staff',
+    'skills': [
+      {
+        'name': 'Panic',
+        'rarity': '-',
+      },
+      {
+        'name': 'Physic',
+        'rarity': '-',
+      },
+      {
+        'name': 'Solid Earth Balm',
+        'rarity': '-',
+      },
+      {
+        'name': 'Live to Serve 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Fortify Def 3',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [42],
+          'atk': [28],
+          'spd': [28],
+          'def': [24],
+          'res': [36],
         },
       },
     },

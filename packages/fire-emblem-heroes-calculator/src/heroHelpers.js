@@ -1,5 +1,5 @@
 // @flow
-import stats from 'fire-emblem-heroes-stats';
+import stats, { getEventHeroes } from 'fire-emblem-heroes-stats';
 import {
   allPass,
   // $FlowIssue ... no named export called `ascend`
@@ -34,7 +34,6 @@ import type {
   SkillType,
 } from 'fire-emblem-heroes-stats';
 
-import { getEventHeroes } from './temporal/events';
 import { getSkillInfo, getStatValue } from './skillHelpers';
 import type { HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
 

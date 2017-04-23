@@ -2,9 +2,9 @@
 import React from 'react';
 import { map } from 'ramda';
 import cn from 'classnames';
+import type { Rarity } from 'fire-emblem-heroes-calculator';
 
 import { staticUrl } from '../../config';
-import type { Rarity } from '../heroInstance';
 
 
 type Props = {

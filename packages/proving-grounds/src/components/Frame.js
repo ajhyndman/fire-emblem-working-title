@@ -1,9 +1,9 @@
 // @flow
 import React from 'react';
+import type { Rarity } from 'fire-emblem-heroes-calculator';
 
 import { gridSize } from '../theme';
 import { staticUrl } from '../../config';
-import type { Rarity } from '../heroInstance';
 
 type Props = {
   rarity: Rarity;

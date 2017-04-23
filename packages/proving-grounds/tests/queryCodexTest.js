@@ -1,6 +1,8 @@
 // @flow
 import test from 'tape';
 import stats from 'fire-emblem-heroes-stats';
+import { getDefaultSkills, getDefaultInstance, getSkillInfo } from 'fire-emblem-heroes-calculator';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import {
   decodeHero,
@@ -11,10 +13,6 @@ import {
   flattenInstance,
   hash,
 } from '../src/queryCodex';
-import type { HeroInstance } from '../src/heroInstance';
-import { getDefaultInstance } from '../src/heroInstance';
-import { getDefaultSkills } from '../src/heroHelpers';
-import { getSkillInfo } from '../src/skillHelpers';
 
 
 const customizedInstance: HeroInstance = {

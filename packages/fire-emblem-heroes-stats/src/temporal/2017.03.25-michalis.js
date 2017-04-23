@@ -1,31 +1,35 @@
 // @flow
-import type { Hero } from 'fire-emblem-heroes-stats';
+import type { Hero } from '..';
 
 // Times were entered in PDT (UTC - 7)
-const startTime = new Date('2017-04-04T00:00:00-07:00');
-const endTime = new Date('2017-04-08T23:59:00-07:00');
+const startTime = new Date('2017-03-24T00:00:00-07:00');
+const endTime = new Date('2017-03-27T23:59:00-07:00');
 
 const unitList: Array<Hero> = [
   {
-    'shortName': 'Navarre',
-    'name': 'Navarre (Navarre GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Red Sword',
+    'shortName': 'Flier',
+    'name': 'Lance Flier (Michalis GHB)',
+    'moveType': 'Flying',
+    'weaponType': 'Blue Lance',
     'skills': [
       {
-        'name': 'Killing Edge+',
+        'name': 'Silver Lance+',
         'rarity': '-',
       },
       {
-        'name': 'Blazing Wind',
+        'name': 'Iceberg',
         'rarity': '-',
       },
       {
-        'name': 'Desperation 3',
+        'name': 'Darting Blow 3',
         'rarity': '-',
       },
       {
-        'name': 'Threaten Spd 3',
+        'name': 'Drag Back',
+        'rarity': '-',
+      },
+      {
+        'name': 'Fortify Fliers',
         'rarity': '-',
       },
     ],
@@ -41,89 +45,129 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [58],
-          'atk': [31],
-          'spd': [39],
-          'def': [24],
-          'res': [25],
+          'hp': [45],
+          'atk': [28],
+          'spd': [36],
+          'def': [22],
+          'res': [37],
         },
       },
     },
   },
   {
-    'shortName': 'Thief 1',
-    'name': 'Thief 1 (Navarre GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Neutral Shuriken',
+    'shortName': 'Michalis',
+    'name': 'Michalis (Michalis GHB)',
+    'moveType': 'Flying',
+    'weaponType': 'Green Axe',
     'skills': [
       {
-        'name': 'Silver Dagger+',
+        'name': 'Hauteclere',
         'rarity': '-',
       },
       {
-        'name': 'Moonbow',
+        'name': 'Blazing Thunder',
+        'rarity': '-',
+      },
+      {
+        'name': 'Iote\'s Shield',
+        'rarity': '-',
+      },
+      {
+        'name': 'Threaten Def 3',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [60],
+          'atk': [35],
+          'spd': [27],
+          'def': [36],
+          'res': [19],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Flier',
+    'name': 'Sword Flier (Michalis GHB)',
+    'moveType': 'Flying',
+    'weaponType': 'Red Sword',
+    'skills': [
+      {
+        'name': 'Silver Sword+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Iceberg',
+        'rarity': '-',
+      },
+      {
+        'name': 'Darting Blow 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Drag Back',
+        'rarity': '-',
+      },
+      {
+        'name': 'Hone Fliers',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [45],
+          'atk': [28],
+          'spd': [36],
+          'def': [22],
+          'res': [37],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Cavalier',
+    'name': 'Sword Cavalier (Michalis GHB)',
+    'moveType': 'Cavalry',
+    'weaponType': 'Red Sword',
+    'skills': [
+      {
+        'name': 'Silver Sword+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Draconic Aura',
         'rarity': '-',
       },
       {
         'name': 'Death Blow 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Poison Strike 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Hone Atk 3',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [44],
-          'atk': [28],
-          'spd': [39],
-          'def': [14],
-          'res': [32],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'Thief 2',
-    'name': 'Thief 2 (Navarre GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Neutral Shuriken',
-    'skills': [
-      {
-        'name': 'Rogue Dagger+',
-        'rarity': '-',
-      },
-      {
-        'name': 'Moonbow',
-        'rarity': '-',
-      },
-      {
-        'name': 'Armored Blow 3',
         'rarity': '-',
       },
       {
         'name': 'Bowbreaker 3',
         'rarity': '-',
       },
-      {
-        'name': 'Hone Spd 3',
-        'rarity': '-',
-      },
     ],
     'stats': {
       '1': {
@@ -137,27 +181,27 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [44],
-          'atk': [28],
-          'spd': [39],
-          'def': [14],
-          'res': [32],
+          'hp': [49],
+          'atk': [35],
+          'spd': [25],
+          'def': [26],
+          'res': [30],
         },
       },
     },
   },
   {
     'shortName': 'Fighter',
-    'name': 'Axe Fighter (Navarre GHB)',
+    'name': 'Lance Fighter (Michalis GHB)',
     'moveType': 'Infantry',
-    'weaponType': 'Green Axe',
+    'weaponType': 'Blue Lance',
     'skills': [
       {
-        'name': 'Hammer+',
+        'name': 'Heavy Spear+',
         'rarity': '-',
       },
       {
-        'name': 'Ardent Sacrifice',
+        'name': 'Draconic Aura',
         'rarity': '-',
       },
       {
@@ -165,11 +209,7 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
       {
-        'name': 'Obstruct 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Spur Spd 3',
+        'name': 'Bowbreaker 3',
         'rarity': '-',
       },
     ],
@@ -186,58 +226,10 @@ const unitList: Array<Hero> = [
       '40': {
         '5': {
           'hp': [52],
-          'atk': [31],
+          'atk': [28],
           'spd': [31],
           'def': [30],
           'res': [23],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'Cleric',
-    'name': 'Cleric (Navarre GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Neutral Staff',
-    'skills': [
-      {
-        'name': 'Panic',
-        'rarity': '-',
-      },
-      {
-        'name': 'Physic',
-        'rarity': '-',
-      },
-      {
-        'name': 'Solid Earth Balm',
-        'rarity': '-',
-      },
-      {
-        'name': 'Live to Serve 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Fortify Def 3',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [42],
-          'atk': [28],
-          'spd': [28],
-          'def': [24],
-          'res': [36],
         },
       },
     },
