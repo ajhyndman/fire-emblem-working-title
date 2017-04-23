@@ -1,11 +1,33 @@
 // @flow
 import throttle from 'lodash.throttle';
-import { any, compose, isNil, not } from 'ramda';
+import { all, any, compose, isNil, not } from 'ramda';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import type { State } from '.';
 
 
 const isNotNil = compose(not, isNil);
+
+const validateInstance = (instance: ?HeroInstance): boolean => {
+  if (!instance) return true;
+  if (typeof instance.name !== 'string') return false;
+  if (typeof instance.rarity !== 'number') return false;
+  if (!(typeof instance.boon === 'string' || instance.boon === undefined)) return false;
+  if (!(typeof instance.bane === 'string' || instance.bane === undefined)) return false;
+  if (typeof instance.mergeLevel !== 'number') return false;
+
+  const skillsAllValid = all(
+    (skill) => {
+      if (typeof skill !== 'string') return false;
+      return true;
+    },
+    Object.values(instance.skills),
+  );
+  if (!skillsAllValid) return false;
+
+  return true;
+};
+
 
 export const loadState = (initialState: State) => {
   // the user is loading a share link, or navigating internally
@@ -19,6 +41,7 @@ export const loadState = (initialState: State) => {
 
     // this is a returning user
     const heroSlots = JSON.parse(serializedHeroSlots);
+    if (!all(validateInstance, heroSlots)) return initialState;
     return {
       ...initialState,
       heroSlots,
