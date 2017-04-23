@@ -6,7 +6,9 @@
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "npm run compile && npm run copy-types",
     "compile": "babel src --out-dir dist",
+    "copy-types": "cp src/index.js dist/index.js.flow",
     "lint": "eslint src/**/*.js pages/**/*.js && flow check",
     "tape": "tape -r babel-register tests/**/*.js",
     "test": "npm run lint && npm run tape"

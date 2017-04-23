@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _damageCalculation = require('./damageCalculation');
+var _damageCalculation = require('../src/damageCalculation');
 
 Object.defineProperty(exports, 'calculateResult', {
   enumerable: true,
@@ -13,7 +13,7 @@ Object.defineProperty(exports, 'calculateResult', {
   }
 });
 
-var _heroHelpers = require('./heroHelpers');
+var _heroHelpers = require('../src/heroHelpers');
 
 Object.defineProperty(exports, 'getDefaultSkills', {
   enumerable: true,
@@ -52,7 +52,7 @@ Object.defineProperty(exports, 'updateRarity', {
   }
 });
 
-var _heroInstance = require('./heroInstance');
+var _heroInstance = require('../src/heroInstance');
 
 Object.defineProperty(exports, 'getDefaultInstance', {
   enumerable: true,
@@ -61,7 +61,7 @@ Object.defineProperty(exports, 'getDefaultInstance', {
   }
 });
 
-var _skillHelpers = require('./skillHelpers');
+var _skillHelpers = require('../src/skillHelpers');
 
 Object.defineProperty(exports, 'getSkillInfo', {
   enumerable: true,
