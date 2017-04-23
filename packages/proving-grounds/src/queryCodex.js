@@ -1,7 +1,7 @@
 // @flow
 import SHA1 from 'crypto-js/sha1';
 import lzString from 'lz-string';
-import stats from 'fire-emblem-heroes-stats';
+import stats, { getEventHeroes } from 'fire-emblem-heroes-stats';
 import {
   assoc,
   compose,
@@ -24,7 +24,6 @@ import {
 import { getSkillInfo } from './skillHelpers';
 import type { HeroInstance, Rarity, MergeLevel } from './heroInstance';
 import { getDefaultInstance } from './heroInstance';
-import { getEventHeroes } from './temporal/events';
 
 
 /**
