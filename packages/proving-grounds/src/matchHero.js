@@ -16,9 +16,8 @@ import {
   toLower,
 } from 'ramda';
 import stats from 'fire-emblem-heroes-stats';
-import { getDefaultSkills } from 'fire-emblem-heroes-calculator';
+import { getDefaultSkills, getSkillInfo } from 'fire-emblem-heroes-calculator';
 import type { Hero } from 'fire-emblem-heroes-stats';
-
 
 
 // A mapping from keywords to related words that someone might type.
@@ -57,6 +56,7 @@ const getKeywords: (hero: Hero) => Array<string> =
         map(compose(jdu.replace, prop('name'))),
         filter(compose(not, isNil)),
         Object.values,
+        map(getSkillInfo),
         getDefaultSkills,
         prop('name'),
       )(hero),

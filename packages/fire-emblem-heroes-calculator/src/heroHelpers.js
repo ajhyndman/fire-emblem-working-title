@@ -78,7 +78,7 @@ export function getSkillName(
   instance: HeroInstance,
   skillType: SkillType,
 ): string {
-  return instance.skills[skillType] ? instance.skills[skillType].name : '';
+  return instance.skills[skillType] || '';
 }
 
 // Returns the effect description of a skill
@@ -86,7 +86,8 @@ export function getSkillEffect(
   instance: HeroInstance,
   skillType: SkillType,
 ): string {
-  return instance.skills[skillType] ? instance.skills[skillType].effect : '';
+  const skill = getSkillInfo(instance.skills[skillType]);
+  return skill ? skill.effect : '';
 }
 
 // Returns a map from skill type to the skill object.
@@ -95,6 +96,7 @@ export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkil
 
   // Flow can't follow this compose chain, so cast it to any.
   const skillsByType = (compose(
+    map(prop('name')),
     indexBy((skill: Skill) => skill.type),
     filter(compose(not, isNil)),
     map(skill => getSkillInfo(skill.name)),
@@ -208,14 +210,15 @@ export function getInheritableSkills(name: string, skillType: SkillType): Array<
   );
   const ownSkills = compose(
     filter((x) => propOr('', 'type', x) === skillType),
-    map((skill: any) => getSkillInfo(skill.name)),
+    map(getSkillInfo),
+    map(prop('name')),
   )(hero.skills);
   return sort(ascend(prop('name')), union(inheritable, ownSkills));
 }
 
 export const hasBraveWeapon: (instance: HeroInstance)=> boolean = compose(
   test(/Brave|Dire/),
-  pathOr('', ['skills', 'WEAPON', 'name']),
+  pathOr('', ['skills', 'WEAPON']),
 );
 
 /**

@@ -1,7 +1,7 @@
 // @flow
 import test from 'tape';
 import stats from 'fire-emblem-heroes-stats';
-import { getDefaultSkills, getDefaultInstance, getSkillInfo } from 'fire-emblem-heroes-calculator';
+import { getDefaultSkills, getDefaultInstance } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import {
@@ -21,10 +21,9 @@ const customizedInstance: HeroInstance = {
   mergeLevel: 3,
   skills: {
     ...getDefaultSkills('Anna'),
-    // $FlowIssue Skill may not be PassiveSkill
-    PASSIVE_A: getSkillInfo('Attack +3'),
+    PASSIVE_A: 'Attack +3',
     // Convert to any because otherwise flow complains with incorrect line numbers.
-    SEAL: (getSkillInfo('Attack +1'): any),
+    SEAL: 'Attack +1',
   },
 };
 
@@ -167,12 +166,12 @@ test('encodeHero', (t) => {
         rarity: 5,
         mergeLevel: 0,
         skills: {
-          WEAPON: getSkillInfo('Brave Lance+'),
-          ASSIST: getSkillInfo('Pivot'),
-          SPECIAL: getSkillInfo('Galeforce'),
-          PASSIVE_A: getSkillInfo('Swift Sparrow 2'),
-          PASSIVE_B: getSkillInfo('Drag Back'),
-          PASSIVE_C: getSkillInfo('Savage Blow 3'),
+          WEAPON: 'Brave Lance+',
+          ASSIST: 'Pivot',
+          SPECIAL: 'Galeforce',
+          PASSIVE_A: 'Swift Sparrow 2',
+          PASSIVE_B: 'Drag Back',
+          PASSIVE_C: 'Savage Blow 3',
           SEAL: undefined,
         },
       },

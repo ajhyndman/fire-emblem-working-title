@@ -34,7 +34,7 @@ var skillsByName = (0, _ramda.compose)(
   return s.type !== 'SEAL';
 }))(_fireEmblemHeroesStats2.default.skills);
 var getSkillInfo = exports.getSkillInfo = function getSkillInfo(skillName) {
-  return skillsByName[skillName];
+  return skillsByName[skillName || ''];
 };
 
 var capitalize = (0, _ramda.compose)((0, _ramda.join)(''), (0, _ramda.juxt)([(0, _ramda.compose)(_ramda.toUpper, _ramda.head), _ramda.tail]));
@@ -150,7 +150,8 @@ function getSpecialType(instance) {
 
 // Returns the cooldown of the special or -1. Accounts for killer weapons.
 var getSpecialCooldown = exports.getSpecialCooldown = function getSpecialCooldown(instance) {
-  return instance.skills['SPECIAL'] === undefined ? -1 : instance.skills['SPECIAL'].cooldown + ((0, _ramda.test)(/Accelerates S/, (0, _heroHelpers.getSkillEffect)(instance, 'WEAPON')) ? -1 : 0) + ((0, _ramda.test)(/Slows Special/, (0, _heroHelpers.getSkillEffect)(instance, 'WEAPON')) ? +1 : 0);
+  var skill = getSkillInfo(instance.skills['SPECIAL']);
+  return !skill || typeof skill.cooldown !== 'number' ? -1 : skill.cooldown + ((0, _ramda.test)(/Accelerates S/, (0, _heroHelpers.getSkillEffect)(instance, 'WEAPON')) ? -1 : 0) + ((0, _ramda.test)(/Slows Special/, (0, _heroHelpers.getSkillEffect)(instance, 'WEAPON')) ? +1 : 0);
 };
 
 // Only considers damage reduction specials

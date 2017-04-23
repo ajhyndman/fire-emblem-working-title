@@ -16,7 +16,7 @@ import {
 import { withState } from 'recompose';
 import { hasStatsForRarity, lookupStats } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance, InstanceSkills } from 'fire-emblem-heroes-calculator';
-import type { Hero, Skill as SkillShape, SkillType } from 'fire-emblem-heroes-stats';
+import type { Hero, SkillType } from 'fire-emblem-heroes-stats';
 
 import RaritySelector from './RaritySelector';
 import SegmentedControl from './SegmentedControl';
@@ -268,7 +268,7 @@ const HeroConfigurer = withState(
               {
                 // $FlowIssue: I think flow thinks skillType could be any string.
                 values(mapObjIndexed(
-                  (skill: ?SkillShape, skillType: SkillType) => (
+                  (skill: string | void, skillType: SkillType) => (
                     <div
                       key={skillType}
                       className="active-skill"
@@ -283,7 +283,7 @@ const HeroConfigurer = withState(
                         sizes="30px"
                       />
                       <Skill
-                        name={skill ? skill.name : '--'}
+                        name={skill || '--'}
                         onClick={() => { setState({ open: true, skillType: skillType }); }}
                       />
                     </div>
@@ -311,7 +311,7 @@ const HeroConfigurer = withState(
               // $FlowIssue: Flowtype for pathOr isn't precise.
               activeSkillName={pathOr(
                 '',
-                ['skills', state.skillType, 'name'],
+                ['skills', state.skillType],
                 heroInstance,
               )}
               onClose={skill => {
@@ -321,7 +321,7 @@ const HeroConfigurer = withState(
                 dispatch({
                   type: 'UPDATE_SKILL',
                   skillType: state.skillType,
-                  skill,
+                  skill: skill ? skill.name : undefined,
                 });
                 setState({ open: false, skillType: undefined });
               }}

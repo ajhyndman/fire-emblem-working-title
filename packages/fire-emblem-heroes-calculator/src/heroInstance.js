@@ -1,11 +1,4 @@
 // @flow
-import type {
-  AssistSkill,
-  PassiveSkill,
-  SpecialSkill,
-  WeaponSkill,
-  SealSkill,
-} from 'fire-emblem-heroes-stats';
 
 import { getDefaultSkills } from './heroHelpers';
 
@@ -15,13 +8,13 @@ export type Rarity = 1 | 2 | 3 | 4 | 5;
 export type MergeLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 export type InstanceSkills = {
-  +WEAPON: WeaponSkill | void;
-  +ASSIST: AssistSkill | void;
-  +SPECIAL: SpecialSkill | void;
-  +PASSIVE_A: PassiveSkill | void;
-  +PASSIVE_B: PassiveSkill | void;
-  +PASSIVE_C: PassiveSkill | void;
-  +SEAL: ?SealSkill;
+  +WEAPON: string | void;
+  +ASSIST: string | void;
+  +SPECIAL: string | void;
+  +PASSIVE_A: string | void;
+  +PASSIVE_B: string | void;
+  +PASSIVE_C: string | void;
+  +SEAL: string | void;
 };
 
 export type HeroInstance = {

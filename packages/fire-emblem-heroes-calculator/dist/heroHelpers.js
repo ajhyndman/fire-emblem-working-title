@@ -60,12 +60,13 @@ var hasSkill = exports.hasSkill = function hasSkill(instance, skillType, expecte
 
 // Returns the name of the skill object for the skill type
 function getSkillName(instance, skillType) {
-  return instance.skills[skillType] ? instance.skills[skillType].name : '';
+  return instance.skills[skillType] || '';
 }
 
 // Returns the effect description of a skill
 function getSkillEffect(instance, skillType) {
-  return instance.skills[skillType] ? instance.skills[skillType].effect : '';
+  var skill = (0, _skillHelpers.getSkillInfo)(instance.skills[skillType]);
+  return skill ? skill.effect : '';
 }
 
 // Returns a map from skill type to the skill object.
@@ -75,7 +76,7 @@ function getDefaultSkills(name) {
   var hero = lookupStats(name);
 
   // Flow can't follow this compose chain, so cast it to any.
-  var skillsByType = (0, _ramda.compose)((0, _ramda.indexBy)(function (skill) {
+  var skillsByType = (0, _ramda.compose)((0, _ramda.map)((0, _ramda.prop)('name')), (0, _ramda.indexBy)(function (skill) {
     return skill.type;
   }), (0, _ramda.filter)((0, _ramda.compose)(_ramda.not, _ramda.isNil)), (0, _ramda.map)(function (skill) {
     return (0, _skillHelpers.getSkillInfo)(skill.name);
@@ -179,13 +180,11 @@ function getInheritableSkills(name, skillType) {
   canInherit(hero), (0, _ramda.propEq)('type', skillType)]), allSkills);
   var ownSkills = (0, _ramda.compose)((0, _ramda.filter)(function (x) {
     return (0, _ramda.propOr)('', 'type', x) === skillType;
-  }), (0, _ramda.map)(function (skill) {
-    return (0, _skillHelpers.getSkillInfo)(skill.name);
-  }))(hero.skills);
+  }), (0, _ramda.map)(_skillHelpers.getSkillInfo), (0, _ramda.map)((0, _ramda.prop)('name')))(hero.skills);
   return (0, _ramda.sort)((0, _ramda.ascend)((0, _ramda.prop)('name')), (0, _ramda.union)(inheritable, ownSkills));
 }
 
-var hasBraveWeapon = exports.hasBraveWeapon = (0, _ramda.compose)((0, _ramda.test)(/Brave|Dire/), (0, _ramda.pathOr)('', ['skills', 'WEAPON', 'name']));
+var hasBraveWeapon = exports.hasBraveWeapon = (0, _ramda.compose)((0, _ramda.test)(/Brave|Dire/), (0, _ramda.pathOr)('', ['skills', 'WEAPON']));
 
 /**
  * A helper for getting a stat value from a hero by key.
