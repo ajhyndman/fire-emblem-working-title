@@ -2,6 +2,7 @@
 .git
 .gitignore
 .vscode
+build
 flow-typed
 flow
 node_modules
