@@ -2,7 +2,7 @@
 import { any, assocPath, clamp, concat, drop, findIndex, isNil, reverse, update } from 'ramda';
 import { updateRarity } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance, Rarity, Stat } from 'fire-emblem-heroes-calculator';
-import type { Skill, SkillType } from 'fire-emblem-heroes-stats';
+import type { SkillType } from 'fire-emblem-heroes-stats';
 
 import type { State } from './store';
 
@@ -45,7 +45,7 @@ export type Action = {
   rarity: Rarity;
 } | {
   type: 'UPDATE_SKILL';
-  skill: ?Skill;
+  skill: ?string;
   skillType: SkillType;
 };
 

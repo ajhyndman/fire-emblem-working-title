@@ -20,7 +20,7 @@ import {
   zipObj,
   zipWith,
 } from 'ramda';
-import { getDefaultInstance, getSkillInfo } from 'fire-emblem-heroes-calculator';
+import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance, Rarity, MergeLevel } from 'fire-emblem-heroes-calculator';
 
 
@@ -39,13 +39,13 @@ type SerialInstance = [
   'n' | 1 | 2 | 3 | 4 | 5, // bane
   'n' | 1 | 2 | 3 | 4 | 5, // boon
   Rarity, // rarity
-  ?string, // assist
-  ?string, // passive a
-  ?string, // passive b
-  ?string, // passive c
-  ?string, // special
-  ?string, // weapon
-  ?string, // sacred seal
+  string | void, // assist
+  string | void, // passive a
+  string | void, // passive b
+  string | void, // passive c
+  string | void, // special
+  string | void, // weapon
+  string | void, // sacred seal
   MergeLevel, // mergeLevel
 ];
 
@@ -54,13 +54,13 @@ type SerialInstanceWithDefaults = [
   'd' | 'n' | 1 | 2 | 3 | 4 | 5, // bane
   'd' | 'n' | 1 | 2 | 3 | 4 | 5, // boon
   'd' | Rarity, // rarity
-  'd' | ?string, // assist
-  'd' | ?string, // passive a
-  'd' | ?string, // passive b
-  'd' | ?string, // passive c
-  'd' | ?string, // special
-  'd' | ?string, // weapon
-  'd' | ?string, // sacred seal
+  'd' | string | void, // assist
+  'd' | string | void, // passive a
+  'd' | string | void, // passive b
+  'd' | string | void, // passive c
+  'd' | string | void, // special
+  'd' | string | void, // weapon
+  'd' | string | void, // sacred seal
   'd' | MergeLevel, // mergeLevel
 ];
 
@@ -75,13 +75,13 @@ export const flattenInstance = (instance: HeroInstance): SerialInstance => [
   instance.rarity,
   // I'm avoiding Ramda path() calls here, just because flow
   // does better inference this way.  :(
-  instance.skills && instance.skills.ASSIST && instance.skills.ASSIST.name,
-  instance.skills && instance.skills.PASSIVE_A && instance.skills.PASSIVE_A.name,
-  instance.skills && instance.skills.PASSIVE_B && instance.skills.PASSIVE_B.name,
-  instance.skills && instance.skills.PASSIVE_C && instance.skills.PASSIVE_C.name,
-  instance.skills && instance.skills.SPECIAL && instance.skills.SPECIAL.name,
-  instance.skills && instance.skills.WEAPON && instance.skills.WEAPON.name,
-  instance.skills && instance.skills.SEAL && instance.skills.SEAL.name,
+  instance.skills && instance.skills.ASSIST,
+  instance.skills && instance.skills.PASSIVE_A,
+  instance.skills && instance.skills.PASSIVE_B,
+  instance.skills && instance.skills.PASSIVE_C,
+  instance.skills && instance.skills.SPECIAL,
+  instance.skills && instance.skills.WEAPON,
+  instance.skills && instance.skills.SEAL,
   instance.mergeLevel,
 ];
 
@@ -110,13 +110,13 @@ export const extractInstance = ([
   skills: {
     // Technically, if we get bogus skill names somehow, this could
     // return a corrupt hero instance.
-    WEAPON: (weapon && getSkillInfo(weapon): any),
-    ASSIST: (assist && getSkillInfo(assist): any),
-    SPECIAL: (special && getSkillInfo(special): any),
-    PASSIVE_A: (passiveA && getSkillInfo(passiveA): any),
-    PASSIVE_B: (passiveB && getSkillInfo(passiveB): any),
-    PASSIVE_C: (passiveC && getSkillInfo(passiveC): any),
-    SEAL: (seal && getSkillInfo(seal): any),
+    WEAPON: weapon,
+    ASSIST: assist,
+    SPECIAL: special,
+    PASSIVE_A: passiveA,
+    PASSIVE_B: passiveB,
+    PASSIVE_C: passiveC,
+    SEAL: seal,
   },
 });
 
