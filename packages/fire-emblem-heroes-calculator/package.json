@@ -8,7 +8,7 @@
   "scripts": {
     "build": "npm run compile && npm run copy-types",
     "compile": "babel src --out-dir dist",
-    "copy-types": "cp src/index.js dist/index.js.flow",
+    "copy-types": "cp src/index.js dist/index.js.flow && jscodeshift dist/index.js.flow --transform build/transform-import-path.js",
     "lint": "eslint src/**/*.js pages/**/*.js && flow check",
     "tape": "tape -r babel-register tests/**/*.js",
     "test": "npm run lint && npm run tape"
@@ -23,6 +23,7 @@
     "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.1.0",
     "eslint-plugin-no-null": "^1.0.2",
     "flow-bin": "^0.42.0",
+    "jscodeshift": "^0.3.30",
     "tape": "^4.6.3"
   },
   "dependencies": {
