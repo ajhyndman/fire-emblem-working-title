@@ -2,7 +2,7 @@
 
 export {
   calculateResult,
-} from '../src/damageCalculation';
+} from './damageCalculation';
 
 export {
   // canInherit,
@@ -12,15 +12,15 @@ export {
   hasStatsForRarity,
   lookupStats,
   updateRarity,
-} from '../src/heroHelpers';
+} from './heroHelpers';
 
 export type {
   HeroesByName,
-} from '../src/heroHelpers';
+} from './heroHelpers';
 
 export {
   getDefaultInstance,
-} from '../src/heroInstance';
+} from './heroInstance';
 
 export type {
   HeroInstance,
@@ -28,14 +28,14 @@ export type {
   MergeLevel,
   Rarity,
   Stat,
-} from '../src/heroInstance';
+} from './heroInstance';
 
 export {
   getSkillInfo,
   getSpecialCooldown,
   isMaxTier,
-} from '../src/skillHelpers';
+} from './skillHelpers';
 
 export type {
   SkillsByName,
-} from '../src/skillHelpers';
+} from './skillHelpers';
