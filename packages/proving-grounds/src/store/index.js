@@ -1,10 +1,10 @@
 // @flow
 import { applyMiddleware, createStore } from 'redux';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import reducer from '../reducer';
 import gaMiddleware from './gaMiddleware';
 import { loadState, saveState } from './localStorage';
-import type { HeroInstance } from '../heroInstance';
 
 
 export type State = {

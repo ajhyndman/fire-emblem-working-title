@@ -1,13 +1,13 @@
 // @flow
 import React from 'react';
 import cn from 'classnames';
+import { getSkillInfo } from 'fire-emblem-heroes-calculator';
 
 import Assist from './Assist';
 import Passive from './Passive';
 import Seal from './Seal';
 import Special from './Special';
 import Weapon from './Weapon';
-import { getSkillInfo } from '../../skillHelpers';
 import { activateColor, colors, fontFamilies, fontSizes, transition } from '../../theme';
 import { staticUrl } from '../../../config';
 

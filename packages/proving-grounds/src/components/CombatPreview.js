@@ -1,11 +1,13 @@
 // @flow
 import React from 'react';
+import {
+  getSpecialCooldown,
+  lookupStats,
+} from 'fire-emblem-heroes-calculator';
 
 import HeroPortrait from './Hero';
 import Router from '../router';
 import { colors, gridSize, transition } from '../theme';
-import { lookupStats } from '../heroHelpers';
-import { getSpecialCooldown } from '../skillHelpers';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 

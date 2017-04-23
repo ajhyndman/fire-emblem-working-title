@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
 import Color from 'color-js';
+import { getStat, lookupStats } from 'fire-emblem-heroes-calculator';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import { colors, fontFamilies, fontSizes, gridSize, lineHeights } from '../theme';
-import { getStat, lookupStats } from '../heroHelpers';
 import HeroPortrait from './Hero';
-import type { HeroInstance } from '../heroInstance';
 
 
 type Props = {

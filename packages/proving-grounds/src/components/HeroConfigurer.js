@@ -14,6 +14,8 @@ import {
   zipObj,
 } from 'ramda';
 import { withState } from 'recompose';
+import { hasStatsForRarity, lookupStats } from 'fire-emblem-heroes-calculator';
+import type { HeroInstance, InstanceSkills } from 'fire-emblem-heroes-calculator';
 import type { Hero, Skill as SkillShape, SkillType } from 'fire-emblem-heroes-stats';
 
 import RaritySelector from './RaritySelector';
@@ -23,9 +25,7 @@ import Skill from './Skill';
 import SkillSelector from './SkillSelector';
 import StatSheet from './StatSheet';
 import { colors, fontFamilies, fontSizes, lineHeights, transition } from '../theme';
-import { hasStatsForRarity, lookupStats } from '../heroHelpers';
 import { staticUrl } from '../../config';
-import type { HeroInstance, InstanceSkills } from '../heroInstance';
 import type { Dispatch } from '../reducer';
 
 

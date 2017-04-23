@@ -20,10 +20,8 @@ import {
   zipObj,
   zipWith,
 } from 'ramda';
-
-import { getSkillInfo } from './skillHelpers';
-import type { HeroInstance, Rarity, MergeLevel } from './heroInstance';
-import { getDefaultInstance } from './heroInstance';
+import { getDefaultInstance, getSkillInfo } from 'fire-emblem-heroes-calculator';
+import type { HeroInstance, Rarity, MergeLevel } from 'fire-emblem-heroes-calculator';
 
 
 /**

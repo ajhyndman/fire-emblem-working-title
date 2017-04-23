@@ -16,9 +16,9 @@ import {
   toLower,
 } from 'ramda';
 import stats from 'fire-emblem-heroes-stats';
+import { getDefaultSkills } from 'fire-emblem-heroes-calculator';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
-import { getDefaultSkills } from './heroHelpers';
 
 
 // A mapping from keywords to related words that someone might type.

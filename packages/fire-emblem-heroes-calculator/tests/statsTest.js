@@ -1,6 +1,5 @@
 // @flow
 import test from 'tape';
-import { contains, map, prop } from 'ramda';
 
 import type { HeroInstance } from '../src/heroInstance';
 import { getDefaultInstance } from '../src/heroInstance';

@@ -3,13 +3,13 @@ import 'babel-polyfill';
 import React from 'react';
 import withRedux from 'next-redux-wrapper';
 import { isEmpty } from 'ramda';
+import { getDefaultSkills } from 'fire-emblem-heroes-calculator';
 
 import HeroConfigurer from '../src/components/HeroConfigurer';
 import Overlay from '../src/components/Overlay';
 import Root, { panelHeight } from '../src/components/Root';
 import Router from '../src/router';
 import initStore from '../src/store';
-import { getDefaultSkills } from '../src/heroHelpers';
 import { decodeHero } from '../src/queryCodex';
 import type { Dispatch } from '../src/reducer';
 import type { State } from '../src/store';

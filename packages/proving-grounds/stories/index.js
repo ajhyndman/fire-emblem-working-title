@@ -3,6 +3,8 @@ import React from 'react';
 import { action, storiesOf } from '@kadira/storybook';
 import { drop } from 'ramda';
 import { withReducer, withState } from 'recompose';
+import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import Frame from '../src/components/Frame';
 import Hero from '../src/components/Hero';
@@ -16,8 +18,6 @@ import SkillSelector from '../src/components/SkillSelector';
 import StatSheet from '../src/components/StatSheet';
 import Toast from '../src/components/Toast';
 import { colors } from '../src/theme';
-import type { HeroInstance } from '../src/heroInstance';
-import { getDefaultInstance } from '../src/heroInstance';
 import type { Dispatch } from '../src/reducer';
 
 

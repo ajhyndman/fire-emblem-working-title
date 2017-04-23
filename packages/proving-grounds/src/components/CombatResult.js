@@ -1,11 +1,13 @@
 // @flow
 import React from 'react';
+import {
+  calculateResult,
+  getStat,
+  getSpecialCooldown,
+} from 'fire-emblem-heroes-calculator';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
-import { calculateResult } from '../damageCalculation';
-import { getStat } from '../heroHelpers';
-import { getSpecialCooldown } from '../skillHelpers';
 import { staticUrl } from '../../config';
-import type { HeroInstance } from '../heroInstance';
 import { colors, fontSizes } from '../theme';
 
 

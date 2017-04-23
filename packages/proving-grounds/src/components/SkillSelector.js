@@ -6,15 +6,14 @@ import {
   map,
   propOr,
 } from 'ramda';
+import { getInheritableSkills, isMaxTier } from 'fire-emblem-heroes-calculator';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 import type { SkillType } from 'fire-emblem-heroes-stats';
 
 import SegmentedControl from './SegmentedControl';
 import Skill from './Skill';
 import { colors, fontFamilies, fontSizes } from '../theme';
-import { getInheritableSkills } from '../heroHelpers';
-import { isMaxTier } from '../skillHelpers';
 import type { Dispatch } from '../reducer';
-import type { HeroInstance } from '../heroInstance';
 
 
 type Props = {

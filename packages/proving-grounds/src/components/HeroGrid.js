@@ -2,6 +2,7 @@
 import React from 'react';
 import Color from 'color-js';
 import { map, range, addIndex } from 'ramda';
+import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import HeroPortrait from './Hero';
@@ -13,7 +14,6 @@ import {
   lineHeights,
 } from '../theme';
 import type { Dispatch } from '../reducer';
-import { getDefaultInstance } from '../heroInstance';
 
 
 type Props = {

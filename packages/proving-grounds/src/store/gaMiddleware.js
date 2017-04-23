@@ -2,8 +2,8 @@
 import analytics from 'redux-analytics';
 import ReactGA from 'react-ga';
 import { forEach, map } from 'ramda';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
-import type { HeroInstance } from '../heroInstance';
 import type { State } from '.';
 
 
