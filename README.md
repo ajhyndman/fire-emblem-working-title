@@ -2,8 +2,9 @@
 # fire-emblem-working-title
 ![Circle CI Status](https://circleci.com/gh/ajhyndman/fire-emblem-working-title.svg?style=shield&circle-token=:circle-token)
 
-This is a lerna repo managing two packages:
+This is a lerna repo managing three packages:
 
+* fire-emblem-heroes-calculator
 * fire-emblem-heroes-stats
 * proving-grounds
 
@@ -22,5 +23,6 @@ dependencies and link them to each other with:
 
 Check out the README for each package for further information.
 
+* [fire-emblem-heroes-calculator](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-calculator/)
 * [fire-emblem-heroes-stats](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-stats/)
 * [proving-grounds](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/proving-grounds/)
