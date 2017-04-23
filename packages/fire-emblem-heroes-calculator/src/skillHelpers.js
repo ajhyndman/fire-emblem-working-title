@@ -16,7 +16,13 @@ import {
 import stats from 'fire-emblem-heroes-stats';
 import type { Skill } from 'fire-emblem-heroes-stats';
 
-import { getStat, getMitigationType, hasSkill, getSkillName, getSkillEffect } from './heroHelpers';
+import {
+  getStat,
+  getMitigationType,
+  hasSkill,
+  getSkillName,
+  getSkillEffect,
+} from './heroHelpers';
 import type { HeroInstance } from './heroInstance';
 
 
@@ -30,7 +36,7 @@ const skillsByName: SkillsByName = compose(
   filter((s) => s.type !== 'SEAL'),
 )(stats.skills);
 
-export const getSkillInfo = (skillName: string): Skill => skillsByName[skillName];
+export const getSkillInfo = (skillName: ?string): Skill => skillsByName[skillName || ''];
 
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 
@@ -146,11 +152,13 @@ export function getSpecialType(instance: HeroInstance): SpecialType {
 }
 
 // Returns the cooldown of the special or -1. Accounts for killer weapons.
-export const getSpecialCooldown = (instance: HeroInstance) =>
-  instance.skills['SPECIAL'] === undefined ? -1
-    : (instance.skills['SPECIAL'].cooldown
+export const getSpecialCooldown = (instance: HeroInstance) => {
+  const skill = getSkillInfo(instance.skills['SPECIAL']);
+  return ((!skill || typeof skill.cooldown !== 'number') ? -1
+    : skill.cooldown
     + (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0)
     + (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0));
+};
 
 // Only considers damage reduction specials
 export function doesDefenseSpecialApply(skillName: string, attackRange: 1 | 2) {

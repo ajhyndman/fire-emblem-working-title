@@ -1,11 +1,9 @@
 // @flow
 import test from 'tape';
-import type { SpecialSkill} from 'fire-emblem-heroes-stats';
 
 import { calculateResult } from '../src/damageCalculation';
 import { getDefaultSkills } from '../src/heroHelpers';
-import { getSkillInfo } from '../src/skillHelpers';
-import type { HeroInstance, InstanceSkills, Rarity } from '../src/heroInstance';
+import type { HeroInstance, Rarity } from '../src/heroInstance';
 
 
 function makeHero(
@@ -26,10 +24,8 @@ function makeHero(
   };
 }
 
-function withSpecial(specialName: string): {SPECIAL: ?SpecialSkill} {
-  // Convert to any because the function could theoretically return a non-special Skill
-  const special: any = getSkillInfo(specialName);
-  return {SPECIAL: special};
+function withSpecial(specialName: string): { SPECIAL: ?string } {
+  return { SPECIAL: specialName };
 }
 
 function simulateCombat(
