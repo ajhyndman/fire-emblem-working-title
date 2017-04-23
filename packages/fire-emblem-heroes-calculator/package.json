@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "compile": "babel src --out-dir dist",
-    "tape": "tape -r babel-register tests/**/*.js"
+    "lint": "eslint src/**/*.js pages/**/*.js && flow check",
+    "tape": "tape -r babel-register tests/**/*.js",
+    "test": "npm run lint && npm run tape"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -17,6 +19,7 @@
     "babel-register": "^6.24.1",
     "eslint": "^3.17.1",
     "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.1.0",
+    "eslint-plugin-no-null": "^1.0.2",
     "flow-bin": "^0.42.0",
     "tape": "^4.6.3"
   },
