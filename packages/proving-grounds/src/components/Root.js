@@ -224,7 +224,7 @@ class Root extends React.Component {
         />
         <HeroGrid
           // $FlowIssue typedef for path isn't resolving correctly
-          activeHeroName={pathOr(state.activeHero, ['activeHero', 'name'], state)}
+          activeHeroName={pathOr('', ['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
             allPass([

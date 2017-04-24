@@ -1,5 +1,18 @@
 // @flow
-import { any, assocPath, clamp, concat, drop, findIndex, isNil, reverse, update } from 'ramda';
+import {
+  any,
+  assocPath,
+  clamp,
+  compose,
+  concat,
+  drop,
+  findIndex,
+  findLastIndex,
+  isNil,
+  not,
+  reverse,
+  update,
+} from 'ramda';
 import { updateRarity } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance, Rarity, Stat } from 'fire-emblem-heroes-calculator';
 import type { SkillType } from 'fire-emblem-heroes-stats';
@@ -60,6 +73,7 @@ const hasEmptySlot = (state: State) => any(isNil, state.heroSlots);
 const getEmptySlot = (state: State) => findIndex(isNil, state.heroSlots);
 const getActiveHero = (state: State) => state.activeSlot === undefined
   ? undefined : state.heroSlots[state.activeSlot];
+const getLastOccupiedIndex = findLastIndex(compose(not, isNil));
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
@@ -101,11 +115,14 @@ const reducer = (state: State, action: Action): State => {
           heroSlots: update(state.activeSlot, undefined, state.heroSlots),
         };
       } else if (action.hero === 'CLEAR') {
-        // select 'CLEAR' action
+        // clear the hero in highest occupied index
+        const lastIndex = getLastOccupiedIndex(state.heroSlots);
         return {
           ...state,
           ...clearActiveState,
-          activeHero: 'CLEAR',
+          heroSlots: lastIndex === -1
+            ? state.heroSlots
+            : update(lastIndex, undefined, state.heroSlots),
         };
       } else if (state.activeSlot === undefined && hasEmptySlot(state)) {
         // move hero to first empty slot

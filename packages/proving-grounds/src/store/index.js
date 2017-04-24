@@ -9,7 +9,7 @@ import { loadState, saveState } from './localStorage';
 
 export type State = {
   host: string;
-  activeHero: ?(HeroInstance | 'CLEAR');
+  activeHero: ?HeroInstance;
   activeSlot: 0 | 1 | void;
   heroSlots: [?HeroInstance, ?HeroInstance];
   notifications: Array<string>;

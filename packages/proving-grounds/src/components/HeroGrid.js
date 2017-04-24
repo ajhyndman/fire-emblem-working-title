@@ -90,7 +90,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
     `}</style>
     {showUndo && <div className="gridSquareOuter">
       <div
-        className={`gridSquare ${activeHeroName === 'CLEAR' ? 'active' : ''}`}
+        className="gridSquare"
         onClick={(event) => {
           event.stopPropagation();
           dispatch({
