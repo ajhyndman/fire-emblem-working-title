@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { replace } from 'ramda';
+import { compose, replace } from 'ramda';
 import type { Rarity } from 'fire-emblem-heroes-calculator';
 
 import Frame from './Frame';
@@ -20,7 +20,12 @@ const OVERSET = 4;
 
 const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) => {
   const weaponTypeUri = weaponType ? replace(' ', '_', weaponType) : '';
-  const imageName = replace(/ \(.*GHB\)/, '', name);
+  const imageName = compose(
+    // strip GHB suffixes (e.g. (Navarre GHB))
+    replace(/ \([^()]*GHB\)/, ''),
+    // strip index suffixes (e.g. Thief 1, Thief 2)
+    replace(/ \d/, ''),
+  )(name);
 
   return (
     <div className="root">
