@@ -5,10 +5,12 @@
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "npm run compile && npm run copy-types && npm run scrape-stats",
     "compile": "babel src --out-dir dist",
     "copy-types": "cp src/index.js.flow dist/index.js.flow",
+    "prepublish": "npm run build",
     "scrape-stats": "babel-node build/index.js",
-    "start": "npm run compile && npm run copy-types && npm run scrape-stats",
+    "start": "npm run build && npm run scrape-stats",
     "test": "eslint src/**/*.js build/**/*.js"
   },
   "devDependencies": {

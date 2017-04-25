@@ -11,6 +11,7 @@
     "compile": "babel src --out-dir dist",
     "copy-types": "cp src/index.js dist/index.js.flow && jscodeshift dist/index.js.flow --transform build/transform-import-path.js",
     "lint": "eslint src/**/*.js pages/**/*.js && flow check",
+    "prepublish": "npm run build",
     "tape": "tape -r babel-register tests/**/*.js",
     "test": "npm run lint && npm run tape"
   },
