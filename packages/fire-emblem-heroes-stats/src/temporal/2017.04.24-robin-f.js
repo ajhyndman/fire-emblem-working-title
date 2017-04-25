@@ -1,7 +1,7 @@
 // @flow
 import type { Hero } from '..';
 
-// Times were entered in PDT (UTC + 10)
+// Times were entered in AEST (UTC + 10)
 const startTime = new Date('2017-04-24T17:00:00+10:00');
 const endTime = new Date('2017-05-02T16:59:00+10:00');
 

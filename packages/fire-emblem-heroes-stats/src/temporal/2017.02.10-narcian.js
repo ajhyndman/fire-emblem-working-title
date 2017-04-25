@@ -2,78 +2,31 @@
 import type { Hero } from '..';
 
 // Times were entered in PDT (UTC - 7)
-const startTime = new Date('2017-03-24T00:00:00-07:00');
-const endTime = new Date('2017-03-27T23:59:00-07:00');
+// These times were also approximated as the stats were added retroactively.
+const startTime = new Date('2017-02-10T00:00:00-07:00');
+const endTime = new Date('2017-02-13T23:59:00-07:00');
 
 const unitList: Array<Hero> = [
   {
-    'shortName': 'Flier',
-    'name': 'Lance Flier (Michalis GHB)',
-    'moveType': 'Flying',
-    'weaponType': 'Blue Lance',
-    'skills': [
-      {
-        'name': 'Silver Lance+',
-        'rarity': '-',
-      },
-      {
-        'name': 'Iceberg',
-        'rarity': '-',
-      },
-      {
-        'name': 'Darting Blow 3',
-        'rarity': '-',
-      },
-      {
-        'name': 'Drag Back',
-        'rarity': '-',
-      },
-      {
-        'name': 'Fortify Fliers',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [45],
-          'atk': [28],
-          'spd': [36],
-          'def': [22],
-          'res': [37],
-        },
-      },
-    },
-  },
-  {
-    'shortName': 'Michalis',
-    'name': 'Michalis (Michalis GHB)',
+    'shortName': 'Narcian',
+    'name': 'Narcian (Narcian GHB)',
     'moveType': 'Flying',
     'weaponType': 'Green Axe',
     'skills': [
       {
-        'name': 'Hauteclere',
+        'name': 'Emerald Axe+',
         'rarity': '-',
       },
       {
-        'name': 'Blazing Thunder',
+        'name': 'Vengeance',
         'rarity': '-',
       },
       {
-        'name': 'Iote\'s Shield',
+        'name': 'Lancebreaker 3',
         'rarity': '-',
       },
       {
-        'name': 'Threaten Def 3',
+        'name': 'Savage Blow 3',
         'rarity': '-',
       },
     ],
@@ -89,39 +42,35 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [60],
-          'atk': [35],
-          'spd': [27],
-          'def': [36],
-          'res': [19],
+          'hp': [48],
+          'atk': [25],
+          'spd': [24],
+          'def': [28],
+          'res': [22],
         },
       },
     },
   },
   {
-    'shortName': 'Flier',
-    'name': 'Sword Flier (Michalis GHB)',
-    'moveType': 'Flying',
-    'weaponType': 'Red Sword',
+    'shortName': 'Fighter',
+    'name': 'Bow Fighter (Narcian GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Neutral Bow',
     'skills': [
       {
-        'name': 'Silver Sword+',
+        'name': 'Brave Bow',
         'rarity': '-',
       },
       {
-        'name': 'Iceberg',
+        'name': 'Reprisal',
         'rarity': '-',
       },
       {
-        'name': 'Darting Blow 3',
+        'name': 'Death Blow 2',
         'rarity': '-',
       },
       {
-        'name': 'Drag Back',
-        'rarity': '-',
-      },
-      {
-        'name': 'Hone Fliers',
+        'name': 'Savage Blow 3',
         'rarity': '-',
       },
     ],
@@ -137,35 +86,35 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [45],
+          'hp': [41],
           'atk': [28],
-          'spd': [36],
-          'def': [22],
-          'res': [37],
+          'spd': [20],
+          'def': [24],
+          'res': [13],
         },
       },
     },
   },
   {
     'shortName': 'Cavalier',
-    'name': 'Sword Cavalier (Michalis GHB)',
+    'name': 'Blue Cavalier (Robin GHB)',
     'moveType': 'Cavalry',
-    'weaponType': 'Red Sword',
+    'weaponType': 'Blue Tome',
     'skills': [
       {
-        'name': 'Silver Sword+',
+        'name': 'Thoron',
         'rarity': '-',
       },
       {
-        'name': 'Draconic Aura',
+        'name': 'Ardent Sacrifice',
         'rarity': '-',
       },
       {
-        'name': 'Death Blow 3',
+        'name': 'Triangle Adept 2',
         'rarity': '-',
       },
       {
-        'name': 'Bowbreaker 3',
+        'name': 'Swordbreaker 3',
         'rarity': '-',
       },
     ],
@@ -181,10 +130,50 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [49],
-          'atk': [35],
-          'spd': [25],
-          'def': [26],
+          'hp': [31],
+          'atk': [31],
+          'spd': [21],
+          'def': [14],
+          'res': [30],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Cavalier',
+    'name': 'Green Cavalier (Narcian GHB)',
+    'moveType': 'Cavalry',
+    'weaponType': 'Green Tome',
+    'skills': [
+      {
+        'name': 'Gronnraven',
+        'rarity': '-',
+      },
+      {
+        'name': 'Reprisal',
+        'rarity': '-',
+      },
+      {
+        'name': 'Death Blow 2',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [31],
+          'atk': [31],
+          'spd': [21],
+          'def': [14],
           'res': [30],
         },
       },
@@ -192,24 +181,24 @@ const unitList: Array<Hero> = [
   },
   {
     'shortName': 'Fighter',
-    'name': 'Lance Fighter (Michalis GHB)',
+    'name': 'Sword Fighter (Narcian GHB)',
     'moveType': 'Infantry',
-    'weaponType': 'Blue Lance',
+    'weaponType': 'Red Sword',
     'skills': [
       {
-        'name': 'Heavy Spear+',
+        'name': 'Silver Sword',
         'rarity': '-',
       },
       {
-        'name': 'Draconic Aura',
+        'name': 'Escutcheon',
         'rarity': '-',
       },
       {
-        'name': 'Death Blow 3',
+        'name': 'Axebreaker 3',
         'rarity': '-',
       },
       {
-        'name': 'Bowbreaker 3',
+        'name': 'Threaten Res 2',
         'rarity': '-',
       },
     ],
@@ -225,11 +214,11 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [52],
-          'atk': [31],
-          'spd': [31],
-          'def': [30],
-          'res': [23],
+          'hp': [42],
+          'atk': [27],
+          'spd': [26],
+          'def': [26],
+          'res': [18],
         },
       },
     },

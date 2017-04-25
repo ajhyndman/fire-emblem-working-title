@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-// Times were entered in PDT (UTC + 10)
+// Times were entered in AEST (UTC + 10)
 var startTime = new Date('2017-04-24T17:00:00+10:00');
 
 var endTime = new Date('2017-05-02T16:59:00+10:00');

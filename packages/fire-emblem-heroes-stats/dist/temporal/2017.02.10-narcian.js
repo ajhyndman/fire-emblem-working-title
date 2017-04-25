@@ -5,27 +5,28 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-// Times were entered in AEST (UTC + 10)
-var startTime = new Date('2017-04-24T17:00:00+10:00');
+// Times were entered in PDT (UTC - 7)
+// These times were also approximated as the stats were added retroactively.
+var startTime = new Date('2017-02-10T00:00:00-07:00');
 
-var endTime = new Date('2017-05-02T16:59:00+10:00');
+var endTime = new Date('2017-02-13T23:59:00-07:00');
 
 var unitList = [{
-  'shortName': 'Robin (F)',
-  'name': 'Robin (F) (Robin GHB)',
-  'moveType': 'Infantry',
-  'weaponType': 'Green Tome',
+  'shortName': 'Narcian',
+  'name': 'Narcian (Narcian GHB)',
+  'moveType': 'Flying',
+  'weaponType': 'Green Axe',
   'skills': [{
-    'name': 'Gronnwolf+',
+    'name': 'Emerald Axe+',
     'rarity': '-'
   }, {
-    'name': 'Ignis',
+    'name': 'Vengeance',
     'rarity': '-'
   }, {
-    'name': 'Defiant Res 3',
+    'name': 'Lancebreaker 3',
     'rarity': '-'
   }, {
-    'name': 'B Tomebreaker 3',
+    'name': 'Savage Blow 3',
     'rarity': '-'
   }],
   'stats': {
@@ -40,30 +41,30 @@ var unitList = [{
     },
     '40': {
       '5': {
-        'hp': [45],
+        'hp': [48],
         'atk': [25],
-        'spd': [25],
-        'def': [24],
-        'res': [18]
+        'spd': [24],
+        'def': [28],
+        'res': [22]
       }
     }
   }
 }, {
   'shortName': 'Fighter',
-  'name': 'Lance Fighter (Robin GHB)',
+  'name': 'Bow Fighter (Narcian GHB)',
   'moveType': 'Infantry',
-  'weaponType': 'Blue Lance',
+  'weaponType': 'Neutral Bow',
   'skills': [{
-    'name': 'Silver Lance',
+    'name': 'Brave Bow',
     'rarity': '-'
   }, {
-    'name': 'Glimmer',
+    'name': 'Reprisal',
     'rarity': '-'
   }, {
     'name': 'Death Blow 2',
     'rarity': '-'
   }, {
-    'name': 'Drag Back',
+    'name': 'Savage Blow 3',
     'rarity': '-'
   }],
   'stats': {
@@ -78,106 +79,30 @@ var unitList = [{
     },
     '40': {
       '5': {
-        'hp': [42],
-        'atk': [27],
-        'spd': [26],
-        'def': [26],
-        'res': [18]
+        'hp': [41],
+        'atk': [28],
+        'spd': [20],
+        'def': [24],
+        'res': [13]
       }
     }
   }
 }, {
-  'shortName': 'Red Mage',
-  'name': 'Red Mage (Robin GHB)',
-  'moveType': 'Infantry',
-  'weaponType': 'Red Tome',
-  'skills': [{
-    'name': 'Bolganone',
-    'rarity': '-'
-  }, {
-    'name': 'Bonfire',
-    'rarity': '-'
-  }, {
-    'name': 'Armored Blow 2',
-    'rarity': '-'
-  }, {
-    'name': 'Threaten Res 3',
-    'rarity': '-'
-  }],
-  'stats': {
-    '1': {
-      '5': {
-        'hp': '-',
-        'atk': '-',
-        'spd': '-',
-        'def': '-',
-        'res': '-'
-      }
-    },
-    '40': {
-      '5': {
-        'hp': [36],
-        'atk': [27],
-        'spd': [28],
-        'def': [17],
-        'res': [23]
-      }
-    }
-  }
-}, {
-  'shortName': 'Fighter',
-  'name': 'Axe Fighter (Robin GHB)',
-  'moveType': 'Infantry',
-  'weaponType': 'Green Axe',
-  'skills': [{
-    'name': 'Killer Axe',
-    'rarity': '-'
-  }, {
-    'name': 'Glimmer',
-    'rarity': '-'
-  }, {
-    'name': 'Seal Res 2',
-    'rarity': '-'
-  }, {
-    'name': 'Threaten Atk 3',
-    'rarity': '-'
-  }],
-  'stats': {
-    '1': {
-      '5': {
-        'hp': '-',
-        'atk': '-',
-        'spd': '-',
-        'def': '-',
-        'res': '-'
-      }
-    },
-    '40': {
-      '5': {
-        'hp': [42],
-        'atk': [27],
-        'spd': [26],
-        'def': [26],
-        'res': [18]
-      }
-    }
-  }
-}, {
-  'shortName': 'Blue Mage',
-  'name': 'Blue Mage (Robin GHB)',
-  'moveType': 'Infantry',
+  'shortName': 'Cavalier',
+  'name': 'Blue Cavalier (Robin GHB)',
+  'moveType': 'Cavalry',
   'weaponType': 'Blue Tome',
   'skills': [{
     'name': 'Thoron',
     'rarity': '-'
   }, {
-    'name': 'Bonfire',
+    'name': 'Ardent Sacrifice',
     'rarity': '-'
   }, {
-    'name': 'Darting Blow 2',
+    'name': 'Triangle Adept 2',
     'rarity': '-'
   }, {
-    'name': 'Seal Def 3',
+    'name': 'Swordbreaker 3',
     'rarity': '-'
   }],
   'stats': {
@@ -192,11 +117,84 @@ var unitList = [{
     },
     '40': {
       '5': {
-        'hp': [36],
+        'hp': [31],
+        'atk': [31],
+        'spd': [21],
+        'def': [14],
+        'res': [30]
+      }
+    }
+  }
+}, {
+  'shortName': 'Cavalier',
+  'name': 'Green Cavalier (Narcian GHB)',
+  'moveType': 'Cavalry',
+  'weaponType': 'Green Tome',
+  'skills': [{
+    'name': 'Gronnraven',
+    'rarity': '-'
+  }, {
+    'name': 'Reprisal',
+    'rarity': '-'
+  }, {
+    'name': 'Death Blow 2',
+    'rarity': '-'
+  }],
+  'stats': {
+    '1': {
+      '5': {
+        'hp': '-',
+        'atk': '-',
+        'spd': '-',
+        'def': '-',
+        'res': '-'
+      }
+    },
+    '40': {
+      '5': {
+        'hp': [31],
+        'atk': [31],
+        'spd': [21],
+        'def': [14],
+        'res': [30]
+      }
+    }
+  }
+}, {
+  'shortName': 'Fighter',
+  'name': 'Sword Fighter (Narcian GHB)',
+  'moveType': 'Infantry',
+  'weaponType': 'Red Sword',
+  'skills': [{
+    'name': 'Silver Sword',
+    'rarity': '-'
+  }, {
+    'name': 'Escutcheon',
+    'rarity': '-'
+  }, {
+    'name': 'Axebreaker 3',
+    'rarity': '-'
+  }, {
+    'name': 'Threaten Res 2',
+    'rarity': '-'
+  }],
+  'stats': {
+    '1': {
+      '5': {
+        'hp': '-',
+        'atk': '-',
+        'spd': '-',
+        'def': '-',
+        'res': '-'
+      }
+    },
+    '40': {
+      '5': {
+        'hp': [42],
         'atk': [27],
-        'spd': [28],
-        'def': [17],
-        'res': [23]
+        'spd': [26],
+        'def': [26],
+        'res': [18]
       }
     }
   }
