@@ -18,3 +18,11 @@ dependencies:
 test:
   override:
     - nvm use 6.10.0 && yarn test
+
+## Customize deployment commands
+deployment:
+  prod:
+    branch: master
+    owner: ajhyndman
+    commands:
+      - aws s3 sync packages/proving-grounds/static/cdn s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public
