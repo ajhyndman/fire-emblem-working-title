@@ -13,6 +13,7 @@ To launch the Next.js dev server:
 $ git clone https://github.com/ajhyndman/fire-emblem-working-title.git
 $ cd fire-emblem-working-title
 $ lerna bootstrap
+$ lerna run build
 $ cd packages/proving-grounds
 $ npm run dev
 ```
