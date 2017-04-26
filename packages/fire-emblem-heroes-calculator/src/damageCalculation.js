@@ -21,7 +21,8 @@ import {
   getSkillNumbers,
   getSpecialAOEDamageAmount,
   getSpecialBonusDamageAmount,
-  getSpecialChargePerAttack,
+  getSpecialChargeForAttack,
+  getSpecialChargeWhenAttacked,
   getSpecialCooldown,
   getSpecialDefensiveMultiplier,
   getSpecialLifestealPercent,
@@ -223,7 +224,7 @@ const hitDmg = (
   isAttacker: boolean,
   attackerSpecial: string = '',
   attackerMissingHp: number = 0,
-) => dmgFormula(
+) => hasSkill(defender, 'SEAL', 'Embla\'s Ward') ? 0 : dmgFormula(
   getStat(attacker, 'atk', 40, isAttacker),
   effectiveBonus(attacker, defender),
   advantageBonus(attacker, defender),
@@ -289,8 +290,6 @@ export const calculateResult = (
     attackerInitialCooldown === undefined ? maxCds[0] : attackerInitialCooldown,
     defenderInitialCooldown === undefined ? maxCds[1] : defenderInitialCooldown,
   ];
-  if (hasSkill(attacker, 'PASSIVE_B', 'Guard') && specialCds[1] < maxCds[1] ) { specialCds[1]++; }
-  if (hasSkill(defender, 'PASSIVE_B', 'Guard') && specialCds[0] < maxCds[0] ) { specialCds[0]++; }
   let numAttacks = [0, 0];
   let healths = [attackerInitialHp || maxHps[0], defenderInitialHp || maxHps[1]];
   // AOE Damage
@@ -320,7 +319,7 @@ export const calculateResult = (
         lifestealPercent += getSpecialLifestealPercent(attackerSpecial);
         specialCds[heroIndex] = maxCds[heroIndex];
       } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[heroIndex] > 0) {
-        specialCds[heroIndex] = Math.max(0, specialCds[heroIndex] - getSpecialChargePerAttack(
+        specialCds[heroIndex] = Math.max(0, specialCds[heroIndex] - getSpecialChargeForAttack(
           heroes[heroIndex],
           heroes[otherHeroIndex],
           isInitiator,
@@ -347,7 +346,7 @@ export const calculateResult = (
           specialCds[otherHeroIndex] = maxCds[otherHeroIndex];
         }
       } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[otherHeroIndex] > 0) {
-        specialCds[otherHeroIndex]--;
+        specialCds[otherHeroIndex] -= getSpecialChargeWhenAttacked(heroes[heroIndex]);
       }
       // Apply damage
       healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex], true);
