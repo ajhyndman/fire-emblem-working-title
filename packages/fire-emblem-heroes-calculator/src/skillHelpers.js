@@ -220,3 +220,19 @@ export function getSpecialLifestealPercent(skillName: string): number {
   return test(/(Aether|Sol)/, skillName) ? 0.5
     : (test(/(Daylight|Noontime)/, skillName) ? 0.3 : 0.0);
 }
+
+// Returns the number of special charges generated per attack (usually 1).
+export function getSpecialChargePerAttack(
+  hero1: HeroInstance,
+  hero2: HeroInstance,
+  isAttacker: boolean,
+) {
+  if (hasSkill(hero1, 'PASSIVE_A', 'Heavy Blade')) {
+    const atkReq = getSkillNumbers(getSkillName(hero1, 'PASSIVE_A'))[0];
+    if (getStat(hero1, 'atk', 40, isAttacker) - getStat(hero2, 'atk', 40, !isAttacker) >= atkReq) {
+      return 2;
+    }
+  }
+  return 1;
+}
+

@@ -21,6 +21,7 @@ import {
   getSkillNumbers,
   getSpecialAOEDamageAmount,
   getSpecialBonusDamageAmount,
+  getSpecialChargePerAttack,
   getSpecialCooldown,
   getSpecialDefensiveMultiplier,
   getSpecialLifestealPercent,
@@ -89,7 +90,8 @@ const hasWeaponBreaker = (instanceA: HeroInstance, instanceB: HeroInstance) => {
 
 // Whether or not a unit will perform a follow-up attack.
 const doesFollowUp = (instanceA: HeroInstance, instanceB: HeroInstance, isAttacker: boolean) => {
-  if (isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Windsweep')) {
+  if (isAttacker && (hasSkill(instanceA, 'PASSIVE_B', 'Windsweep')
+      || hasSkill(instanceA, 'PASSIVE_B', 'Watersweep'))) {
     return false;
   }
   const aHasBreaker = hasWeaponBreaker(instanceA, instanceB);
@@ -191,7 +193,9 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
     return false;
   }
   // Windsweep checks for Sword/Lance/Axe/Bow/Dagger = all physical weapons.
-  if (hasSkill(attacker, 'PASSIVE_B', 'Windsweep') && getMitigationType(defender) === 'def' ) {
+  // Watersweep checks for Tome/Staff/Dragonstone = all magical weapons.
+  if ((hasSkill(attacker, 'PASSIVE_B', 'Windsweep') && getMitigationType(defender) === 'def')
+      || (hasSkill(attacker, 'PASSIVE_B', 'Watersweep') && getMitigationType(defender) === 'res')) {
     // The attacker must also be faster than the defender.
     const spdReq = getSkillNumbers(getSkillName(attacker, 'PASSIVE_B'))[0];
     if (getStat(attacker, 'spd', 40, true) - getStat(defender, 'spd', 40, false) >= spdReq) {
@@ -206,6 +210,7 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
   return (passiveA === 'Close Counter'
        || passiveA === 'Distant Counter'
        || weaponName === 'Raijinto'
+       || weaponName === 'Ragnell'
        || weaponName === 'Lightning Breath'
        || weaponName === 'Lightning Breath+');
 };
@@ -279,10 +284,13 @@ export const calculateResult = (
     [getSkillName(attacker, 'SPECIAL'), getSkillName(defender, 'SPECIAL')];
   // $FlowIssue $Iterable. This type is incompatible with array type
   const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
+  let maxCds: Array<number> = [getSpecialCooldown(attacker), getSpecialCooldown(defender)];
   let specialCds: Array<number> = [
-    attackerInitialCooldown === undefined ? getSpecialCooldown(attacker) : attackerInitialCooldown,
-    defenderInitialCooldown === undefined ? getSpecialCooldown(defender) : defenderInitialCooldown,
+    attackerInitialCooldown === undefined ? maxCds[0] : attackerInitialCooldown,
+    defenderInitialCooldown === undefined ? maxCds[1] : defenderInitialCooldown,
   ];
+  if (hasSkill(attacker, 'PASSIVE_B', 'Guard') && specialCds[1] < maxCds[1] ) { specialCds[1]++; }
+  if (hasSkill(defender, 'PASSIVE_B', 'Guard') && specialCds[0] < maxCds[0] ) { specialCds[0]++; }
   let numAttacks = [0, 0];
   let healths = [attackerInitialHp || maxHps[0], defenderInitialHp || maxHps[1]];
   // AOE Damage
@@ -292,6 +300,7 @@ export const calculateResult = (
   healths[1] = hpRemaining(aoeDamage, healths[1], false);
   // Main combat loop.
   for (let heroIndex: number of attackOrder) {
+    const isInitiator = (heroIndex === 0);
     // heroIndex hits otherHeroIndex.
     numAttacks[heroIndex]++;
     if (healths[heroIndex] > 0) {
@@ -304,19 +313,23 @@ export const calculateResult = (
       let dmgWithoutSpecial = hitDmg(
         heroes[heroIndex],
         heroes[otherHeroIndex],
-        heroIndex === 0,  // isAttacker
+        isInitiator,
       );
       if (specialCds[heroIndex] === 0 && specialTypes[heroIndex] === 'ATTACK') {
         attackerSpecial = specialNames[heroIndex];
         lifestealPercent += getSpecialLifestealPercent(attackerSpecial);
-        specialCds[heroIndex] = getSpecialCooldown(heroes[heroIndex]);
+        specialCds[heroIndex] = maxCds[heroIndex];
       } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[heroIndex] > 0) {
-        specialCds[heroIndex]--;
+        specialCds[heroIndex] = Math.max(0, specialCds[heroIndex] - getSpecialChargePerAttack(
+          heroes[heroIndex],
+          heroes[otherHeroIndex],
+          isInitiator,
+        ));
       }
       let dmg = hitDmg(
         heroes[heroIndex],
         heroes[otherHeroIndex],
-        heroIndex === 0,  // isAttacker
+        isInitiator,
         attackerSpecial,
         getStat(heroes[heroIndex], 'hp') - healths[heroIndex],  // missing hp
       );
@@ -327,11 +340,11 @@ export const calculateResult = (
         const specialName = specialNames[otherHeroIndex];
         if (specialName === 'Miracle' && dmg >= healths[otherHeroIndex]) {
           dmg = healths[otherHeroIndex] - 1;
-          specialCds[otherHeroIndex] = getSpecialCooldown(heroes[otherHeroIndex]);
+          specialCds[otherHeroIndex] = maxCds[otherHeroIndex];
         // The unit that initiated combat decided the range of the battle.
         } else if (doesDefenseSpecialApply(specialName, getRange(attacker))) {
           dmg = Math.ceil(dmg * (1 - getSpecialDefensiveMultiplier(specialName)));
-          specialCds[otherHeroIndex] = getSpecialCooldown(heroes[otherHeroIndex]);
+          specialCds[otherHeroIndex] = maxCds[otherHeroIndex];
         }
       } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[otherHeroIndex] > 0) {
         specialCds[otherHeroIndex]--;
