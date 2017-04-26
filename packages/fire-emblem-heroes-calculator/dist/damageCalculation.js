@@ -61,7 +61,7 @@ var hasWeaponBreaker = function hasWeaponBreaker(instanceA, instanceB) {
 
 // Whether or not a unit will perform a follow-up attack.
 var doesFollowUp = function doesFollowUp(instanceA, instanceB, isAttacker) {
-  if (isAttacker && (0, _heroHelpers.hasSkill)(instanceA, 'PASSIVE_B', 'Windsweep')) {
+  if (isAttacker && ((0, _heroHelpers.hasSkill)(instanceA, 'PASSIVE_B', 'Windsweep') || (0, _heroHelpers.hasSkill)(instanceA, 'PASSIVE_B', 'Watersweep'))) {
     return false;
   }
   var aHasBreaker = hasWeaponBreaker(instanceA, instanceB);
@@ -132,7 +132,8 @@ var canRetaliate = function canRetaliate(attacker, defender) {
     return false;
   }
   // Windsweep checks for Sword/Lance/Axe/Bow/Dagger = all physical weapons.
-  if ((0, _heroHelpers.hasSkill)(attacker, 'PASSIVE_B', 'Windsweep') && (0, _heroHelpers.getMitigationType)(defender) === 'def') {
+  // Watersweep checks for Tome/Staff/Dragonstone = all magical weapons.
+  if ((0, _heroHelpers.hasSkill)(attacker, 'PASSIVE_B', 'Windsweep') && (0, _heroHelpers.getMitigationType)(defender) === 'def' || (0, _heroHelpers.hasSkill)(attacker, 'PASSIVE_B', 'Watersweep') && (0, _heroHelpers.getMitigationType)(defender) === 'res') {
     // The attacker must also be faster than the defender.
     var spdReq = (0, _skillHelpers.getSkillNumbers)((0, _heroHelpers.getSkillName)(attacker, 'PASSIVE_B'))[0];
     if ((0, _heroHelpers.getStat)(attacker, 'spd', 40, true) - (0, _heroHelpers.getStat)(defender, 'spd', 40, false) >= spdReq) {
@@ -144,7 +145,7 @@ var canRetaliate = function canRetaliate(attacker, defender) {
   }
   var passiveA = (0, _heroHelpers.getSkillName)(defender, 'PASSIVE_A');
   var weaponName = (0, _heroHelpers.getSkillName)(defender, 'WEAPON');
-  return passiveA === 'Close Counter' || passiveA === 'Distant Counter' || weaponName === 'Raijinto' || weaponName === 'Lightning Breath' || weaponName === 'Lightning Breath+';
+  return passiveA === 'Close Counter' || passiveA === 'Distant Counter' || weaponName === 'Raijinto' || weaponName === 'Ragnell' || weaponName === 'Lightning Breath' || weaponName === 'Lightning Breath+';
 };
 
 var hpRemaining = function hpRemaining(dmg, hp) {
@@ -155,7 +156,7 @@ var hpRemaining = function hpRemaining(dmg, hp) {
 var hitDmg = function hitDmg(attacker, defender, isAttacker) {
   var attackerSpecial = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
   var attackerMissingHp = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
-  return dmgFormula((0, _heroHelpers.getStat)(attacker, 'atk', 40, isAttacker), effectiveBonus(attacker, defender), advantageBonus(attacker, defender), (0, _heroHelpers.getStat)(defender, (0, _heroHelpers.getMitigationType)(attacker), 40, !isAttacker), classModifier(attacker), (0, _skillHelpers.getSpecialBonusDamageAmount)(attackerSpecial, attacker, isAttacker, attackerMissingHp), (0, _skillHelpers.getSpecialOffensiveMultiplier)(attackerSpecial), (0, _skillHelpers.getSpecialMitigationMultiplier)(attackerSpecial));
+  return (0, _heroHelpers.hasSkill)(defender, 'SEAL', 'Embla\'s Ward') ? 0 : dmgFormula((0, _heroHelpers.getStat)(attacker, 'atk', 40, isAttacker), effectiveBonus(attacker, defender), advantageBonus(attacker, defender), (0, _heroHelpers.getStat)(defender, (0, _heroHelpers.getMitigationType)(attacker), 40, !isAttacker), classModifier(attacker), (0, _skillHelpers.getSpecialBonusDamageAmount)(attackerSpecial, attacker, isAttacker, attackerMissingHp), (0, _skillHelpers.getSpecialOffensiveMultiplier)(attackerSpecial), (0, _skillHelpers.getSpecialMitigationMultiplier)(attackerSpecial));
 };
 
 /**
@@ -198,7 +199,8 @@ var calculateResult = exports.calculateResult = function calculateResult(attacke
   var specialNames = [(0, _heroHelpers.getSkillName)(attacker, 'SPECIAL'), (0, _heroHelpers.getSkillName)(defender, 'SPECIAL')];
   // $FlowIssue $Iterable. This type is incompatible with array type
   var specialTypes = (0, _ramda.map)(_skillHelpers.getSpecialType, heroes);
-  var specialCds = [attackerInitialCooldown === undefined ? (0, _skillHelpers.getSpecialCooldown)(attacker) : attackerInitialCooldown, defenderInitialCooldown === undefined ? (0, _skillHelpers.getSpecialCooldown)(defender) : defenderInitialCooldown];
+  var maxCds = [(0, _skillHelpers.getSpecialCooldown)(attacker), (0, _skillHelpers.getSpecialCooldown)(defender)];
+  var specialCds = [attackerInitialCooldown === undefined ? maxCds[0] : attackerInitialCooldown, defenderInitialCooldown === undefined ? maxCds[1] : defenderInitialCooldown];
   var numAttacks = [0, 0];
   var healths = [attackerInitialHp || maxHps[0], defenderInitialHp || maxHps[1]];
   // AOE Damage
@@ -214,6 +216,7 @@ var calculateResult = exports.calculateResult = function calculateResult(attacke
     for (var _iterator = attackOrder[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var heroIndex = _step.value;
 
+      var isInitiator = heroIndex === 0;
       // heroIndex hits otherHeroIndex.
       numAttacks[heroIndex]++;
       if (healths[heroIndex] > 0) {
@@ -223,16 +226,15 @@ var calculateResult = exports.calculateResult = function calculateResult(attacke
 
         // Attacker Special. Use '' for no special.
         var attackerSpecial = '';
-        var dmgWithoutSpecial = hitDmg(heroes[heroIndex], heroes[otherHeroIndex], heroIndex === 0);
+        var dmgWithoutSpecial = hitDmg(heroes[heroIndex], heroes[otherHeroIndex], isInitiator);
         if (specialCds[heroIndex] === 0 && specialTypes[heroIndex] === 'ATTACK') {
           attackerSpecial = specialNames[heroIndex];
           lifestealPercent += (0, _skillHelpers.getSpecialLifestealPercent)(attackerSpecial);
-          specialCds[heroIndex] = (0, _skillHelpers.getSpecialCooldown)(heroes[heroIndex]);
+          specialCds[heroIndex] = maxCds[heroIndex];
         } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[heroIndex] > 0) {
-          specialCds[heroIndex]--;
+          specialCds[heroIndex] = Math.max(0, specialCds[heroIndex] - (0, _skillHelpers.getSpecialChargeForAttack)(heroes[heroIndex], heroes[otherHeroIndex], isInitiator));
         }
-        var dmg = hitDmg(heroes[heroIndex], heroes[otherHeroIndex], heroIndex === 0, // isAttacker
-        attackerSpecial, (0, _heroHelpers.getStat)(heroes[heroIndex], 'hp') - healths[heroIndex]);
+        var dmg = hitDmg(heroes[heroIndex], heroes[otherHeroIndex], isInitiator, attackerSpecial, (0, _heroHelpers.getStat)(heroes[heroIndex], 'hp') - healths[heroIndex]);
         specialDamages[heroIndex] += dmg - dmgWithoutSpecial;
 
         // Defender Special
@@ -240,14 +242,14 @@ var calculateResult = exports.calculateResult = function calculateResult(attacke
           var specialName = specialNames[otherHeroIndex];
           if (specialName === 'Miracle' && dmg >= healths[otherHeroIndex]) {
             dmg = healths[otherHeroIndex] - 1;
-            specialCds[otherHeroIndex] = (0, _skillHelpers.getSpecialCooldown)(heroes[otherHeroIndex]);
+            specialCds[otherHeroIndex] = maxCds[otherHeroIndex];
             // The unit that initiated combat decided the range of the battle.
           } else if ((0, _skillHelpers.doesDefenseSpecialApply)(specialName, (0, _heroHelpers.getRange)(attacker))) {
             dmg = Math.ceil(dmg * (1 - (0, _skillHelpers.getSpecialDefensiveMultiplier)(specialName)));
-            specialCds[otherHeroIndex] = (0, _skillHelpers.getSpecialCooldown)(heroes[otherHeroIndex]);
+            specialCds[otherHeroIndex] = maxCds[otherHeroIndex];
           }
         } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[otherHeroIndex] > 0) {
-          specialCds[otherHeroIndex]--;
+          specialCds[otherHeroIndex] -= (0, _skillHelpers.getSpecialChargeWhenAttacked)(heroes[heroIndex]);
         }
         // Apply damage
         healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex], true);

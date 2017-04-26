@@ -242,32 +242,11 @@ var getStat = exports.getStat = function getStat(instance, statKey) {
 };
 
 var getRange = exports.getRange = function getRange(instance) {
-  switch (lookupStats(instance.name).weaponType) {
-    case 'Red Sword':
-    case 'Green Axe':
-    case 'Blue Lance':
-    case 'Red Beast':
-    case 'Green Beast':
-    case 'Blue Beast':
-      return 1;
-    default:
-      return 2;
-  }
+  return (0, _ramda.test)(/Sword|Axe|Lance|Beast/, lookupStats(instance.name).weaponType) ? 1 : 2;
 };
 
 var getMitigationType = exports.getMitigationType = function getMitigationType(instance) {
-  switch (lookupStats(instance.name).weaponType) {
-    case 'Red Tome':
-    case 'Red Beast':
-    case 'Green Tome':
-    case 'Green Beast':
-    case 'Blue Tome':
-    case 'Blue Beast':
-    case 'Neutral Staff':
-      return 'res';
-    default:
-      return 'def';
-  }
+  return (0, _ramda.test)(/Tome|Beast|Staff/, lookupStats(instance.name).weaponType) ? 'res' : 'def';
 };
 
 var getWeaponColor = exports.getWeaponColor = function getWeaponColor(instance) {

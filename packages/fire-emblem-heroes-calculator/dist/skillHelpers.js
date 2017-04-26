@@ -16,6 +16,8 @@ exports.getSpecialBonusDamageAmount = getSpecialBonusDamageAmount;
 exports.getSpecialOffensiveMultiplier = getSpecialOffensiveMultiplier;
 exports.getSpecialDefensiveMultiplier = getSpecialDefensiveMultiplier;
 exports.getSpecialLifestealPercent = getSpecialLifestealPercent;
+exports.getSpecialChargeForAttack = getSpecialChargeForAttack;
+exports.getSpecialChargeWhenAttacked = getSpecialChargeWhenAttacked;
 
 var _ramda = require('ramda');
 
@@ -196,4 +198,25 @@ function getSpecialDefensiveMultiplier(skillName) {
 // Returns the percent of damage increased by a special
 function getSpecialLifestealPercent(skillName) {
   return (0, _ramda.test)(/(Aether|Sol)/, skillName) ? 0.5 : (0, _ramda.test)(/(Daylight|Noontime)/, skillName) ? 0.3 : 0.0;
+}
+
+// Returns the number of special charges generated per attack (usually 1).
+function getSpecialChargeForAttack(hero1, hero2, isAttacker) {
+  var specialChargePerAtk = 1;
+  if ((0, _heroHelpers.hasSkill)(hero1, 'PASSIVE_A', 'Heavy Blade')) {
+    var atkReq = getSkillNumbers((0, _heroHelpers.getSkillName)(hero1, 'PASSIVE_A'))[0];
+    if ((0, _heroHelpers.getStat)(hero1, 'atk', 40, isAttacker) - (0, _heroHelpers.getStat)(hero2, 'atk', 40, !isAttacker) >= atkReq) {
+      specialChargePerAtk += 1;
+    }
+  }
+  if ((0, _heroHelpers.hasSkill)(hero2, 'PASSIVE_B', 'Guard')) {
+    specialChargePerAtk -= 1;
+  }
+  return specialChargePerAtk;
+}
+
+// Returns the number of special charges generated when opponent attacks you (usually 1).
+// OtherHero is the one that is attacking you.
+function getSpecialChargeWhenAttacked(otherHero) {
+  return (0, _heroHelpers.hasSkill)(otherHero, 'PASSIVE_B', 'Guard') ? 0 : 1;
 }
