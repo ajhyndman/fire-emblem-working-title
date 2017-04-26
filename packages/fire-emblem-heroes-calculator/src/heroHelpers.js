@@ -292,32 +292,11 @@ export const getStat = (
 };
 
 export const getRange = (instance: HeroInstance) => {
-  switch (lookupStats(instance.name).weaponType) {
-    case 'Red Sword':
-    case 'Green Axe':
-    case 'Blue Lance':
-    case 'Red Beast':
-    case 'Green Beast':
-    case 'Blue Beast':
-      return 1;
-    default:
-      return 2;
-  }
+  return test(/Sword|Axe|Lance|Beast/, lookupStats(instance.name).weaponType) ? 1 : 2;
 };
 
 export const getMitigationType = (instance: HeroInstance) => {
-  switch (lookupStats(instance.name).weaponType) {
-    case 'Red Tome':
-    case 'Red Beast':
-    case 'Green Tome':
-    case 'Green Beast':
-    case 'Blue Tome':
-    case 'Blue Beast':
-    case 'Neutral Staff':
-      return 'res';
-    default:
-      return 'def';
-  }
+  return test(/Tome|Beast|Staff/, lookupStats(instance.name).weaponType) ? 'res' : 'def';
 };
 
 export const getWeaponColor = (instance: HeroInstance) => {
