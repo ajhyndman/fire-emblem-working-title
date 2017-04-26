@@ -3192,7 +3192,7 @@
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Blue Lance",
       "moveType": "Flying",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "Apr 15, 2017",
       "skills": [
         {
@@ -3207,7 +3207,7 @@
         },
         {
           "name": "Silver Lance",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -3217,12 +3217,12 @@
         },
         {
           "name": "Harsh Command",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Hit and Run",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Spur Spd 1",
@@ -3239,6 +3239,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 17,
+            "atk": 6,
+            "spd": 8,
+            "def": 4,
+            "res": 9
+          },
           "5": {
             "hp": 18,
             "atk": 7,
@@ -3248,6 +3255,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              32,
+              35,
+              38
+            ],
+            "atk": [
+              21,
+              24,
+              27
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              19,
+              22,
+              25
+            ],
+            "res": [
+              28,
+              31,
+              34
+            ]
+          },
           "5": {
             "hp": [
               34,
@@ -7795,6 +7829,116 @@
       }
     },
     {
+      "name": "Ike",
+      "title": "Young Mercenary",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Apr 27, 2017",
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Ragnell",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "New Moon",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Luna",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Aether",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Heavy Blade 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Heavy Blade 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Heavy Blade 3",
+          "rarity": 5
+        },
+        {
+          "name": "Swordbreaker 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 7,
+            "def": 8,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              39,
+              42,
+              45
+            ],
+            "atk": [
+              32,
+              35,
+              38
+            ],
+            "spd": [
+              28,
+              31,
+              34
+            ],
+            "def": [
+              29,
+              32,
+              35
+            ],
+            "res": [
+              14,
+              18,
+              21
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Jaffar",
       "title": "Angel of Death",
       "origin": "Fire Emblem: The Blazing Blade",
@@ -8996,12 +9140,12 @@
         },
         {
           "name": "Daylight",
-          "default": "-",
+          "default": 4,
           "rarity": 3
         },
         {
           "name": "Noontime",
-          "default": 4,
+          "default": "-",
           "rarity": 4
         },
         {
@@ -10218,7 +10362,7 @@
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "Apr 15, 2017",
       "skills": [
         {
@@ -10233,7 +10377,7 @@
         },
         {
           "name": "Killer Lance",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -10243,13 +10387,13 @@
         },
         {
           "name": "Holy Vestments",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Sacred Cowl",
           "default": "-",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Fortress Def 1",
@@ -10273,11 +10417,18 @@
         },
         {
           "name": "Obstruct 3",
-          "rarity": "-"
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 4,
+            "def": 10,
+            "res": 3
+          },
           "5": {
             "hp": 19,
             "atk": 9,
@@ -10287,6 +10438,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              39,
+              42,
+              45
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              17,
+              20,
+              23
+            ],
+            "def": [
+              33,
+              36,
+              39
+            ],
+            "res": [
+              12,
+              15,
+              18
+            ]
+          },
           "5": {
             "hp": [
               42,
@@ -11259,6 +11437,87 @@
               19,
               22,
               25
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Mist",
+      "title": "Helpful Sister",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Neutral Staff",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Apr 27, 2017",
+      "skills": [
+        {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Slow",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Heal",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Mend",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Recover",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Imbue",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 6,
+            "def": 5,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              35,
+              39,
+              42
+            ],
+            "atk": [
+              24,
+              27,
+              31
+            ],
+            "spd": [
+              24,
+              28,
+              31
+            ],
+            "def": [
+              17,
+              20,
+              23
+            ],
+            "res": [
+              31,
+              34,
+              37
             ]
           }
         }
@@ -16290,6 +16549,111 @@
       }
     },
     {
+      "name": "Soren",
+      "title": "Shrewd Strategist",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Green Tome",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Apr 27, 2017",
+      "skills": [
+        {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elwind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Rexcalibur",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Rexcalibur+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rising Wind",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Growing Wind",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Watersweep 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Watersweep 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Watersweep 3",
+          "rarity": 5
+        },
+        {
+          "name": "Fortify Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortify Res 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortify Res 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 9,
+            "def": 4,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              33,
+              36,
+              40
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              30,
+              33,
+              36
+            ],
+            "def": [
+              13,
+              17,
+              20
+            ],
+            "res": [
+              25,
+              29,
+              32
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Stahl",
       "title": "Viridian Knight",
       "origin": "Fire Emblem Awakening",
@@ -17403,6 +17767,106 @@
         }
       },
       "shortName": "Tiki (Y)"
+    },
+    {
+      "name": "Titania",
+      "title": "Mighty Mercenary",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Green Axe",
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Apr 27, 2017",
+      "skills": [
+        {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Emerald Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Emerald Axe+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Reciprocal Aid",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Armored Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Armored Blow 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Armored Blow 3",
+          "rarity": 5
+        },
+        {
+          "name": "Guard 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Guard 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Guard 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 6,
+            "spd": 8,
+            "def": 6,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              34,
+              37,
+              41
+            ],
+            "atk": [
+              24,
+              28,
+              31
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              22,
+              25,
+              29
+            ],
+            "res": [
+              26,
+              30,
+              33
+            ]
+          }
+        }
+      }
     },
     {
       "name": "Ursula",
@@ -18735,6 +19199,16 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Ragnell",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
       "name": "Raijinto",
       "spCost": 400,
       "damage(mt)": 16,
@@ -19800,7 +20274,8 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Wind",
@@ -19887,7 +20362,7 @@
       "spCost": 150,
       "damage(mt)": 5,
       "range(rng)": 2,
-      "effect": "After combat, inflicts Atk-6 on targeted foe throught its next action.",
+      "effect": "After combat, inflicts Atk-6 on targeted foe through its next action.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Staff"
@@ -21030,6 +21505,27 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Heavy Blade 1",
+      "effect": "If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Heavy Blade 2",
+      "effect": "If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Heavy Blade 3",
+      "effect": "If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Iote's Shield",
       "effect": "Neutralizes \"effective against\" bonuses.",
       "spCost": 200,
@@ -21338,6 +21834,27 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Guard 1",
+      "effect": "If unit's HP is ≥ ##% at start of combat, enemy is inflicted with Special cooldown charge-1.(If using similar skill, only highest value applied.)",
+      "spCost": "",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Guard 2",
+      "effect": "If unit's HP is ≥ ##% at start of combat, enemy is inflicted with Special cooldown charge-1.(If using similar skill, only highest value applied.)",
+      "spCost": "",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Guard 3",
+      "effect": "If unit's HP is ≥ 80% at start of combat, enemy is inflicted with Special cooldown charge-1.(If using similar skill, only highest value applied.)",
+      "spCost": "",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Hit and Run",
       "effect": "If unit initiates attack, unit advances 1 space after battle.",
       "spCost": 150,
@@ -21374,7 +21891,7 @@
     },
     {
       "name": "Live for Bounty",
-      "effect": "If unit survives, get 1.5x normal badges from a Training Tower map.(If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, get 1.5x shards/crystals from a Training Tower map.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 100,
       "inheritRestriction": "None",
       "type": "PASSIVE_B"
@@ -21688,23 +22205,44 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Watersweep 1",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Watersweep 2",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Watersweep 3",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Windsweep 1",
       "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack.",
-      "spCost": 50,
+      "spCost": 60,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_B"
     },
     {
       "name": "Windsweep 2",
       "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack.",
-      "spCost": 100,
+      "spCost": 120,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_B"
     },
     {
       "name": "Windsweep 3",
       "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
-      "spCost": 200,
+      "spCost": 240,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_B"
     },
@@ -22010,6 +22548,20 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Spur Def Res 1",
+      "effect": "Grants adjacent allies Def/Res +2 during combat",
+      "spCost": "",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spur Def Res 2",
+      "effect": "Grants adjacent allies Def/Res +3 during combat.",
+      "spCost": "",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Spur Res 1",
       "effect": "Grants adjacent allies Res+2 during combat.",
       "spCost": 50,
@@ -22159,6 +22711,11 @@
     {
       "name": "Attack +1",
       "effect": "Grants Atk+1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Embla's Ward",
+      "effect": "Unit receives 0 damage.",
       "type": "SEAL"
     },
     {
