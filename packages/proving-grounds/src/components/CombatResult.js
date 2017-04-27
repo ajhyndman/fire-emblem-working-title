@@ -3,7 +3,6 @@ import React from 'react';
 import {
   calculateResult,
   getStat,
-  getSpecialCooldown,
 } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
