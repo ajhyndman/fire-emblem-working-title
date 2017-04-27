@@ -14,6 +14,8 @@ exports.getSkillEffect = getSkillEffect;
 exports.getDefaultSkills = getDefaultSkills;
 exports.updateRarity = updateRarity;
 exports.getInheritableSkills = getInheritableSkills;
+exports.hpAboveThreshold = hpAboveThreshold;
+exports.hpBelowThreshold = hpBelowThreshold;
 
 var _fireEmblemHeroesStats = require('fire-emblem-heroes-stats');
 
@@ -271,3 +273,13 @@ var getWeaponColor = exports.getWeaponColor = function getWeaponColor(instance) 
 var hasStatsForRarity = exports.hasStatsForRarity = function hasStatsForRarity(hero, rarity) {
   return Boolean(hero.stats['1']['' + rarity] && hero.stats['40']['' + rarity]);
 };
+
+// Returns whether or not hp >= X% of hp, using the hp at the start of combat.
+function hpAboveThreshold(hero, hpPercent) {
+  return getStat(hero, 'hp') - hero.initialHpMissing >= getStat(hero, 'hp') * hpPercent / 100;
+}
+
+// Returns whether or not hp <= X% of hp, using the hp at the start of combat.
+function hpBelowThreshold(hero, hpPercent) {
+  return getStat(hero, 'hp') - hero.initialHpMissing <= getStat(hero, 'hp') * hpPercent / 100;
+}

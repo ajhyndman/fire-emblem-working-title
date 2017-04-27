@@ -36,6 +36,8 @@ var getDefaultInstance = exports.getDefaultInstance = function getDefaultInstanc
     boon: undefined,
     rarity: rarity,
     mergeLevel: 0,
-    skills: (0, _heroHelpers.getDefaultSkills)(name, rarity)
+    skills: (0, _heroHelpers.getDefaultSkills)(name, rarity),
+    initialHpMissing: 0,
+    initialSpecialCharge: 0
   };
 };

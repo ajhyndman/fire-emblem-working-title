@@ -321,3 +321,13 @@ export const getWeaponColor = (instance: HeroInstance) => {
 export const hasStatsForRarity = (hero: Hero, rarity: Rarity/* , level?: 1 | 40 */): boolean => {
   return Boolean(hero.stats['1'][`${rarity}`] && hero.stats['40'][`${rarity}`]);
 };
+
+// Returns whether or not hp >= X% of hp, using the hp at the start of combat.
+export function hpAboveThreshold(hero: HeroInstance, hpPercent: number): boolean {
+  return (getStat(hero, 'hp') - hero.initialHpMissing) >= (getStat(hero, 'hp') * hpPercent / 100);
+}
+
+// Returns whether or not hp <= X% of hp, using the hp at the start of combat.
+export function hpBelowThreshold(hero: HeroInstance, hpPercent: number): boolean {
+  return (getStat(hero, 'hp') - hero.initialHpMissing) <= (getStat(hero, 'hp') * hpPercent / 100);
+}

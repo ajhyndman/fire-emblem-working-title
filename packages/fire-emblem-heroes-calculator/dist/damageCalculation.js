@@ -166,7 +166,7 @@ var hitDmg = function hitDmg(attacker, defender, isAttacker) {
  * @param {Hero} defender
  * @returns {object}
  */
-var calculateResult = exports.calculateResult = function calculateResult(attacker, defender, attackerInitialHp, defenderInitialHp, attackerInitialCooldown, defenderInitialCooldown) {
+var calculateResult = exports.calculateResult = function calculateResult(attacker, defender) {
   // a list of 0s and 1s for attacker and defender.
   var attackOrder = [];
   if ((0, _heroHelpers.getSkillName)(attacker, 'WEAPON') !== '') {
@@ -200,9 +200,9 @@ var calculateResult = exports.calculateResult = function calculateResult(attacke
   // $FlowIssue $Iterable. This type is incompatible with array type
   var specialTypes = (0, _ramda.map)(_skillHelpers.getSpecialType, heroes);
   var maxCds = [(0, _skillHelpers.getSpecialCooldown)(attacker), (0, _skillHelpers.getSpecialCooldown)(defender)];
-  var specialCds = [attackerInitialCooldown === undefined ? maxCds[0] : attackerInitialCooldown, defenderInitialCooldown === undefined ? maxCds[1] : defenderInitialCooldown];
+  var specialCds = [maxCds[0] === -1 ? -1 : Math.max(0, maxCds[0] - attacker.initialSpecialCharge), maxCds[1] === -1 ? -1 : Math.max(0, maxCds[1] - defender.initialSpecialCharge)];
   var numAttacks = [0, 0];
-  var healths = [attackerInitialHp || maxHps[0], defenderInitialHp || maxHps[1]];
+  var healths = [maxHps[0] - attacker.initialHpMissing, maxHps[1] - defender.initialHpMissing];
   // AOE Damage
   var aoeDamage = specialCds[0] === 0 ? (0, _skillHelpers.getSpecialAOEDamageAmount)(specialNames[0], attacker, defender) : 0;
   var specialDamages = [aoeDamage, 0];

@@ -43,7 +43,9 @@ test('flattenInstance', (t) => {
         'Astra',
         'Nóatún',
         'Attack +1',
-        3,
+        3, // Merge level
+        0, // initial missing hp
+        0, // initial special charge
       ],
     );
     assert.end();
@@ -160,11 +162,7 @@ test('encodeHero', (t) => {
     assert.deepEqual(
       decodeHero('MwRgxgrA1AJr8E4BmAjA7FALEgppqKSCwUATGmKfHDEA'),
       {
-        bane: undefined,
-        boon: undefined,
-        name: 'Cordelia',
-        rarity: 5,
-        mergeLevel: 0,
+        ...getDefaultInstance('Cordelia'),
         skills: {
           WEAPON: 'Brave Lance+',
           ASSIST: 'Pivot',
@@ -181,11 +179,7 @@ test('encodeHero', (t) => {
 
   t.test('encode removed skills', (assert) => {
     const noSkillHero: HeroInstance = {
-      bane: undefined,
-      boon: undefined,
-      name: 'Anna',
-      rarity: 5,
-      mergeLevel: 0,
+      ...getDefaultInstance('Anna'),
       skills: {
         WEAPON: undefined,
         ASSIST: undefined,

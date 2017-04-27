@@ -47,6 +47,8 @@ type SerialInstance = [
   string | void, // weapon
   string | void, // sacred seal
   MergeLevel, // mergeLevel
+  number, // initialHpMissing
+  number, // initialSpecialCharge
 ];
 
 type SerialInstanceWithDefaults = [
@@ -62,6 +64,8 @@ type SerialInstanceWithDefaults = [
   'd' | string | void, // weapon
   'd' | string | void, // sacred seal
   'd' | MergeLevel, // mergeLevel
+  'd' | number, // initialHpMissing
+  'd' | number, // initialSpecialCharge
 ];
 
 const statKeyToId = { hp: 1, atk: 2, spd: 3, def: 4, res: 5 };
@@ -83,6 +87,8 @@ export const flattenInstance = (instance: HeroInstance): SerialInstance => [
   instance.skills && instance.skills.WEAPON,
   instance.skills && instance.skills.SEAL,
   instance.mergeLevel,
+  instance.initialHpMissing,
+  instance.initialSpecialCharge,
 ];
 
 // Converts a list of values to a hero instance.
@@ -100,6 +106,8 @@ export const extractInstance = ([
   weapon,
   seal,
   mergeLevel,
+  initialHpMissing,
+  initialSpecialCharge,
 // $FlowIssue bane/boon string is incompatible with ?Stat
 ]: SerialInstance): HeroInstance => ({
   name,
@@ -118,6 +126,8 @@ export const extractInstance = ([
     PASSIVE_C: passiveC,
     SEAL: seal,
   },
+  initialHpMissing,
+  initialSpecialCharge,
 });
 
 // Identical to flattenInstance except that any default values will be replaced with USE_DEFAULT
@@ -168,7 +178,8 @@ export const hash = (value: any): string => (
 
 const values = flatten([
   [USE_DEFAULT, NO_VARIANT],
-  range(1, 99), // Rarity, Bane/Boon ids, and USE_DEFAULT are 1-7
+  // Allow all 1-3 digit numbers. undefined hashes to 0 and names might hash to 4 digit numbers.
+  range(1, 999),
   // $FlowIssue: flowtypes for ramda aren't precise
   map(prop('name'), stats.skills),
   // $FlowIssue: flowtypes for ramda aren't precise

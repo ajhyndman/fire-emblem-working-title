@@ -245,11 +245,6 @@ const hitDmg = (
 export const calculateResult = (
   attacker: HeroInstance,
   defender: HeroInstance,
-  // Note: current implementation of skills assumes full health.
-  attackerInitialHp: number | void,
-  defenderInitialHp: number | void,
-  attackerInitialCooldown: number | void,
-  defenderInitialCooldown: number | void,
 ) => {
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
@@ -287,11 +282,11 @@ export const calculateResult = (
   const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
   let maxCds: Array<number> = [getSpecialCooldown(attacker), getSpecialCooldown(defender)];
   let specialCds: Array<number> = [
-    attackerInitialCooldown === undefined ? maxCds[0] : attackerInitialCooldown,
-    defenderInitialCooldown === undefined ? maxCds[1] : defenderInitialCooldown,
+    maxCds[0] === -1 ? -1 : Math.max(0, maxCds[0] - attacker.initialSpecialCharge),
+    maxCds[1] === -1 ? -1 : Math.max(0, maxCds[1] - defender.initialSpecialCharge),
   ];
   let numAttacks = [0, 0];
-  let healths = [attackerInitialHp || maxHps[0], defenderInitialHp || maxHps[1]];
+  let healths = [maxHps[0] - attacker.initialHpMissing, maxHps[1] - defender.initialHpMissing];
   // AOE Damage
   const aoeDamage = specialCds[0] === 0
     ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;

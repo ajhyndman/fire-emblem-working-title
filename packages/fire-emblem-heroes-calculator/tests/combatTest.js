@@ -3,6 +3,7 @@ import test from 'tape';
 
 import { calculateResult } from '../src/damageCalculation';
 import { getDefaultSkills } from '../src/heroHelpers';
+import { getDefaultInstance } from '../src/heroInstance';
 import type { HeroInstance, Rarity } from '../src/heroInstance';
 
 
@@ -12,11 +13,7 @@ function makeHero(
   customSkills: {} = {},
 ): HeroInstance {
   return {
-    name: name,
-    bane: undefined,
-    boon: undefined,
-    rarity: rarity,
-    mergeLevel: 0,
+    ...getDefaultInstance(name, rarity),
     skills: {
       ...getDefaultSkills(name, rarity),
       ...customSkills,
