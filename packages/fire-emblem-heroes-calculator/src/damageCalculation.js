@@ -212,6 +212,7 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
        || passiveA === 'Distant Counter'
        || weaponName === 'Raijinto'
        || weaponName === 'Ragnell'
+       || weaponName === 'Siegfried'
        || weaponName === 'Lightning Breath'
        || weaponName === 'Lightning Breath+');
 };

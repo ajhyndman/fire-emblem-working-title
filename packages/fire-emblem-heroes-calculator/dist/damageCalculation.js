@@ -145,7 +145,7 @@ var canRetaliate = function canRetaliate(attacker, defender) {
   }
   var passiveA = (0, _heroHelpers.getSkillName)(defender, 'PASSIVE_A');
   var weaponName = (0, _heroHelpers.getSkillName)(defender, 'WEAPON');
-  return passiveA === 'Close Counter' || passiveA === 'Distant Counter' || weaponName === 'Raijinto' || weaponName === 'Ragnell' || weaponName === 'Lightning Breath' || weaponName === 'Lightning Breath+';
+  return passiveA === 'Close Counter' || passiveA === 'Distant Counter' || weaponName === 'Raijinto' || weaponName === 'Ragnell' || weaponName === 'Siegfried' || weaponName === 'Lightning Breath' || weaponName === 'Lightning Breath+';
 };
 
 var hpRemaining = function hpRemaining(dmg, hp) {
