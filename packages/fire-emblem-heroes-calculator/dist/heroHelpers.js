@@ -51,11 +51,13 @@ var lookupStats = exports.lookupStats = function lookupStats(name) {
   };
 };
 
-// Can be called with substrings of the skill name
+// Can be called with substrings of the skill name. Returns false if an hp requirement is not met.
 var hasSkill = exports.hasSkill = function hasSkill(instance, skillType, expectedName) {
   var skillName = getSkillName(instance, skillType);
   if (skillName !== undefined) {
-    return (0, _ramda.test)(new RegExp(expectedName), skillName);
+    if ((0, _ramda.test)(new RegExp(expectedName), skillName)) {
+      return (0, _skillHelpers.hpRequirementSatisfied)(instance, skillName);
+    }
   }
   return false;
 };
@@ -225,10 +227,6 @@ var getStat = exports.getStat = function getStat(instance, statKey) {
 
   var baseValue = variance === 'normal' ? parseInt(normal, 10) : variance === 'low' ? parseInt(low, 10) : parseInt(high, 10);
 
-  var passiveA = getSkillName(instance, 'PASSIVE_A');
-  var seal = getSkillName(instance, 'SEAL');
-  var weapon = getSkillName(instance, 'WEAPON');
-
   // Every bonus level gives +1 to the next 2 stats, with stats in decreasing level 1 order
   var statKeys = ['hp', 'atk', 'spd', 'def', 'res'];
   // Depends on the fact that level 1 stats currently exclude skills.
@@ -239,8 +237,8 @@ var getStat = exports.getStat = function getStat(instance, statKey) {
   var orderedStatKeys = (0, _ramda.sortWith)([(0, _ramda.descend)((0, _ramda.prop)(_ramda.__, level1Stats)), (0, _ramda.ascend)((0, _ramda.indexOf)(_ramda.__, statKeys))], statKeys);
   var mergeBonus = Math.floor(2 * instance.mergeLevel / 5) + (2 * instance.mergeLevel % 5 > (0, _ramda.indexOf)(statKey, orderedStatKeys) ? 1 : 0);
 
-  //console.log('GetStat.', instance.name, statKey, baseValue
-  return baseValue + mergeBonus + (passiveA ? (0, _skillHelpers.getStatValue)(passiveA, statKey, isAttacker) : 0) + (seal ? (0, _skillHelpers.getStatValue)(seal, statKey, isAttacker) : 0) + (weapon ? (0, _skillHelpers.getStatValue)(weapon, statKey, isAttacker) : 0);
+  // TODO: buffs and Defiant abilities
+  return baseValue + mergeBonus + (0, _skillHelpers.getStatValue)(instance, 'PASSIVE_A', statKey, isAttacker) + (0, _skillHelpers.getStatValue)(instance, 'SEAL', statKey, isAttacker) + (0, _skillHelpers.getStatValue)(instance, 'WEAPON', statKey, isAttacker);
 };
 
 var getRange = exports.getRange = function getRange(instance) {

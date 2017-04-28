@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getSpecialCooldown = exports.getSkillInfo = undefined;
 exports.getSkillNumbers = getSkillNumbers;
+exports.hpRequirementSatisfied = hpRequirementSatisfied;
 exports.getStatValue = getStatValue;
 exports.isMaxTier = isMaxTier;
 exports.isFreeSkill = isFreeSkill;
@@ -42,7 +43,8 @@ var getSkillInfo = exports.getSkillInfo = function getSkillInfo(skillName) {
 var capitalize = (0, _ramda.compose)((0, _ramda.join)(''), (0, _ramda.juxt)([(0, _ramda.compose)(_ramda.toUpper, _ramda.head), _ramda.tail]));
 
 // Returns a list of numbers from the effect of the skill, or [0].
-function getSkillNumbers(skillName) {
+function getSkillNumbers(hero, skillType) {
+  var skillName = (0, _heroHelpers.getSkillName)(hero, skillType);
   var skill = getSkillInfo(skillName);
   if (skill === undefined) {
     return [0];
@@ -51,8 +53,22 @@ function getSkillNumbers(skillName) {
   return (0, _ramda.map)(parseInt, (0, _ramda.match)(/\d+/g, skill.effect));
 }
 
+function hpRequirementSatisfied(hero, skillName) {
+  var skill = getSkillInfo(skillName);
+  if (skill !== undefined) {
+    if ((0, _ramda.test)(/≥\s*\d+%/, skill.effect)) {
+      return (0, _heroHelpers.hpAboveThreshold)(hero, parseInt((0, _ramda.match)(/(\d+)%/, skill.effect)[1]));
+    }
+    if ((0, _ramda.test)(/≤\s*\d+%/, skill.effect)) {
+      return (0, _heroHelpers.hpBelowThreshold)(hero, parseInt((0, _ramda.match)(/(\d+)%/, skill.effect)[1]));
+    }
+  }
+  return true;
+}
+
 // Returns the value for a stat provided by a passive skill
-function getStatValue(skillName, statKey, isAttacker) {
+function getStatValue(hero, skillType, statKey, isAttacker) {
+  var skillName = (0, _heroHelpers.getSkillName)(hero, skillType);
   var skill = getSkillInfo(skillName);
   if (skill === undefined) {
     return 0;
@@ -75,13 +91,16 @@ function getStatValue(skillName, statKey, isAttacker) {
     } else if ((skill.name === 'Binding Blade' || skill.name === 'Naga') && !isAttacker) {
       return 2;
     }
+    if (statKey === 'def' && skill.name === 'Tyrfing' && (0, _heroHelpers.hpBelowThreshold)(hero, 50)) {
+      return 4;
+    }
     if (statKey === 'res' && skill.name === 'Parthia' && isAttacker) {
       return 4;
     }
   } else if (skill.type === 'PASSIVE_A' || skill.type === 'SEAL') {
     var statRegex = new RegExp(statKey === 'hp' ? 'max HP' : capitalize(statKey));
     if ((0, _ramda.test)(statRegex, skill.effect)) {
-      var skillNumbers = getSkillNumbers(skillName);
+      var skillNumbers = getSkillNumbers(hero, skillType);
       // Atk/Def/Spd/Res/HP+, 'Attack Def+', and Fury
       if ((0, _ramda.test)(/(Fury|\+)/, skillName)) {
         return skillNumbers[0];
@@ -204,7 +223,7 @@ function getSpecialLifestealPercent(skillName) {
 function getSpecialChargeForAttack(hero1, hero2, isAttacker) {
   var specialChargePerAtk = 1;
   if ((0, _heroHelpers.hasSkill)(hero1, 'PASSIVE_A', 'Heavy Blade')) {
-    var atkReq = getSkillNumbers((0, _heroHelpers.getSkillName)(hero1, 'PASSIVE_A'))[0];
+    var atkReq = getSkillNumbers(hero1, 'PASSIVE_A')[0];
     if ((0, _heroHelpers.getStat)(hero1, 'atk', 40, isAttacker) - (0, _heroHelpers.getStat)(hero2, 'atk', 40, !isAttacker) >= atkReq) {
       specialChargePerAtk += 1;
     }

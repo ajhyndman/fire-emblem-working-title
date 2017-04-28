@@ -66,7 +66,7 @@ var doesFollowUp = function doesFollowUp(instanceA, instanceB, isAttacker) {
   }
   var aHasBreaker = hasWeaponBreaker(instanceA, instanceB);
   var bHasBreaker = hasWeaponBreaker(instanceB, instanceA);
-  var guaranteedFollowup = aHasBreaker || !isAttacker && (0, _heroHelpers.hasSkill)(instanceA, 'WEAPON', 'Armads') || !isAttacker && (0, _heroHelpers.hasSkill)(instanceA, 'PASSIVE_B', 'Quick Riposte');
+  var guaranteedFollowup = aHasBreaker || isAttacker && (0, _heroHelpers.hasSkill)(instanceA, 'PASSIVE_B', 'Brash Assault') && canRetaliate(instanceA, instanceB) || !isAttacker && (0, _heroHelpers.hasSkill)(instanceA, 'WEAPON', 'Armads') || !isAttacker && (0, _heroHelpers.hasSkill)(instanceA, 'PASSIVE_B', 'Quick Riposte');
   var cannotFollowup = bHasBreaker || (0, _heroHelpers.hasSkill)(instanceA, 'PASSIVE_B', 'Wary Fighter') || (0, _heroHelpers.hasSkill)(instanceB, 'PASSIVE_B', 'Wary Fighter');
   // Guaranteed-followup and cannot-followup skills cancel out and it comes down to speed.
   if (guaranteedFollowup && !cannotFollowup) {
@@ -135,7 +135,7 @@ var canRetaliate = function canRetaliate(attacker, defender) {
   // Watersweep checks for Tome/Staff/Dragonstone = all magical weapons.
   if ((0, _heroHelpers.hasSkill)(attacker, 'PASSIVE_B', 'Windsweep') && (0, _heroHelpers.getMitigationType)(defender) === 'def' || (0, _heroHelpers.hasSkill)(attacker, 'PASSIVE_B', 'Watersweep') && (0, _heroHelpers.getMitigationType)(defender) === 'res') {
     // The attacker must also be faster than the defender.
-    var spdReq = (0, _skillHelpers.getSkillNumbers)((0, _heroHelpers.getSkillName)(attacker, 'PASSIVE_B'))[0];
+    var spdReq = (0, _skillHelpers.getSkillNumbers)(attacker, 'PASSIVE_B')[0];
     if ((0, _heroHelpers.getStat)(attacker, 'spd', 40, true) - (0, _heroHelpers.getStat)(defender, 'spd', 40, false) >= spdReq) {
       return false;
     }
@@ -167,27 +167,45 @@ var hitDmg = function hitDmg(attacker, defender, isAttacker) {
  * @returns {object}
  */
 var calculateResult = exports.calculateResult = function calculateResult(attacker, defender) {
+  // First, check for the ability to retaliate and skills that affect attack order.
+  var attackerHasFollowup = doesFollowUp(attacker, defender, true);
+  var defenderCanRetaliate = canRetaliate(attacker, defender);
+  var defenderHasFollowup = defenderCanRetaliate && doesFollowUp(defender, attacker, false);
+  var defenderCountersFirst = defenderCanRetaliate && ((0, _heroHelpers.hasSkill)(defender, 'PASSIVE_B', 'Vantage') || (0, _heroHelpers.hasSkill)(defender, 'WEAPON', 'Valaskjálf'));
+  var attackerImmediateFollowup = attackerHasFollowup && ((0, _heroHelpers.hasSkill)(attacker, 'PASSIVE_B', 'Desperation') || (0, _heroHelpers.hasSkill)(attacker, 'WEAPON', 'Sol Katti'));
+
   // a list of 0s and 1s for attacker and defender.
   var attackOrder = [];
   if ((0, _heroHelpers.getSkillName)(attacker, 'WEAPON') !== '') {
+    // Vantage!
+    if (defenderCountersFirst) {
+      attackOrder.push(1);
+    }
     // attacker hits defender
     attackOrder.push(0);
     if ((0, _heroHelpers.hasBraveWeapon)(attacker)) {
       attackOrder.push(0);
     }
+    // Desperation!
+    if (attackerImmediateFollowup) {
+      attackOrder.push(0);
+      if ((0, _heroHelpers.hasBraveWeapon)(attacker)) {
+        attackOrder.push(0);
+      }
+    }
     // defender retaliates
-    if (canRetaliate(attacker, defender)) {
+    if (defenderCanRetaliate && !defenderCountersFirst) {
       attackOrder.push(1);
     }
     // attacker follow-up
-    if (doesFollowUp(attacker, defender, true)) {
+    if (attackerHasFollowup && !attackerImmediateFollowup) {
       attackOrder.push(0);
       if ((0, _heroHelpers.hasBraveWeapon)(attacker)) {
         attackOrder.push(0);
       }
     }
     // defender follow-up
-    if (canRetaliate(attacker, defender) && doesFollowUp(defender, attacker, false)) {
+    if (defenderHasFollowup) {
       attackOrder.push(1);
     }
   }
@@ -281,19 +299,19 @@ var calculateResult = exports.calculateResult = function calculateResult(attacke
   }
   // Poison Strike (only trigger while attacking and only if the attacker survived)
   if (healths[0] > 0 && (0, _heroHelpers.hasSkill)(heroes[0], 'PASSIVE_B', 'Poison Strike')) {
-    postCombatDmg[1] += (0, _skillHelpers.getSkillNumbers)((0, _heroHelpers.getSkillName)(heroes[0], 'PASSIVE_B'))[0];
+    postCombatDmg[1] += (0, _skillHelpers.getSkillNumbers)(heroes[0], 'PASSIVE_B')[0];
   }
   var _arr = [0, 1];
   for (var _i = 0; _i < _arr.length; _i++) {
     var _heroIndex = _arr[_i];
     // Fury
     if ((0, _heroHelpers.hasSkill)(heroes[_heroIndex], 'PASSIVE_A', 'Fury')) {
-      postCombatDmg[_heroIndex] += (0, _skillHelpers.getSkillNumbers)((0, _heroHelpers.getSkillName)(heroes[_heroIndex], 'PASSIVE_A'))[1];
+      postCombatDmg[_heroIndex] += (0, _skillHelpers.getSkillNumbers)(heroes[_heroIndex], 'PASSIVE_A')[1];
     }
     // Pain (only triggers if the staff user survived and was able to retaliate)
     var otherHeroI = 1 - _heroIndex;
     if (healths[otherHeroI] > 0 && numAttacks[otherHeroI] > 0 && (0, _heroHelpers.hasSkill)(heroes[otherHeroI], 'WEAPON', 'Pain')) {
-      postCombatDmg[_heroIndex] += (0, _skillHelpers.getSkillNumbers)((0, _heroHelpers.getSkillName)(heroes[otherHeroI], 'WEAPON'))[0];
+      postCombatDmg[_heroIndex] += (0, _skillHelpers.getSkillNumbers)(heroes[otherHeroI], 'WEAPON')[0];
     }
     // Only apply postcombat damage to living units
     if (healths[_heroIndex] > 0) {
