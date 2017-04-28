@@ -34,7 +34,7 @@ import type {
   SkillType,
 } from 'fire-emblem-heroes-stats';
 
-import { getSkillInfo, getStatValue } from './skillHelpers';
+import { getSkillInfo, getStatValue, hpRequirementSatisfied } from './skillHelpers';
 import type { HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
 
 
@@ -64,11 +64,13 @@ export const lookupStats = (name: string): Hero => {
   };
 };
 
-// Can be called with substrings of the skill name
+// Can be called with substrings of the skill name. Returns false if an hp requirement is not met.
 export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedName: string) => {
   const skillName = getSkillName(instance, skillType);
   if (skillName !== undefined) {
-    return test(new RegExp(expectedName), skillName);
+    if (test(new RegExp(expectedName), skillName)) {
+      return hpRequirementSatisfied(instance, skillName);
+    }
   }
   return false;
 };
@@ -267,10 +269,6 @@ export const getStat = (
       ? parseInt(low, 10)
       : parseInt(high, 10);
 
-  const passiveA = getSkillName(instance, 'PASSIVE_A');
-  const seal = getSkillName(instance, 'SEAL');
-  const weapon = getSkillName(instance, 'WEAPON');
-
   // Every bonus level gives +1 to the next 2 stats, with stats in decreasing level 1 order
   const statKeys = ['hp', 'atk', 'spd', 'def', 'res'];
   // Depends on the fact that level 1 stats currently exclude skills.
@@ -283,12 +281,12 @@ export const getStat = (
   const mergeBonus = Math.floor((2*instance.mergeLevel)/5)
     + ((((2*instance.mergeLevel) % 5) > indexOf(statKey, orderedStatKeys)) ? 1 : 0);
 
-  //console.log('GetStat.', instance.name, statKey, baseValue
+  // TODO: buffs and Defiant abilities
   return baseValue
     + mergeBonus
-    + (passiveA ? getStatValue(passiveA, statKey, isAttacker) : 0)
-    + (seal ? getStatValue(seal, statKey, isAttacker) : 0)
-    + (weapon ? getStatValue(weapon, statKey, isAttacker) : 0);
+    + getStatValue(instance, 'PASSIVE_A', statKey, isAttacker)
+    + getStatValue(instance, 'SEAL', statKey, isAttacker)
+    + getStatValue(instance, 'WEAPON', statKey, isAttacker);
 };
 
 export const getRange = (instance: HeroInstance) => {

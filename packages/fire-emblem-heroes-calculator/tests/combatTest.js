@@ -130,6 +130,21 @@ test('Pain and Poison Strike', (t) => {
   simulateCombat(t, makeHero('Matthew'), makeHero('Azama'), 41-3-10, 43-0-10);
 });
 
+test('Desperation', (t) => {
+  t.plan(4);
+  const desperationNino = makeHero('Nino', 5, {PASSIVE_B: 'Desperation 3'});
+  simulateCombat(t, desperationNino, makeHero('Hector'), 0, 52-27);
+  simulateCombat(t, {...desperationNino, initialHpMissing: 10}, makeHero('Hector'), 33-10, 0);
+});
+
+test('Vantage', (t) => {
+  t.plan(4);
+  const deathBlowCordelia = makeHero('Cordelia', 5, {PASSIVE_A: 'Death Blow 3'});
+  const vantageTakumi = makeHero('Takumi', 5, {PASSIVE_B: 'Vantage 3'});
+  simulateCombat(t, deathBlowCordelia, vantageTakumi, 40, 0);
+  simulateCombat(t, deathBlowCordelia, {...vantageTakumi, initialHpMissing: 10}, 0, 40-10);
+});
+
 // other special types
 // lifesteal (+ fury, no overheal, only if survives)
 // pain (when attacked from a distance and only if survives)

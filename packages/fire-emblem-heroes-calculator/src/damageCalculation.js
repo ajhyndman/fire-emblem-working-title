@@ -98,6 +98,8 @@ const doesFollowUp = (instanceA: HeroInstance, instanceB: HeroInstance, isAttack
   const aHasBreaker = hasWeaponBreaker(instanceA, instanceB);
   const bHasBreaker = hasWeaponBreaker(instanceB, instanceA);
   const guaranteedFollowup = aHasBreaker
+    || (isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Brash Assault')
+        && canRetaliate(instanceA, instanceB))
     || (!isAttacker && hasSkill(instanceA, 'WEAPON', 'Armads'))
     || (!isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Quick Riposte'));
   const cannotFollowup = bHasBreaker
@@ -198,7 +200,7 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
   if ((hasSkill(attacker, 'PASSIVE_B', 'Windsweep') && getMitigationType(defender) === 'def')
       || (hasSkill(attacker, 'PASSIVE_B', 'Watersweep') && getMitigationType(defender) === 'res')) {
     // The attacker must also be faster than the defender.
-    const spdReq = getSkillNumbers(getSkillName(attacker, 'PASSIVE_B'))[0];
+    const spdReq = getSkillNumbers(attacker, 'PASSIVE_B')[0];
     if (getStat(attacker, 'spd', 40, true) - getStat(defender, 'spd', 40, false) >= spdReq) {
       return false;
     }
@@ -247,28 +249,49 @@ export const calculateResult = (
   attacker: HeroInstance,
   defender: HeroInstance,
 ) => {
+  // First, check for the ability to retaliate and skills that affect attack order.
+  const attackerHasFollowup = doesFollowUp(attacker, defender, true);
+  const defenderCanRetaliate = canRetaliate(attacker, defender);
+  const defenderHasFollowup = defenderCanRetaliate && doesFollowUp(defender, attacker, false);
+  const defenderCountersFirst = defenderCanRetaliate
+    && (hasSkill(defender, 'PASSIVE_B', 'Vantage')
+      || hasSkill(defender, 'WEAPON', 'Valaskjálf'));
+  const attackerImmediateFollowup = attackerHasFollowup
+    && (hasSkill(attacker, 'PASSIVE_B', 'Desperation')
+      || hasSkill(attacker, 'WEAPON', 'Sol Katti'));
+
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
   if (getSkillName(attacker, 'WEAPON') !== '') {
+    // Vantage!
+    if (defenderCountersFirst) {
+      attackOrder.push(1);
+    }
     // attacker hits defender
     attackOrder.push(0);
     if (hasBraveWeapon(attacker)) {
       attackOrder.push(0);
     }
+    // Desperation!
+    if (attackerImmediateFollowup) {
+      attackOrder.push(0);
+      if (hasBraveWeapon(attacker)) {
+        attackOrder.push(0);
+      }
+    }
     // defender retaliates
-    if (canRetaliate(attacker, defender)) {
+    if (defenderCanRetaliate && !defenderCountersFirst) {
       attackOrder.push(1);
     }
     // attacker follow-up
-    if (doesFollowUp(attacker, defender, true)) {
+    if (attackerHasFollowup && !attackerImmediateFollowup) {
       attackOrder.push(0);
       if (hasBraveWeapon(attacker)) {
         attackOrder.push(0);
       }
     }
     // defender follow-up
-    if (canRetaliate(attacker, defender)
-      && doesFollowUp(defender, attacker, false)) {
+    if (defenderHasFollowup) {
       attackOrder.push(1);
     }
   }
@@ -362,18 +385,18 @@ export const calculateResult = (
   }
   // Poison Strike (only trigger while attacking and only if the attacker survived)
   if (healths[0] > 0 && hasSkill(heroes[0], 'PASSIVE_B', 'Poison Strike')) {
-    postCombatDmg[1] += getSkillNumbers(getSkillName(heroes[0], 'PASSIVE_B'))[0];
+    postCombatDmg[1] += getSkillNumbers(heroes[0], 'PASSIVE_B')[0];
   }
   for (let heroIndex of [0, 1]) {
     // Fury
     if (hasSkill(heroes[heroIndex], 'PASSIVE_A', 'Fury')) {
-      postCombatDmg[heroIndex] += getSkillNumbers(getSkillName(heroes[heroIndex], 'PASSIVE_A'))[1];
+      postCombatDmg[heroIndex] += getSkillNumbers(heroes[heroIndex], 'PASSIVE_A')[1];
     }
     // Pain (only triggers if the staff user survived and was able to retaliate)
     const otherHeroI = 1 - heroIndex;
     if (healths[otherHeroI] > 0
         && numAttacks[otherHeroI] > 0 && hasSkill(heroes[otherHeroI], 'WEAPON', 'Pain')) {
-      postCombatDmg[heroIndex] += getSkillNumbers(getSkillName(heroes[otherHeroI], 'WEAPON'))[0];
+      postCombatDmg[heroIndex] += getSkillNumbers(heroes[otherHeroI], 'WEAPON')[0];
     }
     // Only apply postcombat damage to living units
     if (healths[heroIndex] > 0) {

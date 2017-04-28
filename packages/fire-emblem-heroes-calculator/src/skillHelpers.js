@@ -14,14 +14,16 @@ import {
   toUpper,
 } from 'ramda';
 import stats from 'fire-emblem-heroes-stats';
-import type { Skill } from 'fire-emblem-heroes-stats';
+import type { Skill, SkillType } from 'fire-emblem-heroes-stats';
 
 import {
   getStat,
   getMitigationType,
-  hasSkill,
   getSkillName,
   getSkillEffect,
+  hasSkill,
+  hpAboveThreshold,
+  hpBelowThreshold,
 } from './heroHelpers';
 import type { HeroInstance } from './heroInstance';
 
@@ -41,7 +43,8 @@ export const getSkillInfo = (skillName: ?string): Skill => skillsByName[skillNam
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 
 // Returns a list of numbers from the effect of the skill, or [0].
-export function getSkillNumbers(skillName: string): Array<number> {
+export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array<number> {
+  const skillName = getSkillName(hero, skillType);
   const skill = getSkillInfo(skillName);
   if (skill === undefined) {
     return [0];
@@ -50,8 +53,27 @@ export function getSkillNumbers(skillName: string): Array<number> {
   return map(parseInt, match(/\d+/g, skill.effect));
 }
 
+export function hpRequirementSatisfied(hero: HeroInstance, skillName: string) {
+  const skill = getSkillInfo(skillName);
+  if (skill !== undefined) {
+    if (test(/≥\s*\d+%/, skill.effect)) {
+      return hpAboveThreshold(hero, parseInt(match(/(\d+)%/, skill.effect)[1]));
+    }
+    if (test(/≤\s*\d+%/, skill.effect)) {
+      return hpBelowThreshold(hero, parseInt(match(/(\d+)%/, skill.effect)[1]));
+    }
+  }
+  return true;
+}
+
 // Returns the value for a stat provided by a passive skill
-export function getStatValue(skillName: string, statKey: string, isAttacker: boolean) {
+export function getStatValue(
+  hero: HeroInstance,
+  skillType: SkillType,
+  statKey: string,
+  isAttacker: boolean,
+) {
+  const skillName = getSkillName(hero, skillType);
   const skill = getSkillInfo(skillName);
   if (skill === undefined) {
     return 0;
@@ -74,13 +96,16 @@ export function getStatValue(skillName: string, statKey: string, isAttacker: boo
     } else if ((skill.name === 'Binding Blade' || skill.name === 'Naga') && !isAttacker) {
       return 2;
     }
+    if (statKey === 'def' && skill.name === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
+      return 4;
+    }
     if (statKey === 'res' && skill.name === 'Parthia' && isAttacker) {
       return 4;
     }
   } else if (skill.type === 'PASSIVE_A' || skill.type === 'SEAL') {
     const statRegex = new RegExp(statKey === 'hp' ? 'max HP' : capitalize(statKey));
     if (test(statRegex, skill.effect)) {
-      const skillNumbers = getSkillNumbers(skillName);
+      const skillNumbers = getSkillNumbers(hero, skillType);
       // Atk/Def/Spd/Res/HP+, 'Attack Def+', and Fury
       if (test(/(Fury|\+)/, skillName)) {
         return skillNumbers[0];
@@ -229,7 +254,7 @@ export function getSpecialChargeForAttack(
 ) {
   let specialChargePerAtk = 1;
   if (hasSkill(hero1, 'PASSIVE_A', 'Heavy Blade')) {
-    const atkReq = getSkillNumbers(getSkillName(hero1, 'PASSIVE_A'))[0];
+    const atkReq = getSkillNumbers(hero1, 'PASSIVE_A')[0];
     if (getStat(hero1, 'atk', 40, isAttacker) - getStat(hero2, 'atk', 40, !isAttacker) >= atkReq) {
       specialChargePerAtk += 1;
     }
