@@ -51,7 +51,7 @@ const skillsByTypeAndName: SkillsByTypeAndName = compose(
 
 export const getSkillType = (skillName: string): SkillType => skillTypeByName[skillName];
 export const getSkillInfo = (skillType: SkillType, skillName: string): Skill =>
-  skillsByTypeAndName[skillType][skillName];
+  skillsByTypeAndName[skillType] && skillsByTypeAndName[skillType][skillName];
 
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 

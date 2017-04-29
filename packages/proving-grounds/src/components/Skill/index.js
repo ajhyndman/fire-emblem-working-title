@@ -2,6 +2,7 @@
 import React from 'react';
 import cn from 'classnames';
 import { getSkillInfo } from 'fire-emblem-heroes-calculator';
+import type { SkillType } from 'fire-emblem-heroes-stats';
 
 import Assist from './Assist';
 import Passive from './Passive';
@@ -14,13 +15,14 @@ import { staticUrl } from '../../../config';
 
 type Props = {
   active?: boolean;
+  type: SkillType;
   name: string;
   onClick?: (name: string) => void;
   showGuide?: boolean;
 };
 
-const Skill = ({ active, name, onClick, showGuide }: Props) => {
-  const skill = getSkillInfo(name);
+const Skill = ({ active, type, name, onClick, showGuide }: Props) => {
+  const skill = getSkillInfo(type, name);
 
   return (
     <div

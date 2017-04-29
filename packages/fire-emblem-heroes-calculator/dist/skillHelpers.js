@@ -49,7 +49,7 @@ var getSkillType = exports.getSkillType = function getSkillType(skillName) {
   return skillTypeByName[skillName];
 };
 var getSkillInfo = exports.getSkillInfo = function getSkillInfo(skillType, skillName) {
-  return skillsByTypeAndName[skillType][skillName];
+  return skillsByTypeAndName[skillType] && skillsByTypeAndName[skillType][skillName];
 };
 
 var capitalize = (0, _ramda.compose)((0, _ramda.join)(''), (0, _ramda.juxt)([(0, _ramda.compose)(_ramda.toUpper, _ramda.head), _ramda.tail]));

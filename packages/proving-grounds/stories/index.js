@@ -152,42 +152,42 @@ storiesOf('SegmentedControl', module)
 storiesOf('Skill', module)
   .add('Weapon', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
-      <Skill name="Nóatún" onClick={action('CLICKED_SKILL')} />
+      <Skill name="Nóatún" type='WEAPON' onClick={action('CLICKED_SKILL')} />
     </div>
   ))
   .add('Weapon: active', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
-      <Skill active name="Nóatún" onClick={action('CLICKED_SKILL')} />
+      <Skill active name="Nóatún" type='WEAPON' onClick={action('CLICKED_SKILL')} />
     </div>
   ))
   .add('Weapon: show guide', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
-      <Skill name="Nóatún" onClick={action('CLICKED_SKILL')} showGuide />
+      <Skill name="Nóatún" type='WEAPON' onClick={action('CLICKED_SKILL')} showGuide />
     </div>
   ))
   .add('Weapon: show guide & active', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
-      <Skill active name="Nóatún" onClick={action('CLICKED_SKILL')} showGuide />
+      <Skill active name="Nóatún" type='WEAPON' onClick={action('CLICKED_SKILL')} showGuide />
     </div>
   ))
   .add('Assist: show guide & active', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
-      <Skill active name="Rally Attack" onClick={action('CLICKED_SKILL')} showGuide />
+      <Skill active name="Rally Attack" type='ASSIST' onClick={action('CLICKED_SKILL')} showGuide />
     </div>
   ))
   .add('Special: show guide & active', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
-      <Skill active name="Astra" onClick={action('CLICKED_SKILL')} showGuide />
+      <Skill active name="Astra" type='SPECIAL' onClick={action('CLICKED_SKILL')} showGuide />
     </div>
   ))
   .add('Passive: show guide & active', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
-      <Skill active name="Vantage 3" onClick={action('CLICKED_SKILL')} showGuide />
+      <Skill active name="Vantage 3" type='PASSIVE_B' onClick={action('CLICKED_SKILL')} showGuide />
     </div>
   ))
   .add('Invalid skillname', () => (
     <div style={{ background: colors.elephant, padding: '30px' }}>
-      <Skill active name="Something Else" onClick={action('CLICKED_SKILL')} showGuide />
+      <Skill active name="Something Else" type='SEAL' onClick={action('CLICKED_SKILL')} showGuide />
     </div>
   ));
 

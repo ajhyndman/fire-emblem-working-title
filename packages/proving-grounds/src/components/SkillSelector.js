@@ -76,6 +76,7 @@ const SkillSelector = ({
             active={(skill ? skill.name : '') === activeSkillName}
             showGuide={showGuide}
             name={skill ? skill.name : '--'}
+            type={skillType}
           />
         </div>
       ),

@@ -8,6 +8,7 @@ import {
   flatten,
   isNil,
   map,
+  mapObjIndexed,
   none,
   not,
   prop,
@@ -56,7 +57,8 @@ const getKeywords: (hero: Hero) => Array<string> =
         map(compose(jdu.replace, prop('name'))),
         filter(compose(not, isNil)),
         Object.values,
-        map(getSkillInfo),
+        // $FlowIssue string is incompatible with SkillType (string enum)
+        mapObjIndexed((skillName, skillType) => getSkillInfo(skillType, skillName)),
         getDefaultSkills,
         prop('name'),
       )(hero),

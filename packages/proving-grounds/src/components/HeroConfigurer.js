@@ -284,6 +284,7 @@ const HeroConfigurer = withState(
                       />
                       <Skill
                         name={skill || '--'}
+                        type={skillType}
                         onClick={() => { setState({ open: true, skillType: skillType }); }}
                       />
                     </div>
