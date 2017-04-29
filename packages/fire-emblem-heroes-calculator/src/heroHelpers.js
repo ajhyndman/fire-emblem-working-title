@@ -12,10 +12,8 @@ import {
   filter,
   indexBy,
   indexOf,
-  isNil,
   map,
   mapObjIndexed,
-  not,
   prop,
   propEq,
   propOr,
@@ -34,7 +32,7 @@ import type {
   SkillType,
 } from 'fire-emblem-heroes-stats';
 
-import { getSkillInfo, getStatValue, hpRequirementSatisfied } from './skillHelpers';
+import { getSkillInfo, getSkillType, getStatValue, hpRequirementSatisfied } from './skillHelpers';
 import type { HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
 
 
@@ -69,7 +67,7 @@ export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedN
   const skillName = getSkillName(instance, skillType);
   if (skillName !== undefined) {
     if (test(new RegExp(expectedName), skillName)) {
-      return hpRequirementSatisfied(instance, skillName);
+      return hpRequirementSatisfied(instance, skillType);
     }
   }
   return false;
@@ -88,20 +86,17 @@ export function getSkillEffect(
   instance: HeroInstance,
   skillType: SkillType,
 ): string {
-  const skill = getSkillInfo(instance.skills[skillType]);
+  const skill = getSkillInfo(skillType, getSkillName(instance, skillType));
   return skill ? skill.effect : '';
 }
 
 // Returns a map from skill type to the skill object.
 export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkills {
   const hero = lookupStats(name);
-
   // Flow can't follow this compose chain, so cast it to any.
   const skillsByType = (compose(
+    indexBy(getSkillType),
     map(prop('name')),
-    indexBy((skill: Skill) => skill.type),
-    filter(compose(not, isNil)),
-    map(skill => getSkillInfo(skill.name)),
     filter(skill => (skill.rarity === undefined || skill.rarity === '-' || skill.rarity <= rarity)),
   )(hero.skills): any);
 
@@ -212,7 +207,7 @@ export function getInheritableSkills(name: string, skillType: SkillType): Array<
   );
   const ownSkills = compose(
     filter((x) => propOr('', 'type', x) === skillType),
-    map(getSkillInfo),
+    map((skillName) => getSkillInfo(skillType, skillName)),
     map(prop('name')),
   )(hero.skills);
   return sort(ascend(prop('name')), union(inheritable, ownSkills));

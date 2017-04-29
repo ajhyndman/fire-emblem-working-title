@@ -2,6 +2,7 @@
 import {
   compose,
   filter,
+  groupBy,
   head,
   indexBy,
   join,
@@ -29,23 +30,34 @@ import type { HeroInstance } from './heroInstance';
 
 
 export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | void;
-export type SkillsByName = { [key: string]: Skill };
+type SkillTypeByName = { [key: string]: SkillType };
+type SkillsByTypeAndName = { [key: SkillType]: {[key: string]: Skill }};
 
-// Exclude seals for now so that getDefaultSkills doesn't give Lilina Attack +1
-const skillsByName: SkillsByName = compose(
+
+const skillTypeByName: SkillTypeByName = compose(
+  map(prop('type')),
   // $FlowIssue indexBy confuses flow
   indexBy(prop('name')),
+  // Exclude seals so that 'Attack +1' is an a-passive.
   filter((s) => s.type !== 'SEAL'),
 )(stats.skills);
 
-export const getSkillInfo = (skillName: ?string): Skill => skillsByName[skillName || ''];
+const skillsByTypeAndName: SkillsByTypeAndName = compose(
+  // $FlowIssue indexBy confuses flow
+  map(indexBy(prop('name'))),
+  // $FlowIssue groupBy confuses flow
+  groupBy(prop('type')),
+)(stats.skills);
+
+export const getSkillType = (skillName: string): SkillType => skillTypeByName[skillName];
+export const getSkillInfo = (skillType: SkillType, skillName: string): Skill =>
+  skillsByTypeAndName[skillType][skillName];
 
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 
 // Returns a list of numbers from the effect of the skill, or [0].
 export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array<number> {
-  const skillName = getSkillName(hero, skillType);
-  const skill = getSkillInfo(skillName);
+  const skill = getSkillInfo(skillType, getSkillName(hero, skillType));
   if (skill === undefined) {
     return [0];
   }
@@ -53,8 +65,8 @@ export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array
   return map(parseInt, match(/\d+/g, skill.effect));
 }
 
-export function hpRequirementSatisfied(hero: HeroInstance, skillName: string) {
-  const skill = getSkillInfo(skillName);
+export function hpRequirementSatisfied(hero: HeroInstance, skillType: SkillType) {
+  const skill = getSkillInfo(skillType, getSkillName(hero, skillType));
   if (skill !== undefined) {
     if (test(/≥\s*\d+%/, skill.effect)) {
       return hpAboveThreshold(hero, parseInt(match(/(\d+)%/, skill.effect)[1]));
@@ -74,7 +86,7 @@ export function getStatValue(
   isAttacker: boolean,
 ) {
   const skillName = getSkillName(hero, skillType);
-  const skill = getSkillInfo(skillName);
+  const skill = getSkillInfo(skillType, skillName);
   if (skill === undefined) {
     return 0;
   } else if (skill.type === 'WEAPON') {
@@ -178,7 +190,7 @@ export function getSpecialType(instance: HeroInstance): SpecialType {
 
 // Returns the cooldown of the special or -1. Accounts for killer weapons.
 export const getSpecialCooldown = (instance: HeroInstance) => {
-  const skill = getSkillInfo(instance.skills['SPECIAL']);
+  const skill = getSkillInfo('SPECIAL', getSkillName(instance, 'SPECIAL'));
   return ((!skill || typeof skill.cooldown !== 'number') ? -1
     : skill.cooldown
     + (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0)

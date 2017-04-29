@@ -56,7 +56,7 @@ var hasSkill = exports.hasSkill = function hasSkill(instance, skillType, expecte
   var skillName = getSkillName(instance, skillType);
   if (skillName !== undefined) {
     if ((0, _ramda.test)(new RegExp(expectedName), skillName)) {
-      return (0, _skillHelpers.hpRequirementSatisfied)(instance, skillName);
+      return (0, _skillHelpers.hpRequirementSatisfied)(instance, skillType);
     }
   }
   return false;
@@ -69,7 +69,7 @@ function getSkillName(instance, skillType) {
 
 // Returns the effect description of a skill
 function getSkillEffect(instance, skillType) {
-  var skill = (0, _skillHelpers.getSkillInfo)(instance.skills[skillType]);
+  var skill = (0, _skillHelpers.getSkillInfo)(skillType, getSkillName(instance, skillType));
   return skill ? skill.effect : '';
 }
 
@@ -78,13 +78,8 @@ function getDefaultSkills(name) {
   var rarity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
 
   var hero = lookupStats(name);
-
   // Flow can't follow this compose chain, so cast it to any.
-  var skillsByType = (0, _ramda.compose)((0, _ramda.map)((0, _ramda.prop)('name')), (0, _ramda.indexBy)(function (skill) {
-    return skill.type;
-  }), (0, _ramda.filter)((0, _ramda.compose)(_ramda.not, _ramda.isNil)), (0, _ramda.map)(function (skill) {
-    return (0, _skillHelpers.getSkillInfo)(skill.name);
-  }), (0, _ramda.filter)(function (skill) {
+  var skillsByType = (0, _ramda.compose)((0, _ramda.indexBy)(_skillHelpers.getSkillType), (0, _ramda.map)((0, _ramda.prop)('name')), (0, _ramda.filter)(function (skill) {
     return skill.rarity === undefined || skill.rarity === '-' || skill.rarity <= rarity;
   }))(hero.skills);
 
@@ -184,7 +179,9 @@ function getInheritableSkills(name, skillType) {
   canInherit(hero), (0, _ramda.propEq)('type', skillType)]), allSkills);
   var ownSkills = (0, _ramda.compose)((0, _ramda.filter)(function (x) {
     return (0, _ramda.propOr)('', 'type', x) === skillType;
-  }), (0, _ramda.map)(_skillHelpers.getSkillInfo), (0, _ramda.map)((0, _ramda.prop)('name')))(hero.skills);
+  }), (0, _ramda.map)(function (skillName) {
+    return (0, _skillHelpers.getSkillInfo)(skillType, skillName);
+  }), (0, _ramda.map)((0, _ramda.prop)('name')))(hero.skills);
   return (0, _ramda.sort)((0, _ramda.ascend)((0, _ramda.prop)('name')), (0, _ramda.union)(inheritable, ownSkills));
 }
 

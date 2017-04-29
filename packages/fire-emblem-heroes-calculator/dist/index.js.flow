@@ -35,7 +35,3 @@ export {
   getSpecialCooldown,
   isMaxTier,
 } from '../src/skillHelpers';
-
-export type {
-  SkillsByName,
-} from '../src/skillHelpers';
