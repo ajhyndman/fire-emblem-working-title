@@ -1,11 +1,14 @@
 // @flow
 import type { Hero } from '..';
 
-// TODO: correct end time, xander special, skills, and cavalier stats
 // Times were entered in PDT (UTC - 7)
 const startTime = new Date('2017-05-02T00:00:00-07:00');
 const endTime = new Date('2017-05-05T23:59:00-07:00');
 
+// Layout, Xander Stats/Skills, and Enemy Weapons taken from http://i.imgur.com/9pQnSlL.png
+// Enemy stats taken from previous GHB.
+// Green Cavalier stats guessed based on lunatic story : GHB stat similarities.
+// Some enemy skills taken from https://i.imgur.com/oXRQY6e.png, others guessed.
 const unitList: Array<Hero> = [
   {
     'shortName': 'Xander',
@@ -26,7 +29,7 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
       {
-        'name': 'Rising Light',
+        'name': 'Blazing Light',
         'rarity': '-',
       },
     ],
@@ -61,6 +64,10 @@ const unitList: Array<Hero> = [
         'name': 'Gravity',
         'rarity': '-',
       },
+      {
+        'name': 'Wings of Mercy 3',
+        'rarity': '-',
+      },
     ],
     'stats': {
       '1': {
@@ -91,6 +98,10 @@ const unitList: Array<Hero> = [
     'skills': [
       {
         'name': 'Rexcalibur+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Vantage 3',
         'rarity': '-',
       },
     ],
@@ -129,6 +140,10 @@ const unitList: Array<Hero> = [
         'name': 'Ignis',
         'rarity': '-',
       },
+      {
+        'name': 'Quick Riposte 3',
+        'rarity': '-',
+      },
     ],
     'stats': {
       '1': {
@@ -163,6 +178,10 @@ const unitList: Array<Hero> = [
       },
       {
         'name': 'Ignis',
+        'rarity': '-',
+      },
+      {
+        'name': 'Quick Riposte 3',
         'rarity': '-',
       },
     ],
