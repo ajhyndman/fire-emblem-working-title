@@ -183,7 +183,7 @@ var unitList = [{
     'name': 'Physic',
     'rarity': '-'
   }, {
-    'name': 'Solid Earth Balm',
+    'name': 'Solid-Earth Balm',
     'rarity': '-'
   }, {
     'name': 'Live to Serve 3',

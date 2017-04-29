@@ -209,7 +209,7 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
       {
-        'name': 'Solid Earth Balm',
+        'name': 'Solid-Earth Balm',
         'rarity': '-',
       },
       {
