@@ -180,8 +180,7 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
       || (test(/wolf/, weaponName) && defenderMoveType === 'Cavalry')
       || (test(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry')
       || (test(/Excalibur/, weaponName) && defenderMoveType === 'Flying')
-      || (test(/(Falchion|Naga)/, weaponName)
-          && test(/Beast/, getWeaponType(defender)))
+      || (test(/(Falchion|Naga)/, weaponName) && test(/Breath/, getWeaponType(defender)))
     ) {
     return 1.5;
   }

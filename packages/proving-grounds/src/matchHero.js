@@ -24,7 +24,7 @@ import type { Hero } from 'fire-emblem-heroes-stats';
 // A mapping from keywords to related words that someone might type.
 const synonyms = {
   'armored': 'armor', // Goad armor => armor is a keyword.
-  'beast': 'dragon',
+  'breath': 'dragon',
   'cavalry': 'horse',
   'staff': 'healer',
   'tome': 'mage',

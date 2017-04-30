@@ -13,13 +13,13 @@ export type MoveType =
 export type WeaponType =
   | 'Blue Lance'
   | 'Blue Tome'
-  | 'Blue Beast'
+  | 'Blue Breath'
   | 'Green Axe'
   | 'Green Tome'
-  | 'Green Beast'
+  | 'Green Breath'
   | 'Red Sword'
   | 'Red Tome'
-  | 'Red Beast'
+  | 'Red Breath'
   | 'Neutral Bow'
   | 'Neutral Shuriken'
   | 'Neutral Staff';
@@ -96,7 +96,7 @@ export type WeaponSkill = {
   +'damage(mt)': number;
   +'range(rng)': number;
   +effect: string;
-  // Hero is Red Beast, weapon is Breath
+  // Hero is Red Breath, weapon is Breath
   +weaponType: WeaponType | 'Breath';
   +'exclusive?': 'Yes' | 'No';
 };

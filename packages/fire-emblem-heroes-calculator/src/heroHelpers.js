@@ -118,9 +118,9 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
     return false;
   }
   // Unobtainable weapons (story only) currently have no weapon type.
-  // Hero has weaponType 'Red Beast' and weapon has weaponType 'Breath'
+  // Hero has weaponType 'Red Breath' and weapon has weaponType 'Breath'
   if (skill.type === 'WEAPON' && (skill.weaponType === undefined
-    || (test(/Beast/, weaponType) ? 'Breath' : weaponType) !== skill.weaponType)) {
+    || (test(/Breath/, weaponType) ? 'Breath' : weaponType) !== skill.weaponType)) {
     return false;
   }
   const restriction = propOr('None', 'inheritRestriction', skill);
@@ -266,24 +266,24 @@ export const getStat = (
 };
 
 export const getRange = (instance: HeroInstance) => 
-  test(/Sword|Axe|Lance|Beast/, getWeaponType(instance)) ? 1 : 2;
+  test(/Sword|Axe|Lance|Breath/, getWeaponType(instance)) ? 1 : 2;
 
 export const getMitigationType = (instance: HeroInstance) =>
-  test(/Tome|Beast|Staff/, getWeaponType(instance)) ? 'res' : 'def';
+  test(/Tome|Breath|Staff/, getWeaponType(instance)) ? 'res' : 'def';
 
 export const getWeaponColor = (instance: HeroInstance) => {
   switch (getWeaponType(instance)) {
     case 'Red Sword':
     case 'Red Tome':
-    case 'Red Beast':
+    case 'Red Breath':
       return 'RED';
     case 'Green Axe':
     case 'Green Tome':
-    case 'Green Beast':
+    case 'Green Breath':
       return 'GREEN';
     case 'Blue Lance':
     case 'Blue Tome':
-    case 'Blue Beast':
+    case 'Blue Breath':
       return 'BLUE';
     default:
       return 'NEUTRAL';

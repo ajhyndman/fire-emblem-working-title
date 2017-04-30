@@ -56,6 +56,7 @@ export const parseTable = (tableHtml) => {
     (isFirstRowHeader ? tail : identity),
     match(/<tr[^>]*?>.*?<\/tr.*?>/g),
     replace(/&#160;/g, ''),  // &nbsp, also known as \xa0
+    replace(/Beast/g, 'Breath'),  // Images say Beast but the weapon is a Breath.
     replace(/<img[^>]*?Green check[^>]*?>/g, 'Yes'),  // Replace Checkmark with Yes.
     replace(/<img[^>]*?Dark Red x[^>]*?>/g, 'No'),  // Replace red X with No.
   )(tableHtml);
@@ -87,7 +88,8 @@ const processStatTable =  compose(
       (x) => x.toString(),
     ),
   )),  // For each rarity and stat
-  map(dissoc('rarity'), indexBy(prop('rarity'))),
+  map(dissoc('rarity')),
+  indexBy(prop('rarity')),
 );
 
 // Takes the html page for a hero and parses all stat tables

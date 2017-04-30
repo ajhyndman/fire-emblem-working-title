@@ -142,7 +142,8 @@ function skillsWithWeaponsTypes(heroes, skills) {
   const skillsByName = indexBy(prop('name'), skills);
   var weaponTypeByName = {};
   for (let hero of heroes) {
-    const heroWeaponType = test(/Beast/, hero.weaponType) ? 'Breath' : hero.weaponType;
+    // Breath weapons are not color-specific.
+    const heroWeaponType = test(/Breath/, hero.weaponType) ? 'Breath' : hero.weaponType;
     for (let skill of hero.skills) {
       const skillInfo = skillsByName[skill.name];
       if (skillInfo != null && skillInfo.type === 'WEAPON') {
