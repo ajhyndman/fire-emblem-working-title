@@ -8,7 +8,7 @@ import {
 } from 'ramda';
 
 // eslint-disable-next-line import/no-unresolved
-import stats from './stats.json';
+import stats from '../stats.json';
 import type { Skill, SkillType } from '.';
 
 type SkillTypeByName = { [key: string]: SkillType };

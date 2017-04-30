@@ -1,204 +1,12 @@
 {
   "heroes": [
     {
-      "name": "???",
-      "title": "Masked Knight",
-      "origin": "Fire Emblem Heroes",
-      "weaponType": "Blue Tome",
-      "moveType": "Cavalry",
-      "rarities": "N/A",
-      "releaseDate": "N/A",
-      "skills": [
-        {
-          "name": "Valaskjálf",
-          "default": "-",
-          "rarity": "-"
-        }
-      ],
-      "stats": {
-        "1": {
-          "1": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
-          "2": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
-          "3": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
-          "4": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
-          "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          }
-        },
-        "40": {
-          "1": {
-            "hp": [
-              "-",
-              "-",
-              "-"
-            ],
-            "atk": [
-              "-",
-              "-",
-              "-"
-            ],
-            "spd": [
-              "-",
-              "-",
-              "-"
-            ],
-            "def": [
-              "-",
-              "-",
-              "-"
-            ],
-            "res": [
-              "-",
-              "-",
-              "-"
-            ]
-          },
-          "2": {
-            "hp": [
-              "-",
-              "-",
-              "-"
-            ],
-            "atk": [
-              "-",
-              "-",
-              "-"
-            ],
-            "spd": [
-              "-",
-              "-",
-              "-"
-            ],
-            "def": [
-              "-",
-              "-",
-              "-"
-            ],
-            "res": [
-              "-",
-              "-",
-              "-"
-            ]
-          },
-          "3": {
-            "hp": [
-              "-",
-              "-",
-              "-"
-            ],
-            "atk": [
-              "-",
-              "-",
-              "-"
-            ],
-            "spd": [
-              "-",
-              "-",
-              "-"
-            ],
-            "def": [
-              "-",
-              "-",
-              "-"
-            ],
-            "res": [
-              "-",
-              "-",
-              "-"
-            ]
-          },
-          "4": {
-            "hp": [
-              "-",
-              "-",
-              "-"
-            ],
-            "atk": [
-              "-",
-              "-",
-              "-"
-            ],
-            "spd": [
-              "-",
-              "-",
-              "-"
-            ],
-            "def": [
-              "-",
-              "-",
-              "-"
-            ],
-            "res": [
-              "-",
-              "-",
-              "-"
-            ]
-          },
-          "5": {
-            "hp": [
-              "-",
-              "-",
-              "-"
-            ],
-            "atk": [
-              "-",
-              "-",
-              "-"
-            ],
-            "spd": [
-              "-",
-              "-",
-              "-"
-            ],
-            "def": [
-              "-",
-              "-",
-              "-"
-            ],
-            "res": [
-              "-",
-              "-",
-              "-"
-            ]
-          }
-        }
-      }
-    },
-    {
       "name": "Abel",
       "title": "The Panther",
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": "4- 5",
+      "rarities": "4-5",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -1698,12 +1506,204 @@
       }
     },
     {
+      "name": "Bruno",
+      "title": "Masked Knight",
+      "origin": "Fire Emblem Heroes",
+      "weaponType": "Blue Tome",
+      "moveType": "Cavalry",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "skills": [
+        {
+          "name": "Valaskjálf",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "1": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "2": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "3": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          }
+        },
+        "40": {
+          "1": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "2": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "3": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "4": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Caeda",
       "title": "Talys's Heart",
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
       "moveType": "Flying",
-      "rarities": "4- 5",
+      "rarities": "4-5",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -1837,7 +1837,7 @@
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
-      "rarities": "4- 5",
+      "rarities": "4-5",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -2947,7 +2947,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "4- 5",
+      "rarities": "4-5",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -3230,7 +3230,7 @@
         },
         {
           "name": "Spur Spd 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Spur Spd 3",
@@ -3318,7 +3318,7 @@
       "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Neutral Staff",
       "moveType": "Cavalry",
-      "rarities": "3- 4",
+      "rarities": "3-4",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -5072,7 +5072,7 @@
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Lance",
       "moveType": "Flying",
-      "rarities": "3- 4",
+      "rarities": "3-4",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -6382,7 +6382,7 @@
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
-      "rarities": "3- 4",
+      "rarities": "3-4",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -7383,7 +7383,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Red Tome",
       "moveType": "Infantry",
-      "rarities": "3- 4",
+      "rarities": "3-4",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -8356,7 +8356,7 @@
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
-      "rarities": "4- 5",
+      "rarities": "4-5",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -8844,7 +8844,7 @@
       "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
-      "rarities": "4 - 5",
+      "rarities": "4-5",
       "releaseDate": "Feb 28, 2017",
       "skills": [
         {
@@ -10230,7 +10230,7 @@
       "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
-      "rarities": "4 - 5",
+      "rarities": "4-5",
       "releaseDate": "Mar 15, 2017",
       "skills": [
         {
@@ -10401,7 +10401,7 @@
         },
         {
           "name": "Fortress Def 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Fortress Def 3",
@@ -11480,6 +11480,23 @@
           "name": "Imbue",
           "default": "-",
           "rarity": "-"
+        },
+        {
+          "name": "Miracle",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def Res 2",
+          "rarity": 5
         }
       ],
       "stats": {
@@ -13514,7 +13531,7 @@
       "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Staff",
       "moveType": "Cavalry",
-      "rarities": "4 - 5",
+      "rarities": "4-5",
       "releaseDate": "Mar 15, 2017",
       "skills": [
         {
@@ -13977,7 +13994,7 @@
       "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
-      "rarities": "4 - 5",
+      "rarities": "4-5",
       "releaseDate": "Mar 15, 2017",
       "skills": [
         {
@@ -14111,7 +14128,7 @@
       "origin": "Fire Emblem: Thracia 776",
       "weaponType": "Blue Tome",
       "moveType": "Cavalry",
-      "rarities": "4 - 5",
+      "rarities": "4-5",
       "releaseDate": "Feb 28, 2017",
       "skills": [
         {
@@ -14250,7 +14267,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Green Tome",
       "moveType": "Infantry",
-      "rarities": "2-3 Event: Grand Hero Battle",
+      "rarities": "2-3Event: Grand Hero Battle",
       "releaseDate": "Feb 24, 2017",
       "skills": [
         {
@@ -15867,7 +15884,7 @@
       "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Blue Lance",
       "moveType": "Flying",
-      "rarities": "3- 4",
+      "rarities": "3-4",
       "releaseDate": "Feb 03, 2017",
       "skills": [
         {
@@ -16580,7 +16597,7 @@
         {
           "name": "Rising Wind",
           "default": 5,
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Growing Wind",
@@ -17490,7 +17507,7 @@
       }
     },
     {
-      "name": "Tiki",
+      "name": "Tiki (Adult)",
       "title": "Naga's Voice",
       "origin": "Fire Emblem Awakening",
       "weaponType": "Red Beast",
@@ -17660,7 +17677,8 @@
             ]
           }
         }
-      }
+      },
+      "shortName": "Tiki (A)"
     },
     {
       "name": "Tiki (Young)",
@@ -18644,31 +18662,46 @@
       "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
-      "rarities": "N/A",
+      "rarities": "3-4",
       "releaseDate": "N/A",
       "skills": [
         {
           "name": "Siegfried",
           "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Growing Light",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Armored Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Armored Blow 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Armored Blow 3",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def 3",
           "rarity": "-"
         }
       ],
       "stats": {
         "1": {
-          "1": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
-          "2": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
           "3": {
             "hp": "-",
             "atk": "-",
@@ -18692,60 +18725,6 @@
           }
         },
         "40": {
-          "1": {
-            "hp": [
-              "-",
-              "-",
-              "-"
-            ],
-            "atk": [
-              "-",
-              "-",
-              "-"
-            ],
-            "spd": [
-              "-",
-              "-",
-              "-"
-            ],
-            "def": [
-              "-",
-              "-",
-              "-"
-            ],
-            "res": [
-              "-",
-              "-",
-              "-"
-            ]
-          },
-          "2": {
-            "hp": [
-              "-",
-              "-",
-              "-"
-            ],
-            "atk": [
-              "-",
-              "-",
-              "-"
-            ],
-            "spd": [
-              "-",
-              "-",
-              "-"
-            ],
-            "def": [
-              "-",
-              "-",
-              "-"
-            ],
-            "res": [
-              "-",
-              "-",
-              "-"
-            ]
-          },
           "3": {
             "hp": [
               "-",
@@ -20958,7 +20937,7 @@
       "cooldown": 5,
       "effect": "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)",
       "spCost": 500,
-      "inheritRestriction": "Excludes Staff Users",
+      "inheritRestriction": "Melee Weapon Users Only",
       "type": "SPECIAL"
     },
     {
@@ -21508,21 +21487,21 @@
       "name": "Heavy Blade 1",
       "effect": "If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
       "spCost": 60,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
       "name": "Heavy Blade 2",
       "effect": "If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
       "spCost": 120,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
       "name": "Heavy Blade 3",
       "effect": "If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
       "spCost": 240,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
@@ -21835,28 +21814,28 @@
     },
     {
       "name": "Guard 1",
-      "effect": "If unit's HP is ≥ ##% at start of combat, enemy is inflicted with Special cooldown charge-1.(If using similar skill, only highest value applied.)",
-      "spCost": "",
+      "effect": "If unit's HP is 100% at start of combat, enemy is inflicted with Special cooldown charge-1.(If using similar skill, only highest value applied.)",
+      "spCost": 50,
       "inheritRestriction": "None",
       "type": "PASSIVE_B"
     },
     {
       "name": "Guard 2",
-      "effect": "If unit's HP is ≥ ##% at start of combat, enemy is inflicted with Special cooldown charge-1.(If using similar skill, only highest value applied.)",
-      "spCost": "",
+      "effect": "If unit's HP is ≥ 90% at start of combat, enemy is inflicted with Special cooldown charge-1.(If using similar skill, only highest value applied.)",
+      "spCost": 100,
       "inheritRestriction": "None",
       "type": "PASSIVE_B"
     },
     {
       "name": "Guard 3",
       "effect": "If unit's HP is ≥ 80% at start of combat, enemy is inflicted with Special cooldown charge-1.(If using similar skill, only highest value applied.)",
-      "spCost": "",
+      "spCost": 200,
       "inheritRestriction": "None",
       "type": "PASSIVE_B"
     },
     {
       "name": "Hit and Run",
-      "effect": "If unit initiates attack, unit advances 1 space after battle.",
+      "effect": "If unit initiates attack, unit retreats 1 space after battle.",
       "spCost": 150,
       "inheritRestriction": "Melee Weapon Users Only",
       "type": "PASSIVE_B"
@@ -22208,21 +22187,21 @@
       "name": "Watersweep 1",
       "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack.",
       "spCost": 60,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_B"
     },
     {
       "name": "Watersweep 2",
       "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack.",
       "spCost": 120,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_B"
     },
     {
       "name": "Watersweep 3",
       "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
       "spCost": 240,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_B"
     },
     {
@@ -22550,14 +22529,14 @@
     {
       "name": "Spur Def Res 1",
       "effect": "Grants adjacent allies Def/Res +2 during combat",
-      "spCost": "",
+      "spCost": 120,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
       "name": "Spur Def Res 2",
       "effect": "Grants adjacent allies Def/Res +3 during combat.",
-      "spCost": "",
+      "spCost": 240,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },

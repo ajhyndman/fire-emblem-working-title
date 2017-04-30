@@ -44,6 +44,7 @@ async function fetchHeroStats() {
     .catch(err => console.error('parseHeroAggregateHtml', err));
 
   const heroNames = map(prop('name'), heroes);
+
   const heroStatsAndSkills = await fetchAndParsePages(
     'http://feheroes.gamepedia.com/',
     heroNames,
@@ -162,7 +163,7 @@ function skillsWithWeaponsTypes(heroes, skills) {
 
 // Fetch new data and write it to stats.json
 async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
-  const existingStats = JSON.parse(fs.readFileSync('./dist/stats.json', 'utf8'));
+  const existingStats = JSON.parse(fs.readFileSync('./stats.json', 'utf8'));
   const heroes = shouldFetchHeroes ? await fetchHeroStats() : existingStats['heroes'];
   const skills = shouldFetchSkills ? await fetchSkills() : existingStats['skills'];
 
@@ -172,7 +173,7 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
 
   // WRITE STATS TO FILE
   const allStats = { heroes, skills: skillsV2 };
-  fs.writeFileSync('./dist/stats.json', JSON.stringify(allStats, null, 2));
+  fs.writeFileSync('./stats.json', JSON.stringify(allStats, null, 2));
 }
 
 fetchWikiStats(true, true);

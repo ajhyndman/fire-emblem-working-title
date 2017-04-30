@@ -1,24 +1,37 @@
 {
   "name": "fire-emblem-heroes-stats",
   "version": "0.6.6",
-  "main": "dist/index.js",
+  "main": "dist/fire-emblem-heroes-stats.js",
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "compile": "babel src --out-dir dist",
-    "copy-types": "cp src/index.js.flow dist/index.js.flow",
+    "build": "npm run compile && npm run compile:min && npm run copy-types",
+    "compile": "cross-env NODE_ENV=development rollup --config --input src/index.js --output dist/fire-emblem-heroes-stats.js",
+    "compile:min": "cross-env NODE_ENV=production rollup --config --input src/index.js --output dist/fire-emblem-heroes-stats.min.js",
+    "compile:watch": "npm run compile -- --watch",
+    "copy-types": "ncp src/index.js.flow dist/fire-emblem-heroes-stats.js.flow",
+    "prepublish": "npm run build",
     "scrape-stats": "babel-node build/index.js",
-    "start": "npm run compile && npm run copy-types && npm run scrape-stats",
+    "start": "npm run build:watch",
     "test": "eslint src/**/*.js build/**/*.js"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
-    "babel-plugin-ramda": "^1.1.6",
+    "babel-plugin-ramda": "^1.2.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
+    "chokidar-cli": "^1.2.0",
+    "cross-env": "^4.0.0",
     "eslint": "^3.16.1",
-    "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.0.2"
+    "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.0.2",
+    "ncp": "^2.0.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-json": "^2.1.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^1.0.2"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
