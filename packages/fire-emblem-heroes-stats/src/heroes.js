@@ -7,7 +7,7 @@ import {
 } from 'ramda';
 
 // eslint-disable-next-line import/no-unresolved
-import stats from './stats.json';
+import stats from '../stats.json';
 import { getEventHeroes } from './temporal/events';
 import type { Hero } from '.';
 
