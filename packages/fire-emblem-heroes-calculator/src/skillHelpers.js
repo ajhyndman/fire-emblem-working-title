@@ -80,13 +80,12 @@ export function getStatValue(
       if (test(/Brave|Dire/, skill.name)) {
         return -5;
       }
-    } else if ((skill.name === 'Binding Blade' || skill.name === 'Naga') && !isAttacker) {
+    } else if ((statKey === 'def' || statKey === 'res')
+      && (skill.name === 'Binding Blade' || skill.name === 'Naga') && !isAttacker) {
       return 2;
-    }
-    if (statKey === 'def' && skill.name === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
+    } else if (statKey === 'def' && skill.name === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
       return 4;
-    }
-    if (statKey === 'res' && skill.name === 'Parthia' && isAttacker) {
+    } else if (statKey === 'res' && skill.name === 'Parthia' && isAttacker) {
       return 4;
     }
   } else if (skill.type === 'PASSIVE_A' || skill.type === 'SEAL') {
