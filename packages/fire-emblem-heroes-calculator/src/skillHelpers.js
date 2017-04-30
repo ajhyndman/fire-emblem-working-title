@@ -22,7 +22,7 @@ import {
   hpAboveThreshold,
   hpBelowThreshold,
 } from './heroHelpers';
-import type { HeroInstance } from './heroInstance';
+import type { HeroInstance, Stat } from './heroInstance';
 
 
 export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | void;
@@ -57,7 +57,7 @@ export function hpRequirementSatisfied(hero: HeroInstance, skillType: SkillType)
 export function getStatValue(
   hero: HeroInstance,
   skillType: SkillType,
-  statKey: string,
+  statKey: Stat,
   isAttacker: boolean,
 ) {
   const skillName = getSkillName(hero, skillType);
@@ -104,7 +104,7 @@ export function getStatValue(
           return -skillNumbers[1];
         }
       }
-      // Death/Darting/Armored/Warding Blow
+      // Death/Darting/Armored/Warding Blow and Sparrow
       if (isAttacker && test(/(Blow|Sparrow)/, skillName)) {
         return skillNumbers[0];
       }
