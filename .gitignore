@@ -38,3 +38,9 @@ jspm_packages
 
 # NEXT compile directory
 .next
+
+# compiled fire-emblem-heroes code
+dist
+
+# proving-grounds deploy timestamp
+deployTimestamp.js
