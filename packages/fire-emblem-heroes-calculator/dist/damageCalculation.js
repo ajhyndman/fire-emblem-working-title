@@ -44,11 +44,11 @@ var dmgFormula = function dmgFormula(atk // From skills like Luna
 };
 
 var hasWeaponBreaker = function hasWeaponBreaker(instanceA, instanceB) {
-  var heroB = (0, _heroHelpers.lookupStats)(instanceB.name);
-  var necessaryBreaker = (0, _ramda.replace)(/(Red|Green|Blue|Neutral)\s/, '', heroB.weaponType) + 'breaker';
-  if ((0, _ramda.test)(/Tome/, heroB.weaponType)) {
+  var heroBWeapon = (0, _heroHelpers.getWeaponType)(instanceB);
+  var necessaryBreaker = (0, _ramda.replace)(/(Red|Green|Blue|Neutral)\s/, '', heroBWeapon) + 'breaker';
+  if ((0, _ramda.test)(/Tome/, heroBWeapon)) {
     // R Tomebreaker, G Tomebreaker, B Tomebreaker
-    necessaryBreaker = heroB.weaponType[0] + ' ' + necessaryBreaker;
+    necessaryBreaker = heroBWeapon[0] + ' ' + necessaryBreaker;
   }
   if ((0, _heroHelpers.hasSkill)(instanceA, 'PASSIVE_B', necessaryBreaker)) {
     return true;
@@ -79,8 +79,7 @@ var doesFollowUp = function doesFollowUp(instanceA, instanceB, isAttacker) {
 
 // Healers do half-damage
 var classModifier = function classModifier(instance) {
-  var hero = (0, _heroHelpers.lookupStats)(instance.name);
-  return hero && hero.weaponType === 'Neutral Staff' ? 0.5 : 1;
+  return (0, _heroHelpers.getWeaponType)(instance) === 'Neutral Staff' ? 0.5 : 1;
 };
 
 var advantageBonus = function advantageBonus(heroA, heroB) {
@@ -117,12 +116,12 @@ var effectiveBonus = function effectiveBonus(attacker, defender) {
   if ((0, _heroHelpers.hasSkill)(defender, 'PASSIVE_A', 'Shield')) {
     return 1;
   }
-  var defenderMoveType = (0, _heroHelpers.lookupStats)(defender.name).moveType;
-  if ((0, _heroHelpers.lookupStats)(attacker.name).weaponType === 'Neutral Bow' && defenderMoveType === 'Flying') {
+  var defenderMoveType = (0, _heroHelpers.getMoveType)(defender);
+  if ((0, _heroHelpers.getWeaponType)(attacker) === 'Neutral Bow' && defenderMoveType === 'Flying') {
     return 1.5;
   }
   var weaponName = (0, _heroHelpers.getSkillName)(attacker, 'WEAPON');
-  if ((0, _ramda.test)(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defenderMoveType === 'Armored' || (0, _ramda.test)(/wolf/, weaponName) && defenderMoveType === 'Cavalry' || (0, _ramda.test)(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry' || (0, _ramda.test)(/Excalibur/, weaponName) && defenderMoveType === 'Flying' || (0, _ramda.test)(/(Falchion|Naga)/, weaponName) && (0, _ramda.test)(/Beast/, (0, _heroHelpers.lookupStats)(defender.name).weaponType)) {
+  if ((0, _ramda.test)(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defenderMoveType === 'Armored' || (0, _ramda.test)(/wolf/, weaponName) && defenderMoveType === 'Cavalry' || (0, _ramda.test)(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry' || (0, _ramda.test)(/Excalibur/, weaponName) && defenderMoveType === 'Flying' || (0, _ramda.test)(/(Falchion|Naga)/, weaponName) && (0, _ramda.test)(/Beast/, (0, _heroHelpers.getWeaponType)(defender))) {
     return 1.5;
   } else return 1;
 };

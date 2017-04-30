@@ -1,9 +1,7 @@
 // @flow
 import React from 'react';
-import {
-  getSpecialCooldown,
-  lookupStats,
-} from 'fire-emblem-heroes-calculator';
+import { getSpecialCooldown } from 'fire-emblem-heroes-calculator';
+import { getHero } from 'fire-emblem-heroes-stats';
 
 import HeroPortrait from './Hero';
 import Router from '../router';
@@ -118,7 +116,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
           <div>
             <HeroPortrait
               name={leftHero.name}
-              weaponType={lookupStats(leftHero.name).weaponType}
+              weaponType={getHero(leftHero.name).weaponType}
               rarity={leftHero.rarity}
               specialCooldown={getSpecialCooldown(leftHero)}
             />
@@ -172,7 +170,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
           <div>
             <HeroPortrait
               name={rightHero.name}
-              weaponType={lookupStats(rightHero.name).weaponType}
+              weaponType={getHero(rightHero.name).weaponType}
               rarity={rightHero.rarity}
               specialCooldown={getSpecialCooldown(rightHero)}
             />

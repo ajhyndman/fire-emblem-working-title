@@ -14,8 +14,8 @@ import {
   zipObj,
 } from 'ramda';
 import { withState } from 'recompose';
-import { hasStatsForRarity, lookupStats } from 'fire-emblem-heroes-calculator';
-import type { HeroInstance, InstanceSkills } from 'fire-emblem-heroes-calculator';
+import { getHero } from 'fire-emblem-heroes-stats';
+import type { HeroInstance, InstanceSkills, Rarity } from 'fire-emblem-heroes-calculator';
 import type { Hero, SkillType } from 'fire-emblem-heroes-stats';
 
 import RaritySelector from './RaritySelector';
@@ -56,6 +56,11 @@ const skillIcons = {
   SEAL: 'Seal_Icon.png',
 };
 
+const hasStatsForRarity = (instance: HeroInstance, rarity: Rarity): boolean => {
+  const hero: Hero = getHero(instance.name);
+  return Boolean(hero.stats['1'][`${rarity}`] && hero.stats['40'][`${rarity}`]);
+};
+
 const HeroConfigurer = withState(
   'state',
   'setState',
@@ -69,7 +74,6 @@ const HeroConfigurer = withState(
   state,
   // eslint can't parse type spreads yet: https://github.com/babel/babylon/pull/418
 }/* : { ...Props, +setState: (state: State) => void; +state: State; } */) => {
-  const hero: Hero = lookupStats(heroInstance.name);
 
   const varianceOptions = {
     HP: 'hp',
@@ -214,11 +218,11 @@ const HeroConfigurer = withState(
             <div className="section center">
               <RaritySelector
                 disabled={[
-                  !hasStatsForRarity(hero, 1),
-                  !hasStatsForRarity(hero, 2),
-                  !hasStatsForRarity(hero, 3),
-                  !hasStatsForRarity(hero, 4),
-                  !hasStatsForRarity(hero, 5),
+                  !hasStatsForRarity(heroInstance, 1),
+                  !hasStatsForRarity(heroInstance, 2),
+                  !hasStatsForRarity(heroInstance, 3),
+                  !hasStatsForRarity(heroInstance, 4),
+                  !hasStatsForRarity(heroInstance, 5),
                 ]}
                 selected={heroInstance.rarity}
                 onChange={rarity => dispatch({ type: 'UPDATE_RARITY', rarity })}

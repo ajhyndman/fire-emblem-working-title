@@ -147,7 +147,13 @@ export type Stats = {
   +heroes: Hero[];
   +grand_battle_heroes: Hero[];
   +skills: Skill[];
+  +getAllHeroes: () => Hero[];
+  +getAllSkills: () => Skill[];
   +getEventHeroes: (all: boolean) => Hero[];
+  +getHero: () => Hero;
+  +getReleasedHeroes: () => Hero[];
+  +getSkillObject: () => Skill;
+  +getSkillType: () => SkillType;
 };
 
 declare module.exports: Stats;

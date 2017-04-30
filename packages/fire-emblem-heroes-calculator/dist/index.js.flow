@@ -9,13 +9,7 @@ export {
   getDefaultSkills,
   getInheritableSkills,
   getStat,
-  hasStatsForRarity,
-  lookupStats,
   updateRarity,
-} from '../src/heroHelpers';
-
-export type {
-  HeroesByName,
 } from '../src/heroHelpers';
 
 export {
@@ -31,7 +25,6 @@ export type {
 } from '../src/heroInstance';
 
 export {
-  getSkillInfo,
   getSpecialCooldown,
   isMaxTier,
 } from '../src/skillHelpers';

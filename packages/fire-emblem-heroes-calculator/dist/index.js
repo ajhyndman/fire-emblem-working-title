@@ -33,18 +33,6 @@ Object.defineProperty(exports, 'getStat', {
     return _heroHelpers.getStat;
   }
 });
-Object.defineProperty(exports, 'hasStatsForRarity', {
-  enumerable: true,
-  get: function get() {
-    return _heroHelpers.hasStatsForRarity;
-  }
-});
-Object.defineProperty(exports, 'lookupStats', {
-  enumerable: true,
-  get: function get() {
-    return _heroHelpers.lookupStats;
-  }
-});
 Object.defineProperty(exports, 'updateRarity', {
   enumerable: true,
   get: function get() {
@@ -63,12 +51,6 @@ Object.defineProperty(exports, 'getDefaultInstance', {
 
 var _skillHelpers = require('./skillHelpers');
 
-Object.defineProperty(exports, 'getSkillInfo', {
-  enumerable: true,
-  get: function get() {
-    return _skillHelpers.getSkillInfo;
-  }
-});
 Object.defineProperty(exports, 'getSpecialCooldown', {
   enumerable: true,
   get: function get() {

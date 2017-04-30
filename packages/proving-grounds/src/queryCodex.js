@@ -1,7 +1,7 @@
 // @flow
 import SHA1 from 'crypto-js/sha1';
 import lzString from 'lz-string';
-import stats, { getEventHeroes } from 'fire-emblem-heroes-stats';
+import { getAllHeroes, getAllSkills } from 'fire-emblem-heroes-stats';
 import {
   assoc,
   compose,
@@ -181,9 +181,9 @@ const values = flatten([
   // Allow all 1-3 digit numbers. undefined hashes to 0 and names might hash to 4 digit numbers.
   range(1, 999),
   // $FlowIssue: flowtypes for ramda aren't precise
-  map(prop('name'), stats.skills),
+  map(prop('name'), getAllSkills()),
   // $FlowIssue: flowtypes for ramda aren't precise
-  map(prop('name'), concat(stats.heroes, getEventHeroes(true))),
+  map(prop('name'), getAllHeroes()),
 ]);
 
 // A map from hash(x) to x

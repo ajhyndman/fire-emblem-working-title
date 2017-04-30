@@ -8,13 +8,14 @@ import {
 
 import {
   getMitigationType,
+  getMoveType,
   getRange,
   getSkillName,
   getStat,
   getWeaponColor,
+  getWeaponType,
   hasBraveWeapon,
   hasSkill,
-  lookupStats,
 } from './heroHelpers';
 import {
   doesDefenseSpecialApply,
@@ -74,11 +75,11 @@ const dmgFormula = (
 );
 
 const hasWeaponBreaker = (instanceA: HeroInstance, instanceB: HeroInstance) => {
-  const heroB = lookupStats(instanceB.name);
-  let necessaryBreaker = replace(/(Red|Green|Blue|Neutral)\s/, '', heroB.weaponType) + 'breaker';
-  if (test(/Tome/, heroB.weaponType)) {
+  const heroBWeapon = getWeaponType(instanceB);
+  let necessaryBreaker = replace(/(Red|Green|Blue|Neutral)\s/, '', heroBWeapon) + 'breaker';
+  if (test(/Tome/, heroBWeapon)) {
     // R Tomebreaker, G Tomebreaker, B Tomebreaker
-    necessaryBreaker = heroB.weaponType[0] + ' ' + necessaryBreaker;
+    necessaryBreaker = heroBWeapon[0] + ' ' + necessaryBreaker;
   }
   if (hasSkill(instanceA, 'PASSIVE_B', necessaryBreaker)) {
     return true;
@@ -119,10 +120,8 @@ const doesFollowUp = (instanceA: HeroInstance, instanceB: HeroInstance, isAttack
 };
 
 // Healers do half-damage
-const classModifier = (instance: HeroInstance) => {
-  const hero = lookupStats(instance.name);
-  return (hero && (hero.weaponType === 'Neutral Staff')) ? 0.5 : 1;
-};
+const classModifier = (instance: HeroInstance) =>
+  getWeaponType(instance) === 'Neutral Staff' ? 0.5 : 1;
 
 const advantageBonus = (heroA: HeroInstance, heroB: HeroInstance) => {
   const colorA = getWeaponColor(heroA);
@@ -169,9 +168,9 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
   if (hasSkill(defender, 'PASSIVE_A', 'Shield')) {
     return 1;
   }
-  const defenderMoveType = lookupStats(defender.name).moveType;
+  const defenderMoveType = getMoveType(defender);
   if (
-    lookupStats(attacker.name).weaponType === 'Neutral Bow'
+    getWeaponType(attacker) === 'Neutral Bow'
     && defenderMoveType === 'Flying'
   ) {
     return 1.5;
@@ -182,7 +181,7 @@ const effectiveBonus = (attacker: HeroInstance, defender: HeroInstance) => {
       || (test(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry')
       || (test(/Excalibur/, weaponName) && defenderMoveType === 'Flying')
       || (test(/(Falchion|Naga)/, weaponName)
-          && test(/Beast/, lookupStats(defender.name).weaponType))
+          && test(/Beast/, getWeaponType(defender)))
     ) {
     return 1.5;
   }

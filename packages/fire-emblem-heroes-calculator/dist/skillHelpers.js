@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getSpecialCooldown = exports.getSkillInfo = exports.getSkillType = undefined;
+exports.getSpecialCooldown = undefined;
 exports.getSkillNumbers = getSkillNumbers;
 exports.hpRequirementSatisfied = hpRequirementSatisfied;
 exports.getStatValue = getStatValue;
@@ -24,39 +24,14 @@ var _ramda = require('ramda');
 
 var _fireEmblemHeroesStats = require('fire-emblem-heroes-stats');
 
-var _fireEmblemHeroesStats2 = _interopRequireDefault(_fireEmblemHeroesStats);
-
 var _heroHelpers = require('./heroHelpers');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var skillTypeByName = (0, _ramda.compose)((0, _ramda.map)((0, _ramda.prop)('type')),
-// $FlowIssue indexBy confuses flow
-(0, _ramda.indexBy)((0, _ramda.prop)('name')),
-// Exclude seals so that 'Attack +1' is an a-passive.
-(0, _ramda.filter)(function (s) {
-  return s.type !== 'SEAL';
-}))(_fireEmblemHeroesStats2.default.skills);
-
-
-var skillsByTypeAndName = (0, _ramda.compose)(
-// $FlowIssue indexBy confuses flow
-(0, _ramda.map)((0, _ramda.indexBy)((0, _ramda.prop)('name'))),
-// $FlowIssue groupBy confuses flow
-(0, _ramda.groupBy)((0, _ramda.prop)('type')))(_fireEmblemHeroesStats2.default.skills);
-
-var getSkillType = exports.getSkillType = function getSkillType(skillName) {
-  return skillTypeByName[skillName];
-};
-var getSkillInfo = exports.getSkillInfo = function getSkillInfo(skillType, skillName) {
-  return skillsByTypeAndName[skillType] && skillsByTypeAndName[skillType][skillName];
-};
 
 var capitalize = (0, _ramda.compose)((0, _ramda.join)(''), (0, _ramda.juxt)([(0, _ramda.compose)(_ramda.toUpper, _ramda.head), _ramda.tail]));
 
 // Returns a list of numbers from the effect of the skill, or [0].
+
 function getSkillNumbers(hero, skillType) {
-  var skill = getSkillInfo(skillType, (0, _heroHelpers.getSkillName)(hero, skillType));
+  var skill = (0, _fireEmblemHeroesStats.getSkillObject)(skillType, (0, _heroHelpers.getSkillName)(hero, skillType));
   if (skill === undefined) {
     return [0];
   }
@@ -65,7 +40,7 @@ function getSkillNumbers(hero, skillType) {
 }
 
 function hpRequirementSatisfied(hero, skillType) {
-  var skill = getSkillInfo(skillType, (0, _heroHelpers.getSkillName)(hero, skillType));
+  var skill = (0, _fireEmblemHeroesStats.getSkillObject)(skillType, (0, _heroHelpers.getSkillName)(hero, skillType));
   if (skill !== undefined) {
     if ((0, _ramda.test)(/≥\s*\d+%/, skill.effect)) {
       return (0, _heroHelpers.hpAboveThreshold)(hero, parseInt((0, _ramda.match)(/(\d+)%/, skill.effect)[1]));
@@ -80,7 +55,7 @@ function hpRequirementSatisfied(hero, skillType) {
 // Returns the value for a stat provided by a passive skill
 function getStatValue(hero, skillType, statKey, isAttacker) {
   var skillName = (0, _heroHelpers.getSkillName)(hero, skillType);
-  var skill = getSkillInfo(skillType, skillName);
+  var skill = (0, _fireEmblemHeroesStats.getSkillObject)(skillType, skillName);
   if (skill === undefined) {
     return 0;
   } else if (skill.type === 'WEAPON') {
@@ -182,7 +157,7 @@ function getSpecialType(instance) {
 
 // Returns the cooldown of the special or -1. Accounts for killer weapons.
 var getSpecialCooldown = exports.getSpecialCooldown = function getSpecialCooldown(instance) {
-  var skill = getSkillInfo('SPECIAL', (0, _heroHelpers.getSkillName)(instance, 'SPECIAL'));
+  var skill = (0, _fireEmblemHeroesStats.getSkillObject)('SPECIAL', (0, _heroHelpers.getSkillName)(instance, 'SPECIAL'));
   return !skill || typeof skill.cooldown !== 'number' ? -1 : skill.cooldown + ((0, _ramda.test)(/Accelerates S/, (0, _heroHelpers.getSkillEffect)(instance, 'WEAPON')) ? -1 : 0) + ((0, _ramda.test)(/Slows Special/, (0, _heroHelpers.getSkillEffect)(instance, 'WEAPON')) ? +1 : 0);
 };
 

@@ -16,8 +16,8 @@ import {
   split,
   toLower,
 } from 'ramda';
-import stats from 'fire-emblem-heroes-stats';
-import { getDefaultSkills, getSkillInfo } from 'fire-emblem-heroes-calculator';
+import { getAllHeroes, getSkillObject } from 'fire-emblem-heroes-stats';
+import { getDefaultSkills } from 'fire-emblem-heroes-calculator';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 
@@ -58,7 +58,7 @@ const getKeywords: (hero: Hero) => Array<string> =
         filter(compose(not, isNil)),
         Object.values,
         // $FlowIssue string is incompatible with SkillType (string enum)
-        mapObjIndexed((skillName, skillType) => getSkillInfo(skillType, skillName)),
+        mapObjIndexed((skillName, skillType) => getSkillObject(skillType, skillName)),
         getDefaultSkills,
         prop('name'),
       )(hero),
@@ -66,7 +66,7 @@ const getKeywords: (hero: Hero) => Array<string> =
   );
 
 // $FlowIssue $Iterable. This type is incompatible with array type
-const allKeywords = new Set(flatten(map(getKeywords, stats.heroes)));
+const allKeywords = new Set(flatten(map(getKeywords, getAllHeroes())));
 
 const isKeyword = (word: string) =>
   allKeywords.has(word) || synonyms[word] !== undefined;

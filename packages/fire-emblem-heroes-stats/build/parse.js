@@ -5,6 +5,7 @@ import {
   filter,
   flatten,
   identity,
+  indexBy,
   isNil,
   map,
   match,
@@ -19,7 +20,7 @@ import {
   zipObj,
 } from 'ramda';
 
-import { camelCase, maybeToNumber, objectsByField } from './util';
+import { camelCase, maybeToNumber } from './util';
 
 
 /**
@@ -86,7 +87,7 @@ const processStatTable =  compose(
       (x) => x.toString(),
     ),
   )),  // For each rarity and stat
-  objectsByField('rarity'),
+  map(dissoc('rarity'), indexBy(prop('rarity'))),
 );
 
 // Takes the html page for a hero and parses all stat tables

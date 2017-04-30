@@ -1,9 +1,9 @@
 // @flow
 import React from 'react';
 import Color from 'color-js';
-import { getStat, lookupStats } from 'fire-emblem-heroes-calculator';
+import { getStat } from 'fire-emblem-heroes-calculator';
+import { getHero } from 'fire-emblem-heroes-stats';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
-import type { Hero } from 'fire-emblem-heroes-stats';
 
 import { colors, fontFamilies, fontSizes, gridSize, lineHeights } from '../theme';
 import HeroPortrait from './Hero';
@@ -18,8 +18,6 @@ const StatSheet = ({
   heroInstance,
   level,
 }: Props) => {
-  const hero: ?Hero = lookupStats(heroInstance.name);
-
   return (
     <div className="stats-root row">
       <style jsx>{`
@@ -75,7 +73,7 @@ const StatSheet = ({
         <HeroPortrait
           name={heroInstance.name}
           rarity={heroInstance.rarity}
-          weaponType={hero ? hero.weaponType : undefined}
+          weaponType={getHero(heroInstance).weaponType}
         />
       </div>
       <div className="right col">

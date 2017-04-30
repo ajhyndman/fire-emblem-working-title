@@ -1,11 +1,10 @@
 // @flow
-import stats, { getEventHeroes } from 'fire-emblem-heroes-stats';
+import { getHero, getAllSkills, getSkillObject, getSkillType } from 'fire-emblem-heroes-stats';
 import {
   allPass,
   // $FlowIssue ... no named export called `ascend`
   ascend,
   compose,
-  concat,
   curry,
   // $FlowIssue ... no named export called `descend`
   descend,
@@ -28,39 +27,21 @@ import {
 } from 'ramda';
 import type {
   Hero,
+  MoveType,
   Skill,
   SkillType,
+  WeaponType,
 } from 'fire-emblem-heroes-stats';
 
-import { getSkillInfo, getSkillType, getStatValue, hpRequirementSatisfied } from './skillHelpers';
+import { getStatValue, hpRequirementSatisfied } from './skillHelpers';
 import type { HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
 
 
-export type HeroesByName = { [key: string]: Hero };
+export const getWeaponType = (instance: HeroInstance): WeaponType =>
+  getHero(instance.name).weaponType;
 
-// $FlowIssue indexBy confuses flow
-const heroesByName: HeroesByName = indexBy(
-  prop('name'),
-  // stats.heroes,
-  concat(stats.heroes, getEventHeroes(true)),
-);
-
-/**
- * Look up a hero's base stats by name.
- *
- * @param {string} name The name of the hero to look up.
- * @returns {Hero} A raw hero object, from fire-emblem-heroes-stats.
- */
-export const lookupStats = (name: string): Hero => {
-  const hero: ?Hero = heroesByName[name];
-  return hero || heroesByName['Anna'] || {
-    name,
-    weaponType: 'Red Sword',
-    stats: { '1': {}, '40': {} },
-    skills: [],
-    moveType: 'Infantry',
-  };
-};
+export const getMoveType = (instance: HeroInstance): MoveType =>
+  getHero(instance.name).moveType;
 
 // Can be called with substrings of the skill name. Returns false if an hp requirement is not met.
 export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedName: string) => {
@@ -86,13 +67,13 @@ export function getSkillEffect(
   instance: HeroInstance,
   skillType: SkillType,
 ): string {
-  const skill = getSkillInfo(skillType, getSkillName(instance, skillType));
+  const skill = getSkillObject(skillType, getSkillName(instance, skillType));
   return skill ? skill.effect : '';
 }
 
 // Returns a map from skill type to the skill object.
 export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkills {
-  const hero = lookupStats(name);
+  const hero = getHero(name);
   // Flow can't follow this compose chain, so cast it to any.
   const skillsByType = (compose(
     indexBy(getSkillType),
@@ -194,9 +175,9 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
 
 // Returns a list of skills that a hero can obtain.
 export function getInheritableSkills(name: string, skillType: SkillType): Array<Skill> {
-  const hero = lookupStats(name);
+  const hero = getHero(name);
   // Cast to any to prevent flow issues
-  const allSkills: any = stats.skills;
+  const allSkills: any = getAllSkills();
   const inheritable = filter(
     allPass([
       // $FlowIssue canInherit is curried
@@ -207,7 +188,7 @@ export function getInheritableSkills(name: string, skillType: SkillType): Array<
   );
   const ownSkills = compose(
     filter((x) => propOr('', 'type', x) === skillType),
-    map((skillName) => getSkillInfo(skillType, skillName)),
+    map((skillName) => getSkillObject(skillType, skillName)),
     map(prop('name')),
   )(hero.skills);
   return sort(ascend(prop('name')), union(inheritable, ownSkills));
@@ -236,7 +217,7 @@ export const getStat = (
   level: 1 | 40 = 40,
   isAttacker: boolean = false,
 ): number => {
-  const hero = lookupStats(instance.name);
+  const hero = getHero(instance.name);
   const { rarity } = instance;
   const variance = (instance.boon === statKey
     ? 'high'
@@ -284,16 +265,14 @@ export const getStat = (
     + getStatValue(instance, 'WEAPON', statKey, isAttacker);
 };
 
-export const getRange = (instance: HeroInstance) => {
-  return test(/Sword|Axe|Lance|Beast/, lookupStats(instance.name).weaponType) ? 1 : 2;
-};
+export const getRange = (instance: HeroInstance) => 
+  test(/Sword|Axe|Lance|Beast/, getWeaponType(instance)) ? 1 : 2;
 
-export const getMitigationType = (instance: HeroInstance) => {
-  return test(/Tome|Beast|Staff/, lookupStats(instance.name).weaponType) ? 'res' : 'def';
-};
+export const getMitigationType = (instance: HeroInstance) =>
+  test(/Tome|Beast|Staff/, getWeaponType(instance)) ? 'res' : 'def';
 
 export const getWeaponColor = (instance: HeroInstance) => {
-  switch (lookupStats(instance.name).weaponType) {
+  switch (getWeaponType(instance)) {
     case 'Red Sword':
     case 'Red Tome':
     case 'Red Beast':
@@ -309,10 +288,6 @@ export const getWeaponColor = (instance: HeroInstance) => {
     default:
       return 'NEUTRAL';
   }
-};
-
-export const hasStatsForRarity = (hero: Hero, rarity: Rarity/* , level?: 1 | 40 */): boolean => {
-  return Boolean(hero.stats['1'][`${rarity}`] && hero.stats['40'][`${rarity}`]);
 };
 
 // Returns whether or not hp >= X% of hp, using the hp at the start of combat.

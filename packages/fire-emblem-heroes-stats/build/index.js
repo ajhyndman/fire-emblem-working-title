@@ -44,8 +44,6 @@ async function fetchHeroStats() {
     .catch(err => console.error('parseHeroAggregateHtml', err));
 
   const heroNames = map(prop('name'), heroes);
-
-  console.log('heroNames', heroNames);
   const heroStatsAndSkills = await fetchAndParsePages(
     'http://feheroes.gamepedia.com/',
     heroNames,

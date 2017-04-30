@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import cn from 'classnames';
-import { getSkillInfo } from 'fire-emblem-heroes-calculator';
+import { getSkillObject } from 'fire-emblem-heroes-stats';
 import type { SkillType } from 'fire-emblem-heroes-stats';
 
 import Assist from './Assist';
@@ -22,7 +22,7 @@ type Props = {
 };
 
 const Skill = ({ active, type, name, onClick, showGuide }: Props) => {
-  const skill = getSkillInfo(type, name);
+  const skill = getSkillObject(type, name);
 
   return (
     <div

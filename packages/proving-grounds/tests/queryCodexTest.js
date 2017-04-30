@@ -1,6 +1,6 @@
 // @flow
 import test from 'tape';
-import stats from 'fire-emblem-heroes-stats';
+import { getAllHeroes, getAllSkills } from 'fire-emblem-heroes-stats';
 import { getDefaultSkills, getDefaultInstance } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
@@ -113,22 +113,24 @@ test('hash', (t) => {
     // console.log('raw:', stats.skills.map(skill => skill.name));
     // console.log('hashed:', stats.skills.map(skill => hash(skill.name)));
 
+    const heroes = getAllHeroes();
+    const skills = getAllSkills();
     // no collisions within skills
     assert.equal(
-      new Set(stats.skills.map(skill => hash(skill.name))).size,
-      new Set(stats.skills.map(skill => skill.name)).size,
+      new Set(skills.map(skill => hash(skill.name))).size,
+      new Set(skills.map(skill => skill.name)).size,
     );
 
     // no collisions within heroes
     assert.equal(
-      new Set(stats.heroes.map(hero => hash(hero.name))).size,
-      new Set(stats.heroes.map(hero => hero.name)).size,
+      new Set(heroes.map(hero => hash(hero.name))).size,
+      new Set(heroes.map(hero => hero.name)).size,
     );
 
     // no destructive collisions between heroes and skills
     assert.equal(
-      new Set(stats.heroes.concat(stats.skills).map(item => hash(item.name))).size,
-      new Set(stats.heroes.concat(stats.skills).map(item => item.name)).size,
+      new Set(heroes.concat(skills).map(item => hash(item.name))).size,
+      new Set(heroes.concat(skills).map(item => item.name)).size,
     );
 
     assert.end();

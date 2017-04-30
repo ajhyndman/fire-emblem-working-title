@@ -3,14 +3,13 @@ import Head from 'next/head';
 import React from 'react';
 import MarkGithub from 'react-icons/lib/go/mark-github';
 import Reddit from 'react-icons/lib/fa/reddit';
-import stats, { getEventHeroes } from 'fire-emblem-heroes-stats';
+import { getEventHeroes, getReleasedHeroes } from 'fire-emblem-heroes-stats';
 import {
   allPass,
   filter,
   map,
   path,
   pathOr,
-  propOr,
   split,
   toLower,
 } from 'ramda';
@@ -227,17 +226,12 @@ class Root extends React.Component {
           activeHeroName={pathOr('', ['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
-            allPass([
-              // $FlowIssue iterable incompatible with array
-              allPass(map(
-                matchHero,
-                split(' ', toLower(state.searchString)),
-              )),
-              // Exclude unreleased heroes.
-              // $FlowIssue typedef for propOr isn't resolving correctly
-              (hero) => propOr('N/A', 'releaseDate', hero) !== 'N/A',
-            ]),
-            stats.heroes,
+            // $FlowIssue iterable incompatible with array
+            allPass(map(
+              matchHero,
+              split(' ', toLower(state.searchString)),
+            )),
+            getReleasedHeroes(),
           )}
           showUndo
         />

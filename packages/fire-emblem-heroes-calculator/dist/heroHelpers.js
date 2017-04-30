@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.hasStatsForRarity = exports.getWeaponColor = exports.getMitigationType = exports.getRange = exports.getStat = exports.hasBraveWeapon = exports.hasSkill = exports.lookupStats = undefined;
+exports.getWeaponColor = exports.getMitigationType = exports.getRange = exports.getStat = exports.hasBraveWeapon = exports.hasSkill = exports.getMoveType = exports.getWeaponType = undefined;
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
@@ -19,36 +19,18 @@ exports.hpBelowThreshold = hpBelowThreshold;
 
 var _fireEmblemHeroesStats = require('fire-emblem-heroes-stats');
 
-var _fireEmblemHeroesStats2 = _interopRequireDefault(_fireEmblemHeroesStats);
-
 var _ramda = require('ramda');
 
 var _skillHelpers = require('./skillHelpers');
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-// $FlowIssue indexBy confuses flow
-var heroesByName = (0, _ramda.indexBy)((0, _ramda.prop)('name'),
-// stats.heroes,
-(0, _ramda.concat)(_fireEmblemHeroesStats2.default.heroes, (0, _fireEmblemHeroesStats.getEventHeroes)(true)));
+var getWeaponType = exports.getWeaponType = function getWeaponType(instance) {
+  return (0, _fireEmblemHeroesStats.getHero)(instance.name).weaponType;
+};
 
-/**
- * Look up a hero's base stats by name.
- *
- * @param {string} name The name of the hero to look up.
- * @returns {Hero} A raw hero object, from fire-emblem-heroes-stats.
- */
-var lookupStats = exports.lookupStats = function lookupStats(name) {
-  var hero = heroesByName[name];
-  return hero || heroesByName['Anna'] || {
-    name: name,
-    weaponType: 'Red Sword',
-    stats: { '1': {}, '40': {} },
-    skills: [],
-    moveType: 'Infantry'
-  };
+var getMoveType = exports.getMoveType = function getMoveType(instance) {
+  return (0, _fireEmblemHeroesStats.getHero)(instance.name).moveType;
 };
 
 // Can be called with substrings of the skill name. Returns false if an hp requirement is not met.
@@ -69,7 +51,7 @@ function getSkillName(instance, skillType) {
 
 // Returns the effect description of a skill
 function getSkillEffect(instance, skillType) {
-  var skill = (0, _skillHelpers.getSkillInfo)(skillType, getSkillName(instance, skillType));
+  var skill = (0, _fireEmblemHeroesStats.getSkillObject)(skillType, getSkillName(instance, skillType));
   return skill ? skill.effect : '';
 }
 
@@ -77,9 +59,9 @@ function getSkillEffect(instance, skillType) {
 function getDefaultSkills(name) {
   var rarity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
 
-  var hero = lookupStats(name);
+  var hero = (0, _fireEmblemHeroesStats.getHero)(name);
   // Flow can't follow this compose chain, so cast it to any.
-  var skillsByType = (0, _ramda.compose)((0, _ramda.indexBy)(_skillHelpers.getSkillType), (0, _ramda.map)((0, _ramda.prop)('name')), (0, _ramda.filter)(function (skill) {
+  var skillsByType = (0, _ramda.compose)((0, _ramda.indexBy)(_fireEmblemHeroesStats.getSkillType), (0, _ramda.map)((0, _ramda.prop)('name')), (0, _ramda.filter)(function (skill) {
     return skill.rarity === undefined || skill.rarity === '-' || skill.rarity <= rarity;
   }))(hero.skills);
 
@@ -171,16 +153,16 @@ var canInherit = (0, _ramda.curry)(function (hero, skill) {
 
 // Returns a list of skills that a hero can obtain.
 function getInheritableSkills(name, skillType) {
-  var hero = lookupStats(name);
+  var hero = (0, _fireEmblemHeroesStats.getHero)(name);
   // Cast to any to prevent flow issues
-  var allSkills = _fireEmblemHeroesStats2.default.skills;
+  var allSkills = (0, _fireEmblemHeroesStats.getAllSkills)();
   var inheritable = (0, _ramda.filter)((0, _ramda.allPass)([
   // $FlowIssue canInherit is curried
   canInherit(hero), (0, _ramda.propEq)('type', skillType)]), allSkills);
   var ownSkills = (0, _ramda.compose)((0, _ramda.filter)(function (x) {
     return (0, _ramda.propOr)('', 'type', x) === skillType;
   }), (0, _ramda.map)(function (skillName) {
-    return (0, _skillHelpers.getSkillInfo)(skillType, skillName);
+    return (0, _fireEmblemHeroesStats.getSkillObject)(skillType, skillName);
   }), (0, _ramda.map)((0, _ramda.prop)('name')))(hero.skills);
   return (0, _ramda.sort)((0, _ramda.ascend)((0, _ramda.prop)('name')), (0, _ramda.union)(inheritable, ownSkills));
 }
@@ -203,7 +185,7 @@ var getStat = exports.getStat = function getStat(instance, statKey) {
   var level = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 40;
   var isAttacker = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
 
-  var hero = lookupStats(instance.name);
+  var hero = (0, _fireEmblemHeroesStats.getHero)(instance.name);
   var rarity = instance.rarity;
 
   var variance = instance.boon === statKey ? 'high' : instance.bane === statKey ? 'low' : 'normal';
@@ -239,15 +221,15 @@ var getStat = exports.getStat = function getStat(instance, statKey) {
 };
 
 var getRange = exports.getRange = function getRange(instance) {
-  return (0, _ramda.test)(/Sword|Axe|Lance|Beast/, lookupStats(instance.name).weaponType) ? 1 : 2;
+  return (0, _ramda.test)(/Sword|Axe|Lance|Beast/, getWeaponType(instance)) ? 1 : 2;
 };
 
 var getMitigationType = exports.getMitigationType = function getMitigationType(instance) {
-  return (0, _ramda.test)(/Tome|Beast|Staff/, lookupStats(instance.name).weaponType) ? 'res' : 'def';
+  return (0, _ramda.test)(/Tome|Beast|Staff/, getWeaponType(instance)) ? 'res' : 'def';
 };
 
 var getWeaponColor = exports.getWeaponColor = function getWeaponColor(instance) {
-  switch (lookupStats(instance.name).weaponType) {
+  switch (getWeaponType(instance)) {
     case 'Red Sword':
     case 'Red Tome':
     case 'Red Beast':
@@ -263,10 +245,6 @@ var getWeaponColor = exports.getWeaponColor = function getWeaponColor(instance) 
     default:
       return 'NEUTRAL';
   }
-};
-
-var hasStatsForRarity = exports.hasStatsForRarity = function hasStatsForRarity(hero, rarity) {
-  return Boolean(hero.stats['1']['' + rarity] && hero.stats['40']['' + rarity]);
 };
 
 // Returns whether or not hp >= X% of hp, using the hp at the start of combat.
