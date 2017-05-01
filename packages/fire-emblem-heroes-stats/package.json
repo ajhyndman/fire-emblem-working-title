@@ -11,6 +11,7 @@
     "compile:watch": "npm run compile -- --watch",
     "copy-types": "ncp src/index.js.flow dist/fire-emblem-heroes-stats.js.flow",
     "prepublish": "npm run build",
+    "publish": "cross-var aws s3 sync ./dist/ s3://proving-grounds-static.ajhyndman.com/$npm_package_version/ --cache-control max-age=31536000,public",
     "scrape-stats": "babel-node build/index.js",
     "start": "npm run build:watch",
     "test": "eslint src/**/*.js build/**/*.js"
@@ -23,6 +24,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "chokidar-cli": "^1.2.0",
     "cross-env": "^4.0.0",
+    "cross-var": "^1.0.3",
     "eslint": "^3.16.1",
     "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.0.2",
     "ncp": "^2.0.0",
