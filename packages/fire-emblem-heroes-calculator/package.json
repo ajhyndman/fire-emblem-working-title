@@ -1,6 +1,6 @@
 {
   "name": "fire-emblem-heroes-calculator",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Calculate the result of combat between one hero and another",
   "main": "dist/fire-emblem-heroes-calculator.js",
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
@@ -40,7 +40,7 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
-    "fire-emblem-heroes-stats": "^0.7.0",
+    "fire-emblem-heroes-stats": "^0.7.1",
     "ramda": "^0.23.0"
   }
 }
