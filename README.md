@@ -19,11 +19,6 @@ dependencies and link them to each other with:
 
 `lerna bootstrap`
 
-You'll probably want to build all of the packages before you do anything else.
-You can do this with:
-
-`lerna run build`
-
 ## Next steps
 
 Check out the README for each package for further information.
