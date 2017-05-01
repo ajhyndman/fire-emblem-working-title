@@ -2,47 +2,79 @@
 
 [![yarn compatible](https://img.shields.io/badge/yarn-compatible-4BC51D.svg?style=flat)](https://yarnpkg.com/)
 
-Scrapes http://feheroes.wiki/Stats_Table for all available heroes and their average level 40 stats.
+Scrapes [http://feheroes.wiki/](http://feheroes.wiki/) for all available heroes and their stat variants, as well as all skill data.
 
 Latest scraped stats are available in raw JSON format here:
 
-https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-stats/dist/stats.json
+https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-stats/stats.json
 
-## Usage
+You can also [try `fire-emblem-heroes-stats` out](https://npm.runkit.com/fire-emblem-heroes-stats) without installing, using Runkit!
 
-To use the stats in your app:
+## Installation
+
+You can load `fire-emblem-heroes-stats` via npm, or with a script tag.
+
+### HTML (loaded via CDN)
+
+```html
+<!-- Dev -->
+<script src="https://proving-grounds-static.ajhyndman.com/<version>/fire-emblem-heroes-stats.js"></script>
+<!-- Production -->
+<script src="https://proving-grounds-static.ajhyndman.com/<version>/fire-emblem-heroes-stats.min.js"></script>
+
+<script type="text/javascript">
+  // A new variable will be available here, named `stats`.
+  alert(stats.getHero('Anna'));
+</script>
+```
+
+### Node (npm)
 
 ```bash
-$ npm install --save fire-emblem-heroes-stats
+npm install --save fire-emblem-heroes-stats
 ```
 
 ```js
 var stats = require('fire-emblem-heroes-stats');
 ```
 
-To scrape the latest wiki updates yourself:
+## Usage
 
-```bash
-$ git clone https://github.com/ajhyndman/fire-emblem-working-title.git
-$ cd fire-emblem-working-title
-$ lerna bootstrap
-$ cd fire-emblem-heroes-stats
-$ npm start
-```
+You can use the stats exported by this module as-is, or via one of the helper methods provided.
 
-## Format
-
-### Example
-
-#### Package Root
-
-The JSON file exported by this package has the following format:
+### Helpers
 
 ```js
-{
-  heroes: [/* List of heroes */],
-  skills: [/* List of skills */],
-}
+// get lists of heroes
+stats.getAllHeroes();
+stats.getEventHeroes();
+stats.getReleasedHeroes();
+
+// get one hero
+stats.getHero('Anna');
+
+// get a list of all skills
+stats.getAllSkills();
+
+// get one skill's info
+stats.getSkillObject('Silver Axe+');
+stats.getSkillType('Silver Axe+');
+```
+
+### Format
+
+#### Stats Root
+
+`stats` exposes a plain javascript object with the following format:
+
+```js
+console.log(stats.default);
+
+// =>
+// {
+//   heroes: [/* List of heroes */],
+//   skills: [/* List of skills */],
+// }
 ```
 
 #### Heroes
@@ -129,9 +161,19 @@ Skills each have a type key and stats relevant to their skill slot.
 },
 ```
 
-### Formal definition
+#### Formal definition
 
-A full type definition can be found here.  This can also be consumed by Facebook's
-[Flowtype](https://flowtype.org/) static type checker in your javascript applications!
+A full, formal type definition can be found [here](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-stats/src/index.js.flow).  This can also be consumed by Facebook's
+[Flowtype](https://flowtype.org/) static type checker in your own javascript application.
 
-https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-stats/dist/index.js.flow
+## Development
+
+To scrape the latest wiki updates yourself:
+
+```bash
+$ git clone https://github.com/ajhyndman/fire-emblem-working-title.git
+$ cd fire-emblem-working-title
+$ lerna bootstrap
+$ cd fire-emblem-heroes-stats
+$ npm run scrape-stats
+```

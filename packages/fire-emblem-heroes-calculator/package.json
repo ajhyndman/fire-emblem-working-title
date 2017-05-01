@@ -13,6 +13,7 @@
     "copy-types": "ncp src/index.js dist/fire-emblem-heroes-calculator.js.flow && jscodeshift dist/fire-emblem-heroes-calculator.js.flow --transform build/transform-import-path.js",
     "lint": "eslint src/**/*.js pages/**/*.js && flow check",
     "prepublish": "npm run build",
+    "publish": "cross-var aws s3 sync ./dist/ s3://proving-grounds-static.ajhyndman.com/$npm_package_version/ --cache-control max-age=31536000,public",
     "start": "npm run build:watch",
     "tape": "tape -r babel-register tests/**/*.js",
     "test": "npm run lint && npm run tape"
@@ -26,6 +27,7 @@
     "babel-register": "^6.24.1",
     "chokidar-cli": "^1.2.0",
     "cross-env": "^4.0.0",
+    "cross-var": "^1.0.3",
     "eslint": "^3.17.1",
     "eslint-config-ajhyndman": "git+https://github.com/ajhyndman/eslint-config-ajhyndman#1.1.0",
     "eslint-plugin-no-null": "^1.0.2",
