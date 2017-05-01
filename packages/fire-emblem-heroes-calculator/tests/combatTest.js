@@ -21,8 +21,8 @@ function makeHero(
   };
 }
 
-function withSpecial(specialName: string): { SPECIAL: ?string } {
-  return { SPECIAL: specialName };
+function withSpecial(hero: HeroInstance, specialName: string): HeroInstance {
+  return {...hero, initialSpecialCharge: 100, skills: {...hero.skills, SPECIAL: specialName }};
 }
 
 function simulateCombat(
@@ -88,34 +88,12 @@ test('Wary Fighter', (t) => {
   simulateCombat(t, makeHero('Effie'), makeHero('Catria'), 50-9, 39-32);
 });
 
-test('Defense Reduction Special', (t) => {
-  t.plan(2);
-  // 43 attack, 31 def => 12 dmg and 21 dmg.
-  simulateCombat(t, makeHero('Palla'), makeHero('Chrom'), 42-25, 47-12-21);
-});
-
-test('Stat Based Special and Killer Weapon', (t) => {
-  t.plan(4);
-  // Killer weapon and atk, attacked, atk pattern => 3CD Special will trigger.
-  // 41 attack, 32 def, weapon disadvantage => 1x2
-  // 25 def, 29 res => 12 from Bonfire and 14 from Iceberg.
-  // Cherche hits for 63-25 = 38.
-  simulateCombat(t, makeHero('Shanna', 5, withSpecial('Iceberg')), makeHero('Cherche'), 39-38, 46-(1*2)-14);
-  simulateCombat(t, makeHero('Shanna', 5, withSpecial('Bonfire')), makeHero('Cherche'), 39-38, 46-(1*2)-12);
-});
-
 test('Brave Weapon, Darting Blow, Fury and Damage Special', (t) => {
   t.plan(4);
   // Camilla attacks 4 times while attacking and once when attacked
   // Draconic Aura will trigger and give +30% of atk = 11 bonus damage
   simulateCombat(t, makeHero('Camilla'), makeHero('Bartre'), 37-23, 49-(2*4)-11-6);
   simulateCombat(t, makeHero('Bartre'), makeHero('Camilla'), 49-2-6,  37-23);
-});
-
-test('Wo Dao and Damage-Taken Special', (t) => {
-  t.plan(2);
-  // Karel attacks for 12, Chrom for 28. Karel's special does 8 and Wo Dao does 10.
-  simulateCombat(t, makeHero('Karel'), makeHero('Chrom'), 47-28, 47-12-(12+8+10));
 });
 
 test('Pain and Poison Strike', (t) => {
@@ -145,7 +123,76 @@ test('Vantage', (t) => {
   simulateCombat(t, deathBlowCordelia, {...vantageTakumi, initialHpMissing: 10}, 0, 40-10);
 });
 
-// other special types
-// lifesteal (+ fury, no overheal, only if survives)
-// pain (when attacked from a distance and only if survives)
-// miracle
+test('Specials', (assert) => {
+  assert.test('Stat Based Specials', (t) => {
+    // Beruka stats are 46, 40, 23, 37, 22
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Draconic Aura'), makeHero('Beruka'),
+      46-3, 46-3-12);
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Dragon Fang'), makeHero('Beruka'),
+      46-3, 46-3-20);
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Bonfire'), makeHero('Beruka'),
+      46-3, 46-3-18);
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Ignis'), makeHero('Beruka'),
+      46-3, 46-3-29);
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Iceberg'), makeHero('Beruka'),
+      46-3, 46-3-11);
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Glacies'), makeHero('Beruka'),
+      46-3, 46-3-17);
+    t.end();
+  });
+
+  assert.test('Wo Dao and Damage-Taken Special', (t) => {
+    // Karel attacks for 12, Chrom for 28. Karel's special does 8 and Wo Dao does 10.
+    simulateCombat(t, makeHero('Karel'), makeHero('Chrom'), 47-28, 47-12-(12+8+10));
+    t.end()
+  });
+
+  assert.test('Defense Reduction Special', (t) => {
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Moonbow'), makeHero('Beruka'),
+      46-3, 46-3-11);
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Luna'), makeHero('Beruka'),
+      46-3, 46-3-18);
+    // The lifegain from Aether is not relevant because Beruka is full health when she attacks.
+    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Aether'), makeHero('Beruka'),
+      46-3, 46-3-18);
+    t.end()
+  });
+
+  assert.test('Damage multiplier special', (t) => {
+    simulateCombat(t, withSpecial(makeHero('Odin'), 'Glimmer'), makeHero('Odin'), 43-10, 43-15);
+    simulateCombat(t, withSpecial(makeHero('Odin'), 'Night Sky'), makeHero('Odin'), 43-10, 43-15);
+    simulateCombat(t, withSpecial(makeHero('Odin'), 'Astra'), makeHero('Odin'), 43-10, 43-25);
+    t.end()
+  });
+
+  assert.test('Lifesteal special', (t) => {
+    simulateCombat(t, makeHero('Odin'), withSpecial(makeHero('Odin'), 'Sol'), 43-10, 43-10+5);
+    simulateCombat(t, makeHero('Odin'), withSpecial(makeHero('Odin'), 'Noontime'), 43-10, 43-10+3);
+    simulateCombat(t, makeHero('Odin'), withSpecial(makeHero('Odin'), 'Daylight'), 43-10, 43-10+3);
+    // Aether will increase damage dealt to 22 => heal to full
+    simulateCombat(t, makeHero('Odin'), withSpecial(makeHero('Odin'), 'Aether'), 43-22, 43);
+    t.end()
+  });
+
+  // TODO:
+  // heavy blade, guard, killer weapons, special slowing weapons
+  // Damage-reduction special + rounding
+  // Miracle
+  // Which specials ignore color advantage etc (aoe, stat based, atk based)
+  // but damage and armor based specials kind of care.
+  // Specials include static and conditional passive stats (even atk)
+  // Lifesteal ignores overkill
+
+  assert.test('Killer Weapon and color disadvantage', (t) => {
+    // Killer weapon and atk, attacked, atk pattern => 3CD Special will trigger.
+    // 41 attack, 32 def, weapon disadvantage => 1x2
+    // 25 def, 29 res => 14 from Iceberg.
+    // Cherche hits for 63-25 = 38.
+    simulateCombat(t, makeHero('Shanna'), makeHero('Cherche'), 39-38, 46-(1*2)-14);
+    t.end()
+  });
+  assert.end()
+});
+
+// TODO:
+// postcombat lifesteal (+ fury, no overheal, only if survives)
