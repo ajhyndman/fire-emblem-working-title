@@ -174,10 +174,18 @@ test('Specials', (assert) => {
     t.end()
   });
 
+  assert.test('Miracle', (t) => {
+    simulateCombat(t, makeHero('Takumi'), withSpecial(makeHero('Est'), 'Miracle'), 40, 1);
+    // Miracle only prevents the first lethal attack. The second kills.
+    simulateCombat(t, makeHero('Klein'), withSpecial(makeHero('Est'), 'Miracle'), 40, 0);
+    // Subaki survives the first attack so Miracle protects him from the second.
+    simulateCombat(t, makeHero('Klein'), withSpecial(makeHero('Subaki'), 'Miracle'), 40, 1);
+    t.end()
+  });
+
   // TODO:
   // heavy blade, guard, killer weapons, special slowing weapons
   // Damage-reduction special + rounding
-  // Miracle
   // Which specials ignore color advantage etc (aoe, stat based, atk based)
   // but damage and armor based specials kind of care.
   // Specials include static and conditional passive stats (even atk)
@@ -186,7 +194,6 @@ test('Specials', (assert) => {
   assert.test('Killer Weapon and color disadvantage', (t) => {
     // Killer weapon and atk, attacked, atk pattern => 3CD Special will trigger.
     // 41 attack, 32 def, weapon disadvantage => 1x2
-    // 25 def, 29 res => 14 from Iceberg.
     // Cherche hits for 63-25 = 38.
     simulateCombat(t, makeHero('Shanna'), makeHero('Cherche'), 39-38, 46-(1*2)-14);
     t.end()
