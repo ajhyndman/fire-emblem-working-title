@@ -1,5 +1,6 @@
 // @flow
 import test from 'tape';
+import { getSkillType } from 'fire-emblem-heroes-stats';
 
 import { calculateResult } from '../src/damageCalculation';
 import { getDefaultSkills } from '../src/heroHelpers';
@@ -21,8 +22,20 @@ function makeHero(
   };
 }
 
-function withSpecial(hero: HeroInstance, specialName: string): HeroInstance {
-  return {...hero, initialSpecialCharge: 100, skills: {...hero.skills, SPECIAL: specialName }};
+// Equips a skill for the hero.
+function withSkill(skillName: string, hero: HeroInstance): HeroInstance {
+  const skillType = getSkillType(skillName) || 'SEAL';
+  // $FlowIssue flow doesn't like the skills object literal
+  return {...hero, skills: {...hero.skills, [skillType]: skillName }};
+}
+
+function withCharge(chargeAmount: number, hero: HeroInstance): HeroInstance {
+  return {...hero, initialSpecialCharge: chargeAmount};
+}
+
+// Equips a Special for the hero and also readies it.
+function withSpecial(specialName: string, hero: HeroInstance): HeroInstance {
+  return withCharge(100, withSkill(specialName, hero));
 }
 
 function simulateCombat(
@@ -126,17 +139,17 @@ test('Vantage', (t) => {
 test('Specials', (assert) => {
   assert.test('Stat Based Specials', (t) => {
     // Beruka stats are 46, 40, 23, 37, 22
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Draconic Aura'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Draconic Aura', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-12);
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Dragon Fang'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Dragon Fang', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-20);
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Bonfire'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Bonfire', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-18);
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Ignis'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Ignis', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-29);
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Iceberg'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Iceberg', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-11);
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Glacies'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Glacies', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-17);
     t.end();
   });
@@ -148,43 +161,43 @@ test('Specials', (assert) => {
   });
 
   assert.test('Defense Reduction Special', (t) => {
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Moonbow'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Moonbow', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-11);
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Luna'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Luna', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-18);
     // The lifegain from Aether is not relevant because Beruka is full health when she attacks.
-    simulateCombat(t, withSpecial(makeHero('Beruka'), 'Aether'), makeHero('Beruka'),
+    simulateCombat(t, withSpecial('Aether', makeHero('Beruka')), makeHero('Beruka'),
       46-3, 46-3-18);
     t.end()
   });
 
   assert.test('Damage multiplier special', (t) => {
-    simulateCombat(t, withSpecial(makeHero('Odin'), 'Glimmer'), makeHero('Odin'), 43-10, 43-15);
-    simulateCombat(t, withSpecial(makeHero('Odin'), 'Night Sky'), makeHero('Odin'), 43-10, 43-15);
-    simulateCombat(t, withSpecial(makeHero('Odin'), 'Astra'), makeHero('Odin'), 43-10, 43-25);
+    simulateCombat(t, withSpecial('Glimmer', makeHero('Odin')), makeHero('Odin'), 43-10, 43-15);
+    simulateCombat(t, withSpecial('Night Sky', makeHero('Odin')), makeHero('Odin'), 43-10, 43-15);
+    simulateCombat(t, withSpecial('Astra', makeHero('Odin')), makeHero('Odin'), 43-10, 43-25);
     t.end()
   });
 
   assert.test('Lifesteal special', (t) => {
-    simulateCombat(t, makeHero('Odin'), withSpecial(makeHero('Odin'), 'Sol'), 43-10, 43-10+5);
-    simulateCombat(t, makeHero('Odin'), withSpecial(makeHero('Odin'), 'Noontime'), 43-10, 43-10+3);
-    simulateCombat(t, makeHero('Odin'), withSpecial(makeHero('Odin'), 'Daylight'), 43-10, 43-10+3);
+    simulateCombat(t, makeHero('Odin'), withSpecial('Sol', makeHero('Odin')), 43-10, 43-10+5);
+    simulateCombat(t, makeHero('Odin'), withSpecial('Noontime', makeHero('Odin')), 43-10, 43-10+3);
+    simulateCombat(t, makeHero('Odin'), withSpecial('Daylight', makeHero('Odin')), 43-10, 43-10+3);
     // Aether will increase damage dealt to 22 => heal to full
-    simulateCombat(t, makeHero('Odin'), withSpecial(makeHero('Odin'), 'Aether'), 43-22, 43);
+    simulateCombat(t, makeHero('Odin'), withSpecial('Aether', makeHero('Odin')), 43-22, 43);
     t.end()
   });
 
   assert.test('Miracle', (t) => {
-    simulateCombat(t, makeHero('Takumi'), withSpecial(makeHero('Est'), 'Miracle'), 40, 1);
+    simulateCombat(t, makeHero('Takumi'), withSpecial('Miracle', makeHero('Est')), 40, 1);
     // Miracle only prevents the first lethal attack. The second kills.
-    simulateCombat(t, makeHero('Klein'), withSpecial(makeHero('Est'), 'Miracle'), 40, 0);
+    simulateCombat(t, makeHero('Klein'), withSpecial('Miracle', makeHero('Est')), 40, 0);
     // Subaki survives the first attack so Miracle protects him from the second.
-    simulateCombat(t, makeHero('Klein'), withSpecial(makeHero('Subaki'), 'Miracle'), 40, 1);
+    simulateCombat(t, makeHero('Klein'), withSpecial('Miracle', makeHero('Subaki')), 40, 1);
     t.end()
   });
 
   // TODO:
-  // heavy blade, guard, killer weapons, special slowing weapons
+  // special cooldown increasing weapons
   // Damage-reduction special + rounding
   // Which specials ignore color advantage etc (aoe, stat based, atk based)
   // but damage and armor based specials kind of care.
@@ -192,14 +205,52 @@ test('Specials', (assert) => {
   // Lifesteal ignores overkill
 
   assert.test('Killer Weapon and color disadvantage', (t) => {
-    // Killer weapon and atk, attacked, atk pattern => 3CD Special will trigger.
-    // 41 attack, 32 def, weapon disadvantage => 1x2
-    // Cherche hits for 63-25 = 38.
+    // Cherche hits 38, Shanna hits for 1x2 and Killer weapon allows her special to trigger.
     simulateCombat(t, makeHero('Shanna'), makeHero('Cherche'), 39-38, 46-(1*2)-14);
     t.end()
   });
+  
+  assert.test('Guard', (t) => {
+    // Moonbow will trigger on Palla's second attack.
+    simulateCombat(t, makeHero('Palla'), makeHero('Chrom'), 42-25, 47-(12*2)-9);
+    const guardChrom = withSkill('Guard 3', makeHero('Chrom'));
+    // cooldown: 1 => guard prevents special from charging
+    simulateCombat(t, withCharge(1, makeHero('Palla')), guardChrom, 42-25, 47-(12*2));
+    // cooldown: 0 => special is already charged so it activates
+    simulateCombat(t, withCharge(2, makeHero('Palla')), guardChrom, 42-25, 47-(12*2)-9);
+    t.end()
+  });
+
+  assert.test('Heavy Blade', (t) => {
+    // Palla has 43 atk, 28 def. Draug has 38 atk, 39 def. Chrom has 53 atk 31 def.
+    // Give Draug a spd bane to guarantee Palla doubles him.
+    const bladePalla = withSkill('Heavy Blade 3', withSkill('Bonfire', makeHero('Palla')));
+    const slowDraug = {...makeHero('Draug'), bane: 'spd'};
+    // Blade: attack = 2 charges, attacked = 1 charge.
+    // cooldown: 3 => special will trigger
+    simulateCombat(t, bladePalla, slowDraug, 42-10, 50-(4*2)-14);
+    // cooldown: 2 => special will not trigger
+    simulateCombat(t, withSkill('Ignis', bladePalla), slowDraug, 42-10, 50-(4*2));
+    // cooldown: 3 + lower atk than foe => blade does not work, special will not trigger
+    simulateCombat(t, bladePalla, makeHero('Chrom'), 42-25, 47-(12*2));
+    t.end()
+  });
+
+  assert.test('Heavy Blade vs Guard', (t) => {
+    const bladePalla = withSkill('Heavy Blade 3', withSkill('Moonbow', makeHero('Palla')));
+    const slowGuardDraug = {...withSkill('Guard 3', makeHero('Draug')), bane: 'spd'};
+    // Blade vs Guard: attack = 1 charge, attacked = 0 charge.
+    // cooldown: 2 => special will not trigger
+    simulateCombat(t, bladePalla, slowGuardDraug, 42-10, 50-(4*2));
+    // cooldown: 1 => special will trigger
+    simulateCombat(t, withCharge(1, bladePalla), slowGuardDraug, 42-10, 50-(4*2)-11);
+    t.end();
+  });
+
   assert.end()
 });
 
 // TODO:
+// Sweep weapons
+// Brash Assault / Sol Katti
 // postcombat lifesteal (+ fury, no overheal, only if survives)

@@ -154,6 +154,7 @@ test('Stat Skills', (assert) => {
     testStatSkill(t, 'Fortress Def 3', 'def', 5);
     testStatSkill(t, 'Fortress Def 3', 'atk', -3);
 
+    testStatSkill(t, 'Life and Death 3', 'hp', 0);
     testStatSkill(t, 'Life and Death 3', 'atk', 5);
     testStatSkill(t, 'Life and Death 3', 'spd', 5);
     testStatSkill(t, 'Life and Death 3', 'def', -5);
