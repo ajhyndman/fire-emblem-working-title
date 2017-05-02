@@ -97,7 +97,7 @@ const unitList: Array<Hero> = [
   },
   {
     'shortName': 'Cavalier',
-    'name': 'Blue Cavalier (Robin GHB)',
+    'name': 'Blue Cavalier (Narcian GHB)',
     'moveType': 'Cavalry',
     'weaponType': 'Blue Tome',
     'skills': [

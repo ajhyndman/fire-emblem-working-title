@@ -14,7 +14,7 @@ const unitList: Array<Hero> = [
     'shortName': 'Xander',
     'name': 'Xander (Xander GHB)',
     'moveType': 'Cavalry',
-    'weaponType': 'Blue Lance',
+    'weaponType': 'Red Sword',
     'skills': [
       {
         'name': 'Siegfried',
