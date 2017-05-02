@@ -3,7 +3,7 @@ import type { Hero } from '..';
 
 // Times were entered in PDT (UTC - 7)
 const startTime = new Date('2017-05-02T00:00:00-07:00');
-const endTime = new Date('2017-05-05T23:59:00-07:00');
+const endTime = new Date('2017-05-07T23:59:00-07:00');
 
 // Layout, Xander Stats/Skills, and Enemy Weapons taken from http://i.imgur.com/9pQnSlL.png
 // Enemy stats taken from previous GHB.
@@ -68,6 +68,18 @@ const unitList: Array<Hero> = [
         'name': 'Wings of Mercy 3',
         'rarity': '-',
       },
+      {
+        'name': 'Solid Earth Balm',
+        'rarity': '-',
+      },
+      {
+        'name': 'Recover',
+        'rarity': '-',
+      },
+      {
+        'name': 'Hone Spd 3',
+        'rarity': '-',
+      },
     ],
     'stats': {
       '1': {
@@ -97,7 +109,19 @@ const unitList: Array<Hero> = [
     'weaponType': 'Green Tome',
     'skills': [
       {
-        'name': 'Rexcalibur+',
+        'name': 'Gronnwold+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Darting Blow 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Glacies',
+        'rarity': '-',
+      },
+      {
+        'name': 'Hone Cavalry',
         'rarity': '-',
       },
       {
@@ -144,6 +168,10 @@ const unitList: Array<Hero> = [
         'name': 'Quick Riposte 3',
         'rarity': '-',
       },
+      {
+        'name': 'Armored Blow 3',
+        'rarity': '-',
+      },
     ],
     'stats': {
       '1': {
@@ -182,6 +210,10 @@ const unitList: Array<Hero> = [
       },
       {
         'name': 'Quick Riposte 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Armored Blow 3',
         'rarity': '-',
       },
     ],
