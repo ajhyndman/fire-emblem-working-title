@@ -109,7 +109,7 @@ const unitList: Array<Hero> = [
     'weaponType': 'Green Tome',
     'skills': [
       {
-        'name': 'Gronnwold+',
+        'name': 'Gronnwolf+',
         'rarity': '-',
       },
       {
