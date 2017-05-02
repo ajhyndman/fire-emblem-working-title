@@ -73,7 +73,7 @@ const StatSheet = ({
         <HeroPortrait
           name={heroInstance.name}
           rarity={heroInstance.rarity}
-          weaponType={getHero(heroInstance).weaponType}
+          weaponType={getHero(heroInstance.name).weaponType}
         />
       </div>
       <div className="right col">
