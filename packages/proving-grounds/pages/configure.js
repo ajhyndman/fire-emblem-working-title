@@ -3,7 +3,7 @@ import 'babel-polyfill';
 import React from 'react';
 import withRedux from 'next-redux-wrapper';
 import { isEmpty } from 'ramda';
-import { getDefaultSkills } from 'fire-emblem-heroes-calculator';
+import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 
 import HeroConfigurer from '../src/components/HeroConfigurer';
 import Overlay from '../src/components/Overlay';
@@ -21,13 +21,7 @@ type Props = {
 };
 
 // TODO: redirect to non-configure page instead of showing an Anna configuration.
-const defaultInstance = {
-  name: 'Anna',
-  bane: undefined,
-  boon: undefined,
-  rarity: 5,
-  skills: getDefaultSkills('Anna', 5),
-};
+const defaultInstance = getDefaultInstance('Anna');
 
 class Configure extends React.Component {
   props: Props;

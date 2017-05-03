@@ -25,9 +25,10 @@ export type HeroInstance = {
   +bane: ?Stat;
   +mergeLevel: MergeLevel;
   +skills: InstanceSkills;
-  // Note: many skills still assume full health.
-  +initialHpMissing: number;
-  +initialSpecialCharge: number;
+  +state: {
+    +hpMissing: number;
+    +specialCharge: number;
+  }
 };
 
 // NOT USED YET: Just conjecture for potential future support of
@@ -58,6 +59,8 @@ export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstan
   rarity: rarity,
   mergeLevel: 0,
   skills: getDefaultSkills(name, rarity),
-  initialHpMissing: 0,
-  initialSpecialCharge: 0,
+  state: {
+    hpMissing: 0,
+    specialCharge: 0,
+  },
 });

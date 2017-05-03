@@ -304,11 +304,11 @@ export const calculateResult = (
   const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
   let maxCds: Array<number> = [getSpecialCooldown(attacker), getSpecialCooldown(defender)];
   let specialCds: Array<number> = [
-    maxCds[0] === -1 ? -1 : Math.max(0, maxCds[0] - attacker.initialSpecialCharge),
-    maxCds[1] === -1 ? -1 : Math.max(0, maxCds[1] - defender.initialSpecialCharge),
+    maxCds[0] === -1 ? -1 : Math.max(0, maxCds[0] - attacker.state.specialCharge),
+    maxCds[1] === -1 ? -1 : Math.max(0, maxCds[1] - defender.state.specialCharge),
   ];
   let numAttacks = [0, 0];
-  let healths = [maxHps[0] - attacker.initialHpMissing, maxHps[1] - defender.initialHpMissing];
+  let healths = [maxHps[0] - attacker.state.hpMissing, maxHps[1] - defender.state.hpMissing];
   // AOE Damage
   const aoeDamage = specialCds[0] === 0
     ? getSpecialAOEDamageAmount(specialNames[0], attacker, defender) : 0;
@@ -406,13 +406,23 @@ export const calculateResult = (
   }
 
   return {
-    attackerSpecialDamage: specialDamages[0],
-    defenderSpecialDamage: specialDamages[1],
-    attackerNumAttacks: numAttacks[0],
-    attackerDamage: damages[0],
-    attackerHpRemaining: healths[0],
-    defenderNumAttacks: numAttacks[1],
-    defenderDamage: damages[1],
-    defenderHpRemaining: healths[1],
+    combatInfo: {
+      attackerDamage: damages[0],
+      attackerNumAttacks: numAttacks[0],
+      attackerSpecialDamage: specialDamages[0],
+      attackerHp: healths[0],
+      defenderDamage: damages[1],
+      defenderNumAttacks: numAttacks[1],
+      defenderSpecialDamage: specialDamages[1],
+      defenderHp: healths[1],
+    },
+    attackerState: {
+      hpMissing: maxHps[0] - healths[0],
+      specialCharge: maxCds[0] === -1 ? 0 : maxCds[0] - specialCds[0],
+    },
+    defenderState: {
+      hpMissing: maxHps[1] - healths[1],
+      specialCharge: maxCds[1] === -1 ? 0 : maxCds[1] - specialCds[1],
+    },
   };
 };

@@ -15,6 +15,9 @@ const validateInstance = (instance: ?HeroInstance): boolean => {
   if (!(typeof instance.boon === 'string' || instance.boon === undefined)) return false;
   if (!(typeof instance.bane === 'string' || instance.bane === undefined)) return false;
   if (typeof instance.mergeLevel !== 'number') return false;
+  if (instance.skills === undefined || instance.state === undefined) return false;
+  if (typeof instance.state.hpMissing !== 'number') return false;
+  if (typeof instance.state.specialCharge !== 'number') return false;
 
   const skillsAllValid = all(
     (skill) => {

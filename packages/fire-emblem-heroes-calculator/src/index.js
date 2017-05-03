@@ -5,7 +5,7 @@ export {
 } from './damageCalculation';
 
 export {
-  // canInherit,
+  getCurrentHp,
   getDefaultSkills,
   getInheritableSkills,
   getStat,

@@ -70,7 +70,7 @@ function testStatSkill(
 ) {
   const skillType = getSkillType(skillName) || 'SEAL';
   // Whether or not a hero can actually equip a skill doesn't matter to getStat.
-  const hero = {...getDefaultInstance('Anna'), initialHpMissing: missingHp};
+  const hero = {...getDefaultInstance('Anna'), state: { hpMissing: missingHp, specialCharge: 0}};
   // $FlowIssue flow doesn't like the skills object literal
   const withoutSkill = {...hero, skills: {...hero.skills, [skillType]: undefined}};
   // $FlowIssue flow doesn't like the skills object literal

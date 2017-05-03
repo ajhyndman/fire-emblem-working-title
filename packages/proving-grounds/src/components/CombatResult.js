@@ -90,12 +90,12 @@ const CombatResult = ({ leftHero, rightHero }: CombatResultProps) => {
             <h1>{`${
               !isNaN(getStat(leftHero, 'hp')) ? getStat(leftHero, 'hp') : '?'
             } → ${
-              !isNaN(result.attackerHpRemaining) ? result.attackerHpRemaining : '?'
+              !isNaN(result.combatInfo.attackerHp) ? result.combatInfo.attackerHp : '?'
             }`}</h1>
             <h2><DamageInfo
-                  damage={result.attackerDamage}
-                  numAttacks={result.attackerNumAttacks}
-                  specialDamage={result.attackerSpecialDamage}
+                  damage={result.combatInfo.attackerDamage}
+                  numAttacks={result.combatInfo.attackerNumAttacks}
+                  specialDamage={result.combatInfo.attackerSpecialDamage}
                 /></h2>
           </div>
           <img
@@ -112,12 +112,12 @@ const CombatResult = ({ leftHero, rightHero }: CombatResultProps) => {
             <h1>{`${
               !isNaN(getStat(rightHero, 'hp')) ? getStat(rightHero, 'hp') : '?'
             } → ${
-              !isNaN(result.defenderHpRemaining) ? result.defenderHpRemaining : '?'
+              !isNaN(result.combatInfo.defenderHp) ? result.combatInfo.defenderHp : '?'
             }`}</h1>
             <h2><DamageInfo
-                  damage={result.defenderDamage}
-                  numAttacks={result.defenderNumAttacks}
-                  specialDamage={result.defenderSpecialDamage}
+                  damage={result.combatInfo.defenderDamage}
+                  numAttacks={result.combatInfo.defenderNumAttacks}
+                  specialDamage={result.combatInfo.defenderSpecialDamage}
                 /></h2>
           </div>
         </div>

@@ -290,12 +290,16 @@ export const getWeaponColor = (instance: HeroInstance) => {
   }
 };
 
+export function getCurrentHp(hero: HeroInstance): number {
+  return getStat(hero, 'hp') - hero.state.hpMissing;
+}
+
 // Returns whether or not hp >= X% of hp, using the hp at the start of combat.
 export function hpAboveThreshold(hero: HeroInstance, hpPercent: number): boolean {
-  return (getStat(hero, 'hp') - hero.initialHpMissing) >= (getStat(hero, 'hp') * hpPercent / 100);
+  return getCurrentHp(hero) >= (getStat(hero, 'hp') * hpPercent / 100);
 }
 
 // Returns whether or not hp <= X% of hp, using the hp at the start of combat.
 export function hpBelowThreshold(hero: HeroInstance, hpPercent: number): boolean {
-  return (getStat(hero, 'hp') - hero.initialHpMissing) <= (getStat(hero, 'hp') * hpPercent / 100);
+  return getCurrentHp(hero) <= (getStat(hero, 'hp') * hpPercent / 100);
 }

@@ -4,6 +4,7 @@ import { getSkillType } from 'fire-emblem-heroes-stats';
 
 import { calculateResult } from '../src/damageCalculation';
 import { getDefaultSkills } from '../src/heroHelpers';
+
 import { getDefaultInstance } from '../src/heroInstance';
 import type { HeroInstance, Rarity } from '../src/heroInstance';
 
@@ -30,12 +31,16 @@ function withSkill(skillName: string, hero: HeroInstance): HeroInstance {
 }
 
 function withCharge(chargeAmount: number, hero: HeroInstance): HeroInstance {
-  return {...hero, initialSpecialCharge: chargeAmount};
+  return {...hero, state: {...hero.state, specialCharge: chargeAmount}};
 }
 
 // Equips a Special for the hero and also readies it.
 function withSpecial(specialName: string, hero: HeroInstance): HeroInstance {
   return withCharge(100, withSkill(specialName, hero));
+}
+
+function withHpMissing(hpMissing: number, hero: HeroInstance): HeroInstance {
+  return {...hero, state: {...hero.state, hpMissing}};
 }
 
 function simulateCombat(
@@ -46,12 +51,13 @@ function simulateCombat(
   expectedHp2: number,
 ) {
   const result = calculateResult(hero1, hero2);
-  if (result.attackerHpRemaining !== expectedHp1 || result.defenderHpRemaining !== expectedHp2) {
+  if (result.combatInfo.attackerHp !== expectedHp1
+      || result.combatInfo.defenderHp !== expectedHp2) {
     console.log(hero1.name, 'vs', hero2.name);
     console.log('Combat Result:\n', result);
   }
-  t.equal(result.attackerHpRemaining, expectedHp1);
-  t.equal(result.defenderHpRemaining, expectedHp2);
+  t.equal(result.combatInfo.attackerHp, expectedHp1);
+  t.equal(result.combatInfo.defenderHp, expectedHp2);
   return result;
 }
 
@@ -63,9 +69,9 @@ test('Normal Combat', (t) => {
 test('Quick Riposte and Gem Weapon', (t) => {
   t.plan(5);
   const result = simulateCombat(t, makeHero('Hana'), makeHero('Subaki'), 0, 40-(2*0));
-  t.equal(result.attackerNumAttacks, 2);
-  t.equal(result.defenderNumAttacks, 2);
-  t.equal(result.defenderDamage, 33);
+  t.equal(result.combatInfo.attackerNumAttacks, 2);
+  t.equal(result.combatInfo.defenderNumAttacks, 2);
+  t.equal(result.combatInfo.defenderDamage, 33);
 });
 
 test('Raven Weapon', (t) => {
@@ -92,8 +98,8 @@ test('Effective Weapons', (t) => {
 test('Brave Weapon and Sword Breaker', (t) => {
   t.plan(4);
   const result = simulateCombat(t, makeHero('Abel'), makeHero('Hana'), 44, 0);
-  t.equal(result.attackerNumAttacks, 4);
-  t.equal(result.defenderNumAttacks, 1);
+  t.equal(result.combatInfo.attackerNumAttacks, 4);
+  t.equal(result.combatInfo.defenderNumAttacks, 1);
 });
 
 test('Wary Fighter', (t) => {
@@ -125,7 +131,7 @@ test('Desperation', (t) => {
   t.plan(4);
   const desperationNino = makeHero('Nino', 5, {PASSIVE_B: 'Desperation 3'});
   simulateCombat(t, desperationNino, makeHero('Hector'), 0, 52-27);
-  simulateCombat(t, {...desperationNino, initialHpMissing: 10}, makeHero('Hector'), 33-10, 0);
+  simulateCombat(t, withHpMissing(10, desperationNino), makeHero('Hector'), 33-10, 0);
 });
 
 test('Vantage', (t) => {
@@ -133,7 +139,7 @@ test('Vantage', (t) => {
   const deathBlowCordelia = makeHero('Cordelia', 5, {PASSIVE_A: 'Death Blow 3'});
   const vantageTakumi = makeHero('Takumi', 5, {PASSIVE_B: 'Vantage 3'});
   simulateCombat(t, deathBlowCordelia, vantageTakumi, 40, 0);
-  simulateCombat(t, deathBlowCordelia, {...vantageTakumi, initialHpMissing: 10}, 0, 40-10);
+  simulateCombat(t, deathBlowCordelia, withHpMissing(10, vantageTakumi), 0, 40-10);
 });
 
 test('Specials', (assert) => {

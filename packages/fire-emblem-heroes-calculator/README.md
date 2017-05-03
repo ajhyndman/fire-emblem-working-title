@@ -42,14 +42,24 @@ var Sharena = calculator.getDefaultInstance('Sharena');
 calculator.calculateResult(Anna, Sharena);
 
 // => {
-//   "attackerSpecialDamage": 0,
-//   "defenderSpecialDamage": 0,
-//   "attackerNumAttacks": 1,
-//   "attackerDamage": 25,
-//   "attackerHpRemaining": 24,
-//   "defenderNumAttacks": 1,
-//   "defenderDamage": 17,
-//   "defenderHpRemaining": 18
+//   combatInfo: {
+//     "attackerDamage": 25,
+//     "attackerNumAttacks": 1,
+//     "attackerSpecialDamage": 0,
+//     "attackerHp": 24,
+//     "defenderSpecialDamage": 0,
+//     "defenderNumAttacks": 1,
+//     "defenderDamage": 17,
+//     "defenderHp": 18
+//   }
+//   attackerState: {
+//     hpMissing: 17
+//     specialCharge: 2,
+//   },
+//   defenderState: {
+//     hpMissing: 25
+//     specialCharge: 0,
+//   },
 // }
 
 calculator.getInheritableSkills('Anna', 'WEAPON');

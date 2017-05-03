@@ -47,8 +47,8 @@ type SerialInstance = [
   string | void, // weapon
   string | void, // sacred seal
   MergeLevel, // mergeLevel
-  number, // initialHpMissing
-  number, // initialSpecialCharge
+  number, // hpMissing
+  number, // specialCharge
 ];
 
 type SerialInstanceWithDefaults = [
@@ -64,8 +64,8 @@ type SerialInstanceWithDefaults = [
   'd' | string | void, // weapon
   'd' | string | void, // sacred seal
   'd' | MergeLevel, // mergeLevel
-  'd' | number, // initialHpMissing
-  'd' | number, // initialSpecialCharge
+  'd' | number, // hpMissing
+  'd' | number, // specialCharge
 ];
 
 const statKeyToId = { hp: 1, atk: 2, spd: 3, def: 4, res: 5 };
@@ -79,16 +79,16 @@ export const flattenInstance = (instance: HeroInstance): SerialInstance => [
   instance.rarity,
   // I'm avoiding Ramda path() calls here, just because flow
   // does better inference this way.  :(
-  instance.skills && instance.skills.ASSIST,
-  instance.skills && instance.skills.PASSIVE_A,
-  instance.skills && instance.skills.PASSIVE_B,
-  instance.skills && instance.skills.PASSIVE_C,
-  instance.skills && instance.skills.SPECIAL,
-  instance.skills && instance.skills.WEAPON,
-  instance.skills && instance.skills.SEAL,
+  instance.skills.ASSIST,
+  instance.skills.PASSIVE_A,
+  instance.skills.PASSIVE_B,
+  instance.skills.PASSIVE_C,
+  instance.skills.SPECIAL,
+  instance.skills.WEAPON,
+  instance.skills.SEAL,
   instance.mergeLevel,
-  instance.initialHpMissing,
-  instance.initialSpecialCharge,
+  instance.state.hpMissing,
+  instance.state.specialCharge,
 ];
 
 // Converts a list of values to a hero instance.
@@ -106,8 +106,8 @@ export const extractInstance = ([
   weapon,
   seal,
   mergeLevel,
-  initialHpMissing,
-  initialSpecialCharge,
+  hpMissing,
+  specialCharge,
 // $FlowIssue bane/boon string is incompatible with ?Stat
 ]: SerialInstance): HeroInstance => ({
   name,
@@ -126,8 +126,10 @@ export const extractInstance = ([
     PASSIVE_C: passiveC,
     SEAL: seal,
   },
-  initialHpMissing,
-  initialSpecialCharge,
+  state: {
+    hpMissing,
+    specialCharge,
+  },
 });
 
 // Identical to flattenInstance except that any default values will be replaced with USE_DEFAULT
