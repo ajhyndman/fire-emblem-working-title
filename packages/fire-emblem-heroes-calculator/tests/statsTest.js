@@ -2,7 +2,7 @@
 import test from 'tape';
 import { getSkillType } from 'fire-emblem-heroes-stats';
 
-import type { Stat } from '../src/heroInstance';
+import type { HeroInstance, Stat } from '../src/heroInstance';
 import { getDefaultInstance } from '../src/heroInstance';
 import { getStat } from '../src/heroHelpers';
 
@@ -60,6 +60,10 @@ test('merge bonuses', (t) => {
   t.equal(getStat(olwen5, 'def', 40), 20   +2);
 });
 
+function withHpMissing(hpMissing: number, hero: HeroInstance): HeroInstance {
+  return {...hero, state: {...hero.state, hpMissing}};
+}
+
 function testStatSkill(
   t, // test object
   skillName: string,
@@ -70,7 +74,7 @@ function testStatSkill(
 ) {
   const skillType = getSkillType(skillName) || 'SEAL';
   // Whether or not a hero can actually equip a skill doesn't matter to getStat.
-  const hero = {...getDefaultInstance('Anna'), state: { hpMissing: missingHp, specialCharge: 0}};
+  const hero = withHpMissing(missingHp, getDefaultInstance('Anna'));
   // $FlowIssue flow doesn't like the skills object literal
   const withoutSkill = {...hero, skills: {...hero.skills, [skillType]: undefined}};
   // $FlowIssue flow doesn't like the skills object literal

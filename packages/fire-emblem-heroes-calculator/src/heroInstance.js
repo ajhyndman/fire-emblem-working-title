@@ -1,6 +1,5 @@
 // @flow
-
-import { getDefaultSkills } from './heroHelpers';
+import { getDefaultSkills, resetBuffs } from './heroHelpers';
 
 
 export type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
@@ -17,6 +16,15 @@ export type InstanceSkills = {
   +SEAL: string | void;
 };
 
+export type Buffs = {
+  // HP cannot be buffed. It is in the buffs object for convenience.
+  +hp: number;
+  +atk: number;
+  +spd: number;
+  +def: number;
+  +res: number;
+};
+
 export type HeroInstance = {
   // custom: false,
   +name: string;
@@ -28,6 +36,8 @@ export type HeroInstance = {
   +state: {
     +hpMissing: number;
     +specialCharge: number;
+    +buffs: Buffs;
+    +debuffs: Buffs;
   }
 };
 
@@ -62,5 +72,7 @@ export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstan
   state: {
     hpMissing: 0,
     specialCharge: 0,
+    buffs: resetBuffs(),
+    debuffs: resetBuffs(),
   },
 });

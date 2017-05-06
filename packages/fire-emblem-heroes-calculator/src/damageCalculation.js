@@ -417,10 +417,12 @@ export const calculateResult = (
       defenderHp: healths[1],
     },
     attackerState: {
+      ...attacker.state,
       hpMissing: maxHps[0] - healths[0],
       specialCharge: maxCds[0] === -1 ? 0 : maxCds[0] - specialCds[0],
     },
     defenderState: {
+      ...defender.state,
       hpMissing: maxHps[1] - healths[1],
       specialCharge: maxCds[1] === -1 ? 0 : maxCds[1] - specialCds[1],
     },

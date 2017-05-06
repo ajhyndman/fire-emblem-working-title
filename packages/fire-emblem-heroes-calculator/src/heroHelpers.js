@@ -34,7 +34,7 @@ import type {
 } from 'fire-emblem-heroes-stats';
 
 import { getStatValue, hpRequirementSatisfied } from './skillHelpers';
-import type { HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
+import type { Buffs, HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
 
 
 export const getWeaponType = (instance: HeroInstance): WeaponType =>
@@ -262,7 +262,9 @@ export const getStat = (
     + mergeBonus
     + getStatValue(instance, 'PASSIVE_A', statKey, isAttacker)
     + getStatValue(instance, 'SEAL', statKey, isAttacker)
-    + getStatValue(instance, 'WEAPON', statKey, isAttacker);
+    + getStatValue(instance, 'WEAPON', statKey, isAttacker)
+    + instance.state.buffs[statKey]
+    - instance.state.debuffs[statKey];
 };
 
 export const getRange = (instance: HeroInstance) => 
@@ -303,3 +305,11 @@ export function hpAboveThreshold(hero: HeroInstance, hpPercent: number): boolean
 export function hpBelowThreshold(hero: HeroInstance, hpPercent: number): boolean {
   return getCurrentHp(hero) <= (getStat(hero, 'hp') * hpPercent / 100);
 }
+
+export const resetBuffs = (): Buffs => ({
+  'hp': 0,
+  'atk': 0,
+  'spd': 0,
+  'def': 0,
+  'res': 0,
+});
