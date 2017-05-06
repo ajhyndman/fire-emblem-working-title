@@ -30,6 +30,10 @@ import {
   getSpecialMitigationMultiplier,
   getSpecialOffensiveMultiplier,
   getSpecialType,
+  withPostCombatBuffs,
+  withPostCombatDebuffs,
+  withTurnStartBuffs,
+  withTurnStartDebuffs,
 } from './skillHelpers';
 import type { HeroInstance } from './heroInstance';
 import type { SpecialType } from './skillHelpers';
@@ -236,17 +240,8 @@ const hitDmg = (
   getSpecialMitigationMultiplier(attackerSpecial),
 );
 
-/**
- * Calculate the resulting damage per hit, number of hits, and final HP for each hero.
- *
- * @param {Hero} attacker
- * @param {Hero} defender
- * @returns {object}
- */
-export const calculateResult = (
-  attacker: HeroInstance,
-  defender: HeroInstance,
-) => {
+// Returns a list of 0s and 1s, representing hero-0 and hero-1 hitting each other.
+export function computeAttackOrder(attacker: HeroInstance, defender: HeroInstance): Array<number> {
   // First, check for the ability to retaliate and skills that affect attack order.
   const attackerHasFollowup = doesFollowUp(attacker, defender, true);
   const defenderCanRetaliate = canRetaliate(attacker, defender);
@@ -260,40 +255,61 @@ export const calculateResult = (
 
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
-  if (getSkillName(attacker, 'WEAPON') !== '') {
-    // Vantage!
-    if (defenderCountersFirst) {
-      attackOrder.push(1);
-    }
-    // attacker hits defender
+  if (getSkillName(attacker, 'WEAPON') === '') {
+    return [];
+  }
+  // Vantage!
+  if (defenderCountersFirst) {
+    attackOrder.push(1);
+  }
+  // attacker hits defender
+  attackOrder.push(0);
+  if (hasBraveWeapon(attacker)) {
+    attackOrder.push(0);
+  }
+  // Desperation!
+  if (attackerImmediateFollowup) {
     attackOrder.push(0);
     if (hasBraveWeapon(attacker)) {
       attackOrder.push(0);
     }
-    // Desperation!
-    if (attackerImmediateFollowup) {
+  }
+  // defender retaliates
+  if (defenderCanRetaliate && !defenderCountersFirst) {
+    attackOrder.push(1);
+  }
+  // attacker follow-up
+  if (attackerHasFollowup && !attackerImmediateFollowup) {
+    attackOrder.push(0);
+    if (hasBraveWeapon(attacker)) {
       attackOrder.push(0);
-      if (hasBraveWeapon(attacker)) {
-        attackOrder.push(0);
-      }
-    }
-    // defender retaliates
-    if (defenderCanRetaliate && !defenderCountersFirst) {
-      attackOrder.push(1);
-    }
-    // attacker follow-up
-    if (attackerHasFollowup && !attackerImmediateFollowup) {
-      attackOrder.push(0);
-      if (hasBraveWeapon(attacker)) {
-        attackOrder.push(0);
-      }
-    }
-    // defender follow-up
-    if (defenderHasFollowup) {
-      attackOrder.push(1);
     }
   }
-  // TODO: decide if Galeforce will trigger.
+  // defender follow-up
+  if (defenderHasFollowup) {
+    attackOrder.push(1);
+  }
+  return attackOrder;
+}
+
+/**
+ * Calculate the resulting damage per hit, number of hits, and final HP for each hero.
+ *
+ * @param {Hero} attacker
+ * @param {Hero} defender
+ * @returns {object}
+ */
+export const calculateResult = (
+  attacker: HeroInstance,
+  defender: HeroInstance,
+) => {
+  // Apply start-of-turn buffs/debuffs
+  attacker = withTurnStartBuffs(attacker, true);
+  defender = withTurnStartBuffs(defender, false);
+  attacker = withTurnStartDebuffs(attacker, defender);
+  defender = withTurnStartDebuffs(defender, attacker);
+
+  const attackOrder = computeAttackOrder(attacker, defender);
 
   const heroes = [attacker, defender];
   const damages = [hitDmg(attacker, defender, true), hitDmg(defender, attacker, false)];
@@ -375,6 +391,7 @@ export const calculateResult = (
       }
     }
   }
+  // TODO: Galeforce (if specialCd[0] === 0). Effectively another round of combat but same turn.
 
   // Post combat damage and healing. These effects are simultaneous and nonlethal.
   let postCombatDmg = [0, 0];
@@ -384,6 +401,10 @@ export const calculateResult = (
   // Poison Strike (only trigger while attacking and only if the attacker survived)
   if (healths[0] > 0 && hasSkill(heroes[0], 'PASSIVE_B', 'Poison Strike')) {
     postCombatDmg[1] += getSkillNumbers(heroes[0], 'PASSIVE_B')[0];
+  }
+  // Deathly Dagger (same conditions as poison strike). 1st number is debuff, 2nd is damage.
+  if (healths[0] > 0 && hasSkill(heroes[0], 'WEAPON', 'Deathly Dagger')) {
+    postCombatDmg[1] += getSkillNumbers(heroes[0], 'WEAPON')[1];
   }
   for (let heroIndex of [0, 1]) {
     // Fury
@@ -404,6 +425,12 @@ export const calculateResult = (
       );
     }
   }
+
+  // Apply new buffs and new debuffs.
+  attacker = withPostCombatBuffs(attacker, true);
+  defender = withPostCombatBuffs(defender, false);
+  attacker = withPostCombatDebuffs(attacker, defender, true);
+  defender = withPostCombatDebuffs(defender, attacker, false);
 
   return {
     combatInfo: {

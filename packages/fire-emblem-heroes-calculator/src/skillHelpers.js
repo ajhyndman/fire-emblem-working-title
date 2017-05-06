@@ -21,6 +21,7 @@ import {
   hasSkill,
   hpAboveThreshold,
   hpBelowThreshold,
+  resetBuffs,
 } from './heroHelpers';
 import type { HeroInstance, Stat } from './heroInstance';
 
@@ -257,3 +258,44 @@ export function getSpecialChargeWhenAttacked(otherHero: HeroInstance) {
   return (hasSkill(otherHero, 'PASSIVE_B', 'Guard')) ? 0 : 1;
 }
 
+/*
+ * Buffs and Debuffs
+ */
+
+// Returns a new hero with updated buffs
+export function withTurnStartBuffs(hero: HeroInstance, isAttacker: boolean) {
+  // Buffs from previous turns expire at the start of the turn.
+  let buffs = isAttacker ? resetBuffs() : hero.state.buffs;
+  // TODO: defiant X
+  return {...hero, state: {...hero.state, buffs}};
+}
+
+// Returns a new version of hero with debuffs applied by otherHero
+export function withTurnStartDebuffs(
+  hero: HeroInstance,
+  otherHero: HeroInstance,
+  isAttacker: boolean,
+) {
+  let debuffs = hero.state.debuffs;
+  // TODO: threaten X
+  return {...hero, state: {...hero.state, debuffs}};
+}
+
+// Returns a new hero with updated buffs
+export function withPostCombatBuffs(hero: HeroInstance, isAttacker: boolean) {
+  let buffs = hero.state.buffs;
+  // TODO: rogue dagger
+  return {...hero, state: {...hero.state, buffs}};
+}
+
+// Returns a new version of hero with debuffs applied by otherHero
+export function withPostCombatDebuffs(
+  hero: HeroInstance,
+  otherHero: HeroInstance,
+  isAttacker: boolean,
+) {
+  // Debuffs from previous turns expire after attacking.
+  let debuffs = isAttacker ? resetBuffs() : hero.state.buffs;
+  // TODO: seal X
+  return {...hero, state: {...hero.state, debuffs}};
+}
