@@ -65,28 +65,21 @@ calculator.calculateResult(Anna, Sharena);
 calculator.getInheritableSkills('Anna', 'WEAPON');
 
 // => [
-//   {
-//     "name": "Brave Axe",
-//     "spCost": 200,
-//     "damage(mt)": 5,
-//     "range(rng)": 1,
-//     "effect": "Spd-5. Attack twice when initiating combat.",
-//     "exclusive?": "No",
-//     "type": "WEAPON",
-//     "weaponType": "Green Axe"
-//   },
-//   {
-//     "name": "Brave Axe+",
-//     "spCost": 300,
-//     "damage(mt)": 8,
-//     "range(rng)": 1,
-//     "effect": "Spd-5. Attack twice when initiating combat.",
-//     "exclusive?": "No",
-//     "type": "WEAPON",
-//     "weaponType": "Green Axe"
-//   },
-//
-//   ...
+//   'Brave Axe',
+//   'Brave Axe+',
+//   'Carrot Axe',
+//   'Carrot Axe+',
+//   'Emerald Axe',
+//   'Emerald Axe+',
+//   'Hammer',
+//   'Hammer+',
+//   'Iron Axe',
+//   'Killer Axe',
+//   'Killer Axe+',
+//   'Nóatún',
+//   'Silver Axe',
+//   'Silver Axe+',
+//   'Steel Axe'
 // ]
 
 calculator.getStat(

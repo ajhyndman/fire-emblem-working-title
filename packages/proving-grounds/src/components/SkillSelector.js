@@ -19,7 +19,7 @@ import type { Dispatch } from '../reducer';
 type Props = {
   activeSkillName: string;
   dispatch: Dispatch;
-  onClose: (skill: ?Object) => void;
+  onClose: (skillName: string | void) => void;
   heroInstance: HeroInstance;
   showGuide: boolean;
   skillType: SkillType;
@@ -66,16 +66,16 @@ const SkillSelector = ({
       />
     </div>
     {map(
-      skill => (
+      skillName => (
         <div
-          key={skill ? skill.name : ''}
+          key={skillName ? skillName : ''}
           className="skill-option"
-          onClick={() => onClose(skill)}
+          onClick={() => onClose(skillName)}
         >
           <Skill
-            active={(skill ? skill.name : '') === activeSkillName}
+            active={(skillName ? skillName : '') === activeSkillName}
             showGuide={showGuide}
-            name={skill ? skill.name : '--'}
+            name={skillName ? skillName : '--'}
             type={skillType}
           />
         </div>
@@ -83,10 +83,7 @@ const SkillSelector = ({
       // TODO: Consider the merits of this filter.
       // Maybe the tradeoff in power for simplicity isn't worthwhile.
       filter(
-        compose(
-          (skillName) => skillType === 'SEAL' || isMaxTier(skillName),
-          propOr('', 'name'),
-        ),
+        (skillName) => skillType === 'SEAL' || isMaxTier(skillName),
         [undefined].concat(getInheritableSkills(heroInstance.name, skillType)),
       ),
     )}

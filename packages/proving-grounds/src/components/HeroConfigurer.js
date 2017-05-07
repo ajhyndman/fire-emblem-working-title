@@ -319,14 +319,14 @@ const HeroConfigurer = withState(
                 ['skills', state.skillType],
                 heroInstance,
               )}
-              onClose={skill => {
+              onClose={skillName => {
                 // This one is technically correct, skillType could be voided before the
                 // callback is triggered.  But I know it won't be.
                 // $FlowIssue
                 dispatch({
                   type: 'UPDATE_SKILL',
                   skillType: state.skillType,
-                  skill: skill ? skill.name : undefined,
+                  skill: skillName,
                 });
                 setState({ open: false, skillType: undefined });
               }}

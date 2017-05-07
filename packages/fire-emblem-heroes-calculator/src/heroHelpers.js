@@ -173,7 +173,7 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
   return true;
 });
 
-// Returns a list of skills that a hero can obtain.
+// Returns a list of skill names that a hero can obtain.
 export function getInheritableSkills(name: string, skillType: SkillType): Array<Skill> {
   const hero = getHero(name);
   // Cast to any to prevent flow issues
@@ -191,7 +191,7 @@ export function getInheritableSkills(name: string, skillType: SkillType): Array<
     map((skillName) => getSkillObject(skillType, skillName)),
     map(prop('name')),
   )(hero.skills);
-  return sort(ascend(prop('name')), union(inheritable, ownSkills));
+  return map(prop('name'), sort(ascend(prop('name')), union(inheritable, ownSkills)));
 }
 
 export const hasBraveWeapon: (instance: HeroInstance)=> boolean = compose(

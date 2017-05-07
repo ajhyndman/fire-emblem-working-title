@@ -5,15 +5,9 @@ import { contains, map, prop } from 'ramda';
 import { getDefaultSkills, getInheritableSkills } from '../src/heroHelpers';
 
 
-// $FlowIssue apparently map and prop are hard for flow.
-function getSkills(name: string, skillType: SkillType): Array<string> {
-  // $FlowIssue
-  return map(prop('name'), getInheritableSkills(name, skillType));
-}
-
 test('inheritableTomes', (t) => {
   t.plan(1);
-  const weapons = getSkills('Leo', 'WEAPON');
+  const weapons = getInheritableSkills('Leo', 'WEAPON');
   t.deepEqual(weapons, [
     'Bolganone',
     'Bolganone+',
@@ -36,7 +30,7 @@ test('inheritableTomes', (t) => {
 
 test('inheritableBreaths', (t) => {
   t.plan(1);
-  const weapons = getSkills('Fae', 'WEAPON');
+  const weapons = getInheritableSkills('Fae', 'WEAPON');
   t.deepEqual(weapons, [
     'Dark Breath',
     'Dark Breath+',
@@ -53,7 +47,7 @@ test('inheritableBreaths', (t) => {
 
 test('inheritableSeals', (t) => {
   t.plan(3);
-  const seals = getSkills('Lilina', 'SEAL');
+  const seals = getInheritableSkills('Lilina', 'SEAL');
   t.equal(contains('Attack +1', seals), true);
   t.equal(contains('HP +3', seals), true);
   t.equal(contains('Speed +1', seals), true);
@@ -61,9 +55,9 @@ test('inheritableSeals', (t) => {
 
 test('restrictions', (t) => {
   t.plan(10);
-  const aPassives = getSkills('Catria', 'PASSIVE_A');
-  const bPassives = getSkills('Catria', 'PASSIVE_B');
-  const cPassives = getSkills('Catria', 'PASSIVE_C');
+  const aPassives = getInheritableSkills('Catria', 'PASSIVE_A');
+  const bPassives = getInheritableSkills('Catria', 'PASSIVE_B');
+  const cPassives = getInheritableSkills('Catria', 'PASSIVE_C');
   t.equal(contains('Iote\'s Shield', aPassives), true); // Fliers Only
   t.equal(contains('Swordbreaker 3', bPassives), true); // Excludes Green
   t.equal(contains('B Tomebreaker 3', bPassives), true); // Excludes Red
