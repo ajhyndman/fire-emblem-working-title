@@ -41,6 +41,13 @@ export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array
   return map(parseInt, match(/\d+/g, skill.effect));
 }
 
+// Returns whichever of 'hp', 'atk', etc occurs first or undefined
+export function getStatKey(text: string): Stat {
+  const statKey = match(/(hp|atk|spd|def|res)/, text);
+  // Match returns either undefined or a list where the 2nd entry is the bracketed match
+  return statKey ? statKey[1] : undefined;
+}
+
 export function hpRequirementSatisfied(hero: HeroInstance, skillType: SkillType) {
   const skill = getSkillObject(skillType, getSkillName(hero, skillType));
   if (skill !== undefined) {
@@ -266,7 +273,16 @@ export function getSpecialChargeWhenAttacked(otherHero: HeroInstance) {
 export function withTurnStartBuffs(hero: HeroInstance, isAttacker: boolean) {
   // Buffs from previous turns expire at the start of the turn.
   let buffs = isAttacker ? resetBuffs() : hero.state.buffs;
-  // TODO: defiant X
+  // The 50% HP check is built into hasSkill.
+  if (hasSkill(hero, 'PASSIVE_A', 'Defiant')) {
+    const statKey = getStatKey(getSkillName(hero, 'PASSIVE_A'));
+    const buffAmount = getSkillNumbers(hero1, 'PASSIVE_A')[0];
+    buffs[statKey] = Math.max(buffs[statKey], buffAmount);
+  }
+  if (hasSkill(hero, 'WEAPON', 'Fólkvangr')) {
+    buffs['atk'] = Math.max(buffs['atk'], 5);
+  }
+  // TODO: Hone/Fortify once support for allies is added
   return {...hero, state: {...hero.state, buffs}};
 }
 
@@ -277,14 +293,24 @@ export function withTurnStartDebuffs(
   isAttacker: boolean,
 ) {
   let debuffs = hero.state.debuffs;
-  // TODO: threaten X
+  // If this unit is the defender, it is the other unit's turn, and enemy threaten triggers.
+  if (!isAttacker) {
+    // TODO: threaten X
+    // Eckesachs, Fensalir
+  }
   return {...hero, state: {...hero.state, debuffs}};
 }
 
 // Returns a new hero with updated buffs
-export function withPostCombatBuffs(hero: HeroInstance, isAttacker: boolean) {
+export function withPostCombatBuffs(hero: HeroInstance) {
   let buffs = hero.state.buffs;
-  // TODO: rogue dagger
+  // Rogue Dagger
+  if (hasSkill(hero, 'WEAPON', 'Rogue Dagger')) {
+    // 1st number is debuff amount, 2nd is self-buff amount.
+    const buffAmount = getSkillNumbers(hero, 'WEAPON')[1];
+    buffs['def'] = Math.max(buffs['def'], buffAmount);
+    buffs['res'] = Math.max(buffs['res'], buffAmount);
+  }
   return {...hero, state: {...hero.state, buffs}};
 }
 
@@ -293,9 +319,30 @@ export function withPostCombatDebuffs(
   hero: HeroInstance,
   otherHero: HeroInstance,
   isAttacker: boolean,
+  foeSurvived: boolean,
 ) {
   // Debuffs from previous turns expire after attacking.
   let debuffs = isAttacker ? resetBuffs() : hero.state.buffs;
-  // TODO: seal X
+  if (foeSurvived) {
+    // Seal X
+    if (hasSkill(otherHero, 'PASSIVE_B', 'Seal ')) {
+      const statKey = getStatKey(getSkillName(otherHero, 'PASSIVE_B'));
+      const debuffAmount = getSkillNumbers(otherHero, 'PASSIVE_B')[0];
+      debuffs[statKey] = Math.max(debuffs[statKey], debuffAmount);
+    }
+    if (hasSkill(otherHero, 'WEAPON', 'Dagger')) {
+      // Every dagger debuffs def/res by the same amount.
+      const debuffAmount = getSkillNumbers(otherHero, 'WEAPON')[0];
+      debuffs['def'] = Math.max(debuffs['def'], debuffAmount);
+      debuffs['res'] = Math.max(debuffs['res'], debuffAmount);
+    }
+    if (hasSkill(otherHero, 'WEAPON', 'Fear')) {
+      debuffs['atk'] = Math.max(debuffs['atk'], 6);
+    }
+    if (hasSkill(otherHero, 'WEAPON', 'Slow')) {
+      debuffs['spd'] = Math.max(debuffs['spd'], 6);
+    }
+  }
+  // TODO: Panic
   return {...hero, state: {...hero.state, debuffs}};
 }

@@ -214,6 +214,7 @@ const canRetaliate = (attacker: HeroInstance, defender: HeroInstance) => {
   const weaponName = getSkillName(defender, 'WEAPON');
   return (passiveA === 'Close Counter'
        || passiveA === 'Distant Counter'
+       || weaponName === 'Gradivus'
        || weaponName === 'Raijinto'
        || weaponName === 'Ragnell'
        || weaponName === 'Siegfried'
@@ -427,10 +428,10 @@ export const calculateResult = (
   }
 
   // Apply new buffs and new debuffs.
-  attacker = withPostCombatBuffs(attacker, true);
-  defender = withPostCombatBuffs(defender, false);
-  attacker = withPostCombatDebuffs(attacker, defender, true);
-  defender = withPostCombatDebuffs(defender, attacker, false);
+  attacker = withPostCombatBuffs(attacker);
+  defender = withPostCombatBuffs(defender);
+  attacker = withPostCombatDebuffs(attacker, defender, true, healths[1] > 0);
+  defender = withPostCombatDebuffs(defender, attacker, false, healths[0] > 0);
 
   return {
     combatInfo: {
