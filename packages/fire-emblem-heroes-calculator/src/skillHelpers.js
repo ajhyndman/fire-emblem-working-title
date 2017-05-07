@@ -86,6 +86,7 @@ export function getStatValue(
         return weaponMight + 4;
       }
       if (test(/(Gronn|Bl.r|Rau.r)blade/, skill.name)) {
+        // $FlowIssue: Flow thinks that StatKey is an enum and values only works for string keys.
         const allBuffs = sum(values(hero.state.buffs));
         return weaponMight + allBuffs;
       }
