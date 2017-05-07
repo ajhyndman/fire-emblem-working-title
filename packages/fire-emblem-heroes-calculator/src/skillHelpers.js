@@ -8,6 +8,7 @@ import {
   match,
   tail,
   test,
+  toLower,
   toUpper,
 } from 'ramda';
 import { getSkillObject } from 'fire-emblem-heroes-stats';
@@ -41,11 +42,12 @@ export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array
   return map(parseInt, match(/\d+/g, skill.effect));
 }
 
-// Returns whichever of 'hp', 'atk', etc occurs first or undefined
+// Returns whichever of 'hp', 'atk', 'spd', 'def', 'res' occurs first.
+// Defaults to 'atk' but should only be called if a stat key is guaranteed to exist.
 export function getStatKey(text: string): Stat {
-  const statKey = match(/(hp|atk|spd|def|res)/, text);
-  // Match returns either undefined or a list where the 2nd entry is the bracketed match
-  return statKey ? statKey[1] : undefined;
+  const textMatch = match(/(HP|Atk|Spd|Def|Res)/, text);
+  // $FlowIssue: flow is worried that toLower might be called with undefined
+  return toLower(textMatch ? textMatch[1] : 'atk');
 }
 
 export function hpRequirementSatisfied(hero: HeroInstance, skillType: SkillType) {
@@ -276,11 +278,11 @@ export function withTurnStartBuffs(hero: HeroInstance, isAttacker: boolean) {
   // The 50% HP check is built into hasSkill.
   if (hasSkill(hero, 'PASSIVE_A', 'Defiant')) {
     const statKey = getStatKey(getSkillName(hero, 'PASSIVE_A'));
-    const buffAmount = getSkillNumbers(hero1, 'PASSIVE_A')[0];
-    buffs[statKey] = Math.max(buffs[statKey], buffAmount);
+    const buffAmount = getSkillNumbers(hero, 'PASSIVE_A')[0];
+    buffs = {...buffs, [statKey]: Math.max(buffs[statKey], buffAmount)};
   }
   if (hasSkill(hero, 'WEAPON', 'Fólkvangr')) {
-    buffs['atk'] = Math.max(buffs['atk'], 5);
+    buffs = {...buffs, atk: Math.max(buffs.atk, 5)};
   }
   // TODO: Hone/Fortify once support for allies is added
   return {...hero, state: {...hero.state, buffs}};
@@ -308,8 +310,11 @@ export function withPostCombatBuffs(hero: HeroInstance) {
   if (hasSkill(hero, 'WEAPON', 'Rogue Dagger')) {
     // 1st number is debuff amount, 2nd is self-buff amount.
     const buffAmount = getSkillNumbers(hero, 'WEAPON')[1];
-    buffs['def'] = Math.max(buffs['def'], buffAmount);
-    buffs['res'] = Math.max(buffs['res'], buffAmount);
+    buffs = {
+      ...buffs,
+      def: Math.max(buffs.def, buffAmount),
+      res: Math.max(buffs.res, buffAmount),
+    };
   }
   return {...hero, state: {...hero.state, buffs}};
 }
@@ -328,19 +333,22 @@ export function withPostCombatDebuffs(
     if (hasSkill(otherHero, 'PASSIVE_B', 'Seal ')) {
       const statKey = getStatKey(getSkillName(otherHero, 'PASSIVE_B'));
       const debuffAmount = getSkillNumbers(otherHero, 'PASSIVE_B')[0];
-      debuffs[statKey] = Math.max(debuffs[statKey], debuffAmount);
+      debuffs = {...debuffs, [statKey]: Math.max(debuffs[statKey], debuffAmount)};
     }
     if (hasSkill(otherHero, 'WEAPON', 'Dagger')) {
       // Every dagger debuffs def/res by the same amount.
       const debuffAmount = getSkillNumbers(otherHero, 'WEAPON')[0];
-      debuffs['def'] = Math.max(debuffs['def'], debuffAmount);
-      debuffs['res'] = Math.max(debuffs['res'], debuffAmount);
+      debuffs = {
+        ...debuffs,
+        def: Math.max(debuffs.def, debuffAmount),
+        res: Math.max(debuffs.res, debuffAmount),
+      };
     }
     if (hasSkill(otherHero, 'WEAPON', 'Fear')) {
-      debuffs['atk'] = Math.max(debuffs['atk'], 6);
+      debuffs = {...debuffs, atk: Math.max(debuffs.atk, 6)};
     }
     if (hasSkill(otherHero, 'WEAPON', 'Slow')) {
-      debuffs['spd'] = Math.max(debuffs['spd'], 6);
+      debuffs = {...debuffs, spd: Math.max(debuffs.spd, 6)};
     }
   }
   // TODO: Panic

@@ -6,7 +6,7 @@ import { calculateResult } from '../src/damageCalculation';
 import { getDefaultSkills } from '../src/heroHelpers';
 
 import { getDefaultInstance } from '../src/heroInstance';
-import type { HeroInstance, Rarity } from '../src/heroInstance';
+import type { HeroInstance, Rarity, Stat } from '../src/heroInstance';
 
 
 function makeHero(
@@ -25,11 +25,13 @@ function makeHero(
 
 // Sets the buff amount for a stat
 function withBuff(statKey: Stat, amount: number, hero: HeroInstance): HeroInstance {
+  // $FlowIssue flow doesn't like the buffs object literal
   return {...hero, state: {...hero.state, buffs: {...hero.state.buffs, [statKey]: amount}}};
 }
 
 // Sets the debuff amount for a stat
 function withDebuff(statKey: Stat, amount: number, hero: HeroInstance): HeroInstance {
+  // $FlowIssue flow doesn't like the debuffs object literal
   return {...hero, state: {...hero.state, debuffs: {...hero.state.debuffs, [statKey]: amount}}};
 }
 

@@ -307,8 +307,8 @@ export const calculateResult = (
   // Apply start-of-turn buffs/debuffs
   attacker = withTurnStartBuffs(attacker, true);
   defender = withTurnStartBuffs(defender, false);
-  attacker = withTurnStartDebuffs(attacker, defender);
-  defender = withTurnStartDebuffs(defender, attacker);
+  attacker = withTurnStartDebuffs(attacker, defender, true);
+  defender = withTurnStartDebuffs(defender, attacker, false);
 
   const attackOrder = computeAttackOrder(attacker, defender);
 
