@@ -18,6 +18,8 @@ const validateInstance = (instance: ?HeroInstance): boolean => {
   if (instance.skills === undefined || instance.state === undefined) return false;
   if (typeof instance.state.hpMissing !== 'number') return false;
   if (typeof instance.state.specialCharge !== 'number') return false;
+  if (instance.state.buffs === undefined) return false;
+  if (instance.state.debuffs === undefined) return false;
 
   const skillsAllValid = all(
     (skill) => {
