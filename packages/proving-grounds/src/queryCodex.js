@@ -127,6 +127,7 @@ export const extractInstance = ([
     SEAL: seal,
   },
   state: {
+    ...getDefaultInstance(name).state,
     hpMissing,
     specialCharge,
   },
