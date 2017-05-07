@@ -23,6 +23,16 @@ function makeHero(
   };
 }
 
+// Sets the buff amount for a stat
+function withBuff(statKey: Stat, amount: number, hero: HeroInstance): HeroInstance {
+  return {...hero, state: {...hero.state, buffs: {...hero.state.buffs, [statKey]: amount}}};
+}
+
+// Sets the debuff amount for a stat
+function withDebuff(statKey: Stat, amount: number, hero: HeroInstance): HeroInstance {
+  return {...hero, state: {...hero.state, debuffs: {...hero.state.debuffs, [statKey]: amount}}};
+}
+
 // Equips a skill for the hero.
 function withSkill(skillName: string, hero: HeroInstance): HeroInstance {
   const skillType = getSkillType(skillName) || 'SEAL';
@@ -253,6 +263,36 @@ test('Specials', (assert) => {
     t.end();
   });
 
+  assert.end()
+});
+
+test('Buffs', (assert) => {
+  const anna = makeHero('Anna');
+  assert.test('Attacker buffs expire at start of turn', (t) => {
+    const result = simulateCombat(t, withBuff('atk', 4, anna), anna, 41-23, 41-23);
+    t.equal(result.attackerState.buffs.atk, 0);
+    t.end();
+  });
+  assert.test('Defender buffs persist', (t) => {
+    const result = simulateCombat(t, anna, withBuff('atk', 4, anna), 41-27, 41-23);
+    t.equal(result.defenderState.buffs.atk, 4);
+    t.end();
+  });
+  assert.end()
+});
+
+test('Debuffs', (assert) => {
+  const anna = makeHero('Anna');
+  assert.test('Attacker debuffs expire after combat', (t) => {
+    const result = simulateCombat(t, withDebuff('atk', 4, anna), anna, 41-23, 41-19);
+    t.equal(result.attackerState.debuffs.atk, 0);
+    t.end();
+  });
+  assert.test('Defender debuffs persist', (t) => {
+    const result = simulateCombat(t, anna, withDebuff('atk', 4, anna), 41-19, 41-23);
+    t.equal(result.defenderState.debuffs.atk, 4);
+    t.end();
+  });
   assert.end()
 });
 

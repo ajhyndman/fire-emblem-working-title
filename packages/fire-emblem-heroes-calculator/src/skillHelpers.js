@@ -322,7 +322,7 @@ export function withPostCombatDebuffs(
   foeSurvived: boolean,
 ) {
   // Debuffs from previous turns expire after attacking.
-  let debuffs = isAttacker ? resetBuffs() : hero.state.buffs;
+  let debuffs = isAttacker ? resetBuffs() : hero.state.debuffs;
   if (foeSurvived) {
     // Seal X
     if (hasSkill(otherHero, 'PASSIVE_B', 'Seal ')) {
