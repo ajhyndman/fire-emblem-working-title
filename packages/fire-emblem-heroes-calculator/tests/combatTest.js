@@ -280,6 +280,45 @@ test('Buffs', (assert) => {
     t.equal(result.defenderState.buffs.atk, 4);
     t.end();
   });
+  assert.test('Blade tome', (t) => {
+    const nino = makeHero('Nino');
+    const buffedNino = withBuff('def', 2, withBuff('spd', 4, withBuff('atk', 4, nino)));
+    // Normal damage is 17, atk buff is 4, total buff is 10 => dmg is 31
+    const result = simulateCombat(t, nino, buffedNino, 33-31, 33-17);
+    t.equal(result.defenderState.buffs.atk, 4);
+    t.end();
+  });
+  assert.test('Defiant Atk + Blade Tome', (t) => {
+    const odin = makeHero('Odin');
+    // Normal damage is 10, atk buff is 7 => dmg is 24
+    const result = simulateCombat(t, withHpMissing(22, odin), odin, 21-10, 43-24);
+    t.equal(result.attackerState.buffs.atk, 7);
+    t.end();
+  });
+  assert.test('Rogue Dagger when able to retaliate', (t) => {
+    const odin = makeHero('Odin');
+    const matt = makeHero('Matthew');
+    const result = simulateCombat(t, odin, matt, 43-7, 41-17);
+    t.equal(result.attackerState.buffs.def, 0);
+    t.equal(result.attackerState.buffs.res, 0);
+    t.equal(result.attackerState.debuffs.def, 5);
+    t.equal(result.attackerState.debuffs.res, 5);
+    t.equal(result.defenderState.buffs.def, 5);
+    t.equal(result.defenderState.buffs.res, 5);
+    t.equal(result.defenderState.debuffs.def, 0);
+    t.equal(result.defenderState.debuffs.res, 0);
+    t.end();
+  });
+  assert.test('Rogue Dagger when unable to retaliate', (t) => {
+    const palla = makeHero('Palla');
+    const matt = makeHero('Matthew');
+    const result = simulateCombat(t, palla, matt, 42, 41-13);
+    t.equal(result.attackerState.debuffs.def, 0);
+    t.equal(result.attackerState.debuffs.res, 0);
+    t.equal(result.defenderState.buffs.def, 0);
+    t.equal(result.defenderState.buffs.res, 0);
+    t.end();
+  });
   assert.end()
 });
 
@@ -293,6 +332,25 @@ test('Debuffs', (assert) => {
   assert.test('Defender debuffs persist', (t) => {
     const result = simulateCombat(t, anna, withDebuff('atk', 4, anna), 41-19, 41-23);
     t.equal(result.defenderState.debuffs.atk, 4);
+    t.end();
+  });
+  assert.test('Seal X when attacking', (t) => {
+    const result = simulateCombat(t, withSkill('Seal Atk 3', anna), anna, 41-23, 41-23);
+    t.equal(result.attackerState.debuffs.atk, 0);
+    t.equal(result.defenderState.debuffs.atk, 7);
+    t.end();
+  });
+  assert.test('Seal X when attacked', (t) => {
+    const result = simulateCombat(t, anna, withSkill('Seal Atk 3', anna), 41-23, 41-23);
+    t.equal(result.attackerState.debuffs.atk, 7);
+    t.equal(result.defenderState.debuffs.atk, 0);
+    t.end();
+  });
+  assert.test('Seal X does not trigger when dead', (t) => {
+    const cordelia = makeHero('Cordelia');
+    const result = simulateCombat(t, cordelia, withSkill('Seal Atk 3', cordelia), 40, 0);
+    t.equal(result.attackerState.debuffs.atk, 0);
+    t.equal(result.defenderState.debuffs.atk, 0);
     t.end();
   });
   assert.end()

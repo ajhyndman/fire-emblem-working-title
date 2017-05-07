@@ -324,7 +324,10 @@ export const calculateResult = (
     maxCds[0] === -1 ? -1 : Math.max(0, maxCds[0] - attacker.state.specialCharge),
     maxCds[1] === -1 ? -1 : Math.max(0, maxCds[1] - defender.state.specialCharge),
   ];
+  // How many times the unit would attack according to attackOrder.
   let numAttacks = [0, 0];
+  // How many times the unit actually attacked.
+  let actualNumAttacks = [0, 0];
   let healths = [maxHps[0] - attacker.state.hpMissing, maxHps[1] - defender.state.hpMissing];
   // AOE Damage
   const aoeDamage = specialCds[0] === 0
@@ -336,9 +339,9 @@ export const calculateResult = (
     const isInitiator = (heroIndex === 0);
     // heroIndex hits otherHeroIndex.
     numAttacks[heroIndex]++;
-    if (healths[heroIndex] > 0) {
+    if (healths[heroIndex] > 0 && healths[1] > 0) {
+      actualNumAttacks[heroIndex]++;
       const otherHeroIndex: number = 1 - heroIndex;
-      const stillFighting = healths[0] > 0 && healths[1] > 0;
       let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb') ? 0.5 : 0.0;
 
       // Attacker Special. Use '' for no special.
@@ -384,12 +387,10 @@ export const calculateResult = (
       }
       // Apply damage
       healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex], true);
-      if (stillFighting) {
-        healths[heroIndex] = Math.min(
-          healths[heroIndex] + Math.floor(dmg * lifestealPercent),
-          maxHps[heroIndex],
-        );
-      }
+      healths[heroIndex] = Math.min(
+        healths[heroIndex] + Math.floor(dmg * lifestealPercent),
+        maxHps[heroIndex],
+      );
     }
   }
   // TODO: Galeforce (if specialCd[0] === 0). Effectively another round of combat but same turn.
@@ -427,11 +428,13 @@ export const calculateResult = (
     }
   }
 
-  // Apply new buffs and new debuffs.
-  attacker = withPostCombatBuffs(attacker);
-  defender = withPostCombatBuffs(defender);
-  attacker = withPostCombatDebuffs(attacker, defender, true, healths[1] > 0);
-  defender = withPostCombatDebuffs(defender, attacker, false, healths[0] > 0);
+  // Apply new buffs and new debuffs. Daggers are conditional on attacking, seal-X on survival.
+  attacker = withPostCombatBuffs(attacker, actualNumAttacks[0] > 0);
+  defender = withPostCombatBuffs(defender, actualNumAttacks[1] > 0);
+  attacker = withPostCombatDebuffs(
+    attacker, defender, true, actualNumAttacks[1] > 0, healths[1] > 0);
+  defender = withPostCombatDebuffs(
+    defender, attacker, false, actualNumAttacks[0] > 0, healths[0] > 0);
 
   return {
     combatInfo: {

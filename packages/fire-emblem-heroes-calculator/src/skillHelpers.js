@@ -6,10 +6,12 @@ import {
   juxt,
   map,
   match,
+  sum,
   tail,
   test,
   toLower,
   toUpper,
+  values,
 } from 'ramda';
 import { getSkillObject } from 'fire-emblem-heroes-stats';
 import type { SkillType } from 'fire-emblem-heroes-stats';
@@ -45,9 +47,10 @@ export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array
 // Returns whichever of 'hp', 'atk', 'spd', 'def', 'res' occurs first.
 // Defaults to 'atk' but should only be called if a stat key is guaranteed to exist.
 export function getStatKey(text: string): Stat {
-  const textMatch = match(/(HP|Atk|Spd|Def|Res)/, text);
+  // Should not match words like Defiant, so Def cannot be preceded or followed by \w characters.
+  const textMatch = match(/(^|\W)(HP|Atk|Spd|Def|Res)($|\W)/, text);
   // $FlowIssue: flow is worried that toLower might be called with undefined
-  return toLower(textMatch ? textMatch[1] : 'atk');
+  return toLower(textMatch ? textMatch[2] : 'atk');
 }
 
 export function hpRequirementSatisfied(hero: HeroInstance, skillType: SkillType) {
@@ -81,6 +84,10 @@ export function getStatValue(
       const weaponMight = anySkill['damage(mt)'];
       if (isAttacker && skill.name === 'Durandal') {
         return weaponMight + 4;
+      }
+      if (test(/(Gronn|Bl.r|Rau.r)blade/, skill.name)) {
+        const allBuffs = sum(values(hero.state.buffs));
+        return weaponMight + allBuffs;
       }
       return weaponMight;
     } else if (statKey === 'spd') {
@@ -304,10 +311,10 @@ export function withTurnStartDebuffs(
 }
 
 // Returns a new hero with updated buffs
-export function withPostCombatBuffs(hero: HeroInstance) {
+export function withPostCombatBuffs(hero: HeroInstance, hitSomething: boolean) {
   let buffs = hero.state.buffs;
-  // Rogue Dagger
-  if (hasSkill(hero, 'WEAPON', 'Rogue Dagger')) {
+  // Rogue Dagger only buffs if something was actually attacked
+  if (hitSomething && hasSkill(hero, 'WEAPON', 'Rogue Dagger')) {
     // 1st number is debuff amount, 2nd is self-buff amount.
     const buffAmount = getSkillNumbers(hero, 'WEAPON')[1];
     buffs = {
@@ -324,10 +331,12 @@ export function withPostCombatDebuffs(
   hero: HeroInstance,
   otherHero: HeroInstance,
   isAttacker: boolean,
+  foeHitSomething: boolean,
   foeSurvived: boolean,
 ) {
   // Debuffs from previous turns expire after attacking.
   let debuffs = isAttacker ? resetBuffs() : hero.state.debuffs;
+  // Passives that debuff only trigger if the foe survived
   if (foeSurvived) {
     // Seal X
     if (hasSkill(otherHero, 'PASSIVE_B', 'Seal ')) {
@@ -335,6 +344,9 @@ export function withPostCombatDebuffs(
       const debuffAmount = getSkillNumbers(otherHero, 'PASSIVE_B')[0];
       debuffs = {...debuffs, [statKey]: Math.max(debuffs[statKey], debuffAmount)};
     }
+  }
+  // Weapons that debuff only trigger if the foe actually attacked
+  if (foeHitSomething) {
     if (hasSkill(otherHero, 'WEAPON', 'Dagger')) {
       // Every dagger debuffs def/res by the same amount.
       const debuffAmount = getSkillNumbers(otherHero, 'WEAPON')[0];
