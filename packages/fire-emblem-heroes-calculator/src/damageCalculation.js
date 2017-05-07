@@ -404,8 +404,8 @@ export const calculateResult = (
   if (healths[0] > 0 && hasSkill(heroes[0], 'PASSIVE_B', 'Poison Strike')) {
     postCombatDmg[1] += getSkillNumbers(heroes[0], 'PASSIVE_B')[0];
   }
-  // Deathly Dagger (same conditions as poison strike). 1st number is debuff, 2nd is damage.
-  if (healths[0] > 0 && hasSkill(heroes[0], 'WEAPON', 'Deathly Dagger')) {
+  // Deathly Dagger (only if attacking, survival optional). 1st number is debuff, 2nd is damage.
+  if (hasSkill(heroes[0], 'WEAPON', 'Deathly Dagger')) {
     postCombatDmg[1] += getSkillNumbers(heroes[0], 'WEAPON')[1];
   }
   for (let heroIndex of [0, 1]) {
@@ -413,10 +413,9 @@ export const calculateResult = (
     if (hasSkill(heroes[heroIndex], 'PASSIVE_A', 'Fury')) {
       postCombatDmg[heroIndex] += getSkillNumbers(heroes[heroIndex], 'PASSIVE_A')[1];
     }
-    // Pain (only triggers if the staff user survived and was able to retaliate)
+    // Pain (only triggers if the staff user was able to hit something)
     const otherHeroI = 1 - heroIndex;
-    if (healths[otherHeroI] > 0
-        && numAttacks[otherHeroI] > 0 && hasSkill(heroes[otherHeroI], 'WEAPON', 'Pain')) {
+    if (actualNumAttacks[otherHeroI] > 0 && hasSkill(heroes[otherHeroI], 'WEAPON', 'Pain')) {
       postCombatDmg[heroIndex] += getSkillNumbers(heroes[otherHeroI], 'WEAPON')[0];
     }
     // Only apply postcombat damage to living units

@@ -129,8 +129,9 @@ test('Brave Weapon, Darting Blow, Fury and Damage Special', (t) => {
 
 test('Pain and Poison Strike', (t) => {
   t.plan(10);
-  // Pain/Poison do not trigger if Azama/Matthew die
-  simulateCombat(t, makeHero('Azama'), makeHero('Linde'), 0, 35);
+  // Pain is a weapon so it triggers even if Azama dies.
+  simulateCombat(t, makeHero('Azama'), makeHero('Linde'), 0, 35-10);
+  // Poison Strike is a passive so it does not trigger if Matthew dies.
   simulateCombat(t, makeHero('Matthew'), makeHero('Linde'), 0, 35-18);
   // Pain does not trigger if Azama cannot retaliate
   simulateCombat(t, makeHero('Chrom'), makeHero('Azama'), 47, 43-21);
