@@ -256,14 +256,14 @@ export const getStat = (
   const mergeBonus = Math.floor((2*instance.mergeLevel)/5)
     + ((((2*instance.mergeLevel) % 5) > indexOf(statKey, orderedStatKeys)) ? 1 : 0);
 
-  // TODO: buffs and Defiant abilities
-  return baseValue
+  // Stats cannot be negative, even with brave weapons, life and death, or debuffs.
+  return Math.max(0, baseValue
     + mergeBonus
     + getStatValue(instance, 'PASSIVE_A', statKey, isAttacker)
     + getStatValue(instance, 'SEAL', statKey, isAttacker)
     + getStatValue(instance, 'WEAPON', statKey, isAttacker)
     + instance.state.buffs[statKey]
-    - instance.state.debuffs[statKey];
+    - instance.state.debuffs[statKey]);
 };
 
 export const getRange = (instance: HeroInstance) => 
