@@ -28,7 +28,6 @@ import {
 import type {
   Hero,
   MoveType,
-  Skill,
   SkillType,
   WeaponType,
 } from 'fire-emblem-heroes-stats';
@@ -174,7 +173,7 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
 });
 
 // Returns a list of skill names that a hero can obtain.
-export function getInheritableSkills(name: string, skillType: SkillType): Array<Skill> {
+export function getInheritableSkills(name: string, skillType: SkillType): Array<string> {
   const hero = getHero(name);
   // Cast to any to prevent flow issues
   const allSkills: any = getAllSkills();

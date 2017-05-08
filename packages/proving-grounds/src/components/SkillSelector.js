@@ -1,10 +1,8 @@
 // @flow
 import React from 'react';
 import {
-  compose,
   filter,
   map,
-  propOr,
 } from 'ramda';
 import { getInheritableSkills, isMaxTier } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
@@ -83,7 +81,7 @@ const SkillSelector = ({
       // TODO: Consider the merits of this filter.
       // Maybe the tradeoff in power for simplicity isn't worthwhile.
       filter(
-        (skillName) => skillType === 'SEAL' || isMaxTier(skillName),
+        (skillName) => skillType === 'SEAL' || isMaxTier(skillName ? skillName : ''),
         [undefined].concat(getInheritableSkills(heroInstance.name, skillType)),
       ),
     )}
