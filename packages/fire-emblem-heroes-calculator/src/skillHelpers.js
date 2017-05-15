@@ -17,10 +17,11 @@ import { getSkillObject } from 'fire-emblem-heroes-stats';
 import type { SkillType } from 'fire-emblem-heroes-stats';
 
 import {
-  getStat,
   getMitigationType,
+  getRange,
   getSkillName,
   getSkillEffect,
+  getStat,
   hasSkill,
   hpAboveThreshold,
   hpBelowThreshold,
@@ -120,7 +121,7 @@ export function getStatValue(
       if (test(/(Fury|\+)/, skillName)) {
         return skillNumbers[0];
       }
-      // Fortress Def
+      // Fortress Def: +def -atk
       if (test(/Fortress Def/, skillName)) {
         if (statKey === 'def') {
           return skillNumbers[0];
@@ -128,10 +129,11 @@ export function getStatValue(
           return -skillNumbers[1];
         }
       }
-      // Death/Darting/Armored/Warding Blow and Sparrow
+      // Death/Darting/Armored/Warding Blow and Sparrow: +stat while attacking
       if (isAttacker && test(/(Blow|Sparrow)/, skillName)) {
         return skillNumbers[0];
       }
+      // Life and Death: +atk/spd, -def/res
       if (test(/Life and Death/, skillName)) {
         if (statKey === 'atk' || statKey === 'spd') {
           return skillNumbers[0];
@@ -139,10 +141,21 @@ export function getStatValue(
           return -skillNumbers[1];
         }
       }
-      if (test(/Earth Boost/, skillName) && statKey === 'def') {
-        // Need to compare the other hero's hp.
-        // const hpDiffRequired = skillNumbers[0];
-        //return skillNumbers[1];
+      // Earth Boost: +def if HP - foeHP > x at start of combat.
+      if (statKey === 'def' && context !== undefined && test(/Earth Boost/, skillName)) {
+        const hpDiffRequired = skillNumbers[0];
+        // It's ok for getStat(def) to call getStat(hp) because max HP is constant.
+        const ownHP = getStat(hero, 'hp', 40) - hero.state.hpMissing;
+        const foeHP = getStat(context.enemy, 'hp', 40) - context.enemy.state.hpMissing;
+        if (ownHP - foeHP >= hpDiffRequired) {
+          return skillNumbers[1];
+        }
+      }
+      // Distant Def: +def/res when attacked from a distance
+      if (isDefender && test(/Distant Def/, skillName) && context !== undefined) {
+        if (getRange(context.enemy) === 2) {
+          return skillNumbers[0];
+        }
       }
     }
   }
