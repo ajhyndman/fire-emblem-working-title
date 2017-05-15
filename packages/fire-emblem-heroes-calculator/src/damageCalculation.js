@@ -425,8 +425,8 @@ export const calculateResult = (
   if (hasSkill(heroes[0], 'WEAPON', 'Deathly Dagger')) {
     postCombatDmg[1] += getSkillNumbers(heroes[0], 'WEAPON')[1];
   }
-  // Ragnarok damages the owner when attacking. HP% is ignored by hasSkill because no <>.
-  if (hasSkill(heroes[0], 'WEAPON', 'Ragnarok')) {
+  // Can't use HasSkill because Ragnarok has an unrelated HP% ability.
+  if (getSkillName(heroes[0], 'WEAPON') === 'Ragnarok') {
     postCombatDmg[0] += 5;
   }
   for (let heroIndex of [0, 1]) {
