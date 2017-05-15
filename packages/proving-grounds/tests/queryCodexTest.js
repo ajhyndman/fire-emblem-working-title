@@ -104,8 +104,8 @@ test('flattenAndIgnoreDefaults', (t) => {
 });
 
 test('hash', (t) => {
-  t.test('hashes to a unicode string four characters long', (assert) => {
-    assert.equal(hash('Anna').length, 4);
+  t.test('hashes to a unicode string five characters long', (assert) => {
+    assert.equal(hash('Anna').length, 5);
     assert.end();
   });
 
@@ -158,11 +158,11 @@ test('encodeHero', (t) => {
 
   t.test('decoding is backwards compatible', (assert) => {
     assert.deepEqual(
-      decodeHero('AwEwxgzA1ATFL0Q5T5A'),
+      decodeHero('AwEwxgzGDUBMQ'),
       { ...getDefaultInstance('Anna'), bane: 'atk'},
     );
     assert.deepEqual(
-      decodeHero('MwRgxgrA1AJr8E4BmAjA7FALEgppqKSCwUATGmKfHDEA'),
+      decodeHero('MwRgxgrMDUAmcIJwDMBGB2AptALMzOAHNKsosNgEzpiXBA'),
       {
         ...getDefaultInstance('Cordelia'),
         skills: {

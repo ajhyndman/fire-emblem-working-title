@@ -175,8 +175,7 @@ export const hash = (value: any): string => (
     ? '0'
     : (typeof value === 'number' || (typeof value === 'string' && value.length < 4))
       ? value
-      // 36^4 possible values and 500 items hashed => 5% chance of some collision existing.
-      : take(4, SHA1(value).toString())
+      : take(5, SHA1(value).toString())
 );
 
 const values = flatten([
