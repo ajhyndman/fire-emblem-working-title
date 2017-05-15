@@ -24,9 +24,9 @@ import {
   hasSkill,
   hpAboveThreshold,
   hpBelowThreshold,
-  resetBuffs,
 } from './heroHelpers';
-import type { HeroInstance, Stat } from './heroInstance';
+import { getDefaultBuffs, invertContext } from './heroInstance';
+import type { Context, HeroInstance, Stat } from './heroInstance';
 
 
 export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | void;
@@ -71,8 +71,10 @@ export function getStatValue(
   hero: HeroInstance,
   skillType: SkillType,
   statKey: Stat,
-  isAttacker: boolean,
+  context: Context | void, // getStat can be called outside of combat.
 ) {
+  const isAttacker = context !== undefined && context.isAttacker;
+  const isDefender = context !== undefined && !context.isAttacker;
   const skillName = getSkillName(hero, skillType);
   const skill = getSkillObject(skillType, skillName);
   if (skill === undefined) {
@@ -103,7 +105,7 @@ export function getStatValue(
         return 5;
       }
     } else if ((statKey === 'def' || statKey === 'res')
-      && (skillName === 'Binding Blade' || skillName === 'Naga') && !isAttacker) {
+        && (skillName === 'Binding Blade' || skillName === 'Naga') && isDefender) {
       return 2;
     } else if (statKey === 'def' && skillName === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
       return 4;
@@ -211,11 +213,11 @@ export function getSpecialMitigationMultiplier(skillName: string): number {
 // Returns a flat amount of nonLethal damage for an AOE special.
 export function getSpecialAOEDamageAmount(
     skillName: string,
-    attacker: HeroInstance,
-    defender: HeroInstance,
+    hero: HeroInstance,
+    context: Context,
 ): number {
-  const atk = getStat(attacker, 'atk', 40, true);
-  const def = getStat(defender, getMitigationType(attacker), 40, false);
+  const atk = getStat(hero, 'atk', 40, context);
+  const def = getStat(context.enemy, getMitigationType(hero), 40, invertContext(hero, context));
   const multiplier = test(/(Blazing)/, skillName) ? 1.5
     : (test(/(Growing|Rising)/, skillName) ? 1.0 : 0);
   return Math.floor(multiplier * (atk - def));
@@ -224,7 +226,7 @@ export function getSpecialAOEDamageAmount(
 export function getSpecialBonusDamageAmount(
     skillName: string,
     attacker: HeroInstance,
-    isAttacker: boolean,
+    context: Context,
     attackerMissingHp: number,
 ): number {
   const woDaoBonus = (skillName !== '' && skillName !== undefined
@@ -241,7 +243,7 @@ export function getSpecialBonusDamageAmount(
   if (test(/(Reprisal|Retribution|Vengeance)/, skillName)) {
     return woDaoBonus + Math.floor(attackerMissingHp * ratio);
   }
-  return woDaoBonus + Math.floor(getStat(attacker, stat, 40, isAttacker) * ratio);
+  return woDaoBonus + Math.floor(getStat(attacker, stat, 40, context) * ratio);
 }
 // Returns the percent of damage increased by a special
 export function getSpecialOffensiveMultiplier(skillName: string): number {
@@ -261,18 +263,18 @@ export function getSpecialLifestealPercent(skillName: string): number {
 
 // Returns the number of special charges generated per attack (usually 1).
 export function getSpecialChargeForAttack(
-  hero1: HeroInstance,
-  hero2: HeroInstance,
-  isAttacker: boolean,
+  hero: HeroInstance,
+  context: Context,
 ) {
   let specialChargePerAtk = 1;
-  if (hasSkill(hero1, 'PASSIVE_A', 'Heavy Blade')) {
-    const atkReq = getSkillNumbers(hero1, 'PASSIVE_A')[0];
-    if (getStat(hero1, 'atk', 40, isAttacker) - getStat(hero2, 'atk', 40, !isAttacker) >= atkReq) {
+  if (hasSkill(hero, 'PASSIVE_A', 'Heavy Blade')) {
+    const atkReq = getSkillNumbers(hero, 'PASSIVE_A')[0];
+    if (getStat(hero, 'atk', 40, context)
+        - getStat(context.enemy, 'atk', 40, invertContext(hero, context)) >= atkReq) {
       specialChargePerAtk += 1;
     }
   }
-  if (hasSkill(hero2, 'PASSIVE_B', 'Guard')) {
+  if (hasSkill(context.enemy, 'PASSIVE_B', 'Guard')) {
     specialChargePerAtk -= 1;
   }
   return specialChargePerAtk;
@@ -280,8 +282,8 @@ export function getSpecialChargeForAttack(
 
 // Returns the number of special charges generated when opponent attacks you (usually 1).
 // OtherHero is the one that is attacking you.
-export function getSpecialChargeWhenAttacked(otherHero: HeroInstance) {
-  return (hasSkill(otherHero, 'PASSIVE_B', 'Guard')) ? 0 : 1;
+export function getSpecialChargeWhenAttacked(context: Context) {
+  return (hasSkill(context.enemy, 'PASSIVE_B', 'Guard')) ? 0 : 1;
 }
 
 /*
@@ -289,9 +291,9 @@ export function getSpecialChargeWhenAttacked(otherHero: HeroInstance) {
  */
 
 // Returns a new hero with updated buffs
-export function withTurnStartBuffs(hero: HeroInstance, isAttacker: boolean) {
+export function withTurnStartBuffs(hero: HeroInstance, context: Context) {
   // Buffs from previous turns expire at the start of the turn.
-  let buffs = isAttacker ? resetBuffs() : hero.state.buffs;
+  let buffs = context.isAttacker ? getDefaultBuffs() : hero.state.buffs;
   // The 50% HP check is built into hasSkill.
   if (hasSkill(hero, 'PASSIVE_A', 'Defiant')) {
     const statKey = getStatKey(getSkillName(hero, 'PASSIVE_A'));
@@ -308,12 +310,11 @@ export function withTurnStartBuffs(hero: HeroInstance, isAttacker: boolean) {
 // Returns a new version of hero with debuffs applied by otherHero
 export function withTurnStartDebuffs(
   hero: HeroInstance,
-  otherHero: HeroInstance,
-  isAttacker: boolean,
+  context: Context,
 ) {
   let debuffs = hero.state.debuffs;
   // If this unit is the defender, it is the other unit's turn, and enemy threaten triggers.
-  if (!isAttacker) {
+  if (!context.isAttacker) {
     // TODO: threaten X
     // Eckesachs, Fensalir
   }
@@ -339,37 +340,36 @@ export function withPostCombatBuffs(hero: HeroInstance, hitSomething: boolean) {
 // Returns a new version of hero with debuffs applied by otherHero
 export function withPostCombatDebuffs(
   hero: HeroInstance,
-  otherHero: HeroInstance,
-  isAttacker: boolean,
+  context: Context,
   foeHitSomething: boolean,
   foeSurvived: boolean,
 ) {
   // Debuffs from previous turns expire after attacking.
-  let debuffs = isAttacker ? resetBuffs() : hero.state.debuffs;
+  let debuffs = context.isAttacker ? getDefaultBuffs() : hero.state.debuffs;
   // Passives that debuff only trigger if the foe survived
   if (foeSurvived) {
     // Seal X
-    if (hasSkill(otherHero, 'PASSIVE_B', 'Seal ')) {
-      const statKey = getStatKey(getSkillName(otherHero, 'PASSIVE_B'));
-      const debuffAmount = getSkillNumbers(otherHero, 'PASSIVE_B')[0];
+    if (hasSkill(context.enemy, 'PASSIVE_B', 'Seal ')) {
+      const statKey = getStatKey(getSkillName(context.enemy, 'PASSIVE_B'));
+      const debuffAmount = getSkillNumbers(context.enemy, 'PASSIVE_B')[0];
       debuffs = {...debuffs, [statKey]: Math.max(debuffs[statKey], debuffAmount)};
     }
   }
   // Weapons that debuff only trigger if the foe actually attacked
   if (foeHitSomething) {
-    if (hasSkill(otherHero, 'WEAPON', 'Dagger')) {
+    if (hasSkill(context.enemy, 'WEAPON', 'Dagger')) {
       // Every dagger debuffs def/res by the same amount.
-      const debuffAmount = getSkillNumbers(otherHero, 'WEAPON')[0];
+      const debuffAmount = getSkillNumbers(context.enemy, 'WEAPON')[0];
       debuffs = {
         ...debuffs,
         def: Math.max(debuffs.def, debuffAmount),
         res: Math.max(debuffs.res, debuffAmount),
       };
     }
-    if (hasSkill(otherHero, 'WEAPON', 'Fear')) {
+    if (hasSkill(context.enemy, 'WEAPON', 'Fear')) {
       debuffs = {...debuffs, atk: Math.max(debuffs.atk, 6)};
     }
-    if (hasSkill(otherHero, 'WEAPON', 'Slow')) {
+    if (hasSkill(context.enemy, 'WEAPON', 'Slow')) {
       debuffs = {...debuffs, spd: Math.max(debuffs.spd, 6)};
     }
   }

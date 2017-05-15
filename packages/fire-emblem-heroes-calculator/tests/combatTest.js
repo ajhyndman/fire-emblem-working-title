@@ -140,6 +140,15 @@ test('Pain and Poison Strike', (t) => {
   simulateCombat(t, makeHero('Matthew'), makeHero('Azama'), 41-3-10, 43-0-10);
 });
 
+test('Ragnarok', (t) => {
+  t.plan(2);
+  simulateCombat(t, makeHero('Odin'), makeHero('Odin'), 43-10, 43-10);
+  // Full HP, attacking => bonus stats and postcombat damage
+  // Full HP, defending => bonus stats
+  // Missing HP, attacking => postcombat damage
+  // Missing HP, defending => does nothing
+});
+
 test('Desperation', (t) => {
   t.plan(4);
   const desperationNino = makeHero('Nino', 5, {PASSIVE_B: 'Desperation 3'});

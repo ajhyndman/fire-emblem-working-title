@@ -33,7 +33,7 @@ import type {
 } from 'fire-emblem-heroes-stats';
 
 import { getStatValue, hpRequirementSatisfied } from './skillHelpers';
-import type { Buffs, HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
+import type { Context, HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
 
 
 export const getWeaponType = (instance: HeroInstance): WeaponType =>
@@ -207,14 +207,14 @@ export const hasBraveWeapon: (instance: HeroInstance)=> boolean = compose(
  * @param {*} level Which level version of stat to look up
  * @param {*} rarity Which rarity version of stat to look up
  * @param {*} variance Which variant ('low', 'normal', 'high') to look up
- * @param {*} isAttacker Whether or not the hero is the attacker.
+ * @param {*} context Contextual info: enemy, allies, and isAttacker.
  * @returns number the value of the stat
  */
 export const getStat = (
   instance: HeroInstance,
   statKey: Stat,
   level: 1 | 40 = 40,
-  isAttacker: boolean = false,
+  context: Context | void = undefined,
 ): number => {
   const hero = getHero(instance.name);
   const { rarity } = instance;
@@ -244,24 +244,27 @@ export const getStat = (
       ? parseInt(low, 10)
       : parseInt(high, 10);
 
-  // Every bonus level gives +1 to the next 2 stats, with stats in decreasing level 1 order
-  const statKeys = ['hp', 'atk', 'spd', 'def', 'res'];
-  // Depends on the fact that level 1 stats currently exclude skills.
-  // $FlowIssue function cannot be called on any member of intersection type.
-  const level1Stats = zipObj(statKeys, map((s) => getStat(instance, s, 1, false), statKeys));
-  const orderedStatKeys = sortWith(
-    [descend(prop(__, level1Stats)), ascend(indexOf(__, statKeys))],
-    statKeys,
-  );
-  const mergeBonus = Math.floor((2*instance.mergeLevel)/5)
-    + ((((2*instance.mergeLevel) % 5) > indexOf(statKey, orderedStatKeys)) ? 1 : 0);
+  let mergeBonus = 0;
+  if (instance.mergeLevel > 0) {
+    // Every bonus level gives +1 to the next 2 stats, with stats in decreasing level 1 order
+    const statKeys = ['hp', 'atk', 'spd', 'def', 'res'];
+    // Depends on the fact that level 1 stats currently exclude skills.
+    // $FlowIssue function cannot be called on any member of intersection type.
+    const level1Stats = zipObj(statKeys, map((s) => getStat(instance, s, 1, undefined), statKeys));
+    const orderedStatKeys = sortWith(
+      [descend(prop(__, level1Stats)), ascend(indexOf(__, statKeys))],
+      statKeys,
+    );
+    mergeBonus = Math.floor((2*instance.mergeLevel)/5)
+      + ((((2*instance.mergeLevel) % 5) > indexOf(statKey, orderedStatKeys)) ? 1 : 0);
+  }
 
   // Stats cannot be negative, even with brave weapons, life and death, or debuffs.
   return Math.max(0, baseValue
     + mergeBonus
-    + getStatValue(instance, 'PASSIVE_A', statKey, isAttacker)
-    + getStatValue(instance, 'SEAL', statKey, isAttacker)
-    + getStatValue(instance, 'WEAPON', statKey, isAttacker)
+    + getStatValue(instance, 'PASSIVE_A', statKey, context)
+    + getStatValue(instance, 'SEAL', statKey, context)
+    + getStatValue(instance, 'WEAPON', statKey, context)
     + instance.state.buffs[statKey]
     - instance.state.debuffs[statKey]);
 };
@@ -304,11 +307,3 @@ export function hpAboveThreshold(hero: HeroInstance, hpPercent: number): boolean
 export function hpBelowThreshold(hero: HeroInstance, hpPercent: number): boolean {
   return getCurrentHp(hero) <= (getStat(hero, 'hp') * hpPercent / 100);
 }
-
-export const resetBuffs = (): Buffs => ({
-  'hp': 0,
-  'atk': 0,
-  'spd': 0,
-  'def': 0,
-  'res': 0,
-});

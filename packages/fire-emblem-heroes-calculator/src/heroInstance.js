@@ -1,5 +1,5 @@
 // @flow
-import { getDefaultSkills, resetBuffs } from './heroHelpers';
+import { getDefaultSkills } from './heroHelpers';
 
 
 export type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
@@ -41,6 +41,13 @@ export type HeroInstance = {
   }
 };
 
+export type Context = {
+  +isAttacker: boolean;
+  +enemy: HeroInstance;
+  +allies: Array<HeroInstance>;
+  +otherEnemies: Array<HeroInstance>;
+};
+
 // NOT USED YET: Just conjecture for potential future support of
 // user custom unit creation.
 
@@ -62,6 +69,22 @@ export type HeroInstance = {
 //   passiveC: PassiveSkill;
 // };
 
+export const getDefaultBuffs = (): Buffs => ({
+  hp: 0,
+  atk: 0,
+  spd: 0,
+  def: 0,
+  res: 0,
+});
+
+// Returns a context from the perspective of the enemy.
+export const invertContext = (hero: HeroInstance, context: Context): Context => ({
+  enemy: hero,
+  allies: context.otherEnemies,
+  otherEnemies: context.allies,
+  isAttacker: !context.isAttacker,
+});
+
 export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstance => ({
   name: name,
   bane: undefined,
@@ -72,7 +95,7 @@ export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstan
   state: {
     hpMissing: 0,
     specialCharge: 0,
-    buffs: resetBuffs(),
-    debuffs: resetBuffs(),
+    buffs: getDefaultBuffs(),
+    debuffs: getDefaultBuffs(),
   },
 });

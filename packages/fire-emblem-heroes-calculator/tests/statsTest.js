@@ -79,9 +79,21 @@ function testStatSkill(
   const withoutSkill = {...hero, skills: {...hero.skills, [skillType]: undefined}};
   // $FlowIssue flow doesn't like the skills object literal
   const withSkill = {...hero, skills: {...hero.skills, [skillType]: skillName}};
-  t.equal(getStat(withSkill, statKey, 40, isAttacker)
-    - getStat(withoutSkill, statKey, 40, isAttacker), statBonus);
+  // Assume that a unit is fighting itself for these tests.
+  const context = {enemy: hero, isAttacker: isAttacker, allies: [], otherEnemies: []};
+  t.equal(getStat(withSkill, statKey, 40, context)
+    - getStat(withoutSkill, statKey, 40, context), statBonus);
 }
+
+test('Context is optional', (t) => {
+  t.plan(5);
+  const hero = getDefaultInstance('Anna');
+  t.equal(getStat(hero, 'hp', 40), 41);
+  t.equal(getStat(hero, 'atk', 40), 45);
+  t.equal(getStat(hero, 'spd', 40), 38);
+  t.equal(getStat(hero, 'def', 40), 22);
+  t.equal(getStat(hero, 'res', 40), 28);
+});
 
 test('Stat Skills', (assert) => {
   assert.test('Brave Weapons', (t) => {
@@ -93,10 +105,17 @@ test('Stat Skills', (assert) => {
     t.end();
   });
 
-  assert.test('50% HP Stat Bonus', (t) => {
-    // Missing HP bonus
+  assert.test('Stat Bonuses with HP% conditions', (t) => {
+    // bonus if HP < 50%
     testStatSkill(t, 'Tyrfing', 'def', 4, true, 30);
     testStatSkill(t, 'Tyrfing', 'def', 0, true, 0);
+
+    // TODO: uncomment after scraping stats that include Ragnarok.
+    // bonus if HP = 100%
+    // testStatSkill(t, 'Ragnarok', 'atk', 16+5, false, 0);
+    // testStatSkill(t, 'Ragnarok', 'spd', 5, false, 0);
+    // testStatSkill(t, 'Ragnarok', 'atk', 16, false, 1);
+    // testStatSkill(t, 'Ragnarok', 'atk', 0, false, 1);
     t.end();
   });
 

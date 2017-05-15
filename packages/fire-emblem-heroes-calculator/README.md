@@ -86,7 +86,7 @@ calculator.getStat(
   Anna, // hero instance
   'atk', // stat key, one of: 'atk' | 'def' | 'hp' | 'res' | 'spd'
   40, // level, one of: 1 | 40
-  true, // isAttacker (optional): boolean
+  {enemy: Sharena, isAttacker: true, allies: [], otherEnemies: []}, // Context (optional)
 );
 
 // => 45
