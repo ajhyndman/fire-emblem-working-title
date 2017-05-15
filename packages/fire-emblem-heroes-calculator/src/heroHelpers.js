@@ -76,6 +76,7 @@ export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkil
   // Flow can't follow this compose chain, so cast it to any.
   const skillsByType = (compose(
     indexBy(getSkillType),
+    filter(skillName => getSkillType(skillName) !== undefined),
     map(prop('name')),
     filter(skill => (skill.rarity === undefined || skill.rarity === '-' || skill.rarity <= rarity)),
   )(hero.skills): any);
