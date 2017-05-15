@@ -38,6 +38,7 @@ import {
 import type { HeroInstance } from './heroInstance';
 import type { SpecialType } from './skillHelpers';
 
+
 const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
 
 /**
@@ -125,7 +126,8 @@ const doesFollowUp = (instanceA: HeroInstance, instanceB: HeroInstance, isAttack
 
 // Healers do half-damage
 const classModifier = (instance: HeroInstance) =>
-  getWeaponType(instance) === 'Neutral Staff' ? 0.5 : 1;
+  (getWeaponType(instance) === 'Neutral Staff'
+    && !hasSkill(instance, 'PASSIVE_B', 'Wrathful Staff')) ? 0.5 : 1;
 
 const advantageBonus = (heroA: HeroInstance, heroB: HeroInstance) => {
   const colorA = getWeaponColor(heroA);
@@ -407,6 +409,10 @@ export const calculateResult = (
   // Deathly Dagger (only if attacking, survival optional). 1st number is debuff, 2nd is damage.
   if (hasSkill(heroes[0], 'WEAPON', 'Deathly Dagger')) {
     postCombatDmg[1] += getSkillNumbers(heroes[0], 'WEAPON')[1];
+  }
+  // Ragnarok damages the owner when attacking. HP% is ignored by hasSkill because no <>.
+  if (hasSkill(heroes[0], 'WEAPON', 'Ragnarok')) {
+    postCombatDmg[0] += 5;
   }
   for (let heroIndex of [0, 1]) {
     // Fury

@@ -82,28 +82,32 @@ export function getStatValue(
       // Flow does not like conversion directly to WeaponSkill so I convert to an any instead
       const anySkill: any = skill;
       const weaponMight = anySkill['damage(mt)'];
-      if (isAttacker && skill.name === 'Durandal') {
+      if (isAttacker && skillName === 'Durandal') {
         return weaponMight + 4;
       }
-      if (test(/(Gronn|Bl.r|Rau.r)blade/, skill.name)) {
+      if (test(/(Gronn|Bl.r|Rau.r)blade/, skillName)) {
         // $FlowIssue: Flow thinks that StatKey is an enum and values only works for string keys.
         const allBuffs = sum(values(hero.state.buffs));
         return weaponMight + allBuffs;
       }
+      if (skillName === 'Ragnarok' && hpAboveThreshold(hero, 100)) {
+        return 5 + weaponMight;
+      }
       return weaponMight;
     } else if (statKey === 'spd') {
-      if (skill.name === 'Yato' && isAttacker) {
+      if (skillName === 'Yato' && isAttacker) {
         return 4;
-      }
-      if (test(/Brave|Dire/, skill.name)) {
+      } else if (test(/Brave|Dire/, skillName)) {
         return -5;
+      } else if (skillName === 'Ragnarok' && hpAboveThreshold(hero, 100)) {
+        return 5;
       }
     } else if ((statKey === 'def' || statKey === 'res')
-      && (skill.name === 'Binding Blade' || skill.name === 'Naga') && !isAttacker) {
+      && (skillName === 'Binding Blade' || skillName === 'Naga') && !isAttacker) {
       return 2;
-    } else if (statKey === 'def' && skill.name === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
+    } else if (statKey === 'def' && skillName === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
       return 4;
-    } else if (statKey === 'res' && skill.name === 'Parthia' && isAttacker) {
+    } else if (statKey === 'res' && skillName === 'Parthia' && isAttacker) {
       return 4;
     }
   } else if (skill.type === 'PASSIVE_A' || skill.type === 'SEAL') {
@@ -132,6 +136,11 @@ export function getStatValue(
         } else if (statKey === 'def' || statKey === 'res') {
           return -skillNumbers[1];
         }
+      }
+      if (test(/Earth Boost/, skillName) && statKey === 'def') {
+        // Need to compare the other hero's hp.
+        // const hpDiffRequired = skillNumbers[0];
+        //return skillNumbers[1];
       }
     }
   }
