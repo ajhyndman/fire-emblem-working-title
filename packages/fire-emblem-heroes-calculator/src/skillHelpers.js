@@ -57,11 +57,11 @@ export function getStatKey(text: string): Stat {
 export function hpRequirementSatisfied(hero: HeroInstance, skillType: SkillType) {
   const skill = getSkillObject(skillType, getSkillName(hero, skillType));
   if (skill !== undefined) {
-    // Some skills require the unit to be at full health.
+    // Some skills need the unit to be at full health
     if (test(/(HP is 100%)|(100% HP)/, skill.effect)) {
       return hpAboveThreshold(hero, 100);
     }
-    // Some other skills require hp ≥ or ≤ a percentage.
+    // Some other skills need hp ≥ or ≤ a percentage.
     if (test(/≥\s*\d+%/, skill.effect)) {
       return hpAboveThreshold(hero, parseInt(match(/(\d+)%/, skill.effect)[1]));
     }
