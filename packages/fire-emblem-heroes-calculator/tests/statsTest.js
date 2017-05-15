@@ -110,12 +110,11 @@ test('Stat Skills', (assert) => {
     testStatSkill(t, 'Tyrfing', 'def', 4, true, 30);
     testStatSkill(t, 'Tyrfing', 'def', 0, true, 0);
 
-    // TODO: uncomment after scraping stats that include Ragnarok.
     // bonus if HP = 100%
-    // testStatSkill(t, 'Ragnarok', 'atk', 16+5, false, 0);
-    // testStatSkill(t, 'Ragnarok', 'spd', 5, false, 0);
-    // testStatSkill(t, 'Ragnarok', 'atk', 16, false, 1);
-    // testStatSkill(t, 'Ragnarok', 'atk', 0, false, 1);
+    testStatSkill(t, 'Ragnarok', 'atk', 14+5, false, 0);
+    testStatSkill(t, 'Ragnarok', 'spd', 5, false, 0);
+    testStatSkill(t, 'Ragnarok', 'atk', 14, false, 1);
+    testStatSkill(t, 'Ragnarok', 'spd', 0, false, 1);
     t.end();
   });
 

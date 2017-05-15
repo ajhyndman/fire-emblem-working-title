@@ -7,7 +7,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -146,7 +146,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "2- Story",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -313,7 +313,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Apr 15, 2017",
+      "releaseDate": "Apr 14, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -418,7 +418,7 @@
       "weaponType": "Green Axe",
       "moveType": "Infantry",
       "rarities": "2- Story",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -585,7 +585,7 @@
       "weaponType": "Green Axe",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -753,7 +753,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -919,7 +919,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -1019,7 +1019,7 @@
       "weaponType": "Green Axe",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -1179,7 +1179,7 @@
       "weaponType": "Green Axe",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -1347,7 +1347,7 @@
       "weaponType": "Green Axe",
       "moveType": "Flying",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -1506,6 +1506,111 @@
       }
     },
     {
+      "name": "Boey",
+      "title": "Skillful Survivor",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Green Tome",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "May 15, 2017",
+      "skills": [
+        {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elwind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Gronnowl",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Gronnowl+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Glowing Ember",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Ignis",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Earth Boost 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Earth Boost 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Earth Boost 3",
+          "rarity": 5
+        },
+        {
+          "name": "Renewal 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Renewal 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Renewal 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 19,
+            "atk": 7,
+            "spd": 5,
+            "def": 8,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              40,
+              43,
+              46
+            ],
+            "atk": [
+              25,
+              29,
+              32
+            ],
+            "spd": [
+              23,
+              27,
+              30
+            ],
+            "def": [
+              29,
+              32,
+              35
+            ],
+            "res": [
+              14,
+              18,
+              21
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Bruno",
       "title": "Masked Knight",
       "origin": "Fire Emblem Heroes",
@@ -1561,136 +1666,86 @@
         "40": {
           "1": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "2": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "3": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "4": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "5": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           }
@@ -1704,7 +1759,7 @@
       "weaponType": "Red Sword",
       "moveType": "Flying",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -1838,7 +1893,7 @@
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -1977,7 +2032,7 @@
       "weaponType": "Green Axe",
       "moveType": "Flying",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -2116,7 +2171,7 @@
       "weaponType": "Green Tome",
       "moveType": "Flying",
       "rarities": "5 - Limited",
-      "releaseDate": "Mar 31, 2017",
+      "releaseDate": "Mar 30, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -2258,136 +2313,86 @@
         "40": {
           "1": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "2": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "3": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "4": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "5": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           }
@@ -2401,7 +2406,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -2564,7 +2569,7 @@
       "weaponType": "Green Tome",
       "moveType": "Cavalry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -2774,13 +2779,118 @@
       }
     },
     {
+      "name": "Celica",
+      "title": "Caring Princess",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Red Tome",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "May 15, 2017",
+      "skills": [
+        {
+          "name": "Fire",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elfire",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Bolganone",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Ragnarok",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rising Light",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Blazing Light",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Distant Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Distant Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Distant Def 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 7,
+            "def": 5,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              35,
+              39,
+              42
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              30,
+              33,
+              36
+            ],
+            "def": [
+              19,
+              22,
+              25
+            ],
+            "res": [
+              19,
+              22,
+              25
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Cherche",
       "title": "Wyvern Friend",
       "origin": "Fire Emblem Awakening",
       "weaponType": "Green Axe",
       "moveType": "Flying",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -2948,7 +3058,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -3092,7 +3202,7 @@
       "weaponType": "Green Axe",
       "moveType": "Infantry",
       "rarities": "5 - Limited",
-      "releaseDate": "Mar 31, 2017",
+      "releaseDate": "Mar 30, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -3193,7 +3303,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "4-5",
-      "releaseDate": "Apr 15, 2017",
+      "releaseDate": "Apr 14, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -3319,7 +3429,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Cavalry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -3485,7 +3595,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -3629,7 +3739,7 @@
       "weaponType": "Blue Breath",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -3803,7 +3913,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -3943,7 +4053,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -4151,7 +4261,7 @@
       "weaponType": "Red Sword",
       "moveType": "Armored",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -4340,7 +4450,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Armored",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -4474,7 +4584,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 16, 2017",
+      "releaseDate": "Feb 15, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -4600,7 +4710,7 @@
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
       "rarities": 5,
-      "releaseDate": "Feb 28, 2017",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -4697,7 +4807,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Cavalry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -4795,7 +4905,7 @@
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -4968,7 +5078,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 16, 2017",
+      "releaseDate": "Feb 15, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -5073,7 +5183,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -5241,7 +5351,7 @@
       "weaponType": "Green Breath",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -5375,7 +5485,7 @@
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Apr 15, 2017",
+      "releaseDate": "Apr 14, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -5480,7 +5590,7 @@
       "weaponType": "Neutral Shuriken",
       "moveType": "Infantry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -5701,7 +5811,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -5874,7 +5984,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -6042,7 +6152,7 @@
       "weaponType": "Green Axe",
       "moveType": "Cavalry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -6215,7 +6325,7 @@
       "weaponType": "Neutral Shuriken",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -6377,13 +6487,111 @@
       }
     },
     {
+      "name": "Genny",
+      "title": "Endearing Ally",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Neutral Staff",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "May 15, 2017",
+      "skills": [
+        {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Gravity",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Mend",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Physic",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Imbue",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Heavenly Light",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Wrathful Staff 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Wrathful Staff 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Wrathful Staff 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 6,
+            "def": 4,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              29,
+              32,
+              35
+            ],
+            "atk": [
+              32,
+              35,
+              38
+            ],
+            "spd": [
+              22,
+              25,
+              29
+            ],
+            "def": [
+              18,
+              21,
+              24
+            ],
+            "res": [
+              31,
+              34,
+              37
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Gordin",
       "title": "Altean Archer",
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -6551,7 +6759,7 @@
       "weaponType": "Green Axe",
       "moveType": "Cavalry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -6767,7 +6975,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Armored",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -6932,7 +7140,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -7148,7 +7356,7 @@
       "weaponType": "Green Axe",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -7287,7 +7495,7 @@
       "weaponType": "Green Axe",
       "moveType": "Armored",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -7384,7 +7592,7 @@
       "weaponType": "Red Tome",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -7557,7 +7765,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -7730,7 +7938,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -7835,7 +8043,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Apr 27, 2017",
+      "releaseDate": "Apr 26, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -7945,7 +8153,7 @@
       "weaponType": "Neutral Shuriken",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Mar 15, 2017",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -8050,7 +8258,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -8223,7 +8431,7 @@
       "weaponType": "Neutral Shuriken",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -8357,7 +8565,7 @@
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -8496,7 +8704,7 @@
       "weaponType": "Green Tome",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 16, 2017",
+      "releaseDate": "Feb 15, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -8601,7 +8809,7 @@
       "weaponType": "Neutral Shuriken",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -8740,7 +8948,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Mar 15, 2017",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -8845,7 +9053,7 @@
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 28, 2017",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -8984,7 +9192,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 28, 2017",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -9116,7 +9324,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -9289,7 +9497,7 @@
       "weaponType": "Red Tome",
       "moveType": "Cavalry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -9394,7 +9602,7 @@
       "weaponType": "Red Tome",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire",
@@ -9533,7 +9741,7 @@
       "weaponType": "Blue Tome",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -9633,7 +9841,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -9847,7 +10055,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -10020,7 +10228,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -10130,7 +10338,7 @@
       "weaponType": "Blue Tome",
       "moveType": "Infantry",
       "rarities": "5 - Limited",
-      "releaseDate": "Mar 31, 2017",
+      "releaseDate": "Mar 30, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -10231,7 +10439,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Mar 15, 2017",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -10363,7 +10571,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Apr 15, 2017",
+      "releaseDate": "Apr 14, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -10502,7 +10710,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -10606,13 +10814,113 @@
       }
     },
     {
+      "name": "Mae",
+      "title": "Bundle of Energy",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Blue Tome",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "May 15, 2017",
+      "skills": [
+        {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elthunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blárowl",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blárowl+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Draw Back",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 3",
+          "rarity": 5
+        },
+        {
+          "name": "B Tome Exp. 1",
+          "rarity": "-"
+        },
+        {
+          "name": "B Tome Exp. 2",
+          "rarity": "-"
+        },
+        {
+          "name": "B Tome Exp. 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 10,
+            "spd": 7,
+            "def": 3,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              32,
+              35,
+              39
+            ],
+            "atk": [
+              33,
+              36,
+              39
+            ],
+            "spd": [
+              28,
+              31,
+              34
+            ],
+            "def": [
+              12,
+              16,
+              19
+            ],
+            "res": [
+              26,
+              30,
+              33
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Maria",
       "title": "Minerva's Sister",
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -10744,7 +11052,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -10878,7 +11186,7 @@
       "weaponType": "Neutral Shuriken",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -11070,7 +11378,7 @@
       "weaponType": "Green Tome",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -11209,7 +11517,7 @@
       "weaponType": "Green Axe",
       "moveType": "Flying",
       "rarities": "3-4Event: Grand Hero Battle",
-      "releaseDate": "Mar 21, 2017",
+      "releaseDate": "Mar 20, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -11344,7 +11652,7 @@
       "weaponType": "Green Axe",
       "moveType": "Flying",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -11449,7 +11757,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Apr 27, 2017",
+      "releaseDate": "Apr 26, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -11547,7 +11855,7 @@
       "weaponType": "Green Axe",
       "moveType": "Flying",
       "rarities": "2-3Event: Grand Hero Battle",
-      "releaseDate": "Feb 11, 2017",
+      "releaseDate": "Feb 10, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -11714,7 +12022,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "3-4Event: Grand Hero Battle",
-      "releaseDate": "Apr 05, 2017",
+      "releaseDate": "Apr 04, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -11857,7 +12165,7 @@
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -12030,7 +12338,7 @@
       "weaponType": "Blue Breath",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Mar 15, 2017",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -12130,7 +12438,7 @@
       "weaponType": "Green Tome",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -12298,7 +12606,7 @@
       "weaponType": "Blue Breath",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -12432,7 +12740,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -12600,7 +12908,7 @@
       "weaponType": "Blue Tome",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -12773,7 +13081,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -12912,7 +13220,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -13120,7 +13428,7 @@
       "weaponType": "Blue Tome",
       "moveType": "Cavalry",
       "rarities": 5,
-      "releaseDate": "Feb 28, 2017",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -13220,7 +13528,7 @@
       "weaponType": "Red Sword",
       "moveType": "Flying",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -13393,7 +13701,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -13532,7 +13840,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Cavalry",
       "rarities": "4-5",
-      "releaseDate": "Mar 15, 2017",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -13664,7 +13972,7 @@
       "weaponType": "Red Tome",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -13856,7 +14164,7 @@
       "weaponType": "Green Axe",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -13995,7 +14303,7 @@
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Mar 15, 2017",
+      "releaseDate": "Mar 14, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -14129,7 +14437,7 @@
       "weaponType": "Blue Tome",
       "moveType": "Cavalry",
       "rarities": "4-5",
-      "releaseDate": "Feb 28, 2017",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -14268,7 +14576,7 @@
       "weaponType": "Green Tome",
       "moveType": "Infantry",
       "rarities": "2-3Event: Grand Hero Battle",
-      "releaseDate": "Feb 24, 2017",
+      "releaseDate": "Feb 23, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -14436,7 +14744,7 @@
       "weaponType": "Blue Tome",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -14610,7 +14918,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -14744,7 +15052,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -14849,7 +15157,7 @@
       "weaponType": "Neutral Shuriken",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Dagger",
@@ -15017,7 +15325,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -15149,7 +15457,7 @@
       "weaponType": "Red Tome",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 28, 2017",
+      "releaseDate": "Feb 27, 2017",
       "skills": [
         {
           "name": "Fire",
@@ -15249,7 +15557,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -15417,7 +15725,7 @@
       "weaponType": "Red Sword",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 16, 2017",
+      "releaseDate": "Feb 15, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -15551,7 +15859,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -15717,7 +16025,7 @@
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -15885,7 +16193,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -16058,7 +16366,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
       "rarities": "2- Story",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -16220,7 +16528,7 @@
       "weaponType": "Green Axe",
       "moveType": "Armored",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -16351,7 +16659,7 @@
       "weaponType": "Red Tome",
       "moveType": "Infantry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -16571,8 +16879,8 @@
       "origin": "Fire Emblem: Path of Radiance",
       "weaponType": "Green Tome",
       "moveType": "Infantry",
-      "rarities": 5,
-      "releaseDate": "Apr 27, 2017",
+      "rarities": "4-5",
+      "releaseDate": "Apr 26, 2017",
       "skills": [
         {
           "name": "Wind",
@@ -16586,7 +16894,7 @@
         },
         {
           "name": "Rexcalibur",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -16596,13 +16904,13 @@
         },
         {
           "name": "Rising Wind",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Growing Wind",
           "default": "-",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Watersweep 1",
@@ -16626,11 +16934,18 @@
         },
         {
           "name": "Fortify Res 3",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": 9,
+            "def": "-",
+            "res": "-"
+          },
           "5": {
             "hp": 17,
             "atk": 7,
@@ -16640,6 +16955,25 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              "-"
+            ],
+            "atk": [
+              "-"
+            ],
+            "spd": [
+              28,
+              31,
+              34
+            ],
+            "def": [
+              "-"
+            ],
+            "res": [
+              "-"
+            ]
+          },
           "5": {
             "hp": [
               33,
@@ -16677,7 +17011,7 @@
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -16893,7 +17227,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -17109,7 +17443,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -17277,7 +17611,7 @@
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -17374,7 +17708,7 @@
       "weaponType": "Red Tome",
       "moveType": "Infantry",
       "rarities": "4-5",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Flux",
@@ -17513,7 +17847,7 @@
       "weaponType": "Red Breath",
       "moveType": "Infantry",
       "rarities": "3-4",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -17687,7 +18021,7 @@
       "weaponType": "Red Breath",
       "moveType": "Infantry",
       "rarities": 5,
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Fire Breath",
@@ -17792,8 +18126,8 @@
       "origin": "Fire Emblem: Path of Radiance",
       "weaponType": "Green Axe",
       "moveType": "Cavalry",
-      "rarities": 5,
-      "releaseDate": "Apr 27, 2017",
+      "rarities": "4-5",
+      "releaseDate": "Apr 26, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -17807,7 +18141,7 @@
         },
         {
           "name": "Emerald Axe",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -17817,7 +18151,7 @@
         },
         {
           "name": "Reciprocal Aid",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -17830,7 +18164,7 @@
         },
         {
           "name": "Armored Blow 3",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Guard 1",
@@ -17847,6 +18181,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
           "5": {
             "hp": 18,
             "atk": 6,
@@ -17856,6 +18197,23 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              "-"
+            ],
+            "atk": [
+              "-"
+            ],
+            "spd": [
+              "-"
+            ],
+            "def": [
+              "-"
+            ],
+            "res": [
+              "-"
+            ]
+          },
           "5": {
             "hp": [
               34,
@@ -17893,7 +18251,7 @@
       "weaponType": "Blue Tome",
       "moveType": "Cavalry",
       "rarities": "3-4Event: Grand Hero Battle",
-      "releaseDate": "Mar 11, 2017",
+      "releaseDate": "Mar 10, 2017",
       "skills": [
         {
           "name": "Thunder",
@@ -18085,136 +18443,86 @@
         "40": {
           "1": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "2": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "3": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "4": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           },
           "5": {
             "hp": [
-              "-",
-              "-",
               "-"
             ],
             "atk": [
-              "-",
-              "-",
               "-"
             ],
             "spd": [
-              "-",
-              "-",
               "-"
             ],
             "def": [
-              "-",
-              "-",
               "-"
             ],
             "res": [
-              "-",
-              "-",
               "-"
             ]
           }
@@ -18228,7 +18536,7 @@
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Iron Bow",
@@ -18449,7 +18757,7 @@
       "weaponType": "Neutral Staff",
       "moveType": "Infantry",
       "rarities": "3-4 *",
-      "releaseDate": "Feb 03, 2017",
+      "releaseDate": "Feb 02, 2017",
       "skills": [
         {
           "name": "Assault",
@@ -18662,8 +18970,8 @@
       "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
-      "rarities": "3-4",
-      "releaseDate": "May 03, 2017",
+      "rarities": "3-4Event: Grand Hero Battle",
+      "releaseDate": "May 02, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -18806,7 +19114,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
       "rarities": "5 - Limited",
-      "releaseDate": "Mar 31, 2017",
+      "releaseDate": "Mar 30, 2017",
       "skills": [
         {
           "name": "Iron Lance",
@@ -18899,7 +19207,7 @@
       "weaponType": "Red Sword",
       "moveType": "Armored",
       "rarities": "3-4Event: Grand Hero Battle",
-      "releaseDate": "Apr 21, 2017",
+      "releaseDate": "Apr 20, 2017",
       "skills": [
         {
           "name": "Iron Sword",
@@ -19398,6 +19706,16 @@
       "weaponType": "Red Tome"
     },
     {
+      "name": "Ragnarok",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
       "name": "Rauðrblade",
       "spCost": 200,
       "damage(mt)": 9,
@@ -19449,7 +19767,7 @@
     },
     {
       "name": "Rauðrwolf+",
-      "spCost": 200,
+      "spCost": 300,
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
@@ -19602,7 +19920,7 @@
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "???",
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Blue Lance"
@@ -19763,6 +20081,26 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blárowl",
+      "spCost": 300,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blárowl+",
+      "spCost": 300,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Blue Tome"
@@ -20172,6 +20510,26 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Gronnowl",
+      "spCost": 300,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Gronnowl+",
+      "spCost": 300,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -20678,7 +21036,7 @@
       "name": "Mend",
       "range": 1,
       "effect": "Restores 10 HP.",
-      "spCost": 0,
+      "spCost": 100,
       "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
@@ -21401,6 +21759,48 @@
       "effect": "Enables unit to counterattack regardless of distance to attacker.",
       "spCost": 300,
       "inheritRestriction": "Melee Weapon Users Only",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Distant Def 1",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Distant Def 2",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Distant Def 3",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Earth Boost 1",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+2 during combat.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Earth Boost 2",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+4 during combat.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Earth Boost 3",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+6 during combat.",
+      "spCost": 200,
+      "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
@@ -22237,6 +22637,27 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Wrathful Staff 1",
+      "effect": "If unit has 100% HP at the start of combat, damage from their staff will be calculated the same as other weapons.",
+      "spCost": 60,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrathful Staff 2",
+      "effect": "If unit has ≥ 50% HP at the start of combat, damage from their staff will be calculated the same as other weapons.",
+      "spCost": 120,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrathful Staff 3",
+      "effect": "Damage from unit's staff will be calculated the same as other weapons.",
+      "spCost": 240,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Axe Experience 1",
       "effect": "If unit survives, unit gets 1.5x EXP.(If similar skill effects also used, only highest multipler applied.)",
       "spCost": 50,
@@ -22255,6 +22676,27 @@
       "effect": "If unit survives, all axe users on team get 2x EXP.(If similar skill effects also used, only highest multipler applied.)",
       "spCost": 200,
       "inheritRestriction": "Axe Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Exp. 1",
+      "effect": "If unit survives and uses a blue tome, unit gets 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
+      "spCost": 50,
+      "inheritRestriction": "Blue Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Exp. 2",
+      "effect": "If unit survives, all blue tome users on team get 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
+      "spCost": 100,
+      "inheritRestriction": "Blue Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Exp. 3",
+      "effect": "If unit survives, all blue tome users on team get 2x EXP.(If similar skill effects also used, only highest multiplier applies.)",
+      "spCost": 200,
+      "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
