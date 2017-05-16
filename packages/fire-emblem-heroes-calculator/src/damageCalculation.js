@@ -425,10 +425,6 @@ export const calculateResult = (
   if (hasSkill(heroes[0], 'WEAPON', 'Deathly Dagger')) {
     postCombatDmg[1] += getSkillNumbers(heroes[0], 'WEAPON')[1];
   }
-  // Can't use HasSkill because Ragnarok has an unrelated HP% ability.
-  if (getSkillName(heroes[0], 'WEAPON') === 'Ragnarok') {
-    postCombatDmg[0] += 5;
-  }
   for (let heroIndex of [0, 1]) {
     // Fury
     if (hasSkill(heroes[heroIndex], 'PASSIVE_A', 'Fury')) {
@@ -438,6 +434,10 @@ export const calculateResult = (
     const otherHeroI = 1 - heroIndex;
     if (actualNumAttacks[otherHeroI] > 0 && hasSkill(heroes[otherHeroI], 'WEAPON', 'Pain')) {
       postCombatDmg[heroIndex] += getSkillNumbers(heroes[otherHeroI], 'WEAPON')[0];
+    }
+    // Ragnarok's postcombat damage requires: hit the enemy and be at 100% HP. HasSkill checks HP.
+    if (actualNumAttacks[heroIndex] > 0 && hasSkill(heroes[heroIndex], 'WEAPON', 'Ragnarok')) {
+      postCombatDmg[heroIndex] += 5;
     }
     // Only apply postcombat damage to living units
     if (healths[heroIndex] > 0) {
