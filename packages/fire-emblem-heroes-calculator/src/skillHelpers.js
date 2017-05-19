@@ -85,39 +85,49 @@ export function getStatValue(
   const skill = getSkillObject(skillType, skillName);
   if (skill === undefined) {
     return 0;
-  } else if (skill.type === 'WEAPON') {
+  }
+  else if (skill.type === 'WEAPON') {
+    let statValue = 0;
     if (statKey === 'atk') {
       // Flow does not like conversion directly to WeaponSkill so I convert to an any instead
       const anySkill: any = skill;
-      const weaponMight = anySkill['damage(mt)'];
+      statValue += anySkill['damage(mt)'];
       if (isAttacker && skillName === 'Durandal') {
-        return weaponMight + 4;
+        statValue += 4;
       }
       if (test(/(Gronn|Bl.r|Rau.r)blade/, skillName)) {
         // $FlowIssue: Flow thinks that StatKey is an enum and values only works for string keys.
-        const allBuffs = sum(values(hero.state.buffs));
-        return weaponMight + allBuffs;
+        statValue += sum(values(hero.state.buffs));
       }
-      if (skillName === 'Ragnarok' && hpAboveThreshold(hero, 100)) {
-        return 5 + weaponMight;
-      }
-      return weaponMight;
     } else if (statKey === 'spd') {
       if (skillName === 'Yato' && isAttacker) {
-        return 4;
+        statValue += 4;
       } else if (test(/Brave|Dire/, skillName)) {
-        return -5;
-      } else if (skillName === 'Ragnarok' && hpAboveThreshold(hero, 100)) {
-        return 5;
+        statValue -= 5;
+    } else if (statKey === 'def') {
+      if (skillName === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
+        statValue += 4;
       }
-    } else if ((statKey === 'def' || statKey === 'res')
-        && (skillName === 'Binding Blade' || skillName === 'Naga') && isDefender) {
-      return 2;
-    } else if (statKey === 'def' && skillName === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
-      return 4;
-    } else if (statKey === 'res' && skillName === 'Parthia' && isAttacker) {
-      return 4;
+    } else if (statKey === 'res') {
+      if (skillName === 'Parthia' && isAttacker) {
+        statValue += 4;
+      }
     }
+    // Weapons that give multiple stats.
+    if (statKey === 'atk' || statKey === 'spd') {
+      if (skillName === 'Ragnarok' && hpAboveThreshold(hero, 100)) {
+        statValue += 5;
+      }
+      if (skillName === 'Regal Blade' && context !== undefined
+          && hpAboveThreshold(context.enemy, 100)) {
+        statValue += 2;
+      }
+    } else if (statKey === 'def' || statKey === 'res') {
+      if ((skillName === 'Binding Blade' || skillName === 'Naga') && isDefender) {
+        statValue += 2;
+      }
+    }
+    return statValue;
   } else if (skill.type === 'PASSIVE_A' || skill.type === 'SEAL') {
     const statRegex = new RegExp(statKey === 'hp' ? 'max HP' : capitalize(statKey));
     if (test(statRegex, skill.effect)) {
