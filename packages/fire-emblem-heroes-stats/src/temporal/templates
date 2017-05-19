@@ -223,3 +223,35 @@
       },
     },
   },
+  {
+    'shortName': 'Cavalier',
+    'name': 'Bow Cavalier ( GHB)',
+    'moveType': 'Cavalry',
+    'weaponType': 'Neutral Bow',
+    'skills': [
+      {
+        'name': 'Silver Bow+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [48],
+          'atk': [36],
+          'spd': [23],
+          'def': [25],
+          'res': [24],
+        },
+      },
+    },
+  },
