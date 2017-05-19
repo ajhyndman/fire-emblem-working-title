@@ -10049,6 +10049,75 @@
       }
     },
     {
+      "name": "Lloyd",
+      "title": "White Wolf",
+      "origin": "Fire Emblem: The Blazing Blade",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": "3-4Event: Grand Hero Battle",
+      "releaseDate": "May 19, 2017",
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Regal Blade",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Iceberg",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Pass 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Pass 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Pass 3",
+          "rarity": "-"
+        },
+        {
+          "name": "Threaten Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Threaten Atk 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Threaten Atk 3",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {},
+        "40": {}
+      }
+    },
+    {
       "name": "Lon'qu",
       "title": "Solitary Blade",
       "origin": "Fire Emblem Awakening",
@@ -16900,7 +16969,7 @@
         {
           "name": "Rexcalibur+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Rising Wind",
@@ -16918,7 +16987,7 @@
         },
         {
           "name": "Watersweep 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Watersweep 3",
@@ -16940,11 +17009,11 @@
       "stats": {
         "1": {
           "4": {
-            "hp": "-",
-            "atk": "-",
+            "hp": 16,
+            "atk": 7,
             "spd": 9,
-            "def": "-",
-            "res": "-"
+            "def": 3,
+            "res": 6
           },
           "5": {
             "hp": 17,
@@ -16957,10 +17026,14 @@
         "40": {
           "4": {
             "hp": [
-              "-"
+              31,
+              34,
+              37
             ],
             "atk": [
-              "-"
+              28,
+              31,
+              34
             ],
             "spd": [
               28,
@@ -16968,10 +17041,14 @@
               34
             ],
             "def": [
-              "-"
+              12,
+              15,
+              18
             ],
             "res": [
-              "-"
+              23,
+              26,
+              29
             ]
           },
           "5": {
@@ -18147,7 +18224,7 @@
         {
           "name": "Emerald Axe+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Reciprocal Aid",
@@ -18172,7 +18249,7 @@
         },
         {
           "name": "Guard 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Guard 3",
@@ -18182,11 +18259,11 @@
       "stats": {
         "1": {
           "4": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 17,
+            "atk": 5,
+            "spd": 8,
+            "def": 5,
+            "res": 8
           },
           "5": {
             "hp": 18,
@@ -18199,19 +18276,29 @@
         "40": {
           "4": {
             "hp": [
-              "-"
+              32,
+              35,
+              38
             ],
             "atk": [
-              "-"
+              22,
+              25,
+              28
             ],
             "spd": [
-              "-"
+              29,
+              32,
+              35
             ],
             "def": [
-              "-"
+              20,
+              23,
+              26
             ],
             "res": [
-              "-"
+              25,
+              28,
+              31
             ]
           },
           "5": {
@@ -19492,6 +19579,16 @@
       "range(rng)": 1,
       "effect": "Enables counterattack regardless of distance if this unit is attacked.",
       "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Regal Blade",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.",
+      "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -23130,6 +23227,11 @@
       "type": "SEAL"
     },
     {
+      "name": "Fortify Res 1",
+      "effect": "Grants adjacent allies Res+2 through their next actions at the start of each turn.",
+      "type": "SEAL"
+    },
+    {
       "name": "HP +3",
       "effect": "Grants +3 to max HP.",
       "type": "SEAL"
@@ -23137,6 +23239,11 @@
     {
       "name": "Speed +1",
       "effect": "Grants Spd+1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Def 1",
+      "effect": "Grants adjacent allies Def+2 during combat.",
       "type": "SEAL"
     }
   ]
