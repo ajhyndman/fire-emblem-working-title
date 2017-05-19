@@ -2,9 +2,8 @@
 import type { Hero } from '..';
 
 // Times were entered in PDT (UTC - 7)
-const startTime = new Date('2017-05-18T00:00:00-07:00');
-// Actual end time is unknown.
-const endTime = new Date('2017-05-22T23:59:00-07:00');
+const startTime = new Date('2017-05-19T00:00:00-07:00');
+const endTime = new Date('2017-05-25T23:59:00-07:00');
 
 const unitList: Array<Hero> = [
   {
@@ -61,6 +60,18 @@ const unitList: Array<Hero> = [
         'name': 'Silver Axe+',
         'rarity': '-',
       },
+      {
+        'name': 'Life and Death 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Lunge',
+        'rarity': '-',
+      },
+      {
+        'name': 'Threaten Spd 3',
+        'rarity': '-',
+      },
     ],
     'stats': {
       '1': {
@@ -84,38 +95,6 @@ const unitList: Array<Hero> = [
     },
   },
   {
-    'shortName': 'Blue Mage',
-    'name': 'Blue Mage (Lloyd GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Blue Tome',
-    'skills': [
-      {
-        'name': 'Thoron+',
-        'rarity': '-',
-      },
-    ],
-    'stats': {
-      '1': {
-        '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
-        },
-      },
-      '40': {
-        '5': {
-          'hp': [45],
-          'atk': [31],
-          'spd': [32],
-          'def': [20],
-          'res': [28],
-        },
-      },
-    },
-  },
-  {
     'shortName': 'Cavalier',
     'name': 'Lance Cavalier (Lloyd GHB)',
     'moveType': 'Cavalry',
@@ -123,6 +102,22 @@ const unitList: Array<Hero> = [
     'skills': [
       {
         'name': 'Silver Lance+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Armored Blow 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Lunge',
+        'rarity': '-',
+      },
+      {
+        'name': 'Hone Cavalry',
+        'rarity': '-',
+      },
+      {
+        'name': 'Reposition',
         'rarity': '-',
       },
     ],
@@ -157,6 +152,18 @@ const unitList: Array<Hero> = [
         'name': 'Silver Bow+',
         'rarity': '-',
       },
+      {
+        'name': 'Fortify Cavalry',
+        'rarity': '-',
+      },
+      {
+        'name': 'Swordbreaker 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Death Blow 3',
+        'rarity': '-',
+      },
     ],
     'stats': {
       '1': {
@@ -175,6 +182,54 @@ const unitList: Array<Hero> = [
           'spd': [23],
           'def': [25],
           'res': [24],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Blue Mage',
+    'name': 'Blue Mage (Lloyd GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Blue Tome',
+    'skills': [
+      {
+        'name': 'Thoron+',
+        'rarity': '-',
+      },
+      {
+        'name': 'Darting Blow 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Rally Defense',
+        'rarity': '-',
+      },
+      {
+        'name': 'Daggerbreaker 3',
+        'rarity': '-',
+      },
+      {
+        'name': 'Hone Atk 3',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [45],
+          'atk': [31],
+          'spd': [32],
+          'def': [20],
+          'res': [28],
         },
       },
     },
