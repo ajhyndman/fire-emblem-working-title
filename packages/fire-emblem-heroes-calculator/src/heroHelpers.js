@@ -225,6 +225,9 @@ export const getStat = (
       ? 'low'
       : 'normal');
 
+  if (hero.stats[`${level}`] === undefined || hero.stats[`${level}`][rarity] === undefined) {
+    return NaN;
+  }
   if (level === 1) {
     const value = parseInt(hero.stats[`${level}`][rarity][statKey], 10);
     // skills and merges are currently not included in level 1 stats.
