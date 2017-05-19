@@ -104,6 +104,7 @@ export function getStatValue(
         statValue += 4;
       } else if (test(/Brave|Dire/, skillName)) {
         statValue -= 5;
+      }
     } else if (statKey === 'def') {
       if (skillName === 'Tyrfing' && hpBelowThreshold(hero, 50)) {
         statValue += 4;
