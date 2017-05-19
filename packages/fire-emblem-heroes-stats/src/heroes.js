@@ -37,7 +37,8 @@ export const getHero = (name: string): Hero => {
 };
 
 export const getReleasedHeroes = () => filter(
-  (hero) => propOr('N/A', 'releaseDate', hero) !== 'N/A',
+  // Only consider a hero released if they have a release date and have level 1 stats.
+  (hero) => (propOr('N/A', 'releaseDate', hero) !== 'N/A') && hero.stats[1][5] !== undefined,
   stats.heroes,
 );
 
