@@ -20,6 +20,7 @@ import {
   test,
   toUpper,
   values,
+  without,
   zipObj,
 } from 'ramda';
 
@@ -126,8 +127,8 @@ function validate(heroes, skills) {
       }
     }
     if (level1Rarities != level40Rarities || level1Rarities == 0) {
-      console.log('Warning: ' + hero.name + ' has level 1/40 stats for ' + level1Rarities
-        + '/' + level40Rarities + ' rarities.');
+      console.log('Warning: ' + hero.name + ' has level 1 stats for ' + level1Rarities
+        + ' and level 40 stats for ' + level40Rarities + ' rarities.');
     }
   }
   for (let skill of skills) {
@@ -167,6 +168,13 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   const existingStats = JSON.parse(fs.readFileSync('./stats.json', 'utf8'));
   const heroes = shouldFetchHeroes ? await fetchHeroStats() : existingStats['heroes'];
   const skills = shouldFetchSkills ? await fetchSkills() : existingStats['skills'];
+
+  // Log new heroes/skills
+  const getNames = map(prop('name'));
+  const newHeroNames = without(getNames(existingStats['heroes']), getNames(heroes));
+  const newSkills = without(getNames(existingStats['skills']), getNames(skills));
+  map((x) => console.log('New hero: ' + x), newHeroNames);
+  map((x) => console.log('New skill: ' + x), newSkills);
 
   // Infer weapon subtypes from the heroes that own them.
   const skillsV2 = skillsWithWeaponsTypes(heroes, skills);
