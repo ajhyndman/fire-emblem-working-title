@@ -10097,7 +10097,7 @@
         },
         {
           "name": "Pass 3",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Threaten Atk 1",
@@ -10105,16 +10105,90 @@
         },
         {
           "name": "Threaten Atk 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Threaten Atk 3",
-          "rarity": "-"
+          "rarity": 5
         }
       ],
       "stats": {
-        "1": {},
-        "40": {}
+        "1": {
+          "3": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 8,
+            "def": 4,
+            "res": 7
+          },
+          "4": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 9,
+            "def": 4,
+            "res": 7
+          },
+          "5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 9,
+            "def": 5,
+            "res": 8
+          }
+        },
+        "40": {
+          "3": {
+            "hp": [
+              37
+            ],
+            "atk": [
+              28
+            ],
+            "spd": [
+              31
+            ],
+            "def": [
+              17
+            ],
+            "res": [
+              26
+            ]
+          },
+          "4": {
+            "hp": [
+              38
+            ],
+            "atk": [
+              30
+            ],
+            "spd": [
+              33
+            ],
+            "def": [
+              18
+            ],
+            "res": [
+              27
+            ]
+          },
+          "5": {
+            "hp": [
+              41
+            ],
+            "atk": [
+              32
+            ],
+            "spd": [
+              35
+            ],
+            "def": [
+              20
+            ],
+            "res": [
+              30
+            ]
+          }
+        }
       }
     },
     {
@@ -16107,16 +16181,6 @@
           "rarity": "-"
         },
         {
-          "name": "Assassin's Bow",
-          "default": 4,
-          "rarity": 3
-        },
-        {
-          "name": "Assassin's Bow+",
-          "default": 5,
-          "rarity": 5
-        },
-        {
           "name": "Reciprocal Aid",
           "default": 4,
           "rarity": 3
@@ -19588,7 +19652,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.",
-      "exclusive?": "No",
+      "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -20838,8 +20902,7 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
+      "type": "WEAPON"
     },
     {
       "name": "Assassin's Bow+",
@@ -20848,8 +20911,7 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
+      "type": "WEAPON"
     },
     {
       "name": "Brave Bow",
