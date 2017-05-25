@@ -17,6 +17,7 @@ import event6 from './2017.04.24-robin-f';
 import event7 from './2017.05.02-xander';
 import event8 from './2017.05.10-ursula';
 import event9 from './2017.05.19-lloyd';
+import event10 from './2017.05.26-narcian';
 
 
 export function getEventHeroes(allEvents: boolean = false) {
@@ -25,5 +26,5 @@ export function getEventHeroes(allEvents: boolean = false) {
     flatten,
     map(prop('unitList')),
     filter((event) => allEvents || (now >= event.startTime && now <= event.endTime)),
-  )([event0, event1, event2, event3, event4, event5, event6, event7, event8, event9]);
+  )([event0, event1, event2, event3, event4, event5, event6, event7, event8, event9, event10]);
 }
