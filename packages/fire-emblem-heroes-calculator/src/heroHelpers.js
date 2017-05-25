@@ -140,6 +140,8 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
     case 'Melee Weapons Only':
     case 'Melee Weapon Users Only':
       return test(/(Sword|Axe|Lance|Breath)/, weaponType);
+    case 'Sword, Lance, Axe Users Only':
+      return test(/(Sword|Axe|Lance)/, weaponType);
     case 'Ranged Weapons Only':
     case 'Ranged Weapon Users Only':
       return test(/(Staff|Tome|Bow|Shuriken)/, weaponType);

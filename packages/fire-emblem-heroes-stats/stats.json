@@ -604,7 +604,7 @@
         },
         {
           "name": "Emerald Axe+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -2588,7 +2588,7 @@
         },
         {
           "name": "Gronnraven+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -7611,7 +7611,7 @@
         },
         {
           "name": "Rauðrraven+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -7784,7 +7784,7 @@
         },
         {
           "name": "Ruby Sword+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -12600,7 +12600,7 @@
         },
         {
           "name": "Gronnblade+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -16181,6 +16181,16 @@
           "rarity": "-"
         },
         {
+          "name": "Assassin's Bow",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Assassin's Bow+",
+          "default": 5,
+          "rarity": 5
+        },
+        {
           "name": "Reciprocal Aid",
           "default": 4,
           "rarity": 3
@@ -16811,7 +16821,7 @@
         },
         {
           "name": "Fenrir+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -20902,7 +20912,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Assassin's Bow+",
@@ -20911,7 +20922,8 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
     },
     {
       "name": "Brave Bow",
@@ -21444,7 +21456,7 @@
       "cooldown": 5,
       "effect": "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)",
       "spCost": 500,
-      "inheritRestriction": "Melee Weapon Users Only",
+      "inheritRestriction": "Sword, Lance, Axe Users Only",
       "type": "SPECIAL"
     },
     {
