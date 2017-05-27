@@ -2,9 +2,8 @@
 import type { Hero } from '..';
 
 // Times were entered in PDT (UTC - 7)
-// End time is currently approximated based on previous GHB reruns.
 const startTime = new Date('2017-05-26T00:00:00-07:00');
-const endTime = new Date('2017-06-02T23:59:00-07:00');
+const endTime = new Date('2017-06-01T23:59:00-07:00');
 
 const unitList: Array<Hero> = [
   {
