@@ -3,6 +3,7 @@ import Color from 'color-js';
 
 export const breakPoints = Object.freeze({
   small: 480,
+  medium: 768,
 });
 
 export const colors = Object.freeze({

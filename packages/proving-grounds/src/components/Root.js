@@ -22,7 +22,7 @@ import ShareButton from './ShareButton';
 import Toast from './Toast';
 import matchHero from '../matchHero';
 import { encodeHero } from '../queryCodex';
-import { fontFamilies } from '../theme';
+import { breakPoints, fontFamilies } from '../theme';
 import { deployTimestamp, staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 import type { State } from '../store';
@@ -127,10 +127,16 @@ class Root extends React.Component {
             align-items: baseline;
             color: rgba(255, 255, 255, 0.2);
             display: flex;
+            flex-direction: column;
             font-family: ${fontFamilies.ui};
             font-size: 10px;
             justify-content: space-between;
             padding: 20px 15px 10px;
+          }
+          @media (min-width: ${breakPoints.medium}px) {
+            .footer {
+              flex-direction: row;
+            }
           }
           .footer a:link, .footer a:visited, .footer a:active, .footer a:focus {
             color: rgba(255, 255, 255, 0.3) !important;
