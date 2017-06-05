@@ -1511,7 +1511,7 @@
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Green Tome",
       "moveType": "Infantry",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "May 15, 2017",
       "skills": [
         {
@@ -1526,23 +1526,23 @@
         },
         {
           "name": "Gronnowl",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Gronnowl+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Glowing Ember",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Ignis",
           "default": "-",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Earth Boost 1",
@@ -1554,7 +1554,7 @@
         },
         {
           "name": "Earth Boost 3",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Renewal 1",
@@ -1562,7 +1562,7 @@
         },
         {
           "name": "Renewal 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Renewal 3",
@@ -1571,6 +1571,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 4,
+            "def": 8,
+            "res": 4
+          },
           "5": {
             "hp": 19,
             "atk": 7,
@@ -1580,6 +1587,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              37,
+              40,
+              43
+            ],
+            "atk": [
+              24,
+              27,
+              30
+            ],
+            "spd": [
+              21,
+              24,
+              27
+            ],
+            "def": [
+              27,
+              30,
+              33
+            ],
+            "res": [
+              13,
+              16,
+              19
+            ]
+          },
           "5": {
             "hp": [
               40,
@@ -1887,6 +1921,112 @@
       }
     },
     {
+      "name": "Caeda (Bridal Blessings)",
+      "title": "Talys's Bride",
+      "origin": "Fire Emblem: Mystery of the Emblem",
+      "weaponType": "Blue Tome",
+      "moveType": "Infantry",
+      "rarities": "5 - Special",
+      "releaseDate": "May 30, 2017",
+      "skills": [
+        {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elthunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blessed Bouquet",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blessed Bouquet+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Iceberg",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Resistance +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Attack Res +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Attack Res +2",
+          "rarity": 5
+        },
+        {
+          "name": "Hone Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Hone Spd 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Hone Spd 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 9,
+            "def": 4,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              30,
+              33,
+              36
+            ],
+            "atk": [
+              25,
+              29,
+              32
+            ],
+            "spd": [
+              34,
+              37,
+              40
+            ],
+            "def": [
+              16,
+              19,
+              22
+            ],
+            "res": [
+              26,
+              30,
+              33
+            ]
+          }
+        }
+      },
+      "shortName": "Caeda (B)"
+    },
+    {
       "name": "Cain",
       "title": "The Bull",
       "origin": "Fire Emblem: Mystery of the Emblem",
@@ -2170,7 +2310,7 @@
       "origin": "Fire Emblem Fates",
       "weaponType": "Green Tome",
       "moveType": "Flying",
-      "rarities": "5 - Limited",
+      "rarities": "5 - Special",
       "releaseDate": "Mar 30, 2017",
       "skills": [
         {
@@ -2263,137 +2403,130 @@
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": "N/A",
-      "releaseDate": "N/A",
+      "rarities": "3-4Event: Grand Hero Battle",
+      "releaseDate": "Jun 02, 2017",
       "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Lance",
+          "default": 4,
+          "rarity": 3
+        },
         {
           "name": "Gradivus",
           "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Rising Thunder",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Growing Thunder",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Grani's Shield",
+          "rarity": 4
+        },
+        {
+          "name": "Spur Atk 1",
           "rarity": "-"
+        },
+        {
+          "name": "Spur Atk 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Goad Cavalry",
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
-          "1": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
-          "2": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
           "3": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 17,
+            "atk": 7,
+            "spd": 8,
+            "def": 6,
+            "res": 3
           },
           "4": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 17,
+            "atk": 8,
+            "spd": 9,
+            "def": 6,
+            "res": 3
           },
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 18,
+            "atk": 8,
+            "spd": 9,
+            "def": 7,
+            "res": 4
           }
         },
         "40": {
-          "1": {
-            "hp": [
-              "-"
-            ],
-            "atk": [
-              "-"
-            ],
-            "spd": [
-              "-"
-            ],
-            "def": [
-              "-"
-            ],
-            "res": [
-              "-"
-            ]
-          },
-          "2": {
-            "hp": [
-              "-"
-            ],
-            "atk": [
-              "-"
-            ],
-            "spd": [
-              "-"
-            ],
-            "def": [
-              "-"
-            ],
-            "res": [
-              "-"
-            ]
-          },
           "3": {
             "hp": [
-              "-"
+              38
             ],
             "atk": [
-              "-"
+              28
             ],
             "spd": [
-              "-"
+              29
             ],
             "def": [
-              "-"
+              27
             ],
             "res": [
-              "-"
+              14
             ]
           },
           "4": {
             "hp": [
-              "-"
+              39
             ],
             "atk": [
-              "-"
+              30
             ],
             "spd": [
-              "-"
+              31
             ],
             "def": [
-              "-"
+              28
             ],
             "res": [
-              "-"
+              15
             ]
           },
           "5": {
             "hp": [
-              "-"
+              42
             ],
             "atk": [
-              "-"
+              32
             ],
             "spd": [
-              "-"
+              33
             ],
             "def": [
-              "-"
+              31
             ],
             "res": [
-              "-"
+              17
             ]
           }
         }
@@ -2884,6 +3017,107 @@
       }
     },
     {
+      "name": "Charlotte (Bridal Blessings)",
+      "title": "Money Maiden",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Blue Lance",
+      "moveType": "Infantry",
+      "rarities": "5 - Special",
+      "releaseDate": "May 30, 2017",
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "First Bite",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "First Bite+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Smite",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Wind Boost 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Wind Boost 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Wind Boost 3",
+          "rarity": 5
+        },
+        {
+          "name": "Threaten Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Threaten Atk 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Threaten Atk 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 20,
+            "atk": 10,
+            "spd": 8,
+            "def": 5,
+            "res": 4
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              43,
+              46,
+              49
+            ],
+            "atk": [
+              33,
+              36,
+              39
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              21,
+              24,
+              28
+            ],
+            "res": [
+              16,
+              19,
+              22
+            ]
+          }
+        }
+      },
+      "shortName": "Charlotte (B)"
+    },
+    {
       "name": "Cherche",
       "title": "Wyvern Friend",
       "origin": "Fire Emblem Awakening",
@@ -3201,7 +3435,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Green Axe",
       "moveType": "Infantry",
-      "rarities": "5 - Limited",
+      "rarities": "5 - Special",
       "releaseDate": "Mar 30, 2017",
       "skills": [
         {
@@ -3731,6 +3965,112 @@
           }
         }
       }
+    },
+    {
+      "name": "Cordelia (Bridal Blessings)",
+      "title": "Perfect Bride",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Neutral Bow",
+      "moveType": "Infantry",
+      "rarities": "5 - Special",
+      "releaseDate": "May 30, 2017",
+      "skills": [
+        {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Cupid Arrow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Cupid Arrow+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Attack",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Attack Speed",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Escape Route 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Escape Route 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Escape Route 3",
+          "rarity": 5
+        },
+        {
+          "name": "Breath of Life 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Breath of Life 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Breath of Life 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 9,
+            "def": 4,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              33,
+              36,
+              40
+            ],
+            "atk": [
+              32,
+              35,
+              38
+            ],
+            "spd": [
+              32,
+              35,
+              38
+            ],
+            "def": [
+              16,
+              19,
+              22
+            ],
+            "res": [
+              19,
+              22,
+              25
+            ]
+          }
+        }
+      },
+      "shortName": "Cordelia (B)"
     },
     {
       "name": "Corrin (F)",
@@ -4608,8 +4948,8 @@
         },
         {
           "name": "Pivot",
-          "default": 5,
-          "rarity": 4
+          "default": 4,
+          "rarity": "-"
         },
         {
           "name": "Drag Back",
@@ -4817,7 +5157,7 @@
         {
           "name": "Gravity",
           "default": "-",
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Heal",
@@ -10480,7 +10820,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Blue Tome",
       "moveType": "Infantry",
-      "rarities": "5 - Limited",
+      "rarities": "5 - Special",
       "releaseDate": "Mar 30, 2017",
       "skills": [
         {
@@ -10587,7 +10927,7 @@
         {
           "name": "Assault",
           "default": "-",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Pain",
@@ -10957,12 +11297,111 @@
       }
     },
     {
+      "name": "Lyn (Bridal Blessings)",
+      "title": "Bride of the Plains",
+      "origin": "Fire Emblem: The Blazing Blade",
+      "weaponType": "Neutral Staff",
+      "moveType": "Infantry",
+      "rarities": "5 - Special",
+      "releaseDate": "May 30, 2017",
+      "skills": [
+        {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Candlelight",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Heal",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Reconcile",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Rehabilitate",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Imbue",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift-Winds Balm",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dazzling Staff 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Dazzling Staff 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Dazzling Staff 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 6,
+            "spd": 10,
+            "def": 6,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              35,
+              39,
+              42
+            ],
+            "atk": [
+              24,
+              28,
+              31
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              20,
+              23,
+              26
+            ],
+            "res": [
+              21,
+              24,
+              28
+            ]
+          }
+        }
+      },
+      "shortName": "Lyn (B)"
+    },
+    {
       "name": "Mae",
       "title": "Bundle of Energy",
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Blue Tome",
       "moveType": "Infantry",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "May 15, 2017",
       "skills": [
         {
@@ -10977,17 +11416,17 @@
         },
         {
           "name": "Blárowl",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Blárowl+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Draw Back",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -10996,7 +11435,7 @@
         },
         {
           "name": "Desperation 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Desperation 3",
@@ -11012,11 +11451,18 @@
         },
         {
           "name": "B Tome Exp. 3",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 15,
+            "atk": 10,
+            "spd": 6,
+            "def": 2,
+            "res": 8
+          },
           "5": {
             "hp": 16,
             "atk": 10,
@@ -11026,6 +11472,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              30,
+              33,
+              36
+            ],
+            "atk": [
+              31,
+              34,
+              37
+            ],
+            "spd": [
+              25,
+              28,
+              31
+            ],
+            "def": [
+              11,
+              14,
+              17
+            ],
+            "res": [
+              25,
+              28,
+              31
+            ]
+          },
           "5": {
             "hp": [
               32,
@@ -11068,7 +11541,7 @@
         {
           "name": "Assault",
           "default": "-",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Panic",
@@ -13988,7 +14461,7 @@
         {
           "name": "Assault",
           "default": "-",
-          "rarity": 4
+          "rarity": "-"
         },
         {
           "name": "Panic",
@@ -19274,7 +19747,7 @@
       "origin": "Fire Emblem Fates",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": "5 - Limited",
+      "rarities": "5 - Special",
       "releaseDate": "Mar 30, 2017",
       "skills": [
         {
@@ -20087,6 +20560,26 @@
       "weaponType": "Blue Lance"
     },
     {
+      "name": "First Bite",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "First Bite+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
       "name": "Gradivus",
       "spCost": 400,
       "damage(mt)": 16,
@@ -20217,6 +20710,26 @@
       "weaponType": "Blue Tome"
     },
     {
+      "name": "Blessed Bouquet",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blessed Bouquet+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
       "name": "Blue Egg",
       "spCost": 200,
       "damage(mt)": 7,
@@ -20258,7 +20771,7 @@
     },
     {
       "name": "Blárowl",
-      "spCost": 300,
+      "spCost": 200,
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
@@ -20537,7 +21050,7 @@
     },
     {
       "name": "Hammer+",
-      "spCost": 200,
+      "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "Effective against armored units.",
@@ -20687,7 +21200,7 @@
     },
     {
       "name": "Gronnowl",
-      "spCost": 300,
+      "spCost": 200,
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
@@ -20856,6 +21369,16 @@
       "weaponType": "Neutral Staff"
     },
     {
+      "name": "Candlelight",
+      "spCost": 150,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "After combat, foe inflicted with status preventing them from counterattacking.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
+    },
+    {
       "name": "Fear",
       "spCost": 150,
       "damage(mt)": 5,
@@ -20946,11 +21469,31 @@
       "weaponType": "Neutral Bow"
     },
     {
+      "name": "Cupid Arrow",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.Effective against fliers.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Cupid Arrow+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.Effective against fliers.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
       "name": "Firesweep Bow",
       "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
-      "effect": "Effective against flying units. Unit and enemies cannot use counterattacks.",
+      "effect": "Effective against fliers. Unit and enemies cannot use counterattacks.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -20960,7 +21503,7 @@
       "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 2,
-      "effect": "Effective against flying units. Unit and enemies cannot use counterattacks.",
+      "effect": "Effective against fliers. Unit and enemies cannot use counterattacks.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -21232,6 +21775,14 @@
       "range": 1,
       "effect": "Grants Atk+4 to an adjacent ally until the end of the turn.",
       "spCost": 150,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "ASSIST"
+    },
+    {
+      "name": "Rally Attack Speed",
+      "range": 1,
+      "effect": "Grants Atk/Spd+3 to an adjacent ally until the end of the turn.",
+      "spCost": 300,
       "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
@@ -21772,6 +22323,20 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Attack Res +1",
+      "effect": "Grants Atk/Res+1.",
+      "spCost": 80,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Attack Res +2",
+      "effect": "Grants Atk/Res+2.",
+      "spCost": 160,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Close Counter",
       "effect": "Enables unit to counterattack regardless of distance to attacker.",
       "spCost": 300,
@@ -22199,6 +22764,27 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Wind Boost 1",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+2 during combat.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Wind Boost 2",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+4 during combat.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Wind Boost 3",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+6 during combat.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Axebreaker 1",
       "effect": "If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
@@ -22301,6 +22887,27 @@
       "effect": "If unit's HP ≥ 50% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
       "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dazzling Staff 1",
+      "effect": "If unit has 100% HP at the start of combat, the enemy cannot counterattack.",
+      "spCost": 60,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dazzling Staff 2",
+      "effect": "If unit has ≥ 50% HP at the start of combat, the enemy cannot counterattack.",
+      "spCost": 120,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dazzling Staff 3",
+      "effect": "The enemy cannot counterattack.",
+      "spCost": 240,
+      "inheritRestriction": "Staff Users Only",
       "type": "PASSIVE_B"
     },
     {
@@ -22831,63 +23438,63 @@
     {
       "name": "Axe Experience 1",
       "effect": "If unit survives, unit gets 1.5x EXP.(If similar skill effects also used, only highest multipler applied.)",
-      "spCost": 50,
+      "spCost": 30,
       "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Axe Experience 2",
       "effect": "If unit survives, all axe users on team get 1.5x EXP.(If similar skill effects also used, only highest multipler applied.)",
-      "spCost": 100,
+      "spCost": 60,
       "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Axe Experience 3",
       "effect": "If unit survives, all axe users on team get 2x EXP.(If similar skill effects also used, only highest multipler applied.)",
-      "spCost": 200,
+      "spCost": 120,
       "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "B Tome Exp. 1",
       "effect": "If unit survives and uses a blue tome, unit gets 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
-      "spCost": 50,
+      "spCost": 30,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "B Tome Exp. 2",
       "effect": "If unit survives, all blue tome users on team get 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
-      "spCost": 100,
+      "spCost": 60,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "B Tome Exp. 3",
       "effect": "If unit survives, all blue tome users on team get 2x EXP.(If similar skill effects also used, only highest multiplier applies.)",
-      "spCost": 200,
+      "spCost": 120,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Bow Exp. 1",
       "effect": "If unit survives and uses a bow, unit gets 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
-      "spCost": 50,
+      "spCost": 30,
       "inheritRestriction": "Bow Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Bow Exp. 2",
       "effect": "If unit survives, all bow users on team get 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
-      "spCost": 100,
+      "spCost": 60,
       "inheritRestriction": "Bow Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Bow Exp. 3",
       "effect": "If unit survives, all bow users on team get 2x EXP.(If similar skill effects also used, only highest multiplier applies.)",
-      "spCost": 200,
+      "spCost": 120,
       "inheritRestriction": "Bow Users Only",
       "type": "PASSIVE_C"
     },
@@ -23296,6 +23903,11 @@
       "type": "SEAL"
     },
     {
+      "name": "Breath of Life 1",
+      "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
+      "type": "SEAL"
+    },
+    {
       "name": "Embla's Ward",
       "effect": "Unit receives 0 damage.",
       "type": "SEAL"
@@ -23308,6 +23920,11 @@
     {
       "name": "HP +3",
       "effect": "Grants +3 to max HP.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Quickened Pulse",
+      "effect": "Special cooldown count -1 at start of Turn 1.",
       "type": "SEAL"
     },
     {

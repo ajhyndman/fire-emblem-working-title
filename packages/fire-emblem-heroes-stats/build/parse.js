@@ -154,6 +154,6 @@ export const parseHeroAggregateHtml = compose(
   replace(/<a[^>]*?><img[^>]*?Icon Move /g, ''),
   replace(/Movement Type/, 'Move Type'),
   replace(/Character Name/, 'Name'),
-  prop(1),  // match [1] is the actual hero table
+  prop(0),  // match [1] is the actual hero table
   match(/<table.*?\/table>/g),
 );
