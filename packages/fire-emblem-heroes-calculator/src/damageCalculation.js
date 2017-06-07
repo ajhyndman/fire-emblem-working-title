@@ -203,7 +203,8 @@ const canRetaliate = (attacker: HeroInstance, context: Context) => {
   const defender = context.enemy;
   if (getSkillName(defender, 'WEAPON') === ''
       || hasSkill(attacker, 'WEAPON', 'Firesweep')
-      || hasSkill(defender, 'WEAPON', 'Firesweep')) {
+      || hasSkill(defender, 'WEAPON', 'Firesweep')
+      || hasSkill(attacker, 'PASSIVE_B', 'Dazzling Staff')) {
     return false;
   }
   // Windsweep checks for Sword/Lance/Axe/Bow/Dagger = all physical weapons.
