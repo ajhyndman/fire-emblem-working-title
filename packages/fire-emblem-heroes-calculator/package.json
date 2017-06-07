@@ -1,6 +1,6 @@
 {
   "name": "fire-emblem-heroes-calculator",
-  "version": "0.7.16",
+  "version": "0.7.17",
   "description": "Calculate the result of combat between one hero and another",
   "main": "dist/fire-emblem-heroes-calculator.js",
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
