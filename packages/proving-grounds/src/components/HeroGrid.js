@@ -24,7 +24,7 @@ type Props = {
 };
 
 const GUTTER_HEIGHT = 5;
-const GUTTER_WIDTH = 7;
+const GUTTER_WIDTH = 8;
 
 const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
   <div className="grid">
