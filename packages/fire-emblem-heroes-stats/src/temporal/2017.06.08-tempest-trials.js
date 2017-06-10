@@ -2,8 +2,8 @@
 import type { Hero } from '..';
 
 // Times were entered in PDT (UTC - 7)
-const startTime = new Date('2017-06-09T00:00:00-07:00');
-const endTime = new Date('2017-06-15T23:59:00-07:00');
+const startTime = new Date('2017-06-08T17:00:00+10:00');
+const endTime = new Date('2017-06-22T16:59:00+10:00');
 
 const unitList: Array<Hero> = [
   {
