@@ -61,7 +61,7 @@ const hasStatsForRarity = (instance: HeroInstance, rarity: Rarity): boolean => {
   return Boolean(hero.stats['1'][`${rarity}`] && hero.stats['40'][`${rarity}`]);
 };
 
-const HeroConfigurer = withState(
+const HeroBuilder = withState(
   'state',
   'setState',
   { open: false, skillType: undefined },
@@ -342,4 +342,4 @@ const HeroConfigurer = withState(
   );
 });
 
-export default HeroConfigurer;
+export default HeroBuilder;

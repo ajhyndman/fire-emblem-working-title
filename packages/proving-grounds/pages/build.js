@@ -5,7 +5,7 @@ import withRedux from 'next-redux-wrapper';
 import { isEmpty } from 'ramda';
 import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 
-import HeroConfigurer from '../src/components/HeroConfigurer';
+import HeroBuilder from '../src/components/HeroBuilder';
 import Overlay from '../src/components/Overlay';
 import Root, { panelHeight } from '../src/components/Root';
 import Router from '../src/router';
@@ -20,10 +20,10 @@ type Props = {
   state: State;
 };
 
-// TODO: redirect to non-configure page instead of showing an Anna configuration.
+// TODO: redirect to non-build page instead of showing an Anna configuration.
 const defaultInstance = getDefaultInstance('Anna');
 
-class Configure extends React.Component {
+class Build extends React.Component {
   props: Props;
 
   static async getInitialProps ({ store, req, query }) {
@@ -68,7 +68,7 @@ class Configure extends React.Component {
           }}
         >
           <div className="container">
-            <HeroConfigurer
+            <HeroBuilder
               dispatch={this.props.dispatch}
               heroInstance={this.props.state.heroSlots[this.props.state.activeSlot || 0]
                 || defaultInstance}
@@ -82,4 +82,4 @@ class Configure extends React.Component {
   }
 }
 
-export default withRedux(initStore, state => ({ state }))(Configure);
+export default withRedux(initStore, state => ({ state }))(Build);

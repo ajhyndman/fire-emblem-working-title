@@ -31,8 +31,8 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    // The configure route is going to be frequently switched to and from.
-    Router.prefetch('/configure');
+    // The build route is going to be frequently switched to and from.
+    Router.prefetch('/build');
   }
 
   render() {
