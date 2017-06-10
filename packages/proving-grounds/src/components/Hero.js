@@ -23,6 +23,8 @@ const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) 
   const imageName = compose(
     // strip GHB suffixes (e.g. (Navarre GHB))
     replace(/ \([^()]*GHB\)/, ''),
+    // strip GHB suffixes (e.g. (Navarre GHB))
+    replace(/ \(Tempest Trials\)/, ''),
     // strip index suffixes (e.g. Thief 1, Thief 2)
     replace(/ \d/, ''),
   )(name);
