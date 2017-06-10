@@ -11796,6 +11796,92 @@
       }
     },
     {
+      "name": "Marth (Masked)",
+      "title": "Enigmatic Blade",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": "4-5Event: Tempest Trials",
+      "releaseDate": "Jun 08, 2017",
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Falchion",
+          "default": 5,
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "4": {
+            "hp": 18,
+            "atk": 8,
+            "spd": 10,
+            "def": 5,
+            "res": 3
+          },
+          "5": {
+            "hp": 19,
+            "atk": 8,
+            "spd": 10,
+            "def": 6,
+            "res": 4
+          }
+        },
+        "40": {
+          "4": {
+            "hp": [
+              40
+            ],
+            "atk": [
+              32
+            ],
+            "spd": [
+              34
+            ],
+            "def": [
+              23
+            ],
+            "res": [
+              17
+            ]
+          },
+          "5": {
+            "hp": [
+              43
+            ],
+            "atk": [
+              34
+            ],
+            "spd": [
+              36
+            ],
+            "def": [
+              25
+            ],
+            "res": [
+              19
+            ]
+          }
+        }
+      },
+      "shortName": "Marth (M)"
+    },
+    {
       "name": "Matthew",
       "title": "Faithful Spy",
       "origin": "Fire Emblem: The Blazing Blade",
@@ -22611,21 +22697,21 @@
     },
     {
       "name": "Heavy Blade 1",
-      "effect": "If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
+      "effect": "If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 per attack.(If using other similar skill, only highest value applied.)",
       "spCost": 60,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
       "name": "Heavy Blade 2",
-      "effect": "If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
+      "effect": "If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 per attack.(If using other similar skill, only highest value applied.)",
       "spCost": 120,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
       "name": "Heavy Blade 3",
-      "effect": "If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 attack.(If using other similar skill, only highest value applied.)",
+      "effect": "If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 per attack.(If using other similar skill, only highest value applied.)",
       "spCost": 240,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
