@@ -1,4 +1,14 @@
 // @flow
+// eslint
+import {
+  compose,
+  equals,
+  filter,
+  join,
+  map,
+  toPairs,
+} from 'ramda';
+
 import { getDefaultSkills } from './heroHelpers';
 
 
@@ -25,6 +35,13 @@ export type Buffs = {
   +res: number;
 };
 
+export type State = {
+  +hpMissing: number;
+  +specialCharge: number;
+  +buffs: Buffs;
+  +debuffs: Buffs;
+};
+
 export type HeroInstance = {
   // custom: false,
   +name: string;
@@ -33,12 +50,7 @@ export type HeroInstance = {
   +bane: ?Stat;
   +mergeLevel: MergeLevel;
   +skills: InstanceSkills;
-  +state: {
-    +hpMissing: number;
-    +specialCharge: number;
-    +buffs: Buffs;
-    +debuffs: Buffs;
-  }
+  +state: State;
 };
 
 export type Context = {
@@ -77,6 +89,13 @@ export const getDefaultBuffs = (): Buffs => ({
   res: 0,
 });
 
+const getDefaultState = (): State => ({
+  hpMissing: 0,
+  specialCharge: 0,
+  buffs: getDefaultBuffs(),
+  debuffs: getDefaultBuffs(),
+});
+
 // Returns a context from the perspective of the enemy.
 export const invertContext = (hero: HeroInstance, context: Context): Context => ({
   enemy: hero,
@@ -92,10 +111,92 @@ export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstan
   rarity: rarity,
   mergeLevel: 0,
   skills: getDefaultSkills(name, rarity),
-  state: {
-    hpMissing: 0,
-    specialCharge: 0,
-    buffs: getDefaultBuffs(),
-    debuffs: getDefaultBuffs(),
-  },
+  state: getDefaultState(),
 });
+
+// eslint-disable-next-line no-undef
+const humanizeSkillSlot = (slot: $Keys<InstanceSkills>): string => {
+  switch (slot) {
+    case 'WEAPON':
+      return 'Weapon';
+    case 'ASSIST':
+      return 'Assist';
+    case 'SPECIAL':
+      return 'Special';
+    case 'PASSIVE_A':
+      return 'A';
+    case 'PASSIVE_B':
+      return 'B';
+    case 'PASSIVE_C':
+      return 'C';
+    case 'SEAL':
+      return 'S';
+    default:
+      return '';
+  }
+};
+
+export const exportInstance = (heroInstance: HeroInstance): string => {
+  // $FlowIssue: flow always gets lost in compose chains
+  const skillList = compose(
+    join('\n'),
+    map(([slot, skillName]) => `${humanizeSkillSlot(slot)}: ${skillName}`),
+    filter(([, skillName]) => skillName !== undefined),
+    toPairs,
+  )(heroInstance.skills);
+
+  const buffList = equals(getDefaultBuffs(), heroInstance.state.buffs)
+    ? ''
+    : `Buffs: ${
+      // $FlowIssue: flow always gets lost in compose chains
+      compose(
+        join(', '),
+        map(([statKey, value]) => `${statKey} ${value}`),
+        filter(([, value]) => value !== 0),
+        toPairs,
+      )(heroInstance.state.buffs)
+    }\n`;
+
+  const debuffList = equals(getDefaultBuffs(), heroInstance.state.buffs)
+    ? ''
+    : `Debuffs: ${
+      // $FlowIssue: flow always gets lost in compose chains
+      compose(
+        join(', '),
+        map(([statKey, value]) => `${statKey} -${value}`),
+        filter(([, value]) => value !== 0),
+        toPairs,
+      )(heroInstance.state.debuffs)
+    }\n`;
+
+  const status = equals(getDefaultState(), heroInstance.state)
+    ? ''
+    : `:::Status\n${
+      buffList
+    }${
+      debuffList
+    }${
+      heroInstance.state.hpMissing
+        ? `Damage: ${heroInstance.state.hpMissing}\n`
+        : ''
+    }${
+      heroInstance.state.specialCharge
+        ? `Charge: ${heroInstance.state.specialCharge}\n`
+        : ''
+    }`;
+
+  return `${heroInstance.name} (${heroInstance.rarity}★${
+    heroInstance.mergeLevel ? `+${heroInstance.mergeLevel}` : ''
+  }${
+    heroInstance.boon ? ` +${heroInstance.boon}` : ''
+  }${
+    heroInstance.bane ? ` -${heroInstance.bane}` : ''
+  })\n${
+    skillList
+  }\n${
+    status
+  }`;
+};
+
+// export const importInstance = (shareText: string): HeroInstance => {
+// };
