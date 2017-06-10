@@ -23,6 +23,7 @@ type Props = {
   showUndo?: boolean;
 };
 
+const GUTTER_HEIGHT = 5;
 const GUTTER_WIDTH = 7;
 
 const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
@@ -41,7 +42,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         box-shadow: 0 0 10px rgba(70, 183, 227, 0.4);
         cursor: pointer;
         height: ${gridSize}px;
-        margin: ${GUTTER_WIDTH}px;
+        margin: ${GUTTER_HEIGHT}px ${GUTTER_WIDTH}px;
         position: relative;
         transition: box-shadow 0.2s;
         user-select: none;
