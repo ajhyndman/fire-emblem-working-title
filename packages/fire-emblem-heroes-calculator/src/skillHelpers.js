@@ -167,6 +167,16 @@ export function getStatValue(
           return skillNumbers[1];
         }
       }
+      // Wind Boost: +spd if HP - foeHP > x at start of combat.
+      if (statKey === 'spd' && context !== undefined && test(/Wind Boost/, skillName)) {
+        const hpDiffRequired = skillNumbers[0];
+        // It's ok for getStat(def) to call getStat(hp) because max HP is constant.
+        const ownHP = getStat(hero, 'hp', 40) - hero.state.hpMissing;
+        const foeHP = getStat(context.enemy, 'hp', 40) - context.enemy.state.hpMissing;
+        if (ownHP - foeHP >= hpDiffRequired) {
+          return skillNumbers[1];
+        }
+      }
       // Distant Def: +def/res when attacked from a distance
       if (isDefender && test(/Distant Def/, skillName) && context !== undefined) {
         if (getRange(context.enemy) === 2) {
