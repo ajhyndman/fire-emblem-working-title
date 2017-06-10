@@ -23,7 +23,7 @@ type Props = {
   showUndo?: boolean;
 };
 
-const gutterWidth = 5;
+const GUTTER_WIDTH = 7;
 
 const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
   <div className="grid">
@@ -41,7 +41,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         box-shadow: 0 0 10px rgba(70, 183, 227, 0.4);
         cursor: pointer;
         height: ${gridSize}px;
-        margin: ${gutterWidth}px;
+        margin: ${GUTTER_WIDTH}px;
         position: relative;
         transition: box-shadow 0.2s;
         user-select: none;
@@ -53,7 +53,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
       .gridSquareOuter {
         align-items: center;
         display: flex;
-        flex-basis: ${gridSize + gutterWidth}px;
+        flex-basis: ${gridSize + GUTTER_WIDTH}px;
         flex-direction: column;
       }
       .undo {
@@ -73,7 +73,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5), 0 0 2px 4px rgba(223, 110, 134, 0.9);
       }
       div:empty {
-        margin: 0 5px;
+        margin: 0 ${GUTTER_WIDTH}px;
         width: 56px;
       }
       .name {
