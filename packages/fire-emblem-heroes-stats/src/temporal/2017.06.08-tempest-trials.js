@@ -49,7 +49,7 @@ const unitList: Array<Hero> = [
       },
       '40': {
         '5': {
-          'hp': [63],
+          'hp': [66],
           'atk': [40],
           'spd': [29],
           'def': [33],
