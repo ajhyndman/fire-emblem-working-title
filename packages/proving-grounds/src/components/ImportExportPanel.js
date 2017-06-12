@@ -21,6 +21,7 @@ type Props = {
 };
 
 const GUTTER_SIZE = 15;
+const BORDER_WIDTH = 1;
 
 const ImportExportPanel = ({
   dispatch,
@@ -38,24 +39,24 @@ const ImportExportPanel = ({
         font-family: ${fontFamilies.ui};
         font-size: ${fontSizes.small}px;
         line-height: ${lineHeights.body};
-        padding: 0 ${GUTTER_SIZE}px;
+        padding: 0 0  ${GUTTER_SIZE}px;
       }
       .explanation p {
         margin: 0;
       }
       .share-link {
-        bottom: 0;
+        bottom: ${GUTTER_SIZE / 2}px;
         position: absolute;
         right: 0;
       }
       textarea {
         background: none;
-        border: none;
+        border: solid ${BORDER_WIDTH}px ${colors.aquaIsland};
         box-sizing: border-box;
         color: ${colors.aquaIsland};
         font-size: ${fontSizes.medium}px;
         line-height: ${lineHeights.body};
-        padding: ${GUTTER_SIZE}px;
+        padding: ${GUTTER_SIZE / 2}px ${GUTTER_SIZE}px;
         resize: none;
         width: 100%;
       }
