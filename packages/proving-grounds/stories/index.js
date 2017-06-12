@@ -9,6 +9,7 @@ import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 import Frame from '../src/components/Frame';
 import Hero from '../src/components/Hero';
 import HeroBuilder from '../src/components/HeroBuilder';
+import ImportExportPanel from '../src/components/ImportExportPanel';
 import Input from '../src/components/Input';
 import RaritySelector from '../src/components/RaritySelector';
 import Select from '../src/components/Select';
@@ -98,6 +99,26 @@ storiesOf('HeroBuilder', module)
 
     return <HeroBuilderStory />;
   });
+
+storiesOf('ImportExportPanel', module)
+  .add('default', () => (
+    <div className="root">
+      <style jsx>{`
+        .root {
+          background: ${colors.elephant};
+        }
+      `}</style>
+      <ImportExportPanel
+        dispatch={() => {}}
+        onChange={action('VALUE_CHANGE')}
+        value={`Anna (5★)
+Weapon: Noatun
+Special: Astra
+B: Vantage 3
+C: Spur Res 3`}
+      />
+    </div>
+  ));
 
 storiesOf('Input', module)
   .add('default', () => (
