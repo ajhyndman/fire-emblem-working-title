@@ -5,8 +5,12 @@ import {
   compose,
   equals,
   filter,
+  findIndex,
+  invertObj,
   join,
+  keys,
   map,
+  sort,
   test,
   toPairs,
 } from 'ramda';
@@ -83,6 +87,18 @@ export type Context = {
 //   passiveC: PassiveSkill;
 // };
 
+const SKILL_KEY_MAP = {
+  WEAPON: 'Weapon',
+  ASSIST: 'Assist',
+  SPECIAL: 'Special',
+  PASSIVE_A: 'A',
+  PASSIVE_B: 'B',
+  PASSIVE_C: 'C',
+  SEAL: 'S',
+};
+
+const findObjectIndex = (key, obj) => findIndex(equals(key), keys(obj));
+
 export const getDefaultBuffs = (): Buffs => ({
   hp: 0,
   atk: 0,
@@ -116,48 +132,23 @@ export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstan
   state: getDefaultState(),
 });
 
+
 // eslint-disable-next-line no-undef
 const humanizeSkillKey = (skillKey: $Keys<InstanceSkills>): string => {
-  switch (skillKey) {
-    case 'WEAPON':
-      return 'Weapon';
-    case 'ASSIST':
-      return 'Assist';
-    case 'SPECIAL':
-      return 'Special';
-    case 'PASSIVE_A':
-      return 'A';
-    case 'PASSIVE_B':
-      return 'B';
-    case 'PASSIVE_C':
-      return 'C';
-    case 'SEAL':
-      return 'S';
-    default:
-      return '';
+  if (SKILL_KEY_MAP.hasOwnProperty(skillKey)) {
+    return SKILL_KEY_MAP[skillKey];
   }
+  return '';
 };
 
 // eslint-disable-next-line no-undef
 const sanitizeSkillKey = (skillKey: ?string): ?$Keys<InstanceSkills> => {
-  switch (skillKey) {
-    case 'Weapon':
-      return 'WEAPON';
-    case 'Assist':
-      return 'ASSIST';
-    case 'Special':
-      return 'SPECIAL';
-    case 'A':
-      return 'PASSIVE_A';
-    case 'B':
-      return 'PASSIVE_B';
-    case 'C':
-      return 'PASSIVE_C';
-    case 'S':
-      return 'SEAL';
-    default:
-      return undefined;
+  const map = invertObj(SKILL_KEY_MAP);
+  if (map.hasOwnProperty(skillKey)) {
+    // $FlowIssue: invertObj's typedef doesn't resolve the result to an enum
+    return map[skillKey];
   }
+  return undefined;
 };
 
 const sanitizeStatKey = (statKey: ?string): ?Stat => {
@@ -178,6 +169,8 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
   const skillList = compose(
     join('\n'),
     map(([slot, skillName]) => `${humanizeSkillKey(slot)}: ${skillName}`),
+    sort(([a], [b]) =>
+      findObjectIndex(a, SKILL_KEY_MAP) - findObjectIndex(b, SKILL_KEY_MAP)),
     filter(([, skillName]) => skillName !== undefined),
     toPairs,
   )(heroInstance.skills);
