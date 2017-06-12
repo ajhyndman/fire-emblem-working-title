@@ -5,6 +5,7 @@ import Clippy from 'react-icons/lib/go/clippy';
 
 import ShareButton from './ShareButton';
 import {
+  activateColor,
   colors,
   fontFamilies,
   fontSizes,
@@ -32,6 +33,16 @@ const ImportExportPanel = ({
         position: relative;
         width: 100%;
       }
+      .explanation {
+        color: ${colors.iceberg};
+        font-family: ${fontFamilies.ui};
+        font-size: ${fontSizes.small}px;
+        line-height: ${lineHeights.body};
+        padding: 0 ${GUTTER_SIZE}px;
+      }
+      .explanation p {
+        margin: 0;
+      }
       .share-link {
         bottom: 0;
         position: absolute;
@@ -42,7 +53,6 @@ const ImportExportPanel = ({
         border: none;
         box-sizing: border-box;
         color: ${colors.aquaIsland};
-        font-family: ${fontFamilies.ui};
         font-size: ${fontSizes.medium}px;
         line-height: ${lineHeights.body};
         padding: ${GUTTER_SIZE}px;
@@ -50,10 +60,13 @@ const ImportExportPanel = ({
         width: 100%;
       }
       textarea:focus {
-        color: ${colors.iceberg};
+        color: ${activateColor(colors.aquaIsland)};
         outline: none;
       }
     `}</style>
+    <div className="explanation">
+      <p>To import a build, paste it below:</p>
+    </div>
     <textarea
       name="export-import"
       onChange={event => onChange(event.target.value)}

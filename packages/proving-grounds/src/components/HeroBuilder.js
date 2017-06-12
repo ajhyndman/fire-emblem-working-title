@@ -195,7 +195,7 @@ const HeroBuilder = ({
                 });
                 Router.push('/export');
               }}
-              title="Export"
+              title="Import/Export"
             >
               <Share style={{ display: 'block' }} />
             </button>
