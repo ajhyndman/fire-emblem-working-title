@@ -1,54 +1,44 @@
 // @flow
 import React from 'react';
 import clipboard from 'clipboard-js';
-import Share from 'react-icons/lib/md/share';
-
-import type { Dispatch } from '../reducer';
 
 
 type Props = {
-  dispatch: Dispatch;
+  icon: ReactClass<*>;
   link: string;
+  onClick: (link: string) => void;
+  title?: string;
 };
 
-const ShareButton = ({ dispatch, link }: Props) => (
-  <div className="root">
-    <style jsx>{`
-      button {
-        border: none;
-        background: none;
-        cursor: pointer;
-        color: white;
-        font-family: 'Mandali', sans-serif;
-        font-size: 30px;
-        margin: 0;
-        line-height: 1;
-        padding: 5px;
-      }
-      button:focus {
-        outline: none;
-      }
-    `}</style>
-    <button
-      onClick={() => {
-        clipboard.copy(link);
-        dispatch({
-          type: 'ENQUEUE_NOTIFICATION',
-          value: 'Link copied to clipboard!',
-          meta: {
-            analytics: {
-              type: 'CREATED_SHARE_LINK',
-              payload: {
-                link,
-              },
-            },
-          },
-        });
-      }}
-    >
-      <Share style={{ display: 'block' }} />
-    </button>
-  </div>
-);
+const ShareButton = ({ icon, link, onClick, title }: Props) => {
+  const Icon = icon;
+  return (
+    <div className="root" title={title}>
+      <style jsx>{`
+        button {
+          border: none;
+          background: none;
+          cursor: pointer;
+          color: white;
+          font-size: 30px;
+          margin: 0;
+          line-height: 1;
+          padding: 5px;
+        }
+        button:focus {
+          outline: none;
+        }
+      `}</style>
+      <button
+        onClick={() => {
+          clipboard.copy(link);
+          onClick(link);
+        }}
+      >
+        <Icon style={{ display: 'block' }} />
+      </button>
+    </div>
+  );
+};
 
 export default ShareButton;

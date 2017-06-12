@@ -3,9 +3,9 @@ import 'babel-polyfill';
 import React from 'react';
 import withRedux from 'next-redux-wrapper';
 import { isEmpty } from 'ramda';
-import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
+import { importInstance } from 'fire-emblem-heroes-calculator';
 
-import HeroBuilder from '../src/components/HeroBuilder';
+import ImportExportPanel from '../src/components/ImportExportPanel';
 import Modal from '../src/components/Modal';
 import Overlay from '../src/components/Overlay';
 import Root, { panelHeight } from '../src/components/Root';
@@ -21,9 +21,6 @@ type Props = {
   dispatch: Dispatch;
   state: State;
 };
-
-// TODO: redirect to non-build page instead of showing an Anna configuration.
-const defaultInstance = getDefaultInstance('Anna');
 
 class Build extends React.Component {
   props: Props;
@@ -42,8 +39,7 @@ class Build extends React.Component {
   componentDidMount() {
     // These routes are likely to be frequently switched to and from.
     Router.prefetch('/');
-    Router.prefetch('/export');
-    Router.prefetch('/skills');
+    Router.prefetch('/build');
   }
 
   render() {
@@ -66,7 +62,7 @@ class Build extends React.Component {
         <Overlay
           onClick={event => {
             event.stopPropagation();
-            dispatch({
+            this.props.dispatch({
               type: 'SELECT_SLOT',
               slot: undefined,
             });
@@ -75,11 +71,15 @@ class Build extends React.Component {
         >
           <div className="container">
             <Modal>
-              <HeroBuilder
+              <ImportExportPanel
                 dispatch={dispatch}
-                heroInstance={state.heroSlots[state.activeSlot || 0]
-                  || defaultInstance}
-                level={state.previewLevel}
+                onChange={value => {
+                  const activeSlot = state.activeSlot;
+                  dispatch({ type: 'SELECT_HERO', hero: importInstance(value) });
+                  dispatch({ type: 'SELECT_SLOT', slot: activeSlot });
+                  dispatch({ type: 'CHANGE_EXPORT_STRING', value });
+                }}
+                value={state.exportString}
               />
             </Modal>
           </div>

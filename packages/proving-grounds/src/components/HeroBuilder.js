@@ -1,20 +1,21 @@
 // @flow
 import React from 'react';
+import Router from 'next/router';
 import MinusSquare from 'react-icons/lib/fa/minus-square';
 import PlusSquare from 'react-icons/lib/fa/plus-square';
+import Share from 'react-icons/lib/md/share';
 import {
   compose,
   equals,
   filter,
+  invertObj,
   keys,
   mapObjIndexed,
   not,
-  pathOr,
   values,
-  zipObj,
 } from 'ramda';
-import { withState } from 'recompose';
 import { getHero } from 'fire-emblem-heroes-stats';
+import { exportInstance } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance, InstanceSkills, Rarity } from 'fire-emblem-heroes-calculator';
 import type { Hero, SkillType } from 'fire-emblem-heroes-stats';
 
@@ -22,7 +23,6 @@ import RaritySelector from './RaritySelector';
 import SegmentedControl from './SegmentedControl';
 import Select from './Select';
 import Skill from './Skill';
-import SkillSelector from './SkillSelector';
 import StatSheet from './StatSheet';
 import { colors, fontFamilies, fontSizes, lineHeights, transition } from '../theme';
 import { staticUrl } from '../../config';
@@ -33,18 +33,8 @@ import type { Dispatch } from '../reducer';
 type Props = {|
   +dispatch: Dispatch;
   +heroInstance: HeroInstance;
-  +showGuide: boolean;
   +level: 1 | 40;
 |};
-
-// eslint-disable-next-line
-type State = {
-  open: true;
-  skillType: SkillType;
-} | {
-  open: false;
-  skillType: void;
-};
 
 const skillIcons = {
   ASSIST: 'Icon_Skill_Assist.png',
@@ -61,20 +51,11 @@ const hasStatsForRarity = (instance: HeroInstance, rarity: Rarity): boolean => {
   return Boolean(hero.stats['1'][`${rarity}`] && hero.stats['40'][`${rarity}`]);
 };
 
-const HeroBuilder = withState(
-  'state',
-  'setState',
-  { open: false, skillType: undefined },
-)(({
+const HeroBuilder = ({
   dispatch,
   heroInstance,
   level,
-  setState,
-  showGuide,
-  state,
-  // eslint can't parse type spreads yet: https://github.com/babel/babylon/pull/418
-}/* : { ...Props, +setState: (state: State) => void; +state: State; } */) => {
-
+}: Props) => {
   const varianceOptions = {
     HP: 'hp',
     ATK: 'atk',
@@ -85,21 +66,9 @@ const HeroBuilder = withState(
 
   const mergeLevel = heroInstance.mergeLevel === undefined ? 0 : heroInstance.mergeLevel;
 
-  const invertObject = (obj) => zipObj(values(obj), keys(obj));
-
   return (
     <div className="root">
       <style jsx>{`
-        .root {
-          align-items: center;
-          background-clip: padding-box;
-          /* average of border-image color */
-          background-color: #1c4654;
-          border: 46px solid transparent;
-          border-image: url(${staticUrl}Border_Blue.png) 46 fill stretch;
-          display: flex;
-          flex-direction: column;
-        }
         .active-skill {
           position: relative;
         }
@@ -127,6 +96,19 @@ const HeroBuilder = withState(
           flex-direction: column;
           margin-left: 15px;
         }
+        .export-button {
+          border: none;
+          background: none;
+          cursor: pointer;
+          color: white;
+          font-size: 30px;
+          margin: 0;
+          line-height: 1;
+          padding: 0;
+        }
+        .export-button:focus {
+          outline: none;
+        }
         .row {
           align-items: baseline;
           color: ${colors.iceberg};
@@ -153,9 +135,6 @@ const HeroBuilder = withState(
           top: 50%;
           transform: translate(50%, -50%);
         }
-        .skill-selector {
-          width: 100%;
-        }
         .center {
           display: flex;
           justify-content: space-around;
@@ -169,177 +148,167 @@ const HeroBuilder = withState(
           text-align: center;
         }
       `}</style>
-      {!state.open
-        ? (
-          <div>
-            <div className="section">
-              <div className="row" style={{ alignItems: 'center' }}>
-                <div style={{ flexGrow: 1 }}>
-                  <SegmentedControl
-                    options={[
-                      'Lv 1',
-                      `Lv 40${mergeLevel > 0 ? `+${mergeLevel}` : ''}`,
-                    ]}
-                    selected={level === 1 ? 0 : 1}
-                    onChange={i => dispatch({ type: 'SET_PREVIEW_LEVEL', level: ([1, 40])[i] })}
-                  />
-                </div>
-                <div className="column">
-                  <button
-                    className="adjust-merge-level"
-                    onClick={() => dispatch({
-                      type: 'SET_MERGE_LEVEL',
-                      value: mergeLevel + 1,
-                    })}
-                  >
-                    <PlusSquare style={{ display: 'block' }} />
-                  </button>
-                  <button
-                    className="adjust-merge-level"
-                    onClick={() => dispatch({
-                      type: 'SET_MERGE_LEVEL',
-                      value: heroInstance.mergeLevel - 1,
-                    })}
-                  >
-                    <MinusSquare style={{ display: 'block' }} />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="section">
-              <h1 className="name">{heroInstance.name}</h1>
-            </div>
-            <div className="section">
-              <StatSheet
-                heroInstance={heroInstance}
-                level={level}
-              />
-            </div>
-            <div className="section center">
-              <RaritySelector
-                disabled={[
-                  !hasStatsForRarity(heroInstance, 1),
-                  !hasStatsForRarity(heroInstance, 2),
-                  !hasStatsForRarity(heroInstance, 3),
-                  !hasStatsForRarity(heroInstance, 4),
-                  !hasStatsForRarity(heroInstance, 5),
+      <div>
+        <div className="section">
+          <div className="row" style={{ alignItems: 'center' }}>
+            <div style={{ flexGrow: 1 }}>
+              <SegmentedControl
+                options={[
+                  'Lv 1',
+                  `Lv 40${mergeLevel > 0 ? `+${mergeLevel}` : ''}`,
                 ]}
-                selected={heroInstance.rarity}
-                onChange={rarity => dispatch({ type: 'UPDATE_RARITY', rarity })}
+                selected={level === 1 ? 0 : 1}
+                onChange={i => dispatch({ type: 'SET_PREVIEW_LEVEL', level: ([1, 40])[i] })}
               />
             </div>
-            <div className="section" style={{ width: 175 }}>
-              <div className="row">
-                Boon
-                <div style={{ flexBasis: 75 }}>
-                  <Select
-                    onChange={selected => dispatch({
-                      type: 'UPDATE_BOON',
-                      stat: varianceOptions[selected],
-                    })}
-                    options={[
-                      '—',
-                      ...keys(filter(compose(not, equals(heroInstance.bane)), varianceOptions)),
-                    ]}
-                    selected={heroInstance.boon
-                      // $FlowIssue: Flow isn't thinks invertObject might have side effects
-                      ? invertObject(varianceOptions)[heroInstance.boon]
-                      : '—'}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                Bane
-                <div style={{ flexBasis: 75 }}>
-                  <Select
-                    onChange={selected => dispatch({
-                      type: 'UPDATE_BANE',
-                      stat: varianceOptions[selected],
-                    })}
-                    options={[
-                      '—',
-                      ...keys(filter(compose(not, equals(heroInstance.boon)), varianceOptions)),
-                    ]}
-                    selected={heroInstance.bane
-                      // $FlowIssue: Flow isn't thinks invertObject might have side effects
-                      ? invertObject(varianceOptions)[heroInstance.bane]
-                      : '—'}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="section">
-              {
-                // $FlowIssue: I think flow thinks skillType could be any string.
-                values(mapObjIndexed(
-                  (skill: string | void, skillType: SkillType) => (
-                    <div
-                      key={skillType}
-                      className="active-skill"
-                    >
-                      <img
-                        className="skill-icon"
-                        src={`${staticUrl}30px-${skillIcons[skillType]}`}
-                        srcSet={`
-                          ${staticUrl}30px-${skillIcons[skillType]} 30w,
-                          ${staticUrl}60px-${skillIcons[skillType]} 60w
-                        `}
-                        sizes="30px"
-                      />
-                      <Skill
-                        name={skill || '--'}
-                        type={skillType}
-                        onClick={() => { setState({ open: true, skillType: skillType }); }}
-                      />
-                    </div>
-                  ),
-                  ({
-                    // Enumerate all properties to ensure they are all iterable.
-                    // This fixes issue #52
-                    WEAPON: undefined,
-                    ASSIST: undefined,
-                    SPECIAL: undefined,
-                    PASSIVE_A: undefined,
-                    PASSIVE_B: undefined,
-                    PASSIVE_C: undefined,
-                    SEAL: undefined,
-                    ...heroInstance.skills,
-                  }: InstanceSkills),
-                ))
-              }
+            <div className="column">
+              <button
+                className="adjust-merge-level"
+                onClick={() => dispatch({
+                  type: 'SET_MERGE_LEVEL',
+                  value: mergeLevel + 1,
+                })}
+              >
+                <PlusSquare style={{ display: 'block' }} />
+              </button>
+              <button
+                className="adjust-merge-level"
+                onClick={() => dispatch({
+                  type: 'SET_MERGE_LEVEL',
+                  value: heroInstance.mergeLevel - 1,
+                })}
+              >
+                <MinusSquare style={{ display: 'block' }} />
+              </button>
             </div>
           </div>
-        )
-        : (
-          <div className="skill-selector">
-            <SkillSelector
-              // $FlowIssue: Flowtype for pathOr isn't precise.
-              activeSkillName={pathOr(
-                '',
-                ['skills', state.skillType],
-                heroInstance,
-              )}
-              onClose={skillName => {
-                // This one is technically correct, skillType could be voided before the
-                // callback is triggered.  But I know it won't be.
-                // $FlowIssue
+        </div>
+        <div className="section">
+          <div className="row" style={{ alignItems: 'center' }}>
+            <h1 className="name">{heroInstance.name}</h1>
+            <button
+              className="export-button"
+              onClick={() => {
                 dispatch({
-                  type: 'UPDATE_SKILL',
-                  skillType: state.skillType,
-                  skill: skillName,
+                  type: 'CHANGE_EXPORT_STRING',
+                  value: exportInstance(heroInstance),
                 });
-                setState({ open: false, skillType: undefined });
+                Router.push('/export');
               }}
-              dispatch={dispatch}
-              showGuide={showGuide}
-              heroInstance={heroInstance}
-              skillType={state.skillType}
-            />
+              title="Export"
+            >
+              <Share style={{ display: 'block' }} />
+            </button>
           </div>
-        )
-      }
+        </div>
+        <div className="section">
+          <StatSheet
+            heroInstance={heroInstance}
+            level={level}
+          />
+        </div>
+        <div className="section center">
+          <RaritySelector
+            disabled={[
+              !hasStatsForRarity(heroInstance, 1),
+              !hasStatsForRarity(heroInstance, 2),
+              !hasStatsForRarity(heroInstance, 3),
+              !hasStatsForRarity(heroInstance, 4),
+              !hasStatsForRarity(heroInstance, 5),
+            ]}
+            selected={heroInstance.rarity}
+            onChange={rarity => dispatch({ type: 'UPDATE_RARITY', rarity })}
+          />
+        </div>
+        <div className="section" style={{ width: 175 }}>
+          <div className="row">
+            Boon
+            <div style={{ flexBasis: 75 }}>
+              <Select
+                onChange={selected => dispatch({
+                  type: 'UPDATE_BOON',
+                  stat: varianceOptions[selected],
+                })}
+                options={[
+                  '—',
+                  ...keys(filter(compose(not, equals(heroInstance.bane)), varianceOptions)),
+                ]}
+                selected={heroInstance.boon
+                  // $FlowIssue: Flow isn't thinks invertObj might have side effects
+                  ? invertObj(varianceOptions)[heroInstance.boon]
+                  : '—'}
+              />
+            </div>
+          </div>
+          <div className="row">
+            Bane
+            <div style={{ flexBasis: 75 }}>
+              <Select
+                onChange={selected => dispatch({
+                  type: 'UPDATE_BANE',
+                  stat: varianceOptions[selected],
+                })}
+                options={[
+                  '—',
+                  ...keys(filter(compose(not, equals(heroInstance.boon)), varianceOptions)),
+                ]}
+                selected={heroInstance.bane
+                  // $FlowIssue: Flow isn't thinks invertObj might have side effects
+                  ? invertObj(varianceOptions)[heroInstance.bane]
+                  : '—'}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="section">
+          {
+            // $FlowIssue: I think flow thinks skillType could be any string.
+            values(mapObjIndexed(
+              (skill: string | void, skillType: SkillType) => (
+                <div
+                  key={skillType}
+                  className="active-skill"
+                >
+                  <img
+                    className="skill-icon"
+                    src={`${staticUrl}30px-${skillIcons[skillType]}`}
+                    srcSet={`
+                      ${staticUrl}30px-${skillIcons[skillType]} 30w,
+                      ${staticUrl}60px-${skillIcons[skillType]} 60w
+                    `}
+                    sizes="30px"
+                  />
+                  <Skill
+                    name={skill || '--'}
+                    type={skillType}
+                    onClick={() => {
+                      dispatch({
+                        type: 'SELECT_SKILL',
+                        skillType,
+                      });
+                      Router.push('/skills');
+                    }}
+                  />
+                </div>
+              ),
+              ({
+                // Enumerate all properties to ensure they are all iterable.
+                // This fixes issue #52
+                WEAPON: undefined,
+                ASSIST: undefined,
+                SPECIAL: undefined,
+                PASSIVE_A: undefined,
+                PASSIVE_B: undefined,
+                PASSIVE_C: undefined,
+                SEAL: undefined,
+                ...heroInstance.skills,
+              }: InstanceSkills),
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
-});
+};
 
 export default HeroBuilder;

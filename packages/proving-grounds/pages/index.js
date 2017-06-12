@@ -5,6 +5,7 @@ import withRedux from 'next-redux-wrapper';
 import { isEmpty } from 'ramda';
 
 import Root from '../src/components/Root';
+import Toast from '../src/components/Toast';
 import Router from '../src/router';
 import initStore from '../src/store';
 import { decodeHero } from '../src/queryCodex';
@@ -36,7 +37,12 @@ class Home extends React.Component {
   }
 
   render() {
-    return <Root {...this.props} />;
+    return (
+      <div>
+        <Root {...this.props} />
+        <Toast dispatch={this.props.dispatch} messages={this.props.state.notifications} />
+      </div>
+    );
   }
 }
 

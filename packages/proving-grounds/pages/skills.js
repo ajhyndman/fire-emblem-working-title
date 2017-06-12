@@ -2,15 +2,15 @@
 import 'babel-polyfill';
 import React from 'react';
 import withRedux from 'next-redux-wrapper';
-import { isEmpty } from 'ramda';
+import { isEmpty, pathOr } from 'ramda';
 import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 
-import HeroBuilder from '../src/components/HeroBuilder';
 import Modal from '../src/components/Modal';
 import Overlay from '../src/components/Overlay';
 import Root, { panelHeight } from '../src/components/Root';
-import Toast from '../src/components/Toast';
 import Router from '../src/router';
+import SkillSelector from '../src/components/SkillSelector';
+import Toast from '../src/components/Toast';
 import initStore from '../src/store';
 import { decodeHero } from '../src/queryCodex';
 import type { Dispatch } from '../src/reducer';
@@ -42,12 +42,14 @@ class Build extends React.Component {
   componentDidMount() {
     // These routes are likely to be frequently switched to and from.
     Router.prefetch('/');
-    Router.prefetch('/export');
-    Router.prefetch('/skills');
+    Router.prefetch('/build');
   }
 
   render() {
     const { dispatch, state } = this.props;
+    const heroInstance = state.activeSlot !== undefined
+      ? state.heroSlots[state.activeSlot] || defaultInstance
+      : defaultInstance;
 
     return (
       <div>
@@ -60,6 +62,9 @@ class Build extends React.Component {
             top: ${panelHeight / 4}px;
             transform: translateX(-50%);
             width: 350px;
+          }
+          .skill-selector {
+            width: 100%;
           }
         `}</style>
         <Root {...this.props} />
@@ -75,12 +80,32 @@ class Build extends React.Component {
         >
           <div className="container">
             <Modal>
-              <HeroBuilder
-                dispatch={dispatch}
-                heroInstance={state.heroSlots[state.activeSlot || 0]
-                  || defaultInstance}
-                level={state.previewLevel}
-              />
+              <div className="skill-selector">
+                <SkillSelector
+                  // $FlowIssue: Flowtype for pathOr isn't precise.
+                  activeSkillName={pathOr(
+                    '',
+                    ['skills', state.activeSkill],
+                    heroInstance,
+                  )}
+                  dispatch={dispatch}
+                  heroInstance={heroInstance}
+                  onClose={skillName => {
+                    // This one is technically correct, skillType could be voided before the
+                    // callback is triggered.  But I know it won't be.
+                    // $FlowIssue
+                    dispatch({
+                      type: 'UPDATE_SKILL',
+                      skillType: state.activeSkill,
+                      skill: skillName,
+                    });
+                    Router.back();
+                  }}
+                  showGuide={state.showGuide}
+                  // TODO: if no skill is selected, we shouldn't be allowed on this route
+                  skillType={state.activeSkill || 'WEAPON'}
+                />
+              </div>
             </Modal>
           </div>
         </Overlay>
