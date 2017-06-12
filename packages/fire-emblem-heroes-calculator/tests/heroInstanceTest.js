@@ -15,11 +15,11 @@ test('exportInstance', (t) => {
   // default instance
   t.equal(
     exportInstance(getDefaultInstance('Anna')),
-    `Anna (5★)
-Weapon: Nóatún
-Special: Astra
-B: Vantage 3
-C: Spur Res 3
+    `Anna (5★)\r
+Weapon: Nóatún\r
+Special: Astra\r
+B: Vantage 3\r
+C: Spur Res 3\r
 `,
   );
 
@@ -31,11 +31,11 @@ C: Spur Res 3
       boon: 'atk',
       bane: 'def',
     }),
-    `Anna (4★+8 +atk -def)
-Weapon: Silver Axe
-Special: Astra
-B: Vantage 2
-C: Spur Res 3
+    `Anna (4★+8 +atk -def)\r
+Weapon: Silver Axe\r
+Special: Astra\r
+B: Vantage 2\r
+C: Spur Res 3\r
 `,
   );
 
@@ -50,14 +50,14 @@ C: Spur Res 3
         SEAL: 'HP +3',
       },
     }),
-    `Anna (5★)
-Weapon: Nóatún
-Assist: Reposition
-Special: Astra
-A: Fury 3
-B: Vantage 3
-C: Spur Res 3
-S: HP +3
+    `Anna (5★)\r
+Weapon: Nóatún\r
+Assist: Reposition\r
+Special: Astra\r
+A: Fury 3\r
+B: Vantage 3\r
+C: Spur Res 3\r
+S: HP +3\r
 `,
   );
 
@@ -84,16 +84,16 @@ S: HP +3
         },
       },
     }),
-    `Anna (5★)
-Weapon: Nóatún
-Special: Astra
-B: Vantage 3
-C: Spur Res 3
-:::Status
-Buffs: atk 4, spd 4, def 8
-Debuffs: atk -3, spd -3, res -3
-Damage: 5
-Charge: 1
+    `Anna (5★)\r
+Weapon: Nóatún\r
+Special: Astra\r
+B: Vantage 3\r
+C: Spur Res 3\r
+:::Status\r
+Buffs: atk 4, spd 4, def 8\r
+Debuffs: atk -3, spd -3, res -3\r
+Damage: 5\r
+Charge: 1\r
 `,
   );
 });

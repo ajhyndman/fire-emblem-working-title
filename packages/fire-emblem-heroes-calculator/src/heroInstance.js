@@ -167,7 +167,7 @@ const sanitizeStatKey = (statKey: ?string): ?Stat => {
 export const exportInstance = (heroInstance: HeroInstance): string => {
   // $FlowIssue: flow always gets lost in compose chains
   const skillList = compose(
-    join('\n'),
+    join('\r\n'),
     map(([slot, skillName]) => `${humanizeSkillKey(slot)}: ${skillName}`),
     sort(([a], [b]) =>
       findObjectIndex(a, SKILL_KEY_MAP) - findObjectIndex(b, SKILL_KEY_MAP)),
@@ -185,7 +185,7 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
         filter(([, value]) => value !== 0),
         toPairs,
       )(heroInstance.state.buffs)
-    }\n`;
+    }\r\n`;
 
   const debuffList = equals(getDefaultBuffs(), heroInstance.state.buffs)
     ? ''
@@ -197,21 +197,21 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
         filter(([, value]) => value !== 0),
         toPairs,
       )(heroInstance.state.debuffs)
-    }\n`;
+    }\r\n`;
 
   const status = equals(getDefaultState(), heroInstance.state)
     ? ''
-    : `:::Status\n${
+    : `:::Status\r\n${
       buffList
     }${
       debuffList
     }${
       heroInstance.state.hpMissing
-        ? `Damage: ${heroInstance.state.hpMissing}\n`
+        ? `Damage: ${heroInstance.state.hpMissing}\r\n`
         : ''
     }${
       heroInstance.state.specialCharge
-        ? `Charge: ${heroInstance.state.specialCharge}\n`
+        ? `Charge: ${heroInstance.state.specialCharge}\r\n`
         : ''
     }`;
 
@@ -221,9 +221,9 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
     heroInstance.boon ? ` +${heroInstance.boon}` : ''
   }${
     heroInstance.bane ? ` -${heroInstance.bane}` : ''
-  })\n${
+  })\r\n${
     skillList
-  }\n${
+  }\r\n${
     status
   }`;
 };
@@ -255,7 +255,7 @@ export const importInstance = (text: string): HeroInstance => {
   const state: InstanceState = getDefaultState();
 
   // Split the input text into lines.
-  const lines = text.split(/\n|;/);
+  const lines = text.split(/\r?\n|;/);
 
   // Attempt to parse each line.
   for (let line of lines) {
