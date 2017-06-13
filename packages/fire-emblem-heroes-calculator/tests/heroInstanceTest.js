@@ -99,12 +99,23 @@ Charge: 1\r
 });
 
 test('importInstance', (t) => {
-  t.plan(4);
+  t.plan(5);
 
   // default instance
   t.deepEqual(
     importInstance(`Anna (5★)
 Weapon: Nóatún
+Special: Astra
+B: Vantage 3
+C: Spur Res 3
+`),
+    getDefaultInstance('Anna'),
+  );
+
+  // default instance
+  t.deepEqual(
+    importInstance(`Anna (5★)
+Weapon: Noatun
 Special: Astra
 B: Vantage 3
 C: Spur Res 3

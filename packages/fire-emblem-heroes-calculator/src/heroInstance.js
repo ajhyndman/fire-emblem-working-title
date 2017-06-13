@@ -1,11 +1,13 @@
 // @flow
 // eslint
+import diacritics from 'diacritics';
 import {
   clamp,
   compose,
   equals,
   filter,
   findIndex,
+  indexOf,
   invertObj,
   join,
   keys,
@@ -269,13 +271,20 @@ export const importInstance = (text: string): HeroInstance => {
       // e.g. "Weapon: Silver Axe"
 
       const [, skillKey, skillName] = line.match(skillRegex);
+      // $FlowIssue: Flow is worried about side effects here (but there aren't any)
+      const inheritableSkills = getInheritableSkills(name, sanitizeSkillKey(skillKey));
+      const validSkillIndex = compose(
+        indexOf(diacritics.remove(skillName)),
+        map(diacritics.remove),
+      )(inheritableSkills);
+
       if (
         sanitizeSkillKey(skillKey)
-        // $FlowIssue: Flow is worried about side effects here (but there aren't any)
-        && getInheritableSkills(name, sanitizeSkillKey(skillKey)).indexOf(skillName) >= 0
+        && validSkillIndex >= 0
       ) {
+        const validSkill = inheritableSkills[validSkillIndex];
         // $FlowIssue: Flow doesn't have enough info to be sure that this is covariant-safe
-        skills[sanitizeSkillKey(skillKey)] = skillName;
+        skills[sanitizeSkillKey(skillKey)] = validSkill;
       }
     } else if (test(buffRegex, line)) {
       // e.g. "Buffs: atk 4, spd 4, def 8"
