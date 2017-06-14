@@ -42,6 +42,7 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
+    "diacritics": "^1.3.0",
     "fire-emblem-heroes-stats": "^0.7.22",
     "ramda": "^0.23.0"
   }

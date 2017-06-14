@@ -98,6 +98,8 @@ class Toast extends React.Component {
             right: 0;
             transform: translateY(100%);
             transition: transform ${TRANSITION_DURATION}ms;
+            /* This index has to beat <Overlay /> */
+            z-index: 3;
           }
           .root.open {
             transform: translateY(0%);

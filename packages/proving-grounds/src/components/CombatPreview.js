@@ -23,7 +23,7 @@ const openConfig = (event, dispatch, slot) => {
   dispatch({ type: 'SELECT_SLOT', slot: undefined });
   dispatch({ type: 'SELECT_HERO', hero: undefined });
   dispatch({ type: 'SELECT_SLOT', slot: slot });
-  Router.push('/configure');
+  Router.push('/build');
 };
 
 const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => (
@@ -44,18 +44,18 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         left: 50%;
         transform: translateX(-50%);
       }
-      .configure-button {
+      .build-button {
         cursor: pointer;
         position: absolute;
         bottom: -${gridSize / 6}px;
         left: -${gridSize / 6}px;
         width: ${gridSize / 2}px;
       }
-      .configure-button-active {
+      .build-button-active {
         opacity: 0;
         transition: opacity ${transition};
       }
-      .configure-button-active:hover {
+      .build-button-active:hover {
         opacity: 1;
       }
       .container {
@@ -121,21 +121,21 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
               specialCooldown={getSpecialCooldown(leftHero)}
             />
             <img
-              className="configure-button"
-              src={`${staticUrl}Button_Configure.png`}
+              className="build-button"
+              src={`${staticUrl}Button_Build.png`}
               srcSet={`
-                ${staticUrl}28px-Button_Configure.png 28w,
-                ${staticUrl}56px-Button_Configure.png 56w
+                ${staticUrl}28px-Button_Build.png 28w,
+                ${staticUrl}56px-Button_Build.png 56w
               `}
               sizes={`${gridSize / 2}px`}
             />
             <img
-              className="configure-button configure-button-active"
+              className="build-button build-button-active"
               onClick={event => openConfig(event, dispatch, 0)}
-              src={`${staticUrl}Button_Configure_Active.png`}
+              src={`${staticUrl}Button_Build_Active.png`}
               srcSet={`
-                ${staticUrl}28px-Button_Configure_Active.png 28w,
-                ${staticUrl}56px-Button_Configure_Active.png 56w
+                ${staticUrl}28px-Button_Build_Active.png 28w,
+                ${staticUrl}56px-Button_Build_Active.png 56w
               `}
               sizes={`${gridSize / 2}px`}
             />
@@ -175,21 +175,21 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
               specialCooldown={getSpecialCooldown(rightHero)}
             />
             <img
-              className="configure-button"
-              src={`${staticUrl}Button_Configure.png`}
+              className="build-button"
+              src={`${staticUrl}Button_Build.png`}
               srcSet={`
-                ${staticUrl}28px-Button_Configure.png 28w,
-                ${staticUrl}56px-Button_Configure.png 56w
+                ${staticUrl}28px-Button_Build.png 28w,
+                ${staticUrl}56px-Button_Build.png 56w
               `}
               sizes={`${gridSize / 2}px`}
             />
             <img
-              className="configure-button configure-button-active"
+              className="build-button build-button-active"
               onClick={event => openConfig(event, dispatch, 1)}
-              src={`${staticUrl}Button_Configure_Active.png`}
+              src={`${staticUrl}Button_Build_Active.png`}
               srcSet={`
-                ${staticUrl}28px-Button_Configure_Active.png 28w,
-                ${staticUrl}56px-Button_Configure_Active.png 56w
+                ${staticUrl}28px-Button_Build_Active.png 28w,
+                ${staticUrl}56px-Button_Build_Active.png 56w
               `}
               sizes={`${gridSize / 2}px`}
             />

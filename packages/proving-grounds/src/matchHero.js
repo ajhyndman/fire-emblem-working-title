@@ -1,5 +1,5 @@
 // @flow
-import jdu from 'javascript-remove-diacritics';
+import diacritics from 'diacritics';
 import {
   any,
   compose,
@@ -54,7 +54,7 @@ const getKeywords: (hero: Hero) => Array<string> =
           none((word) => wordsToIgnoreInSkills.has(word)),
           split(' '),
         )),
-        map(compose(jdu.replace, prop('name'))),
+        map(compose(diacritics.remove, prop('name'))),
         filter(compose(not, isNil)),
         Object.values,
         // $FlowIssue string is incompatible with SkillType (string enum)

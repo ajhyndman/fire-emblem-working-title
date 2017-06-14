@@ -1,6 +1,7 @@
 // @flow
 import { applyMiddleware, createStore } from 'redux';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
+import type { SkillType } from 'fire-emblem-heroes-stats';
 
 import reducer from '../reducer';
 import gaMiddleware from './gaMiddleware';
@@ -8,10 +9,12 @@ import { loadState, saveState } from './localStorage';
 
 
 export type State = {
-  host: string;
   activeHero: ?HeroInstance;
+  activeSkill: ?SkillType;
   activeSlot: 0 | 1 | void;
+  exportString: string;
   heroSlots: [?HeroInstance, ?HeroInstance];
+  host: string;
   notifications: Array<string>;
   previewLevel: 1 | 40;
   searchString: string;
@@ -20,7 +23,9 @@ export type State = {
 
 const emptyState: State = {
   activeHero: undefined,
+  activeSkill: undefined,
   activeSlot: undefined,
+  exportString: '',
   heroSlots: [undefined, undefined],
   host: '',
   notifications: [],

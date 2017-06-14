@@ -13,7 +13,9 @@ export {
 } from './heroHelpers';
 
 export {
+  exportInstance,
   getDefaultInstance,
+  importInstance,
 } from './heroInstance';
 
 export type {

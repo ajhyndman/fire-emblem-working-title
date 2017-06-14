@@ -5,9 +5,11 @@ import withRedux from 'next-redux-wrapper';
 import { isEmpty } from 'ramda';
 import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 
-import HeroConfigurer from '../src/components/HeroConfigurer';
+import HeroBuilder from '../src/components/HeroBuilder';
+import Modal from '../src/components/Modal';
 import Overlay from '../src/components/Overlay';
 import Root, { panelHeight } from '../src/components/Root';
+import Toast from '../src/components/Toast';
 import Router from '../src/router';
 import initStore from '../src/store';
 import { decodeHero } from '../src/queryCodex';
@@ -20,10 +22,10 @@ type Props = {
   state: State;
 };
 
-// TODO: redirect to non-configure page instead of showing an Anna configuration.
+// TODO: redirect to non-build page instead of showing an Anna configuration.
 const defaultInstance = getDefaultInstance('Anna');
 
-class Configure extends React.Component {
+class Build extends React.Component {
   props: Props;
 
   static async getInitialProps ({ store, req, query }) {
@@ -38,11 +40,15 @@ class Configure extends React.Component {
   }
 
   componentDidMount() {
-    // The root route is going to be frequently switched to and from.
+    // These routes are likely to be frequently switched to and from.
     Router.prefetch('/');
+    Router.prefetch('/export');
+    Router.prefetch('/skills');
   }
 
   render() {
+    const { dispatch, state } = this.props;
+
     return (
       <div>
         <style jsx>{`
@@ -60,26 +66,28 @@ class Configure extends React.Component {
         <Overlay
           onClick={event => {
             event.stopPropagation();
-            this.props.dispatch({
+            dispatch({
               type: 'SELECT_SLOT',
               slot: undefined,
             });
-            Router.push('/');
+            Router.replace('/');
           }}
         >
           <div className="container">
-            <HeroConfigurer
-              dispatch={this.props.dispatch}
-              heroInstance={this.props.state.heroSlots[this.props.state.activeSlot || 0]
-                || defaultInstance}
-              level={this.props.state.previewLevel}
-              showGuide={this.props.state.showGuide}
-            />
+            <Modal>
+              <HeroBuilder
+                dispatch={dispatch}
+                heroInstance={state.heroSlots[state.activeSlot || 0]
+                  || defaultInstance}
+                level={state.previewLevel}
+              />
+            </Modal>
           </div>
         </Overlay>
+        <Toast dispatch={dispatch} messages={state.notifications} />
       </div>
     );
   }
 }
 
-export default withRedux(initStore, state => ({ state }))(Configure);
+export default withRedux(initStore, state => ({ state }))(Build);

@@ -8,7 +8,8 @@ import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import Frame from '../src/components/Frame';
 import Hero from '../src/components/Hero';
-import HeroConfigurer from '../src/components/HeroConfigurer';
+import HeroBuilder from '../src/components/HeroBuilder';
+import ImportExportPanel from '../src/components/ImportExportPanel';
 import Input from '../src/components/Input';
 import RaritySelector from '../src/components/RaritySelector';
 import Select from '../src/components/Select';
@@ -41,7 +42,7 @@ storiesOf('Hero', module)
     <Hero name="Anna" weaponType="Green Axe" />
   ));
 
-storiesOf('HeroConfigurer', module)
+storiesOf('HeroBuilder', module)
   .add('default', () => {
     const ACTION = action;
     const reducer = (state, action) => {
@@ -81,14 +82,14 @@ storiesOf('HeroConfigurer', module)
       }
     };
 
-    const HeroConfigurerStory = withReducer(
+    const HeroBuilderStory = withReducer(
       'state',
       'dispatch',
       reducer,
       { heroInstance, level: 1 },
     )(
       ({ state, dispatch }: { state: Object; dispatch: Dispatch }) => (
-        <HeroConfigurer
+        <HeroBuilder
           dispatch={dispatch}
           heroInstance={state.heroInstance}
           level={state.level}
@@ -96,8 +97,28 @@ storiesOf('HeroConfigurer', module)
       ),
     );
 
-    return <HeroConfigurerStory />;
+    return <HeroBuilderStory />;
   });
+
+storiesOf('ImportExportPanel', module)
+  .add('default', () => (
+    <div className="root">
+      <style jsx>{`
+        .root {
+          background: ${colors.elephant};
+        }
+      `}</style>
+      <ImportExportPanel
+        dispatch={() => {}}
+        onChange={action('VALUE_CHANGE')}
+        value={`Anna (5★)
+Weapon: Noatun
+Special: Astra
+B: Vantage 3
+C: Spur Res 3`}
+      />
+    </div>
+  ));
 
 storiesOf('Input', module)
   .add('default', () => (

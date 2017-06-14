@@ -3,6 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 import MarkGithub from 'react-icons/lib/go/mark-github';
 import Reddit from 'react-icons/lib/fa/reddit';
+import Share from 'react-icons/lib/md/share';
 import { getEventHeroes, getReleasedHeroes } from 'fire-emblem-heroes-stats';
 import {
   allPass,
@@ -19,7 +20,6 @@ import CombatResult from './CombatResult';
 import HeroGrid from './HeroGrid';
 import Input from './Input';
 import ShareButton from './ShareButton';
-import Toast from './Toast';
 import matchHero from '../matchHero';
 import { encodeHero } from '../queryCodex';
 import { breakPoints, fontFamilies } from '../theme';
@@ -190,7 +190,7 @@ class Root extends React.Component {
           />
           <div className="row">
             <ShareButton
-              dispatch={dispatch}
+              icon={Share}
               link={`${
                 typeof window !== 'undefined' ? window.location.protocol : ''
               }//${
@@ -200,11 +200,26 @@ class Root extends React.Component {
               }&1=${
                 encodeHero(state.heroSlots[1])
               }`}
+              onClick={(link) => {
+                dispatch({
+                  type: 'ENQUEUE_NOTIFICATION',
+                  value: 'Link copied to clipboard!',
+                  meta: {
+                    analytics: {
+                      type: 'CREATED_SHARE_LINK',
+                      payload: {
+                        link,
+                      },
+                    },
+                  },
+                });
+              }}
+              title="Share this battle"
             />
             <div className="column">
               <Input
                 onChange={(value: string) => {
-                  dispatch({ type: 'SEARCH_STRING_CHANGE', value });
+                  dispatch({ type: 'CHANGE_SEARCH_STRING', value });
                 }}
                 placeholder="Type a name, class, or skill"
                 ref={node => { this.searchInput = node; }}
@@ -258,7 +273,6 @@ class Root extends React.Component {
             </a>
           </span>
         </div>
-        <Toast dispatch={dispatch} messages={state.notifications} />
       </div>
     );
   }

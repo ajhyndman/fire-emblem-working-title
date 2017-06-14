@@ -20,16 +20,22 @@ import type { SkillType } from 'fire-emblem-heroes-stats';
 import type { State } from './store';
 
 export type Action = {
+  type: 'CHANGE_EXPORT_STRING';
+  value: string;
+} | {
+  type: 'CHANGE_SEARCH_STRING';
+  value: string;
+} | {
   type: 'DEQUEUE_NOTIFICATION';
 } | {
   type: 'ENQUEUE_NOTIFICATION';
   value: string;
 } | {
-  type: 'SEARCH_STRING_CHANGE';
-  value: string;
-} | {
   type: 'SELECT_HERO';
   hero: ?(HeroInstance | 'CLEAR');
+} | {
+  type: 'SELECT_SKILL';
+  skillType: SkillType | void;
 } | {
   type: 'SELECT_SLOT';
   slot: 0 | 1 | void;
@@ -77,35 +83,14 @@ const getLastOccupiedIndex = findLastIndex(compose(not, isNil));
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
+    case 'CHANGE_EXPORT_STRING':
+      return { ...state, exportString: action.value };
+    case 'CHANGE_SEARCH_STRING':
+      return { ...state, searchString: action.value };
     case 'DEQUEUE_NOTIFICATION':
       return { ...state, notifications: drop(1, state.notifications) };
     case 'ENQUEUE_NOTIFICATION':
       return { ...state, notifications: concat(state.notifications, [action.value]) };
-    case 'SEARCH_STRING_CHANGE':
-      return { ...state, searchString: action.value };
-    case 'SELECT_SLOT':
-      return (state.activeHero === 'CLEAR')
-        ? (action.slot === undefined)
-          // clear active states
-          ? { ...state, ...clearActiveState }
-          // clear the selected slot
-          : {
-            ...state,
-            ...clearActiveState,
-            heroSlots: update(action.slot, undefined, state.heroSlots),
-          }
-        : (state.activeHero === undefined)
-          // activate slot
-          ? { ...state, activeSlot: action.slot }
-          : (action.slot === undefined)
-            // clear active states
-            ? { ...state, ...clearActiveState }
-            // select new hero
-            : {
-              ...state,
-              ...clearActiveState,
-              heroSlots: update(action.slot, state.activeHero, state.heroSlots),
-            };
     case 'SELECT_HERO':
       if (state.activeSlot !== undefined && action.hero === 'CLEAR') {
         // clear active slot
@@ -142,6 +127,31 @@ const reducer = (state: State, action: Action): State => {
           heroSlots: update(state.activeSlot, action.hero, state.heroSlots),
         };
       }
+    case 'SELECT_SKILL':
+      return { ...state, activeSkill: action.skillType };
+    case 'SELECT_SLOT':
+      return (state.activeHero === 'CLEAR')
+        ? (action.slot === undefined)
+          // clear active states
+          ? { ...state, ...clearActiveState }
+          // clear the selected slot
+          : {
+            ...state,
+            ...clearActiveState,
+            heroSlots: update(action.slot, undefined, state.heroSlots),
+          }
+        : (state.activeHero === undefined)
+          // activate slot
+          ? { ...state, activeSlot: action.slot }
+          : (action.slot === undefined)
+            // clear active states
+            ? { ...state, ...clearActiveState }
+            // select new hero
+            : {
+              ...state,
+              ...clearActiveState,
+              heroSlots: update(action.slot, state.activeHero, state.heroSlots),
+            };
     case 'SET_HOST':
       return { ...state, host: action.host };
     case 'SET_MERGE_LEVEL': {
