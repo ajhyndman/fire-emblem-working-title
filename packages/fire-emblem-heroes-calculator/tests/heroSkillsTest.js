@@ -1,48 +1,30 @@
 // @flow
 import test from 'tape';
-import { contains, map, prop } from 'ramda';
+import { contains } from 'ramda';
 
-import { getDefaultSkills, getInheritableSkills } from '../src/heroHelpers';
+import {  getInheritableSkills } from '../src/heroHelpers';
 
 
 test('inheritableTomes', (t) => {
-  t.plan(1);
+  t.plan(2);
   const weapons = getInheritableSkills('Leo', 'WEAPON');
-  t.deepEqual(weapons, [
-    'Bolganone',
-    'Bolganone+',
-    'Brynhildr', // Exclusive to Leo
-    // Cymbeline is exclusive,
-    'Elfire',
-    'Fenrir',
-    'Fenrir+',
-    'Fire',
-    'Flux',
-    'Rauðrblade',
-    'Rauðrblade+',
-    'Rauðrraven',
-    'Rauðrraven+',
-    'Rauðrwolf',
-    'Rauðrwolf+',
-    'Ruin',
-  ]);
+  t.equal(contains('Brynhildr', weapons), true); // Exclusive to Leo
+  t.equal(contains('Cymbeline', weapons), false); // Exclusive to Leo
 });
 
 test('inheritableBreaths', (t) => {
-  t.plan(1);
+  t.plan(10);
   const weapons = getInheritableSkills('Fae', 'WEAPON');
-  t.deepEqual(weapons, [
-    'Dark Breath',
-    'Dark Breath+',
-    'Fire Breath',
-    'Fire Breath+',
-    'Flametongue',
-    'Flametongue+',
-    'Light Breath',
-    'Light Breath+',
-    'Lightning Breath',
-    'Lightning Breath+',
-  ]);
+  t.equal(contains('Dark Breath', weapons), true);
+  t.equal(contains('Dark Breath+', weapons), true);
+  t.equal(contains('Fire Breath', weapons), true);
+  t.equal(contains('Fire Breath+', weapons), true);
+  t.equal(contains('Flametongue', weapons), true);
+  t.equal(contains('Flametongue+', weapons), true);
+  t.equal(contains('Light Breath', weapons), true);
+  t.equal(contains('Light Breath+', weapons), true);
+  t.equal(contains('Lightning Breath', weapons), true);
+  t.equal(contains('Lightning Breath+', weapons), true);
 });
 
 test('inheritableSeals', (t) => {
