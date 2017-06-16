@@ -21,6 +21,7 @@ import event10 from './2017.05.26-narcian';
 import event11 from './2017.06.02-camus';
 import event12 from './2017.06.08-tempest-trials';
 import event13 from './2017.06.09-zephiel';
+import event14 from './2017.06.16-legion';
 
 
 export function getEventHeroes(allEvents: boolean = false) {
@@ -44,5 +45,6 @@ export function getEventHeroes(allEvents: boolean = false) {
     event11,
     event12,
     event13,
+    event14,
   ]);
 }
