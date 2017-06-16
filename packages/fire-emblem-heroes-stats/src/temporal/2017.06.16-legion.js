@@ -152,7 +152,7 @@ const unitList: Array<Hero> = [
     'weaponType': 'Neutral Bow',
     'skills': [
       {
-        'name': 'Silver Bow+',
+        'name': 'Brave Bow+',
         'rarity': '-',
       },
       {
