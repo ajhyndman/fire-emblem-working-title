@@ -54,6 +54,7 @@ const unitList: Array<Hero> = [
       },
     },
   },
+  {
     'shortName': 'Legion',
     'name': 'Legion 2 (Legion GHB)',
     'moveType': 'Infantry',
