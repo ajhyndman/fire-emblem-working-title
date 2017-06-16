@@ -291,3 +291,35 @@
       },
     },
   },
+  {
+    'shortName': 'Bow Fighter',
+    'name': 'Bow Fighter ( GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Neutral Bow',
+    'skills': [
+      {
+        'name': 'Silver Bow+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [51],
+          'atk': [32],
+          'spd': [29],
+          'def': [29],
+          'res': [16],
+        },
+      },
+    },
+  },
