@@ -323,3 +323,35 @@
       },
     },
   },
+  {
+    'shortName': 'Cavalier',
+    'name': 'Green Cavalier ( GHB)',
+    'moveType': 'Cavalry',
+    'weaponType': 'Green Tome',
+    'skills': [
+      {
+        'name': 'Gronnwolf+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [40],
+          'atk': [36],
+          'spd': [26],
+          'def': [17],
+          'res': [35],
+        },
+      },
+    },
+  },
