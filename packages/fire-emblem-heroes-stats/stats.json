@@ -10235,7 +10235,7 @@
       "weaponType": "Green Axe",
       "moveType": "Infantry",
       "rarities": "3-4Event: Grand Hero Battle",
-      "releaseDate": "N/A",
+      "releaseDate": "Jun 16, 2017",
       "skills": [
         {
           "name": "Iron Axe",
@@ -10258,122 +10258,114 @@
           "rarity": 5
         },
         {
+          "name": "Retribution",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Reprisal",
+          "default": "-",
+          "rarity": 4
+        },
+        {
           "name": "Fury 1",
           "rarity": "-"
         },
         {
           "name": "Fury 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Fury 3",
+          "rarity": 5
+        },
+        {
+          "name": "Obstruct 1",
           "rarity": "-"
+        },
+        {
+          "name": "Obstruct 2",
+          "rarity": 3
+        },
+        {
+          "name": "Obstruct 3",
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
           "3": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 19,
+            "atk": 9,
+            "spd": 8,
+            "def": 4,
+            "res": 2
           },
           "4": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 19,
+            "atk": 10,
+            "spd": 9,
+            "def": 4,
+            "res": 2
           },
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 20,
+            "atk": 10,
+            "spd": 9,
+            "def": 5,
+            "res": 3
           }
         },
         "40": {
           "3": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              42
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              32
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              31
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              19
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              15
             ]
           },
           "4": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              43
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              34
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              33
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              20
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              16
             ]
           },
           "5": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              46
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              36
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              35
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              22
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              18
             ]
           }
         }
@@ -13245,11 +13237,11 @@
         },
         {
           "name": "Lancebreaker 1",
-          "rarity": 2
+          "rarity": "-"
         },
         {
           "name": "Lancebreaker 2",
-          "rarity": 3
+          "rarity": 2
         },
         {
           "name": "Lancebreaker 3",
