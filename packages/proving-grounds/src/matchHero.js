@@ -46,9 +46,7 @@ const getKeywords: (hero: Hero) => Array<string> =
     map(compose(split(' '), toLower)),
   )(
     flatten([
-      // $FlowIssue function cannot be called on any member of intersection type.
       props(['name', 'moveType', 'weaponType'], hero),
-      // $FlowIssue function cannot be called on any member of intersection type.
       compose(
         filter(compose(
           none((word) => wordsToIgnoreInSkills.has(word)),
@@ -57,7 +55,6 @@ const getKeywords: (hero: Hero) => Array<string> =
         map(compose(diacritics.remove, prop('name'))),
         filter(compose(not, isNil)),
         Object.values,
-        // $FlowIssue string is incompatible with SkillType (string enum)
         mapObjIndexed((skillName, skillType) => getSkillObject(skillType, skillName)),
         getDefaultSkills,
         prop('name'),
@@ -65,7 +62,6 @@ const getKeywords: (hero: Hero) => Array<string> =
     ]),
   );
 
-// $FlowIssue $Iterable. This type is incompatible with array type
 const allKeywords = new Set(flatten(map(getKeywords, getAllHeroes())));
 
 const isKeyword = (word: string) =>

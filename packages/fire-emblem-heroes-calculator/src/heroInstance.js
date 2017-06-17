@@ -12,6 +12,7 @@ import {
   join,
   keys,
   map,
+  match,
   sort,
   test,
   toPairs,
@@ -147,7 +148,6 @@ const humanizeSkillKey = (skillKey: $Keys<InstanceSkills>): string => {
 const sanitizeSkillKey = (skillKey: ?string): ?$Keys<InstanceSkills> => {
   const map = invertObj(SKILL_KEY_MAP);
   if (map.hasOwnProperty(skillKey)) {
-    // $FlowIssue: invertObj's typedef doesn't resolve the result to an enum
     return map[skillKey];
   }
   return undefined;
@@ -167,7 +167,6 @@ const sanitizeStatKey = (statKey: ?string): ?Stat => {
 };
 
 export const exportInstance = (heroInstance: HeroInstance): string => {
-  // $FlowIssue: flow always gets lost in compose chains
   const skillList = compose(
     join('\r\n'),
     map(([slot, skillName]) => `${humanizeSkillKey(slot)}: ${skillName}`),
@@ -180,7 +179,6 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
   const buffList = equals(getDefaultBuffs(), heroInstance.state.buffs)
     ? ''
     : `Buffs: ${
-      // $FlowIssue: flow always gets lost in compose chains
       compose(
         join(', '),
         map(([statKey, value]) => `${statKey} ${value}`),
@@ -192,7 +190,6 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
   const debuffList = equals(getDefaultBuffs(), heroInstance.state.buffs)
     ? ''
     : `Debuffs: ${
-      // $FlowIssue: flow always gets lost in compose chains
       compose(
         join(', '),
         map(([statKey, value]) => `${statKey} -${value}`),
@@ -266,30 +263,32 @@ export const importInstance = (text: string): HeroInstance => {
     if (test(titleRegex, line)) {
       // e.g. "Anna (4★+8 +atk -def)"
 
-      [, name, rarity, mergeLevel, boon, bane] = line.match(titleRegex);
+      [, name, rarity, mergeLevel, boon, bane] = match(titleRegex, line);
     } else if (test(skillRegex, line)) {
       // e.g. "Weapon: Silver Axe"
 
-      const [, skillKey, skillName] = line.match(skillRegex);
-      // $FlowIssue: Flow is worried about side effects here (but there aren't any)
-      const inheritableSkills = getInheritableSkills(name, sanitizeSkillKey(skillKey));
+      const [, skillKey, skillName] = match(skillRegex, line);
+      const sanitizedSkillKey = sanitizeSkillKey(skillKey);
+      const inheritableSkills = sanitizedSkillKey
+        ? getInheritableSkills(name, sanitizedSkillKey)
+        : [];
       const validSkillIndex = compose(
         indexOf(diacritics.remove(skillName)),
         map(diacritics.remove),
       )(inheritableSkills);
 
       if (
-        sanitizeSkillKey(skillKey)
+        sanitizedSkillKey
         && validSkillIndex >= 0
       ) {
         const validSkill = inheritableSkills[validSkillIndex];
-        // $FlowIssue: Flow doesn't have enough info to be sure that this is covariant-safe
-        skills[sanitizeSkillKey(skillKey)] = validSkill;
+          // $FlowIssue: Flow doesn't have enough info to be sure that this is covariant-safe
+        skills[sanitizedSkillKey] = validSkill;
       }
     } else if (test(buffRegex, line)) {
       // e.g. "Buffs: atk 4, spd 4, def 8"
 
-      const [, buffList] = line.match(buffRegex);
+      const [, buffList] = match(buffRegex, line);
       const buffs = buffList.split(/,\s*/);
       buffs.forEach(buff => {
         const [statKey, value] = buff.split(' ');
@@ -301,7 +300,7 @@ export const importInstance = (text: string): HeroInstance => {
     } else if (test(debuffRegex, line)) {
       // e.g. Debuffs: atk -3, spd -3, res -3
 
-      const [, debuffList] = line.match(debuffRegex);
+      const [, debuffList] = match(debuffRegex, line);
       const debuffs = debuffList.split(/,\s*/);
       debuffs.forEach(buff => {
         const [statKey, value] = buff.split(' ');
@@ -313,21 +312,19 @@ export const importInstance = (text: string): HeroInstance => {
     } else if (test(damageRegex, line)) {
       // e.g. "Damage: 5"
 
-      const [, value] = line.match(damageRegex);
+      const [, value] = match(damageRegex, line);
       // $FlowIssue: Flow doesn't have enough info to be sure that this is covariant-safe
       state.hpMissing = Math.max(0, parseInt(value));
     } else if (test(chargeRegex, line)) {
       // e.g. "Charge: 1"
 
-      const [, value] = line.match(chargeRegex);
+      const [, value] = match(chargeRegex, line);
       // $FlowIssue: Flow doesn't have enough info to be sure that this is covariant-safe
       state.specialCharge = Math.max(0, parseInt(value));
     }
   }
 
-  // $FlowIssue: Flow can't do the math to see that this is satisfied
   rarity = (clamp(1, 5, parseInt(rarity)): Rarity);
-  // $FlowIssue: Flow can't do the math to see that this is satisfied
   mergeLevel = (clamp(0, 10, parseInt(mergeLevel) || 0): MergeLevel);
 
   bane = sanitizeStatKey(bane);

@@ -157,7 +157,6 @@ const reducer = (state: State, action: Action): State => {
     case 'SET_MERGE_LEVEL': {
       if (getActiveHero(state) === undefined) return state;
       const mergeLevel = clamp(0, 10, action.value);
-      // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'mergeLevel'], mergeLevel, state);
     }
     case 'SET_PREVIEW_LEVEL':
@@ -171,15 +170,12 @@ const reducer = (state: State, action: Action): State => {
       };
     case 'UPDATE_BANE':
       if (getActiveHero(state) === undefined) return state;
-      // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'bane'], action.stat, state);
     case 'UPDATE_BOON':
       if (getActiveHero(state) === undefined) return state;
-      // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(['heroSlots', state.activeSlot, 'boon'], action.stat, state);
     case 'UPDATE_RARITY':
       if (getActiveHero(state) === undefined) return state;
-      // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(
         ['heroSlots', state.activeSlot],
         // $FlowIssue: Flow thinks that getActiveHero might be undefined or null.
@@ -188,7 +184,6 @@ const reducer = (state: State, action: Action): State => {
       );
     case 'UPDATE_SKILL':
       if (getActiveHero(state) === undefined) return state;
-      // $FlowFixMe: We are still not handling the case where slot is selected but hero is not set.
       return assocPath(
         ['heroSlots', state.activeSlot, 'skills', action.skillType],
         action.skill,

@@ -41,7 +41,6 @@ export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array
   if (skill === undefined) {
     return [0];
   }
-  // $FlowIssue $Iterable. This type is incompatible with ... Array<number>
   return map(parseInt, match(/\d+/g, skill.effect));
 }
 
@@ -50,7 +49,6 @@ export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array
 export function getStatKey(text: string): Stat {
   // Should not match words like Defiant, so Def cannot be preceded or followed by \w characters.
   const textMatch = match(/(^|\W)(HP|Atk|Spd|Def|Res)($|\W)/, text);
-  // $FlowIssue: flow is worried that toLower might be called with undefined
   return toLower(textMatch ? textMatch[2] : 'atk');
 }
 
@@ -96,7 +94,6 @@ export function getStatValue(
         statValue += 4;
       }
       if (test(/(Gronn|Bl.r|Rau.r)blade/, skillName)) {
-        // $FlowIssue: Flow thinks that StatKey is an enum and values only works for string keys.
         statValue += sum(values(hero.state.buffs));
       }
     } else if (statKey === 'spd') {

@@ -82,7 +82,6 @@ class Build extends React.Component {
             <Modal>
               <div className="skill-selector">
                 <SkillSelector
-                  // $FlowIssue: Flowtype for pathOr isn't precise.
                   activeSkillName={pathOr(
                     '',
                     ['skills', state.activeSkill],

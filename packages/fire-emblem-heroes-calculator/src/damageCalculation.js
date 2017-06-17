@@ -339,7 +339,6 @@ export const calculateResult = (
   const maxHps = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
   const specialNames: Array<string> =
     [getSkillName(attacker, 'SPECIAL'), getSkillName(defender, 'SPECIAL')];
-  // $FlowIssue $Iterable. This type is incompatible with array type
   const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
   let maxCds: Array<number> = [getSpecialCooldown(attacker), getSpecialCooldown(defender)];
   let specialCds: Array<number> = [

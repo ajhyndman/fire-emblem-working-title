@@ -21,4 +21,4 @@ suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
 suppress_comment= \\(.\\|\n\\)*\\$FlowIssue
 
 [version]
-0.42.0
+0.48.0

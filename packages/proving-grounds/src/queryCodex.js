@@ -108,7 +108,6 @@ export const extractInstance = ([
   mergeLevel,
   hpMissing,
   specialCharge,
-// $FlowIssue bane/boon string is incompatible with ?Stat
 ]: SerialInstance): HeroInstance => ({
   name,
   bane: idToStatKey[bane.toString()],
@@ -140,7 +139,6 @@ export function flattenAndIgnoreDefaults(instance: HeroInstance): SerialInstance
   const flatInstance = flattenInstance(instance);
   return dropLastWhile(equals('d'),
     prepend(instance.name, tail(
-      // $FlowIssue Function cannot be called on member of intersection type
       zipWith(
         (defaultV, actualV) => (actualV === defaultV ? USE_DEFAULT : actualV),
         flatDefault,
@@ -157,7 +155,6 @@ export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefault
     return undefined;
   }
   const flatDefault = flattenInstance(getDefaultInstance(flattenedInstance[0]));
-  // $FlowIssue ... tuple type ... is incompatible with ... array type
   const flatInstanceWithDefaults = zipWith(
     (defaultV, actualV) => (actualV === USE_DEFAULT ? defaultV : actualV),
     flatDefault,
@@ -182,14 +179,11 @@ const values = flatten([
   [USE_DEFAULT, NO_VARIANT],
   // Allow all 1-3 digit numbers. undefined hashes to 0 and names might hash to 4 digit numbers.
   range(1, 999),
-  // $FlowIssue: flowtypes for ramda aren't precise
   map(prop('name'), getAllSkills()),
-  // $FlowIssue: flowtypes for ramda aren't precise
   map(prop('name'), getAllHeroes()),
 ]);
 
 // A map from hash(x) to x
-// $FlowIssue: flowtypes for ramda aren't precise
 export const hashTable = zipObj(map(hash, values), values);
 
 /**

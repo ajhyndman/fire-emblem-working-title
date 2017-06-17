@@ -150,10 +150,10 @@ export type Stats = {
   +getAllHeroes: () => Hero[];
   +getAllSkills: () => Skill[];
   +getEventHeroes: (all: boolean) => Hero[];
-  +getHero: () => Hero;
+  +getHero: (name: string) => Hero;
   +getReleasedHeroes: () => Hero[];
-  +getSkillObject: () => Skill;
-  +getSkillType: () => SkillType;
+  +getSkillObject: (key: SkillType, name: string) => Skill;
+  +getSkillType: (name: string) => SkillType;
 };
 
 declare module.exports: Stats;

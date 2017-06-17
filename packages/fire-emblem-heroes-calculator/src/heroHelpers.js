@@ -2,11 +2,9 @@
 import { getHero, getAllSkills, getSkillObject, getSkillType } from 'fire-emblem-heroes-stats';
 import {
   allPass,
-  // $FlowIssue ... no named export called `ascend`
   ascend,
   compose,
   curry,
-  // $FlowIssue ... no named export called `descend`
   descend,
   filter,
   indexBy,
@@ -18,7 +16,6 @@ import {
   propOr,
   pathOr,
   sort,
-  // $FlowIssue ... no named export called `sortWith`
   sortWith,
   test,
   union,
@@ -100,7 +97,6 @@ export function updateRarity(hero: HeroInstance, newRarity: Rarity): HeroInstanc
   return {
     ...hero,
     rarity: newRarity,
-    // $FlowIssue Function cannot be called on member of intersection type
     skills: mapObjIndexed(
       ((skill, skillType) =>
         (propOr('', 'name', skill) === propOr('', 'name', oldDefault[skillType])
@@ -182,7 +178,6 @@ export function getInheritableSkills(name: string, skillType: SkillType): Array<
   const allSkills: any = getAllSkills();
   const inheritable = filter(
     allPass([
-      // $FlowIssue canInherit is curried
       canInherit(hero),
       propEq('type', skillType),
     ]),
@@ -196,7 +191,7 @@ export function getInheritableSkills(name: string, skillType: SkillType): Array<
   return map(prop('name'), sort(ascend(prop('name')), union(inheritable, ownSkills)));
 }
 
-export const hasBraveWeapon: (instance: HeroInstance)=> boolean = compose(
+export const hasBraveWeapon: (instance: HeroInstance) => boolean = compose(
   test(/Brave|Dire/),
   pathOr('', ['skills', 'WEAPON']),
 );
@@ -255,7 +250,6 @@ export const getStat = (
     // Every bonus level gives +1 to the next 2 stats, with stats in decreasing level 1 order
     const statKeys = ['hp', 'atk', 'spd', 'def', 'res'];
     // Depends on the fact that level 1 stats currently exclude skills.
-    // $FlowIssue function cannot be called on any member of intersection type.
     const level1Stats = zipObj(statKeys, map((s) => getStat(instance, s, 1, undefined), statKeys));
     const orderedStatKeys = sortWith(
       [descend(prop(__, level1Stats)), ascend(indexOf(__, statKeys))],
@@ -275,7 +269,7 @@ export const getStat = (
     - instance.state.debuffs[statKey]);
 };
 
-export const getRange = (instance: HeroInstance) => 
+export const getRange = (instance: HeroInstance) =>
   test(/Sword|Axe|Lance|Breath/, getWeaponType(instance)) ? 1 : 2;
 
 export const getMitigationType = (instance: HeroInstance) =>

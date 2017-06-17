@@ -234,7 +234,6 @@ const HeroBuilder = ({
                   ...keys(filter(compose(not, equals(heroInstance.bane)), varianceOptions)),
                 ]}
                 selected={heroInstance.boon
-                  // $FlowIssue: Flow isn't thinks invertObj might have side effects
                   ? invertObj(varianceOptions)[heroInstance.boon]
                   : '—'}
               />
@@ -253,7 +252,6 @@ const HeroBuilder = ({
                   ...keys(filter(compose(not, equals(heroInstance.boon)), varianceOptions)),
                 ]}
                 selected={heroInstance.bane
-                  // $FlowIssue: Flow isn't thinks invertObj might have side effects
                   ? invertObj(varianceOptions)[heroInstance.bane]
                   : '—'}
               />
@@ -262,7 +260,6 @@ const HeroBuilder = ({
         </div>
         <div className="section">
           {
-            // $FlowIssue: I think flow thinks skillType could be any string.
             values(mapObjIndexed(
               (skill: string | void, skillType: SkillType) => (
                 <div

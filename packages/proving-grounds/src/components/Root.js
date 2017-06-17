@@ -230,11 +230,9 @@ class Root extends React.Component {
         </div>
         <div className="spacer" />
         <HeroGrid
-            // $FlowIssue typedef for path isn't resolving correctly
           activeHeroName={path(['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
-            // $FlowIssue iterable incompatible with array
             allPass(map(
               matchHero,
               split(' ', state.searchString),
@@ -243,11 +241,9 @@ class Root extends React.Component {
           )}
         />
         <HeroGrid
-          // $FlowIssue typedef for path isn't resolving correctly
           activeHeroName={pathOr('', ['activeHero', 'name'], state)}
           dispatch={dispatch}
           heroes={filter(
-            // $FlowIssue iterable incompatible with array
             allPass(map(
               matchHero,
               split(' ', toLower(state.searchString)),
