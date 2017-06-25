@@ -22,6 +22,7 @@ import event11 from './2017.06.02-camus';
 import event12 from './2017.06.08-tempest-trials';
 import event13 from './2017.06.09-zephiel';
 import event14 from './2017.06.16-legion';
+import event15 from './2017.06.22-michalis';
 
 
 export function getEventHeroes(allEvents: boolean = false) {
@@ -46,5 +47,6 @@ export function getEventHeroes(allEvents: boolean = false) {
     event12,
     event13,
     event14,
+    event15,
   ]);
 }
