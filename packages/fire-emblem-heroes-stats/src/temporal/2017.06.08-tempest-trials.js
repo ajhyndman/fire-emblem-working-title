@@ -37,6 +37,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Veronica.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Veronica.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Veronica.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {

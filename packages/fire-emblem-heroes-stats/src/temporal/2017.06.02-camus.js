@@ -29,6 +29,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Camus.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Camus.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Camus.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -73,6 +80,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Troubador.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Troubador.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Troubador.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -121,6 +135,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Red Cavalier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Red Cavalier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Red Cavalier.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -169,6 +190,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Axe Cavalier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Axe Cavalier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Axe Cavalier.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -217,6 +245,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Axe Cavalier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Axe Cavalier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Axe Cavalier.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {

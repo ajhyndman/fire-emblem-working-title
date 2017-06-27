@@ -29,6 +29,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Narcian.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Narcian.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Narcian.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -73,6 +80,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Bow Fighter.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Bow Fighter.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Bow Fighter.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -117,6 +131,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Blue Cavalier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Blue Cavalier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Blue Cavalier.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -157,6 +178,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Green Cavalier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Green Cavalier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Green Cavalier.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -201,6 +229,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Fighter.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Fighter.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Fighter.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {

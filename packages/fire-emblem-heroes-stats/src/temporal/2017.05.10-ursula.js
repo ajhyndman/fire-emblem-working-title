@@ -29,6 +29,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Ursula.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Ursula.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Ursula.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -73,6 +80,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Axe Knight.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Axe Knight.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Axe Knight.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -121,6 +135,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Cavalier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Cavalier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Cavalier.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -165,6 +186,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Thief.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Thief.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Thief.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {
@@ -209,6 +237,13 @@ const unitList: Array<Hero> = [
         'rarity': '-',
       },
     ],
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Thief.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Thief.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Thief.png',
+      },
+    },
     'stats': {
       '1': {
         '5': {

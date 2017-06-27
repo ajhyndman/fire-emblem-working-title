@@ -27,13 +27,7 @@ const heroesByName: HeroesByName = indexBy(prop('name'), getAllHeroes());
  */
 export const getHero = (name: string): Hero => {
   const hero: ?Hero = heroesByName[name];
-  return hero || heroesByName['Anna'] || {
-    name,
-    weaponType: 'Red Sword',
-    stats: { '1': {}, '40': {} },
-    skills: [],
-    moveType: 'Infantry',
-  };
+  return hero || heroesByName['Anna'];
 };
 
 export const getReleasedHeroes = () => filter(

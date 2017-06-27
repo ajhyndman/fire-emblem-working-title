@@ -63,6 +63,14 @@ export type StatsByLevel = {
   +'40': Level40Stats;
 };
 
+export type Assets = {
+  +portrait: {
+    +'75px': string;
+    +'113px': string;
+    +'150px': string;
+  };
+};
+
 export type Hero = {
   +name: string;
   +shortName?: string;
@@ -72,6 +80,7 @@ export type Hero = {
   +releaseDate?: string;
   +origin?: string;
   +rarities?: string;
+  +assets: Assets;
   +stats: StatsByLevel;
   +skills: Array<{
     +name: string;

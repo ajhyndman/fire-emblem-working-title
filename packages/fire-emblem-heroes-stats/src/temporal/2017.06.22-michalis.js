@@ -11,6 +11,13 @@ const unitList: Array<Hero> = [
     'name': 'Lance Flier (Michalis GHB)',
     'moveType': 'Flying',
     'weaponType': 'Blue Lance',
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Flier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Flier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Flier.png',
+      },
+    },
     'skills': [
       {
         'name': 'Silver Lance+',
@@ -59,6 +66,13 @@ const unitList: Array<Hero> = [
     'name': 'Michalis (Michalis GHB)',
     'moveType': 'Flying',
     'weaponType': 'Green Axe',
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Michalis.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Michalis.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Michalis.png',
+      },
+    },
     'skills': [
       {
         'name': 'Hauteclere',
@@ -103,6 +117,13 @@ const unitList: Array<Hero> = [
     'name': 'Sword Flier (Michalis GHB)',
     'moveType': 'Flying',
     'weaponType': 'Red Sword',
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Flier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Flier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Flier.png',
+      },
+    },
     'skills': [
       {
         'name': 'Silver Sword+',
@@ -151,6 +172,13 @@ const unitList: Array<Hero> = [
     'name': 'Sword Cavalier (Michalis GHB)',
     'moveType': 'Cavalry',
     'weaponType': 'Red Sword',
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Cavalier.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Cavalier.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Cavalier.png',
+      },
+    },
     'skills': [
       {
         'name': 'Silver Sword+',
@@ -195,6 +223,13 @@ const unitList: Array<Hero> = [
     'name': 'Lance Fighter (Michalis GHB)',
     'moveType': 'Infantry',
     'weaponType': 'Blue Lance',
+    'assets': {
+      'portrait': {
+        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Fighter.png',
+        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Fighter.png',
+        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Fighter.png',
+      },
+    },
     'skills': [
       {
         'name': 'Heavy Spear+',

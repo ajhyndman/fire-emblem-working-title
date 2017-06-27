@@ -22,6 +22,7 @@ import {
   values,
   without,
   zipObj,
+  zipWith,
 } from 'ramda';
 
 import { fetchPage, fetchAndParsePages } from './fetch';
@@ -32,6 +33,9 @@ import {
 } from './parse';
 
 
+const CDN_HOST = 'https://proving-grounds-static.ajhyndman.com';
+const WIKI_HOST = 'http://feheroes.gamepedia.com';
+
 /**
  * Fetch and collate the data.
  * (Do all the things!)
@@ -39,15 +43,28 @@ import {
 
 // Fetches heroes and their stats/skills
 async function fetchHeroStats() {
-  const heroes = await fetchPage('http://feheroes.gamepedia.com/Hero_List')
+  const heroes = await fetchPage(`${WIKI_HOST}/Hero_List`)
     .then(parseHeroAggregateHtml)
     .then(map(dissoc('icon')))
     .catch(err => console.error('parseHeroAggregateHtml', err));
 
   const heroNames = map(prop('name'), heroes);
 
+  const heroAssets = map(
+    name => ({
+      assets: {
+        portrait: {
+          '75px': `${CDN_HOST}/75px-Icon_Portrait_${name}.png`,
+          '113px': `${CDN_HOST}/113px-Icon_Portrait_${name}.png`,
+          '150px': `${CDN_HOST}/150px-Icon_Portrait_${name}.png`,
+        },
+      },
+    }),
+    heroNames,
+  );
+
   const heroStatsAndSkills = await fetchAndParsePages(
-    'http://feheroes.gamepedia.com/',
+    WIKI_HOST,
     heroNames,
     parseHeroStatsAndSkills,
   );
@@ -56,7 +73,7 @@ async function fetchHeroStats() {
   const detailedHeroes = values(
     mergeWith(
       merge,
-      zipObj(heroNames, heroes),
+      zipObj(heroNames, zipWith(merge, heroes, heroAssets)),
       heroStatsAndSkills,
     ),
   );
@@ -78,7 +95,7 @@ async function fetchHeroStats() {
 async function fetchSkills() {
   const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives', 'Seals'];
   const skillsByType = await fetchAndParsePages(
-    'http://feheroes.gamepedia.com/',
+    WIKI_HOST,
     skillPageNames,
     parseSkillsPage,
   );

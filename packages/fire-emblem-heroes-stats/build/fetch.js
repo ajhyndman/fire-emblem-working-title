@@ -36,7 +36,7 @@ export async function fetchAndParsePages(host, pageNames, parseFunction) {
             })
         },
         fetchPage,
-        (pageName) => host + encodeURIComponent(pageName),
+        (pageName) => `${host}/${encodeURIComponent(pageName)}`,
       ))(pageNames),
     ).catch(err => console.error('fetchAndParsePages:', err)),
   );
