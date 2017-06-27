@@ -3,6 +3,7 @@ import React from 'react';
 import { action, storiesOf } from '@kadira/storybook';
 import { drop } from 'ramda';
 import { withReducer, withState } from 'recompose';
+import { getHero } from 'fire-emblem-heroes-stats';
 import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
@@ -39,7 +40,11 @@ storiesOf('Frame', module)
 
 storiesOf('Hero', module)
   .add('default', () => (
-    <Hero name="Anna" weaponType="Green Axe" />
+    <Hero
+      assets={getHero(heroInstance.name).assets}
+      name={heroInstance.name}
+      weaponType={getHero(heroInstance.name).weaponType}
+    />
   ));
 
 storiesOf('HeroBuilder', module)

@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
-import { compose, replace } from 'ramda';
+import { replace } from 'ramda';
+import type { Assets } from 'fire-emblem-heroes-stats';
 import type { Rarity } from 'fire-emblem-heroes-calculator';
 
 import Frame from './Frame';
@@ -9,6 +10,7 @@ import { staticUrl } from '../../config';
 
 
 type Props = {
+  assets: Assets;
   name: string;
   rarity?: Rarity;
   specialCooldown?: number;
@@ -18,16 +20,8 @@ type Props = {
 const CLASS_ICON_SIZE = 20;
 const OVERSET = 4;
 
-const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) => {
+const HeroPortrait = ({ assets, name, weaponType, rarity = 5, specialCooldown }: Props) => {
   const weaponTypeUri = weaponType ? replace(' ', '_', weaponType) : '';
-  const imageName = compose(
-    // strip GHB suffixes (e.g. (Navarre GHB))
-    replace(/ \([^()]*GHB\)/, ''),
-    // strip GHB suffixes (e.g. (Navarre GHB))
-    replace(/ \(Tempest Trials\)/, ''),
-    // strip index suffixes (e.g. Thief 1, Thief 2)
-    replace(/ \d/, ''),
-  )(name);
 
   return (
     <div className="root">
@@ -88,10 +82,10 @@ const HeroPortrait = ({ name, weaponType, rarity = 5, specialCooldown }: Props) 
         className="portrait"
         title={name}
         alt={name}
-        src={`${staticUrl}75px-Icon_Portrait_${encodeURIComponent(imageName)}.png`}
+        src={assets.portrait['75px']}
         srcSet={`
-          ${staticUrl}113px-Icon_Portrait_${encodeURIComponent(imageName)}.png 113w,
-          ${staticUrl}150px-Icon_Portrait_${encodeURIComponent(imageName)}.png 150w
+          ${assets.portrait['113px']} 113w,
+          ${assets.portrait['150px']} 150w
         `}
         sizes={`${gridSize}px`}
       />

@@ -71,6 +71,7 @@ const StatSheet = ({
       `}</style>
       <div className="left col">
         <HeroPortrait
+          assets={getHero(heroInstance.name).assets}
           name={heroInstance.name}
           rarity={heroInstance.rarity}
           weaponType={getHero(heroInstance.name).weaponType}

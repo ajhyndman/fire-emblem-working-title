@@ -19,7 +19,7 @@ import type { Dispatch } from '../reducer';
 type Props = {
   activeHeroName: ?string;
   dispatch: Dispatch;
-  heroes: Array<Object>;
+  heroes: Array<Hero>;
   showUndo?: boolean;
 };
 
@@ -120,6 +120,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
           >
             <HeroPortrait
               name={hero.name}
+              assets={hero.assets}
               weaponType={hero.weaponType}
             />
           </div>

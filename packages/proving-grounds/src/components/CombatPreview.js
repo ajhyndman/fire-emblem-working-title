@@ -115,6 +115,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         {leftHero && (
           <div>
             <HeroPortrait
+              assets={getHero(leftHero.name).assets}
               name={leftHero.name}
               weaponType={getHero(leftHero.name).weaponType}
               rarity={leftHero.rarity}
@@ -169,6 +170,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         {rightHero && (
           <div>
             <HeroPortrait
+              assets={getHero(rightHero.name).assets}
               name={rightHero.name}
               weaponType={getHero(rightHero.name).weaponType}
               rarity={rightHero.rarity}
