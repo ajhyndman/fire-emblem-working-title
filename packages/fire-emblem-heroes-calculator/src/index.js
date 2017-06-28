@@ -7,6 +7,7 @@ export {
 export {
   getCurrentHp,
   getDefaultSkills,
+  getHeroesWithSkill,
   getInheritableSkills,
   getStat,
   updateRarity,

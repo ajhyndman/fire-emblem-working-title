@@ -1,12 +1,20 @@
 // @flow
-import { getHero, getAllSkills, getSkillObject, getSkillType } from 'fire-emblem-heroes-stats';
+import {
+  getAllSkills,
+  getHero,
+  getReleasedHeroes,
+  getSkillObject,
+  getSkillType,
+} from 'fire-emblem-heroes-stats';
 import {
   allPass,
   ascend,
   compose,
+  contains,
   curry,
   descend,
   filter,
+  find,
   indexBy,
   indexOf,
   map,
@@ -49,6 +57,21 @@ export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedN
   }
   return false;
 };
+
+export function getHeroesWithSkill(skillName) {
+  const heroesWithSkill = filter(
+    hero => contains(skillName, hero.skills),
+    getReleasedHeroes(),
+  );
+
+  return map(
+    hero => ({
+      name: hero.name,
+      rarity: find(skill => skill.name === skillName, hero.skills).rarity,
+    }),
+    heroesWithSkill,
+  );
+}
 
 // Returns the name of the skill object for the skill type
 export function getSkillName(
