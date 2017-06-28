@@ -58,7 +58,7 @@ export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedN
   return false;
 };
 
-export function getHeroesWithSkill(skillName) {
+export function getHeroesWithSkill(skillName: string) {
   const heroesWithSkill = filter(
     hero => contains(skillName, hero.skills),
     getReleasedHeroes(),
