@@ -787,7 +787,7 @@
       "origin": "Fire Emblem: New Mystery of the Emblem",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "Jun 14, 2017",
       "assets": {
         "portrait": {
@@ -809,23 +809,23 @@
         },
         {
           "name": "Wo Dao",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Wo Dao+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "New Moon",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Moonbow",
           "default": "-",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Armored Blow 1",
@@ -833,7 +833,7 @@
         },
         {
           "name": "Sturdy Blow 1",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Sturdy Blow 2",
@@ -849,11 +849,18 @@
         },
         {
           "name": "Sword Exp. 3",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 16,
+            "atk": 6,
+            "spd": 10,
+            "def": 8,
+            "res": 4
+          },
           "5": {
             "hp": 17,
             "atk": 7,
@@ -863,6 +870,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              31,
+              34,
+              37
+            ],
+            "atk": [
+              25,
+              28,
+              31
+            ],
+            "spd": [
+              33,
+              36,
+              39
+            ],
+            "def": [
+              23,
+              26,
+              29
+            ],
+            "res": [
+              19,
+              22,
+              25
+            ]
+          },
           "5": {
             "hp": [
               33,
@@ -1510,6 +1544,156 @@
               10,
               13,
               17
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Berkut",
+      "title": "Prideful Prince",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Blue Lance",
+      "moveType": "Cavalry",
+      "rarities": "3-4Event: Grand Hero Battle",
+      "releaseDate": "Jul 18, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Berkut.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Berkut.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Berkut.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Berkut's Lance",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Berkut's Lance+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Rising Flame",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Blazing Flame",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Water Boost 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Water Boost 2",
+          "rarity": 4
+        },
+        {
+          "name": "Water Boost 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Res 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Ward Cavalry",
+          "rarity": 4
+        }
+      ],
+      "stats": {
+        "1": {
+          "3": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 4,
+            "def": 6,
+            "res": 6
+          },
+          "4": {
+            "hp": 18,
+            "atk": 8,
+            "spd": 4,
+            "def": 7,
+            "res": 6
+          },
+          "5": {
+            "hp": 19,
+            "atk": 8,
+            "spd": 5,
+            "def": 7,
+            "res": 7
+          }
+        },
+        "40": {
+          "3": {
+            "hp": [
+              39
+            ],
+            "atk": [
+              30
+            ],
+            "spd": [
+              19
+            ],
+            "def": [
+              27
+            ],
+            "res": [
+              21
+            ]
+          },
+          "4": {
+            "hp": [
+              40
+            ],
+            "atk": [
+              32
+            ],
+            "spd": [
+              20
+            ],
+            "def": [
+              29
+            ],
+            "res": [
+              22
+            ]
+          },
+          "5": {
+            "hp": [
+              43
+            ],
+            "atk": [
+              34
+            ],
+            "spd": [
+              22
+            ],
+            "def": [
+              31
+            ],
+            "res": [
+              24
             ]
           }
         }
@@ -4289,6 +4473,148 @@
       }
     },
     {
+      "name": "Clive",
+      "title": "Idealistic Knight",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Blue Lance",
+      "moveType": "Cavalry",
+      "rarities": "",
+      "releaseDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Clive.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Clive.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Clive.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Lance",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Silver Lance+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Buckler",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Escutcheon",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Defense +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Defense +2",
+          "rarity": "-"
+        },
+        {
+          "name": "Defense +3",
+          "rarity": "-"
+        },
+        {
+          "name": "Hit and Run",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "3": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          },
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-"
+          }
+        },
+        "40": {
+          "3": {
+            "hp": [
+              "-"
+            ],
+            "atk": [
+              "-"
+            ],
+            "spd": [
+              "-"
+            ],
+            "def": [
+              "-"
+            ],
+            "res": [
+              "-"
+            ]
+          },
+          "4": {
+            "hp": [
+              "-"
+            ],
+            "atk": [
+              "-"
+            ],
+            "spd": [
+              "-"
+            ],
+            "def": [
+              "-"
+            ],
+            "res": [
+              "-"
+            ]
+          },
+          "5": {
+            "hp": [
+              45
+            ],
+            "atk": [
+              33
+            ],
+            "spd": [
+              25
+            ],
+            "def": [
+              32
+            ],
+            "res": [
+              19
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Cordelia",
       "title": "Knight Paragon",
       "origin": "Fire Emblem Awakening",
@@ -4879,6 +5205,113 @@
         }
       },
       "shortName": "Corrin (M)"
+    },
+    {
+      "name": "Delthea",
+      "title": "Free Spirit",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Blue Tome",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Jul 13, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Delthea.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Delthea.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Delthea.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elthunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Thoron",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Dark Aura",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Miracle",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Death Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Death Blow 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Death Blow 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Atk 2",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 10,
+            "spd": 8,
+            "def": 3,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              30,
+              33,
+              36
+            ],
+            "atk": [
+              33,
+              36,
+              39
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              10,
+              13,
+              17
+            ],
+            "res": [
+              28,
+              31,
+              34
+            ]
+          }
+        }
+      }
     },
     {
       "name": "Donnel",
@@ -7311,7 +7744,7 @@
           "rarity": 5
         },
         {
-          "name": "Seal Atk 1",
+          "name": "Seal Spd 1",
           "rarity": "-"
         },
         {
@@ -7326,39 +7759,39 @@
       "stats": {
         "1": {
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 18,
+            "atk": 8,
+            "spd": 7,
+            "def": 6,
+            "res": 5
           }
         },
         "40": {
           "5": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              36,
+              40,
+              43
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              29,
+              32,
+              35
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              28,
+              31,
+              34
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              24,
+              28,
+              31
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              14,
+              18,
+              21
             ]
           }
         }
@@ -7614,39 +8047,39 @@
       "stats": {
         "1": {
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 17,
+            "atk": 8,
+            "spd": 9,
+            "def": 4,
+            "res": 6
           }
         },
         "40": {
           "5": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              31,
+              34,
+              37
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              26,
+              30,
+              33
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              34,
+              37,
+              40
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              16,
+              19,
+              22
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              24,
+              28,
+              31
             ]
           }
         }
@@ -7928,6 +8361,113 @@
               13,
               17,
               20
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Gray",
+      "title": "Wry Comrade",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Jul 13, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Gray.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Gray.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Gray.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Zanbato",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Zanbato+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Swap",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Wind Boost 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Wind Boost 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Wind Boost 3",
+          "rarity": 5
+        },
+        {
+          "name": "Sword Valor 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Sword Valor 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Sword Valor 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 6,
+            "def": 6,
+            "res": 3
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              40,
+              43,
+              46
+            ],
+            "atk": [
+              32,
+              35,
+              38
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              27,
+              30,
+              33
+            ],
+            "res": [
+              19,
+              22,
+              26
             ]
           }
         }
@@ -11179,6 +11719,118 @@
       }
     },
     {
+      "name": "Leon",
+      "title": "True of Heart",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Neutral Bow",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Jul 13, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Leon.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Leon.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Leon.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Slaying Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Slaying Bow+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Glowing Ember",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Ignis",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Speed +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Speed +2",
+          "rarity": "-"
+        },
+        {
+          "name": "Speed +3",
+          "rarity": 5
+        },
+        {
+          "name": "Guard 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Guard 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Guard 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 6,
+            "def": 8,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              35,
+              39,
+              42
+            ],
+            "atk": [
+              31,
+              34,
+              37
+            ],
+            "spd": [
+              27,
+              30,
+              33
+            ],
+            "def": [
+              26,
+              30,
+              33
+            ],
+            "res": [
+              12,
+              15,
+              19
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Lilina",
       "title": "Delightful Noble",
       "origin": "Fire Emblem: The Binding Blade",
@@ -12380,7 +13032,7 @@
         {
           "name": "Killer Lance+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Holy Vestments",
@@ -13340,6 +13992,113 @@
         }
       },
       "shortName": "Marth (M)"
+    },
+    {
+      "name": "Mathilda",
+      "title": "Legendary Knight",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Blue Lance",
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Jul 13, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Mathilda.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Mathilda.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Mathilda.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Ridersbane",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Ridersbane+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Resistance",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Cancel Affinity 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Cancel Affinity 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Cancel Affinity 3",
+          "rarity": 5
+        },
+        {
+          "name": "Hone Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Hone Atk 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Hone Atk 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 8,
+            "def": 7,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              32,
+              35,
+              39
+            ],
+            "atk": [
+              25,
+              29,
+              32
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              21,
+              24,
+              27
+            ],
+            "res": [
+              31,
+              34,
+              37
+            ]
+          }
+        }
+      }
     },
     {
       "name": "Matthew",
@@ -16920,7 +17679,7 @@
         },
         {
           "name": "Gronnwolf",
-          "default": 4,
+          "default": "-",
           "rarity": 3
         },
         {
@@ -17136,39 +17895,39 @@
       "stats": {
         "1": {
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 18,
+            "atk": 8,
+            "spd": 8,
+            "def": 6,
+            "res": 7
           }
         },
         "40": {
           "5": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              32,
+              35,
+              38
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              29,
+              32,
+              35
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              31,
+              34,
+              37
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              24,
+              28,
+              31
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              25,
+              29,
+              32
             ]
           }
         }
@@ -17362,7 +18121,7 @@
       "origin": "Fire Emblem: New Mystery of the Emblem",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "Jun 14, 2017",
       "assets": {
         "portrait": {
@@ -17384,27 +18143,27 @@
         },
         {
           "name": "Firesweep Lance",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Firesweep Lance+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Rally Defense",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Rally Defense Resistance",
           "default": "-",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Drag Back",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Spur Def 1",
@@ -17412,7 +18171,7 @@
         },
         {
           "name": "Drive Def 1",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Drive Def 2",
@@ -17421,6 +18180,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 8,
+            "def": 5,
+            "res": 6
+          },
           "5": {
             "hp": 18,
             "atk": 7,
@@ -17430,6 +18196,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              34,
+              37,
+              40
+            ],
+            "atk": [
+              26,
+              29,
+              32
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              20,
+              23,
+              26
+            ],
+            "res": [
+              19,
+              22,
+              25
+            ]
+          },
           "5": {
             "hp": [
               36,
@@ -17708,6 +18501,118 @@
               18,
               21,
               24
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Saber",
+      "title": "Driven Mercenary",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Jul 13, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Saber.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Saber.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Saber.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Slaying Edge",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Slaying Edge+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Holy Vestments",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Aegis",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "HP +3",
+          "rarity": "-"
+        },
+        {
+          "name": "HP Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "HP Spd 2",
+          "rarity": 5
+        },
+        {
+          "name": "Shield Pulse 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Shield Pulse 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Shield Pulse 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 9,
+            "def": 8,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              36,
+              40,
+              43
+            ],
+            "atk": [
+              28,
+              31,
+              34
+            ],
+            "spd": [
+              30,
+              33,
+              36
+            ],
+            "def": [
+              29,
+              32,
+              35
+            ],
+            "res": [
+              19,
+              22,
+              25
             ]
           }
         }
@@ -19286,6 +20191,118 @@
       }
     },
     {
+      "name": "Sonya",
+      "title": "Vengeful Mage",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Green Tome",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Jul 13, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sonya.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sonya.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sonya.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elwind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Rexcalibur",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Dark Excalibur",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Moonbow",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Warding Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Mirror Strike 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Mirror Strike 2",
+          "rarity": 5
+        },
+        {
+          "name": "Res Ploy 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Res Ploy 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Res Ploy 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 7,
+            "def": 5,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              33,
+              36,
+              40
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              28,
+              31,
+              34
+            ],
+            "def": [
+              12,
+              15,
+              19
+            ],
+            "res": [
+              29,
+              32,
+              35
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Sophia",
       "title": "Nabata Prophet",
       "origin": "Fire Emblem: The Binding Blade",
@@ -20758,15 +21775,15 @@
           "rarity": 5
         },
         {
-          "name": "Close Defense 1",
+          "name": "Close Def 1",
           "rarity": "-"
         },
         {
-          "name": "Close Defense 2",
+          "name": "Close Def 2",
           "rarity": "-"
         },
         {
-          "name": "Close Defense 3",
+          "name": "Close Def 3",
           "rarity": 5
         },
         {
@@ -20785,39 +21802,39 @@
       "stats": {
         "1": {
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 18,
+            "atk": 8,
+            "spd": 6,
+            "def": 8,
+            "res": 7
           }
         },
         "40": {
           "5": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              32,
+              35,
+              38
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              33,
+              36,
+              39
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              27,
+              30,
+              33
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              29,
+              32,
+              35
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              21,
+              24,
+              27
             ]
           }
         }
@@ -21073,6 +22090,127 @@
               26,
               30,
               33
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Tobin",
+      "title": "The Clueless One",
+      "origin": "Fire Emblem Echoes: Shadows of Valentia",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": "4-5Event: Tempest Trials",
+      "releaseDate": "Jul 07, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Tobin.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Tobin.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Tobin.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Armorslayer",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Armorslayer+",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Pivot",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Attack +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Attack +2",
+          "rarity": "-"
+        },
+        {
+          "name": "Attack +3",
+          "rarity": 4
+        },
+        {
+          "name": "Seal Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Seal Spd 2",
+          "rarity": 4
+        },
+        {
+          "name": "Seal Spd 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "4": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 5,
+            "def": 4,
+            "res": 3
+          },
+          "5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 5,
+            "def": 5,
+            "res": 4
+          }
+        },
+        "40": {
+          "4": {
+            "hp": [
+              43
+            ],
+            "atk": [
+              29
+            ],
+            "spd": [
+              25
+            ],
+            "def": [
+              30
+            ],
+            "res": [
+              23
+            ]
+          },
+          "5": {
+            "hp": [
+              46
+            ],
+            "atk": [
+              31
+            ],
+            "spd": [
+              27
+            ],
+            "def": [
+              33
+            ],
+            "res": [
+              26
             ]
           }
         }
@@ -22464,6 +23602,26 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Slaying Edge",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Slaying Edge+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
       "name": "Sol Katti",
       "spCost": 400,
       "damage(mt)": 16,
@@ -22520,6 +23678,26 @@
       "range(rng)": 1,
       "effect": "Grants Spd+4 during combat if unit initiates attack.",
       "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Zanbato",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Zanbato+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -22794,6 +23972,26 @@
       "weaponType": "Breath"
     },
     {
+      "name": "Berkut's Lance",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Grants Res+4 when the unit is under attack.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Berkut's Lance+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Grants Res+4 when the unit is under attack.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
       "name": "Brave Lance",
       "spCost": 200,
       "damage(mt)": 5,
@@ -22959,6 +24157,26 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Ridersbane",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Ridersbane+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Blue Lance"
@@ -23150,6 +24368,16 @@
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
       "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Dark Aura",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Grants adjacent allies who use swords, axes, lances, or dragonstones Atk+6 through their next actions at the start of each turn.",
+      "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -23501,6 +24729,16 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Axe"
+    },
+    {
+      "name": "Dark Excalibur",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Grants +10 to damage when special triggers.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Elwind",
@@ -23983,6 +25221,26 @@
       "weaponType": "Neutral Bow"
     },
     {
+      "name": "Slaying Bow",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Slaying Bow+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
       "name": "Steel Bow",
       "spCost": 100,
       "damage(mt)": 6,
@@ -24067,7 +25325,7 @@
       "spCost": 300,
       "damage(mt)": 10,
       "range(rng)": 2,
-      "effect": "Foe takes Def/Res-5 until end of foe's next action.If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2.If attacking, unit gets 2 damage after.",
+      "effect": "Foe takes Def/Res-7 until end of foe's next action.If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2.If attacking, unit gets 2 damage after.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Shuriken"
@@ -24776,21 +26034,21 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Close Defense 1",
+      "name": "Close Def 1",
       "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+2 during combat.",
       "spCost": 60,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
-      "name": "Close Defense 2",
+      "name": "Close Def 2",
       "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+4 during combat.",
       "spCost": 120,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
-      "name": "Close Defense 3",
+      "name": "Close Def 3",
       "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat.",
       "spCost": 240,
       "inheritRestriction": "None",
@@ -25065,14 +26323,14 @@
     {
       "name": "HP Def 1",
       "effect": "Grants HP+3, Def+1.",
-      "spCost": 80,
+      "spCost": 100,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
       "name": "HP Def 2",
       "effect": "Grants HP+4, Def+2.",
-      "spCost": 160,
+      "spCost": 200,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
@@ -25094,6 +26352,20 @@
       "name": "HP +5",
       "effect": "Grants +5 to max HP.",
       "spCost": 160,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "HP Spd 1",
+      "effect": "Grants HP+3, Spd+1.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "HP Spd 2",
+      "effect": "Grants HP+4, Spd+2.",
+      "spCost": 200,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
@@ -25143,6 +26415,20 @@
       "name": "Life and Death 3",
       "effect": "Grants Atk/Spd+5.Inflicts Def/Res-5.",
       "spCost": 200,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Mirror Strike 1",
+      "effect": "Grants Atk/Res+2 during combat if unit initiates combat.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Mirror Strike 2",
+      "effect": "Grants Atk/Res+4 during combat if unit initiates combat.",
+      "spCost": 240,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
@@ -25266,6 +26552,27 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Water Boost 1",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+2 during combat.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Water Boost 2",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+4 during combat.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Water Boost 3",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+6 during combat.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Wind Boost 1",
       "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+2 during combat.",
       "spCost": 50,
@@ -25368,6 +26675,27 @@
       "effect": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter.",
       "spCost": 200,
       "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Cancel Affinity 1",
+      "effect": "Any weapon triangle affinity granted by unit's skills is negated. Also negates any weapon triangle affinity granted by foe's skills.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Tome and Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Cancel Affinity 2",
+      "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is negated.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Tome and Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Cancel Affinity 3",
+      "effect": "Any weapon triangle affinity granted by unit's skills is negated.If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Tome and Staff Users",
       "type": "PASSIVE_B"
     },
     {
@@ -25730,15 +27058,15 @@
     {
       "name": "Seal Atk Spd 1",
       "effect": "After combat, inflicts Atk/Spd-3 on foe through its next action.",
-      "spCost": 80,
-      "inheritRestriction": "None",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_B"
     },
     {
       "name": "Seal Atk Spd 2",
       "effect": "After combat, inflicts Atk/Spd-5 on foe through its next action.",
-      "spCost": 160,
-      "inheritRestriction": "None",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_B"
     },
     {
@@ -25802,6 +27130,27 @@
       "effect": "After combat, foe suffers Spd-7 through its next action.",
       "spCost": 160,
       "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Shield Pulse 1",
+      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1.",
+      "spCost": 60,
+      "inheritRestriction": "Melee Weapon Users Only, Infantry and Armored Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Shield Pulse 2",
+      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1.Unit takes 5 less damage when Special triggers.",
+      "spCost": 120,
+      "inheritRestriction": "Melee Weapon Users Only, Infantry and Armored Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Shield Pulse 3",
+      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-2 at start of turn 1.Unit takes 5 less damage when Special triggers.",
+      "spCost": 240,
+      "inheritRestriction": "Melee Weapon Users Only, Infantry and Armored Only",
       "type": "PASSIVE_B"
     },
     {
@@ -25995,7 +27344,7 @@
     },
     {
       "name": "Axe Valor 1",
-      "effect": "If unit survives and uses a axe, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives and uses an axe, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
       "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
@@ -26094,6 +27443,20 @@
     {
       "name": "Def Ploy 3",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Drive Atk 1",
+      "effect": "Grants allies within 2 spaces Atk+2 during combat.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Drive Atk 2",
+      "effect": "Grants allies within 2 spaces Atk+3 during combat.",
       "spCost": 240,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
@@ -26309,6 +27672,27 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Res Ploy 1",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-3 until the end of foe's next action.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Res Ploy 2",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-4 until the end of foe's next action.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Res Ploy 3",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-5 until the end of foe's next action.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Savage Blow 1",
       "effect": "If unit initiates attack, foes within 2 spaces of target take 3 damage after combat.",
       "spCost": 50,
@@ -26449,6 +27833,27 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Sword Valor 1",
+      "effect": "If unit survives and uses a sword, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
+      "inheritRestriction": "Sword Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Sword Valor 2",
+      "effect": "If unit survives, all sword users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 60,
+      "inheritRestriction": "Sword Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Sword Valor 3",
+      "effect": "If unit survives, all sword users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 120,
+      "inheritRestriction": "Sword Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Threaten Atk 1",
       "effect": "Inflicts Atk-3 on foes within 2 spaces through their next actions at the start of each turn.",
       "spCost": 50,
@@ -26579,8 +27984,18 @@
       "type": "SEAL"
     },
     {
+      "name": "Phantom Spd 1",
+      "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +5 over actual value.",
+      "type": "SEAL"
+    },
+    {
       "name": "Quickened Pulse",
       "effect": "Special cooldown count -1 at start of Turn 1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Resistance +1",
+      "effect": "Grants Res+1.",
       "type": "SEAL"
     },
     {
@@ -26591,6 +28006,11 @@
     {
       "name": "Spur Def 1",
       "effect": "Grants adjacent allies Def+2 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace A 1",
+      "effect": "Grants HP+3.",
       "type": "SEAL"
     }
   ]
