@@ -176,4 +176,5 @@ $ cd fire-emblem-working-title
 $ lerna bootstrap
 $ cd fire-emblem-heroes-stats
 $ npm run scrape-stats
+$ npm run scrape-images
 ```

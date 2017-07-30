@@ -1,11 +1,11 @@
 ## Customize dependencies
 dependencies:
   pre:
-    - nvm install 6.10.0
+    - nvm install 8.1.4
 
   override:
-    - nvm use 6.10.0 && yarn
-    - nvm use 6.10.0 && yarn bootstrap
+    - nvm use 8.1.4 && yarn
+    - nvm use 8.1.4 && yarn bootstrap
 
   # we automatically cache and restore many dependencies between
   # builds. If you need to, you can add custom paths to cache:
@@ -18,7 +18,7 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - nvm use 6.10.0 && yarn test
+    - nvm use 8.1.4 && yarn test
 
 ## Customize deployment commands
 deployment:
@@ -27,3 +27,4 @@ deployment:
     owner: ajhyndman
     commands:
       - aws s3 sync packages/proving-grounds/static/cdn s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public
+      - aws s3 sync packages/fire-emblem-heroes-stats/assets s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public

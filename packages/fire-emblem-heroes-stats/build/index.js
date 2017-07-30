@@ -31,10 +31,8 @@ import {
   parseHeroStatsAndSkills,
   parseSkillsPage,
 } from './parse';
+import { CDN_HOST, WIKI_HOST } from './constants';
 
-
-const CDN_HOST = 'https://proving-grounds-static.ajhyndman.com';
-const WIKI_HOST = 'http://feheroes.gamepedia.com';
 
 /**
  * Fetch and collate the data.
@@ -133,7 +131,7 @@ function validate(heroes, skills) {
     }
     var level1Rarities = 0;
     var level40Rarities = 0;
-    for (let rarity of [1,2,3,4,5]) {
+    for (let rarity of [1, 2, 3, 4, 5]) {
       // level 1 stats:
       if (hero.stats[1][rarity] != null) {
         level1Rarities++;

@@ -2,6 +2,7 @@
 .git
 .gitignore
 .vscode
+assets
 build
 flow-typed
 flow
