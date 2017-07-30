@@ -12,6 +12,7 @@
     "copy-types": "ncp src/index.js.flow dist/fire-emblem-heroes-stats.js.flow",
     "prepublish": "npm run build",
     "publish": "cross-var aws s3 sync ./dist/ s3://proving-grounds-static.ajhyndman.com/$npm_package_version/ --cache-control max-age=31536000,public",
+    "scrape-images": "babel-node build/scrape-images.js",
     "scrape-stats": "babel-node build/index.js",
     "start": "npm run build:watch",
     "test": "eslint src/**/*.js build/**/*.js"

@@ -5,6 +5,7 @@
     "test": "lerna run test"
   },
   "devDependencies": {
+    "jsdom": "^11.1.0",
     "lerna": "2.0.0-rc.2"
   }
 }
