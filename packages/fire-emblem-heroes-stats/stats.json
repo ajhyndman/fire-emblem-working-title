@@ -4478,8 +4478,8 @@
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": "",
-      "releaseDate": "N/A",
+      "rarities": "4-5Event: Tempest Trials",
+      "releaseDate": "Aug 11, 2017",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Clive.png",
@@ -4537,13 +4537,6 @@
       ],
       "stats": {
         "1": {
-          "3": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
-          },
           "4": {
             "hp": "-",
             "atk": "-",
@@ -4560,23 +4553,6 @@
           }
         },
         "40": {
-          "3": {
-            "hp": [
-              "-"
-            ],
-            "atk": [
-              "-"
-            ],
-            "spd": [
-              "-"
-            ],
-            "def": [
-              "-"
-            ],
-            "res": [
-              "-"
-            ]
-          },
           "4": {
             "hp": [
               "-"
@@ -5053,6 +5029,119 @@
               18,
               21,
               24
+            ]
+          }
+        }
+      },
+      "shortName": "Corrin (F)"
+    },
+    {
+      "name": "Corrin (F) (Nohrian Summer)",
+      "title": "Novice Vacationer",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Blue Tome",
+      "moveType": "Flying",
+      "rarities": "5 - Special",
+      "releaseDate": "Jul 28, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Corrin (F) (Nohrian Summer).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Corrin (F) (Nohrian Summer).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Corrin (F) (Nohrian Summer).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elthunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Sealife Tome",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Sealife Tome+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dragon Fang",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Darting Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Strike 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Strike 2",
+          "rarity": 5
+        },
+        {
+          "name": "Fortify Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortify Res 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortify Fliers",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 8,
+            "def": 5,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              31,
+              34,
+              37
+            ],
+            "atk": [
+              28,
+              31,
+              34
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              19,
+              22,
+              25
+            ],
+            "res": [
+              23,
+              26,
+              30
             ]
           }
         }
@@ -6206,6 +6295,119 @@
           }
         }
       }
+    },
+    {
+      "name": "Elise (Nohrian Summer)",
+      "title": "Tropical Flower",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Green Tome",
+      "moveType": "Infantry",
+      "rarities": "5 - Special",
+      "releaseDate": "Jul 28, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Elise (Nohrian Summer).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Elise (Nohrian Summer).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Elise (Nohrian Summer).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elwind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Hibiscus Tome",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Hibiscus Tome+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Attack",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Attack Resistance",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Speed +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spd Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spd Res 2",
+          "rarity": 5
+        },
+        {
+          "name": "G Tome Valor 1",
+          "rarity": "-"
+        },
+        {
+          "name": "G Tome Valor 2",
+          "rarity": "-"
+        },
+        {
+          "name": "G Tome Valor 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 10,
+            "spd": 8,
+            "def": 3,
+            "res": 6
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              31,
+              34,
+              37
+            ],
+            "atk": [
+              33,
+              36,
+              39
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              15,
+              18,
+              21
+            ],
+            "res": [
+              22,
+              25,
+              29
+            ]
+          }
+        }
+      },
+      "shortName": "Elise (N)"
     },
     {
       "name": "Eliwood",
@@ -11719,12 +11921,125 @@
       }
     },
     {
+      "name": "Leo (Nohrian Summer)",
+      "title": "Seashore's Prince",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Red Tome",
+      "moveType": "Infantry",
+      "rarities": "5 - Special",
+      "releaseDate": "Jul 28, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Leo (Nohrian Summer).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Leo (Nohrian Summer).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Leo (Nohrian Summer).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Flux",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Ruin",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Tomato Tome",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Tomato Tome+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Iceberg",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Seal Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Seal Res 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Seal Res 3",
+          "rarity": 5
+        },
+        {
+          "name": "Atk Ploy 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Ploy 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Ploy 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 8,
+            "spd": 5,
+            "def": 6,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              34,
+              37,
+              41
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              23,
+              27,
+              30
+            ],
+            "def": [
+              13,
+              16,
+              20
+            ],
+            "res": [
+              32,
+              35,
+              38
+            ]
+          }
+        }
+      },
+      "shortName": "Leo (N)"
+    },
+    {
       "name": "Leon",
       "title": "True of Heart",
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "Jul 13, 2017",
       "assets": {
         "portrait": {
@@ -11746,23 +12061,23 @@
         },
         {
           "name": "Slaying Bow",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Slaying Bow+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Glowing Ember",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Ignis",
           "default": 5,
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Speed +1",
@@ -11774,7 +12089,7 @@
         },
         {
           "name": "Speed +3",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Guard 1",
@@ -11782,7 +12097,7 @@
         },
         {
           "name": "Guard 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Guard 3",
@@ -11791,6 +12106,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 5,
+            "def": 8,
+            "res": 4
+          },
           "5": {
             "hp": 17,
             "atk": 8,
@@ -11800,6 +12122,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              33,
+              36,
+              39
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              24,
+              27,
+              30
+            ],
+            "def": [
+              25,
+              28,
+              31
+            ],
+            "res": [
+              11,
+              14,
+              17
+            ]
+          },
           "5": {
             "hp": [
               35,
@@ -13999,7 +14348,7 @@
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "Jul 13, 2017",
       "assets": {
         "portrait": {
@@ -14021,17 +14370,17 @@
         },
         {
           "name": "Ridersbane",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Ridersbane+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Rally Resistance",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -14040,7 +14389,7 @@
         },
         {
           "name": "Cancel Affinity 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Cancel Affinity 3",
@@ -14056,11 +14405,18 @@
         },
         {
           "name": "Hone Atk 3",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 15,
+            "atk": 6,
+            "spd": 8,
+            "def": 6,
+            "res": 8
+          },
           "5": {
             "hp": 16,
             "atk": 7,
@@ -14070,6 +14426,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              30,
+              33,
+              36
+            ],
+            "atk": [
+              23,
+              26,
+              29
+            ],
+            "spd": [
+              27,
+              30,
+              33
+            ],
+            "def": [
+              19,
+              22,
+              25
+            ],
+            "res": [
+              29,
+              32,
+              35
+            ]
+          },
           "5": {
             "hp": [
               32,
@@ -17711,11 +18094,11 @@
         },
         {
           "name": "B Tomebreaker 1",
-          "rarity": 2
+          "rarity": "-"
         },
         {
           "name": "B Tomebreaker 2",
-          "rarity": 3
+          "rarity": 2
         },
         {
           "name": "B Tomebreaker 3",
@@ -22367,6 +22750,82 @@
       }
     },
     {
+      "name": "Valter",
+      "title": "Dark Moonstone",
+      "origin": "Fire Emblem: The Sacred Stones",
+      "weaponType": "Blue Lance",
+      "moveType": "Flying",
+      "rarities": "3-4Event: Grand Hero Battle",
+      "releaseDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Valter.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Valter.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Valter.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Lance",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Cursed Lance",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Luna",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Darting Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Darting Blow 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Darting Blow 3",
+          "rarity": "-"
+        },
+        {
+          "name": "Panic Ploy 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Panic Ploy 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Panic Ploy 3",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {},
+        "40": {}
+      }
+    },
+    {
       "name": "Veronica",
       "title": "Emblian Princess",
       "origin": "Fire Emblem Heroes",
@@ -23128,6 +23587,119 @@
           }
         }
       }
+    },
+    {
+      "name": "Xander (Nohrian Summer)",
+      "title": "Student Swimmer",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Green Axe",
+      "moveType": "Infantry",
+      "rarities": "5 - Special",
+      "releaseDate": "Jul 28, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Xander (Nohrian Summer).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Xander (Nohrian Summer).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Xander (Nohrian Summer).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Lilith Floatie",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Lilith Floatie+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Glowing Ember",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Bonfire",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Fire Boost 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fire Boost 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Fire Boost 3",
+          "rarity": 5
+        },
+        {
+          "name": "Infantry Pulse 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Infantry Pulse 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Infantry Pulse 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 19,
+            "atk": 8,
+            "spd": 6,
+            "def": 8,
+            "res": 6
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              40,
+              43,
+              46
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              27,
+              30,
+              33
+            ],
+            "def": [
+              33,
+              36,
+              39
+            ],
+            "res": [
+              13,
+              16,
+              20
+            ]
+          }
+        }
+      },
+      "shortName": "Xander (N)"
     },
     {
       "name": "Xander (Spring Festival)",
@@ -23892,6 +24464,26 @@
       "weaponType": "Red Tome"
     },
     {
+      "name": "Tomato Tome",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Tomato Tome+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
       "name": "Fire Breath",
       "spCost": 50,
       "damage(mt)": 6,
@@ -24028,6 +24620,16 @@
       "range(rng)": 1,
       "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
       "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Cursed Lance",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Atk/Spd+2 and accelerates Special trigger (cooldown count-1). Unit takes 4 damage after combat.",
+      "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -24402,6 +25004,26 @@
       "weaponType": "Blue Tome"
     },
     {
+      "name": "Sealife Tome",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Sealife Tome+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
       "name": "Thoron",
       "spCost": 200,
       "damage(mt)": 9,
@@ -24671,6 +25293,26 @@
       "weaponType": "Green Axe"
     },
     {
+      "name": "Lilith Floatie",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Lilith Floatie+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
       "name": "Melon Crusher",
       "spCost": 200,
       "damage(mt)": 10,
@@ -24856,6 +25498,26 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Hibiscus Tome",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Hibiscus Tome+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -25457,6 +26119,14 @@
       "range": 1,
       "effect": "Grants Atk+4 to an adjacent ally until the end of the turn.",
       "spCost": 150,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "ASSIST"
+    },
+    {
+      "name": "Rally Attack Resistance",
+      "range": 1,
+      "effect": "Grants Atk/Res+3 to an adjacent ally until the end of the turn.",
+      "spCost": 300,
       "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
     },
@@ -26475,6 +27145,20 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Spd Res 1",
+      "effect": "Grants Spd/Res+1.",
+      "spCost": 80,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Spd Res 2",
+      "effect": "Grants Spd/Res+2.",
+      "spCost": 160,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Sturdy Blow 1",
       "effect": "Grants Atk/Def+2 during combat if unit initiates combat.",
       "spCost": 120,
@@ -26505,6 +27189,20 @@
     {
       "name": "Swift Sparrow 2",
       "effect": "If unit initiates combat, unit granted Atk/Spd+4 during battle.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Swift Strike 1",
+      "effect": "If unit initiates combat, unit granted Spd/Res+2 during battle.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Swift Strike 2",
+      "effect": "If unit initiates combat, unit granted Spd/Res+4 during battle.",
       "spCost": 240,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
@@ -27567,6 +28265,27 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "G Tome Valor 1",
+      "effect": "If unit survives and uses a green tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
+      "inheritRestriction": "Green Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "G Tome Valor 2",
+      "effect": "If unit survives, all green tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 60,
+      "inheritRestriction": "Green Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "G Tome Valor 3",
+      "effect": "If unit survives, all green tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 120,
+      "inheritRestriction": "Green Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Hone Armor",
       "effect": "Grants adjacent armored allies Atk/Spd+6 through their next actions at the start of each turn.",
       "spCost": 200,
@@ -27627,6 +28346,27 @@
       "effect": "Grants adjacent allies Spd+4 through their next actions at the start of each turn.",
       "spCost": 200,
       "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Infantry Pulse 1",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 5 fewer HP than unit. (Effects will stack with similar skills.)",
+      "spCost": 60,
+      "inheritRestriction": "Infantry Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Infantry Pulse 2",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 3 fewer HP than unit. (Effects will stack with similar skills.)",
+      "spCost": 120,
+      "inheritRestriction": "Infantry Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Infantry Pulse 3",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 1 fewer HP than unit. (Effects will stack with similar skills.)",
+      "spCost": 240,
+      "inheritRestriction": "Infantry Only",
       "type": "PASSIVE_C"
     },
     {
@@ -27957,6 +28697,11 @@
       "spCost": 200,
       "inheritRestriction": "Fliers Only",
       "type": "PASSIVE_C"
+    },
+    {
+      "name": "Atk Ploy 1",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.",
+      "type": "SEAL"
     },
     {
       "name": "Attack +1",
