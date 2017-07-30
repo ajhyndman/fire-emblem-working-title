@@ -4,6 +4,9 @@
   "main": "dist/fire-emblem-heroes-stats.js",
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">= 7.6.0"
+  },
   "scripts": {
     "build": "npm run compile && npm run compile:min && npm run copy-types",
     "compile": "cross-env NODE_ENV=development rollup --config --input src/index.js --output dist/fire-emblem-heroes-stats.js",
