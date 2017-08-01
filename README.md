@@ -6,7 +6,7 @@ This is a lerna repo managing three packages:
 
 * fire-emblem-heroes-calculator
 * fire-emblem-heroes-stats
-* proving-grounds
+* proving-grounds ([https://proving-grounds.ajhyndman.com](https://proving-grounds.ajhyndman.com))
 
 ## Getting started
 
