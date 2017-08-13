@@ -4495,28 +4495,28 @@
         },
         {
           "name": "Steel Lance",
-          "default": 3,
+          "default": "-",
           "rarity": "-"
         },
         {
           "name": "Silver Lance",
           "default": 4,
-          "rarity": 3
+          "rarity": "-"
         },
         {
           "name": "Silver Lance+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
           "name": "Buckler",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Escutcheon",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Defense +1",
@@ -4528,46 +4528,46 @@
         },
         {
           "name": "Defense +3",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Hit and Run",
-          "rarity": "-"
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
           "4": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 18,
+            "atk": 9,
+            "spd": 5,
+            "def": 8,
+            "res": 3
           },
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 19,
+            "atk": 9,
+            "spd": 6,
+            "def": 8,
+            "res": 4
           }
         },
         "40": {
           "4": {
             "hp": [
-              "-"
+              42
             ],
             "atk": [
-              "-"
+              31
             ],
             "spd": [
-              "-"
+              23
             ],
             "def": [
-              "-"
+              30
             ],
             "res": [
-              "-"
+              17
             ]
           },
           "5": {
@@ -8931,7 +8931,7 @@
         },
         {
           "name": "Killer Lance+",
-          "default": "-",
+          "default": 5,
           "rarity": 5
         },
         {
@@ -22756,7 +22756,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "3-4Event: Grand Hero Battle",
-      "releaseDate": "N/A",
+      "releaseDate": "Aug 21, 2017",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Valter.png",
@@ -28063,21 +28063,21 @@
     },
     {
       "name": "B Tome Exp. 1",
-      "effect": "If unit survives and uses a blue tome, unit gets 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
+      "effect": "If using blue magic and unit survives combat, unit gets 1.5x EXP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "B Tome Exp. 2",
-      "effect": "If unit survives, all blue tome users on team get 1.5x EXP.(If similar skill effects also used, only highest multiplier applies.)",
+      "effect": "If unit survives combat, all blue magic users on team get 1.5x EXP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "B Tome Exp. 3",
-      "effect": "If unit survives, all blue tome users on team get 2x EXP.(If similar skill effects also used, only highest multiplier applies.)",
+      "effect": "If unit survives combat, all blue magic users on team get 2x EXP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
@@ -28729,6 +28729,11 @@
       "type": "SEAL"
     },
     {
+      "name": "Hardy Bearing 1",
+      "effect": "Disables skills that change unit's attack priority.If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "type": "SEAL"
+    },
+    {
       "name": "Phantom Spd 1",
       "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +5 over actual value.",
       "type": "SEAL"
@@ -28756,6 +28761,11 @@
     {
       "name": "Squad Ace A 1",
       "effect": "Grants HP+3.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace B 1",
+      "effect": "Grants Def+1.",
       "type": "SEAL"
     }
   ]
