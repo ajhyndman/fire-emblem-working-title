@@ -1,5 +1,8 @@
 {
-  "extends": "ajhyndman/flow",
+  "extends": [
+    "ajhyndman/flow",
+    "prettier"
+  ],
   "env": {
     "browser": true,
     "node": true
@@ -9,7 +12,8 @@
     "ReactClass": false
   },
   "plugins": [
-    "no-null"
+    "no-null",
+    "prettier"
   ],
   "rules": {
     "eqeqeq": ["error", "always", { "null": "ignore" }],
@@ -17,18 +21,13 @@
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
 
-    "flowtype/object-type-delimiter": ["error", "semicolon"],
-    "flowtype/semi": "error",
-    "flowtype/space-after-type-colon": [
-      "error",
-      "always"
-    ],
-    "flowtype/space-before-type-colon": [
-      "error",
-      "never"
-    ],
-
     "no-null/no-null": ["error"],
+
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "all",
+      "parser": "flow"
+    }],
 
     "react/sort-comp": ["error", {
       "order": [

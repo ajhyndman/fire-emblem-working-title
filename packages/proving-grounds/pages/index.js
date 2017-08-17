@@ -12,20 +12,25 @@ import { decodeHero } from '../src/queryCodex';
 import type { Dispatch } from '../src/reducer';
 import type { State } from '../src/store';
 
-
 type Props = {
-  dispatch: Dispatch;
-  state: State;
+  dispatch: Dispatch,
+  state: State,
 };
 
 class Home extends React.Component {
   props: Props;
 
-  static async getInitialProps ({ store, req, query }) {
+  static async getInitialProps({ store, req, query }) {
     const dispatch: Dispatch = store.dispatch;
     if (!isEmpty(query)) {
-      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) || 'CLEAR' });
-      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) || 'CLEAR'});
+      dispatch({
+        type: 'SELECT_HERO',
+        hero: decodeHero(query['0']) || 'CLEAR',
+      });
+      dispatch({
+        type: 'SELECT_HERO',
+        hero: decodeHero(query['1']) || 'CLEAR',
+      });
     }
 
     if (req) dispatch({ type: 'SET_HOST', host: req.headers.host });
@@ -40,7 +45,10 @@ class Home extends React.Component {
     return (
       <div>
         <Root {...this.props} />
-        <Toast dispatch={this.props.dispatch} messages={this.props.state.notifications} />
+        <Toast
+          dispatch={this.props.dispatch}
+          messages={this.props.state.notifications}
+        />
       </div>
     );
   }

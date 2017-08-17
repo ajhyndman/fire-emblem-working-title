@@ -16,10 +16,9 @@ import { decodeHero } from '../src/queryCodex';
 import type { Dispatch } from '../src/reducer';
 import type { State } from '../src/store';
 
-
 type Props = {
-  dispatch: Dispatch;
-  state: State;
+  dispatch: Dispatch,
+  state: State,
 };
 
 // TODO: redirect to non-build page instead of showing an Anna configuration.
@@ -28,11 +27,17 @@ const defaultInstance = getDefaultInstance('Anna');
 class Build extends React.Component {
   props: Props;
 
-  static async getInitialProps ({ store, req, query }) {
+  static async getInitialProps({ store, req, query }) {
     const dispatch: Dispatch = store.dispatch;
     if (!isEmpty(query)) {
-      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) || 'CLEAR' });
-      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) || 'CLEAR'});
+      dispatch({
+        type: 'SELECT_HERO',
+        hero: decodeHero(query['0']) || 'CLEAR',
+      });
+      dispatch({
+        type: 'SELECT_HERO',
+        hero: decodeHero(query['1']) || 'CLEAR',
+      });
       dispatch({ type: 'SELECT_SLOT', slot: query['slot'] || 0 });
     }
 
@@ -77,8 +82,9 @@ class Build extends React.Component {
             <Modal>
               <HeroBuilder
                 dispatch={dispatch}
-                heroInstance={state.heroSlots[state.activeSlot || 0]
-                  || defaultInstance}
+                heroInstance={
+                  state.heroSlots[state.activeSlot || 0] || defaultInstance
+                }
                 level={state.previewLevel}
               />
             </Modal>

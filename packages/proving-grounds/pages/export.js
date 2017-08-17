@@ -16,20 +16,25 @@ import { decodeHero } from '../src/queryCodex';
 import type { Dispatch } from '../src/reducer';
 import type { State } from '../src/store';
 
-
 type Props = {
-  dispatch: Dispatch;
-  state: State;
+  dispatch: Dispatch,
+  state: State,
 };
 
 class Build extends React.Component {
   props: Props;
 
-  static async getInitialProps ({ store, req, query }) {
+  static async getInitialProps({ store, req, query }) {
     const dispatch: Dispatch = store.dispatch;
     if (!isEmpty(query)) {
-      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['0']) || 'CLEAR' });
-      dispatch({ type: 'SELECT_HERO', hero: decodeHero(query['1']) || 'CLEAR'});
+      dispatch({
+        type: 'SELECT_HERO',
+        hero: decodeHero(query['0']) || 'CLEAR',
+      });
+      dispatch({
+        type: 'SELECT_HERO',
+        hero: decodeHero(query['1']) || 'CLEAR',
+      });
       dispatch({ type: 'SELECT_SLOT', slot: query['slot'] || 0 });
     }
 
@@ -75,7 +80,10 @@ class Build extends React.Component {
                 dispatch={dispatch}
                 onChange={value => {
                   const activeSlot = state.activeSlot;
-                  dispatch({ type: 'SELECT_HERO', hero: importInstance(value) });
+                  dispatch({
+                    type: 'SELECT_HERO',
+                    hero: importInstance(value),
+                  });
                   dispatch({ type: 'SELECT_SLOT', slot: activeSlot });
                   dispatch({ type: 'CHANGE_EXPORT_STRING', value });
                 }}
