@@ -33,7 +33,6 @@ import {
 } from './parse';
 import { CDN_HOST, WIKI_HOST } from './constants';
 
-
 /**
  * Fetch and collate the data.
  * (Do all the things!)
@@ -79,10 +78,10 @@ async function fetchHeroStats() {
   // Add short names to each hero for display purposes.
   const truncateParenthetical = replace(/\((.).*\)/, '($1)');
   const detailedHeroesWithShortNames = map(
-    hero => (contains('(', hero.name)
-      ? { ...hero, shortName: truncateParenthetical(hero.name) }
-      : hero
-    ),
+    hero =>
+      contains('(', hero.name)
+        ? { ...hero, shortName: truncateParenthetical(hero.name) }
+        : hero,
     detailedHeroes,
   );
 
@@ -91,15 +90,21 @@ async function fetchHeroStats() {
 
 // Fetches detailed info for all skills
 async function fetchSkills() {
-  const skillPageNames = ['Weapons', 'Assists', 'Specials', 'Passives', 'Seals'];
+  const skillPageNames = [
+    'Weapons',
+    'Assists',
+    'Specials',
+    'Passives',
+    'Seals',
+  ];
   const skillsByType = await fetchAndParsePages(
     WIKI_HOST,
     skillPageNames,
     parseSkillsPage,
   );
   const skills = compose(
-    map(
-      (skill) => ifElse(
+    map(skill =>
+      ifElse(
         has('passiveSlot'),
         compose(
           dissoc('passiveSlot'),
@@ -110,11 +115,8 @@ async function fetchSkills() {
     ),
     flatten,
     values,
-    mapObjIndexed(
-      (skillList, skillType) => map(
-        assoc('type', dropLast(1, toUpper(skillType))),
-        skillList,
-      ),
+    mapObjIndexed((skillList, skillType) =>
+      map(assoc('type', dropLast(1, toUpper(skillType))), skillList),
     ),
   )(skillsByType);
   return skills;
@@ -126,7 +128,9 @@ function validate(heroes, skills) {
   for (let hero of heroes) {
     for (let skill of hero.skills) {
       if (skillsByName[skill.name] == null) {
-        console.log('Warning: ' + hero.name + ' has unknown skill: ' + skill.name);
+        console.log(
+          'Warning: ' + hero.name + ' has unknown skill: ' + skill.name,
+        );
       }
     }
     var level1Rarities = 0;
@@ -142,8 +146,15 @@ function validate(heroes, skills) {
       }
     }
     if (level1Rarities != level40Rarities || level1Rarities == 0) {
-      console.log('Warning: ' + hero.name + ' has level 1 stats for ' + level1Rarities
-        + ' and level 40 stats for ' + level40Rarities + ' rarities.');
+      console.log(
+        'Warning: ' +
+          hero.name +
+          ' has level 1 stats for ' +
+          level1Rarities +
+          ' and level 40 stats for ' +
+          level40Rarities +
+          ' rarities.',
+      );
     }
   }
   for (let skill of skills) {
@@ -159,7 +170,9 @@ function skillsWithWeaponsTypes(heroes, skills) {
   var weaponTypeByName = {};
   for (let hero of heroes) {
     // Breath weapons are not color-specific.
-    const heroWeaponType = test(/Breath/, hero.weaponType) ? 'Breath' : hero.weaponType;
+    const heroWeaponType = test(/Breath/, hero.weaponType)
+      ? 'Breath'
+      : hero.weaponType;
     for (let skill of hero.skills) {
       const skillInfo = skillsByName[skill.name];
       if (skillInfo != null && skillInfo.type === 'WEAPON') {
@@ -170,7 +183,7 @@ function skillsWithWeaponsTypes(heroes, skills) {
   const withWeaponTypes = map(
     ifElse(
       propEq('type', 'WEAPON'),
-      (skill) => assoc('weaponType', weaponTypeByName[skill.name], skill),
+      skill => assoc('weaponType', weaponTypeByName[skill.name], skill),
       identity,
     ),
     skills,
@@ -181,15 +194,25 @@ function skillsWithWeaponsTypes(heroes, skills) {
 // Fetch new data and write it to stats.json
 async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   const existingStats = JSON.parse(fs.readFileSync('./stats.json', 'utf8'));
-  const heroes = shouldFetchHeroes ? await fetchHeroStats() : existingStats['heroes'];
-  const skills = shouldFetchSkills ? await fetchSkills() : existingStats['skills'];
+  const heroes = shouldFetchHeroes
+    ? await fetchHeroStats()
+    : existingStats['heroes'];
+  const skills = shouldFetchSkills
+    ? await fetchSkills()
+    : existingStats['skills'];
 
   // Log new heroes/skills
   const getNames = map(prop('name'));
-  const newHeroNames = without(getNames(existingStats['heroes']), getNames(heroes));
-  const newSkills = without(getNames(existingStats['skills']), getNames(skills));
-  map((x) => console.log('New hero: ' + x), newHeroNames);
-  map((x) => console.log('New skill: ' + x), newSkills);
+  const newHeroNames = without(
+    getNames(existingStats['heroes']),
+    getNames(heroes),
+  );
+  const newSkills = without(
+    getNames(existingStats['skills']),
+    getNames(skills),
+  );
+  map(x => console.log('New hero: ' + x), newHeroNames);
+  map(x => console.log('New skill: ' + x), newSkills);
 
   // Infer weapon subtypes from the heroes that own them.
   const skillsV2 = skillsWithWeaponsTypes(heroes, skills);
