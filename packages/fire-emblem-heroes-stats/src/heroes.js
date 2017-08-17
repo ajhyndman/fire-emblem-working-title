@@ -1,10 +1,4 @@
-import {
-  concat,
-  filter,
-  indexBy,
-  prop,
-  propOr,
-} from 'ramda';
+import { concat, filter, indexBy, prop, propOr } from 'ramda';
 
 // eslint-disable-next-line import/no-unresolved
 import stats from '../stats.json';
@@ -12,7 +6,6 @@ import { getEventHeroes } from './temporal/events';
 import type { Hero } from '.';
 
 type HeroesByName = { [key: string]: Hero };
-
 
 export const getAllHeroes = () => concat(stats.heroes, getEventHeroes(true));
 
@@ -30,9 +23,11 @@ export const getHero = (name: string): Hero => {
   return hero || heroesByName['Anna'];
 };
 
-export const getReleasedHeroes = () => filter(
-  // Only consider a hero released if they have a release date and have level 1 stats.
-  (hero) => (propOr('N/A', 'releaseDate', hero) !== 'N/A') && (hero.stats[1][5] !== undefined),
-  stats.heroes,
-);
-
+export const getReleasedHeroes = () =>
+  filter(
+    // Only consider a hero released if they have a release date and have level 1 stats.
+    hero =>
+      propOr('N/A', 'releaseDate', hero) !== 'N/A' &&
+      hero.stats[1][5] !== undefined,
+    stats.heroes,
+  );

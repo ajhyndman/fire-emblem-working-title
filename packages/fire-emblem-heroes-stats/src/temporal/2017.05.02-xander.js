@@ -11,268 +11,283 @@ const endTime = new Date('2017-05-07T23:59:00-07:00');
 // Some enemy skills taken from https://i.imgur.com/oXRQY6e.png, others guessed.
 const unitList: Array<Hero> = [
   {
-    'shortName': 'Xander',
-    'name': 'Xander (Xander GHB)',
-    'moveType': 'Cavalry',
-    'weaponType': 'Red Sword',
-    'skills': [
+    shortName: 'Xander',
+    name: 'Xander (Xander GHB)',
+    moveType: 'Cavalry',
+    weaponType: 'Red Sword',
+    skills: [
       {
-        'name': 'Siegfried',
-        'rarity': '-',
+        name: 'Siegfried',
+        rarity: '-',
       },
       {
-        'name': 'Armored Blow 3',
-        'rarity': '-',
+        name: 'Armored Blow 3',
+        rarity: '-',
       },
       {
-        'name': 'Spur Def 3',
-        'rarity': '-',
+        name: 'Spur Def 3',
+        rarity: '-',
       },
       {
-        'name': 'Blazing Light',
-        'rarity': '-',
+        name: 'Blazing Light',
+        rarity: '-',
       },
     ],
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Xander.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Xander.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Xander.png',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Xander.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Xander.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Xander.png',
       },
     },
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [61],
-          'atk': [48-16],
-          'spd': [25],
-          'def': [38],
-          'res': [17],
+          hp: [61],
+          atk: [48 - 16],
+          spd: [25],
+          def: [38],
+          res: [17],
         },
       },
     },
   },
   {
-    'shortName': 'Cleric',
-    'name': 'Cleric (Xander GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Neutral Staff',
-    'skills': [
+    shortName: 'Cleric',
+    name: 'Cleric (Xander GHB)',
+    moveType: 'Infantry',
+    weaponType: 'Neutral Staff',
+    skills: [
       {
-        'name': 'Gravity',
-        'rarity': '-',
+        name: 'Gravity',
+        rarity: '-',
       },
       {
-        'name': 'Wings of Mercy 3',
-        'rarity': '-',
+        name: 'Wings of Mercy 3',
+        rarity: '-',
       },
       {
-        'name': 'Solid-Earth Balm',
-        'rarity': '-',
+        name: 'Solid-Earth Balm',
+        rarity: '-',
       },
       {
-        'name': 'Recover',
-        'rarity': '-',
+        name: 'Recover',
+        rarity: '-',
       },
       {
-        'name': 'Hone Spd 3',
-        'rarity': '-',
+        name: 'Hone Spd 3',
+        rarity: '-',
       },
     ],
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Cleric.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Cleric.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Cleric.png',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Cleric.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Cleric.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Cleric.png',
       },
     },
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [42],
-          'atk': [28],
-          'spd': [28],
-          'def': [24],
-          'res': [36],
+          hp: [42],
+          atk: [28],
+          spd: [28],
+          def: [24],
+          res: [36],
         },
       },
     },
   },
   {
-    'shortName': 'Cavalier',
-    'name': 'Green Cavalier (Xander GHB)',
-    'moveType': 'Cavalry',
-    'weaponType': 'Green Tome',
-    'skills': [
+    shortName: 'Cavalier',
+    name: 'Green Cavalier (Xander GHB)',
+    moveType: 'Cavalry',
+    weaponType: 'Green Tome',
+    skills: [
       {
-        'name': 'Gronnwolf+',
-        'rarity': '-',
+        name: 'Gronnwolf+',
+        rarity: '-',
       },
       {
-        'name': 'Darting Blow 3',
-        'rarity': '-',
+        name: 'Darting Blow 3',
+        rarity: '-',
       },
       {
-        'name': 'Glacies',
-        'rarity': '-',
+        name: 'Glacies',
+        rarity: '-',
       },
       {
-        'name': 'Hone Cavalry',
-        'rarity': '-',
+        name: 'Hone Cavalry',
+        rarity: '-',
       },
       {
-        'name': 'Vantage 3',
-        'rarity': '-',
+        name: 'Vantage 3',
+        rarity: '-',
       },
     ],
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Green Cavalier.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Green Cavalier.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Green Cavalier.png',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Green Cavalier.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Green Cavalier.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Green Cavalier.png',
       },
     },
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [40],
-          'atk': [36],
-          'spd': [26],
-          'def': [17],
-          'res': [35],
+          hp: [40],
+          atk: [36],
+          spd: [26],
+          def: [17],
+          res: [35],
         },
       },
     },
   },
   {
-    'shortName': 'Fighter',
-    'name': 'Lance Fighter (Xander GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Blue Lance',
-    'skills': [
+    shortName: 'Fighter',
+    name: 'Lance Fighter (Xander GHB)',
+    moveType: 'Infantry',
+    weaponType: 'Blue Lance',
+    skills: [
       {
-        'name': 'Killer Lance+',
-        'rarity': '-',
+        name: 'Killer Lance+',
+        rarity: '-',
       },
       {
-        'name': 'Ignis',
-        'rarity': '-',
+        name: 'Ignis',
+        rarity: '-',
       },
       {
-        'name': 'Quick Riposte 3',
-        'rarity': '-',
+        name: 'Quick Riposte 3',
+        rarity: '-',
       },
       {
-        'name': 'Armored Blow 3',
-        'rarity': '-',
+        name: 'Armored Blow 3',
+        rarity: '-',
       },
     ],
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Fighter.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Fighter.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Fighter.png',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Fighter.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Fighter.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Fighter.png',
       },
     },
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [52],
-          'atk': [31],
-          'spd': [31],
-          'def': [30],
-          'res': [23],
+          hp: [52],
+          atk: [31],
+          spd: [31],
+          def: [30],
+          res: [23],
         },
       },
     },
   },
   {
-    'shortName': 'Fighter',
-    'name': 'Sword Fighter (Xander GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Red Sword',
-    'skills': [
+    shortName: 'Fighter',
+    name: 'Sword Fighter (Xander GHB)',
+    moveType: 'Infantry',
+    weaponType: 'Red Sword',
+    skills: [
       {
-        'name': 'Killing Edge+',
-        'rarity': '-',
+        name: 'Killing Edge+',
+        rarity: '-',
       },
       {
-        'name': 'Ignis',
-        'rarity': '-',
+        name: 'Ignis',
+        rarity: '-',
       },
       {
-        'name': 'Quick Riposte 3',
-        'rarity': '-',
+        name: 'Quick Riposte 3',
+        rarity: '-',
       },
       {
-        'name': 'Armored Blow 3',
-        'rarity': '-',
+        name: 'Armored Blow 3',
+        rarity: '-',
       },
     ],
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Fighter.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Fighter.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Fighter.png',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Fighter.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Fighter.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Fighter.png',
       },
     },
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [52],
-          'atk': [31],
-          'spd': [31],
-          'def': [30],
-          'res': [23],
+          hp: [52],
+          atk: [31],
+          spd: [31],
+          def: [30],
+          res: [23],
         },
       },
     },
   },
 ];
 
-export default {unitList, startTime, endTime};
+export default { unitList, startTime, endTime };

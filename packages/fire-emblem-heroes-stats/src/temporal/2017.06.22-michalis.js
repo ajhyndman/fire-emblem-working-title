@@ -7,268 +7,283 @@ const endTime = new Date('2017-06-28T06:59:00+00:00');
 
 const unitList: Array<Hero> = [
   {
-    'shortName': 'Flier',
-    'name': 'Lance Flier (Michalis GHB)',
-    'moveType': 'Flying',
-    'weaponType': 'Blue Lance',
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Flier.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Flier.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Flier.png',
+    shortName: 'Flier',
+    name: 'Lance Flier (Michalis GHB)',
+    moveType: 'Flying',
+    weaponType: 'Blue Lance',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Flier.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Flier.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Flier.png',
       },
     },
-    'skills': [
+    skills: [
       {
-        'name': 'Silver Lance+',
-        'rarity': '-',
+        name: 'Silver Lance+',
+        rarity: '-',
       },
       {
-        'name': 'Iceberg',
-        'rarity': '-',
+        name: 'Iceberg',
+        rarity: '-',
       },
       {
-        'name': 'Darting Blow 3',
-        'rarity': '-',
+        name: 'Darting Blow 3',
+        rarity: '-',
       },
       {
-        'name': 'Drag Back',
-        'rarity': '-',
+        name: 'Drag Back',
+        rarity: '-',
       },
       {
-        'name': 'Fortify Fliers',
-        'rarity': '-',
+        name: 'Fortify Fliers',
+        rarity: '-',
       },
     ],
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [45],
-          'atk': [28],
-          'spd': [36],
-          'def': [22],
-          'res': [37],
+          hp: [45],
+          atk: [28],
+          spd: [36],
+          def: [22],
+          res: [37],
         },
       },
     },
   },
   {
-    'shortName': 'Michalis',
-    'name': 'Michalis (Michalis GHB)',
-    'moveType': 'Flying',
-    'weaponType': 'Green Axe',
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Michalis.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Michalis.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Michalis.png',
+    shortName: 'Michalis',
+    name: 'Michalis (Michalis GHB)',
+    moveType: 'Flying',
+    weaponType: 'Green Axe',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Michalis.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Michalis.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Michalis.png',
       },
     },
-    'skills': [
+    skills: [
       {
-        'name': 'Hauteclere',
-        'rarity': '-',
+        name: 'Hauteclere',
+        rarity: '-',
       },
       {
-        'name': 'Blazing Thunder',
-        'rarity': '-',
+        name: 'Blazing Thunder',
+        rarity: '-',
       },
       {
-        'name': 'Iote\'s Shield',
-        'rarity': '-',
+        name: "Iote's Shield",
+        rarity: '-',
       },
       {
-        'name': 'Threaten Def 3',
-        'rarity': '-',
+        name: 'Threaten Def 3',
+        rarity: '-',
       },
     ],
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [60],
-          'atk': [35],
-          'spd': [27],
-          'def': [36],
-          'res': [19],
+          hp: [60],
+          atk: [35],
+          spd: [27],
+          def: [36],
+          res: [19],
         },
       },
     },
   },
   {
-    'shortName': 'Flier',
-    'name': 'Sword Flier (Michalis GHB)',
-    'moveType': 'Flying',
-    'weaponType': 'Red Sword',
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Flier.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Flier.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Flier.png',
+    shortName: 'Flier',
+    name: 'Sword Flier (Michalis GHB)',
+    moveType: 'Flying',
+    weaponType: 'Red Sword',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Flier.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Flier.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Flier.png',
       },
     },
-    'skills': [
+    skills: [
       {
-        'name': 'Silver Sword+',
-        'rarity': '-',
+        name: 'Silver Sword+',
+        rarity: '-',
       },
       {
-        'name': 'Iceberg',
-        'rarity': '-',
+        name: 'Iceberg',
+        rarity: '-',
       },
       {
-        'name': 'Darting Blow 3',
-        'rarity': '-',
+        name: 'Darting Blow 3',
+        rarity: '-',
       },
       {
-        'name': 'Drag Back',
-        'rarity': '-',
+        name: 'Drag Back',
+        rarity: '-',
       },
       {
-        'name': 'Hone Fliers',
-        'rarity': '-',
+        name: 'Hone Fliers',
+        rarity: '-',
       },
     ],
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [45],
-          'atk': [28],
-          'spd': [36],
-          'def': [22],
-          'res': [37],
+          hp: [45],
+          atk: [28],
+          spd: [36],
+          def: [22],
+          res: [37],
         },
       },
     },
   },
   {
-    'shortName': 'Cavalier',
-    'name': 'Sword Cavalier (Michalis GHB)',
-    'moveType': 'Cavalry',
-    'weaponType': 'Red Sword',
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Cavalier.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Cavalier.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Cavalier.png',
+    shortName: 'Cavalier',
+    name: 'Sword Cavalier (Michalis GHB)',
+    moveType: 'Cavalry',
+    weaponType: 'Red Sword',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sword Cavalier.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sword Cavalier.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Cavalier.png',
       },
     },
-    'skills': [
+    skills: [
       {
-        'name': 'Silver Sword+',
-        'rarity': '-',
+        name: 'Silver Sword+',
+        rarity: '-',
       },
       {
-        'name': 'Draconic Aura',
-        'rarity': '-',
+        name: 'Draconic Aura',
+        rarity: '-',
       },
       {
-        'name': 'Death Blow 3',
-        'rarity': '-',
+        name: 'Death Blow 3',
+        rarity: '-',
       },
       {
-        'name': 'Bowbreaker 3',
-        'rarity': '-',
+        name: 'Bowbreaker 3',
+        rarity: '-',
       },
     ],
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [49],
-          'atk': [35],
-          'spd': [25],
-          'def': [26],
-          'res': [30],
+          hp: [49],
+          atk: [35],
+          spd: [25],
+          def: [26],
+          res: [30],
         },
       },
     },
   },
   {
-    'shortName': 'Fighter',
-    'name': 'Lance Fighter (Michalis GHB)',
-    'moveType': 'Infantry',
-    'weaponType': 'Blue Lance',
-    'assets': {
-      'portrait': {
-        '75px': 'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Fighter.png',
-        '113px': 'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Fighter.png',
-        '150px': 'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Fighter.png',
+    shortName: 'Fighter',
+    name: 'Lance Fighter (Michalis GHB)',
+    moveType: 'Infantry',
+    weaponType: 'Blue Lance',
+    assets: {
+      portrait: {
+        '75px':
+          'https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lance Fighter.png',
+        '113px':
+          'https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lance Fighter.png',
+        '150px':
+          'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lance Fighter.png',
       },
     },
-    'skills': [
+    skills: [
       {
-        'name': 'Heavy Spear+',
-        'rarity': '-',
+        name: 'Heavy Spear+',
+        rarity: '-',
       },
       {
-        'name': 'Draconic Aura',
-        'rarity': '-',
+        name: 'Draconic Aura',
+        rarity: '-',
       },
       {
-        'name': 'Death Blow 3',
-        'rarity': '-',
+        name: 'Death Blow 3',
+        rarity: '-',
       },
       {
-        'name': 'Bowbreaker 3',
-        'rarity': '-',
+        name: 'Bowbreaker 3',
+        rarity: '-',
       },
     ],
-    'stats': {
+    stats: {
       '1': {
         '5': {
-          'hp': '-',
-          'atk': '-',
-          'spd': '-',
-          'def': '-',
-          'res': '-',
+          hp: '-',
+          atk: '-',
+          spd: '-',
+          def: '-',
+          res: '-',
         },
       },
       '40': {
         '5': {
-          'hp': [52],
-          'atk': [31],
-          'spd': [31],
-          'def': [30],
-          'res': [23],
+          hp: [52],
+          atk: [31],
+          spd: [31],
+          def: [30],
+          res: [23],
         },
       },
     },
   },
 ];
 
-export default {unitList, startTime, endTime};
+export default { unitList, startTime, endTime };

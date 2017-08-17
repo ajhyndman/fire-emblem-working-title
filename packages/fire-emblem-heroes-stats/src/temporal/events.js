@@ -1,11 +1,5 @@
 // @flow
-import {
-  compose,
-  filter,
-  flatten,
-  map,
-  prop,
-} from 'ramda';
+import { compose, filter, flatten, map, prop } from 'ramda';
 
 import event0 from './2017.02.10-narcian';
 import event1 from './2017.03.09-ursula';
@@ -24,13 +18,14 @@ import event13 from './2017.06.09-zephiel';
 import event14 from './2017.06.16-legion';
 import event15 from './2017.06.22-michalis';
 
-
 export function getEventHeroes(allEvents: boolean = false) {
   const now = new Date();
   return compose(
     flatten,
     map(prop('unitList')),
-    filter((event) => allEvents || (now >= event.startTime && now <= event.endTime)),
+    filter(
+      event => allEvents || (now >= event.startTime && now <= event.endTime),
+    ),
   )([
     event0,
     event1,
