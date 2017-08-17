@@ -28,9 +28,9 @@ function withBuff(
   amount: number,
   hero: HeroInstance,
 ): HeroInstance {
-  // $FlowIssue flow doesn't like the buffs object literal
   return {
     ...hero,
+    // $FlowIssue flow doesn't like the buffs object literal
     state: { ...hero.state, buffs: { ...hero.state.buffs, [statKey]: amount } },
   };
 }
@@ -41,11 +41,11 @@ function withDebuff(
   amount: number,
   hero: HeroInstance,
 ): HeroInstance {
-  // $FlowIssue flow doesn't like the debuffs object literal
   return {
     ...hero,
     state: {
       ...hero.state,
+      // $FlowIssue flow doesn't like the debuffs object literal
       debuffs: { ...hero.state.debuffs, [statKey]: amount },
     },
   };

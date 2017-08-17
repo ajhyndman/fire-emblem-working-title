@@ -74,14 +74,14 @@ function testStatSkill(
   const skillType = getSkillType(skillName) || 'SEAL';
   // Whether or not a hero can actually equip a skill doesn't matter to getStat.
   const hero = withHpMissing(missingHp, getDefaultInstance('Anna'));
-  // $FlowIssue flow doesn't like the skills object literal
   const withoutSkill = {
     ...hero,
+    // $FlowIssue flow doesn't like the skills object literal
     skills: { ...hero.skills, [skillType]: undefined },
   };
-  // $FlowIssue flow doesn't like the skills object literal
   const withSkill = {
     ...hero,
+    // $FlowIssue flow doesn't like the skills object literal
     skills: { ...hero.skills, [skillType]: skillName },
   };
   // Assume that a unit is fighting itself for these tests.
