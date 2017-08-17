@@ -4,13 +4,12 @@ import type { WeaponSkill } from 'fire-emblem-heroes-stats';
 
 import { colors, fontFamilies, fontSizes } from '../../theme';
 
-
 type Props = {
-  showGuide?: boolean;
-  skill: WeaponSkill;
+  showGuide?: boolean,
+  skill: WeaponSkill,
 };
 
-const Weapon = ({ showGuide, skill }: Props) => (
+const Weapon = ({ showGuide, skill }: Props) =>
   <div className="root">
     <style jsx>{`
       .root {
@@ -39,21 +38,30 @@ const Weapon = ({ showGuide, skill }: Props) => (
         margin-bottom: 5px;
       }
     `}</style>
-    <div className="row"><span className="name">{skill.name}</span></div>
-    {showGuide && (
+    <div className="row">
+      <span className="name">
+        {skill.name}
+      </span>
+    </div>
+    {showGuide &&
       <div>
         <div className="row">
           <span className="stat-name">Mt </span>
-          <span className="stat-value">{skill['damage(mt)']}</span>
+          <span className="stat-value">
+            {skill['damage(mt)']}
+          </span>
           <span className="stat-name"> Rng </span>
-          <span className="stat-value">{skill['range(rng)']}</span>
+          <span className="stat-value">
+            {skill['range(rng)']}
+          </span>
         </div>
         <div className="row">
-          <span className="description" dangerouslySetInnerHTML={{ __html: skill.effect }} />
+          <span
+            className="description"
+            dangerouslySetInnerHTML={{ __html: skill.effect }}
+          />
         </div>
-      </div>
-    )}
-  </div>
-);
+      </div>}
+  </div>;
 
 export default Weapon;

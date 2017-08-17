@@ -2,8 +2,8 @@
 import React from 'react';
 
 type Props = {
-  onClick?: (event: Event) => void;
-  children?: any;
+  onClick?: (event: Event) => void,
+  children?: any,
 };
 
 class Overlay extends React.Component {
@@ -27,7 +27,9 @@ class Overlay extends React.Component {
         onClick={event => {
           if (event.target === root && onClick) onClick(event);
         }}
-        ref={node => { root = node; }}
+        ref={node => {
+          root = node;
+        }}
       >
         <style jsx>{`
           .root {

@@ -19,54 +19,70 @@ import type { SkillType } from 'fire-emblem-heroes-stats';
 
 import type { State } from './store';
 
-export type Action = {
-  type: 'CHANGE_EXPORT_STRING';
-  value: string;
-} | {
-  type: 'CHANGE_SEARCH_STRING';
-  value: string;
-} | {
-  type: 'DEQUEUE_NOTIFICATION';
-} | {
-  type: 'ENQUEUE_NOTIFICATION';
-  value: string;
-} | {
-  type: 'SELECT_HERO';
-  hero: ?(HeroInstance | 'CLEAR');
-} | {
-  type: 'SELECT_SKILL';
-  skillType: SkillType | void;
-} | {
-  type: 'SELECT_SLOT';
-  slot: 0 | 1 | void;
-} | {
-  type: 'SET_HOST';
-  host: string;
-} | {
-  type: 'SET_MERGE_LEVEL';
-  value: number;
-} | {
-  type: 'SET_PREVIEW_LEVEL';
-  level: 1 | 40;
-} | {
-  type: 'SHOW_GUIDE_CHANGE';
-  value: boolean;
-} | {
-  type: 'TOGGLE_AGGRESSOR';
-} | {
-  type: 'UPDATE_BANE';
-  stat: Stat;
-} | {
-  type: 'UPDATE_BOON';
-  stat: Stat;
-} | {
-  type: 'UPDATE_RARITY';
-  rarity: Rarity;
-} | {
-  type: 'UPDATE_SKILL';
-  skill: ?string;
-  skillType: SkillType;
-};
+export type Action =
+  | {
+      type: 'CHANGE_EXPORT_STRING',
+      value: string,
+    }
+  | {
+      type: 'CHANGE_SEARCH_STRING',
+      value: string,
+    }
+  | {
+      type: 'DEQUEUE_NOTIFICATION',
+    }
+  | {
+      type: 'ENQUEUE_NOTIFICATION',
+      value: string,
+    }
+  | {
+      type: 'SELECT_HERO',
+      hero: ?(HeroInstance | 'CLEAR'),
+    }
+  | {
+      type: 'SELECT_SKILL',
+      skillType: SkillType | void,
+    }
+  | {
+      type: 'SELECT_SLOT',
+      slot: 0 | 1 | void,
+    }
+  | {
+      type: 'SET_HOST',
+      host: string,
+    }
+  | {
+      type: 'SET_MERGE_LEVEL',
+      value: number,
+    }
+  | {
+      type: 'SET_PREVIEW_LEVEL',
+      level: 1 | 40,
+    }
+  | {
+      type: 'SHOW_GUIDE_CHANGE',
+      value: boolean,
+    }
+  | {
+      type: 'TOGGLE_AGGRESSOR',
+    }
+  | {
+      type: 'UPDATE_BANE',
+      stat: Stat,
+    }
+  | {
+      type: 'UPDATE_BOON',
+      stat: Stat,
+    }
+  | {
+      type: 'UPDATE_RARITY',
+      rarity: Rarity,
+    }
+  | {
+      type: 'UPDATE_SKILL',
+      skill: ?string,
+      skillType: SkillType,
+    };
 
 export type Dispatch = (action: Action) => void;
 
@@ -77,8 +93,10 @@ const clearActiveState = {
 
 const hasEmptySlot = (state: State) => any(isNil, state.heroSlots);
 const getEmptySlot = (state: State) => findIndex(isNil, state.heroSlots);
-const getActiveHero = (state: State) => state.activeSlot === undefined
-  ? undefined : state.heroSlots[state.activeSlot];
+const getActiveHero = (state: State) =>
+  state.activeSlot === undefined
+    ? undefined
+    : state.heroSlots[state.activeSlot];
 const getLastOccupiedIndex = findLastIndex(compose(not, isNil));
 
 const reducer = (state: State, action: Action): State => {
@@ -90,7 +108,10 @@ const reducer = (state: State, action: Action): State => {
     case 'DEQUEUE_NOTIFICATION':
       return { ...state, notifications: drop(1, state.notifications) };
     case 'ENQUEUE_NOTIFICATION':
-      return { ...state, notifications: concat(state.notifications, [action.value]) };
+      return {
+        ...state,
+        notifications: concat(state.notifications, [action.value]),
+      };
     case 'SELECT_HERO':
       if (state.activeSlot !== undefined && action.hero === 'CLEAR') {
         // clear active slot
@@ -105,9 +126,10 @@ const reducer = (state: State, action: Action): State => {
         return {
           ...state,
           ...clearActiveState,
-          heroSlots: lastIndex === -1
-            ? state.heroSlots
-            : update(lastIndex, undefined, state.heroSlots),
+          heroSlots:
+            lastIndex === -1
+              ? state.heroSlots
+              : update(lastIndex, undefined, state.heroSlots),
         };
       } else if (state.activeSlot === undefined && hasEmptySlot(state)) {
         // move hero to first empty slot
@@ -130,34 +152,42 @@ const reducer = (state: State, action: Action): State => {
     case 'SELECT_SKILL':
       return { ...state, activeSkill: action.skillType };
     case 'SELECT_SLOT':
-      return (state.activeHero === 'CLEAR')
-        ? (action.slot === undefined)
-          // clear active states
-          ? { ...state, ...clearActiveState }
-          // clear the selected slot
-          : {
-            ...state,
-            ...clearActiveState,
-            heroSlots: update(action.slot, undefined, state.heroSlots),
-          }
-        : (state.activeHero === undefined)
-          // activate slot
-          ? { ...state, activeSlot: action.slot }
-          : (action.slot === undefined)
-            // clear active states
-            ? { ...state, ...clearActiveState }
-            // select new hero
-            : {
+      return state.activeHero === 'CLEAR'
+        ? action.slot === undefined
+          ? // clear active states
+            { ...state, ...clearActiveState }
+          : // clear the selected slot
+            {
               ...state,
               ...clearActiveState,
-              heroSlots: update(action.slot, state.activeHero, state.heroSlots),
-            };
+              heroSlots: update(action.slot, undefined, state.heroSlots),
+            }
+        : state.activeHero === undefined
+          ? // activate slot
+            { ...state, activeSlot: action.slot }
+          : action.slot === undefined
+            ? // clear active states
+              { ...state, ...clearActiveState }
+            : // select new hero
+              {
+                ...state,
+                ...clearActiveState,
+                heroSlots: update(
+                  action.slot,
+                  state.activeHero,
+                  state.heroSlots,
+                ),
+              };
     case 'SET_HOST':
       return { ...state, host: action.host };
     case 'SET_MERGE_LEVEL': {
       if (getActiveHero(state) === undefined) return state;
       const mergeLevel = clamp(0, 10, action.value);
-      return assocPath(['heroSlots', state.activeSlot, 'mergeLevel'], mergeLevel, state);
+      return assocPath(
+        ['heroSlots', state.activeSlot, 'mergeLevel'],
+        mergeLevel,
+        state,
+      );
     }
     case 'SET_PREVIEW_LEVEL':
       return { ...state, previewLevel: action.level };
@@ -170,10 +200,18 @@ const reducer = (state: State, action: Action): State => {
       };
     case 'UPDATE_BANE':
       if (getActiveHero(state) === undefined) return state;
-      return assocPath(['heroSlots', state.activeSlot, 'bane'], action.stat, state);
+      return assocPath(
+        ['heroSlots', state.activeSlot, 'bane'],
+        action.stat,
+        state,
+      );
     case 'UPDATE_BOON':
       if (getActiveHero(state) === undefined) return state;
-      return assocPath(['heroSlots', state.activeSlot, 'boon'], action.stat, state);
+      return assocPath(
+        ['heroSlots', state.activeSlot, 'boon'],
+        action.stat,
+        state,
+      );
     case 'UPDATE_RARITY':
       if (getActiveHero(state) === undefined) return state;
       return assocPath(

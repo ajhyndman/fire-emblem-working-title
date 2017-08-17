@@ -6,18 +6,13 @@ import { addIndex, map } from 'ramda';
 
 import { colors, activateColor, fontFamilies, transition } from '../theme';
 
-
 type Props = {
-  selected?: number;
-  options: string[];
-  onChange: (nextSelected: number) => void;
+  selected?: number,
+  options: string[],
+  onChange: (nextSelected: number) => void,
 };
 
-const SegmentedControl = ({
-  selected,
-  options,
-  onChange,
-}: Props) => (
+const SegmentedControl = ({ selected, options, onChange }: Props) =>
   <div className="root">
     <style jsx>{`
       .root {
@@ -26,7 +21,10 @@ const SegmentedControl = ({
       }
       button {
         background: ${colors.elephant};
-        color: ${Color(colors.elephant).setValue(0.7).setSaturation(0.1).toString()};
+        color: ${Color(colors.elephant)
+          .setValue(0.7)
+          .setSaturation(0.1)
+          .toString()};
         cursor: pointer;
         font-family: ${fontFamilies.ui};
         font-weight: bold;
@@ -38,15 +36,14 @@ const SegmentedControl = ({
         border-left: none;
         padding: 4.5px;
         position: relative;
-        transition:
-          box-shadow ${transition},
-          border-top ${transition},
+        transition: box-shadow ${transition}, border-top ${transition},
           border-bottom ${transition};
       }
       button:focus {
         outline: none;
       }
-      button:hover, button.active {
+      button:hover,
+      button.active {
         box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
       }
       button.active {
@@ -54,8 +51,13 @@ const SegmentedControl = ({
         border-bottom: 2px solid ${activateColor(colors.fadedJade)};
         color: white;
       }
-      button::before, button::after {
-        background-image: linear-gradient(to bottom, ${colors.aquaIsland}, ${colors.fadedJade});
+      button::before,
+      button::after {
+        background-image: linear-gradient(
+          to bottom,
+          ${colors.aquaIsland},
+          ${colors.fadedJade}
+        );
         content: "";
         display: block;
         position: absolute;
@@ -64,7 +66,8 @@ const SegmentedControl = ({
         transition: background-image ${transition};
         width: 2px;
       }
-      button.active::before, button.active::after {
+      button.active::before,
+      button.active::after {
         background-image: linear-gradient(
           to bottom,
           ${activateColor(colors.aquaIsland)},
@@ -79,19 +82,17 @@ const SegmentedControl = ({
       }
     `}</style>
     {addIndex(map)(
-      (option, i) => (
+      (option, i) =>
         <button
           key={option}
-          className={cn({ active: (selected === i) })}
-          style={{ flexBasis: `${(1 / (options.length + 0.25)) * 100}%` }}
+          className={cn({ active: selected === i })}
+          style={{ flexBasis: `${1 / (options.length + 0.25) * 100}%` }}
           onClick={() => onChange(i)}
         >
           {option}
-        </button>
-      ),
+        </button>,
       options,
     )}
-  </div>
-);
+  </div>;
 
 export default SegmentedControl;

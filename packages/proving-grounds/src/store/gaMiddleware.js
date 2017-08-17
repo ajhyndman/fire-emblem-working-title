@@ -6,7 +6,6 @@ import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import type { State } from '.';
 
-
 const gaMiddleware = analytics(({ type, payload }, state: State) => {
   switch (type) {
     case 'CREATED_SHARE_LINK':
@@ -20,25 +19,24 @@ const gaMiddleware = analytics(({ type, payload }, state: State) => {
       ReactGA.event({
         category: 'SOCIAL',
         action: 'shared heroes',
-        label: JSON.stringify(map(
-          (heroInstance: ?HeroInstance) => heroInstance && heroInstance.name,
-          state.heroSlots,
-        )),
+        label: JSON.stringify(
+          map(
+            (heroInstance: ?HeroInstance) => heroInstance && heroInstance.name,
+            state.heroSlots,
+          ),
+        ),
       });
-      forEach(
-        (heroInstance: ?HeroInstance) => {
-          if (heroInstance) {
-            ReactGA.event({
-              category: 'SOCIAL',
-              action: `shared ${heroInstance.name}`,
-            });
-          }
-        },
-        state.heroSlots,
-      );
+      forEach((heroInstance: ?HeroInstance) => {
+        if (heroInstance) {
+          ReactGA.event({
+            category: 'SOCIAL',
+            action: `shared ${heroInstance.name}`,
+          });
+        }
+      }, state.heroSlots);
       break;
     default:
-      // pass
+    // pass
   }
 });
 

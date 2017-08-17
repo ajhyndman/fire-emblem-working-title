@@ -1,9 +1,6 @@
 // @flow
 import React from 'react';
-import {
-  filter,
-  map,
-} from 'ramda';
+import { filter, map } from 'ramda';
 import { getInheritableSkills, isMaxTier } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 import type { SkillType } from 'fire-emblem-heroes-stats';
@@ -13,14 +10,13 @@ import Skill from './Skill';
 import { colors, fontFamilies, fontSizes } from '../theme';
 import type { Dispatch } from '../reducer';
 
-
 type Props = {
-  activeSkillName: string;
-  dispatch: Dispatch;
-  onClose: (skillName: string | void) => void;
-  heroInstance: HeroInstance;
-  showGuide: boolean;
-  skillType: SkillType;
+  activeSkillName: string,
+  dispatch: Dispatch,
+  onClose: (skillName: string | void) => void,
+  heroInstance: HeroInstance,
+  showGuide: boolean,
+  skillType: SkillType,
 };
 
 const SkillSelector = ({
@@ -30,7 +26,7 @@ const SkillSelector = ({
   heroInstance,
   showGuide,
   skillType,
-}: Props) => (
+}: Props) =>
   <div className="root">
     <style jsx>{`
       .section {
@@ -64,7 +60,7 @@ const SkillSelector = ({
       />
     </div>
     {map(
-      skillName => (
+      skillName =>
         <div
           key={skillName ? skillName : ''}
           className="skill-option"
@@ -76,16 +72,15 @@ const SkillSelector = ({
             name={skillName ? skillName : '--'}
             type={skillType}
           />
-        </div>
-      ),
+        </div>,
       // TODO: Consider the merits of this filter.
       // Maybe the tradeoff in power for simplicity isn't worthwhile.
       filter(
-        (skillName) => skillType === 'SEAL' || isMaxTier(skillName ? skillName : ''),
+        skillName =>
+          skillType === 'SEAL' || isMaxTier(skillName ? skillName : ''),
         [undefined].concat(getInheritableSkills(heroInstance.name, skillType)),
       ),
     )}
-  </div>
-);
+  </div>;
 
 export default SkillSelector;

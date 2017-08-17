@@ -21,8 +21,11 @@ import {
   zipWith,
 } from 'ramda';
 import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
-import type { HeroInstance, Rarity, MergeLevel } from 'fire-emblem-heroes-calculator';
-
+import type {
+  HeroInstance,
+  Rarity,
+  MergeLevel,
+} from 'fire-emblem-heroes-calculator';
 
 /**
  * Flattening/Unflattening
@@ -69,7 +72,11 @@ type SerialInstanceWithDefaults = [
 ];
 
 const statKeyToId = { hp: 1, atk: 2, spd: 3, def: 4, res: 5 };
-const idToStatKey = assoc(NO_VARIANT.toString(), undefined, invertObj(statKeyToId));
+const idToStatKey = assoc(
+  NO_VARIANT.toString(),
+  undefined,
+  invertObj(statKeyToId),
+);
 
 // Converts a hero instance to a list of values.
 export const flattenInstance = (instance: HeroInstance): SerialInstance => [
@@ -93,22 +100,24 @@ export const flattenInstance = (instance: HeroInstance): SerialInstance => [
 
 // Converts a list of values to a hero instance.
 // If the input list is too short the remaining elements will be null or undefined.
-export const extractInstance = ([
-  name,
-  bane,
-  boon,
-  rarity,
-  assist,
-  passiveA,
-  passiveB,
-  passiveC,
-  special,
-  weapon,
-  seal,
-  mergeLevel,
-  hpMissing,
-  specialCharge,
-]: SerialInstance): HeroInstance => ({
+export const extractInstance = (
+  [
+    name,
+    bane,
+    boon,
+    rarity,
+    assist,
+    passiveA,
+    passiveB,
+    passiveC,
+    special,
+    weapon,
+    seal,
+    mergeLevel,
+    hpMissing,
+    specialCharge,
+  ]: SerialInstance,
+): HeroInstance => ({
   name,
   bane: idToStatKey[bane.toString()],
   boon: idToStatKey[boon.toString()],
@@ -134,23 +143,31 @@ export const extractInstance = ([
 
 // Identical to flattenInstance except that any default values will be replaced with USE_DEFAULT
 // Additionally, any trailing USE_DEFAULTS will be dropped.
-export function flattenAndIgnoreDefaults(instance: HeroInstance): SerialInstanceWithDefaults {
+export function flattenAndIgnoreDefaults(
+  instance: HeroInstance,
+): SerialInstanceWithDefaults {
   const flatDefault = flattenInstance(getDefaultInstance(instance.name));
   const flatInstance = flattenInstance(instance);
-  return dropLastWhile(equals('d'),
-    prepend(instance.name, tail(
-      zipWith(
-        (defaultV, actualV) => (actualV === defaultV ? USE_DEFAULT : actualV),
-        flatDefault,
-        flatInstance,
+  return dropLastWhile(
+    equals('d'),
+    prepend(
+      instance.name,
+      tail(
+        zipWith(
+          (defaultV, actualV) => (actualV === defaultV ? USE_DEFAULT : actualV),
+          flatDefault,
+          flatInstance,
+        ),
       ),
-    )),
+    ),
   );
 }
 
 // Identical to extractInstance except that USE_DEFAULT will be replaced with the default value
 // Additionally, if the input is too short it will be extended with USE_DEFAULTS.
-export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefaults): ?HeroInstance {
+export function extractWithDefaults(
+  flattenedInstance: SerialInstanceWithDefaults,
+): ?HeroInstance {
   if (flattenedInstance === undefined || flattenedInstance[0] === undefined) {
     return undefined;
   }
@@ -158,7 +175,10 @@ export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefault
   const flatInstanceWithDefaults = zipWith(
     (defaultV, actualV) => (actualV === USE_DEFAULT ? defaultV : actualV),
     flatDefault,
-    concat(flattenedInstance, repeat('d', flatDefault.length - flattenedInstance.length)),
+    concat(
+      flattenedInstance,
+      repeat('d', flatDefault.length - flattenedInstance.length),
+    ),
   );
   return extractInstance(flatInstanceWithDefaults);
 }
@@ -167,13 +187,13 @@ export function extractWithDefaults(flattenedInstance: SerialInstanceWithDefault
  * Hashing
  */
 
-export const hash = (value: any): string => (
+export const hash = (value: any): string =>
   value === undefined
     ? '0'
-    : (typeof value === 'number' || (typeof value === 'string' && value.length < 4))
+    : typeof value === 'number' ||
+      (typeof value === 'string' && value.length < 4)
       ? value
-      : take(5, SHA1(value).toString())
-);
+      : take(5, SHA1(value).toString());
 
 const values = flatten([
   [USE_DEFAULT, NO_VARIANT],
@@ -190,24 +210,22 @@ export const hashTable = zipObj(map(hash, values), values);
  * These do everything above.
  */
 
-export const decodeHero = (heroCode: string): ?HeroInstance => (
+export const decodeHero = (heroCode: string): ?HeroInstance =>
   heroCode
     ? compose(
-      extractWithDefaults,
-      map(hashedValue => hashTable[hashedValue]),
-      string => (string || '').split('+'),
-      lzString.decompressFromEncodedURIComponent,
-    )(heroCode)
-    : undefined
-);
+        extractWithDefaults,
+        map(hashedValue => hashTable[hashedValue]),
+        string => (string || '').split('+'),
+        lzString.decompressFromEncodedURIComponent,
+      )(heroCode)
+    : undefined;
 
-export const encodeHero = (instance: ?HeroInstance): string => (
+export const encodeHero = (instance: ?HeroInstance): string =>
   instance
     ? compose(
-      lzString.compressToEncodedURIComponent,
-      hashes => [...hashes].join('+'),
-      map(hash),
-      flattenAndIgnoreDefaults,
-    )(instance)
-    : ''
-);
+        lzString.compressToEncodedURIComponent,
+        hashes => [...hashes].join('+'),
+        map(hash),
+        flattenAndIgnoreDefaults,
+      )(instance)
+    : '';

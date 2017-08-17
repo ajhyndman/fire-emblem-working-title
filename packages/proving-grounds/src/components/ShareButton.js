@@ -2,12 +2,11 @@
 import React from 'react';
 import clipboard from 'clipboard-js';
 
-
 type Props = {
-  icon: ReactClass<*>;
-  link: string;
-  onClick: (link: string) => void;
-  title?: string;
+  icon: ReactClass<*>,
+  link: string,
+  onClick: (link: string) => void,
+  title?: string,
 };
 
 const ShareButton = ({ icon, link, onClick, title }: Props) => {

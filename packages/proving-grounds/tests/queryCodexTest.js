@@ -1,7 +1,10 @@
 // @flow
 import test from 'tape';
 import { getAllHeroes, getAllSkills } from 'fire-emblem-heroes-stats';
-import { getDefaultSkills, getDefaultInstance } from 'fire-emblem-heroes-calculator';
+import {
+  getDefaultSkills,
+  getDefaultInstance,
+} from 'fire-emblem-heroes-calculator';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import {
@@ -13,7 +16,6 @@ import {
   flattenInstance,
   hash,
 } from '../src/queryCodex';
-
 
 const customizedInstance: HeroInstance = {
   ...getDefaultInstance('Anna'),
@@ -27,31 +29,28 @@ const customizedInstance: HeroInstance = {
   },
 };
 
-test('flattenInstance', (t) => {
-  t.test('reduces an instance to an array', (assert) => {
-    assert.deepEqual(
-      flattenInstance(customizedInstance),
-      [
-        'Anna',
-        2, // atk bane
-        'n', // no boon
-        5,
-        undefined,
-        'Attack +3',
-        'Vantage 3',
-        'Spur Res 3',
-        'Astra',
-        'Nóatún',
-        'Attack +1',
-        3, // Merge level
-        0, // initial missing hp
-        0, // initial special charge
-      ],
-    );
+test('flattenInstance', t => {
+  t.test('reduces an instance to an array', assert => {
+    assert.deepEqual(flattenInstance(customizedInstance), [
+      'Anna',
+      2, // atk bane
+      'n', // no boon
+      5,
+      undefined,
+      'Attack +3',
+      'Vantage 3',
+      'Spur Res 3',
+      'Astra',
+      'Nóatún',
+      'Attack +1',
+      3, // Merge level
+      0, // initial missing hp
+      0, // initial special charge
+    ]);
     assert.end();
   });
 
-  t.test('is reversible', (assert) => {
+  t.test('is reversible', assert => {
     assert.deepEqual(
       extractInstance(flattenInstance(customizedInstance)),
       customizedInstance,
@@ -62,37 +61,33 @@ test('flattenInstance', (t) => {
   t.end();
 });
 
-test('flattenAndIgnoreDefaults', (t) => {
-  t.test('reduces an instance to an array', (assert) => {
-    assert.deepEqual(
-      flattenAndIgnoreDefaults(customizedInstance),
-      [
-        'Anna',
-        2, // atk bane
-        'd',
-        'd',
-        'd',
-        'Attack +3', // A Passive
-        'd',
-        'd',
-        'd',
-        'd',
-        'Attack +1', // Seal
-        3, // Merge level
-      ],
-    );
+test('flattenAndIgnoreDefaults', t => {
+  t.test('reduces an instance to an array', assert => {
+    assert.deepEqual(flattenAndIgnoreDefaults(customizedInstance), [
+      'Anna',
+      2, // atk bane
+      'd',
+      'd',
+      'd',
+      'Attack +3', // A Passive
+      'd',
+      'd',
+      'd',
+      'd',
+      'Attack +1', // Seal
+      3, // Merge level
+    ]);
     assert.end();
   });
 
-  t.test('trims defaults', (assert) => {
-    assert.deepEqual(
-      flattenAndIgnoreDefaults(getDefaultInstance('Anna')),
-      ['Anna'],
-    );
+  t.test('trims defaults', assert => {
+    assert.deepEqual(flattenAndIgnoreDefaults(getDefaultInstance('Anna')), [
+      'Anna',
+    ]);
     assert.end();
   });
 
-  t.test('is reversible', (assert) => {
+  t.test('is reversible', assert => {
     assert.deepEqual(
       extractWithDefaults(flattenAndIgnoreDefaults(customizedInstance)),
       customizedInstance,
@@ -103,13 +98,13 @@ test('flattenAndIgnoreDefaults', (t) => {
   t.end();
 });
 
-test('hash', (t) => {
-  t.test('hashes to a unicode string five characters long', (assert) => {
+test('hash', t => {
+  t.test('hashes to a unicode string five characters long', assert => {
     assert.equal(hash('Anna').length, 5);
     assert.end();
   });
 
-  t.test('doesn\'t collide', (assert) => {
+  t.test("doesn't collide", assert => {
     // console.log('raw:', stats.skills.map(skill => skill.name));
     // console.log('hashed:', stats.skills.map(skill => hash(skill.name)));
 
@@ -139,16 +134,13 @@ test('hash', (t) => {
   t.end();
 });
 
-test('encodeHero', (t) => {
-  t.test('tranforms a hero instance to a string', (assert) => {
-    assert.equal(
-      typeof encodeHero(customizedInstance),
-      'string',
-    );
+test('encodeHero', t => {
+  t.test('tranforms a hero instance to a string', assert => {
+    assert.equal(typeof encodeHero(customizedInstance), 'string');
     assert.end();
   });
 
-  t.test('is reversible', (assert) => {
+  t.test('is reversible', assert => {
     assert.deepEqual(
       decodeHero(encodeHero(customizedInstance)),
       customizedInstance,
@@ -156,11 +148,11 @@ test('encodeHero', (t) => {
     assert.end();
   });
 
-  t.test('decoding is backwards compatible', (assert) => {
-    assert.deepEqual(
-      decodeHero('AwEwxgzGDUBMQ'),
-      { ...getDefaultInstance('Anna'), bane: 'atk'},
-    );
+  t.test('decoding is backwards compatible', assert => {
+    assert.deepEqual(decodeHero('AwEwxgzGDUBMQ'), {
+      ...getDefaultInstance('Anna'),
+      bane: 'atk',
+    });
     assert.deepEqual(
       decodeHero('MwRgxgrMDUAmcIJwDMBGB2AptALMzOAHNKsosNgEzpiXBA'),
       {
@@ -179,7 +171,7 @@ test('encodeHero', (t) => {
     assert.end();
   });
 
-  t.test('encode removed skills', (assert) => {
+  t.test('encode removed skills', assert => {
     const noSkillHero: HeroInstance = {
       ...getDefaultInstance('Anna'),
       skills: {
@@ -192,10 +184,7 @@ test('encodeHero', (t) => {
         SEAL: undefined,
       },
     };
-    assert.deepEqual(
-      decodeHero(encodeHero(noSkillHero)),
-      noSkillHero,
-    );
+    assert.deepEqual(decodeHero(encodeHero(noSkillHero)), noSkillHero);
     assert.end();
   });
 

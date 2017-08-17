@@ -15,18 +15,17 @@ import {
 } from '../theme';
 import type { Dispatch } from '../reducer';
 
-
 type Props = {
-  activeHeroName: ?string;
-  dispatch: Dispatch;
-  heroes: Array<Hero>;
-  showUndo?: boolean;
+  activeHeroName: ?string,
+  dispatch: Dispatch,
+  heroes: Array<Hero>,
+  showUndo?: boolean,
 };
 
 const GUTTER_HEIGHT = 5;
 const GUTTER_WIDTH = 8;
 
-const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
+const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
   <div className="grid">
     <style jsx>{`
       .grid {
@@ -70,8 +69,10 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         line-height: 1;
         width: ${gridSize}px;
       }
-      .active, .active:hover {
-        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5), 0 0 2px 4px rgba(223, 110, 134, 0.9);
+      .active,
+      .active:hover {
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5),
+          0 0 2px 4px rgba(223, 110, 134, 0.9);
       }
       div:empty {
         margin: 0 ${GUTTER_WIDTH}px;
@@ -89,28 +90,29 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         white-space: nowrap;
       }
     `}</style>
-    {showUndo && <div className="gridSquareOuter">
-      <div
-        className="gridSquare"
-        onClick={(event) => {
-          event.stopPropagation();
-          dispatch({
-            type: 'SELECT_HERO',
-            hero: 'CLEAR',
-          });
-        }}
-      >
-        <div className="undo">
-          Undo
+    {showUndo &&
+      <div className="gridSquareOuter">
+        <div
+          className="gridSquare"
+          onClick={event => {
+            event.stopPropagation();
+            dispatch({
+              type: 'SELECT_HERO',
+              hero: 'CLEAR',
+            });
+          }}
+        >
+          <div className="undo">Undo</div>
         </div>
-      </div>
-    </div>}
+      </div>}
     {addIndex(map)(
-      (hero: Hero, i: number) => (
+      (hero: Hero, i: number) =>
         <div className="gridSquareOuter" key={`${i}-${hero.name}`}>
           <div
-            className={`gridSquare ${activeHeroName === hero.name ? 'active' : ''}`}
-            onClick={(event) => {
+            className={`gridSquare ${activeHeroName === hero.name
+              ? 'active'
+              : ''}`}
+            onClick={event => {
               event.stopPropagation();
               dispatch({
                 type: 'SELECT_HERO',
@@ -124,17 +126,17 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
               weaponType={hero.weaponType}
             />
           </div>
-          <div className="name">{hero.shortName || hero.name}</div>
-        </div>
-      ),
+          <div className="name">
+            {hero.shortName || hero.name}
+          </div>
+        </div>,
       heroes,
     )}
     {/**
       * Flexbox doesn't really provide grid support.  Add enough empty
       * elements to preserve grid layout of last row on large screens.
       */}
-    {map((i) => <div key={i} />, range(0, 30))}
-  </div>
-);
+    {map(i => <div key={i} />, range(0, 30))}
+  </div>;
 
 export default HeroGrid;

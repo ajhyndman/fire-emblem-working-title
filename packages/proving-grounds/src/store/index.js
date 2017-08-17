@@ -7,18 +7,17 @@ import reducer from '../reducer';
 import gaMiddleware from './gaMiddleware';
 import { loadState, saveState } from './localStorage';
 
-
 export type State = {
-  activeHero: ?HeroInstance;
-  activeSkill: ?SkillType;
-  activeSlot: 0 | 1 | void;
-  exportString: string;
-  heroSlots: [?HeroInstance, ?HeroInstance];
-  host: string;
-  notifications: Array<string>;
-  previewLevel: 1 | 40;
-  searchString: string;
-  showGuide: boolean;
+  activeHero: ?HeroInstance,
+  activeSkill: ?SkillType,
+  activeSlot: 0 | 1 | void,
+  exportString: string,
+  heroSlots: [?HeroInstance, ?HeroInstance],
+  host: string,
+  notifications: Array<string>,
+  previewLevel: 1 | 40,
+  searchString: string,
+  showGuide: boolean,
 };
 
 const emptyState: State = {
@@ -41,7 +40,11 @@ const initStore = (initialState: State = emptyState) => {
   }
 
   // if we are on the client, hook into localStorage and apply gaMiddleware
-  const store = createStore(reducer, loadState(initialState), applyMiddleware(gaMiddleware));
+  const store = createStore(
+    reducer,
+    loadState(initialState),
+    applyMiddleware(gaMiddleware),
+  );
   store.subscribe(() => {
     saveState(store.getState());
   });

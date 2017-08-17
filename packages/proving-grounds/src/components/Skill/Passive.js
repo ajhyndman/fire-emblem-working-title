@@ -4,13 +4,12 @@ import type { PassiveSkill } from 'fire-emblem-heroes-stats';
 
 import { colors, fontFamilies, fontSizes } from '../../theme';
 
-
 type Props = {
-  showGuide?: boolean;
-  skill: PassiveSkill;
+  showGuide?: boolean,
+  skill: PassiveSkill,
 };
 
-const Passive = ({ showGuide, skill }: Props) => (
+const Passive = ({ showGuide, skill }: Props) =>
   <div className="root">
     <style jsx>{`
       .root {
@@ -39,15 +38,20 @@ const Passive = ({ showGuide, skill }: Props) => (
         margin-bottom: 5px;
       }
     `}</style>
-    <div className="row"><span className="name">{skill.name}</span></div>
-    {showGuide && (
+    <div className="row">
+      <span className="name">
+        {skill.name}
+      </span>
+    </div>
+    {showGuide &&
       <div>
         <div className="row">
-          <span className="description" dangerouslySetInnerHTML={{ __html: skill.effect }} />
+          <span
+            className="description"
+            dangerouslySetInnerHTML={{ __html: skill.effect }}
+          />
         </div>
-      </div>
-    )}
-  </div>
-);
+      </div>}
+  </div>;
 
 export default Passive;

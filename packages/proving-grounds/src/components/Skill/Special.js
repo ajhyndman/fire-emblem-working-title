@@ -4,13 +4,12 @@ import type { SpecialSkill } from 'fire-emblem-heroes-stats';
 
 import { colors, fontFamilies, fontSizes } from '../../theme';
 
-
 type Props = {
-  showGuide?: boolean;
-  skill: SpecialSkill;
+  showGuide?: boolean,
+  skill: SpecialSkill,
 };
 
-const Special = ({ showGuide, skill }: Props) => (
+const Special = ({ showGuide, skill }: Props) =>
   <div className="root">
     <style jsx>{`
       .root {
@@ -39,19 +38,26 @@ const Special = ({ showGuide, skill }: Props) => (
         margin-bottom: 5px;
       }
     `}</style>
-    <div className="row"><span className="name">{skill.name}</span></div>
-    {showGuide && (
+    <div className="row">
+      <span className="name">
+        {skill.name}
+      </span>
+    </div>
+    {showGuide &&
       <div>
         <div className="row">
           <span className="stat-name">Cooldown </span>
-          <span className="stat-value">{skill.cooldown}</span>
+          <span className="stat-value">
+            {skill.cooldown}
+          </span>
         </div>
         <div className="row">
-          <span className="description" dangerouslySetInnerHTML={{ __html: skill.effect }} />
+          <span
+            className="description"
+            dangerouslySetInnerHTML={{ __html: skill.effect }}
+          />
         </div>
-      </div>
-    )}
-  </div>
-);
+      </div>}
+  </div>;
 
 export default Special;

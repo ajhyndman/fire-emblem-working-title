@@ -9,12 +9,11 @@ import { colors, gridSize, transition } from '../theme';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 
-
 type Props = {
-  activeSlot: ?number;
-  dispatch: Dispatch;
-  leftHero: ?Object;
-  rightHero: ?Object;
+  activeSlot: ?number,
+  dispatch: Dispatch,
+  leftHero: ?Object,
+  rightHero: ?Object,
 };
 
 const openConfig = (event, dispatch, slot) => {
@@ -26,12 +25,12 @@ const openConfig = (event, dispatch, slot) => {
   Router.push('/build');
 };
 
-const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => (
+const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) =>
   <div className="root">
     <style jsx>{`
       .root {
         margin: 0 auto;
-        width: ${gridSize * 3}px
+        width: ${gridSize * 3}px;
       }
       .attack-indicator {
         box-sizing: border-box;
@@ -77,10 +76,12 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
       }
       .active {
-        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5), 0 0 2px 4px rgba(223, 110, 134, 0.9);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5),
+          0 0 2px 4px rgba(223, 110, 134, 0.9);
       }
       .active:hover {
-        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5), 0 0 2px 4px rgba(223, 110, 134, 0.9);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5),
+          0 0 2px 4px rgba(223, 110, 134, 0.9);
       }
       .swap-button {
         box-sizing: border-box;
@@ -101,18 +102,16 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
         outline: none;
       }
     `}</style>
-    <div
-      className="container"
-    >
+    <div className="container">
       <div
         className={`${activeSlot === 0 ? 'active' : ''} hero-slot`}
-        onClick={(event) => {
+        onClick={event => {
           event.stopPropagation();
           dispatch({ type: 'SELECT_SLOT', slot: 0 });
         }}
         onContextMenu={event => openConfig(event, dispatch, 0)}
       >
-        {leftHero && (
+        {leftHero &&
           <div>
             <HeroPortrait
               assets={getHero(leftHero.name).assets}
@@ -140,14 +139,13 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
               `}
               sizes={`${gridSize / 2}px`}
             />
-          </div>
-        )}
+          </div>}
       </div>
       <img
         className="swap-button"
         role="button"
         tabIndex={0}
-        onClick={(event) => {
+        onClick={event => {
           event.stopPropagation();
           dispatch({ type: 'TOGGLE_AGGRESSOR' });
         }}
@@ -161,13 +159,13 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
       />
       <div
         className={`${activeSlot === 1 ? 'active' : ''} hero-slot`}
-        onClick={(event) => {
+        onClick={event => {
           event.stopPropagation();
           dispatch({ type: 'SELECT_SLOT', slot: 1 });
         }}
         onContextMenu={event => openConfig(event, dispatch, 1)}
       >
-        {rightHero && (
+        {rightHero &&
           <div>
             <HeroPortrait
               assets={getHero(rightHero.name).assets}
@@ -195,11 +193,9 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) => 
               `}
               sizes={`${gridSize / 2}px`}
             />
-          </div>
-        )}
+          </div>}
       </div>
     </div>
-  </div>
-);
+  </div>;
 
 export default CombatPreview;

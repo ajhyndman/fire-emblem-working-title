@@ -7,13 +7,13 @@ import { map } from 'ramda';
 import { colors, fontFamilies } from '../theme';
 
 type Props = {
-  onChange: (option: string) => void;
-  options: string[];
-  selected: string;
+  onChange: (option: string) => void,
+  options: string[],
+  selected: string,
 };
 
 type State = {
-  active: boolean;
+  active: boolean,
 };
 
 const height = 30;
@@ -31,26 +31,30 @@ class Select extends React.Component {
     };
   }
 
-  blur = () => { this.setState(() => ({ active: false })); }
+  blur = () => {
+    this.setState(() => ({ active: false }));
+  };
 
-  focus = () => { this.setState(() => ({ active: true })); }
+  focus = () => {
+    this.setState(() => ({ active: true }));
+  };
 
   render() {
-    const {
-      onChange,
-      options,
-      selected,
-    } = this.props;
+    const { onChange, options, selected } = this.props;
 
     return (
       <div
         role="input"
         tabIndex="0"
         className={cn('root', { active: this.state.active })}
-        ref={node => { this.input = node; }}
+        ref={node => {
+          this.input = node;
+        }}
         onBlur={this.blur}
         onFocus={this.focus}
-        onMouseDown={event => { event.preventDefault(); }}
+        onMouseDown={event => {
+          event.preventDefault();
+        }}
       >
         <style jsx>{`
           .root {
@@ -106,17 +110,19 @@ class Select extends React.Component {
           .option.active {
           }
           .option.active:hover {
-            background: ${Color(colors.iceberg).darkenByAmount(0.05)}
+            background: ${Color(colors.iceberg).darkenByAmount(0.05)};
           }
         `}</style>
         <div
           className={cn('options', { active: this.state.active })}
           style={{
-            transform: `translateY(-${(options.indexOf(selected) / options.length) * 100}%)`,
+            transform: `translateY(-${options.indexOf(selected) /
+              options.length *
+              100}%)`,
           }}
         >
           {map(
-            (option) => (
+            option =>
               <div
                 key={option}
                 className={cn('option', { active: this.state.active })}
@@ -130,8 +136,7 @@ class Select extends React.Component {
                 }}
               >
                 {option}
-              </div>
-            ),
+              </div>,
             options,
           )}
         </div>

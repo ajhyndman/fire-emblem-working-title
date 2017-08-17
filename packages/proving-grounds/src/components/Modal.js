@@ -3,14 +3,13 @@ import React from 'react';
 
 import { staticUrl } from '../../config';
 
-
 type Props = {
-  children?: React.Element<*>;
+  children?: React.Element<*>,
 };
 
 const BORDER_SIZE = 46;
 
-const Modal = ({ children }: Props) => (
+const Modal = ({ children }: Props) =>
   <div className="root">
     <style jsx>{`
       .root {
@@ -19,13 +18,13 @@ const Modal = ({ children }: Props) => (
         /* average of border-image color */
         background-color: #1c4654;
         border: ${BORDER_SIZE}px solid transparent;
-        border-image: url(${staticUrl}Border_Blue.png) ${BORDER_SIZE} fill stretch;
+        border-image: url(${staticUrl}Border_Blue.png) ${BORDER_SIZE} fill
+          stretch;
         display: flex;
         flex-direction: column;
       }
     `}</style>
     {children}
-  </div>
-);
+  </div>;
 
 export default Modal;

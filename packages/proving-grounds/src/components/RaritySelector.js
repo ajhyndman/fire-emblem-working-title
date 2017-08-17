@@ -6,18 +6,17 @@ import type { Rarity } from 'fire-emblem-heroes-calculator';
 
 import { staticUrl } from '../../config';
 
-
 type Props = {
-  disabled?: [boolean, boolean, boolean, boolean, boolean];
-  selected: Rarity;
-  onChange: (rarity: Rarity) => void;
+  disabled?: [boolean, boolean, boolean, boolean, boolean],
+  selected: Rarity,
+  onChange: (rarity: Rarity) => void,
 };
 
 const RaritySelector = ({
   disabled = [false, false, false, false, false],
   selected,
   onChange,
-}: Props) => (
+}: Props) =>
   <div className="root">
     <style jsx>{`
       .root {
@@ -54,7 +53,9 @@ const RaritySelector = ({
               active: i <= selected,
               disabled: isDisabled,
             })}
-            onClick={() => { if (!isDisabled) onChange(i); }}
+            onClick={() => {
+              if (!isDisabled) onChange(i);
+            }}
             src={`${staticUrl}20px-Icon_Rarity_${selected}.png`}
             srcSet={`
               ${staticUrl}20px-Icon_Rarity_${selected}.png 20w,
@@ -66,7 +67,6 @@ const RaritySelector = ({
       },
       [1, 2, 3, 4, 5],
     )}
-  </div>
-);
+  </div>;
 
 export default RaritySelector;

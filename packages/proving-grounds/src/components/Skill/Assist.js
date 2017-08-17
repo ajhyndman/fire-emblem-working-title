@@ -4,13 +4,12 @@ import type { AssistSkill } from 'fire-emblem-heroes-stats';
 
 import { colors, fontFamilies, fontSizes } from '../../theme';
 
-
 type Props = {
-  showGuide?: boolean;
-  skill: AssistSkill;
+  showGuide?: boolean,
+  skill: AssistSkill,
 };
 
-const Assist = ({ showGuide, skill }: Props) => (
+const Assist = ({ showGuide, skill }: Props) =>
   <div className="root">
     <style jsx>{`
       .root {
@@ -39,19 +38,26 @@ const Assist = ({ showGuide, skill }: Props) => (
         margin-bottom: 5px;
       }
     `}</style>
-    <div className="row"><span className="name">{skill.name}</span></div>
-    {showGuide && (
+    <div className="row">
+      <span className="name">
+        {skill.name}
+      </span>
+    </div>
+    {showGuide &&
       <div>
         <div className="row">
           <span className="stat-name">Rng </span>
-          <span className="stat-value">{skill.range}</span>
+          <span className="stat-value">
+            {skill.range}
+          </span>
         </div>
         <div className="row">
-          <span className="description" dangerouslySetInnerHTML={{ __html: skill.effect }} />
+          <span
+            className="description"
+            dangerouslySetInnerHTML={{ __html: skill.effect }}
+          />
         </div>
-      </div>
-    )}
-  </div>
-);
+      </div>}
+  </div>;
 
 export default Assist;

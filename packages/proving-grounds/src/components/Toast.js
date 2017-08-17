@@ -3,23 +3,17 @@ import React from 'react';
 import cn from 'classnames';
 import { head } from 'ramda';
 
-import {
-  breakPoints,
-  colors,
-  fontFamilies,
-  fontSizes,
-} from '../theme';
+import { breakPoints, colors, fontFamilies, fontSizes } from '../theme';
 import type { Dispatch } from '../reducer';
 
-
 type Props = {
-  dispatch: Dispatch;
-  messages: Array<string>;
+  dispatch: Dispatch,
+  messages: Array<string>,
 };
 
 type State = {
-  isOpen: boolean;
-  isReady: boolean;
+  isOpen: boolean,
+  isReady: boolean,
 };
 
 const DISPLAY_DURATION = 3000;
@@ -42,10 +36,9 @@ class Toast extends React.Component {
   }
 
   componentDidMount() {
-    window.setTimeout(
-      () => { this.setState(state => ({ ...state, isReady: true })); },
-      INIT_DELAY,
-    );
+    window.setTimeout(() => {
+      this.setState(state => ({ ...state, isReady: true }));
+    }, INIT_DELAY);
   }
 
   componentDidUpdate() {
@@ -57,32 +50,25 @@ class Toast extends React.Component {
   hide = () => {
     this.setState(state => ({ ...state, isOpen: false }));
 
-    window.setTimeout(
-      () => {
-        this.props.dispatch({ type: 'DEQUEUE_NOTIFICATION' });
-        this.setState(state => ({ ...state, isReady: true }));
-      },
-      TRANSITION_DURATION,
-    );
-  }
+    window.setTimeout(() => {
+      this.props.dispatch({ type: 'DEQUEUE_NOTIFICATION' });
+      this.setState(state => ({ ...state, isReady: true }));
+    }, TRANSITION_DURATION);
+  };
 
   show = () => {
     this.setState(state => ({ ...state, isOpen: true, isReady: false }));
 
-    window.setTimeout(
-      () => { this.wait(); },
-      TRANSITION_DURATION,
-    );
-  }
+    window.setTimeout(() => {
+      this.wait();
+    }, TRANSITION_DURATION);
+  };
 
   wait = () => {
-    window.setTimeout(
-      () => {
-        this.hide();
-      },
-      DISPLAY_DURATION,
-    );
-  }
+    window.setTimeout(() => {
+      this.hide();
+    }, DISPLAY_DURATION);
+  };
 
   render() {
     const message = head(this.props.messages);

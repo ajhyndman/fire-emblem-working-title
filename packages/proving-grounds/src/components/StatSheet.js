@@ -5,19 +5,21 @@ import { getStat } from 'fire-emblem-heroes-calculator';
 import { getHero } from 'fire-emblem-heroes-stats';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
-import { colors, fontFamilies, fontSizes, gridSize, lineHeights } from '../theme';
+import {
+  colors,
+  fontFamilies,
+  fontSizes,
+  gridSize,
+  lineHeights,
+} from '../theme';
 import HeroPortrait from './Hero';
 
-
 type Props = {
-  heroInstance: HeroInstance;
-  level: 1 | 40;
+  heroInstance: HeroInstance,
+  level: 1 | 40,
 };
 
-const StatSheet = ({
-  heroInstance,
-  level,
-}: Props) => {
+const StatSheet = ({ heroInstance, level }: Props) => {
   return (
     <div className="stats-root row">
       <style jsx>{`
@@ -79,7 +81,7 @@ const StatSheet = ({
       </div>
       <div className="right col">
         <div className="row">
-          <div className="stat"></div>
+          <div className="stat" />
           <div className="stat">
             <span className="key">HP</span>
             {getStat(heroInstance, 'hp', level)}

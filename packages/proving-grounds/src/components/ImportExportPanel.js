@@ -13,21 +13,16 @@ import {
 } from '../theme';
 import type { Dispatch } from '../reducer';
 
-
 type Props = {
-  dispatch: Dispatch;
-  onChange: (value: string) => void;
-  value: string;
+  dispatch: Dispatch,
+  onChange: (value: string) => void,
+  value: string,
 };
 
 const GUTTER_SIZE = 15;
 const BORDER_WIDTH = 1;
 
-const ImportExportPanel = ({
-  dispatch,
-  onChange,
-  value,
-}: Props) => {
+const ImportExportPanel = ({ dispatch, onChange, value }: Props) => {
   let textarea;
 
   return (
@@ -42,7 +37,7 @@ const ImportExportPanel = ({
           font-family: ${fontFamilies.ui};
           font-size: ${fontSizes.small}px;
           line-height: ${lineHeights.body};
-          padding: 0 0  ${GUTTER_SIZE}px;
+          padding: 0 0 ${GUTTER_SIZE}px;
         }
         .explanation p {
           margin: 0;
@@ -77,7 +72,9 @@ const ImportExportPanel = ({
         onFocus={() => textarea.select()}
         onMouseUp={() => false}
         onPaste={() => Router.back()}
-        ref={node => { textarea = node; }}
+        ref={node => {
+          textarea = node;
+        }}
         rows="20"
         spellCheck={false}
         value={value}

@@ -1,27 +1,23 @@
 // @flow
 import React from 'react';
-import {
-  calculateResult,
-  getStat,
-} from 'fire-emblem-heroes-calculator';
+import { calculateResult, getStat } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import { staticUrl } from '../../config';
 import { colors, fontSizes } from '../theme';
 
-
 type DamageInfoProps = {
-  damage: number;
-  numAttacks: number;
-  specialDamage: number;
+  damage: number,
+  numAttacks: number,
+  specialDamage: number,
 };
 
 type CombatResultProps = {
-  leftHero: ?HeroInstance;
-  rightHero: ?HeroInstance;
+  leftHero: ?HeroInstance,
+  rightHero: ?HeroInstance,
 };
 
-const DamageInfo = ({damage, numAttacks, specialDamage}: DamageInfoProps) => (
+const DamageInfo = ({ damage, numAttacks, specialDamage }: DamageInfoProps) =>
   <span className="root">
     <style jsx>{`
       .root {
@@ -37,15 +33,16 @@ const DamageInfo = ({damage, numAttacks, specialDamage}: DamageInfoProps) => (
         transform: translate(100%, 75%);
       }
     `}</style>
-    {(isNaN(damage) ? '?' : numAttacks > 0 ? `${damage}` : '')}
-    {(numAttacks > 1 ? ` × ${numAttacks}` : '')}
-    <span className="special-damage">{(specialDamage > 0 ? ` +${specialDamage}` : '')}</span>
-  </span>
-);
+    {isNaN(damage) ? '?' : numAttacks > 0 ? `${damage}` : ''}
+    {numAttacks > 1 ? ` × ${numAttacks}` : ''}
+    <span className="special-damage">
+      {specialDamage > 0 ? ` +${specialDamage}` : ''}
+    </span>
+  </span>;
 
 const CombatResult = ({ leftHero, rightHero }: CombatResultProps) => {
-  let result = leftHero && rightHero
-    ? calculateResult(leftHero, rightHero) : undefined;
+  let result =
+    leftHero && rightHero ? calculateResult(leftHero, rightHero) : undefined;
 
   return (
     <div className="root">
@@ -84,19 +81,23 @@ const CombatResult = ({ leftHero, rightHero }: CombatResultProps) => {
           text-align: center;
         }
       `}</style>
-      {leftHero && rightHero && result && (
+      {leftHero &&
+        rightHero &&
+        result &&
         <div className="container">
           <div className="result">
-            <h1>{`${
-              !isNaN(getStat(leftHero, 'hp')) ? getStat(leftHero, 'hp') : '?'
-            } → ${
-              !isNaN(result.combatInfo.attackerHp) ? result.combatInfo.attackerHp : '?'
-            }`}</h1>
-            <h2><DamageInfo
-                  damage={result.combatInfo.attackerDamage}
-                  numAttacks={result.combatInfo.attackerNumAttacks}
-                  specialDamage={result.combatInfo.attackerSpecialDamage}
-                /></h2>
+            <h1>{`${!isNaN(getStat(leftHero, 'hp'))
+              ? getStat(leftHero, 'hp')
+              : '?'} → ${!isNaN(result.combatInfo.attackerHp)
+              ? result.combatInfo.attackerHp
+              : '?'}`}</h1>
+            <h2>
+              <DamageInfo
+                damage={result.combatInfo.attackerDamage}
+                numAttacks={result.combatInfo.attackerNumAttacks}
+                specialDamage={result.combatInfo.attackerSpecialDamage}
+              />
+            </h2>
           </div>
           <img
             className="attack-indicator"
@@ -109,19 +110,20 @@ const CombatResult = ({ leftHero, rightHero }: CombatResultProps) => {
             sizes="40px"
           />
           <div className="result">
-            <h1>{`${
-              !isNaN(getStat(rightHero, 'hp')) ? getStat(rightHero, 'hp') : '?'
-            } → ${
-              !isNaN(result.combatInfo.defenderHp) ? result.combatInfo.defenderHp : '?'
-            }`}</h1>
-            <h2><DamageInfo
-                  damage={result.combatInfo.defenderDamage}
-                  numAttacks={result.combatInfo.defenderNumAttacks}
-                  specialDamage={result.combatInfo.defenderSpecialDamage}
-                /></h2>
+            <h1>{`${!isNaN(getStat(rightHero, 'hp'))
+              ? getStat(rightHero, 'hp')
+              : '?'} → ${!isNaN(result.combatInfo.defenderHp)
+              ? result.combatInfo.defenderHp
+              : '?'}`}</h1>
+            <h2>
+              <DamageInfo
+                damage={result.combatInfo.defenderDamage}
+                numAttacks={result.combatInfo.defenderNumAttacks}
+                specialDamage={result.combatInfo.defenderSpecialDamage}
+              />
+            </h2>
           </div>
-        </div>
-      )}
+        </div>}
     </div>
   );
 };

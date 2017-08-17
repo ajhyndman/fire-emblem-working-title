@@ -16,7 +16,11 @@ import {
 } from 'ramda';
 import { getHero } from 'fire-emblem-heroes-stats';
 import { exportInstance } from 'fire-emblem-heroes-calculator';
-import type { HeroInstance, InstanceSkills, Rarity } from 'fire-emblem-heroes-calculator';
+import type {
+  HeroInstance,
+  InstanceSkills,
+  Rarity,
+} from 'fire-emblem-heroes-calculator';
 import type { Hero, SkillType } from 'fire-emblem-heroes-stats';
 
 import RaritySelector from './RaritySelector';
@@ -24,16 +28,21 @@ import SegmentedControl from './SegmentedControl';
 import Select from './Select';
 import Skill from './Skill';
 import StatSheet from './StatSheet';
-import { colors, fontFamilies, fontSizes, lineHeights, transition } from '../theme';
+import {
+  colors,
+  fontFamilies,
+  fontSizes,
+  lineHeights,
+  transition,
+} from '../theme';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 
-
 // eslint-disable-next-line
 type Props = {|
-  +dispatch: Dispatch;
-  +heroInstance: HeroInstance;
-  +level: 1 | 40;
+  +dispatch: Dispatch,
+  +heroInstance: HeroInstance,
+  +level: 1 | 40,
 |};
 
 const skillIcons = {
@@ -51,11 +60,7 @@ const hasStatsForRarity = (instance: HeroInstance, rarity: Rarity): boolean => {
   return Boolean(hero.stats['1'][`${rarity}`] && hero.stats['40'][`${rarity}`]);
 };
 
-const HeroBuilder = ({
-  dispatch,
-  heroInstance,
-  level,
-}: Props) => {
+const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
   const varianceOptions = {
     HP: 'hp',
     ATK: 'atk',
@@ -64,7 +69,8 @@ const HeroBuilder = ({
     RES: 'res',
   };
 
-  const mergeLevel = heroInstance.mergeLevel === undefined ? 0 : heroInstance.mergeLevel;
+  const mergeLevel =
+    heroInstance.mergeLevel === undefined ? 0 : heroInstance.mergeLevel;
 
   return (
     <div className="root">
@@ -158,25 +164,28 @@ const HeroBuilder = ({
                   `Lv 40${mergeLevel > 0 ? `+${mergeLevel}` : ''}`,
                 ]}
                 selected={level === 1 ? 0 : 1}
-                onChange={i => dispatch({ type: 'SET_PREVIEW_LEVEL', level: ([1, 40])[i] })}
+                onChange={i =>
+                  dispatch({ type: 'SET_PREVIEW_LEVEL', level: [1, 40][i] })}
               />
             </div>
             <div className="column">
               <button
                 className="adjust-merge-level"
-                onClick={() => dispatch({
-                  type: 'SET_MERGE_LEVEL',
-                  value: mergeLevel + 1,
-                })}
+                onClick={() =>
+                  dispatch({
+                    type: 'SET_MERGE_LEVEL',
+                    value: mergeLevel + 1,
+                  })}
               >
                 <PlusSquare style={{ display: 'block' }} />
               </button>
               <button
                 className="adjust-merge-level"
-                onClick={() => dispatch({
-                  type: 'SET_MERGE_LEVEL',
-                  value: heroInstance.mergeLevel - 1,
-                })}
+                onClick={() =>
+                  dispatch({
+                    type: 'SET_MERGE_LEVEL',
+                    value: heroInstance.mergeLevel - 1,
+                  })}
               >
                 <MinusSquare style={{ display: 'block' }} />
               </button>
@@ -185,7 +194,9 @@ const HeroBuilder = ({
         </div>
         <div className="section">
           <div className="row" style={{ alignItems: 'center' }}>
-            <h1 className="name">{heroInstance.name}</h1>
+            <h1 className="name">
+              {heroInstance.name}
+            </h1>
             <button
               className="export-button"
               onClick={() => {
@@ -202,10 +213,7 @@ const HeroBuilder = ({
           </div>
         </div>
         <div className="section">
-          <StatSheet
-            heroInstance={heroInstance}
-            level={level}
-          />
+          <StatSheet heroInstance={heroInstance} level={level} />
         </div>
         <div className="section center">
           <RaritySelector
@@ -225,17 +233,25 @@ const HeroBuilder = ({
             Boon
             <div style={{ flexBasis: 75 }}>
               <Select
-                onChange={selected => dispatch({
-                  type: 'UPDATE_BOON',
-                  stat: varianceOptions[selected],
-                })}
+                onChange={selected =>
+                  dispatch({
+                    type: 'UPDATE_BOON',
+                    stat: varianceOptions[selected],
+                  })}
                 options={[
                   '—',
-                  ...keys(filter(compose(not, equals(heroInstance.bane)), varianceOptions)),
+                  ...keys(
+                    filter(
+                      compose(not, equals(heroInstance.bane)),
+                      varianceOptions,
+                    ),
+                  ),
                 ]}
-                selected={heroInstance.boon
-                  ? invertObj(varianceOptions)[heroInstance.boon]
-                  : '—'}
+                selected={
+                  heroInstance.boon
+                    ? invertObj(varianceOptions)[heroInstance.boon]
+                    : '—'
+                }
               />
             </div>
           </div>
@@ -243,29 +259,34 @@ const HeroBuilder = ({
             Bane
             <div style={{ flexBasis: 75 }}>
               <Select
-                onChange={selected => dispatch({
-                  type: 'UPDATE_BANE',
-                  stat: varianceOptions[selected],
-                })}
+                onChange={selected =>
+                  dispatch({
+                    type: 'UPDATE_BANE',
+                    stat: varianceOptions[selected],
+                  })}
                 options={[
                   '—',
-                  ...keys(filter(compose(not, equals(heroInstance.boon)), varianceOptions)),
+                  ...keys(
+                    filter(
+                      compose(not, equals(heroInstance.boon)),
+                      varianceOptions,
+                    ),
+                  ),
                 ]}
-                selected={heroInstance.bane
-                  ? invertObj(varianceOptions)[heroInstance.bane]
-                  : '—'}
+                selected={
+                  heroInstance.bane
+                    ? invertObj(varianceOptions)[heroInstance.bane]
+                    : '—'
+                }
               />
             </div>
           </div>
         </div>
         <div className="section">
-          {
-            values(mapObjIndexed(
-              (skill: string | void, skillType: SkillType) => (
-                <div
-                  key={skillType}
-                  className="active-skill"
-                >
+          {values(
+            mapObjIndexed(
+              (skill: string | void, skillType: SkillType) =>
+                <div key={skillType} className="active-skill">
                   <img
                     className="skill-icon"
                     src={`${staticUrl}30px-${skillIcons[skillType]}`}
@@ -286,8 +307,7 @@ const HeroBuilder = ({
                       Router.push('/skills');
                     }}
                   />
-                </div>
-              ),
+                </div>,
               ({
                 // Enumerate all properties to ensure they are all iterable.
                 // This fixes issue #52
@@ -300,8 +320,8 @@ const HeroBuilder = ({
                 SEAL: undefined,
                 ...heroInstance.skills,
               }: InstanceSkills),
-            ))
-          }
+            ),
+          )}
         </div>
       </div>
     </div>
