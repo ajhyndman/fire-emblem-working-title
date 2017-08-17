@@ -1,10 +1,5 @@
 // @flow
-import {
-  map,
-  max,
-  replace,
-  test,
-} from 'ramda';
+import { map, max, replace, test } from 'ramda';
 
 import {
   getMitigationType,
@@ -39,8 +34,7 @@ import { invertContext } from './heroInstance';
 import type { Context, HeroInstance } from './heroInstance';
 import type { SpecialType } from './skillHelpers';
 
-
-const truncate = (x: number) => x >= 0 ? Math.floor(x) : Math.ceil(x);
+const truncate = (x: number) => (x >= 0 ? Math.floor(x) : Math.ceil(x));
 
 /**
  * Formula derived from:
@@ -63,26 +57,28 @@ const dmgFormula = (
   adv: number = 0.0,
   mit: number = 0,
   classModifier: number = 1.0,
-  bonusDamage: number = 0,       // From skills like Bonfire
-  offensiveMult: number = 0.0,   // From skills like Glimmer
-  mitigationMult: number = 0.0,  // From skills like Luna
-) => truncate(
-  (1 + offensiveMult) *
+  bonusDamage: number = 0, // From skills like Bonfire
+  offensiveMult: number = 0.0, // From skills like Glimmer
+  mitigationMult: number = 0.0, // From skills like Luna
+) =>
   truncate(
-    (classModifier) *
-    max(
-      truncate(atk * eff)
-      + truncate(truncate(atk * eff) * adv)
-      + truncate(bonusDamage)
-      - (mit - truncate(mit * mitigationMult)),
-      0,
-    ),
-  ),
-);
+    (1 + offensiveMult) *
+      truncate(
+        classModifier *
+          max(
+            truncate(atk * eff) +
+              truncate(truncate(atk * eff) * adv) +
+              truncate(bonusDamage) -
+              (mit - truncate(mit * mitigationMult)),
+            0,
+          ),
+      ),
+  );
 
 const hasWeaponBreaker = (hero: HeroInstance, context: Context) => {
   const heroBWeapon = getWeaponType(context.enemy);
-  let necessaryBreaker = replace(/(Red|Green|Blue|Neutral)\s/, '', heroBWeapon) + 'breaker';
+  let necessaryBreaker =
+    replace(/(Red|Green|Blue|Neutral)\s/, '', heroBWeapon) + 'breaker';
   if (test(/Tome/, heroBWeapon)) {
     // R Tomebreaker, G Tomebreaker, B Tomebreaker
     necessaryBreaker = heroBWeapon[0] + ' ' + necessaryBreaker;
@@ -91,31 +87,37 @@ const hasWeaponBreaker = (hero: HeroInstance, context: Context) => {
     return true;
   }
   if (necessaryBreaker === 'Daggerbreaker') {
-    return hasSkill(hero, 'WEAPON', 'Assassin\'s Bow');
+    return hasSkill(hero, 'WEAPON', "Assassin's Bow");
   }
   return false;
 };
 
 // Whether or not a unit will perform a follow-up attack.
-const doesFollowUp = (
-  instanceA: HeroInstance,
-  context: Context,
-) => {
+const doesFollowUp = (instanceA: HeroInstance, context: Context) => {
   const instanceB = context.enemy;
-  if (context.isAttacker && (hasSkill(instanceA, 'PASSIVE_B', 'Windsweep')
-      || hasSkill(instanceA, 'PASSIVE_B', 'Watersweep'))) {
+  if (
+    context.isAttacker &&
+    (hasSkill(instanceA, 'PASSIVE_B', 'Windsweep') ||
+      hasSkill(instanceA, 'PASSIVE_B', 'Watersweep'))
+  ) {
     return false;
   }
   const aHasBreaker = hasWeaponBreaker(instanceA, context);
-  const bHasBreaker = hasWeaponBreaker(instanceB, invertContext(instanceA, context));
-  const guaranteedFollowup = aHasBreaker
-    || (context.isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Brash Assault')
-        && canRetaliate(instanceA, context))
-    || (!context.isAttacker && hasSkill(instanceA, 'WEAPON', 'Armads'))
-    || (!context.isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Quick Riposte'));
-  const cannotFollowup = bHasBreaker
-    || hasSkill(instanceA, 'PASSIVE_B', 'Wary Fighter')
-    || hasSkill(instanceB, 'PASSIVE_B', 'Wary Fighter');
+  const bHasBreaker = hasWeaponBreaker(
+    instanceB,
+    invertContext(instanceA, context),
+  );
+  const guaranteedFollowup =
+    aHasBreaker ||
+    (context.isAttacker &&
+      hasSkill(instanceA, 'PASSIVE_B', 'Brash Assault') &&
+      canRetaliate(instanceA, context)) ||
+    (!context.isAttacker && hasSkill(instanceA, 'WEAPON', 'Armads')) ||
+    (!context.isAttacker && hasSkill(instanceA, 'PASSIVE_B', 'Quick Riposte'));
+  const cannotFollowup =
+    bHasBreaker ||
+    hasSkill(instanceA, 'PASSIVE_B', 'Wary Fighter') ||
+    hasSkill(instanceB, 'PASSIVE_B', 'Wary Fighter');
   // Guaranteed-followup and cannot-followup skills cancel out and it comes down to speed.
   if (guaranteedFollowup && !cannotFollowup) {
     return true;
@@ -123,16 +125,18 @@ const doesFollowUp = (
     return false;
   }
   return (
-    (getStat(instanceA, 'spd', 40, context)
-    - getStat(instanceB, 'spd', 40, invertContext(instanceA, context)))
-    >= 5
+    getStat(instanceA, 'spd', 40, context) -
+      getStat(instanceB, 'spd', 40, invertContext(instanceA, context)) >=
+    5
   );
 };
 
 // Healers do half-damage
 const classModifier = (instance: HeroInstance) =>
-  (getWeaponType(instance) === 'Neutral Staff'
-    && !hasSkill(instance, 'PASSIVE_B', 'Wrathful Staff')) ? 0.5 : 1;
+  getWeaponType(instance) === 'Neutral Staff' &&
+  !hasSkill(instance, 'PASSIVE_B', 'Wrathful Staff')
+    ? 0.5
+    : 1;
 
 const advantageBonus = (heroA: HeroInstance, context: Context) => {
   const heroB = context.enemy;
@@ -142,15 +146,15 @@ const advantageBonus = (heroA: HeroInstance, context: Context) => {
   const weaponB = getSkillName(heroB, 'WEAPON');
   let advantage = 0;
   if (
-    (colorA === 'RED' && colorB === 'GREEN')
-    || (colorA === 'GREEN' && colorB === 'BLUE')
-    || (colorA === 'BLUE' && colorB === 'RED')
+    (colorA === 'RED' && colorB === 'GREEN') ||
+    (colorA === 'GREEN' && colorB === 'BLUE') ||
+    (colorA === 'BLUE' && colorB === 'RED')
   ) {
     advantage = 1;
   } else if (
-    (colorA === 'RED' && colorB === 'BLUE')
-    || (colorA === 'GREEN' && colorB === 'RED')
-    || (colorA === 'BLUE' && colorB === 'GREEN')
+    (colorA === 'RED' && colorB === 'BLUE') ||
+    (colorA === 'GREEN' && colorB === 'RED') ||
+    (colorA === 'BLUE' && colorB === 'GREEN')
   ) {
     advantage = -1;
   } else if (colorB === 'NEUTRAL' && test(/raven/, weaponA)) {
@@ -163,15 +167,23 @@ const advantageBonus = (heroA: HeroInstance, context: Context) => {
   // Weapon type advantage multipliers don't stack. Source:
   // https://feheroes.wiki/Damage_Calculation#Weapon_Triangle_Advantage
   let advantageMultiplier = 0.2;
-  if (test(/(Ruby|Sapphire|Emerald)/, weaponA)
-      || test(/(Ruby|Sapphire|Emerald)/, weaponB)
-      || passiveA === 'Triangle Adept 3'
-      || passiveB === 'Triangle Adept 3') {
-    advantageMultiplier = 0.4;  // 20%
-  } else if (passiveA === 'Triangle Adept 2' || passiveB === 'Triangle Adept 2') {
-    advantageMultiplier = 0.35;  // 15%
-  } else if (passiveA === 'Triangle Adept 1' || passiveB === 'Triangle Adept 1') {
-    advantageMultiplier = 0.3;  // 10%
+  if (
+    test(/(Ruby|Sapphire|Emerald)/, weaponA) ||
+    test(/(Ruby|Sapphire|Emerald)/, weaponB) ||
+    passiveA === 'Triangle Adept 3' ||
+    passiveB === 'Triangle Adept 3'
+  ) {
+    advantageMultiplier = 0.4; // 20%
+  } else if (
+    passiveA === 'Triangle Adept 2' ||
+    passiveB === 'Triangle Adept 2'
+  ) {
+    advantageMultiplier = 0.35; // 15%
+  } else if (
+    passiveA === 'Triangle Adept 1' ||
+    passiveB === 'Triangle Adept 1'
+  ) {
+    advantageMultiplier = 0.3; // 10%
   }
   return advantage * advantageMultiplier;
 };
@@ -182,39 +194,50 @@ const effectiveBonus = (attacker: HeroInstance, context: Context) => {
   }
   const defenderMoveType = getMoveType(context.enemy);
   if (
-    getWeaponType(attacker) === 'Neutral Bow'
-    && defenderMoveType === 'Flying'
+    getWeaponType(attacker) === 'Neutral Bow' &&
+    defenderMoveType === 'Flying'
   ) {
     return 1.5;
   }
   const weaponName = getSkillName(attacker, 'WEAPON');
-  if ((test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) && defenderMoveType === 'Armored')
-      || (test(/wolf/, weaponName) && defenderMoveType === 'Cavalry')
-      || (test(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry')
-      || (test(/Excalibur/, weaponName) && defenderMoveType === 'Flying')
-      || (test(/(Falchion|Naga)/, weaponName) && test(/Breath/, getWeaponType(context.enemy)))
-    ) {
+  if (
+    (test(/(Heavy Spear|Armorslayer|Hammer)/, weaponName) &&
+      defenderMoveType === 'Armored') ||
+    (test(/wolf/, weaponName) && defenderMoveType === 'Cavalry') ||
+    (test(/Poison Dagger/, weaponName) && defenderMoveType === 'Infantry') ||
+    (test(/Excalibur/, weaponName) && defenderMoveType === 'Flying') ||
+    (test(/(Falchion|Naga)/, weaponName) &&
+      test(/Breath/, getWeaponType(context.enemy)))
+  ) {
     return 1.5;
-  }
-  else return 1;
+  } else return 1;
 };
 
 const canRetaliate = (attacker: HeroInstance, context: Context) => {
   const defender = context.enemy;
-  if (getSkillName(defender, 'WEAPON') === ''
-      || hasSkill(attacker, 'WEAPON', 'Firesweep')
-      || hasSkill(defender, 'WEAPON', 'Firesweep')
-      || hasSkill(attacker, 'PASSIVE_B', 'Dazzling Staff')) {
+  if (
+    getSkillName(defender, 'WEAPON') === '' ||
+    hasSkill(attacker, 'WEAPON', 'Firesweep') ||
+    hasSkill(defender, 'WEAPON', 'Firesweep') ||
+    hasSkill(attacker, 'PASSIVE_B', 'Dazzling Staff')
+  ) {
     return false;
   }
   // Windsweep checks for Sword/Lance/Axe/Bow/Dagger = all physical weapons.
   // Watersweep checks for Tome/Staff/Dragonstone = all magical weapons.
-  if ((hasSkill(attacker, 'PASSIVE_B', 'Windsweep') && getMitigationType(defender) === 'def')
-      || (hasSkill(attacker, 'PASSIVE_B', 'Watersweep') && getMitigationType(defender) === 'res')) {
+  if (
+    (hasSkill(attacker, 'PASSIVE_B', 'Windsweep') &&
+      getMitigationType(defender) === 'def') ||
+    (hasSkill(attacker, 'PASSIVE_B', 'Watersweep') &&
+      getMitigationType(defender) === 'res')
+  ) {
     // The attacker must also be faster than the defender.
     const spdReq = getSkillNumbers(attacker, 'PASSIVE_B')[0];
-    if (getStat(attacker, 'spd', 40, context)
-        - getStat(defender, 'spd', 40, invertContext(attacker, context)) >= spdReq) {
+    if (
+      getStat(attacker, 'spd', 40, context) -
+        getStat(defender, 'spd', 40, invertContext(attacker, context)) >=
+      spdReq
+    ) {
       return false;
     }
   }
@@ -223,48 +246,70 @@ const canRetaliate = (attacker: HeroInstance, context: Context) => {
   }
   const passiveA = getSkillName(defender, 'PASSIVE_A');
   const weaponName = getSkillName(defender, 'WEAPON');
-  return (passiveA === 'Close Counter'
-       || passiveA === 'Distant Counter'
-       || weaponName === 'Gradivus'
-       || weaponName === 'Raijinto'
-       || weaponName === 'Ragnell'
-       || weaponName === 'Siegfried'
-       || weaponName === 'Lightning Breath'
-       || weaponName === 'Lightning Breath+');
+  return (
+    passiveA === 'Close Counter' ||
+    passiveA === 'Distant Counter' ||
+    weaponName === 'Gradivus' ||
+    weaponName === 'Raijinto' ||
+    weaponName === 'Ragnell' ||
+    weaponName === 'Siegfried' ||
+    weaponName === 'Lightning Breath' ||
+    weaponName === 'Lightning Breath+'
+  );
 };
 
-const hpRemaining = (dmg, hp, canBeLethal = true) => max(hp - dmg, canBeLethal ? 0 : 1);
+const hpRemaining = (dmg, hp, canBeLethal = true) =>
+  max(hp - dmg, canBeLethal ? 0 : 1);
 
 const hitDmg = (
   attacker: HeroInstance,
   context: Context,
   attackerSpecial: string = '',
   attackerMissingHp: number = 0,
-) => hasSkill(context.enemy, 'SEAL', 'Embla\'s Ward') ? 0 : dmgFormula(
-  getStat(attacker, 'atk', 40, context),
-  effectiveBonus(attacker, context),
-  advantageBonus(attacker, context),
-  getStat(context.enemy, getMitigationType(attacker), 40, invertContext(attacker, context)),
-  classModifier(attacker),
-  getSpecialBonusDamageAmount(attackerSpecial, attacker, context, attackerMissingHp),
-  getSpecialOffensiveMultiplier(attackerSpecial),
-  getSpecialMitigationMultiplier(attackerSpecial),
-);
+) =>
+  hasSkill(context.enemy, 'SEAL', "Embla's Ward")
+    ? 0
+    : dmgFormula(
+        getStat(attacker, 'atk', 40, context),
+        effectiveBonus(attacker, context),
+        advantageBonus(attacker, context),
+        getStat(
+          context.enemy,
+          getMitigationType(attacker),
+          40,
+          invertContext(attacker, context),
+        ),
+        classModifier(attacker),
+        getSpecialBonusDamageAmount(
+          attackerSpecial,
+          attacker,
+          context,
+          attackerMissingHp,
+        ),
+        getSpecialOffensiveMultiplier(attackerSpecial),
+        getSpecialMitigationMultiplier(attackerSpecial),
+      );
 
 // Returns a list of 0s and 1s, representing hero-0 and hero-1 hitting each other.
-export function computeAttackOrder(attacker: HeroInstance, context: Context): Array<number> {
+export function computeAttackOrder(
+  attacker: HeroInstance,
+  context: Context,
+): Array<number> {
   const defender = context.enemy;
   // First, check for the ability to retaliate and skills that affect attack order.
   const attackerHasFollowup = doesFollowUp(attacker, context);
   const defenderCanRetaliate = canRetaliate(attacker, context);
-  const defenderHasFollowup = defenderCanRetaliate
-    && doesFollowUp(defender, invertContext(attacker, context));
-  const defenderCountersFirst = defenderCanRetaliate
-    && (hasSkill(defender, 'PASSIVE_B', 'Vantage')
-      || hasSkill(defender, 'WEAPON', 'Valaskjálf'));
-  const attackerImmediateFollowup = attackerHasFollowup
-    && (hasSkill(attacker, 'PASSIVE_B', 'Desperation')
-      || hasSkill(attacker, 'WEAPON', 'Sol Katti'));
+  const defenderHasFollowup =
+    defenderCanRetaliate &&
+    doesFollowUp(defender, invertContext(attacker, context));
+  const defenderCountersFirst =
+    defenderCanRetaliate &&
+    (hasSkill(defender, 'PASSIVE_B', 'Vantage') ||
+      hasSkill(defender, 'WEAPON', 'Valaskjálf'));
+  const attackerImmediateFollowup =
+    attackerHasFollowup &&
+    (hasSkill(attacker, 'PASSIVE_B', 'Desperation') ||
+      hasSkill(attacker, 'WEAPON', 'Sol Katti'));
 
   // a list of 0s and 1s for attacker and defender.
   let attackOrder = [];
@@ -318,8 +363,8 @@ export const calculateResult = (
 ) => {
   // create new Context objects
   let contexts: Array<Context> = [
-    {enemy: defender, isAttacker: true, allies: [], otherEnemies: []},
-    {enemy: attacker, isAttacker: false, allies: [], otherEnemies: []},
+    { enemy: defender, isAttacker: true, allies: [], otherEnemies: [] },
+    { enemy: attacker, isAttacker: false, allies: [], otherEnemies: [] },
   ];
   // Apply start-of-turn buffs/debuffs
   attacker = withTurnStartBuffs(attacker, contexts[0]);
@@ -328,31 +373,48 @@ export const calculateResult = (
   defender = withTurnStartDebuffs(defender, contexts[1]);
   // Update context objects to include new buffs/debuffs.
   contexts = [
-    {enemy: defender, ...contexts[0]},
-    {enemy: attacker, ...contexts[1]},
+    { enemy: defender, ...contexts[0] },
+    { enemy: attacker, ...contexts[1] },
   ];
 
   const attackOrder = computeAttackOrder(attacker, contexts[0]);
 
   const heroes = [attacker, defender];
-  const damages = [hitDmg(attacker, contexts[0]), hitDmg(defender, contexts[1])];
+  const damages = [
+    hitDmg(attacker, contexts[0]),
+    hitDmg(defender, contexts[1]),
+  ];
   const maxHps = [getStat(attacker, 'hp'), getStat(defender, 'hp')];
-  const specialNames: Array<string> =
-    [getSkillName(attacker, 'SPECIAL'), getSkillName(defender, 'SPECIAL')];
+  const specialNames: Array<string> = [
+    getSkillName(attacker, 'SPECIAL'),
+    getSkillName(defender, 'SPECIAL'),
+  ];
   const specialTypes: Array<SpecialType> = map(getSpecialType, heroes);
-  let maxCds: Array<number> = [getSpecialCooldown(attacker), getSpecialCooldown(defender)];
+  let maxCds: Array<number> = [
+    getSpecialCooldown(attacker),
+    getSpecialCooldown(defender),
+  ];
   let specialCds: Array<number> = [
-    maxCds[0] === -1 ? -1 : Math.max(0, maxCds[0] - attacker.state.specialCharge),
-    maxCds[1] === -1 ? -1 : Math.max(0, maxCds[1] - defender.state.specialCharge),
+    maxCds[0] === -1
+      ? -1
+      : Math.max(0, maxCds[0] - attacker.state.specialCharge),
+    maxCds[1] === -1
+      ? -1
+      : Math.max(0, maxCds[1] - defender.state.specialCharge),
   ];
   // How many times the unit would attack according to attackOrder.
   let numAttacks = [0, 0];
   // How many times the unit actually attacked.
   let actualNumAttacks = [0, 0];
-  let healths = [maxHps[0] - attacker.state.hpMissing, maxHps[1] - defender.state.hpMissing];
+  let healths = [
+    maxHps[0] - attacker.state.hpMissing,
+    maxHps[1] - defender.state.hpMissing,
+  ];
   // AOE Damage
-  const aoeDamage = specialCds[0] === 0
-    ? getSpecialAOEDamageAmount(specialNames[0], attacker, contexts[0]) : 0;
+  const aoeDamage =
+    specialCds[0] === 0
+      ? getSpecialAOEDamageAmount(specialNames[0], attacker, contexts[0])
+      : 0;
   let specialDamages = [aoeDamage, 0];
   healths[1] = hpRemaining(aoeDamage, healths[1], false);
   // Main combat loop.
@@ -362,45 +424,58 @@ export const calculateResult = (
     if (healths[heroIndex] > 0 && healths[1] > 0) {
       actualNumAttacks[heroIndex]++;
       const otherHeroIndex: number = 1 - heroIndex;
-      let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb') ? 0.5 : 0.0;
+      let lifestealPercent = hasSkill(heroes[heroIndex], 'WEAPON', 'Absorb')
+        ? 0.5
+        : 0.0;
 
       // Attacker Special. Use '' for no special.
       let attackerSpecial = '';
-      let dmgWithoutSpecial = hitDmg(
-        heroes[heroIndex],
-        contexts[heroIndex],
-      );
+      let dmgWithoutSpecial = hitDmg(heroes[heroIndex], contexts[heroIndex]);
       if (specialCds[heroIndex] === 0 && specialTypes[heroIndex] === 'ATTACK') {
         attackerSpecial = specialNames[heroIndex];
         lifestealPercent += getSpecialLifestealPercent(attackerSpecial);
         specialCds[heroIndex] = maxCds[heroIndex];
-      } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[heroIndex] > 0) {
-        specialCds[heroIndex] = Math.max(0, specialCds[heroIndex] - getSpecialChargeForAttack(
-          heroes[heroIndex],
-          contexts[heroIndex],
-        ));
+      } else if (
+        specialTypes[heroIndex] !== 'HEAL' &&
+        specialCds[heroIndex] > 0
+      ) {
+        specialCds[heroIndex] = Math.max(
+          0,
+          specialCds[heroIndex] -
+            getSpecialChargeForAttack(heroes[heroIndex], contexts[heroIndex]),
+        );
       }
       let dmg = hitDmg(
         heroes[heroIndex],
         contexts[heroIndex],
         attackerSpecial,
-        getStat(heroes[heroIndex], 'hp') - healths[heroIndex],  // missing hp
+        getStat(heroes[heroIndex], 'hp') - healths[heroIndex], // missing hp
       );
-      specialDamages[heroIndex] += (dmg - dmgWithoutSpecial);
+      specialDamages[heroIndex] += dmg - dmgWithoutSpecial;
 
       // Defender Special
-      if (specialCds[otherHeroIndex] === 0 && specialTypes[otherHeroIndex] === 'ATTACKED') {
+      if (
+        specialCds[otherHeroIndex] === 0 &&
+        specialTypes[otherHeroIndex] === 'ATTACKED'
+      ) {
         const specialName = specialNames[otherHeroIndex];
         if (specialName === 'Miracle' && dmg >= healths[otherHeroIndex]) {
           dmg = healths[otherHeroIndex] - 1;
           specialCds[otherHeroIndex] = maxCds[otherHeroIndex];
-        // The unit that initiated combat decided the range of the battle.
+          // The unit that initiated combat decided the range of the battle.
         } else if (doesDefenseSpecialApply(specialName, getRange(attacker))) {
-          dmg = Math.ceil(dmg * (1 - getSpecialDefensiveMultiplier(specialName)));
+          dmg = Math.ceil(
+            dmg * (1 - getSpecialDefensiveMultiplier(specialName)),
+          );
           specialCds[otherHeroIndex] = maxCds[otherHeroIndex];
         }
-      } else if (specialTypes[heroIndex] !== 'HEAL' && specialCds[otherHeroIndex] > 0) {
-        specialCds[otherHeroIndex] -= getSpecialChargeWhenAttacked(contexts[otherHeroIndex]);
+      } else if (
+        specialTypes[heroIndex] !== 'HEAL' &&
+        specialCds[otherHeroIndex] > 0
+      ) {
+        specialCds[otherHeroIndex] -= getSpecialChargeWhenAttacked(
+          contexts[otherHeroIndex],
+        );
       }
       // Apply damage
       healths[otherHeroIndex] = hpRemaining(dmg, healths[otherHeroIndex], true);
@@ -428,15 +503,27 @@ export const calculateResult = (
   for (let heroIndex of [0, 1]) {
     // Fury
     if (hasSkill(heroes[heroIndex], 'PASSIVE_A', 'Fury')) {
-      postCombatDmg[heroIndex] += getSkillNumbers(heroes[heroIndex], 'PASSIVE_A')[1];
+      postCombatDmg[heroIndex] += getSkillNumbers(
+        heroes[heroIndex],
+        'PASSIVE_A',
+      )[1];
     }
     // Pain (only triggers if the staff user was able to hit something)
     const otherHeroI = 1 - heroIndex;
-    if (actualNumAttacks[otherHeroI] > 0 && hasSkill(heroes[otherHeroI], 'WEAPON', 'Pain')) {
-      postCombatDmg[heroIndex] += getSkillNumbers(heroes[otherHeroI], 'WEAPON')[0];
+    if (
+      actualNumAttacks[otherHeroI] > 0 &&
+      hasSkill(heroes[otherHeroI], 'WEAPON', 'Pain')
+    ) {
+      postCombatDmg[heroIndex] += getSkillNumbers(
+        heroes[otherHeroI],
+        'WEAPON',
+      )[0];
     }
     // Ragnarok's postcombat damage requires: hit the enemy and be at 100% HP. HasSkill checks HP.
-    if (actualNumAttacks[heroIndex] > 0 && hasSkill(heroes[heroIndex], 'WEAPON', 'Ragnarok')) {
+    if (
+      actualNumAttacks[heroIndex] > 0 &&
+      hasSkill(heroes[heroIndex], 'WEAPON', 'Ragnarok')
+    ) {
       postCombatDmg[heroIndex] += 5;
     }
     // Only apply postcombat damage to living units
@@ -452,9 +539,17 @@ export const calculateResult = (
   attacker = withPostCombatBuffs(attacker, actualNumAttacks[0] > 0);
   defender = withPostCombatBuffs(defender, actualNumAttacks[1] > 0);
   attacker = withPostCombatDebuffs(
-    attacker, contexts[0], actualNumAttacks[1] > 0, healths[1] > 0);
+    attacker,
+    contexts[0],
+    actualNumAttacks[1] > 0,
+    healths[1] > 0,
+  );
   defender = withPostCombatDebuffs(
-    defender, contexts[1], actualNumAttacks[0] > 0, healths[0] > 0);
+    defender,
+    contexts[1],
+    actualNumAttacks[0] > 0,
+    healths[0] > 0,
+  );
 
   return {
     combatInfo: {

@@ -2,17 +2,16 @@
 import test from 'tape';
 import { contains } from 'ramda';
 
-import {  getInheritableSkills } from '../src/heroHelpers';
+import { getInheritableSkills } from '../src/heroHelpers';
 
-
-test('inheritableTomes', (t) => {
+test('inheritableTomes', t => {
   t.plan(2);
   const weapons = getInheritableSkills('Leo', 'WEAPON');
   t.equal(contains('Brynhildr', weapons), true); // Exclusive to Leo
   t.equal(contains('Cymbeline', weapons), false); // Exclusive to Leo
 });
 
-test('inheritableBreaths', (t) => {
+test('inheritableBreaths', t => {
   t.plan(10);
   const weapons = getInheritableSkills('Fae', 'WEAPON');
   t.equal(contains('Dark Breath', weapons), true);
@@ -27,7 +26,7 @@ test('inheritableBreaths', (t) => {
   t.equal(contains('Lightning Breath+', weapons), true);
 });
 
-test('inheritableSeals', (t) => {
+test('inheritableSeals', t => {
   t.plan(3);
   const seals = getInheritableSkills('Lilina', 'SEAL');
   t.equal(contains('Attack +1', seals), true);
@@ -35,12 +34,12 @@ test('inheritableSeals', (t) => {
   t.equal(contains('Speed +1', seals), true);
 });
 
-test('restrictions', (t) => {
+test('restrictions', t => {
   t.plan(10);
   const aPassives = getInheritableSkills('Catria', 'PASSIVE_A');
   const bPassives = getInheritableSkills('Catria', 'PASSIVE_B');
   const cPassives = getInheritableSkills('Catria', 'PASSIVE_C');
-  t.equal(contains('Iote\'s Shield', aPassives), true); // Fliers Only
+  t.equal(contains("Iote's Shield", aPassives), true); // Fliers Only
   t.equal(contains('Swordbreaker 3', bPassives), true); // Excludes Green
   t.equal(contains('B Tomebreaker 3', bPassives), true); // Excludes Red
   t.equal(contains('Poison Strike 3', bPassives), true); // Excludes Staves

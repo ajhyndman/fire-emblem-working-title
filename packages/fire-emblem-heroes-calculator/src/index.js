@@ -1,8 +1,6 @@
 // @flow
 
-export {
-  calculateResult,
-} from './damageCalculation';
+export { calculateResult } from './damageCalculation';
 
 export {
   getCurrentHp,
@@ -27,7 +25,4 @@ export type {
   Stat,
 } from './heroInstance';
 
-export {
-  getSpecialCooldown,
-  isMaxTier,
-} from './skillHelpers';
+export { getSpecialCooldown, isMaxTier } from './skillHelpers';

@@ -8,8 +8,7 @@ import {
 } from '../src/heroInstance';
 import { getDefaultSkills } from '../src/heroHelpers';
 
-
-test('exportInstance', (t) => {
+test('exportInstance', t => {
   t.plan(4);
 
   // default instance
@@ -98,7 +97,7 @@ Charge: 1\r
   );
 });
 
-test('importInstance', (t) => {
+test('importInstance', t => {
   t.plan(5);
 
   // default instance

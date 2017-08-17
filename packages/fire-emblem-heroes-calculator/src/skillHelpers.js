@@ -29,14 +29,21 @@ import {
 import { getDefaultBuffs, invertContext } from './heroInstance';
 import type { Context, HeroInstance, Stat } from './heroInstance';
 
-
-export type SpecialType = 'INITIATE' | 'ATTACK' | 'ATTACKED' | 'HEAL' | 'OTHER' | void;
-
+export type SpecialType =
+  | 'INITIATE'
+  | 'ATTACK'
+  | 'ATTACKED'
+  | 'HEAL'
+  | 'OTHER'
+  | void;
 
 const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
 
 // Returns a list of numbers from the effect of the skill, or [0].
-export function getSkillNumbers(hero: HeroInstance, skillType: SkillType): Array<number> {
+export function getSkillNumbers(
+  hero: HeroInstance,
+  skillType: SkillType,
+): Array<number> {
   const skill = getSkillObject(skillType, getSkillName(hero, skillType));
   if (skill === undefined) {
     return [0];
@@ -52,7 +59,10 @@ export function getStatKey(text: string): Stat {
   return toLower(textMatch ? textMatch[2] : 'atk');
 }
 
-export function hpRequirementSatisfied(hero: HeroInstance, skillType: SkillType) {
+export function hpRequirementSatisfied(
+  hero: HeroInstance,
+  skillType: SkillType,
+) {
   const skill = getSkillObject(skillType, getSkillName(hero, skillType));
   if (skill !== undefined) {
     // Some skills need the unit to be at full health
@@ -83,8 +93,7 @@ export function getStatValue(
   const skill = getSkillObject(skillType, skillName);
   if (skill === undefined) {
     return 0;
-  }
-  else if (skill.type === 'WEAPON') {
+  } else if (skill.type === 'WEAPON') {
     let statValue = 0;
     if (statKey === 'atk') {
       // Flow does not like conversion directly to WeaponSkill so I convert to an any instead
@@ -116,18 +125,26 @@ export function getStatValue(
       if (skillName === 'Ragnarok' && hpAboveThreshold(hero, 100)) {
         statValue += 5;
       }
-      if (skillName === 'Regal Blade' && context !== undefined
-          && hpAboveThreshold(context.enemy, 100)) {
+      if (
+        skillName === 'Regal Blade' &&
+        context !== undefined &&
+        hpAboveThreshold(context.enemy, 100)
+      ) {
         statValue += 2;
       }
     } else if (statKey === 'def' || statKey === 'res') {
-      if ((skillName === 'Binding Blade' || skillName === 'Naga') && isDefender) {
+      if (
+        (skillName === 'Binding Blade' || skillName === 'Naga') &&
+        isDefender
+      ) {
         statValue += 2;
       }
     }
     return statValue;
   } else if (skill.type === 'PASSIVE_A' || skill.type === 'SEAL') {
-    const statRegex = new RegExp(statKey === 'hp' ? 'max HP' : capitalize(statKey));
+    const statRegex = new RegExp(
+      statKey === 'hp' ? 'max HP' : capitalize(statKey),
+    );
     if (test(statRegex, skill.effect)) {
       const skillNumbers = getSkillNumbers(hero, skillType);
       // Atk/Def/Spd/Res/HP+, 'Attack Def+', and Fury
@@ -155,27 +172,41 @@ export function getStatValue(
         }
       }
       // Earth Boost: +def if HP - foeHP > x at start of combat.
-      if (statKey === 'def' && context !== undefined && test(/Earth Boost/, skillName)) {
+      if (
+        statKey === 'def' &&
+        context !== undefined &&
+        test(/Earth Boost/, skillName)
+      ) {
         const hpDiffRequired = skillNumbers[0];
         // It's ok for getStat(def) to call getStat(hp) because max HP is constant.
         const ownHP = getStat(hero, 'hp', 40) - hero.state.hpMissing;
-        const foeHP = getStat(context.enemy, 'hp', 40) - context.enemy.state.hpMissing;
+        const foeHP =
+          getStat(context.enemy, 'hp', 40) - context.enemy.state.hpMissing;
         if (ownHP - foeHP >= hpDiffRequired) {
           return skillNumbers[1];
         }
       }
       // Wind Boost: +spd if HP - foeHP > x at start of combat.
-      if (statKey === 'spd' && context !== undefined && test(/Wind Boost/, skillName)) {
+      if (
+        statKey === 'spd' &&
+        context !== undefined &&
+        test(/Wind Boost/, skillName)
+      ) {
         const hpDiffRequired = skillNumbers[0];
         // It's ok for getStat(def) to call getStat(hp) because max HP is constant.
         const ownHP = getStat(hero, 'hp', 40) - hero.state.hpMissing;
-        const foeHP = getStat(context.enemy, 'hp', 40) - context.enemy.state.hpMissing;
+        const foeHP =
+          getStat(context.enemy, 'hp', 40) - context.enemy.state.hpMissing;
         if (ownHP - foeHP >= hpDiffRequired) {
           return skillNumbers[1];
         }
       }
       // Distant Def: +def/res when attacked from a distance
-      if (isDefender && test(/Distant Def/, skillName) && context !== undefined) {
+      if (
+        isDefender &&
+        test(/Distant Def/, skillName) &&
+        context !== undefined
+      ) {
         if (getRange(context.enemy) === 2) {
           return skillNumbers[0];
         }
@@ -184,7 +215,6 @@ export function getStatValue(
   }
   return 0;
 }
-
 
 /*
  * Helpers to check a property of a skill by name.
@@ -207,9 +237,11 @@ export function isMaxTier(skillName: string): boolean {
 
 // Checks for skills that cost 0 SP.
 export function isFreeSkill(skillName: string): boolean {
-  return test(/^(Iron|Steel|Fire Breath\+?$|Fire$|Flux$|Wind$|Thunder$)/, skillName);
+  return test(
+    /^(Iron|Steel|Fire Breath\+?$|Fire$|Flux$|Wind$|Thunder$)/,
+    skillName,
+  );
 }
-
 
 /*
  * Special Related Helpers
@@ -221,61 +253,81 @@ export function getSpecialType(instance: HeroInstance): SpecialType {
   if (instance.skills['SPECIAL'] === undefined) return undefined;
   if (test(/When healing/, getSkillEffect(instance, 'SPECIAL'))) return 'HEAL';
   if (test(/Galeforce/, getSkillName(instance, 'SPECIAL'))) return 'OTHER';
-  if (test(/Reduces damage/, getSkillEffect(instance, 'SPECIAL'))) return 'ATTACKED';
+  if (test(/Reduces damage/, getSkillEffect(instance, 'SPECIAL')))
+    return 'ATTACKED';
   if (test(/Miracle/, getSkillName(instance, 'SPECIAL'))) return 'ATTACKED';
-  if (test(/(Blazing|Growing|Rising)/, getSkillName(instance, 'SPECIAL'))) return 'INITIATE';
+  if (test(/(Blazing|Growing|Rising)/, getSkillName(instance, 'SPECIAL')))
+    return 'INITIATE';
   return 'ATTACK';
 }
 
 // Returns the cooldown of the special or -1. Accounts for killer weapons.
 export const getSpecialCooldown = (instance: HeroInstance) => {
   const skill = getSkillObject('SPECIAL', getSkillName(instance, 'SPECIAL'));
-  return ((!skill || typeof skill.cooldown !== 'number') ? -1
-    : skill.cooldown
-    + (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0)
-    + (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0));
+  return !skill || typeof skill.cooldown !== 'number'
+    ? -1
+    : skill.cooldown +
+      (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0) +
+      (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0);
 };
 
 // Only considers damage reduction specials
 export function doesDefenseSpecialApply(skillName: string, attackRange: 1 | 2) {
-  return (attackRange === 1 && test(/(Pavise|Buckler|Escutcheon)/, skillName))
-    || (attackRange === 2 && test(/(Aegis|Holy Vestments|Sacred Cowl)/, skillName));
+  return (
+    (attackRange === 1 && test(/(Pavise|Buckler|Escutcheon)/, skillName)) ||
+    (attackRange === 2 && test(/(Aegis|Holy Vestments|Sacred Cowl)/, skillName))
+  );
 }
 // Returns the percent of defense reduced by a special.
 export function getSpecialMitigationMultiplier(skillName: string): number {
-  return test(/(New Moon|Moonbow)/, skillName) ? 0.3
-    : (test(/(Luna|Aether)/, skillName) ? 0.5 : 0);
+  return test(/(New Moon|Moonbow)/, skillName)
+    ? 0.3
+    : test(/(Luna|Aether)/, skillName) ? 0.5 : 0;
 }
 // Returns a flat amount of nonLethal damage for an AOE special.
 export function getSpecialAOEDamageAmount(
-    skillName: string,
-    hero: HeroInstance,
-    context: Context,
+  skillName: string,
+  hero: HeroInstance,
+  context: Context,
 ): number {
   const atk = getStat(hero, 'atk', 40, context);
-  const def = getStat(context.enemy, getMitigationType(hero), 40, invertContext(hero, context));
-  const multiplier = test(/(Blazing)/, skillName) ? 1.5
-    : (test(/(Growing|Rising)/, skillName) ? 1.0 : 0);
+  const def = getStat(
+    context.enemy,
+    getMitigationType(hero),
+    40,
+    invertContext(hero, context),
+  );
+  const multiplier = test(/(Blazing)/, skillName)
+    ? 1.5
+    : test(/(Growing|Rising)/, skillName) ? 1.0 : 0;
   return Math.floor(multiplier * (atk - def));
 }
 // Returns a flat amount of bonus damage for a stat-based special (or missing HP special)
 export function getSpecialBonusDamageAmount(
-    skillName: string,
-    attacker: HeroInstance,
-    context: Context,
-    attackerMissingHp: number,
+  skillName: string,
+  attacker: HeroInstance,
+  context: Context,
+  attackerMissingHp: number,
 ): number {
-  const woDaoBonus = (skillName !== '' && skillName !== undefined
-                      && getSpecialType(attacker) === 'ATTACK'
-                      && hasSkill(attacker, 'WEAPON', 'Wo Dao')) ? 10 : 0;
+  const woDaoBonus =
+    skillName !== '' &&
+    skillName !== undefined &&
+    getSpecialType(attacker) === 'ATTACK' &&
+    hasSkill(attacker, 'WEAPON', 'Wo Dao')
+      ? 10
+      : 0;
   let stat = 'def';
   if (test(/Dra(c|g)on/, skillName)) stat = 'atk';
   if (test(/(Bonfire|Glowing E|Ignis)/, skillName)) stat = 'def';
   if (test(/(Glacies|Chilling W|Iceberg)/, skillName)) stat = 'res';
   let ratio = 0.0;
   if (test(/(Glacies|Ignis)/, skillName)) ratio = 0.8;
-  if (test(/(Bonfire|Glowing E|Chilling W|Iceberg|Dragon F|Vengeance)/, skillName)) ratio = 0.5;
-  if (test(/(Draconic A|Dragon G|Reprisal|Retribution)/, skillName)) ratio = 0.3;
+  if (
+    test(/(Bonfire|Glowing E|Chilling W|Iceberg|Dragon F|Vengeance)/, skillName)
+  )
+    ratio = 0.5;
+  if (test(/(Draconic A|Dragon G|Reprisal|Retribution)/, skillName))
+    ratio = 0.3;
   if (test(/(Reprisal|Retribution|Vengeance)/, skillName)) {
     return woDaoBonus + Math.floor(attackerMissingHp * ratio);
   }
@@ -283,18 +335,23 @@ export function getSpecialBonusDamageAmount(
 }
 // Returns the percent of damage increased by a special
 export function getSpecialOffensiveMultiplier(skillName: string): number {
-  return test(/Astra/, skillName) ? 1.5
-    : (test(/(Glimmer|Night Sky)/, skillName) ? 0.5 : 0);
+  return test(/Astra/, skillName)
+    ? 1.5
+    : test(/(Glimmer|Night Sky)/, skillName) ? 0.5 : 0;
 }
 // Returns the percent of damage reduced by a special.
 export function getSpecialDefensiveMultiplier(skillName: string): number {
-  return test(/(Pavise|Aegis)/, skillName) ? 0.5
-    : (test(/(Buckler|Escutcheon|Holy Vestments|Sacred Cowl)/, skillName) ? 0.3 : 0);
+  return test(/(Pavise|Aegis)/, skillName)
+    ? 0.5
+    : test(/(Buckler|Escutcheon|Holy Vestments|Sacred Cowl)/, skillName)
+      ? 0.3
+      : 0;
 }
 // Returns the percent of damage increased by a special
 export function getSpecialLifestealPercent(skillName: string): number {
-  return test(/(Aether|Sol)/, skillName) ? 0.5
-    : (test(/(Daylight|Noontime)/, skillName) ? 0.3 : 0.0);
+  return test(/(Aether|Sol)/, skillName)
+    ? 0.5
+    : test(/(Daylight|Noontime)/, skillName) ? 0.3 : 0.0;
 }
 
 // Returns the number of special charges generated per attack (usually 1).
@@ -305,8 +362,11 @@ export function getSpecialChargeForAttack(
   let specialChargePerAtk = 1;
   if (hasSkill(hero, 'PASSIVE_A', 'Heavy Blade')) {
     const atkReq = getSkillNumbers(hero, 'PASSIVE_A')[0];
-    if (getStat(hero, 'atk', 40, context)
-        - getStat(context.enemy, 'atk', 40, invertContext(hero, context)) >= atkReq) {
+    if (
+      getStat(hero, 'atk', 40, context) -
+        getStat(context.enemy, 'atk', 40, invertContext(hero, context)) >=
+      atkReq
+    ) {
       specialChargePerAtk += 1;
     }
   }
@@ -319,7 +379,7 @@ export function getSpecialChargeForAttack(
 // Returns the number of special charges generated when opponent attacks you (usually 1).
 // OtherHero is the one that is attacking you.
 export function getSpecialChargeWhenAttacked(context: Context) {
-  return (hasSkill(context.enemy, 'PASSIVE_B', 'Guard')) ? 0 : 1;
+  return hasSkill(context.enemy, 'PASSIVE_B', 'Guard') ? 0 : 1;
 }
 
 /*
@@ -334,27 +394,24 @@ export function withTurnStartBuffs(hero: HeroInstance, context: Context) {
   if (hasSkill(hero, 'PASSIVE_A', 'Defiant')) {
     const statKey = getStatKey(getSkillName(hero, 'PASSIVE_A'));
     const buffAmount = getSkillNumbers(hero, 'PASSIVE_A')[0];
-    buffs = {...buffs, [statKey]: Math.max(buffs[statKey], buffAmount)};
+    buffs = { ...buffs, [statKey]: Math.max(buffs[statKey], buffAmount) };
   }
   if (hasSkill(hero, 'WEAPON', 'Fólkvangr')) {
-    buffs = {...buffs, atk: Math.max(buffs.atk, 5)};
+    buffs = { ...buffs, atk: Math.max(buffs.atk, 5) };
   }
   // TODO: Hone/Fortify once support for allies is added
-  return {...hero, state: {...hero.state, buffs}};
+  return { ...hero, state: { ...hero.state, buffs } };
 }
 
 // Returns a new version of hero with debuffs applied by otherHero
-export function withTurnStartDebuffs(
-  hero: HeroInstance,
-  context: Context,
-) {
+export function withTurnStartDebuffs(hero: HeroInstance, context: Context) {
   let debuffs = hero.state.debuffs;
   // If this unit is the defender, it is the other unit's turn, and enemy threaten triggers.
   if (!context.isAttacker) {
     // TODO: threaten X
     // Eckesachs, Fensalir
   }
-  return {...hero, state: {...hero.state, debuffs}};
+  return { ...hero, state: { ...hero.state, debuffs } };
 }
 
 // Returns a new hero with updated buffs
@@ -370,7 +427,7 @@ export function withPostCombatBuffs(hero: HeroInstance, hitSomething: boolean) {
       res: Math.max(buffs.res, buffAmount),
     };
   }
-  return {...hero, state: {...hero.state, buffs}};
+  return { ...hero, state: { ...hero.state, buffs } };
 }
 
 // Returns a new version of hero with debuffs applied by otherHero
@@ -388,7 +445,10 @@ export function withPostCombatDebuffs(
     if (hasSkill(context.enemy, 'PASSIVE_B', 'Seal ')) {
       const statKey = getStatKey(getSkillName(context.enemy, 'PASSIVE_B'));
       const debuffAmount = getSkillNumbers(context.enemy, 'PASSIVE_B')[0];
-      debuffs = {...debuffs, [statKey]: Math.max(debuffs[statKey], debuffAmount)};
+      debuffs = {
+        ...debuffs,
+        [statKey]: Math.max(debuffs[statKey], debuffAmount),
+      };
     }
   }
   // Weapons that debuff only trigger if the foe actually attacked
@@ -403,12 +463,12 @@ export function withPostCombatDebuffs(
       };
     }
     if (hasSkill(context.enemy, 'WEAPON', 'Fear')) {
-      debuffs = {...debuffs, atk: Math.max(debuffs.atk, 6)};
+      debuffs = { ...debuffs, atk: Math.max(debuffs.atk, 6) };
     }
     if (hasSkill(context.enemy, 'WEAPON', 'Slow')) {
-      debuffs = {...debuffs, spd: Math.max(debuffs.spd, 6)};
+      debuffs = { ...debuffs, spd: Math.max(debuffs.spd, 6) };
     }
   }
   // TODO: Panic
-  return {...hero, state: {...hero.state, debuffs}};
+  return { ...hero, state: { ...hero.state, debuffs } };
 }

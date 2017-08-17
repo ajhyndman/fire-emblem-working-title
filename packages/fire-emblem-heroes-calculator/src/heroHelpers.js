@@ -38,8 +38,13 @@ import type {
 } from 'fire-emblem-heroes-stats';
 
 import { getStatValue, hpRequirementSatisfied } from './skillHelpers';
-import type { Context, HeroInstance, InstanceSkills, Rarity, Stat } from './heroInstance';
-
+import type {
+  Context,
+  HeroInstance,
+  InstanceSkills,
+  Rarity,
+  Stat,
+} from './heroInstance';
 
 export const getWeaponType = (instance: HeroInstance): WeaponType =>
   getHero(instance.name).weaponType;
@@ -48,7 +53,11 @@ export const getMoveType = (instance: HeroInstance): MoveType =>
   getHero(instance.name).moveType;
 
 // Can be called with substrings of the skill name. Returns false if an hp requirement is not met.
-export const hasSkill = (instance: HeroInstance, skillType: SkillType, expectedName: string) => {
+export const hasSkill = (
+  instance: HeroInstance,
+  skillType: SkillType,
+  expectedName: string,
+) => {
   const skillName = getSkillName(instance, skillType);
   if (skillName !== undefined) {
     if (test(new RegExp(expectedName), skillName)) {
@@ -91,14 +100,22 @@ export function getSkillEffect(
 }
 
 // Returns a map from skill type to the skill object.
-export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkills {
+export function getDefaultSkills(
+  name: string,
+  rarity: Rarity = 5,
+): InstanceSkills {
   const hero = getHero(name);
   // Flow can't follow this compose chain, so cast it to any.
   const skillsByType = (compose(
     indexBy(getSkillType),
     filter(skillName => getSkillType(skillName) !== undefined),
     map(prop('name')),
-    filter(skill => (skill.rarity === undefined || skill.rarity === '-' || skill.rarity <= rarity)),
+    filter(
+      skill =>
+        skill.rarity === undefined ||
+        skill.rarity === '-' ||
+        skill.rarity <= rarity,
+    ),
   )(hero.skills): any);
 
   return {
@@ -114,16 +131,20 @@ export function getDefaultSkills(name: string, rarity: Rarity = 5): InstanceSkil
 }
 
 // Updates the rarity and default skills for a hero.
-export function updateRarity(hero: HeroInstance, newRarity: Rarity): HeroInstance {
+export function updateRarity(
+  hero: HeroInstance,
+  newRarity: Rarity,
+): HeroInstance {
   const oldDefault = getDefaultSkills(hero.name, hero.rarity);
   const newDefault = getDefaultSkills(hero.name, newRarity);
   return {
     ...hero,
     rarity: newRarity,
     skills: mapObjIndexed(
-      ((skill, skillType) =>
-        (propOr('', 'name', skill) === propOr('', 'name', oldDefault[skillType])
-          ? newDefault[skillType] : skill)),
+      (skill, skillType) =>
+        propOr('', 'name', skill) === propOr('', 'name', oldDefault[skillType])
+          ? newDefault[skillType]
+          : skill,
       hero.skills,
     ),
   };
@@ -132,14 +153,17 @@ export function updateRarity(hero: HeroInstance, newRarity: Rarity): HeroInstanc
 // skill is 'any' because some fields are weapon/passive specific
 const canInherit = curry((hero: Hero, skill: any): boolean => {
   const moveType = hero.moveType;
-  const weaponType = hero.weaponType ;
+  const weaponType = hero.weaponType;
   if (propEq('exclusive?', 'Yes', skill)) {
     return false;
   }
   // Unobtainable weapons (story only) currently have no weapon type.
   // Hero has weaponType 'Red Breath' and weapon has weaponType 'Breath'
-  if (skill.type === 'WEAPON' && (skill.weaponType === undefined
-    || (test(/Breath/, weaponType) ? 'Breath' : weaponType) !== skill.weaponType)) {
+  if (
+    skill.type === 'WEAPON' &&
+    (skill.weaponType === undefined ||
+      (test(/Breath/, weaponType) ? 'Breath' : weaponType) !== skill.weaponType)
+  ) {
     return false;
   }
   const restriction = propOr('None', 'inheritRestriction', skill);
@@ -189,29 +213,32 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
     case 'None':
       return true;
     default:
-      // console.log('Warning: unknown inherit restriction: ' + restriction);
+    // console.log('Warning: unknown inherit restriction: ' + restriction);
   }
   return true;
 });
 
 // Returns a list of skill names that a hero can obtain.
-export function getInheritableSkills(name: string, skillType: SkillType): Array<string> {
+export function getInheritableSkills(
+  name: string,
+  skillType: SkillType,
+): Array<string> {
   const hero = getHero(name);
   // Cast to any to prevent flow issues
   const allSkills: any = getAllSkills();
   const inheritable = filter(
-    allPass([
-      canInherit(hero),
-      propEq('type', skillType),
-    ]),
+    allPass([canInherit(hero), propEq('type', skillType)]),
     allSkills,
   );
   const ownSkills = compose(
-    filter((x) => propOr('', 'type', x) === skillType),
-    map((skillName) => getSkillObject(skillType, skillName)),
+    filter(x => propOr('', 'type', x) === skillType),
+    map(skillName => getSkillObject(skillType, skillName)),
     map(prop('name')),
   )(hero.skills);
-  return map(prop('name'), sort(ascend(prop('name')), union(inheritable, ownSkills)));
+  return map(
+    prop('name'),
+    sort(ascend(prop('name')), union(inheritable, ownSkills)),
+  );
 }
 
 export const hasBraveWeapon: (instance: HeroInstance) => boolean = compose(
@@ -239,13 +266,15 @@ export const getStat = (
 ): number => {
   const hero = getHero(instance.name);
   const { rarity } = instance;
-  const variance = (instance.boon === statKey
-    ? 'high'
-    : instance.bane === statKey
-      ? 'low'
-      : 'normal');
+  const variance =
+    instance.boon === statKey
+      ? 'high'
+      : instance.bane === statKey ? 'low' : 'normal';
 
-  if (hero.stats[`${level}`] === undefined || hero.stats[`${level}`][rarity] === undefined) {
+  if (
+    hero.stats[`${level}`] === undefined ||
+    hero.stats[`${level}`][rarity] === undefined
+  ) {
     return NaN;
   }
   if (level === 1) {
@@ -253,43 +282,45 @@ export const getStat = (
     // skills and merges are currently not included in level 1 stats.
     return variance === 'normal'
       ? value
-      : variance === 'low'
-        ? value - 1
-        : value + 1;
+      : variance === 'low' ? value - 1 : value + 1;
   }
 
   const values = hero.stats[`${level}`][rarity][statKey];
-  const [low, normal, high] = values.length <= 1
-    ? ['-', ...values]
-    : values;
-  const baseValue = variance === 'normal'
-    ? parseInt(normal, 10)
-    : variance === 'low'
-      ? parseInt(low, 10)
-      : parseInt(high, 10);
+  const [low, normal, high] = values.length <= 1 ? ['-', ...values] : values;
+  const baseValue =
+    variance === 'normal'
+      ? parseInt(normal, 10)
+      : variance === 'low' ? parseInt(low, 10) : parseInt(high, 10);
 
   let mergeBonus = 0;
   if (instance.mergeLevel > 0) {
     // Every bonus level gives +1 to the next 2 stats, with stats in decreasing level 1 order
     const statKeys = ['hp', 'atk', 'spd', 'def', 'res'];
     // Depends on the fact that level 1 stats currently exclude skills.
-    const level1Stats = zipObj(statKeys, map((s) => getStat(instance, s, 1, undefined), statKeys));
+    const level1Stats = zipObj(
+      statKeys,
+      map(s => getStat(instance, s, 1, undefined), statKeys),
+    );
     const orderedStatKeys = sortWith(
       [descend(prop(__, level1Stats)), ascend(indexOf(__, statKeys))],
       statKeys,
     );
-    mergeBonus = Math.floor((2*instance.mergeLevel)/5)
-      + ((((2*instance.mergeLevel) % 5) > indexOf(statKey, orderedStatKeys)) ? 1 : 0);
+    mergeBonus =
+      Math.floor(2 * instance.mergeLevel / 5) +
+      (2 * instance.mergeLevel % 5 > indexOf(statKey, orderedStatKeys) ? 1 : 0);
   }
 
   // Stats cannot be negative, even with brave weapons, life and death, or debuffs.
-  return Math.max(0, baseValue
-    + mergeBonus
-    + getStatValue(instance, 'PASSIVE_A', statKey, context)
-    + getStatValue(instance, 'SEAL', statKey, context)
-    + getStatValue(instance, 'WEAPON', statKey, context)
-    + instance.state.buffs[statKey]
-    - instance.state.debuffs[statKey]);
+  return Math.max(
+    0,
+    baseValue +
+      mergeBonus +
+      getStatValue(instance, 'PASSIVE_A', statKey, context) +
+      getStatValue(instance, 'SEAL', statKey, context) +
+      getStatValue(instance, 'WEAPON', statKey, context) +
+      instance.state.buffs[statKey] -
+      instance.state.debuffs[statKey],
+  );
 };
 
 export const getRange = (instance: HeroInstance) =>
@@ -322,11 +353,17 @@ export function getCurrentHp(hero: HeroInstance): number {
 }
 
 // Returns whether or not hp >= X% of hp, using the hp at the start of combat.
-export function hpAboveThreshold(hero: HeroInstance, hpPercent: number): boolean {
-  return getCurrentHp(hero) >= (getStat(hero, 'hp') * hpPercent / 100);
+export function hpAboveThreshold(
+  hero: HeroInstance,
+  hpPercent: number,
+): boolean {
+  return getCurrentHp(hero) >= getStat(hero, 'hp') * hpPercent / 100;
 }
 
 // Returns whether or not hp <= X% of hp, using the hp at the start of combat.
-export function hpBelowThreshold(hero: HeroInstance, hpPercent: number): boolean {
-  return getCurrentHp(hero) <= (getStat(hero, 'hp') * hpPercent / 100);
+export function hpBelowThreshold(
+  hero: HeroInstance,
+  hpPercent: number,
+): boolean {
+  return getCurrentHp(hero) <= getStat(hero, 'hp') * hpPercent / 100;
 }

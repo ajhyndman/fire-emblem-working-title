@@ -20,53 +20,52 @@ import {
 
 import { getDefaultSkills, getInheritableSkills } from './heroHelpers';
 
-
 export type Stat = 'hp' | 'atk' | 'spd' | 'def' | 'res';
 export type Rarity = 1 | 2 | 3 | 4 | 5;
 export type MergeLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 export type InstanceSkills = {
-  +WEAPON: string | void;
-  +ASSIST: string | void;
-  +SPECIAL: string | void;
-  +PASSIVE_A: string | void;
-  +PASSIVE_B: string | void;
-  +PASSIVE_C: string | void;
-  +SEAL: string | void;
+  +WEAPON: string | void,
+  +ASSIST: string | void,
+  +SPECIAL: string | void,
+  +PASSIVE_A: string | void,
+  +PASSIVE_B: string | void,
+  +PASSIVE_C: string | void,
+  +SEAL: string | void,
 };
 
 export type Buffs = {
   // HP cannot be buffed. It is in the buffs object for convenience.
-  +hp: number;
-  +atk: number;
-  +spd: number;
-  +def: number;
-  +res: number;
+  +hp: number,
+  +atk: number,
+  +spd: number,
+  +def: number,
+  +res: number,
 };
 
 export type InstanceState = {
-  +hpMissing: number;
-  +specialCharge: number;
-  +buffs: Buffs;
-  +debuffs: Buffs;
+  +hpMissing: number,
+  +specialCharge: number,
+  +buffs: Buffs,
+  +debuffs: Buffs,
 };
 
 export type HeroInstance = {
   // custom: false,
-  +name: string;
-  +rarity: Rarity;
-  +boon: ?Stat;
-  +bane: ?Stat;
-  +mergeLevel: MergeLevel;
-  +skills: InstanceSkills;
-  +state: InstanceState;
+  +name: string,
+  +rarity: Rarity,
+  +boon: ?Stat,
+  +bane: ?Stat,
+  +mergeLevel: MergeLevel,
+  +skills: InstanceSkills,
+  +state: InstanceState,
 };
 
 export type Context = {
-  +isAttacker: boolean;
-  +enemy: HeroInstance;
-  +allies: Array<HeroInstance>;
-  +otherEnemies: Array<HeroInstance>;
+  +isAttacker: boolean,
+  +enemy: HeroInstance,
+  +allies: Array<HeroInstance>,
+  +otherEnemies: Array<HeroInstance>,
 };
 
 // NOT USED YET: Just conjecture for potential future support of
@@ -118,14 +117,20 @@ const getDefaultState = (): InstanceState => ({
 });
 
 // Returns a context from the perspective of the enemy.
-export const invertContext = (hero: HeroInstance, context: Context): Context => ({
+export const invertContext = (
+  hero: HeroInstance,
+  context: Context,
+): Context => ({
   enemy: hero,
   allies: context.otherEnemies,
   otherEnemies: context.allies,
   isAttacker: !context.isAttacker,
 });
 
-export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstance => ({
+export const getDefaultInstance = (
+  name: string,
+  rarity: Rarity = 5,
+): HeroInstance => ({
   name: name,
   bane: undefined,
   boon: undefined,
@@ -134,7 +139,6 @@ export const getDefaultInstance = (name: string, rarity: Rarity = 5): HeroInstan
   skills: getDefaultSkills(name, rarity),
   state: getDefaultState(),
 });
-
 
 // eslint-disable-next-line no-undef
 const humanizeSkillKey = (skillKey: $Keys<InstanceSkills>): string => {
@@ -170,61 +174,45 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
   const skillList = compose(
     join('\r\n'),
     map(([slot, skillName]) => `${humanizeSkillKey(slot)}: ${skillName}`),
-    sort(([a], [b]) =>
-      findObjectIndex(a, SKILL_KEY_MAP) - findObjectIndex(b, SKILL_KEY_MAP)),
+    sort(
+      ([a], [b]) =>
+        findObjectIndex(a, SKILL_KEY_MAP) - findObjectIndex(b, SKILL_KEY_MAP),
+    ),
     filter(([, skillName]) => skillName !== undefined),
     toPairs,
   )(heroInstance.skills);
 
   const buffList = equals(getDefaultBuffs(), heroInstance.state.buffs)
     ? ''
-    : `Buffs: ${
-      compose(
+    : `Buffs: ${compose(
         join(', '),
         map(([statKey, value]) => `${statKey} ${value}`),
         filter(([, value]) => value !== 0),
         toPairs,
-      )(heroInstance.state.buffs)
-    }\r\n`;
+      )(heroInstance.state.buffs)}\r\n`;
 
   const debuffList = equals(getDefaultBuffs(), heroInstance.state.buffs)
     ? ''
-    : `Debuffs: ${
-      compose(
+    : `Debuffs: ${compose(
         join(', '),
         map(([statKey, value]) => `${statKey} -${value}`),
         filter(([, value]) => value !== 0),
         toPairs,
-      )(heroInstance.state.debuffs)
-    }\r\n`;
+      )(heroInstance.state.debuffs)}\r\n`;
 
   const status = equals(getDefaultState(), heroInstance.state)
     ? ''
-    : `:::Status\r\n${
-      buffList
-    }${
-      debuffList
-    }${
-      heroInstance.state.hpMissing
+    : `:::Status\r\n${buffList}${debuffList}${heroInstance.state.hpMissing
         ? `Damage: ${heroInstance.state.hpMissing}\r\n`
-        : ''
-    }${
-      heroInstance.state.specialCharge
+        : ''}${heroInstance.state.specialCharge
         ? `Charge: ${heroInstance.state.specialCharge}\r\n`
-        : ''
-    }`;
+        : ''}`;
 
-  return `${heroInstance.name} (${heroInstance.rarity}★${
-    heroInstance.mergeLevel ? `+${heroInstance.mergeLevel}` : ''
-  }${
-    heroInstance.boon ? ` +${heroInstance.boon}` : ''
-  }${
-    heroInstance.bane ? ` -${heroInstance.bane}` : ''
-  })\r\n${
-    skillList
-  }\r\n${
-    status
-  }`;
+  return `${heroInstance.name} (${heroInstance.rarity}★${heroInstance.mergeLevel
+    ? `+${heroInstance.mergeLevel}`
+    : ''}${heroInstance.boon ? ` +${heroInstance.boon}` : ''}${heroInstance.bane
+    ? ` -${heroInstance.bane}`
+    : ''})\r\n${skillList}\r\n${status}`;
 };
 
 export const importInstance = (text: string): HeroInstance => {
@@ -277,12 +265,9 @@ export const importInstance = (text: string): HeroInstance => {
         map(diacritics.remove),
       )(inheritableSkills);
 
-      if (
-        sanitizedSkillKey
-        && validSkillIndex >= 0
-      ) {
+      if (sanitizedSkillKey && validSkillIndex >= 0) {
         const validSkill = inheritableSkills[validSkillIndex];
-          // $FlowIssue: Flow doesn't have enough info to be sure that this is covariant-safe
+        // $FlowIssue: Flow doesn't have enough info to be sure that this is covariant-safe
         skills[sanitizedSkillKey] = validSkill;
       }
     } else if (test(buffRegex, line)) {

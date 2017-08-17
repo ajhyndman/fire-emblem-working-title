@@ -21,7 +21,7 @@ const config = {
           'getReleasedHeroes',
           'getSkillObject',
           'getSkillType',
-        ] ,
+        ],
       },
     }),
     babel({

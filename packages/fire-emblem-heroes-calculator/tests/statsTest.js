@@ -6,62 +6,61 @@ import type { HeroInstance, Stat } from '../src/heroInstance';
 import { getDefaultInstance } from '../src/heroInstance';
 import { getStat } from '../src/heroHelpers';
 
-
-test('lower rarity', (t) => {
+test('lower rarity', t => {
   t.plan(5);
   const fourStarEffie = getDefaultInstance('Effie', 4);
   // Has Silver Lance
-  t.equal(getStat(fourStarEffie, 'hp',  40), 47);
-  t.equal(getStat(fourStarEffie, 'atk', 40), 38+11);
+  t.equal(getStat(fourStarEffie, 'hp', 40), 47);
+  t.equal(getStat(fourStarEffie, 'atk', 40), 38 + 11);
   t.equal(getStat(fourStarEffie, 'spd', 40), 20);
   t.equal(getStat(fourStarEffie, 'def', 40), 31);
   t.equal(getStat(fourStarEffie, 'res', 40), 21);
 });
 
-test('level 1 variance', (t) => {
-  const olwen = { ...getDefaultInstance('Olwen'), boon: 'atk', bane: 'res'};
+test('level 1 variance', t => {
+  const olwen = { ...getDefaultInstance('Olwen'), boon: 'atk', bane: 'res' };
   t.plan(5);
-  t.equal(getStat(olwen, 'hp',  1), 17);
-  t.equal(getStat(olwen, 'atk', 1), 7+1);
+  t.equal(getStat(olwen, 'hp', 1), 17);
+  t.equal(getStat(olwen, 'atk', 1), 7 + 1);
   t.equal(getStat(olwen, 'spd', 1), 8);
   t.equal(getStat(olwen, 'def', 1), 5);
-  t.equal(getStat(olwen, 'res', 1), 6-1);
+  t.equal(getStat(olwen, 'res', 1), 6 - 1);
 });
 
-test('level 40 variance', (t) => {
-  const olwen = { ...getDefaultInstance('Olwen'), boon: 'atk', bane: 'res'};
+test('level 40 variance', t => {
+  const olwen = { ...getDefaultInstance('Olwen'), boon: 'atk', bane: 'res' };
   t.plan(5);
   // Includes Dire thunder.
-  t.equal(getStat(olwen, 'hp',  40), 34);
-  t.equal(getStat(olwen, 'atk', 40), 26+9+4);
-  t.equal(getStat(olwen, 'spd', 40), 34-5);
+  t.equal(getStat(olwen, 'hp', 40), 34);
+  t.equal(getStat(olwen, 'atk', 40), 26 + 9 + 4);
+  t.equal(getStat(olwen, 'spd', 40), 34 - 5);
   t.equal(getStat(olwen, 'def', 40), 20);
-  t.equal(getStat(olwen, 'res', 40), 30-3);
+  t.equal(getStat(olwen, 'res', 40), 30 - 3);
 });
 
-test('merge bonuses', (t) => {
+test('merge bonuses', t => {
   const neutralOlwen = getDefaultInstance('Olwen');
   t.plan(10);
   // For neutral olwen the stat order is hp spd atk res def
-  const olwen1 = {...neutralOlwen, mergeLevel: 1};
-  t.equal(getStat(olwen1, 'hp',  40), 34   +1);
-  t.equal(getStat(olwen1, 'spd', 40), 34-5 +1);
-  const olwen2 = {...neutralOlwen, mergeLevel: 2};
-  t.equal(getStat(olwen2, 'atk', 40), 26+9 +1);
-  t.equal(getStat(olwen2, 'res', 40), 30   +1);
-  const olwen3 = {...neutralOlwen, mergeLevel: 3};
-  t.equal(getStat(olwen3, 'def', 40), 20   +1);
-  t.equal(getStat(olwen3, 'hp',  40), 34   +2);
-  const olwen4 = {...neutralOlwen, mergeLevel: 4};
-  t.equal(getStat(olwen4, 'spd', 40), 34-5 +2);
-  t.equal(getStat(olwen4, 'atk', 40), 26+9 +2);
-  const olwen5 = {...neutralOlwen, mergeLevel: 5};
-  t.equal(getStat(olwen5, 'res', 40), 30   +2);
-  t.equal(getStat(olwen5, 'def', 40), 20   +2);
+  const olwen1 = { ...neutralOlwen, mergeLevel: 1 };
+  t.equal(getStat(olwen1, 'hp', 40), 34 + 1);
+  t.equal(getStat(olwen1, 'spd', 40), 34 - 5 + 1);
+  const olwen2 = { ...neutralOlwen, mergeLevel: 2 };
+  t.equal(getStat(olwen2, 'atk', 40), 26 + 9 + 1);
+  t.equal(getStat(olwen2, 'res', 40), 30 + 1);
+  const olwen3 = { ...neutralOlwen, mergeLevel: 3 };
+  t.equal(getStat(olwen3, 'def', 40), 20 + 1);
+  t.equal(getStat(olwen3, 'hp', 40), 34 + 2);
+  const olwen4 = { ...neutralOlwen, mergeLevel: 4 };
+  t.equal(getStat(olwen4, 'spd', 40), 34 - 5 + 2);
+  t.equal(getStat(olwen4, 'atk', 40), 26 + 9 + 2);
+  const olwen5 = { ...neutralOlwen, mergeLevel: 5 };
+  t.equal(getStat(olwen5, 'res', 40), 30 + 2);
+  t.equal(getStat(olwen5, 'def', 40), 20 + 2);
 });
 
 function withHpMissing(hpMissing: number, hero: HeroInstance): HeroInstance {
-  return {...hero, state: {...hero.state, hpMissing}};
+  return { ...hero, state: { ...hero.state, hpMissing } };
 }
 
 function testStatSkill(
@@ -76,16 +75,30 @@ function testStatSkill(
   // Whether or not a hero can actually equip a skill doesn't matter to getStat.
   const hero = withHpMissing(missingHp, getDefaultInstance('Anna'));
   // $FlowIssue flow doesn't like the skills object literal
-  const withoutSkill = {...hero, skills: {...hero.skills, [skillType]: undefined}};
+  const withoutSkill = {
+    ...hero,
+    skills: { ...hero.skills, [skillType]: undefined },
+  };
   // $FlowIssue flow doesn't like the skills object literal
-  const withSkill = {...hero, skills: {...hero.skills, [skillType]: skillName}};
+  const withSkill = {
+    ...hero,
+    skills: { ...hero.skills, [skillType]: skillName },
+  };
   // Assume that a unit is fighting itself for these tests.
-  const context = {enemy: hero, isAttacker: isAttacker, allies: [], otherEnemies: []};
-  t.equal(getStat(withSkill, statKey, 40, context)
-    - getStat(withoutSkill, statKey, 40, context), statBonus);
+  const context = {
+    enemy: hero,
+    isAttacker: isAttacker,
+    allies: [],
+    otherEnemies: [],
+  };
+  t.equal(
+    getStat(withSkill, statKey, 40, context) -
+      getStat(withoutSkill, statKey, 40, context),
+    statBonus,
+  );
 }
 
-test('Context is optional', (t) => {
+test('Context is optional', t => {
   t.plan(5);
   const hero = getDefaultInstance('Anna');
   t.equal(getStat(hero, 'hp', 40), 41);
@@ -95,8 +108,8 @@ test('Context is optional', (t) => {
   t.equal(getStat(hero, 'res', 40), 28);
 });
 
-test('Stat Skills', (assert) => {
-  assert.test('Brave Weapons', (t) => {
+test('Stat Skills', assert => {
+  assert.test('Brave Weapons', t => {
     // Brave weapons
     testStatSkill(t, 'Brave Lance+', 'atk', 8);
     testStatSkill(t, 'Brave Lance+', 'spd', -5);
@@ -105,20 +118,20 @@ test('Stat Skills', (assert) => {
     t.end();
   });
 
-  assert.test('Stat Bonuses with HP% conditions', (t) => {
+  assert.test('Stat Bonuses with HP% conditions', t => {
     // bonus if HP < 50%
     testStatSkill(t, 'Tyrfing', 'def', 4, true, 30);
     testStatSkill(t, 'Tyrfing', 'def', 0, true, 0);
 
     // bonus if HP = 100%
-    testStatSkill(t, 'Ragnarok', 'atk', 14+5, false, 0);
+    testStatSkill(t, 'Ragnarok', 'atk', 14 + 5, false, 0);
     testStatSkill(t, 'Ragnarok', 'spd', 5, false, 0);
     testStatSkill(t, 'Ragnarok', 'atk', 14, false, 1);
     testStatSkill(t, 'Ragnarok', 'spd', 0, false, 1);
     t.end();
   });
 
-  assert.test('Attacker-Specific Weapon Bonuses', (t) => {
+  assert.test('Attacker-Specific Weapon Bonuses', t => {
     testStatSkill(t, 'Durandal', 'atk', 20, true);
     testStatSkill(t, 'Durandal', 'atk', 16, false);
 
@@ -140,7 +153,7 @@ test('Stat Skills', (assert) => {
     t.end();
   });
 
-  assert.test('Attacker-Specific Passive Bonuses', (t) => {
+  assert.test('Attacker-Specific Passive Bonuses', t => {
     testStatSkill(t, 'Death Blow 3', 'atk', 6, true);
     testStatSkill(t, 'Death Blow 3', 'atk', 0, false);
     testStatSkill(t, 'Darting Blow 3', 'spd', 6, true);
@@ -157,7 +170,7 @@ test('Stat Skills', (assert) => {
     t.end();
   });
 
-  assert.test('Unconditional Passive Stats', (t) => {
+  assert.test('Unconditional Passive Stats', t => {
     testStatSkill(t, 'HP +5', 'hp', 5);
     testStatSkill(t, 'Attack +3', 'atk', 3);
     testStatSkill(t, 'Speed +3', 'spd', 3);
@@ -184,7 +197,7 @@ test('Stat Skills', (assert) => {
     t.end();
   });
 
-  assert.test('Passive Tiers', (t) => {
+  assert.test('Passive Tiers', t => {
     testStatSkill(t, 'Death Blow 2', 'atk', 4, true);
     testStatSkill(t, 'Swift Sparrow 1', 'atk', 2, true);
     testStatSkill(t, 'Fortress Def 2', 'def', 4);
