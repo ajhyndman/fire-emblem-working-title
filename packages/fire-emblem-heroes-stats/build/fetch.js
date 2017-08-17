@@ -15,7 +15,11 @@ export const fetchPage = url =>
       return response.text();
     })
     .then(replace(/\n|\r/g, ''))
-    .catch(() => console.error('failed to fetch: ', url));
+    .catch(() => {
+      console.error('failed to fetch: ', url);
+      console.log('retrying');
+      return fetchPage(url);
+    });
 
 // Takes a url prefix, a list of page names, and a parse function.
 // Returns a map from page name to parsed page.
