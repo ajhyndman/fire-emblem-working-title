@@ -4162,7 +4162,7 @@
         {
           "name": "Silver Lance+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Harsh Command",
@@ -23199,7 +23199,7 @@
       "weaponType": "Blue Lance",
       "moveType": "Flying",
       "rarities": "3-4Event: Grand Hero Battle",
-      "releaseDate": "N/A",
+      "releaseDate": "Aug 21, 2017",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Valter.png",
@@ -23248,7 +23248,7 @@
         },
         {
           "name": "Darting Blow 3",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Panic Ploy 1",
@@ -23256,46 +23256,70 @@
         },
         {
           "name": "Panic Ploy 2",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Panic Ploy 3",
-          "rarity": "-"
+          "rarity": 5
         }
       ],
       "stats": {
         "1": {
+          "3": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 8,
+            "def": 7,
+            "res": 3
+          },
           "4": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-"
+            "hp": 17,
+            "atk": 8,
+            "spd": 9,
+            "def": 7,
+            "res": 3
           },
           "5": {
             "hp": 18,
-            "atk": 9,
-            "spd": 8,
+            "atk": 8,
+            "spd": 9,
             "def": 8,
             "res": 4
           }
         },
         "40": {
-          "4": {
+          "3": {
             "hp": [
-              "-"
+              38
             ],
             "atk": [
-              "-"
+              28
             ],
             "spd": [
-              "-"
+              27
             ],
             "def": [
-              "-"
+              30
             ],
             "res": [
-              "-"
+              16
+            ]
+          },
+          "4": {
+            "hp": [
+              39
+            ],
+            "atk": [
+              30
+            ],
+            "spd": [
+              29
+            ],
+            "def": [
+              31
+            ],
+            "res": [
+              17
             ]
           },
           "5": {
