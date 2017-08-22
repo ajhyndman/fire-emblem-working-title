@@ -90,8 +90,8 @@ const HeroPortrait = ({
         alt={name}
         src={assets.portrait['75px']}
         srcSet={`
-          ${assets.portrait['113px']} 113w,
-          ${assets.portrait['150px']} 150w
+          ${encodeURI(assets.portrait['113px'])} 113w,
+          ${encodeURI(assets.portrait['150px'])} 150w
         `}
         sizes={`${gridSize}px`}
       />
