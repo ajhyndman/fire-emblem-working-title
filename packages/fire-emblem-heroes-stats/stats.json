@@ -10245,6 +10245,128 @@
       }
     },
     {
+      "name": "Ike (Brave Heroes)",
+      "title": "Brave Mercenary",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Green Axe",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Aug 31, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Ike (Brave Heroes).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Ike (Brave Heroes).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Ike (Brave Heroes).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Urvan",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "New Moon",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Luna",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Aether",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Steady Stance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Steady Stance 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Steady Breath",
+          "rarity": 5
+        },
+        {
+          "name": "Beorc's Blessing",
+          "rarity": 5
+        },
+        {
+          "name": "Threaten Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Threaten Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Threaten Def 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 10,
+            "spd": 6,
+            "def": 9,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              40,
+              43,
+              46
+            ],
+            "atk": [
+              33,
+              36,
+              39
+            ],
+            "spd": [
+              24,
+              28,
+              31
+            ],
+            "def": [
+              32,
+              35,
+              38
+            ],
+            "res": [
+              17,
+              20,
+              23
+            ]
+          }
+        }
+      },
+      "shortName": "Ike (B)"
+    },
+    {
       "name": "Innes",
       "title": "Regal Strategician",
       "origin": "Fire Emblem: The Sacred Stones",
@@ -13325,6 +13447,124 @@
       }
     },
     {
+      "name": "Lucina (Brave Heroes)",
+      "title": "Brave Princess",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Blue Lance",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Aug 31, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lucina (Brave Heroes).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lucina (Brave Heroes).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lucina (Brave Heroes).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Geirskögul",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Daylight",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Sol",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Aether",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Armored Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Sturdy Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Sturdy Blow 2",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Spd 2",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 10,
+            "def": 8,
+            "res": 4
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              38,
+              41,
+              44
+            ],
+            "atk": [
+              31,
+              34,
+              37
+            ],
+            "spd": [
+              33,
+              36,
+              39
+            ],
+            "def": [
+              24,
+              27,
+              31
+            ],
+            "res": [
+              16,
+              19,
+              22
+            ]
+          }
+        }
+      },
+      "shortName": "Lucina (B)"
+    },
+    {
       "name": "Lucina (Spring Festival)",
       "title": "Spring Exalt",
       "origin": "Fire Emblem Awakening",
@@ -13945,6 +14185,123 @@
           }
         }
       }
+    },
+    {
+      "name": "Lyn (Brave Heroes)",
+      "title": "Brave Lady",
+      "origin": "Fire Emblem: The Blazing Blade",
+      "weaponType": "Neutral Bow",
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Aug 31, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lyn (Brave Heroes).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lyn (Brave Heroes).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lyn (Brave Heroes).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Mulagir",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Draconic Aura",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Death Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Sparrow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Sparrow 2",
+          "rarity": 5
+        },
+        {
+          "name": "Sacae's Blessing",
+          "rarity": 5
+        },
+        {
+          "name": "Atk Smoke 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Smoke 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Smoke 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 7,
+            "spd": 9,
+            "def": 5,
+            "res": 6
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              32,
+              35,
+              39
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              32,
+              35,
+              38
+            ],
+            "def": [
+              14,
+              18,
+              21
+            ],
+            "res": [
+              24,
+              28,
+              31
+            ]
+          }
+        }
+      },
+      "shortName": "Lyn (B)"
     },
     {
       "name": "Lyn (Bridal Blessings)",
@@ -15417,7 +15774,7 @@
       "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Green Axe",
       "moveType": "Flying",
-      "rarities": "2-3Event: Grand Hero Battle",
+      "rarities": "2-4Event: Grand Hero Battle",
       "releaseDate": "Feb 10, 2017",
       "assets": {
         "portrait": {
@@ -19002,6 +19359,124 @@
       }
     },
     {
+      "name": "Roy (Brave Heroes)",
+      "title": "Brave Lion",
+      "origin": "Fire Emblem: The Binding Blade",
+      "weaponType": "Red Sword",
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Aug 31, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Roy (Brave Heroes).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Roy (Brave Heroes).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Roy (Brave Heroes).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blazing Durandal",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Night Sky",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Astra",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Galeforce",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Darting Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Steady Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Steady Blow 2",
+          "rarity": 5
+        },
+        {
+          "name": "Desperation 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 8,
+            "def": 7,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              34,
+              38,
+              41
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              23,
+              26,
+              30
+            ],
+            "res": [
+              21,
+              24,
+              27
+            ]
+          }
+        }
+      },
+      "shortName": "Roy (B)"
+    },
+    {
       "name": "Ryoma",
       "title": "Peerless Samurai",
       "origin": "Fire Emblem Fates",
@@ -20163,17 +20638,17 @@
         },
         {
           "name": "Ruby Sword",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
           "name": "Ruby Sword+",
           "default": 5,
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Swap",
-          "default": 5,
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -20186,7 +20661,7 @@
         },
         {
           "name": "Fortress Def 3",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Seal Atk 1",
@@ -20194,7 +20669,7 @@
         },
         {
           "name": "Seal Atk Def 1",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Seal Atk Def 2",
@@ -20203,6 +20678,13 @@
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 6,
+            "def": 8,
+            "res": 4
+          },
           "5": {
             "hp": 18,
             "atk": 8,
@@ -20212,6 +20694,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              32,
+              35,
+              38
+            ],
+            "atk": [
+              27,
+              30,
+              33
+            ],
+            "spd": [
+              25,
+              28,
+              31
+            ],
+            "def": [
+              27,
+              30,
+              33
+            ],
+            "res": [
+              17,
+              20,
+              23
+            ]
+          },
           "5": {
             "hp": [
               34,
@@ -24501,6 +25010,16 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Blazing Durandal",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Atk+3. If unit's Atk &gt; foe's, unit gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
       "name": "Brave Sword",
       "spCost": 200,
       "damage(mt)": 5,
@@ -25221,6 +25740,16 @@
       "weaponType": "Blue Lance"
     },
     {
+      "name": "Geirskögul",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
       "name": "Gradivus",
       "spCost": 400,
       "damage(mt)": 16,
@@ -25920,11 +26449,31 @@
       "weaponType": "Green Axe"
     },
     {
+      "name": "Urvan",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1). If unit receives consecutive attacks, damage from second attack onward reduced by 80%.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
       "name": "Dark Excalibur",
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants +10 to damage when special triggers.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Élivágar",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -26106,16 +26655,6 @@
       "range(rng)": 2,
       "effect": "-",
       "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Élivágar",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.",
-      "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -26376,6 +26915,16 @@
       "range(rng)": 2,
       "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Mulagir",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against flying units. Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
+      "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
     },
@@ -27751,6 +28300,41 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Steady Blow 1",
+      "effect": "If unit initiates combat, unit granted Spd/Def+2 during battle.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Blow 2",
+      "effect": "If unit initiates combat, unit granted Spd/Def+4 during battle.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Breath",
+      "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)",
+      "spCost": 240,
+      "inheritRestriction": "Melee Weapon Users Only, Infantry and Armored Only",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Stance 1",
+      "effect": "Grants Def+2 during combat when this unit is attacked.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Stance 2",
+      "effect": "Grants Def+4 during combat when this unit is attacked.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Sturdy Blow 1",
       "effect": "Grants Atk/Def+2 during combat if unit initiates combat.",
       "spCost": 120,
@@ -27902,6 +28486,13 @@
       "effect": "If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
       "inheritRestriction": "Excludes Blue Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Beorc's Blessing",
+      "effect": "Effective against flying and cavalry units. Foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)",
+      "spCost": 300,
+      "inheritRestriction": "Is exclusive",
       "type": "PASSIVE_B"
     },
     {
@@ -28325,6 +28916,13 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Sacae's Blessing",
+      "effect": "If foe has sword, lance, or axe, foe cannot counterattack. (Skill cannot be inherited.)",
+      "spCost": 300,
+      "inheritRestriction": "Is exclusive",
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Seal Atk 1",
       "effect": "After combat, foe suffers Atk-3 through its next action.",
       "spCost": 40,
@@ -28647,6 +29245,27 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Atk Smoke 1",
+      "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.",
+      "spCost": 60,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Atk Smoke 2",
+      "effect": "After combat, inflicts Atk-5 on foes within 2 spaces of target through their next actions.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Atk Smoke 3",
+      "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Axe Experience 1",
       "effect": "If unit survives, unit gets 1.5x EXP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
@@ -28796,6 +29415,20 @@
     {
       "name": "Drive Def 2",
       "effect": "Grants allies within 2 spaces Def+3 during combat.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Drive Spd 1",
+      "effect": "Grants allies within 2 spaces Spd+2 during combat.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Drive Spd 2",
+      "effect": "Grants allies within 2 spaces Spd+3 during combat.",
       "spCost": 240,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
