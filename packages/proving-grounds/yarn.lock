@@ -2850,21 +2850,6 @@ find-up@^2.0.0:
   dependencies:
     locate-path "^2.0.0"
 
-fire-emblem-heroes-calculator@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/fire-emblem-heroes-calculator/-/fire-emblem-heroes-calculator-0.9.5.tgz#e081dfb38263c07599a2205e2b79e90c200695c8"
-  dependencies:
-    diacritics "^1.3.0"
-    fire-emblem-heroes-stats "^0.9.5"
-    ramda "^0.23.0"
-
-fire-emblem-heroes-stats@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/fire-emblem-heroes-stats/-/fire-emblem-heroes-stats-0.9.5.tgz#66d28ea63bf23bbf9817055e7e5734b6a111d63a"
-  dependencies:
-    isomorphic-fetch "^2.2.1"
-    ramda "^0.23.0"
-
 flat-cache@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.2.2.tgz#fa86714e72c21db88601761ecf2f555d1abc6b96"
@@ -3639,7 +3624,7 @@ isobject@^2.0.0:
   dependencies:
     isarray "1.0.0"
 
-isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
+isomorphic-fetch@^2.1.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
