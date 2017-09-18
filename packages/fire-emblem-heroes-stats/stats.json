@@ -152,7 +152,7 @@
       "origin": "Fire Emblem Heroes",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "2- Story",
+      "rarities": "2 - Story",
       "releaseDate": "Feb 02, 2017",
       "assets": {
         "portrait": {
@@ -550,7 +550,7 @@
       "origin": "Fire Emblem Heroes",
       "weaponType": "Green Axe",
       "moveType": "Infantry",
-      "rarities": "2- Story",
+      "rarities": "2 - Story",
       "releaseDate": "Feb 02, 2017",
       "assets": {
         "portrait": {
@@ -1667,7 +1667,7 @@
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Jul 18, 2017",
       "assets": {
         "portrait": {
@@ -1984,6 +1984,137 @@
       }
     },
     {
+      "name": "Black Knight",
+      "title": "Sinister General",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Red Sword",
+      "moveType": "Armored",
+      "rarities": "4-5Tempest Trials",
+      "releaseDate": "Sep 23, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Black Knight.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Black Knight.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Black Knight.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Alondite",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Luna",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Black Luna",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Steady Stance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Steady Stance 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Steady Stance 3",
+          "rarity": "-"
+        },
+        {
+          "name": "Wings of Mercy 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Wings of Mercy 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Wings of Mercy 3",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "4": {
+            "hp": 21,
+            "atk": 10,
+            "spd": 7,
+            "def": 9,
+            "res": 4
+          },
+          "5": {
+            "hp": 22,
+            "atk": 10,
+            "spd": 8,
+            "def": 9,
+            "res": 5
+          }
+        },
+        "40": {
+          "4": {
+            "hp": [
+              45
+            ],
+            "atk": [
+              32
+            ],
+            "spd": [
+              31
+            ],
+            "def": [
+              33
+            ],
+            "res": [
+              16
+            ]
+          },
+          "5": {
+            "hp": [
+              48
+            ],
+            "atk": [
+              34
+            ],
+            "spd": [
+              34
+            ],
+            "def": [
+              35
+            ],
+            "res": [
+              18
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Boey",
       "title": "Skillful Survivor",
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
@@ -2135,7 +2266,7 @@
       "origin": "Fire Emblem Heroes",
       "weaponType": "Blue Tome",
       "moveType": "Cavalry",
-      "rarities": "N/A",
+      "rarities": "N/A - Story",
       "releaseDate": "N/A",
       "assets": {
         "portrait": {
@@ -2485,11 +2616,11 @@
           "rarity": "-"
         },
         {
-          "name": "Attack Res +1",
+          "name": "Attack Res 1",
           "rarity": "-"
         },
         {
-          "name": "Attack Res +2",
+          "name": "Attack Res 2",
           "rarity": 5
         },
         {
@@ -2945,7 +3076,7 @@
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Jun 02, 2017",
       "assets": {
         "portrait": {
@@ -4440,7 +4571,7 @@
       "origin": "Fire Emblem: New Mystery of the Emblem",
       "weaponType": "Neutral Bow",
       "moveType": "Infantry",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Jun 28, 2017",
       "assets": {
         "portrait": {
@@ -4590,7 +4721,7 @@
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Blue Lance",
       "moveType": "Cavalry",
-      "rarities": "4-5Event: Tempest Trials",
+      "rarities": "4-5Tempest Trials",
       "releaseDate": "Aug 11, 2017",
       "assets": {
         "portrait": {
@@ -6298,6 +6429,113 @@
               15,
               19,
               22
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Elincia",
+      "title": "Lost Princess",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Red Sword",
+      "moveType": "Flying",
+      "rarities": 5,
+      "releaseDate": "Sep 15, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Elincia.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Elincia.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Elincia.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Amiti",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Ardent Sacrifice",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Death Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Death Blow 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Death Blow 3",
+          "rarity": 5
+        },
+        {
+          "name": "Flier Formation 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Flier Formation 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Flier Formation 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 10,
+            "def": 5,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              32,
+              35,
+              39
+            ],
+            "atk": [
+              31,
+              34,
+              37
+            ],
+            "spd": [
+              33,
+              36,
+              39
+            ],
+            "def": [
+              21,
+              24,
+              28
+            ],
+            "res": [
+              24,
+              27,
+              31
             ]
           }
         }
@@ -12010,7 +12248,7 @@
       "origin": "Fire Emblem: New Mystery of the Emblem",
       "weaponType": "Green Axe",
       "moveType": "Infantry",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Jun 16, 2017",
       "assets": {
         "portrait": {
@@ -13005,7 +13243,7 @@
       "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "May 19, 2017",
       "assets": {
         "portrait": {
@@ -14836,7 +15074,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "4-5Event: Tempest Trials",
+      "rarities": "4-5Tempest Trials",
       "releaseDate": "Jun 08, 2017",
       "assets": {
         "portrait": {
@@ -15415,7 +15653,7 @@
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Green Axe",
       "moveType": "Flying",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Mar 20, 2017",
       "assets": {
         "portrait": {
@@ -15774,7 +16012,7 @@
       "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Green Axe",
       "moveType": "Flying",
-      "rarities": "2-4Event: Grand Hero Battle",
+      "rarities": "2-4Grand Hero Battle",
       "releaseDate": "Feb 10, 2017",
       "assets": {
         "portrait": {
@@ -15948,7 +16186,7 @@
       "origin": "Fire Emblem: Mystery of the Emblem",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Apr 04, 2017",
       "assets": {
         "portrait": {
@@ -16087,6 +16325,118 @@
             ],
             "res": [
               24
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Nephenee",
+      "title": "Fierce Halberdier",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Blue Lance",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Sep 15, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Nephenee.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Nephenee.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Nephenee.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Slaying Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Slaying Lance+",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Moonbow",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Speed +1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Spd 2",
+          "rarity": 5
+        },
+        {
+          "name": "Wrath 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Wrath 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Wrath 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 9,
+            "def": 8,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              34,
+              37,
+              41
+            ],
+            "atk": [
+              28,
+              31,
+              34
+            ],
+            "spd": [
+              32,
+              35,
+              38
+            ],
+            "def": [
+              31,
+              34,
+              37
+            ],
+            "res": [
+              17,
+              20,
+              23
             ]
           }
         }
@@ -17519,6 +17869,118 @@
       }
     },
     {
+      "name": "Oscar",
+      "title": "Agile Horseman",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Blue Lance",
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Sep 15, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Oscar.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Oscar.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Oscar.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Sapphire Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Sapphire Lance+",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Rally Speed",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Speed Defense",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Lancebreaker 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Lancebreaker 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Lancebreaker 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Spd Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Spd Def 2",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 8,
+            "def": 7,
+            "res": 6
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              36,
+              40,
+              43
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              23,
+              26,
+              30
+            ],
+            "res": [
+              18,
+              21,
+              24
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Palla",
       "title": "Eldest Whitewing",
       "origin": "Fire Emblem: Mystery of the Emblem",
@@ -18621,7 +19083,7 @@
       "origin": "Fire Emblem Awakening",
       "weaponType": "Green Tome",
       "moveType": "Infantry",
-      "rarities": "2-3Event: Grand Hero Battle",
+      "rarities": "2-4Grand Hero Battle",
       "releaseDate": "Feb 23, 2017",
       "assets": {
         "portrait": {
@@ -20616,7 +21078,7 @@
       "origin": "Fire Emblem: The Sacred Stones",
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
-      "rarities": 5,
+      "rarities": "4-5",
       "releaseDate": "Aug 15, 2017",
       "assets": {
         "portrait": {
@@ -21112,7 +21574,7 @@
       "origin": "Fire Emblem Heroes",
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
-      "rarities": "2- Story",
+      "rarities": "2 - Story",
       "releaseDate": "Feb 02, 2017",
       "assets": {
         "portrait": {
@@ -23436,7 +23898,7 @@
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "4-5Event: Tempest Trials",
+      "rarities": "4-5Tempest Trials",
       "releaseDate": "Jul 07, 2017",
       "assets": {
         "portrait": {
@@ -23557,7 +24019,7 @@
       "origin": "Fire Emblem: The Blazing Blade",
       "weaponType": "Blue Tome",
       "moveType": "Cavalry",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Mar 10, 2017",
       "assets": {
         "portrait": {
@@ -23707,7 +24169,7 @@
       "origin": "Fire Emblem: The Sacred Stones",
       "weaponType": "Blue Lance",
       "moveType": "Flying",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Aug 21, 2017",
       "assets": {
         "portrait": {
@@ -23857,7 +24319,7 @@
       "origin": "Fire Emblem Heroes",
       "weaponType": "Green Tome",
       "moveType": "Infantry",
-      "rarities": "N/A",
+      "rarities": "N/A - Story",
       "releaseDate": "N/A",
       "assets": {
         "portrait": {
@@ -24470,7 +24932,7 @@
       "origin": "Fire Emblem Fates",
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "May 02, 2017",
       "assets": {
         "portrait": {
@@ -24833,7 +25295,7 @@
       "origin": "Fire Emblem: The Binding Blade",
       "weaponType": "Red Sword",
       "moveType": "Armored",
-      "rarities": "3-4Event: Grand Hero Battle",
+      "rarities": "3-4Grand Hero Battle",
       "releaseDate": "Apr 20, 2017",
       "assets": {
         "portrait": {
@@ -24979,6 +25441,26 @@
     }
   ],
   "skills": [
+    {
+      "name": "Alondite",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Amiti",
+      "spCost": 400,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Spd-2. Attack twice when initiating combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
     {
       "name": "Armorslayer",
       "spCost": 200,
@@ -25875,6 +26357,26 @@
       "damage(mt)": 15,
       "range(rng)": 1,
       "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Slaying Lance",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Slaying Lance+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Blue Lance"
@@ -27277,6 +27779,14 @@
       "type": "ASSIST"
     },
     {
+      "name": "Rally Speed Defense",
+      "range": 1,
+      "effect": "Grants Spd/Def+3 to an adjacent ally until the end of the turn.",
+      "spCost": 300,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "ASSIST"
+    },
+    {
       "name": "Reciprocal Aid",
       "range": 1,
       "effect": "Swap HP with adjacent ally (neither unit can go above their max HP).",
@@ -27370,6 +27880,14 @@
       "effect": "Grants +150% to damage dealt.",
       "spCost": 200,
       "inheritRestriction": "Excludes Staff Users",
+      "type": "SPECIAL"
+    },
+    {
+      "name": "Black Luna",
+      "cooldown": 3,
+      "effect": "Resolve combat as if foe suffered Def/Res-80%.(Skill cannot be inherited.)",
+      "spCost": 500,
+      "inheritRestriction": "Exclusive",
       "type": "SPECIAL"
     },
     {
@@ -27789,15 +28307,29 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Attack Res +1",
+      "name": "Attack Res 1",
       "effect": "Grants Atk/Res+1.",
       "spCost": 80,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
-      "name": "Attack Res +2",
+      "name": "Attack Res 2",
       "effect": "Grants Atk/Res+2.",
+      "spCost": 160,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Atk Spd 1",
+      "effect": "Grants Atk/Spd+1.",
+      "spCost": 80,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Atk Spd 2",
+      "effect": "Grants Atk/Spd+2.",
       "spCost": 160,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
@@ -28335,6 +28867,13 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Steady Stance 3",
+      "effect": "Grants Def+6 during combat when this unit is attacked.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Sturdy Blow 1",
       "effect": "Grants Atk/Def+2 during combat if unit initiates combat.",
       "spCost": 120,
@@ -28490,7 +29029,7 @@
     },
     {
       "name": "Beorc's Blessing",
-      "effect": "Effective against flying and cavalry units. Foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)",
+      "effect": "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)",
       "spCost": 300,
       "inheritRestriction": "Is exclusive",
       "type": "PASSIVE_B"
@@ -28668,6 +29207,27 @@
       "effect": "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally.",
       "spCost": 240,
       "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Flier Formation 1",
+      "effect": "If unit has 100% HP, unit can move to a space adjacent to a flier ally within 2 spaces.",
+      "spCost": 60,
+      "inheritRestriction": "Fliers Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Flier Formation 2",
+      "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to a flier ally within 2 spaces.",
+      "spCost": 120,
+      "inheritRestriction": "Fliers Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Flier Formation 3",
+      "effect": "Unit can move to a space adjacent to a flier ally within 2 spaces.",
+      "spCost": 240,
+      "inheritRestriction": "Fliers Only",
       "type": "PASSIVE_B"
     },
     {
@@ -29179,6 +29739,27 @@
       "effect": "Enables unit to warp adjacent to any ally with HP ≤ 50%.",
       "spCost": 240,
       "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 1",
+      "effect": "If unit's HP ≤ 25%, Special cooldown count-1 at start of turn if Special triggers by attacking.If Special triggers, +10 damage from Special.",
+      "spCost": 60,
+      "inheritRestriction": "Melee Weapon Users Only, Infantry and Armored Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 2",
+      "effect": "If unit's HP ≤ 50%, Special cooldown count-1 at start of turn if Special triggers by attacking.If Special triggers, +10 damage from Special.",
+      "spCost": 120,
+      "inheritRestriction": "Melee Weapon Users Only, Infantry and Armored Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 3",
+      "effect": "If unit's HP ≤ 75%, Special cooldown count-1 at start of turn if Special triggers by attacking.If Special triggers, +10 damage from Special.",
+      "spCost": 240,
+      "inheritRestriction": "Melee Weapon Users Only, Infantry and Armored Only",
       "type": "PASSIVE_B"
     },
     {
@@ -29833,6 +30414,20 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Spur Spd Def 1",
+      "effect": "Grants adjacent allies Spd/Def +2 during combat",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spur Spd Def 2",
+      "effect": "Grants adjacent allies Spd/Def +3 during combat.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Sword Exp. 1",
       "effect": "If unit survives, unit gets 1.5x EXP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
@@ -29995,6 +30590,16 @@
       "type": "SEAL"
     },
     {
+      "name": "Defense +1",
+      "effect": "Grants Def+1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Distant Def 1",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
+      "type": "SEAL"
+    },
+    {
       "name": "Embla's Ward",
       "effect": "Unit receives 0 damage.",
       "type": "SEAL"
@@ -30047,6 +30652,11 @@
     {
       "name": "Squad Ace B 1",
       "effect": "Grants Def+1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace C 1",
+      "effect": "Grants Res+1.",
       "type": "SEAL"
     }
   ]
