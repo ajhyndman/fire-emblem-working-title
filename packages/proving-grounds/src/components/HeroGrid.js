@@ -53,7 +53,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
       .gridSquareOuter {
         align-items: center;
         display: flex;
-        flex-basis: ${gridSize + GUTTER_WIDTH}px;
+        width: ${gridSize + GUTTER_WIDTH * 2}px;
         flex-direction: column;
       }
       .undo {
