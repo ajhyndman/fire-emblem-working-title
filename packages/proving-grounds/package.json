@@ -31,6 +31,7 @@
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prettier": "^2.2.0",
     "flow-bin": "^0.48.0",
+    "now": "^8.3.9",
     "tape": "^4.6.3"
   },
   "dependencies": {
@@ -46,7 +47,6 @@
     "lz-string": "^1.4.4",
     "next": "2.0.0-beta.36",
     "next-redux-wrapper": "1.0.0",
-    "now": "^4.10.0",
     "ramda": "^0.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
