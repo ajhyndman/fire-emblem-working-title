@@ -30988,6 +30988,13 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Crusader's Ward",
+      "effect": "If unit receives consecutive attack from a foe 2 spaces away, damage from second attack onward reduced by 80%. (Skill cannot be inherited.)",
+      "spCost": 300,
+      "inheritRestriction": "Is exclusive",
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Daggerbreaker 1",
       "effect": "If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
       "spCost": 50,
@@ -32262,6 +32269,48 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Spd Ploy 1",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-3 until the end of foe's next action.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spd Ploy 2",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-4 until the end of foe's next action.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spd Ploy 3",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-5 until the end of foe's next action.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spd Smoke 1",
+      "effect": "After combat, inflicts Spd-3 on foes within 2 spaces of target through their next actions.",
+      "spCost": 60,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spd Smoke 2",
+      "effect": "After combat, inflicts Spd-5 on foes within 2 spaces of target through their next actions.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spd Smoke 3",
+      "effect": "After combat, inflicts Spd-7 on foes within 2 spaces of target through their next actions.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Spur Atk 1",
       "effect": "Grants adjacent allies Atk+2 during combat.",
       "spCost": 50,
@@ -32521,98 +32570,399 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Atk Ploy 1",
+      "name": "Attack Ploy",
+      "tiers": "Atk Ploy 1",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.",
       "type": "SEAL"
     },
     {
-      "name": "Attack +1",
+      "name": "Atk Ploy 2",
+      "tiers": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Atk Ploy 3",
+      "tiers": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Attack Plus",
+      "tiers": "Attack +1",
       "effect": "Grants Atk+1.",
       "type": "SEAL"
     },
     {
-      "name": "Breath of Life 1",
+      "name": "Attack +2",
+      "tiers": "Grants Atk+2.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Attack +3",
+      "tiers": "Grants Atk+3.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Breath of Life",
+      "tiers": "Breath of Life 1",
       "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
       "type": "SEAL"
     },
     {
-      "name": "Defense +1",
+      "name": "Breath of Life 2",
+      "tiers": "If unit initiates attack, adjacent allies recover 5 HP after combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Breath of Life 3",
+      "tiers": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Defense Plus",
+      "tiers": "Defense +1",
       "effect": "Grants Def+1.",
       "type": "SEAL"
     },
     {
-      "name": "Distant Def 1",
+      "name": "Defense +2",
+      "tiers": "Grants Def+2.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Defense +3",
+      "tiers": "Grants Def+3.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Magic",
+      "tiers": "Deflect Magic 1",
+      "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 30%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Magic 2",
+      "tiers": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 50%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Magic 3",
+      "tiers": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 80%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Melee",
+      "tiers": "Deflect Melee 1",
+      "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 30%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Melee 2",
+      "tiers": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 50%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Melee 3",
+      "tiers": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 80%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Missile",
+      "tiers": "Deflect Missile 1",
+      "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 30%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Missile 2",
+      "tiers": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 50%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Deflect Missile 3",
+      "tiers": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 80%.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Distant Defense",
+      "tiers": "Distant Def 1",
       "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
       "type": "SEAL"
     },
     {
+      "name": "Distant Def 2",
+      "tiers": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Distant Def 3",
+      "tiers": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
+      "type": "SEAL"
+    },
+    {
       "name": "Embla's Ward",
+      "tiers": "Embla's Ward",
       "effect": "Unit receives 0 damage.",
       "type": "SEAL"
     },
     {
-      "name": "Fortify Def 1",
+      "name": "Fortify Defense",
+      "tiers": "Fortify Def 1",
       "effect": "Grants adjacent allies Def+2 through their next actions at the start of each turn.",
       "type": "SEAL"
     },
     {
-      "name": "Fortify Res 1",
+      "name": "Fortify Def 2",
+      "tiers": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Fortify Def 3",
+      "tiers": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Fortify Resistance",
+      "tiers": "Fortify Res 1",
       "effect": "Grants adjacent allies Res+2 through their next actions at the start of each turn.",
       "type": "SEAL"
     },
     {
-      "name": "HP +3",
+      "name": "Fortify Res 2",
+      "tiers": "Grants adjacent allies Res+3 through their next actions at the start of each turn.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Fortify Res 3",
+      "tiers": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
+      "type": "SEAL"
+    },
+    {
+      "name": "HP Plus",
+      "tiers": "HP +3",
       "effect": "Grants +3 to max HP.",
       "type": "SEAL"
     },
     {
-      "name": "Hardy Bearing 1",
+      "name": "HP +4",
+      "tiers": "Grants +4 to max HP.",
+      "type": "SEAL"
+    },
+    {
+      "name": "HP +5",
+      "tiers": "Grants +5 to max HP.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Hardy Bearing",
+      "tiers": "Hardy Bearing 1",
       "effect": "Disables skills that change unit's attack priority.If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
       "type": "SEAL"
     },
     {
-      "name": "Panic Ploy 1",
+      "name": "Hardy Bearing 2",
+      "tiers": "Disables skills that change unit's attack priority.If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Hardy Bearing 3",
+      "tiers": "Disables skills that change unit's attack priority.Enemy skills that change attack priority are also disabled.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Panic Ploy",
+      "tiers": "Panic Ploy 1",
       "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 5 or more lower than unit through foe's next action.",
       "type": "SEAL"
     },
     {
-      "name": "Phantom Spd 1",
+      "name": "Panic Ploy 2",
+      "tiers": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 3 or more lower than unit through foe's next action.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Panic Ploy 3",
+      "tiers": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Phantom Speed",
+      "tiers": "Phantom Spd 1",
       "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +5 over actual value.",
       "type": "SEAL"
     },
     {
+      "name": "Phantom Spd 2",
+      "tiers": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +8 over actual value.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Phantom Spd 3",
+      "tiers": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +10 over actual value.",
+      "type": "SEAL"
+    },
+    {
       "name": "Quickened Pulse",
+      "tiers": "Quickened Pulse",
       "effect": "Special cooldown count -1 at start of Turn 1.",
       "type": "SEAL"
     },
     {
-      "name": "Resistance +1",
+      "name": "Resistance Plus",
+      "tiers": "Resistance +1",
       "effect": "Grants Res+1.",
       "type": "SEAL"
     },
     {
-      "name": "Speed +1",
+      "name": "Resistance +2",
+      "tiers": "Grants Res+2.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Resistance +3",
+      "tiers": "Grants Res+3.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Speed Plus",
+      "tiers": "Speed +1",
       "effect": "Grants Spd+1.",
       "type": "SEAL"
     },
     {
-      "name": "Spur Def 1",
+      "name": "Speed +2",
+      "tiers": "Grants Spd+2.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Speed +3",
+      "tiers": "Grants Spd+3.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Attack",
+      "tiers": "Spur Atk 1",
+      "effect": "Grants adjacent allies Atk+2 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Atk 2",
+      "tiers": "Grants adjacent allies Atk+3 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Atk 3",
+      "tiers": "Grants adjacent allies Atk+4 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Defense",
+      "tiers": "Spur Def 1",
       "effect": "Grants adjacent allies Def+2 during combat.",
       "type": "SEAL"
     },
     {
-      "name": "Squad Ace A 1",
+      "name": "Spur Def 2",
+      "tiers": "Grants adjacent allies Def+3 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Def 3",
+      "tiers": "Grants adjacent allies Def+4 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Resistance",
+      "tiers": "Spur Res 1",
+      "effect": "Grants adjacent allies Res+2 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Res 2",
+      "tiers": "Grants adjacent allies Res+3 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Res 3",
+      "tiers": "Grants adjacent allies Res+4 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Speed",
+      "tiers": "Spur Spd 1",
+      "effect": "Grants adjacent allies Spd+2 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Spd 2",
+      "tiers": "Grants adjacent allies Spd+3 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Spur Spd 3",
+      "tiers": "Grants adjacent allies Spd+4 during combat.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace A",
+      "tiers": "Squad Ace A 1",
       "effect": "Grants HP+3.",
       "type": "SEAL"
     },
     {
-      "name": "Squad Ace B 1",
+      "name": "Squad Ace A 2",
+      "tiers": "Grants HP+4.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace A 3",
+      "tiers": "Grants HP+5.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace B",
+      "tiers": "Squad Ace B 1",
       "effect": "Grants Def+1.",
       "type": "SEAL"
     },
     {
-      "name": "Squad Ace C 1",
+      "name": "Squad Ace B 2",
+      "tiers": "Grants Def+2.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace B 3",
+      "tiers": "Grants Def+3.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace C",
+      "tiers": "Squad Ace C 1",
       "effect": "Grants Res+1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace C 2",
+      "tiers": "Grants Res+2.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace C 3",
+      "tiers": "Grants Res+3.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace D",
+      "tiers": "Squad Ace D 1",
+      "effect": "Grants Spd+1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace D 2",
+      "tiers": "Grants Spd+2.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace D 3",
+      "tiers": "Grants Spd+3.",
       "type": "SEAL"
     }
   ]
