@@ -9,7 +9,7 @@
   "scripts": {
     "build": "npm run stamp-deploy && next build",
     "build-storybook": "build-storybook",
-    "deploy": "now --npm",
+    "deploy": "now --npm --alias=proving-grounds.ajhyndman.com",
     "dev": "next",
     "docker-build": "docker build -t proving-grounds .",
     "docker-start": "docker run -d -p 80:3000 proving-grounds",
