@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import Color from 'color-js';
-import { map, range, addIndex } from 'ramda';
+import { map, addIndex } from 'ramda';
 import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
@@ -29,19 +29,18 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
   <div className="grid">
     <style jsx>{`
       .grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-      .grid:after {
-        content: "";
-        flex: auto;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(${gridSize}px, 1fr));
+        grid-column-gap: ${GUTTER_WIDTH * 2}px;
+        grid-row-gap: ${GUTTER_HEIGHT}px;
+        margin: ${GUTTER_HEIGHT}px ${GUTTER_WIDTH}px;
       }
       .gridSquare {
         box-shadow: 0 0 10px rgba(70, 183, 227, 0.4);
         cursor: pointer;
         height: ${gridSize}px;
-        margin: ${GUTTER_HEIGHT}px ${GUTTER_WIDTH}px;
+        margin-bottom: ${GUTTER_HEIGHT}px;
         position: relative;
         transition: box-shadow 0.2s;
         user-select: none;
@@ -53,8 +52,8 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
       .gridSquareOuter {
         align-items: center;
         display: flex;
-        width: ${gridSize + GUTTER_WIDTH * 2}px;
         flex-direction: column;
+        width: 100%;
       }
       .undo {
         align-items: center;
@@ -132,11 +131,6 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
         </div>,
       heroes,
     )}
-    {/**
-      * Flexbox doesn't really provide grid support.  Add enough empty
-      * elements to preserve grid layout of last row on large screens.
-      */}
-    {map(i => <div key={i} />, range(0, 30))}
   </div>;
 
 export default HeroGrid;
