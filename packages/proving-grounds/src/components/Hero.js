@@ -98,7 +98,7 @@ const HeroPortrait = ({
       <div className="frame">
         <Frame rarity={rarity} />
       </div>
-      {weaponType &&
+      {weaponType && (
         <img
           className="class"
           title={weaponType}
@@ -108,12 +108,12 @@ const HeroPortrait = ({
           ${staticUrl}Icon_Class_${weaponTypeUri}.png 56w
         `}
           sizes={`${CLASS_ICON_SIZE}px`}
-        />}
+        />
+      )}
       {specialCooldown !== undefined &&
-        specialCooldown !== -1 &&
-        <span className="specialCooldown">
-          {specialCooldown}
-        </span>}
+        specialCooldown !== -1 && (
+          <span className="specialCooldown">{specialCooldown}</span>
+        )}
     </div>
   );
 };

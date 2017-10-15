@@ -16,7 +16,7 @@ const RaritySelector = ({
   disabled = [false, false, false, false, false],
   selected,
   onChange,
-}: Props) =>
+}: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
@@ -67,6 +67,7 @@ const RaritySelector = ({
       },
       [1, 2, 3, 4, 5],
     )}
-  </div>;
+  </div>
+);
 
 export default RaritySelector;

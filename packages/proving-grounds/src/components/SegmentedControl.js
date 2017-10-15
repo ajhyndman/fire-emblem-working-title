@@ -12,7 +12,7 @@ type Props = {
   onChange: (nextSelected: number) => void,
 };
 
-const SegmentedControl = ({ selected, options, onChange }: Props) =>
+const SegmentedControl = ({ selected, options, onChange }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
@@ -58,7 +58,7 @@ const SegmentedControl = ({ selected, options, onChange }: Props) =>
           ${colors.aquaIsland},
           ${colors.fadedJade}
         );
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         top: -2px;
@@ -82,7 +82,7 @@ const SegmentedControl = ({ selected, options, onChange }: Props) =>
       }
     `}</style>
     {addIndex(map)(
-      (option, i) =>
+      (option, i) => (
         <button
           key={option}
           className={cn({ active: selected === i })}
@@ -90,9 +90,11 @@ const SegmentedControl = ({ selected, options, onChange }: Props) =>
           onClick={() => onChange(i)}
         >
           {option}
-        </button>,
+        </button>
+      ),
       options,
     )}
-  </div>;
+  </div>
+);
 
 export default SegmentedControl;

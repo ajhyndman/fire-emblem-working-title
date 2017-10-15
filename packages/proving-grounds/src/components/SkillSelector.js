@@ -26,7 +26,7 @@ const SkillSelector = ({
   heroInstance,
   showGuide,
   skillType,
-}: Props) =>
+}: Props) => (
   <div className="root">
     <style jsx>{`
       .section {
@@ -60,7 +60,7 @@ const SkillSelector = ({
       />
     </div>
     {map(
-      skillName =>
+      skillName => (
         <div
           key={skillName ? skillName : ''}
           className="skill-option"
@@ -72,7 +72,8 @@ const SkillSelector = ({
             name={skillName ? skillName : '--'}
             type={skillType}
           />
-        </div>,
+        </div>
+      ),
       // TODO: Consider the merits of this filter.
       // Maybe the tradeoff in power for simplicity isn't worthwhile.
       filter(
@@ -81,6 +82,7 @@ const SkillSelector = ({
         [undefined].concat(getInheritableSkills(heroInstance.name, skillType)),
       ),
     )}
-  </div>;
+  </div>
+);
 
 export default SkillSelector;

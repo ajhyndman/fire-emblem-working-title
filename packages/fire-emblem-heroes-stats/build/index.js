@@ -1,12 +1,15 @@
 import fs from 'fs';
 import {
+  __,
   assoc,
   compose,
+  concat,
   contains,
   dissoc,
   dropLast,
   flatten,
   has,
+  head,
   identity,
   ifElse,
   indexBy,
@@ -14,6 +17,7 @@ import {
   mapObjIndexed,
   merge,
   mergeWith,
+  path,
   prop,
   propEq,
   replace,
@@ -25,7 +29,7 @@ import {
   zipWith,
 } from 'ramda';
 
-import { fetchPage, fetchAndParsePages } from './fetch';
+import { fetchPage, fetchAndParsePages, fetchAskApiQuery } from './fetch';
 import {
   parseHeroAggregateHtml,
   parseHeroStatsAndSkills,
@@ -95,14 +99,43 @@ async function fetchSkills() {
     'Assists',
     'Specials',
     'Passives',
-    'Seals',
   ];
   const skillsByType = await fetchAndParsePages(
     WIKI_HOST,
     skillPageNames,
     parseSkillsPage,
   );
+
+  const seals = await fetchAskApiQuery(
+    '[[Category:Sacred Seals]]|?Name1|?Effect1|?Name2|?Effect2|?Name3|?Effect3',
+  ).then(
+    compose(
+      flatten,
+      map(({ Name1, Effect1, Name2, Effect2, Name3, Effect3 }) => [
+        {
+          name: head(Name1),
+          effect: head(Effect1),
+          type: 'SEAL',
+        },
+        {
+          name: head(Name2),
+          effect: head(Effect2),
+          type: 'SEAL',
+        },
+        {
+          name: head(Name3),
+          effect: head(Effect3),
+          type: 'SEAL',
+        },
+      ].filter(({ name }) => name !== undefined)),
+      map(prop('printouts')),
+      values,
+      path(['query', 'results']),
+    ),
+  );
+
   const skills = compose(
+    concat(__, seals),
     map(skill =>
       ifElse(
         has('passiveSlot'),
@@ -223,4 +256,4 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   fs.writeFileSync('./stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchWikiStats(true, true);
+fetchWikiStats(false, true);

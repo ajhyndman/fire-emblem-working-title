@@ -9,7 +9,7 @@ type Props = {
   skill: SpecialSkill,
 };
 
-const Special = ({ showGuide, skill }: Props) =>
+const Special = ({ showGuide, skill }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
@@ -39,17 +39,13 @@ const Special = ({ showGuide, skill }: Props) =>
       }
     `}</style>
     <div className="row">
-      <span className="name">
-        {skill.name}
-      </span>
+      <span className="name">{skill.name}</span>
     </div>
-    {showGuide &&
+    {showGuide && (
       <div>
         <div className="row">
           <span className="stat-name">Cooldown </span>
-          <span className="stat-value">
-            {skill.cooldown}
-          </span>
+          <span className="stat-value">{skill.cooldown}</span>
         </div>
         <div className="row">
           <span
@@ -57,7 +53,9 @@ const Special = ({ showGuide, skill }: Props) =>
             dangerouslySetInnerHTML={{ __html: skill.effect }}
           />
         </div>
-      </div>}
-  </div>;
+      </div>
+    )}
+  </div>
+);
 
 export default Special;

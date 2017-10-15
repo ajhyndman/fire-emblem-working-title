@@ -1108,6 +1108,96 @@
       }
     },
     {
+      "name": "Ayra",
+      "title": "",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": "4-5Tempest Trials",
+      "releaseDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Ayra.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Ayra.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Ayra.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "4": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-",
+            "total": "-"
+          },
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-",
+            "total": "-"
+          }
+        },
+        "40": {
+          "4": {
+            "hp": [
+              "-"
+            ],
+            "atk": [
+              "-"
+            ],
+            "spd": [
+              "-"
+            ],
+            "def": [
+              "-"
+            ],
+            "res": [
+              "-"
+            ],
+            "total": [
+              "-"
+            ]
+          },
+          "5": {
+            "hp": [
+              "-"
+            ],
+            "atk": [
+              "-"
+            ],
+            "spd": [
+              "-"
+            ],
+            "def": [
+              "-"
+            ],
+            "res": [
+              "-"
+            ],
+            "total": [
+              "-"
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Azama",
       "title": "Carefree Monk",
       "origin": "Fire Emblem Fates",
@@ -5859,6 +5949,117 @@
         }
       },
       "shortName": "Corrin (M)"
+    },
+    {
+      "name": "Deirdre",
+      "title": "Lady of the Forest",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
+      "weaponType": "Green Tome",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Oct 16, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Deirdre.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Deirdre.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Deirdre.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elwind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Rexcalibur",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Divine Naga",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Ardent Sacrifice",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Quick Riposte 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Quick Riposte 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Quick Riposte 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spd Ploy 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spd Ploy 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Spd Ploy 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-",
+            "total": "-"
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ],
+            "total": [
+              "-"
+            ]
+          }
+        }
+      }
     },
     {
       "name": "Delthea",
@@ -23544,6 +23745,121 @@
       "shortName": "Shigure (P)"
     },
     {
+      "name": "Sigurd",
+      "title": "Holy Knight",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
+      "weaponType": "Red Sword",
+      "moveType": "Cavalry",
+      "rarities": 5,
+      "releaseDate": "Oct 16, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sigurd.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sigurd.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sigurd.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Divine Tyrfing",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Miracle",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Close Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Close Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Close Def 3",
+          "rarity": 5
+        },
+        {
+          "name": "Crusader's Ward",
+          "rarity": 5
+        },
+        {
+          "name": "Spd Smoke 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spd Smoke 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Spd Smoke 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-",
+            "total": "-"
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ],
+            "total": [
+              "-"
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Sonya",
       "title": "Vengeful Mage",
       "origin": "Fire Emblem Echoes: Shadows of Valentia",
@@ -24729,6 +25045,108 @@
             ],
             "total": [
               "153~155"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Tailtiu",
+      "title": "Thunder Noble",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
+      "weaponType": "Blue Tome",
+      "moveType": "Infantry",
+      "rarities": 5,
+      "releaseDate": "Oct 16, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Tailtiu.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Tailtiu.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Tailtiu.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elthunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blárblade",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blárblade+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Attack Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Attack Res 2",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Spd 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Spd 2",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": "-",
+            "atk": "-",
+            "spd": "-",
+            "def": "-",
+            "res": "-",
+            "total": "-"
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              "-",
+              "-",
+              "-"
+            ],
+            "atk": [
+              "-",
+              "-",
+              "-"
+            ],
+            "spd": [
+              "-",
+              "-",
+              "-"
+            ],
+            "def": [
+              "-",
+              "-",
+              "-"
+            ],
+            "res": [
+              "-",
+              "-",
+              "-"
+            ],
+            "total": [
+              "-"
             ]
           }
         }
@@ -27300,6 +27718,16 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Divine Tyrfing",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
       "name": "Durandal",
       "spCost": 400,
       "damage(mt)": 16,
@@ -28799,6 +29227,16 @@
       "weaponType": "Green Tome"
     },
     {
+      "name": "Divine Naga",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against dragons. Foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
       "name": "Élivágar",
       "spCost": 400,
       "damage(mt)": 14,
@@ -29630,6 +30068,14 @@
       "name": "Rally Speed Defense",
       "range": 1,
       "effect": "Grants Spd/Def+3 to an adjacent ally until the end of the turn.",
+      "spCost": 300,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "ASSIST"
+    },
+    {
+      "name": "Rally Speed Resistance",
+      "range": 1,
+      "effect": "Grants Spd/Res+3 to an adjacent ally until the end of the turn.",
       "spCost": 300,
       "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
@@ -32570,399 +33016,373 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Attack Ploy",
-      "tiers": "Atk Ploy 1",
+      "name": "Atk Ploy 1",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.",
       "type": "SEAL"
     },
     {
       "name": "Atk Ploy 2",
-      "tiers": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.",
       "type": "SEAL"
     },
     {
       "name": "Atk Ploy 3",
-      "tiers": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.",
       "type": "SEAL"
     },
     {
-      "name": "Attack Plus",
-      "tiers": "Attack +1",
+      "name": "Attack +1",
       "effect": "Grants Atk+1.",
       "type": "SEAL"
     },
     {
       "name": "Attack +2",
-      "tiers": "Grants Atk+2.",
+      "effect": "Grants Atk+2.",
       "type": "SEAL"
     },
     {
       "name": "Attack +3",
-      "tiers": "Grants Atk+3.",
+      "effect": "Grants Atk+3.",
       "type": "SEAL"
     },
     {
-      "name": "Breath of Life",
-      "tiers": "Breath of Life 1",
+      "name": "Breath of Life 1",
       "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
       "type": "SEAL"
     },
     {
       "name": "Breath of Life 2",
-      "tiers": "If unit initiates attack, adjacent allies recover 5 HP after combat.",
+      "effect": "If unit initiates attack, adjacent allies recover 5 HP after combat.",
       "type": "SEAL"
     },
     {
       "name": "Breath of Life 3",
-      "tiers": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
       "type": "SEAL"
     },
     {
-      "name": "Defense Plus",
-      "tiers": "Defense +1",
+      "name": "Defense +1",
       "effect": "Grants Def+1.",
       "type": "SEAL"
     },
     {
       "name": "Defense +2",
-      "tiers": "Grants Def+2.",
+      "effect": "Grants Def+2.",
       "type": "SEAL"
     },
     {
       "name": "Defense +3",
-      "tiers": "Grants Def+3.",
+      "effect": "Grants Def+3.",
       "type": "SEAL"
     },
     {
-      "name": "Deflect Magic",
-      "tiers": "Deflect Magic 1",
+      "name": "Deflect Magic 1",
       "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 30%.",
       "type": "SEAL"
     },
     {
       "name": "Deflect Magic 2",
-      "tiers": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 50%.",
+      "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 50%.",
       "type": "SEAL"
     },
     {
       "name": "Deflect Magic 3",
-      "tiers": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 80%.",
+      "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 80%.",
       "type": "SEAL"
     },
     {
-      "name": "Deflect Melee",
-      "tiers": "Deflect Melee 1",
+      "name": "Deflect Melee 1",
       "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 30%.",
       "type": "SEAL"
     },
     {
       "name": "Deflect Melee 2",
-      "tiers": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 50%.",
+      "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 50%.",
       "type": "SEAL"
     },
     {
       "name": "Deflect Melee 3",
-      "tiers": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 80%.",
+      "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 80%.",
       "type": "SEAL"
     },
     {
-      "name": "Deflect Missile",
-      "tiers": "Deflect Missile 1",
+      "name": "Deflect Missile 1",
       "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 30%.",
       "type": "SEAL"
     },
     {
       "name": "Deflect Missile 2",
-      "tiers": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 50%.",
+      "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 50%.",
       "type": "SEAL"
     },
     {
       "name": "Deflect Missile 3",
-      "tiers": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 80%.",
+      "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 80%.",
       "type": "SEAL"
     },
     {
-      "name": "Distant Defense",
-      "tiers": "Distant Def 1",
+      "name": "Distant Def 1",
       "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Distant Def 2",
-      "tiers": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Distant Def 3",
-      "tiers": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Embla's Ward",
-      "tiers": "Embla's Ward",
       "effect": "Unit receives 0 damage.",
       "type": "SEAL"
     },
     {
-      "name": "Fortify Defense",
-      "tiers": "Fortify Def 1",
+      "name": "Fortify Def 1",
       "effect": "Grants adjacent allies Def+2 through their next actions at the start of each turn.",
       "type": "SEAL"
     },
     {
       "name": "Fortify Def 2",
-      "tiers": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
+      "effect": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
       "type": "SEAL"
     },
     {
       "name": "Fortify Def 3",
-      "tiers": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
+      "effect": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
       "type": "SEAL"
     },
     {
-      "name": "Fortify Resistance",
-      "tiers": "Fortify Res 1",
+      "name": "Fortify Res 1",
       "effect": "Grants adjacent allies Res+2 through their next actions at the start of each turn.",
       "type": "SEAL"
     },
     {
       "name": "Fortify Res 2",
-      "tiers": "Grants adjacent allies Res+3 through their next actions at the start of each turn.",
+      "effect": "Grants adjacent allies Res+3 through their next actions at the start of each turn.",
       "type": "SEAL"
     },
     {
       "name": "Fortify Res 3",
-      "tiers": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
+      "effect": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
       "type": "SEAL"
     },
     {
-      "name": "HP Plus",
-      "tiers": "HP +3",
+      "name": "HP +3",
       "effect": "Grants +3 to max HP.",
       "type": "SEAL"
     },
     {
       "name": "HP +4",
-      "tiers": "Grants +4 to max HP.",
+      "effect": "Grants +4 to max HP.",
       "type": "SEAL"
     },
     {
       "name": "HP +5",
-      "tiers": "Grants +5 to max HP.",
+      "effect": "Grants +5 to max HP.",
       "type": "SEAL"
     },
     {
-      "name": "Hardy Bearing",
-      "tiers": "Hardy Bearing 1",
-      "effect": "Disables skills that change unit's attack priority.If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "name": "Hardy Bearing 1",
+      "effect": "Disables skills that change unit's attack priority.<br>If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
       "type": "SEAL"
     },
     {
       "name": "Hardy Bearing 2",
-      "tiers": "Disables skills that change unit's attack priority.If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "effect": "Disables skills that change unit's attack priority.<br>If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
       "type": "SEAL"
     },
     {
       "name": "Hardy Bearing 3",
-      "tiers": "Disables skills that change unit's attack priority.Enemy skills that change attack priority are also disabled.",
+      "effect": "Disables skills that change unit's attack priority.<br>Enemy skills that change attack priority are also disabled.",
       "type": "SEAL"
     },
     {
-      "name": "Panic Ploy",
-      "tiers": "Panic Ploy 1",
+      "name": "Panic Ploy 1",
       "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 5 or more lower than unit through foe's next action.",
       "type": "SEAL"
     },
     {
       "name": "Panic Ploy 2",
-      "tiers": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 3 or more lower than unit through foe's next action.",
+      "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 3 or more lower than unit through foe's next action.",
       "type": "SEAL"
     },
     {
       "name": "Panic Ploy 3",
-      "tiers": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action.",
+      "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action.",
       "type": "SEAL"
     },
     {
-      "name": "Phantom Speed",
-      "tiers": "Phantom Spd 1",
+      "name": "Phantom Spd 1",
       "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +5 over actual value.",
       "type": "SEAL"
     },
     {
       "name": "Phantom Spd 2",
-      "tiers": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +8 over actual value.",
+      "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +8 over actual value.",
       "type": "SEAL"
     },
     {
       "name": "Phantom Spd 3",
-      "tiers": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +10 over actual value.",
+      "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +10 over actual value.",
       "type": "SEAL"
     },
     {
       "name": "Quickened Pulse",
-      "tiers": "Quickened Pulse",
       "effect": "Special cooldown count -1 at start of Turn 1.",
       "type": "SEAL"
     },
     {
-      "name": "Resistance Plus",
-      "tiers": "Resistance +1",
+      "name": "Resistance +1",
       "effect": "Grants Res+1.",
       "type": "SEAL"
     },
     {
       "name": "Resistance +2",
-      "tiers": "Grants Res+2.",
+      "effect": "Grants Res+2.",
       "type": "SEAL"
     },
     {
       "name": "Resistance +3",
-      "tiers": "Grants Res+3.",
+      "effect": "Grants Res+3.",
       "type": "SEAL"
     },
     {
-      "name": "Speed Plus",
-      "tiers": "Speed +1",
+      "name": "Speed +1",
       "effect": "Grants Spd+1.",
       "type": "SEAL"
     },
     {
       "name": "Speed +2",
-      "tiers": "Grants Spd+2.",
+      "effect": "Grants Spd+2.",
       "type": "SEAL"
     },
     {
       "name": "Speed +3",
-      "tiers": "Grants Spd+3.",
+      "effect": "Grants Spd+3.",
       "type": "SEAL"
     },
     {
-      "name": "Spur Attack",
-      "tiers": "Spur Atk 1",
+      "name": "Spur Atk 1",
       "effect": "Grants adjacent allies Atk+2 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Spur Atk 2",
-      "tiers": "Grants adjacent allies Atk+3 during combat.",
+      "effect": "Grants adjacent allies Atk+3 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Spur Atk 3",
-      "tiers": "Grants adjacent allies Atk+4 during combat.",
+      "effect": "Grants adjacent allies Atk+4 during combat.",
       "type": "SEAL"
     },
     {
-      "name": "Spur Defense",
-      "tiers": "Spur Def 1",
+      "name": "Spur Def 1",
       "effect": "Grants adjacent allies Def+2 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Spur Def 2",
-      "tiers": "Grants adjacent allies Def+3 during combat.",
+      "effect": "Grants adjacent allies Def+3 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Spur Def 3",
-      "tiers": "Grants adjacent allies Def+4 during combat.",
+      "effect": "Grants adjacent allies Def+4 during combat.",
       "type": "SEAL"
     },
     {
-      "name": "Spur Resistance",
-      "tiers": "Spur Res 1",
+      "name": "Spur Res 1",
       "effect": "Grants adjacent allies Res+2 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Spur Res 2",
-      "tiers": "Grants adjacent allies Res+3 during combat.",
+      "effect": "Grants adjacent allies Res+3 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Spur Res 3",
-      "tiers": "Grants adjacent allies Res+4 during combat.",
+      "effect": "Grants adjacent allies Res+4 during combat.",
       "type": "SEAL"
     },
     {
-      "name": "Spur Speed",
-      "tiers": "Spur Spd 1",
+      "name": "Spur Spd 1",
       "effect": "Grants adjacent allies Spd+2 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Spur Spd 2",
-      "tiers": "Grants adjacent allies Spd+3 during combat.",
+      "effect": "Grants adjacent allies Spd+3 during combat.",
       "type": "SEAL"
     },
     {
       "name": "Spur Spd 3",
-      "tiers": "Grants adjacent allies Spd+4 during combat.",
+      "effect": "Grants adjacent allies Spd+4 during combat.",
       "type": "SEAL"
     },
     {
-      "name": "Squad Ace A",
-      "tiers": "Squad Ace A 1",
+      "name": "Squad Ace A 1",
       "effect": "Grants HP+3.",
       "type": "SEAL"
     },
     {
       "name": "Squad Ace A 2",
-      "tiers": "Grants HP+4.",
+      "effect": "Grants HP+4.",
       "type": "SEAL"
     },
     {
       "name": "Squad Ace A 3",
-      "tiers": "Grants HP+5.",
+      "effect": "Grants HP+5.",
       "type": "SEAL"
     },
     {
-      "name": "Squad Ace B",
-      "tiers": "Squad Ace B 1",
+      "name": "Squad Ace B 1",
       "effect": "Grants Def+1.",
       "type": "SEAL"
     },
     {
       "name": "Squad Ace B 2",
-      "tiers": "Grants Def+2.",
+      "effect": "Grants Def+2.",
       "type": "SEAL"
     },
     {
       "name": "Squad Ace B 3",
-      "tiers": "Grants Def+3.",
+      "effect": "Grants Def+3.",
       "type": "SEAL"
     },
     {
-      "name": "Squad Ace C",
-      "tiers": "Squad Ace C 1",
+      "name": "Squad Ace C 1",
       "effect": "Grants Res+1.",
       "type": "SEAL"
     },
     {
       "name": "Squad Ace C 2",
-      "tiers": "Grants Res+2.",
+      "effect": "Grants Res+2.",
       "type": "SEAL"
     },
     {
       "name": "Squad Ace C 3",
-      "tiers": "Grants Res+3.",
+      "effect": "Grants Res+3.",
       "type": "SEAL"
     },
     {
-      "name": "Squad Ace D",
-      "tiers": "Squad Ace D 1",
+      "name": "Squad Ace D 1",
       "effect": "Grants Spd+1.",
       "type": "SEAL"
     },
     {
       "name": "Squad Ace D 2",
-      "tiers": "Grants Spd+2.",
+      "effect": "Grants Spd+2.",
       "type": "SEAL"
     },
     {
       "name": "Squad Ace D 3",
-      "tiers": "Grants Spd+3.",
+      "effect": "Grants Spd+3.",
       "type": "SEAL"
     }
   ]

@@ -112,9 +112,7 @@ class Toast extends React.Component {
             }
           }
         `}</style>
-        <div className="toast">
-          {message}
-        </div>
+        <div className="toast">{message}</div>
       </div>
     );
   }
