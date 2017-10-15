@@ -95,7 +95,6 @@ async function fetchSkills() {
     'Assists',
     'Specials',
     'Passives',
-    'Seals',
   ];
   const skillsByType = await fetchAndParsePages(
     WIKI_HOST,
