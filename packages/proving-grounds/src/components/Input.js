@@ -79,7 +79,7 @@ class Input extends React.Component {
               ${colors.aquaIsland},
               ${colors.fadedJade}
             );
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             top: -2px;

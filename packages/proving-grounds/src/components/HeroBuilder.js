@@ -194,9 +194,7 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
         </div>
         <div className="section">
           <div className="row" style={{ alignItems: 'center' }}>
-            <h1 className="name">
-              {heroInstance.name}
-            </h1>
+            <h1 className="name">{heroInstance.name}</h1>
             <button
               className="export-button"
               onClick={() => {
@@ -285,7 +283,7 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
         <div className="section">
           {values(
             mapObjIndexed(
-              (skill: string | void, skillType: SkillType) =>
+              (skill: string | void, skillType: SkillType) => (
                 <div key={skillType} className="active-skill">
                   <img
                     className="skill-icon"
@@ -307,7 +305,8 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
                       Router.push('/skills');
                     }}
                   />
-                </div>,
+                </div>
+              ),
               ({
                 // Enumerate all properties to ensure they are all iterable.
                 // This fixes issue #52

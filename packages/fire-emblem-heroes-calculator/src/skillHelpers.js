@@ -267,8 +267,8 @@ export const getSpecialCooldown = (instance: HeroInstance) => {
   return !skill || typeof skill.cooldown !== 'number'
     ? -1
     : skill.cooldown +
-      (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0) +
-      (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0);
+        (test(/Accelerates S/, getSkillEffect(instance, 'WEAPON')) ? -1 : 0) +
+        (test(/Slows Special/, getSkillEffect(instance, 'WEAPON')) ? +1 : 0);
 };
 
 // Only considers damage reduction specials

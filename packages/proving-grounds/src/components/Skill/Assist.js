@@ -9,7 +9,7 @@ type Props = {
   skill: AssistSkill,
 };
 
-const Assist = ({ showGuide, skill }: Props) =>
+const Assist = ({ showGuide, skill }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
@@ -39,17 +39,13 @@ const Assist = ({ showGuide, skill }: Props) =>
       }
     `}</style>
     <div className="row">
-      <span className="name">
-        {skill.name}
-      </span>
+      <span className="name">{skill.name}</span>
     </div>
-    {showGuide &&
+    {showGuide && (
       <div>
         <div className="row">
           <span className="stat-name">Rng </span>
-          <span className="stat-value">
-            {skill.range}
-          </span>
+          <span className="stat-value">{skill.range}</span>
         </div>
         <div className="row">
           <span
@@ -57,7 +53,9 @@ const Assist = ({ showGuide, skill }: Props) =>
             dangerouslySetInnerHTML={{ __html: skill.effect }}
           />
         </div>
-      </div>}
-  </div>;
+      </div>
+    )}
+  </div>
+);
 
 export default Assist;

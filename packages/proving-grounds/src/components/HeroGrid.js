@@ -25,7 +25,7 @@ type Props = {
 const GUTTER_HEIGHT = 5;
 const GUTTER_WIDTH = 8;
 
-const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
+const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
   <div className="grid">
     <style jsx>{`
       .grid {
@@ -89,7 +89,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
         white-space: nowrap;
       }
     `}</style>
-    {showUndo &&
+    {showUndo && (
       <div className="gridSquareOuter">
         <div
           className="gridSquare"
@@ -103,9 +103,10 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
         >
           <div className="undo">Undo</div>
         </div>
-      </div>}
+      </div>
+    )}
     {addIndex(map)(
-      (hero: Hero, i: number) =>
+      (hero: Hero, i: number) => (
         <div className="gridSquareOuter" key={`${i}-${hero.name}`}>
           <div
             className={`gridSquare ${activeHeroName === hero.name
@@ -125,12 +126,12 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) =>
               weaponType={hero.weaponType}
             />
           </div>
-          <div className="name">
-            {hero.shortName || hero.name}
-          </div>
-        </div>,
+          <div className="name">{hero.shortName || hero.name}</div>
+        </div>
+      ),
       heroes,
     )}
-  </div>;
+  </div>
+);
 
 export default HeroGrid;

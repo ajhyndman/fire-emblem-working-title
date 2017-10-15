@@ -77,7 +77,7 @@ class Select extends React.Component {
             transform: translateY(-50%);
           }
           .arrow::after {
-            content: "";
+            content: '';
             display: block;
             border-top: ${colors.iceberg} solid ${height / 4}px;
             border-left: transparent solid ${height / 4}px;
@@ -122,7 +122,7 @@ class Select extends React.Component {
           }}
         >
           {map(
-            option =>
+            option => (
               <div
                 key={option}
                 className={cn('option', { active: this.state.active })}
@@ -136,7 +136,8 @@ class Select extends React.Component {
                 }}
               >
                 {option}
-              </div>,
+              </div>
+            ),
             options,
           )}
         </div>

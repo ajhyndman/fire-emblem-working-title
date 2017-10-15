@@ -60,7 +60,7 @@ const Skill = ({ active, type, name, onClick, showGuide }: Props) => {
             ${colors.aquaIsland},
             ${colors.fadedJade}
           );
-          content: "";
+          content: '';
           display: block;
           position: absolute;
           top: -2px;
@@ -117,7 +117,7 @@ const Skill = ({ active, type, name, onClick, showGuide }: Props) => {
             return <Seal showGuide={showGuide} skill={skill} />;
         }
       })()}
-      {active &&
+      {active && (
         <img
           className="active-indicator"
           src={`${staticUrl}Checkmark.png`}
@@ -127,7 +127,8 @@ const Skill = ({ active, type, name, onClick, showGuide }: Props) => {
           ${staticUrl}Checkmark.png 79w
         `}
           sizes="30px"
-        />}
+        />
+      )}
     </div>
   );
 };

@@ -307,7 +307,9 @@ export const getStat = (
     );
     mergeBonus =
       Math.floor(2 * instance.mergeLevel / 5) +
-      (2 * instance.mergeLevel % 5 > indexOf(statKey, orderedStatKeys) ? 1 : 0);
+      ((2 * instance.mergeLevel) % 5 > indexOf(statKey, orderedStatKeys)
+        ? 1
+        : 0);
   }
 
   // Stats cannot be negative, even with brave weapons, life and death, or debuffs.

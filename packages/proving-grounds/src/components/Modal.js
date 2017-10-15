@@ -9,7 +9,7 @@ type Props = {
 
 const BORDER_SIZE = 46;
 
-const Modal = ({ children }: Props) =>
+const Modal = ({ children }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
@@ -25,6 +25,7 @@ const Modal = ({ children }: Props) =>
       }
     `}</style>
     {children}
-  </div>;
+  </div>
+);
 
 export default Modal;

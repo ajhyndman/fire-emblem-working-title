@@ -278,9 +278,7 @@ class Root extends React.Component {
           showUndo
         />
         <div className="footer">
-          <span>
-            Last updated: {deployTimestamp}
-          </span>
+          <span>Last updated: {deployTimestamp}</span>
           <span>
             Proving Grounds is an open source project licensed under GPL-3.0+
             <a href="https://github.com/ajhyndman/fire-emblem-working-title/issues">

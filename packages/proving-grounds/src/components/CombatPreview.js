@@ -25,7 +25,12 @@ const openConfig = (event, dispatch, slot) => {
   Router.push('/build');
 };
 
-const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) =>
+const CombatPreview = ({
+  activeSlot,
+  dispatch,
+  leftHero,
+  rightHero,
+}: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
@@ -111,7 +116,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) =>
         }}
         onContextMenu={event => openConfig(event, dispatch, 0)}
       >
-        {leftHero &&
+        {leftHero && (
           <div>
             <HeroPortrait
               assets={getHero(leftHero.name).assets}
@@ -139,7 +144,8 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) =>
               `}
               sizes={`${gridSize / 2}px`}
             />
-          </div>}
+          </div>
+        )}
       </div>
       <img
         className="swap-button"
@@ -165,7 +171,7 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) =>
         }}
         onContextMenu={event => openConfig(event, dispatch, 1)}
       >
-        {rightHero &&
+        {rightHero && (
           <div>
             <HeroPortrait
               assets={getHero(rightHero.name).assets}
@@ -193,9 +199,11 @@ const CombatPreview = ({ activeSlot, dispatch, leftHero, rightHero }: Props) =>
               `}
               sizes={`${gridSize / 2}px`}
             />
-          </div>}
+          </div>
+        )}
       </div>
     </div>
-  </div>;
+  </div>
+);
 
 export default CombatPreview;

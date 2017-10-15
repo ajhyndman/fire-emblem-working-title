@@ -9,7 +9,7 @@ type Props = {
   skill: PassiveSkill,
 };
 
-const Passive = ({ showGuide, skill }: Props) =>
+const Passive = ({ showGuide, skill }: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
@@ -39,11 +39,9 @@ const Passive = ({ showGuide, skill }: Props) =>
       }
     `}</style>
     <div className="row">
-      <span className="name">
-        {skill.name}
-      </span>
+      <span className="name">{skill.name}</span>
     </div>
-    {showGuide &&
+    {showGuide && (
       <div>
         <div className="row">
           <span
@@ -51,7 +49,9 @@ const Passive = ({ showGuide, skill }: Props) =>
             dangerouslySetInnerHTML={{ __html: skill.effect }}
           />
         </div>
-      </div>}
-  </div>;
+      </div>
+    )}
+  </div>
+);
 
 export default Passive;
