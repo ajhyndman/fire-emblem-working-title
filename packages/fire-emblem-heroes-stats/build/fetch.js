@@ -4,6 +4,8 @@ import path from 'path';
 import { URL } from 'url';
 import { compose, last, map, prop, replace, split, zipObj } from 'ramda';
 
+import { WIKI_HOST } from './constants';
+
 /**
  * Raw data fetchers
  */
@@ -67,4 +69,19 @@ export const fetchImage = url => {
       response.body.pipe(file);
     });
   }
+};
+
+/**
+ * Use the semantic media wiki Ask API to submit an Ask Query string.
+ *
+ * @see {@link https://feheroes.gamepedia.com/Special:ApiSandbox}
+ *
+ * @param {*} queryString The Ask API Query string format.
+ */
+export const fetchAskApiQuery = queryString => {
+  return fetch(
+    `${WIKI_HOST}/api.php?action=ask&format=json&query=${encodeURIComponent(
+      queryString,
+    )}`,
+  ).then(response => response.json());
 };
