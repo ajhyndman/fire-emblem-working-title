@@ -27678,6 +27678,15 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Ayra's Blade",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied.)",
+      "exclusive?": "Yes",
+      "type": "WEAPON"
+    },
+    {
       "name": "Binding Blade",
       "spCost": 400,
       "damage(mt)": 16,
@@ -28206,6 +28215,15 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Red Tome"
+    },
+    {
+      "name": "Valflame",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe's next action.",
+      "exclusive?": "Yes",
+      "type": "WEAPON"
     },
     {
       "name": "Fire Breath",
@@ -30449,6 +30467,14 @@
       "type": "SPECIAL"
     },
     {
+      "name": "Regnal Astra",
+      "cooldown": 2,
+      "effect": "Boosts damage dealt by 40% of unit's Spd.(Skill cannot be inherited.)",
+      "spCost": 500,
+      "inheritRestriction": "Exclusive",
+      "type": "SPECIAL"
+    },
+    {
       "name": "Reprisal",
       "cooldown": 2,
       "effect": "Grants bonus to damage dealt equal to 30% of damage suffered.",
@@ -31553,6 +31579,13 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Follow-Up Ring",
+      "effect": "Unit makes a guaranteed follow-up attack when unit's HP ≥ 50% at start of combat. (Skill cannot be inherited.)",
+      "spCost": 200,
+      "inheritRestriction": "Is exclusive",
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Gale Dance 1",
       "effect": "If Sing or Dance is used, target also granted Spd+2.",
       "spCost": 50,
@@ -31788,6 +31821,13 @@
       "effect": "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.",
       "spCost": 240,
       "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Recover Ring",
+      "effect": "Restores 10 HP at the start of each turn. (Skill cannot be inherited.)",
+      "spCost": 200,
+      "inheritRestriction": "Is exclusive",
       "type": "PASSIVE_B"
     },
     {
@@ -33192,7 +33232,7 @@
     },
     {
       "name": "Hardy Bearing 2",
-      "effect": "Disables skills that change unit's attack priority.<br>If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "effect": "Disables skills that change unit's attack priority.<br>If unit has ≥ 50% HP at start of battle, enemy skills that change attack priority are also disabled.",
       "type": "SEAL"
     },
     {
