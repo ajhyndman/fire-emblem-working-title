@@ -767,6 +767,100 @@
       }
     },
     {
+      "name": "Arden",
+      "title": "Strong and Tough",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
+      "weaponType": "Red Sword",
+      "moveType": "Armored",
+      "rarities": "4-5",
+      "releaseDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Arden.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Arden.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Arden.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Brave Sword",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Brave Sword+",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Buckler",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Pavise",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Follow-Up Ring",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Def 2",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 25,
+            "atk": 10,
+            "spd": 3,
+            "def": 13,
+            "res": 3
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              60
+            ],
+            "atk": [
+              36
+            ],
+            "spd": [
+              16
+            ],
+            "def": [
+              41
+            ],
+            "res": [
+              16
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Arthur",
       "title": "Hapless Hero",
       "origin": "Fire Emblem Fates",
@@ -954,6 +1048,160 @@
       }
     },
     {
+      "name": "Arvis",
+      "title": "Emperor of Flame",
+      "origin": "Fire Emblem: Genealogy of the Holy War",
+      "weaponType": "Red Tome",
+      "moveType": "Infantry",
+      "rarities": "3-4Grand Hero Battle",
+      "releaseDate": "Oct 18, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Arvis.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Arvis.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Arvis.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Fire",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elfire",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Bolganone",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Valflame",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Rising Flame",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Growing Flame",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Recover Ring",
+          "rarity": 5
+        },
+        {
+          "name": "Def Ploy 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Def Ploy 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Def Ploy 3",
+          "rarity": 4
+        }
+      ],
+      "stats": {
+        "1": {
+          "3": {
+            "hp": 17,
+            "atk": 7,
+            "spd": 6,
+            "def": 3,
+            "res": 6,
+            "total": 39
+          },
+          "4": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 7,
+            "def": 3,
+            "res": 6,
+            "total": 41
+          },
+          "5": {
+            "hp": 18,
+            "atk": 8,
+            "spd": 7,
+            "def": 4,
+            "res": 7,
+            "total": 44
+          }
+        },
+        "40": {
+          "3": {
+            "hp": [
+              30
+            ],
+            "atk": [
+              30
+            ],
+            "spd": [
+              27
+            ],
+            "def": [
+              14
+            ],
+            "res": [
+              29
+            ],
+            "total": [
+              130
+            ]
+          },
+          "4": {
+            "hp": [
+              31
+            ],
+            "atk": [
+              32
+            ],
+            "spd": [
+              29
+            ],
+            "def": [
+              15
+            ],
+            "res": [
+              30
+            ],
+            "total": [
+              137
+            ]
+          },
+          "5": {
+            "hp": [
+              33
+            ],
+            "atk": [
+              34
+            ],
+            "spd": [
+              31
+            ],
+            "def": [
+              17
+            ],
+            "res": [
+              33
+            ],
+            "total": [
+              148
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Athena",
       "title": "Borderland Sword",
       "origin": "Fire Emblem: New Mystery of the Emblem",
@@ -1109,11 +1357,11 @@
     },
     {
       "name": "Ayra",
-      "title": "",
+      "title": "Astra's Wielder",
       "origin": "Fire Emblem: Genealogy of the Holy War",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "4-5Tempest Trials",
+      "rarities": "4-5",
       "releaseDate": "N/A",
       "assets": {
         "portrait": {
@@ -1132,66 +1380,115 @@
           "name": "Steel Sword",
           "default": "-",
           "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Ayra's Blade",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Night Sky",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Astra",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Regnal Astra",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Darting Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Sparrow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Sparrow 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 3",
+          "rarity": "-"
         }
       ],
       "stats": {
         "1": {
           "4": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-",
-            "total": "-"
+            "hp": 18,
+            "atk": 7,
+            "spd": 11,
+            "def": 6,
+            "res": 3,
+            "total": 45
           },
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-",
-            "total": "-"
+            "hp": 19,
+            "atk": 7,
+            "spd": 11,
+            "def": 7,
+            "res": 4,
+            "total": 48
           }
         },
         "40": {
           "4": {
             "hp": [
-              "-"
+              38
             ],
             "atk": [
-              "-"
+              31
             ],
             "spd": [
-              "-"
+              35
             ],
             "def": [
-              "-"
+              28
             ],
             "res": [
-              "-"
+              19
             ],
             "total": [
-              "-"
+              151
             ]
           },
           "5": {
             "hp": [
-              "-"
+              41
             ],
             "atk": [
-              "-"
+              33
             ],
             "spd": [
-              "-"
+              37
             ],
             "def": [
-              "-"
+              31
             ],
             "res": [
-              "-"
+              21
             ],
             "total": [
-              "-"
+              163
             ]
           }
         }
@@ -6019,43 +6316,43 @@
       "stats": {
         "1": {
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-",
-            "total": "-"
+            "hp": 17,
+            "atk": 9,
+            "spd": 6,
+            "def": 3,
+            "res": 9,
+            "total": 44
           }
         },
         "40": {
           "5": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              33,
+              36,
+              40
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              30,
+              33,
+              36
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              24,
+              28,
+              31
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              12,
+              16,
+              19
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              32,
+              35,
+              38
             ],
             "total": [
-              "-"
+              "147~149"
             ]
           }
         }
@@ -23817,43 +24114,43 @@
       "stats": {
         "1": {
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-",
-            "total": "-"
+            "hp": 19,
+            "atk": 9,
+            "spd": 8,
+            "def": 6,
+            "res": 4,
+            "total": 46
           }
         },
         "40": {
           "5": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              37,
+              41,
+              44
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              32,
+              35,
+              38
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              29,
+              32,
+              35
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              31,
+              34,
+              37
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              13,
+              17,
+              20
             ],
             "total": [
-              "-"
+              "158~159"
             ]
           }
         }
@@ -25087,6 +25384,20 @@
           "rarity": "-"
         },
         {
+          "name": "Rally Resistance",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Speed Resistance",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Attack +1",
+          "rarity": "-"
+        },
+        {
           "name": "Attack Res 1",
           "rarity": "-"
         },
@@ -25110,43 +25421,43 @@
       "stats": {
         "1": {
           "5": {
-            "hp": "-",
-            "atk": "-",
-            "spd": "-",
-            "def": "-",
-            "res": "-",
-            "total": "-"
+            "hp": 17,
+            "atk": 8,
+            "spd": 9,
+            "def": 4,
+            "res": 6,
+            "total": 44
           }
         },
         "40": {
           "5": {
             "hp": [
-              "-",
-              "-",
-              "-"
+              35,
+              39,
+              42
             ],
             "atk": [
-              "-",
-              "-",
-              "-"
+              29,
+              32,
+              35
             ],
             "spd": [
-              "-",
-              "-",
-              "-"
+              32,
+              35,
+              38
             ],
             "def": [
-              "-",
-              "-",
-              "-"
+              13,
+              17,
+              20
             ],
             "res": [
-              "-",
-              "-",
-              "-"
+              22,
+              25,
+              29
             ],
             "total": [
-              "-"
+              "147~149"
             ]
           }
         }
@@ -27684,7 +27995,8 @@
       "range(rng)": 1,
       "effect": "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied.)",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Binding Blade",
@@ -28223,7 +28535,8 @@
       "range(rng)": 2,
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe's next action.",
       "exclusive?": "Yes",
-      "type": "WEAPON"
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Fire Breath",
