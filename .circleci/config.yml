@@ -7,15 +7,17 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Bootstrap project
           command: yarn install
       - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-            - packages/**/node_modules/*
+            - packages/fire-emblem-heroes-calculator/node_modules
+            - packages/fire-emblem-heroes-stats/node_modules
+            - packages/proving-grounds/node_modules
       - persist_to_workspace:
           root: packages
           paths:
@@ -27,7 +29,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "package.json" }}
       - attach_workspace:
           at: packages
       - run:
