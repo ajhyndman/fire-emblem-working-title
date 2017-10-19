@@ -14,10 +14,13 @@ To get started, you will need a recent version of [`node`](https://nodejs.org/)
 & [`yarn`](https://yarnpkg.com/).
 
 After downloading this project, open up the root directory in your favourite
-command line terminal:
+command line terminal, and run:
 
-1. Run `yarn install`. This will install all three packages' dependencies
-1. Run `yarn prepublish`.  This will build all three packages.
+```bash
+$ yarn install
+```
+
+This will install dependencies for and build all three packages.
 
 ## Next steps
 
