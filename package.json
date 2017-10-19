@@ -1,10 +1,14 @@
 {
+  "private": true,
   "engines": {
     "yarn": "1.*"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "bootstrap": "lerna bootstrap --npm-client=yarn --concurrency=1 --include-filtered-dependencies",
     "clean": "rm -r node_modules packages/fire-emblem-heroes-calculator/dist packages/fire-emblem-heroes-calculator/node_modules packages/fire-emblem-heroes-stats/dist packages/fire-emblem-heroes-stats/node_modules packages/proving-grounds/node_modules",
+    "prepublish": "lerna run prepublish",
     "publish": "lerna publish",
     "test": "lerna run test"
   },
