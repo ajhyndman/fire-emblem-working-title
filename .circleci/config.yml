@@ -64,3 +64,6 @@ workflows:
       - publish-static:
           requires:
             - test
+          filters:
+            branches:
+              only: master
