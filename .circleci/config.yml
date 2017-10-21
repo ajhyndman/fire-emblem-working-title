@@ -36,11 +36,14 @@ jobs:
           name: Test
           command: yarn test
 
-  deploy:
+  publish-static:
     docker:
       - image: node:latest
     steps:
       - checkout
+      - run:
+          name: Install AWS CLI
+          command: sudo apt-get -y -qq install awscli
       - run:
           name: Sync fire-emblem-heroes-stats assets to AWS
           command: aws s3 sync packages/fire-emblem-heroes-stats/assets s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public
@@ -56,7 +59,7 @@ workflows:
       - test:
           requires:
             - build
-      - deploy:
+      - publish-static:
           requires:
             - test
           filters:
