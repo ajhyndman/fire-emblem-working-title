@@ -13,7 +13,7 @@
     "dev": "next",
     "docker-build": "docker build -t proving-grounds .",
     "docker-start": "docker run -d -p 80:3000 proving-grounds",
-    "lint": "eslint src/**/*.js pages/**/*.js && flow check",
+    "lint": "eslint src/**/*.js pages/**/*.js",
     "prettier": "prettier --single-quote --trailing-comma=all --write src/**/*.js",
     "stamp-deploy": "echo \"export const deployTimestamp = '$(date -I)';\" > deployTimestamp.js",
     "start": "next start",
@@ -31,7 +31,6 @@
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prettier": "^2.2.0",
-    "flow-bin": "^0.48.0",
     "now": "^8.3.9",
     "prettier": "^1.7.4",
     "tape": "^4.6.3"

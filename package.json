@@ -10,9 +10,10 @@
     "clean": "rm -r node_modules packages/fire-emblem-heroes-calculator/dist packages/fire-emblem-heroes-calculator/node_modules packages/fire-emblem-heroes-stats/dist packages/fire-emblem-heroes-stats/node_modules packages/proving-grounds/node_modules",
     "prepublish": "lerna run prepublish",
     "publish": "lerna publish",
-    "test": "lerna run test"
+    "test": "flow check && lerna run test"
   },
   "devDependencies": {
+    "flow-bin": "0.48.0",
     "jsdom": "^11.1.0",
     "lerna": "2.4.0",
     "prettier": "^1.5.3"
