@@ -2,7 +2,7 @@
 # fire-emblem-working-title
 ![Circle CI Status](https://circleci.com/gh/ajhyndman/fire-emblem-working-title.svg?style=shield&circle-token=:circle-token)
 
-This is a lerna repo managing three packages:
+This is a lerna repository managing three packages:
 
 * fire-emblem-heroes-calculator
 * fire-emblem-heroes-stats
@@ -10,18 +10,21 @@ This is a lerna repo managing three packages:
 
 ## Getting started
 
-To develop with this repository, you will need `lerna` installed.
+To get started, you will need a recent version of [`node`](https://nodejs.org/)
+& [`yarn`](https://yarnpkg.com/).
 
-`npm install --global lerna`
+After downloading this project, open up the root directory in your favourite
+command line terminal, and run:
 
-Once you have lerna, in the root of the repository, you can install both package's
-dependencies and link them to each other with:
+```bash
+$ yarn install
+```
 
-`lerna bootstrap`
+This will install dependencies for and build all three packages.
 
 ## Next steps
 
-Check out the README for each package for further information.
+Check out the README for any package that catches your fancy!
 
 * [fire-emblem-heroes-calculator](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-calculator/)
 * [fire-emblem-heroes-stats](https://github.com/ajhyndman/fire-emblem-working-title/blob/master/packages/fire-emblem-heroes-stats/)

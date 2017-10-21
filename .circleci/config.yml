@@ -1,0 +1,64 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Bootstrap project
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+            - packages/fire-emblem-heroes-calculator/node_modules
+            - packages/fire-emblem-heroes-stats/node_modules
+            - packages/proving-grounds/node_modules
+      - persist_to_workspace:
+          root: packages
+          paths:
+            - ./**/dist/*
+
+  test:
+    docker:
+      - image: node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - attach_workspace:
+          at: packages
+      - run:
+          name: Test
+          command: yarn test
+
+  deploy:
+    docker:
+      - image: node:latest
+    steps:
+      - checkout
+      - run:
+          name: Sync fire-emblem-heroes-stats assets to AWS
+          command: aws s3 sync packages/fire-emblem-heroes-stats/assets s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public
+      - run:
+          name: Sync proving-grounds assets to AWS
+          command: aws s3 sync packages/proving-grounds/static/cdn s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master

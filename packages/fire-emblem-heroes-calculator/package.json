@@ -6,17 +6,17 @@
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "npm run compile && npm run compile:min && npm run copy-types",
+    "build": "yarn compile && yarn compile:min && yarn copy-types",
     "compile": "cross-env NODE_ENV=development rollup --config --input src/index.js --output dist/fire-emblem-heroes-calculator.js",
     "compile:min": "cross-env NODE_ENV=production rollup --config --input src/index.js --output dist/fire-emblem-heroes-calculator.min.js",
-    "compile:watch": "npm run compile -- --watch",
+    "compile:watch": "yarn compile -- --watch",
     "copy-types": "ncp src/index.js dist/fire-emblem-heroes-calculator.js.flow && jscodeshift dist/fire-emblem-heroes-calculator.js.flow --transform build/transform-import-path.js",
-    "lint": "eslint src/**/*.js pages/**/*.js && flow check",
-    "prepublish": "npm run build",
+    "lint": "eslint src/**/*.js pages/**/*.js",
+    "prepublish": "yarn build",
     "publish": "cross-var aws s3 sync ./dist/ s3://proving-grounds-static.ajhyndman.com/$npm_package_version/ --cache-control max-age=31536000,public",
-    "start": "npm run build:watch",
+    "start": "yarn build:watch",
     "tape": "tape -r babel-register tests/**/*.js",
-    "test": "npm run lint && npm run tape"
+    "test": "yarn lint && yarn tape"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -33,7 +33,6 @@
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prettier": "^2.2.0",
-    "flow-bin": "^0.48.0",
     "jscodeshift": "^0.3.30",
     "ncp": "^2.0.0",
     "prettier": "^1.7.4",
