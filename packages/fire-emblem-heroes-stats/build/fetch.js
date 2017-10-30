@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 import fs from 'fs';
 import path from 'path';
 import { URL } from 'url';
-import { compose, last, map, prop, replace, split, zipObj } from 'ramda';
+import { compose, last, map, prop, replace, split, toPairs, zipObj } from 'ramda';
 
 import { WIKI_HOST } from './constants';
 
@@ -83,5 +83,28 @@ export const fetchAskApiQuery = queryString => {
     `${WIKI_HOST}/api.php?action=ask&format=json&query=${encodeURIComponent(
       queryString,
     )}`,
+  ).then(response => response.json());
+};
+
+/**
+ * Make a request to the mediawiki API with arbitrary query parameters.
+ *
+ * @see {@link https://feheroes.gamepedia.com/Special:ApiSandbox}
+ *
+ * @param {*} queryParams An object containing query params as key-value pairs
+ */
+export const fetchApiQuery = (queryParams: { [param: string]: string }) => {
+  const defaultQueryParams = {
+    action: 'query',
+    format: 'json',
+  };
+
+  const queryParamString = map(
+    ([param, value]) => `${param}=${value}`,
+    toPairs({ ...defaultQueryParams, ...queryParams }),
+  ).join('&');
+
+  return fetch(
+    `${WIKI_HOST}/api.php?${queryParamString}`,
   ).then(response => response.json());
 };

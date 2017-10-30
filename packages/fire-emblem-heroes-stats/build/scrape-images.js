@@ -1,23 +1,45 @@
-import { JSDOM } from 'jsdom';
-import { test } from 'ramda';
+import { compose, forEach, head, propOr, tap, values } from 'ramda';
 
-import { WIKI_HOST } from './constants';
-import { fetchPage, fetchImage } from './fetch';
+import { fetchApiQuery, fetchImage } from './fetch';
 
-async function scrapeImages() {
-  fetchPage(`${WIKI_HOST}/Hero_List`).then(html => {
-    const { window: { document } } = new JSDOM(html);
+const portraitIconQueryParams = {
+  action: 'query',
+  continue: '||',
+  format: 'json',
+  prop: 'imageinfo',
+  generator: 'allimages',
+  iiprop: 'url',
+  gaiprefix: 'Icon Portrait',
+  // THe API will not return any more than 50 thumbnails at a time.
+  gailimit: '50',
+};
 
-    [...document.querySelectorAll('[alt~="Portrait"]')].forEach(img => {
-      const src = img.getAttribute('src');
-      const srcSet = img.getAttribute('srcSet');
+async function scrapeImages(thumbnailSize: string, gaicontinue?: string = '') {
+  fetchApiQuery({
+    ...portraitIconQueryParams,
+    iiurlwidth: thumbnailSize,
+    gaicontinue,
+  }).then(json => {
+    forEach(
+      compose(
+        url => {
+          if (url !== '') fetchImage(url);
+        },
+        tap(console.log.bind(console)),
+        propOr('', 'thumburl'),
+        head,
+        propOr([], 'imageinfo'),
+      ),
+      values(json.query.pages),
+    );
 
-      fetchImage(src);
-      srcSet.split(' ').filter(test(/http/)).forEach(url => {
-        fetchImage(url);
-      });
-    });
+    // Recursively paginate through results until complete.
+    if (json.continue != null && json.continue.gaicontinue != null) {
+      scrapeImages(thumbnailSize, json.continue.gaicontinue);
+    }
   });
 }
 
-scrapeImages();
+scrapeImages('75');
+scrapeImages('113');
+scrapeImages('150');
