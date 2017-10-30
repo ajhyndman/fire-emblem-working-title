@@ -772,8 +772,8 @@
       "origin": "Fire Emblem: Genealogy of the Holy War",
       "weaponType": "Red Sword",
       "moveType": "Armored",
-      "rarities": "4-5",
-      "releaseDate": "N/A",
+      "rarities": "4-5Tempest Trials",
+      "releaseDate": "Oct 23, 2017",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Arden.png",
@@ -814,7 +814,7 @@
         },
         {
           "name": "Follow-Up Ring",
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Spur Def 1",
@@ -826,20 +826,49 @@
         },
         {
           "name": "Drive Def 2",
-          "rarity": "-"
+          "rarity": 4
         }
       ],
       "stats": {
         "1": {
+          "4": {
+            "hp": 24,
+            "atk": 10,
+            "spd": 2,
+            "def": 13,
+            "res": 2,
+            "total": 51
+          },
           "5": {
             "hp": 25,
             "atk": 10,
             "spd": 3,
             "def": 13,
-            "res": 3
+            "res": 3,
+            "total": 54
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              57
+            ],
+            "atk": [
+              34
+            ],
+            "spd": [
+              14
+            ],
+            "def": [
+              39
+            ],
+            "res": [
+              14
+            ],
+            "total": [
+              158
+            ]
+          },
           "5": {
             "hp": [
               60
@@ -855,6 +884,9 @@
             ],
             "res": [
               16
+            ],
+            "total": [
+              169
             ]
           }
         }
@@ -1361,8 +1393,8 @@
       "origin": "Fire Emblem: Genealogy of the Holy War",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "4-5",
-      "releaseDate": "N/A",
+      "rarities": 5,
+      "releaseDate": "Oct 19, 2017",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Ayra.png",
@@ -1383,23 +1415,23 @@
         },
         {
           "name": "Silver Sword",
-          "default": 4,
+          "default": "-",
           "rarity": "-"
         },
         {
           "name": "Ayra's Blade",
           "default": 5,
-          "rarity": 5
+          "rarity": "-"
         },
         {
           "name": "Night Sky",
-          "default": 4,
+          "default": 5,
           "rarity": "-"
         },
         {
           "name": "Astra",
           "default": "-",
-          "rarity": 4
+          "rarity": 5
         },
         {
           "name": "Regnal Astra",
@@ -1416,7 +1448,7 @@
         },
         {
           "name": "Swift Sparrow 2",
-          "rarity": "-"
+          "rarity": 5
         },
         {
           "name": "Desperation 1",
@@ -1428,19 +1460,11 @@
         },
         {
           "name": "Desperation 3",
-          "rarity": "-"
+          "rarity": 5
         }
       ],
       "stats": {
         "1": {
-          "4": {
-            "hp": 18,
-            "atk": 7,
-            "spd": 11,
-            "def": 6,
-            "res": 3,
-            "total": 45
-          },
           "5": {
             "hp": 19,
             "atk": 7,
@@ -1451,44 +1475,34 @@
           }
         },
         "40": {
-          "4": {
-            "hp": [
-              38
-            ],
-            "atk": [
-              31
-            ],
-            "spd": [
-              35
-            ],
-            "def": [
-              28
-            ],
-            "res": [
-              19
-            ],
-            "total": [
-              151
-            ]
-          },
           "5": {
             "hp": [
-              41
+              37,
+              41,
+              44
             ],
             "atk": [
-              33
+              30,
+              33,
+              36
             ],
             "spd": [
-              37
+              34,
+              37,
+              40
             ],
             "def": [
-              31
+              28,
+              31,
+              34
             ],
             "res": [
-              21
+              18,
+              21,
+              24
             ],
             "total": [
-              163
+              "162~163"
             ]
           }
         }
@@ -11178,6 +11192,115 @@
       }
     },
     {
+      "name": "Henry (Trick or Defeat!)",
+      "title": "Happy Vampire",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Green Tome",
+      "moveType": "Armored",
+      "rarities": "5 - Special",
+      "releaseDate": "Oct 30, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Henry (Trick or Defeat!).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Henry (Trick or Defeat!).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Henry (Trick or Defeat!).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Wind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elwind",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Spectral Tome",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Spectral Tome+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Retribution",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Reprisal",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Live for Honor",
+          "rarity": 5
+        },
+        {
+          "name": "Armor March 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Armor March 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Armor March 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 10,
+            "def": 4,
+            "res": 12,
+            "total": 52
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              33,
+              36,
+              40
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              22,
+              26,
+              29
+            ],
+            "res": [
+              33,
+              36,
+              39
+            ],
+            "total": [
+              "164~166"
+            ]
+          }
+        }
+      },
+      "shortName": "Henry (T)"
+    },
+    {
       "name": "Hinata",
       "title": "Wild Samurai",
       "origin": "Fire Emblem Fates",
@@ -12416,6 +12539,123 @@
           }
         }
       }
+    },
+    {
+      "name": "Jakob (Trick or Defeat!)",
+      "title": "Devoted Monster",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Neutral Bow",
+      "moveType": "Armored",
+      "rarities": "5 - Special",
+      "releaseDate": "Oct 30, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Jakob (Trick or Defeat!).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Jakob (Trick or Defeat!).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Jakob (Trick or Defeat!).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Monstrous Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Monstrous Bow+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Glowing Ember",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Ignis",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Armored Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Bracing Blow 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Bracing Blow 2",
+          "rarity": 5
+        },
+        {
+          "name": "Wary Fighter 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Wary Fighter 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Wary Fighter 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 20,
+            "atk": 9,
+            "spd": 6,
+            "def": 9,
+            "res": 8,
+            "total": 52
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              38,
+              42,
+              45
+            ],
+            "atk": [
+              32,
+              35,
+              38
+            ],
+            "spd": [
+              20,
+              23,
+              26
+            ],
+            "def": [
+              30,
+              33,
+              36
+            ],
+            "res": [
+              29,
+              32,
+              35
+            ],
+            "total": [
+              "164~165"
+            ]
+          }
+        }
+      },
+      "shortName": "Jakob (T)"
     },
     {
       "name": "Jeorge",
@@ -18650,6 +18890,122 @@
       }
     },
     {
+      "name": "Nowi (Trick or Defeat!)",
+      "title": "Eternal Witch",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Red Tome",
+      "moveType": "Flying",
+      "rarities": "5 - Special",
+      "releaseDate": "Oct 30, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Nowi (Trick or Defeat!).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Nowi (Trick or Defeat!).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Nowi (Trick or Defeat!).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Flux",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Ruin",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Fenrir",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Grimoire",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Reposition",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Res Bond 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Res Bond 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Res Bond 3",
+          "rarity": 5
+        },
+        {
+          "name": "Live for Bounty",
+          "rarity": 5
+        },
+        {
+          "name": "Hone Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Hone Atk 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Hone Fliers",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 6,
+            "def": 5,
+            "res": 8,
+            "total": 44
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              31,
+              34,
+              37
+            ],
+            "atk": [
+              31,
+              34,
+              37
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              17,
+              20,
+              23
+            ],
+            "res": [
+              24,
+              27,
+              31
+            ],
+            "total": [
+              "147~148"
+            ]
+          }
+        }
+      },
+      "shortName": "Nowi (T)"
+    },
+    {
       "name": "Oboro",
       "title": "Fierce Fighter",
       "origin": "Fire Emblem Fates",
@@ -22437,6 +22793,135 @@
           }
         }
       }
+    },
+    {
+      "name": "Sakura (Trick or Defeat!)",
+      "title": "Gentle Nekomata",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Neutral Shuriken",
+      "moveType": "Infantry",
+      "rarities": "5 - Special",
+      "releaseDate": "Oct 30, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sakura (Trick or Defeat!).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Sakura (Trick or Defeat!).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sakura (Trick or Defeat!).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Dagger",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Dagger",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Kitty Paddle",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Kitty Paddle+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Glacies",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Warding Stance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Warding Stance 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Warding Stance 3",
+          "rarity": 5
+        },
+        {
+          "name": "Guard 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Guard 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Guard 3",
+          "rarity": 5
+        },
+        {
+          "name": "Dagger Valor 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Dagger Valor 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Dagger Valor 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 8,
+            "def": 4,
+            "res": 8,
+            "total": 44
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              30,
+              33,
+              36
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              11,
+              14,
+              18
+            ],
+            "res": [
+              31,
+              34,
+              37
+            ],
+            "total": [
+              "147~148"
+            ]
+          }
+        }
+      },
+      "shortName": "Sakura (T)"
     },
     {
       "name": "Sanaki",
@@ -27993,7 +28478,7 @@
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied.)",
+      "effect": "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack.(If similar skill also used, only highest value applied.)",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Sword"
@@ -28013,7 +28498,7 @@
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Grants Atk+3. If unit's Atk &gt; foe's, unit gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)",
+      "effect": "Grants Atk+3. If unit's Atk &gt; foe's, unit gains Special cooldown charge +1.(If using other similar skill, only highest value applied.)",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Sword"
@@ -28409,11 +28894,21 @@
       "weaponType": "Red Tome"
     },
     {
+      "name": "Grimoire",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to an ally within 2 spaces.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
       "name": "Ragnarok",
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.",
+      "effect": "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5.If attacking, unit will receive 5 damage after combat.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Tome"
@@ -28579,26 +29074,6 @@
       "weaponType": "Breath"
     },
     {
-      "name": "Light Breath",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 1,
-      "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Light Breath+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 1,
-      "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
       "name": "Lightning Breath",
       "spCost": 200,
       "damage(mt)": 7,
@@ -28683,7 +29158,7 @@
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Grants Atk/Spd+2 and accelerates Special trigger (cooldown count-1). Unit takes 4 damage after combat.",
+      "effect": "Grants Atk/Spd+2 and accelerates Special trigger (cooldown count-1).Unit takes 4 damage after combat.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Blue Lance"
@@ -28949,46 +29424,6 @@
       "weaponType": "Blue Tome"
     },
     {
-      "name": "Blessed Bouquet",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blessed Bouquet+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blue Egg",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Blue Egg+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
       "name": "Blárblade",
       "spCost": 200,
       "damage(mt)": 9,
@@ -29064,6 +29499,46 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blessed Bouquet",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blessed Bouquet+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blue Egg",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Blue Egg+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Blue Tome"
@@ -29452,7 +29927,7 @@
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Unit may move adjacent to any ally when HP ≤ 40%",
+      "effect": "Unit may move adjacent to any ally when HP ≤ 40%.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Green Axe"
@@ -29508,21 +29983,21 @@
       "weaponType": "Green Axe"
     },
     {
-      "name": "Urvan",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1). If unit receives consecutive attacks, damage from second attack onward reduced by 80%.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
       "name": "Urðr",
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If Sing or Dance is used, target also granted Atk/Spd/Def/Res+3.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Urvan",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).If unit receives consecutive attacks, damage from second attack onward reduced by 80%.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Green Axe"
@@ -29743,6 +30218,26 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Spectral Tome",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Spectral Tome+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -30018,6 +30513,26 @@
       "weaponType": "Neutral Bow"
     },
     {
+      "name": "Monstrous Bow",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Effective against fliers. After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Monstrous Bow+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Effective against fliers. After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
       "name": "Mulagir",
       "spCost": 400,
       "damage(mt)": 14,
@@ -30052,7 +30567,7 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat. Effective against fliers.",
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.Effective against fliers.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -30062,7 +30577,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat. Effective against fliers.",
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.Effective against fliers.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -30122,7 +30637,7 @@
       "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
-      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat. Also, enemy suffers Def/Res-5 after combat until the end of foe's next action.",
+      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.Also, enemy suffers Def/Res-5 after combat until the end of foe's next action.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Shuriken"
@@ -30132,7 +30647,7 @@
       "spCost": 300,
       "damage(mt)": 10,
       "range(rng)": 2,
-      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat. Also, enemy suffers Def/Res-7 after combat until the end of foe's next action.",
+      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.Also, enemy suffers Def/Res-7 after combat until the end of foe's next action.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Shuriken"
@@ -30153,6 +30668,26 @@
       "damage(mt)": 3,
       "range(rng)": 2,
       "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Kitty Paddle",
+      "spCost": 200,
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "effect": "Effective against foe using magic. After combat, if foe uses magic, foe suffers Def/Res-7 through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Kitty Paddle+",
+      "spCost": 300,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Effective against foe using magic. After combat, if foe uses magic, foe suffers Def/Res-7 through foe's next action.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Shuriken"
@@ -30430,7 +30965,7 @@
     {
       "name": "Recover",
       "range": 1,
-      "effect": "Restores 15 HP.Slows Special trigger (cooldown count +1).",
+      "effect": "Restores 15 HP.Slows Special trigger (cooldown count+1).",
       "spCost": 200,
       "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
@@ -30494,7 +31029,7 @@
     {
       "name": "Aether",
       "cooldown": 5,
-      "effect": "Resolve combat as if foe suffered Def/Res-50%. Unit recovers HP=half damage dealt.",
+      "effect": "Resolve combat as if foe suffered Def/Res-50%.Unit recovers HP=half damage dealt.",
       "spCost": 500,
       "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
@@ -30542,7 +31077,7 @@
     {
       "name": "Blazing Wind",
       "cooldown": 5,
-      "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5x (unit's Atk minus foe's Def or Res).",
+      "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res).",
       "spCost": 300,
       "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
@@ -30614,7 +31149,7 @@
     {
       "name": "Galeforce",
       "cooldown": 5,
-      "effect": "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)",
+      "effect": "If this unit initiates an attack, it can take another action after combat.(Once per turn only.)",
       "spCost": 500,
       "inheritRestriction": "Sword, Lance, Axe Users Only",
       "type": "SPECIAL"
@@ -30654,7 +31189,7 @@
     {
       "name": "Growing Light",
       "cooldown": 5,
-      "effect": "Before combat this unit initiates, foes in a wide area near target take damage equal to (unit's Atk - foe's Def or Res).",
+      "effect": "Before combat this unit initiates, foes in a wide area near target take damage equal to (unit's Atk minus foe's Def or Res).",
       "spCost": 300,
       "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
@@ -30940,6 +31475,27 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Atk Res Bond 1",
+      "effect": "Grants Atk/Res+3 to this unit during combat if unit is adjacent to an ally.",
+      "spCost": "",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Atk Res Bond 2",
+      "effect": "Grants Atk/Res+4 to this unit during combat if unit is adjacent to an ally.",
+      "spCost": "",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Atk Res Bond 3",
+      "effect": "Grants Atk/Res+5 to this unit during combat if unit is adjacent to an ally.",
+      "spCost": "",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Attack Res 1",
       "effect": "Grants Atk/Res+1.",
       "spCost": 80,
@@ -30965,6 +31521,20 @@
       "effect": "Grants Atk/Spd+2.",
       "spCost": 160,
       "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Bracing Blow 1",
+      "effect": "Grants Def/Res+2 during combat if unit initiates combat.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Bracing Blow 2",
+      "effect": "Grants Def/Res+4 during combat if unit initiates combat.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
@@ -31480,7 +32050,7 @@
     },
     {
       "name": "Steady Breath",
-      "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)",
+      "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1.(If using other similar skill, only highest value applied.)",
       "spCost": 240,
       "inheritRestriction": "Melee Weapon Users Only, Infantry and Armored Only",
       "type": "PASSIVE_A"
@@ -31598,6 +32168,27 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Warding Stance 1",
+      "effect": "Grants Res+2 during combat when this unit is attacked.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Stance 2",
+      "effect": "Grants Res+4 during combat when this unit is attacked.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Stance 3",
+      "effect": "Grants Res+6 during combat when this unit is attacked.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Water Boost 1",
       "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+2 during combat.",
       "spCost": 50,
@@ -31662,7 +32253,7 @@
     },
     {
       "name": "Beorc's Blessing",
-      "effect": "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)",
+      "effect": "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.(Skill cannot be inherited.)",
       "spCost": 300,
       "inheritRestriction": "Is exclusive",
       "type": "PASSIVE_B"
@@ -31774,7 +32365,7 @@
     },
     {
       "name": "Crusader's Ward",
-      "effect": "If unit receives consecutive attack from a foe 2 spaces away, damage from second attack onward reduced by 80%. (Skill cannot be inherited.)",
+      "effect": "If unit receives consecutive attack from a foe 2 spaces away, damage from second attack onward reduced by 80%.(Skill cannot be inherited.)",
       "spCost": 300,
       "inheritRestriction": "Is exclusive",
       "type": "PASSIVE_B"
@@ -31893,7 +32484,7 @@
     },
     {
       "name": "Follow-Up Ring",
-      "effect": "Unit makes a guaranteed follow-up attack when unit's HP ≥ 50% at start of combat. (Skill cannot be inherited.)",
+      "effect": "Unit makes a guaranteed follow-up attack when unit's HP ≥ 50% at start of combat.(Skill cannot be inherited.)",
       "spCost": 200,
       "inheritRestriction": "Is exclusive",
       "type": "PASSIVE_B"
@@ -32138,7 +32729,7 @@
     },
     {
       "name": "Recover Ring",
-      "effect": "Restores 10 HP at the start of each turn. (Skill cannot be inherited.)",
+      "effect": "Restores 10 HP at the start of each turn.(Skill cannot be inherited.)",
       "spCost": 200,
       "inheritRestriction": "Is exclusive",
       "type": "PASSIVE_B"
@@ -32187,7 +32778,7 @@
     },
     {
       "name": "Sacae's Blessing",
-      "effect": "If foe has sword, lance, or axe, foe cannot counterattack. (Skill cannot be inherited.)",
+      "effect": "If foe has sword, lance, or axe, foe cannot counterattack.(Skill cannot be inherited.)",
       "spCost": 300,
       "inheritRestriction": "Is exclusive",
       "type": "PASSIVE_B"
@@ -32502,21 +33093,21 @@
     },
     {
       "name": "Armor March 1",
-      "effect": "If unit has 100% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
+      "effect": "If unit has 100% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space.(That turn only; does not stack.)",
       "spCost": 60,
       "inheritRestriction": "Armored Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Armor March 2",
-      "effect": "If unit has ≥ 50% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
+      "effect": "If unit has ≥ 50% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space.(That turn only; does not stack.)",
       "spCost": 120,
       "inheritRestriction": "Armored Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Armor March 3",
-      "effect": "If unit has an adjacent armored ally at the start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
+      "effect": "If unit has an adjacent armored ally at the start of turn, unit and any such allies can move 1 extra space.(That turn only; does not stack.)",
       "spCost": 240,
       "inheritRestriction": "Armored Only",
       "type": "PASSIVE_C"
@@ -32586,21 +33177,21 @@
     },
     {
       "name": "Axe Valor 1",
-      "effect": "If unit survives and uses an axe, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives and uses an axe, unit gets 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
       "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Axe Valor 2",
-      "effect": "If unit survives, all axe users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all axe users on team get 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
       "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Axe Valor 3",
-      "effect": "If unit survives, all axe users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all axe users on team get 2x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
       "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
@@ -32628,21 +33219,21 @@
     },
     {
       "name": "B Tome Valor 1",
-      "effect": "If unit survives and uses a blue tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives and uses a blue tome, unit gets 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "B Tome Valor 2",
-      "effect": "If unit survives, all blue tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all blue tome users on team get 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "B Tome Valor 3",
-      "effect": "If unit survives, all blue tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all blue tome users on team get 2x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
       "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
@@ -32687,6 +33278,27 @@
       "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
       "spCost": 200,
       "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Dagger Valor 1",
+      "effect": "If unit survives and uses a dagger, unit gets 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
+      "inheritRestriction": "Dagger Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Dagger Valor 2",
+      "effect": "If unit survives, all dagger users on team get 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 60,
+      "inheritRestriction": "Dagger Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Dagger Valor 3",
+      "effect": "If unit survives, all dagger users on team get 2x SP.(If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 120,
+      "inheritRestriction": "Dagger Users Only",
       "type": "PASSIVE_C"
     },
     {
@@ -32859,21 +33471,21 @@
     },
     {
       "name": "G Tome Valor 1",
-      "effect": "If unit survives and uses a green tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives and uses a green tome, unit gets 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
       "inheritRestriction": "Green Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "G Tome Valor 2",
-      "effect": "If unit survives, all green tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all green tome users on team get 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
       "inheritRestriction": "Green Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "G Tome Valor 3",
-      "effect": "If unit survives, all green tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all green tome users on team get 2x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
       "inheritRestriction": "Green Tome Users Only",
       "type": "PASSIVE_C"
@@ -32964,42 +33576,42 @@
     },
     {
       "name": "Infantry Pulse 1",
-      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 5 fewer HP than unit. (Effects will stack with similar skills.)",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 5 fewer HP than unit.(Effects will stack with similar skills.)",
       "spCost": 60,
       "inheritRestriction": "Infantry Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Infantry Pulse 2",
-      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 3 fewer HP than unit. (Effects will stack with similar skills.)",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 3 fewer HP than unit.(Effects will stack with similar skills.)",
       "spCost": 120,
       "inheritRestriction": "Infantry Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Infantry Pulse 3",
-      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 1 fewer HP than unit. (Effects will stack with similar skills.)",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 1 fewer HP than unit.(Effects will stack with similar skills.)",
       "spCost": 240,
       "inheritRestriction": "Infantry Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Lance Valor 1",
-      "effect": "If unit survives and uses a lance, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives and uses a lance, unit gets 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
       "inheritRestriction": "Lance Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Lance Valor 2",
-      "effect": "If unit survives, all lance users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all lance users on team get 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
       "inheritRestriction": "Lance Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Lance Valor 3",
-      "effect": "If unit survives, all lance users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all lance users on team get 2x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
       "inheritRestriction": "Lance Users Only",
       "type": "PASSIVE_C"
@@ -33244,21 +33856,21 @@
     },
     {
       "name": "Sword Valor 1",
-      "effect": "If unit survives and uses a sword, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives and uses a sword, unit gets 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
       "inheritRestriction": "Sword Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Sword Valor 2",
-      "effect": "If unit survives, all sword users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all sword users on team get 1.5x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
       "inheritRestriction": "Sword Users Only",
       "type": "PASSIVE_C"
     },
     {
       "name": "Sword Valor 3",
-      "effect": "If unit survives, all sword users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "effect": "If unit survives, all sword users on team get 2x SP.(If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
       "inheritRestriction": "Sword Users Only",
       "type": "PASSIVE_C"
@@ -33399,6 +34011,36 @@
       "type": "SEAL"
     },
     {
+      "name": "Atk Smoke 1",
+      "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Atk Smoke 2",
+      "effect": "After combat, inflicts Atk-5 on foes within 2 spaces of target through their next actions.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Atk Smoke 3",
+      "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Brash Assault 1",
+      "effect": "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Brash Assault 2",
+      "effect": "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Brash Assault 3",
+      "effect": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter.",
+      "type": "SEAL"
+    },
+    {
       "name": "Breath of Life 1",
       "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
       "type": "SEAL"
@@ -33521,6 +34163,21 @@
     {
       "name": "Fortify Res 3",
       "effect": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Guidance 1",
+      "effect": "If unit has 100% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Guidance 2",
+      "effect": "If unit has ≥ 50% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Guidance 3",
+      "effect": "Infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
       "type": "SEAL"
     },
     {
