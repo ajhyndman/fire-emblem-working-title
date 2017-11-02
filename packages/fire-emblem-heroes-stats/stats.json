@@ -30725,7 +30725,7 @@
     {
       "name": "Ardent Sacrifice",
       "range": 1,
-      "effect": "Heals adjacent ally 10 HP.Unit loses 10 HP (but cannot reach 0 this way).",
+      "effect": "Heals adjacent ally 10 HP. Unit loses 10 HP (but cannot reach 0 this way).",
       "spCost": 150,
       "inheritRestriction": "Excludes Staff Users",
       "type": "ASSIST"
@@ -30733,7 +30733,7 @@
     {
       "name": "Dance",
       "range": 1,
-      "effect": "Enables target to take another action.Cannot be used on units with Sing or Dance.",
+      "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.",
       "spCost": 150,
       "inheritRestriction": "Is exclusive",
       "type": "ASSIST"
@@ -30765,7 +30765,7 @@
     {
       "name": "Martyr",
       "range": 1,
-      "effect": "Restores HP=7+ this unit's suffered damage.Unit heals HP=half suffered damage.Slows Special trigger (cooldown count+1).",
+      "effect": "Restores HP=7+ this unit's suffered damage. Unit heals HP=half suffered damage. Slows Special trigger (cooldown count+1).",
       "spCost": 200,
       "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
@@ -30885,7 +30885,7 @@
     {
       "name": "Recover",
       "range": 1,
-      "effect": "Restores 15 HP.Slows Special trigger (cooldown count+1).",
+      "effect": "Restores 15 HP. Slows Special trigger (cooldown count+1).",
       "spCost": 200,
       "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
@@ -30893,7 +30893,7 @@
     {
       "name": "Rehabilitate",
       "range": 1,
-      "effect": "Restores 7 HP or more the further below 50% the target's HP is.Slows special trigger (cooldown count+1).",
+      "effect": "Restores 7 HP or more the further below 50% the target's HP is. Slows special trigger (cooldown count+1).",
       "spCost": 200,
       "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
@@ -30917,7 +30917,7 @@
     {
       "name": "Sing",
       "range": 1,
-      "effect": "Enables target to take another action.Cannot be used on units with Sing or Dance.",
+      "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.",
       "spCost": 150,
       "inheritRestriction": "Is exclusive",
       "type": "ASSIST"
@@ -34117,17 +34117,17 @@
     },
     {
       "name": "Hardy Bearing 1",
-      "effect": "Disables skills that change unit's attack priority.<br>If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "effect": "Disables skills that change unit's attack priority. If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
       "type": "SEAL"
     },
     {
       "name": "Hardy Bearing 2",
-      "effect": "Disables skills that change unit's attack priority.<br>If unit has ≥ 50% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "effect": "Disables skills that change unit's attack priority. If unit has ≥ 50% HP at start of battle, enemy skills that change attack priority are also disabled.",
       "type": "SEAL"
     },
     {
       "name": "Hardy Bearing 3",
-      "effect": "Disables skills that change unit's attack priority.<br>Enemy skills that change attack priority are also disabled.",
+      "effect": "Disables skills that change unit's attack priority. Enemy skills that change attack priority are also disabled.",
       "type": "SEAL"
     },
     {

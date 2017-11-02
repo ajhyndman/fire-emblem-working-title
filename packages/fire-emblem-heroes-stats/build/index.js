@@ -47,6 +47,12 @@ const sanitizeEffectString = compose(
   replace(/\[\[.*?\]\]/g, ''),
 );
 
+const extractPrintouts = compose(
+  map(prop('printouts')),
+  values,
+  path(['query', 'results']),
+);
+
 /**
  * Fetch and collate the data.
  * (Do all the things!)
@@ -104,7 +110,7 @@ async function fetchHeroStats() {
 
 // Fetches detailed info for all skills
 async function fetchSkills() {
-  const skillPageNames = ['Assists', 'Specials', 'Passives'];
+  const skillPageNames = ['Specials', 'Passives'];
   const skillsByType = await fetchAndParsePages(
     WIKI_HOST,
     skillPageNames,
@@ -140,8 +146,6 @@ async function fetchSkills() {
                 fulltext.includes('Legendary')
               ),
           );
-
-          console.log(categories);
 
           const weaponType = (() => {
             switch (head(categories).fulltext) {
@@ -189,47 +193,95 @@ async function fetchSkills() {
           };
         },
       ),
-      map(prop('printouts')),
-      values,
-      path(['query', 'results']),
+      extractPrintouts,
     ),
   );
 
-  console.log(weapons);
+  const assists = await fetchAskApiQuery(`
+    [[Category: Assists]]
+      |?Cost1
+      |?Effect1
+      |?Has weapon restriction
+      |?Is exclusive
+      |?Name1
+      |?Range1
+      |limit=${ASK_API_LIMIT}
+  `).then(
+    compose(
+      map(
+        ({
+          Cost1,
+          Effect1,
+          'Has weapon restriction': weaponRestriction,
+          'Is exclusive': isExclusive,
+          Name1,
+          Range1,
+        }) => {
+          const effect =
+            head(Effect1) !== undefined
+              ? sanitizeEffectString(head(Effect1))
+              : '-';
 
-  const seals = await fetchAskApiQuery(
-    '[[Category:Sacred Seals]]|?Name1|?Effect1|?Name2|?Effect2|?Name3|?Effect3',
-  ).then(
+          const inheritRestriction =
+            head(isExclusive) === 't'
+              ? 'Is exclusive'
+              : head(weaponRestriction) !== undefined
+                ? head(weaponRestriction)
+                : 'None';
+
+          return {
+            name: head(Name1),
+            range: head(Range1),
+            effect,
+            spCost: head(Cost1),
+            inheritRestriction,
+            type: 'ASSIST',
+          };
+        },
+      ),
+      extractPrintouts,
+    ),
+  );
+
+  const seals = await fetchAskApiQuery(`
+    [[Category:Sacred Seals]]
+      |?Effect1
+      |?Effect2
+      |?Effect3
+      |?Name1
+      |?Name2
+      |?Name3
+      |limit=${ASK_API_LIMIT}
+  `).then(
     compose(
       flatten,
       map(({ Name1, Effect1, Name2, Effect2, Name3, Effect3 }) =>
         [
           {
             name: head(Name1),
-            effect: sanitizeEffectString(head(Effect1)),
+            effect: sanitizeEffectString(head(Effect1) || ''),
             type: 'SEAL',
           },
           {
             name: head(Name2),
-            effect: sanitizeEffectString(head(Effect2)),
+            effect: sanitizeEffectString(head(Effect2) || ''),
             type: 'SEAL',
           },
           {
             name: head(Name3),
-            effect: sanitizeEffectString(head(Effect3)),
+            effect: sanitizeEffectString(head(Effect3) || ''),
             type: 'SEAL',
           },
         ].filter(({ name }) => name !== undefined),
       ),
-      map(prop('printouts')),
-      values,
-      path(['query', 'results']),
+      extractPrintouts,
     ),
   );
 
   const skills = compose(
     concat(__, seals),
     concat(weapons),
+    concat(assists),
     map(skill =>
       ifElse(
         has('passiveSlot'),
