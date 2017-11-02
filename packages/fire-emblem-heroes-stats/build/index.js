@@ -23,6 +23,7 @@ import {
   replace,
   test,
   toUpper,
+  trim,
   values,
   without,
   zipObj,
@@ -36,6 +37,15 @@ import {
   parseSkillsPage,
 } from './parse';
 import { CDN_HOST, WIKI_HOST } from './constants';
+
+// None of the queries we are making should have more than this many results
+const ASK_API_LIMIT = 2000;
+
+const sanitizeEffectString = compose(
+  trim,
+  replace(/<br.*?>/g, ' '),
+  replace(/\[\[.*?\]\]/g, ''),
+);
 
 /**
  * Fetch and collate the data.
@@ -94,40 +104,123 @@ async function fetchHeroStats() {
 
 // Fetches detailed info for all skills
 async function fetchSkills() {
-  const skillPageNames = [
-    'Weapons',
-    'Assists',
-    'Specials',
-    'Passives',
-  ];
+  const skillPageNames = ['Assists', 'Specials', 'Passives'];
   const skillsByType = await fetchAndParsePages(
     WIKI_HOST,
     skillPageNames,
     parseSkillsPage,
   );
 
+  const weapons = await fetchAskApiQuery(`
+    [[Category:Weapons]]
+      |?Category
+      |?Cost1
+      |?Effect1
+      |?Is exclusive
+      |?Might1
+      |?Name1
+      |?Range1
+      |limit=${ASK_API_LIMIT}
+  `).then(
+    compose(
+      map(
+        ({
+          Category,
+          Cost1,
+          Effect1,
+          'Is exclusive': isExclusive,
+          Might1,
+          Name1,
+          Range1,
+        }) => {
+          const categories = Category.filter(
+            ({ fulltext }) =>
+              !(
+                fulltext === 'Category:Weapons' ||
+                fulltext.includes('Legendary')
+              ),
+          );
+
+          console.log(categories);
+
+          const weaponType = (() => {
+            switch (head(categories).fulltext) {
+              case 'Category:Swords':
+                return 'Red Sword';
+              case 'Category:Red Tomes':
+                return 'Red Tome';
+              case 'Category:Red Breaths':
+                return 'Red Breath';
+              case 'Category:Lances':
+                return 'Blue Lance';
+              case 'Category:Blue Tomes':
+                return 'Blue Tome';
+              case 'Category:Blue Breaths':
+                return 'Blue Breath';
+              case 'Category:Axes':
+                return 'Green Axe';
+              case 'Category:Green Tomes':
+                return 'Green Tome';
+              case 'Category:Green Breaths':
+                return 'Green Breath';
+              case 'Category:Bows':
+                return 'Neutral Bow';
+              case 'Category:Daggers':
+                return 'Neutral Shuriken';
+              case 'Category:Staves':
+                return 'Neutral Staff';
+            }
+          })();
+
+          const effect =
+            head(Effect1) !== undefined
+              ? sanitizeEffectString(head(Effect1))
+              : '-';
+
+          return {
+            name: head(Name1),
+            spCost: head(Cost1),
+            'damage(mt)': head(Might1),
+            'range(rng)': head(Range1),
+            effect,
+            'exclusive?': head(isExclusive) === 't' ? 'Yes' : 'No',
+            type: 'WEAPON',
+            weaponType,
+          };
+        },
+      ),
+      map(prop('printouts')),
+      values,
+      path(['query', 'results']),
+    ),
+  );
+
+  console.log(weapons);
+
   const seals = await fetchAskApiQuery(
     '[[Category:Sacred Seals]]|?Name1|?Effect1|?Name2|?Effect2|?Name3|?Effect3',
   ).then(
     compose(
       flatten,
-      map(({ Name1, Effect1, Name2, Effect2, Name3, Effect3 }) => [
-        {
-          name: head(Name1),
-          effect: head(Effect1),
-          type: 'SEAL',
-        },
-        {
-          name: head(Name2),
-          effect: head(Effect2),
-          type: 'SEAL',
-        },
-        {
-          name: head(Name3),
-          effect: head(Effect3),
-          type: 'SEAL',
-        },
-      ].filter(({ name }) => name !== undefined)),
+      map(({ Name1, Effect1, Name2, Effect2, Name3, Effect3 }) =>
+        [
+          {
+            name: head(Name1),
+            effect: sanitizeEffectString(head(Effect1)),
+            type: 'SEAL',
+          },
+          {
+            name: head(Name2),
+            effect: sanitizeEffectString(head(Effect2)),
+            type: 'SEAL',
+          },
+          {
+            name: head(Name3),
+            effect: sanitizeEffectString(head(Effect3)),
+            type: 'SEAL',
+          },
+        ].filter(({ name }) => name !== undefined),
+      ),
       map(prop('printouts')),
       values,
       path(['query', 'results']),
@@ -136,6 +229,7 @@ async function fetchSkills() {
 
   const skills = compose(
     concat(__, seals),
+    concat(weapons),
     map(skill =>
       ifElse(
         has('passiveSlot'),

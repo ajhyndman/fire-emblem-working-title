@@ -28434,6 +28434,16 @@
   ],
   "skills": [
     {
+      "name": "Absorb",
+      "spCost": 150,
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "Recovers HP=50% of damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
+    },
+    {
       "name": "Alondite",
       "spCost": 400,
       "damage(mt)": 16,
@@ -28452,6 +28462,16 @@
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Sword"
+    },
+    {
+      "name": "Armads",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Armorslayer",
@@ -28474,624 +28494,54 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Assassin's Bow",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  If target has a dagger, it can't make a follow-up attack and this unit will.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Assassin's Bow+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  If target has a dagger, it can't make a follow-up attack and this unit will.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Assault",
+      "spCost": 50,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
+    },
+    {
+      "name": "Aura",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Restores 5 HP to adjacent allies after any combat this unit initiates.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
       "name": "Ayra's Blade",
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack.(If similar skill also used, only highest value applied.)",
+      "effect": "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied.)",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Sword"
-    },
-    {
-      "name": "Binding Blade",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants Def/Res+2 when this unit is attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Blazing Durandal",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants Atk+3. If unit's Atk &gt; foe's, unit gains Special cooldown charge +1.(If using other similar skill, only highest value applied.)",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Brave Sword",
-      "spCost": 200,
-      "damage(mt)": 5,
-      "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Brave Sword+",
-      "spCost": 300,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Divine Tyrfing",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Durandal",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants Atk+4 during combat if unit initiates attack.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Eckesachs",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Falchion",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Fólkvangr",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Iron Sword",
-      "spCost": 50,
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Killing Edge",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Killing Edge+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Mystletainn",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Ragnell",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Raijinto",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Regal Blade",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Ruby Sword",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Ruby Sword+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Siegfried",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Sieglinde",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Silver Sword",
-      "spCost": 200,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Silver Sword+",
-      "spCost": 300,
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Slaying Edge",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Slaying Edge+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Sol Katti",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Steel Sword",
-      "spCost": 100,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Tyrfing",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants Def+4 in battle if unit's HP ≤ 50%.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Wo Dao",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 1,
-      "effect": "Grants +10 to damage when Special triggers.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Wo Dao+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 1,
-      "effect": "Grants +10 to damage when Special triggers.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Yato",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants Spd+4 during combat if unit initiates attack.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Zanbato",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Zanbato+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Sword"
-    },
-    {
-      "name": "Bolganone",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Bolganone+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Brynhildr",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, restricts foe's next-turn movement to 1 space or less.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Cymbeline",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Elfire",
-      "spCost": 100,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Fenrir",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Fenrir+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Fire",
-      "spCost": 50,
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Flux",
-      "spCost": 50,
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Grimoire",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to an ally within 2 spaces.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Ragnarok",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5.If attacking, unit will receive 5 damage after combat.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Rauðrblade",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Rauðrblade+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Rauðrowl",
-      "spCost": 200,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Rauðrowl+",
-      "spCost": 300,
-      "damage(mt)": 10,
-      "range(rng)": 2,
-      "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Rauðrraven",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "Grants weapon advantage vs. colorless foes.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Rauðrraven+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "Grants weapon advantage vs. colorless foes.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Rauðrwolf",
-      "spCost": 200,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Rauðrwolf+",
-      "spCost": 300,
-      "damage(mt)": 10,
-      "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Ruin",
-      "spCost": 100,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Tomato Tome",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Tomato Tome+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Valflame",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe's next action.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Red Tome"
-    },
-    {
-      "name": "Fire Breath",
-      "spCost": 50,
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Fire Breath+",
-      "spCost": 100,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Flametongue",
-      "spCost": 200,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Flametongue+",
-      "spCost": 300,
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Lightning Breath",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of attacker's range.Slows Special trigger (cooldown count+1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Lightning Breath+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of attacker's range.Slows Special trigger (cooldown count+1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
     },
     {
       "name": "Berkut's Lance",
@@ -29114,321 +28564,21 @@
       "weaponType": "Blue Lance"
     },
     {
-      "name": "Brave Lance",
-      "spCost": 200,
-      "damage(mt)": 5,
-      "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Brave Lance+",
-      "spCost": 300,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Carrot Lance",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 1,
-      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Carrot Lance+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 1,
-      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Cursed Lance",
+      "name": "Binding Blade",
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Grants Atk/Spd+2 and accelerates Special trigger (cooldown count-1).Unit takes 4 damage after combat.",
+      "effect": "Grants Def/Res+2 when this unit is attacked.",
       "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Deft Harpoon",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Deft Harpoon+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Fensalir",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Firesweep Lance",
-      "spCost": 200,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Unit and enemies cannot use counterattacks.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Firesweep Lance+",
-      "spCost": 300,
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "Unit and enemies cannot use counterattacks.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "First Bite",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "First Bite+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Geirskögul",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Gradivus",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Heavy Spear",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Effective against armored units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Heavy Spear+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "effect": "Effective against armored units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Iron Lance",
-      "spCost": 50,
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Killer Lance",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Killer Lance+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Ridersbane",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Ridersbane+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "Effective against cavalry units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Sapphire Lance",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Sapphire Lance+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Siegmund",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Silver Lance",
-      "spCost": 200,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Silver Lance+",
-      "spCost": 300,
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Slaying Lance",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Slaying Lance+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Steel Lance",
-      "spCost": 100,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Vidofnir",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "If unit is attacked by foe using sword, axe or lance, unit receives Def+7 during combat.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Aura",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Restores 5 HP to adjacent allies after any combat this unit initiates.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
+      "weaponType": "Red Sword"
     },
     {
       "name": "Blárblade",
       "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Blue Tome"
@@ -29438,7 +28588,7 @@
       "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Blue Tome"
@@ -29504,6 +28654,16 @@
       "weaponType": "Blue Tome"
     },
     {
+      "name": "Blazing Durandal",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Atk+3. If unit's Atk > foe's, unit gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
       "name": "Blessed Bouquet",
       "spCost": 200,
       "damage(mt)": 8,
@@ -29544,6 +28704,266 @@
       "weaponType": "Blue Tome"
     },
     {
+      "name": "Bolganone",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Bolganone+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Brave Axe",
+      "spCost": 200,
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Brave Axe+",
+      "spCost": 300,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Brave Bow",
+      "spCost": 200,
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "Spd-5. Effective against flying units.  Attacks twice if unit initiates combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Brave Bow+",
+      "spCost": 300,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "Spd-5. Effective against flying units.  Attacks twice if unit initiates combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Brave Lance",
+      "spCost": 200,
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Brave Lance+",
+      "spCost": 300,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Brave Sword",
+      "spCost": 200,
+      "damage(mt)": 5,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Brave Sword+",
+      "spCost": 300,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Brynhildr",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, restricts foe's next-turn movement to 1 space or less.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Candlelight",
+      "spCost": 150,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "After combat, foe inflicted with status preventing them from counterattacking.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
+    },
+    {
+      "name": "Carrot Axe",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Carrot Axe+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Carrot Lance",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Carrot Lance+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Clarisse's Bow",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Clarisse's Bow+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Cupid Arrow",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Cupid Arrow+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Cursed Lance",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Atk/Spd+2 and accelerates Special trigger (cooldown count-1). Unit takes 4 damage after combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Cymbeline",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Dancer's Fan",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat. Also, enemy suffers Def/Res-5 after combat until the end of foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Dancer's Fan+",
+      "spCost": 300,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat. Also, enemy suffers Def/Res-7 after combat until the end of foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Dancer's Ring",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Dancer's Ring+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
       "name": "Dancer's Score",
       "spCost": 200,
       "damage(mt)": 8,
@@ -29574,85 +28994,6 @@
       "weaponType": "Blue Tome"
     },
     {
-      "name": "Dire Thunder",
-      "spCost": 400,
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Elthunder",
-      "spCost": 100,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Sealife Tome",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Sealife Tome+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Thoron",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Thoron+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON"
-    },
-    {
-      "name": "Thunder",
-      "spCost": 50,
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
-      "name": "Valaskjálf",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Enables unit at ≤ 50% HP to strike first, even when attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Blue Tome"
-    },
-    {
       "name": "Dark Breath",
       "spCost": 200,
       "damage(mt)": 9,
@@ -29673,114 +29014,134 @@
       "weaponType": "Breath"
     },
     {
-      "name": "Fire Breath",
-      "spCost": 50,
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
+      "name": "Dark Excalibur",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Grants +10 to damage when Special triggers.",
+      "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Breath"
+      "weaponType": "Green Tome"
     },
     {
-      "name": "Fire Breath+",
-      "spCost": 100,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Light Breath",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 1,
-      "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Light Breath+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 1,
-      "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Lightning Breath",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of attacker's range.Slows Special trigger (cooldown count+1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Breath"
-    },
-    {
-      "name": "Lightning Breath+",
-      "spCost": 300,
+      "name": "Deathly Dagger",
+      "spCost": 400,
       "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Enables counterattack regardless of attacker's range.Slows Special trigger (cooldown count+1).",
-      "exclusive?": "No",
+      "range(rng)": 2,
+      "effect": "After combat, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, 7 damage to foe after battle.",
+      "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Breath"
+      "weaponType": "Neutral Shuriken"
     },
     {
-      "name": "Armads",
+      "name": "Deft Harpoon",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Deft Harpoon+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Dire Thunder",
+      "spCost": 400,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "Spd-5. Attack twice when initiating combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Divine Naga",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against dragons.  Foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Divine Tyrfing",
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.",
+      "effect": "Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.",
       "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": "Red Sword"
     },
     {
-      "name": "Brave Axe",
-      "spCost": 200,
-      "damage(mt)": 5,
+      "name": "Durandal",
+      "spCost": 400,
+      "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
+      "effect": "Grants Atk+4 during combat if unit initiates attack.",
+      "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": "Red Sword"
     },
     {
-      "name": "Brave Axe+",
-      "spCost": 300,
-      "damage(mt)": 8,
+      "name": "Eckesachs",
+      "spCost": 400,
+      "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Spd-5. Attack twice when initiating combat.",
-      "exclusive?": "No",
+      "effect": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
+      "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": "Red Sword"
     },
     {
-      "name": "Carrot Axe",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 1,
-      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "name": "Elfire",
+      "spCost": 100,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "-",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": "Red Tome"
     },
     {
-      "name": "Carrot Axe+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 1,
-      "effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+      "name": "Élivágar",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Elthunder",
+      "spCost": 100,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "-",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Elwind",
+      "spCost": 100,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
     },
     {
       "name": "Emerald Axe",
@@ -29803,266 +29164,6 @@
       "weaponType": "Green Axe"
     },
     {
-      "name": "Hammer",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "Effective against armored units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Hammer+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 1,
-      "effect": "Effective against armored units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Hauteclere",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Iron Axe",
-      "spCost": 50,
-      "damage(mt)": 6,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Killer Axe",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Killer Axe+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Legion's Axe",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "After combat, bonuses on targeted foe become penalties through its next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Legion's Axe+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "After combat, bonuses on targeted foe become penalties through its next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Lilith Floatie",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Lilith Floatie+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Melon Crusher",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Melon Crusher+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Nóatún",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Unit may move adjacent to any ally when HP ≤ 40%.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Silver Axe",
-      "spCost": 200,
-      "damage(mt)": 11,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Silver Axe+",
-      "spCost": 300,
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Slaying Axe",
-      "spCost": 200,
-      "damage(mt)": 10,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Slaying Axe+",
-      "spCost": 300,
-      "damage(mt)": 14,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Steel Axe",
-      "spCost": 100,
-      "damage(mt)": 8,
-      "range(rng)": 1,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Urðr",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "If Sing or Dance is used, target also granted Atk/Spd/Def/Res+3.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Urvan",
-      "spCost": 400,
-      "damage(mt)": 16,
-      "range(rng)": 1,
-      "effect": "Accelerates Special trigger (cooldown count-1).If unit receives consecutive attacks, damage from second attack onward reduced by 80%.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Axe"
-    },
-    {
-      "name": "Dancer's Ring",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Dancer's Ring+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Dark Excalibur",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Grants +10 to damage when special triggers.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Divine Naga",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Effective against dragons. Foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Élivágar",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Elwind",
-      "spCost": 100,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
       "name": "Excalibur",
       "spCost": 400,
       "damage(mt)": 14,
@@ -30071,6 +29172,226 @@
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Green Tome"
+    },
+    {
+      "name": "Falchion",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Effective against dragons.  At the start of every third turn, unit recovers 10 HP.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Fear",
+      "spCost": 150,
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "effect": "After combat, inflicts Atk-6 on targeted foe through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
+    },
+    {
+      "name": "Fenrir",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Fenrir+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Fensalir",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Fire",
+      "spCost": 50,
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Fire Breath",
+      "spCost": 50,
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Fire Breath+",
+      "spCost": 100,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Firesweep Bow",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "Effective against fliers.  Unit and enemies cannot use counterattacks.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Firesweep Bow+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "Effective against fliers.  Unit and enemies cannot use counterattacks.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Firesweep Lance",
+      "spCost": 200,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Unit and enemies cannot use counterattacks.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Firesweep Lance+",
+      "spCost": 300,
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "effect": "Unit and enemies cannot use counterattacks.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "First Bite",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "First Bite+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Flametongue",
+      "spCost": 200,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Flametongue+",
+      "spCost": 300,
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Breath"
+    },
+    {
+      "name": "Flux",
+      "spCost": 50,
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Fólkvangr",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Fujin Yumi",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  Unit can pass though foes if own HP ≥ 50%.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Geirskögul",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Gradivus",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Gravity",
+      "spCost": 150,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "After any combat, prevents foe from moving more than 1 space through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Green Egg",
@@ -30093,11 +29414,21 @@
       "weaponType": "Green Tome"
     },
     {
+      "name": "Grimoire",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to an ally within 2 spaces.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
       "name": "Gronnblade",
       "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -30107,7 +29438,7 @@
       "spCost": 300,
       "damage(mt)": 13,
       "range(rng)": 2,
-      "effect": "Slows Special trigger (cooldown count+1).Adds total bonuses on unit to damage dealt.",
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -30173,6 +29504,56 @@
       "weaponType": "Green Tome"
     },
     {
+      "name": "Hammer",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Hammer+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Hauteclere",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Heavy Spear",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Heavy Spear+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
       "name": "Hibiscus Tome",
       "spCost": 200,
       "damage(mt)": 8,
@@ -30193,84 +29574,174 @@
       "weaponType": "Green Tome"
     },
     {
-      "name": "Naga",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Effective against dragons. Grants Def/Res+2 when this unit is attacked.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Rexcalibur",
-      "spCost": 200,
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Rexcalibur+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Spectral Tome",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Spectral Tome+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Wind",
-      "spCost": 50,
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Green Tome"
-    },
-    {
-      "name": "Fire Breath",
+      "name": "Iron Axe",
       "spCost": 50,
       "damage(mt)": 6,
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Breath"
+      "weaponType": "Green Axe"
     },
     {
-      "name": "Fire Breath+",
-      "spCost": 100,
-      "damage(mt)": 8,
+      "name": "Iron Bow",
+      "spCost": 50,
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Iron Dagger",
+      "spCost": 50,
+      "damage(mt)": 3,
+      "range(rng)": 2,
+      "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Iron Lance",
+      "spCost": 50,
+      "damage(mt)": 6,
       "range(rng)": 1,
       "effect": "-",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Breath"
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Iron Sword",
+      "spCost": 50,
+      "damage(mt)": 6,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Killer Axe",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Killer Axe+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Killer Bow",
+      "spCost": 200,
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Killer Bow+",
+      "spCost": 300,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Killer Lance",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Killer Lance+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Killing Edge",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Killing Edge+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Kitty Paddle",
+      "spCost": 200,
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "effect": "Effective against foe using magic.  After combat, if foe uses magic, foe suffers Def/Res-5 through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Kitty Paddle+",
+      "spCost": 300,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Effective against foe using magic.  After combat, if foe uses magic, foe suffers Def/Res-7 through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Legion's Axe",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "After combat, bonuses on targeted foe become penalties through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Legion's Axe+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "After combat, bonuses on targeted foe become penalties through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Light Breath",
@@ -30293,54 +29764,134 @@
       "weaponType": "Breath"
     },
     {
-      "name": "Absorb",
-      "spCost": 150,
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "Recovers HP=50% of damage dealt.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Staff"
-    },
-    {
-      "name": "Assault",
-      "spCost": 50,
-      "damage(mt)": 10,
-      "range(rng)": 2,
-      "effect": "-",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Staff"
-    },
-    {
-      "name": "Candlelight",
-      "spCost": 150,
+      "name": "Lightning Breath",
+      "spCost": 200,
       "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "After combat, foe inflicted with status preventing them from counterattacking.",
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Neutral Staff"
+      "weaponType": "Breath"
     },
     {
-      "name": "Fear",
-      "spCost": 150,
-      "damage(mt)": 5,
-      "range(rng)": 2,
-      "effect": "After combat, inflicts Atk-6 on targeted foe through its next action.",
+      "name": "Lightning Breath+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Neutral Staff"
+      "weaponType": "Breath"
     },
     {
-      "name": "Gravity",
-      "spCost": 150,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "After any combat, prevents foe from moving more than 1 space through its next action.",
+      "name": "Lilith Floatie",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Neutral Staff"
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Lilith Floatie+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Melon Crusher",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Melon Crusher+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Monstrous Bow",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Effective against fliers.  After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Monstrous Bow+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Effective against fliers.  After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Mulagir",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Mystletainn",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Naga",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against dragons.  Grants Def/Res+2 when this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Nidhogg",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Nóatún",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Unit may move adjacent to any ally when HP ≤ 40%.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Pain",
@@ -30363,211 +29914,151 @@
       "weaponType": "Neutral Staff"
     },
     {
-      "name": "Slow",
-      "spCost": 150,
-      "damage(mt)": 5,
-      "range(rng)": 2,
-      "effect": "After any combat, inflicts Spd-6 on foe through its next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Staff"
-    },
-    {
-      "name": "Assassin's Bow",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Assassin's Bow+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Brave Bow",
-      "spCost": 200,
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Brave Bow+",
-      "spCost": 300,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Clarisse's Bow",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.Effective against flying units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Clarisse's Bow+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.Effective against flying units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Cupid Arrow",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.Effective against fliers.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Cupid Arrow+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.Effective against fliers.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Firesweep Bow",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "Effective against fliers. Unit and enemies cannot use counterattacks.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Firesweep Bow+",
-      "spCost": 300,
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "Effective against fliers. Unit and enemies cannot use counterattacks.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Fujin Yumi",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. Unit can pass though foes if own HP ≥ 50%.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Iron Bow",
-      "spCost": 50,
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "Effective against flying units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Killer Bow",
-      "spCost": 200,
-      "damage(mt)": 5,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Killer Bow+",
-      "spCost": 300,
-      "damage(mt)": 9,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Monstrous Bow",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "Effective against fliers. After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Monstrous Bow+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "Effective against fliers. After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Mulagir",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Nidhogg",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
       "name": "Parthia",
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Effective against flying units. Grants Res+4 during combat if initiating attack.",
+      "effect": "Effective against flying units.  Grants Res+4 during combat if initiating attack.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Poison Dagger",
+      "spCost": 200,
+      "damage(mt)": 2,
+      "range(rng)": 2,
+      "effect": "Effective against infantry units.  Infantry foes suffer Def/Res-4 after combat through their next actions.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Poison Dagger+",
+      "spCost": 300,
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "effect": "Effective against infantry units.  Infantry foes suffer Def/Res-6 after combat through their next actions.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Ragnarok",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Ragnell",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Raijinto",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Rauðrblade",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Rauðrblade+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Rauðrowl",
+      "spCost": 200,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Rauðrowl+",
+      "spCost": 300,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Rauðrraven",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "Grants weapon advantage vs. colorless foes.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Rauðrraven+",
+      "spCost": 300,
+      "damage(mt)": 11,
+      "range(rng)": 2,
+      "effect": "Grants weapon advantage vs. colorless foes.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Rauðrwolf",
+      "spCost": 200,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Rauðrwolf+",
+      "spCost": 300,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
     },
     {
       "name": "Refreshing Bolt",
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.Effective against fliers.",
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -30577,10 +30068,220 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2.If attacking, unit will take 2 damage after combat.Effective against fliers.",
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Regal Blade",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Rexcalibur",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Rexcalibur+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Ridersbane",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Ridersbane+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Rogue Dagger",
+      "spCost": 200,
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "After combat, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Rogue Dagger+",
+      "spCost": 300,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "After combat, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Ruby Sword",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Ruby Sword+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Ruin",
+      "spCost": 100,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Sapphire Lance",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Sapphire Lance+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 1,
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Sealife Tome",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Sealife Tome+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Seashell",
+      "spCost": 200,
+      "damage(mt)": 7,
+      "range(rng)": 2,
+      "effect": "Foe takes Def/Res-5 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Seashell+",
+      "spCost": 300,
+      "damage(mt)": 10,
+      "range(rng)": 2,
+      "effect": "Foe takes Def/Res-7 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Siegfried",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Sieglinde",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Siegmund",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Silver Axe",
+      "spCost": 200,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Silver Axe+",
+      "spCost": 300,
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Silver Bow",
@@ -30603,156 +30304,6 @@
       "weaponType": "Neutral Bow"
     },
     {
-      "name": "Slaying Bow",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Slaying Bow+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Steel Bow",
-      "spCost": 100,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "Effective against flying units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Bow"
-    },
-    {
-      "name": "Dancer's Fan",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.Also, enemy suffers Def/Res-5 after combat until the end of foe's next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Dancer's Fan+",
-      "spCost": 300,
-      "damage(mt)": 10,
-      "range(rng)": 2,
-      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.Also, enemy suffers Def/Res-7 after combat until the end of foe's next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Deathly Dagger",
-      "spCost": 400,
-      "damage(mt)": 11,
-      "range(rng)": 2,
-      "effect": "After combat, inflicts Def/Res-7 on foe through its next action.If unit initiated combat, 7 damage to foe after battle.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Iron Dagger",
-      "spCost": 50,
-      "damage(mt)": 3,
-      "range(rng)": 2,
-      "effect": "After combat, inflicts Def/Res-3 on foe through its next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Kitty Paddle",
-      "spCost": 200,
-      "damage(mt)": 5,
-      "range(rng)": 2,
-      "effect": "Effective against foe using magic. After combat, if foe uses magic, foe suffers Def/Res-7 through foe's next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Kitty Paddle+",
-      "spCost": 300,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "Effective against foe using magic. After combat, if foe uses magic, foe suffers Def/Res-7 through foe's next action.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Poison Dagger",
-      "spCost": 200,
-      "damage(mt)": 2,
-      "range(rng)": 2,
-      "effect": "Effective against infantry units. Infantry foes suffer Def/Res-4 after combat through their next actions.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Poison Dagger+",
-      "spCost": 300,
-      "damage(mt)": 5,
-      "range(rng)": 2,
-      "effect": "Effective against infantry units. Infantry foes suffer Def/Res-6 after combat through their next actions.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Rogue Dagger",
-      "spCost": 200,
-      "damage(mt)": 4,
-      "range(rng)": 2,
-      "effect": "After combat, inflicts Def/Res-3 on foe through its next action.Grants unit Def/Res+3 for 1 turn.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Rogue Dagger+",
-      "spCost": 300,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "After combat, inflicts Def/Res-5 on foe through its next action.Grants unit Def/Res+5 for 1 turn.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Seashell",
-      "spCost": 200,
-      "damage(mt)": 7,
-      "range(rng)": 2,
-      "effect": "Foe takes Def/Res-5 until end of foe's next action.If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2.If attacking, unit gets 2 damage after.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
-      "name": "Seashell+",
-      "spCost": 300,
-      "damage(mt)": 10,
-      "range(rng)": 2,
-      "effect": "Foe takes Def/Res-7 until end of foe's next action.If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2.If attacking, unit gets 2 damage after.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Neutral Shuriken"
-    },
-    {
       "name": "Silver Dagger",
       "spCost": 200,
       "damage(mt)": 7,
@@ -30771,6 +30322,136 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Silver Lance",
+      "spCost": 200,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Silver Lance+",
+      "spCost": 300,
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Silver Sword",
+      "spCost": 200,
+      "damage(mt)": 11,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Silver Sword+",
+      "spCost": 300,
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Slaying Axe",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Slaying Axe+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Slaying Bow",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Slaying Bow+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
+      "name": "Slaying Edge",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Slaying Edge+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Slaying Lance",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Slaying Lance+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Slow",
+      "spCost": 150,
+      "damage(mt)": 5,
+      "range(rng)": 2,
+      "effect": "After any combat, inflicts Spd-6 on foe through its next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
     },
     {
       "name": "Smoke Dagger",
@@ -30793,6 +30474,56 @@
       "weaponType": "Neutral Shuriken"
     },
     {
+      "name": "Sol Katti",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Spectral Tome",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Spectral Tome+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Steel Axe",
+      "spCost": 100,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Steel Bow",
+      "spCost": 100,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Bow"
+    },
+    {
       "name": "Steel Dagger",
       "spCost": 100,
       "damage(mt)": 5,
@@ -30801,6 +30532,195 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Shuriken"
+    },
+    {
+      "name": "Steel Lance",
+      "spCost": 100,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Steel Sword",
+      "spCost": 100,
+      "damage(mt)": 8,
+      "range(rng)": 1,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Thoron",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Thoron+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Thunder",
+      "spCost": 50,
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Tomato Tome",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Tomato Tome+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Tyrfing",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Def+4 in battle if unit's HP ≤ 50%.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Urðr",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "If Sing or Dance is used, target also granted Atk/Spd/Def/Res+3.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Urvan",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1). If unit receives consecutive attacks, damage from second attack onward reduced by 80%.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
+    },
+    {
+      "name": "Valaskjálf",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Enables unit at ≤ 50% HP to strike first, even when attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Valflame",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe's next action.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
+      "name": "Vidofnir",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "If unit is attacked by foe using sword, axe or lance, unit receives Def+7 during combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Wind",
+      "spCost": 50,
+      "damage(mt)": 4,
+      "range(rng)": 2,
+      "effect": "-",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Green Tome"
+    },
+    {
+      "name": "Wo Dao",
+      "spCost": 200,
+      "damage(mt)": 9,
+      "range(rng)": 1,
+      "effect": "Grants +10 to damage when Special triggers.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Wo Dao+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 1,
+      "effect": "Grants +10 to damage when Special triggers.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Yato",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Spd+4 during combat if unit initiates attack.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Zanbato",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Zanbato+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Ardent Sacrifice",
@@ -31477,21 +31397,21 @@
     {
       "name": "Atk Res Bond 1",
       "effect": "Grants Atk/Res+3 to this unit during combat if unit is adjacent to an ally.",
-      "spCost": "",
+      "spCost": 60,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
       "name": "Atk Res Bond 2",
       "effect": "Grants Atk/Res+4 to this unit during combat if unit is adjacent to an ally.",
-      "spCost": "",
+      "spCost": 120,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
       "name": "Atk Res Bond 3",
       "effect": "Grants Atk/Res+5 to this unit during combat if unit is adjacent to an ally.",
-      "spCost": "",
+      "spCost": 240,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
