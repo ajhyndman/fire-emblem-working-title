@@ -1,28 +1,26 @@
 import fs from 'fs';
 import {
-  __,
   assoc,
   compose,
-  concat,
   contains,
   dissoc,
-  dropLast,
+  filter,
   flatten,
-  has,
   head,
   identity,
   ifElse,
   indexBy,
+  isNil,
   map,
-  mapObjIndexed,
   merge,
   mergeWith,
+  not,
   path,
   prop,
   propEq,
   replace,
+  sortBy,
   test,
-  toUpper,
   trim,
   values,
   without,
@@ -34,7 +32,6 @@ import { fetchPage, fetchAndParsePages, fetchAskApiQuery } from './fetch';
 import {
   parseHeroAggregateHtml,
   parseHeroStatsAndSkills,
-  parseSkillsPage,
 } from './parse';
 import { CDN_HOST, WIKI_HOST } from './constants';
 
@@ -110,13 +107,6 @@ async function fetchHeroStats() {
 
 // Fetches detailed info for all skills
 async function fetchSkills() {
-  const skillPageNames = ['Passives'];
-  const skillsByType = await fetchAndParsePages(
-    WIKI_HOST,
-    skillPageNames,
-    parseSkillsPage,
-  );
-
   const weapons = await fetchAskApiQuery(`
     [[Category:Weapons]]
       |?Category
@@ -280,6 +270,84 @@ async function fetchSkills() {
     ),
   );
 
+  const passives = await fetchAskApiQuery(`
+    [[Category: Passives]]
+      |?Cost1
+      |?Cost2
+      |?Cost3
+      |?Effect1
+      |?Effect2
+      |?Effect3
+      |?Has mvmt restriction
+      |?Has skillTier
+      |?Has weapon restriction
+      |?Name1
+      |?Name2
+      |?Name3
+      |?Ptype
+      |limit=${ASK_API_LIMIT}
+  `).then(
+    compose(
+      filter(({ name }) => name !== undefined),
+      sortBy(prop('type')),
+      flatten,
+      map(
+        ({
+          Cost1,
+          Cost2,
+          Cost3,
+          Effect1,
+          Effect2,
+          Effect3,
+          'Has mvmt restriction': mvmtRestriction,
+          'Has weapon restriction': weaponRestriction,
+          Name1,
+          Name2,
+          Name3,
+          Ptype,
+        }) => {
+          // Don't include passives that are only available as seals, here.
+          if (head(Ptype) === 'S') return [];
+
+          const inheritRestrictions = [
+            head(mvmtRestriction),
+            head(weaponRestriction),
+          ].filter(compose(not, isNil));
+
+          const inheritRestriction =
+            inheritRestrictions.length > 0
+              ? inheritRestrictions.join(' ')
+              : 'None';
+
+          return [
+            {
+              name: head(Name1),
+              effect: sanitizeEffectString(head(Effect1) || '-'),
+              spCost: head(Cost1),
+              inheritRestriction,
+              type: `PASSIVE_${head(Ptype)}`,
+            },
+            {
+              name: head(Name2),
+              effect: sanitizeEffectString(head(Effect2) || '-'),
+              spCost: head(Cost2),
+              inheritRestriction,
+              type: `PASSIVE_${head(Ptype)}`,
+            },
+            {
+              name: head(Name3),
+              effect: sanitizeEffectString(head(Effect3) || '-'),
+              spCost: head(Cost3),
+              inheritRestriction,
+              type: `PASSIVE_${head(Ptype)}`,
+            },
+          ];
+        },
+      ),
+      extractPrintouts,
+    ),
+  );
+
   const seals = await fetchAskApiQuery(`
     [[Category:Sacred Seals]]
       |?Effect1
@@ -315,27 +383,14 @@ async function fetchSkills() {
     ),
   );
 
-  const skills = compose(
-    concat(__, seals),
-    concat(weapons),
-    concat(assists),
-    concat(specials),
-    map(skill =>
-      ifElse(
-        has('passiveSlot'),
-        compose(
-          dissoc('passiveSlot'),
-          assoc('type', skill['type'] + '_' + skill['passiveSlot']),
-        ),
-        identity,
-      )(skill),
-    ),
-    flatten,
-    values,
-    mapObjIndexed((skillList, skillType) =>
-      map(assoc('type', dropLast(1, toUpper(skillType))), skillList),
-    ),
-  )(skillsByType);
+  const skills = [
+    ...weapons,
+    ...assists,
+    ...specials,
+    ...passives,
+    ...seals,
+  ];
+
   return skills;
 }
 
