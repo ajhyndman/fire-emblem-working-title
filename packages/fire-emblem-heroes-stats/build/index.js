@@ -110,7 +110,7 @@ async function fetchHeroStats() {
 
 // Fetches detailed info for all skills
 async function fetchSkills() {
-  const skillPageNames = ['Specials', 'Passives'];
+  const skillPageNames = ['Passives'];
   const skillsByType = await fetchAndParsePages(
     WIKI_HOST,
     skillPageNames,
@@ -243,6 +243,43 @@ async function fetchSkills() {
     ),
   );
 
+  const specials = await fetchAskApiQuery(`
+    [[Category: Specials]]
+      |?Cooldown1
+      |?Cost1
+      |?Effect1
+      |?Has weapon restriction
+      |?Name1
+      |limit=${ASK_API_LIMIT}
+  `).then(
+    compose(
+      map(
+        ({
+          Cooldown1,
+          Cost1,
+          Effect1,
+          'Has weapon restriction': weaponRestriction,
+          Name1,
+        }) => {
+          const inheritRestriction =
+            head(weaponRestriction) !== undefined
+              ? head(weaponRestriction)
+              : 'None';
+
+          return {
+            name: head(Name1),
+            cooldown: head(Cooldown1),
+            effect: sanitizeEffectString(head(Effect1) || '-'),
+            spCost: head(Cost1),
+            inheritRestriction,
+            type: 'SPECIAL',
+          };
+        },
+      ),
+      extractPrintouts,
+    ),
+  );
+
   const seals = await fetchAskApiQuery(`
     [[Category:Sacred Seals]]
       |?Effect1
@@ -259,17 +296,17 @@ async function fetchSkills() {
         [
           {
             name: head(Name1),
-            effect: sanitizeEffectString(head(Effect1) || ''),
+            effect: sanitizeEffectString(head(Effect1) || '-'),
             type: 'SEAL',
           },
           {
             name: head(Name2),
-            effect: sanitizeEffectString(head(Effect2) || ''),
+            effect: sanitizeEffectString(head(Effect2) || '-'),
             type: 'SEAL',
           },
           {
             name: head(Name3),
-            effect: sanitizeEffectString(head(Effect3) || ''),
+            effect: sanitizeEffectString(head(Effect3) || '-'),
             type: 'SEAL',
           },
         ].filter(({ name }) => name !== undefined),
@@ -282,6 +319,7 @@ async function fetchSkills() {
     concat(__, seals),
     concat(weapons),
     concat(assists),
+    concat(specials),
     map(skill =>
       ifElse(
         has('passiveSlot'),

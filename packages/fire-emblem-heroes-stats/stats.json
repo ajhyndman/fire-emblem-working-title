@@ -30949,7 +30949,7 @@
     {
       "name": "Aether",
       "cooldown": 5,
-      "effect": "Resolve combat as if foe suffered Def/Res-50%.Unit recovers HP=half damage dealt.",
+      "effect": "Resolve combat as if foe suffered Def/Res-50%. Unit recovers HP=half damage dealt.",
       "spCost": 500,
       "inheritRestriction": "Excludes Staff Users",
       "type": "SPECIAL"
@@ -30965,7 +30965,7 @@
     {
       "name": "Black Luna",
       "cooldown": 3,
-      "effect": "Resolve combat as if foe suffered Def/Res-80%.(Skill cannot be inherited.)",
+      "effect": "Resolve combat as if foe suffered Def/Res-80%. (Skill cannot be inherited.)",
       "spCost": 500,
       "inheritRestriction": "Exclusive",
       "type": "SPECIAL"
@@ -31069,7 +31069,7 @@
     {
       "name": "Galeforce",
       "cooldown": 5,
-      "effect": "If this unit initiates an attack, it can take another action after combat.(Once per turn only.)",
+      "effect": "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)",
       "spCost": 500,
       "inheritRestriction": "Sword, Lance, Axe Users Only",
       "type": "SPECIAL"
@@ -31189,7 +31189,7 @@
     {
       "name": "Miracle",
       "cooldown": 5,
-      "effect": "If HP &gt; 1, survive a lethal attack with 1 HP remaining.",
+      "effect": "If HP > 1, survive a lethal attack with 1 HP remaining.",
       "spCost": 200,
       "inheritRestriction": "None",
       "type": "SPECIAL"
@@ -31237,7 +31237,7 @@
     {
       "name": "Regnal Astra",
       "cooldown": 2,
-      "effect": "Boosts damage dealt by 40% of unit's Spd.(Skill cannot be inherited.)",
+      "effect": "Boosts damage dealt by 40% of unit's Spd. (Skill cannot be inherited.)",
       "spCost": 500,
       "inheritRestriction": "Exclusive",
       "type": "SPECIAL"
