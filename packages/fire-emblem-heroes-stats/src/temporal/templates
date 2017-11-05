@@ -3,7 +3,7 @@
     'shortName': 'Thief',
     'name': 'Thief ( GHB)',
     'moveType': 'Infantry',
-    'weaponType': 'Neutral Shuriken',
+    'weaponType': 'Neutral Dagger',
     'skills': [
       {
         'name': 'Silver Dagger+',

@@ -617,7 +617,7 @@ async function fetchSkills() {
               case 'Category:Bows':
                 return 'Neutral Bow';
               case 'Category:Daggers':
-                return 'Neutral Shuriken';
+                return 'Neutral Dagger';
               case 'Category:Staves':
                 return 'Neutral Staff';
             }
