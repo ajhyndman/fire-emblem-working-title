@@ -4,11 +4,7 @@
  * @flow
  */
 
-export type MoveType =
-  | 'Armored'
-  | 'Cavalry'
-  | 'Flying'
-  | 'Infantry';
+export type MoveType = 'Armored' | 'Cavalry' | 'Flying' | 'Infantry';
 
 export type WeaponType =
   | 'Blue Lance'
@@ -21,72 +17,72 @@ export type WeaponType =
   | 'Red Tome'
   | 'Red Breath'
   | 'Neutral Bow'
-  | 'Neutral Shuriken'
+  | 'Neutral Dagger'
   | 'Neutral Staff';
 
 export type StatValue = number | '-';
 
 export type SingleValueStats = {
-  +hp: StatValue;
-  +atk: StatValue;
-  +spd: StatValue;
-  +def: StatValue;
-  +res: StatValue;
+  +hp: StatValue,
+  +atk: StatValue,
+  +spd: StatValue,
+  +def: StatValue,
+  +res: StatValue,
 };
 
 export type MultiValueStats = {
-  +hp: Array<StatValue>;
-  +atk: Array<StatValue>;
-  +spd: Array<StatValue>;
-  +def: Array<StatValue>;
-  +res: Array<StatValue>;
+  +hp: Array<StatValue>,
+  +atk: Array<StatValue>,
+  +spd: Array<StatValue>,
+  +def: Array<StatValue>,
+  +res: Array<StatValue>,
 };
 
 export type Level1Stats = {
-  +'1'?: SingleValueStats;
-  +'2'?: SingleValueStats;
-  +'3'?: SingleValueStats;
-  +'4'?: SingleValueStats;
-  +'5'?: SingleValueStats;
+  +'1'?: SingleValueStats,
+  +'2'?: SingleValueStats,
+  +'3'?: SingleValueStats,
+  +'4'?: SingleValueStats,
+  +'5'?: SingleValueStats,
 };
 
 export type Level40Stats = {
-  +'1'?: MultiValueStats;
-  +'2'?: MultiValueStats;
-  +'3'?: MultiValueStats;
-  +'4'?: MultiValueStats;
-  +'5'?: MultiValueStats;
+  +'1'?: MultiValueStats,
+  +'2'?: MultiValueStats,
+  +'3'?: MultiValueStats,
+  +'4'?: MultiValueStats,
+  +'5'?: MultiValueStats,
 };
 
 export type StatsByLevel = {
-  +'1': Level1Stats;
-  +'40': Level40Stats;
+  +'1': Level1Stats,
+  +'40': Level40Stats,
 };
 
 export type Assets = {
   +portrait: {
-    +'75px': string;
-    +'113px': string;
-    +'150px': string;
-  };
+    +'75px': string,
+    +'113px': string,
+    +'150px': string,
+  },
 };
 
 export type Hero = {
-  +name: string;
-  +shortName?: string;
-  +title?: string;
-  +moveType: MoveType;
-  +weaponType: WeaponType;
-  +releaseDate?: string;
-  +origin?: string;
-  +rarities?: string;
-  +assets: Assets;
-  +stats: StatsByLevel;
+  +name: string,
+  +shortName?: string,
+  +title?: string,
+  +moveType: MoveType,
+  +weaponType: WeaponType,
+  +releaseDate?: string,
+  +origin?: string,
+  +rarities?: string,
+  +assets: Assets,
+  +stats: StatsByLevel,
   +skills: Array<{
-    +name: string;
-    +default?: ?number;
-    +rarity: ?number | '-';
-  }>;
+    +name: string,
+    +default?: ?number,
+    +rarity: ?number | '-',
+  }>,
 };
 
 export type SkillType =
@@ -99,50 +95,50 @@ export type SkillType =
   | 'SEAL';
 
 export type WeaponSkill = {
-  +type: 'WEAPON';
-  +name: string;
-  +spCost: number;
-  +'damage(mt)': number;
-  +'range(rng)': number;
-  +effect: string;
+  +type: 'WEAPON',
+  +name: string,
+  +spCost: number,
+  +'damage(mt)': number,
+  +'range(rng)': number,
+  +effect: string,
   // Hero is Red Breath, weapon is Breath
-  +weaponType: WeaponType | 'Breath';
-  +'exclusive?': 'Yes' | 'No';
+  +weaponType: WeaponType | 'Breath',
+  +'exclusive?': 'Yes' | 'No',
 };
 
 export type AssistSkill = {
-  +type: 'ASSIST';
-  +name: string;
-  +range: number;
-  +effect: string;
-  +spCost: number;
-  +inheritRestriction: string;
+  +type: 'ASSIST',
+  +name: string,
+  +range: number,
+  +effect: string,
+  +spCost: number,
+  +inheritRestriction: string,
 };
 
 export type SpecialSkill = {
-  +type: 'SPECIAL';
-  +name: string;
-  +cooldown: number;
-  +effect: string;
-  +spCost: number;
+  +type: 'SPECIAL',
+  +name: string,
+  +cooldown: number,
+  +effect: string,
+  +spCost: number,
   // The wiki no longer has trigger/target fields, but we likely want these in he future.
   // +trigger: 'Assist (Staff)' | 'Attack' | 'Enemy Attack';
   // +target: 'Ally' | 'Allies' | 'Enemies' | 'Self';
-  +inheritRestriction: string;
+  +inheritRestriction: string,
 };
 
 export type PassiveSkill = {
-  +type: 'PASSIVE_A' | 'PASSIVE_B' | 'PASSIVE_C';
-  +name: string;
-  +effect: string;
-  +spCost: number;
-  +inheritRestriction: string;
+  +type: 'PASSIVE_A' | 'PASSIVE_B' | 'PASSIVE_C',
+  +name: string,
+  +effect: string,
+  +spCost: number,
+  +inheritRestriction: string,
 };
 
 export type SealSkill = {
-  +type: 'SEAL';
-  +name: string;
-  +effect: string;
+  +type: 'SEAL',
+  +name: string,
+  +effect: string,
 };
 
 export type Skill =
@@ -153,16 +149,16 @@ export type Skill =
   | SealSkill;
 
 export type Stats = {
-  +heroes: Hero[];
-  +grand_battle_heroes: Hero[];
-  +skills: Skill[];
-  +getAllHeroes: () => Hero[];
-  +getAllSkills: () => Skill[];
-  +getEventHeroes: (all: boolean) => Hero[];
-  +getHero: (name: string) => Hero;
-  +getReleasedHeroes: () => Hero[];
-  +getSkillObject: (key: SkillType, name: string) => Skill;
-  +getSkillType: (name: string) => SkillType;
+  +heroes: Hero[],
+  +grand_battle_heroes: Hero[],
+  +skills: Skill[],
+  +getAllHeroes: () => Hero[],
+  +getAllSkills: () => Skill[],
+  +getEventHeroes: (all: boolean) => Hero[],
+  +getHero: (name: string) => Hero,
+  +getReleasedHeroes: () => Hero[],
+  +getSkillObject: (key: SkillType, name: string) => Skill,
+  +getSkillType: (name: string) => SkillType,
 };
 
 declare module.exports: Stats;

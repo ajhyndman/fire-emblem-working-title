@@ -64,7 +64,7 @@ const unitList: Array<Hero> = [
     shortName: 'Thief 1',
     name: 'Thief 1 (Navarre GHB)',
     moveType: 'Infantry',
-    weaponType: 'Neutral Shuriken',
+    weaponType: 'Neutral Dagger',
     skills: [
       {
         name: 'Silver Dagger+',
@@ -122,7 +122,7 @@ const unitList: Array<Hero> = [
     shortName: 'Thief 2',
     name: 'Thief 2 (Navarre GHB)',
     moveType: 'Infantry',
-    weaponType: 'Neutral Shuriken',
+    weaponType: 'Neutral Dagger',
     skills: [
       {
         name: 'Rogue Dagger+',

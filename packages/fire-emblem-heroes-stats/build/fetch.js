@@ -2,48 +2,9 @@ import fetch from 'isomorphic-fetch';
 import fs from 'fs';
 import path from 'path';
 import { URL } from 'url';
-import { compose, last, map, prop, replace, split, toPairs, zipObj } from 'ramda';
+import { compose, last, map, prop, replace, split, toPairs } from 'ramda';
 
 import { WIKI_HOST } from './constants';
-
-/**
- * Raw data fetchers
- */
-
-export const fetchPage = url =>
-  fetch(url)
-    .then(response => {
-      if (!response.ok) return Promise.reject({ type: '404' });
-      return response.text();
-    })
-    .then(replace(/\n|\r/g, ''))
-    .catch(() => {
-      console.error('failed to fetch: ', url);
-      console.log('retrying');
-      return fetchPage(url);
-    });
-
-// Takes a url prefix, a list of page names, and a parse function.
-// Returns a map from page name to parsed page.
-export async function fetchAndParsePages(host, pageNames, parseFunction) {
-  return zipObj(
-    pageNames,
-    await Promise.all(
-      map(
-        compose(
-          promise => {
-            return promise.then(parseFunction).catch(err => {
-              console.error(parseFunction.name + ': ', err);
-              return [];
-            });
-          },
-          fetchPage,
-          pageName => `${host}/${encodeURIComponent(pageName)}`,
-        ),
-      )(pageNames),
-    ).catch(err => console.error('fetchAndParsePages:', err)),
-  );
-}
 
 /**
  * Download an image and save it into assets, with the same name.
@@ -104,7 +65,7 @@ export const fetchApiQuery = (queryParams: { [param: string]: string }) => {
     toPairs({ ...defaultQueryParams, ...queryParams }),
   ).join('&');
 
-  return fetch(
-    `${WIKI_HOST}/api.php?${queryParamString}`,
-  ).then(response => response.json());
+  return fetch(`${WIKI_HOST}/api.php?${queryParamString}`).then(response =>
+    response.json(),
+  );
 };

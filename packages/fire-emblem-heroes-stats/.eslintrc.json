@@ -1,5 +1,5 @@
 {
-  "extends": "ajhyndman",
+  "extends": ["ajhyndman", "prettier"],
   "rules": {
     "no-console": "off",
     "max-len": ["error", { "code": 100, "ignoreStrings": true }]
