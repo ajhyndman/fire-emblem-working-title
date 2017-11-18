@@ -6641,6 +6641,130 @@
       }
     },
     {
+      "name": "Dorcas",
+      "title": "Serene Warrior",
+      "origin": "Fire Emblem: The Blazing Blade",
+      "weaponType": "Green Axe",
+      "moveType": "Infantry",
+      "rarities": "5",
+      "releaseDate": "Nov 15, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Dorcas.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Dorcas.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Dorcas.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Stout Tomahawk",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Draconic Aura",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Fierce Stance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fierce Stance 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Fierce Stance 3",
+          "rarity": 5
+        },
+        {
+          "name": "Quick Riposte 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Quick Riposte 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Quick Riposte 3",
+          "rarity": 5
+        },
+        {
+          "name": "Infantry Pulse 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Infantry Pulse 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Infantry Pulse 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 19,
+            "atk": 9,
+            "spd": 6,
+            "def": 9,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              42,
+              45,
+              48
+            ],
+            "atk": [
+              32,
+              35,
+              38
+            ],
+            "spd": [
+              20,
+              23,
+              26
+            ],
+            "def": [
+              32,
+              35,
+              38
+            ],
+            "res": [
+              21,
+              24,
+              28
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Draug",
       "title": "Gentle Giant",
       "origin": "Fire Emblem: Mystery of the Emblem",
@@ -8692,6 +8816,135 @@
               28,
               31,
               34
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Fjorm",
+      "title": "Princess of Ice",
+      "origin": "Fire Emblem Heroes",
+      "weaponType": "Blue Lance",
+      "moveType": "Infantry",
+      "rarities": "5",
+      "releaseDate": "Nov 27, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Fjorm.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Fjorm.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Fjorm.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Leiptr",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Holy Vestments",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Aegis",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Ice Mirror",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Atk Def Bond 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Def Bond 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Def Bond 3",
+          "rarity": 5
+        },
+        {
+          "name": "Shield Pulse 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Shield Pulse 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Shield Pulse 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Drive Atk 2",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": null,
+            "atk": null,
+            "spd": null,
+            "def": null,
+            "res": null
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              null,
+              null,
+              null
+            ],
+            "atk": [
+              null,
+              null,
+              null
+            ],
+            "spd": [
+              null,
+              null,
+              null
+            ],
+            "def": [
+              null,
+              null,
+              null
+            ],
+            "res": [
+              null,
+              null,
+              null
             ]
           }
         }
@@ -12472,6 +12725,152 @@
       }
     },
     {
+      "name": "Joshua",
+      "title": "Tempest King",
+      "origin": "Fire Emblem: The Sacred Stones",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": "4-5",
+      "releaseDate": "Nov 20, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Joshua.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Joshua.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Joshua.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Slaying Edge",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Audhulma",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Moonbow",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Close Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Close Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Close Def 3",
+          "rarity": 5
+        },
+        {
+          "name": "Windsweep 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Windsweep 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Windsweep 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "4": {
+            "hp": 17,
+            "atk": 6,
+            "spd": 9,
+            "def": 8,
+            "res": 5
+          },
+          "5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 9,
+            "def": 8,
+            "res": 6
+          }
+        },
+        "40": {
+          "4": {
+            "hp": [
+              34,
+              37,
+              40
+            ],
+            "atk": [
+              25,
+              28,
+              31
+            ],
+            "spd": [
+              30,
+              33,
+              36
+            ],
+            "def": [
+              25,
+              28,
+              31
+            ],
+            "res": [
+              22,
+              25,
+              28
+            ]
+          },
+          "5": {
+            "hp": [
+              36,
+              40,
+              43
+            ],
+            "atk": [
+              28,
+              31,
+              34
+            ],
+            "spd": [
+              32,
+              35,
+              38
+            ],
+            "def": [
+              26,
+              30,
+              33
+            ],
+            "res": [
+              24,
+              28,
+              31
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Julia",
       "title": "Naga's Blood",
       "origin": "Fire Emblem: Genealogy of the Holy War",
@@ -14644,6 +15043,32 @@
       }
     },
     {
+      "name": "Loki",
+      "origin": "Fire Emblem Heroes",
+      "weaponType": "Neutral Staff",
+      "moveType": "Infantry",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Loki.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Loki.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Loki.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Assault",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {},
+        "40": {}
+      }
+    },
+    {
       "name": "Lon'qu",
       "title": "Solitary Blade",
       "origin": "Fire Emblem Awakening",
@@ -15564,6 +15989,118 @@
       }
     },
     {
+      "name": "Lute",
+      "title": "Prodigy",
+      "origin": "Fire Emblem: The Sacred Stones",
+      "weaponType": "Blue Tome",
+      "moveType": "Infantry",
+      "rarities": "5",
+      "releaseDate": "Nov 15, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lute.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lute.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lute.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elthunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Thoron",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Weirding Tome",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Attack",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Attack Resistance",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Resistance +1",
+          "rarity": "-"
+        },
+        {
+          "name": "HP Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "HP Res 2",
+          "rarity": 5
+        },
+        {
+          "name": "Res Ploy 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Res Ploy 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Res Ploy 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 10,
+            "spd": 8,
+            "def": 3,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              30,
+              33,
+              36
+            ],
+            "atk": [
+              33,
+              36,
+              39
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              12,
+              16,
+              19
+            ],
+            "res": [
+              31,
+              34,
+              37
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Lyn",
       "title": "Lady of the Plains",
       "origin": "Fire Emblem: The Blazing Blade",
@@ -15902,6 +16439,42 @@
         }
       },
       "shortName": "Lyn (B)"
+    },
+    {
+      "name": "Lævateinn",
+      "origin": "Fire Emblem Heroes",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lævateinn.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lævateinn.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lævateinn.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {},
+        "40": {}
+      }
     },
     {
       "name": "Mae",
@@ -16928,6 +17501,118 @@
               16,
               19,
               22
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Mia",
+      "title": "Lady of Blades",
+      "origin": "Fire Emblem: Path of Radiance",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "rarities": "5",
+      "releaseDate": "Nov 15, 2017",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Mia.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Mia.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Mia.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Wo Dao",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Resolute Blade",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "New Moon",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Luna",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Flashing Blade 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Flashing Blade 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Flashing Blade 3",
+          "rarity": 5
+        },
+        {
+          "name": "Vantage 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Vantage 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Vantage 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 12,
+            "def": 6,
+            "res": 6
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              34,
+              38,
+              41
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              37,
+              40,
+              43
+            ],
+            "def": [
+              24,
+              28,
+              31
+            ],
+            "res": [
+              22,
+              25,
+              29
             ]
           }
         }
@@ -22074,6 +22759,11 @@
           "rarity": 4
         },
         {
+          "name": "Fear+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Heal",
           "default": "-",
           "rarity": "-"
@@ -25137,6 +25827,43 @@
       }
     },
     {
+      "name": "Surtr",
+      "title": "Ruler of Flame",
+      "origin": "Fire Emblem Heroes",
+      "weaponType": "Green Axe",
+      "moveType": "Armored",
+      "rarities": "N/A",
+      "releaseDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Surtr.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Surtr.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Surtr.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Axe",
+          "default": "-",
+          "rarity": "-"
+        }
+      ],
+      "stats": {
+        "1": {},
+        "40": {}
+      }
+    },
+    {
       "name": "Tailtiu",
       "title": "Thunder Noble",
       "origin": "Fire Emblem: Genealogy of the Holy War",
@@ -27810,6 +28537,15 @@
       "weaponType": "Neutral Staff"
     },
     {
+      "name": "Absorb+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "???",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Alondite",
       "spCost": 400,
       "damage(mt)": 16,
@@ -27860,6 +28596,24 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Armorsmasher",
+      "spCost": 200,
+      "damage(mt)": 0,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Armorsmasher+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Assassin's Bow",
       "spCost": 200,
       "damage(mt)": 7,
@@ -27888,6 +28642,16 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Staff"
+    },
+    {
+      "name": "Audhulma",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Accelerates Special trigger (cooldown count-1). Grants Res+5.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Aura",
@@ -28188,6 +28952,15 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Staff"
+    },
+    {
+      "name": "Candlelight+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "???",
+      "exclusive?": "No",
+      "type": "WEAPON"
     },
     {
       "name": "Carrot Axe",
@@ -28560,6 +29333,16 @@
       "weaponType": "Neutral Staff"
     },
     {
+      "name": "Fear+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "After combat, inflicts Atk-7 on target and foes within 2 spaces through their next actions.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Neutral Staff"
+    },
+    {
       "name": "Fenrir",
       "spCost": 200,
       "damage(mt)": 9,
@@ -28760,6 +29543,15 @@
       "weaponType": "Neutral Staff"
     },
     {
+      "name": "Gravity+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "???",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Green Egg",
       "spCost": 200,
       "damage(mt)": 7,
@@ -28868,6 +29660,24 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
+    },
+    {
+      "name": "Guard Bow",
+      "spCost": 200,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Guard Bow+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "Effective against flying units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
     },
     {
       "name": "Hammer",
@@ -28990,6 +29800,60 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Keen Blárwolf",
+      "spCost": 200,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Keen Blárwolf+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Keen Gronnwolf",
+      "spCost": 200,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Keen Gronnwolf+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Keen Rauðrwolf",
+      "spCost": 200,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Keen Rauðrwolf+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "Effective against cavalry units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Killer Axe",
       "spCost": 200,
       "damage(mt)": 7,
@@ -29110,6 +29974,16 @@
       "weaponType": "Green Axe"
     },
     {
+      "name": "Leiptr",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
       "name": "Light Breath",
       "spCost": 200,
       "damage(mt)": 9,
@@ -29194,7 +30068,7 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against fliers.  After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "effect": "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -29204,7 +30078,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Effective against fliers.  After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "effect": "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Bow"
@@ -29270,6 +30144,15 @@
       "weaponType": "Neutral Staff"
     },
     {
+      "name": "Pain+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "???",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Panic",
       "spCost": 150,
       "damage(mt)": 7,
@@ -29278,6 +30161,15 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Staff"
+    },
+    {
+      "name": "Panic+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "???",
+      "exclusive?": "No",
+      "type": "WEAPON"
     },
     {
       "name": "Parthia",
@@ -29445,6 +30337,16 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
+    },
+    {
+      "name": "Resolute Blade",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Atk+3. Grants +10 to damage when Special triggers.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Sword"
@@ -29790,6 +30692,24 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Slaying Hammer",
+      "spCost": 200,
+      "damage(mt)": 0,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Slaying Hammer+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Slaying Lance",
       "spCost": 200,
       "damage(mt)": 10,
@@ -29810,6 +30730,24 @@
       "weaponType": "Blue Lance"
     },
     {
+      "name": "Slaying Spear",
+      "spCost": 200,
+      "damage(mt)": 0,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
+      "name": "Slaying Spear+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 1,
+      "effect": "Effective against armored units.",
+      "exclusive?": "No",
+      "type": "WEAPON"
+    },
+    {
       "name": "Slow",
       "spCost": 150,
       "damage(mt)": 5,
@@ -29818,6 +30756,15 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Neutral Staff"
+    },
+    {
+      "name": "Slow+",
+      "spCost": 300,
+      "damage(mt)": 0,
+      "range(rng)": 2,
+      "effect": "???",
+      "exclusive?": "No",
+      "type": "WEAPON"
     },
     {
       "name": "Smoke Dagger",
@@ -29854,7 +30801,7 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "effect": "After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -29864,7 +30811,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "After combat, bonuses become penalties on all foes within 2 spaces through foe's next action.",
+      "effect": "After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -29918,6 +30865,16 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Red Sword"
+    },
+    {
+      "name": "Stout Tomahawk",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Enables counterattack regardless of distance if this unit is attacked.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Green Axe"
     },
     {
       "name": "Thoron",
@@ -30029,6 +30986,16 @@
       "weaponType": "Blue Lance"
     },
     {
+      "name": "Weirding Tome",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Grants Spd+3. At start of turn, all foes in cardinal directions, and with Res 1 or more lower than unit, suffer Spd-5 until the end of foes' next actions.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Blue Tome"
+    },
+    {
       "name": "Wind",
       "spCost": 50,
       "damage(mt)": 4,
@@ -30137,6 +31104,14 @@
       "type": "ASSIST"
     },
     {
+      "name": "Martyr+",
+      "range": 1,
+      "effect": "???",
+      "spCost": 300,
+      "inheritRestriction": "Staff Users Only",
+      "type": "ASSIST"
+    },
+    {
       "name": "Mend",
       "range": 1,
       "effect": "Restores 10 HP.",
@@ -30149,6 +31124,14 @@
       "range": 2,
       "effect": "Restores 8 HP. Rng: 2.",
       "spCost": 200,
+      "inheritRestriction": "Staff Users Only",
+      "type": "ASSIST"
+    },
+    {
+      "name": "Physic+",
+      "range": 2,
+      "effect": "Restores HP = 50% of Atk. (Minimum of 8 HP.) Rng: 2.",
+      "spCost": 300,
       "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
@@ -30257,10 +31240,26 @@
       "type": "ASSIST"
     },
     {
+      "name": "Recover+",
+      "range": 1,
+      "effect": "???",
+      "spCost": 300,
+      "inheritRestriction": "Staff Users Only",
+      "type": "ASSIST"
+    },
+    {
       "name": "Rehabilitate",
       "range": 1,
       "effect": "Restores 7 HP or more the further below 50% the target's HP is. Slows special trigger (cooldown count+1).",
       "spCost": 200,
+      "inheritRestriction": "Staff Users Only",
+      "type": "ASSIST"
+    },
+    {
+      "name": "Rehabilitate+",
+      "range": 1,
+      "effect": "???",
+      "spCost": 300,
       "inheritRestriction": "Staff Users Only",
       "type": "ASSIST"
     },
@@ -30513,6 +31512,14 @@
       "type": "SPECIAL"
     },
     {
+      "name": "Ice Mirror",
+      "cooldown": 2,
+      "effect": "??? (Skill cannot be inherited.)",
+      "spCost": 500,
+      "inheritRestriction": "Exclusive",
+      "type": "SPECIAL"
+    },
+    {
       "name": "Iceberg",
       "cooldown": 3,
       "effect": "Boosts damage dealt by 50% of unit's Res.",
@@ -30705,10 +31712,17 @@
       "type": "SPECIAL"
     },
     {
-      "name": "Iote's Shield",
-      "effect": "Neutralizes \"effective against\" bonuses.",
+      "name": "Earth Boost 3",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+6 during combat.",
       "spCost": 200,
-      "inheritRestriction": "Fliers Only",
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Armored Blow 2",
+      "effect": "Grants Def+4 during combat if unit initiates the attack.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
@@ -30716,6 +31730,27 @@
       "effect": "Grants Def+6 during combat if unit initiates the attack.",
       "spCost": 200,
       "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Atk Def Bond 1",
+      "effect": "Grants Atk/Def+3 to this unit during combat if unit is adjacent to an ally.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Atk Def Bond 2",
+      "effect": "Grants Atk/Def+4 to this unit during combat if unit is adjacent to an ally.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Atk Def Bond 3",
+      "effect": "Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally.",
+      "spCost": 240,
+      "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
@@ -30803,6 +31838,48 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Wind Boost 3",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+6 during combat.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Wind Boost 2",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+4 during combat.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Wind Boost 1",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+2 during combat.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Water Boost 3",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+6 during combat.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Water Boost 2",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+4 during combat.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Water Boost 1",
+      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+2 during combat.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Bracing Blow 1",
       "effect": "Grants Def/Res+2 during combat if unit initiates combat.",
       "spCost": 120,
@@ -30814,6 +31891,20 @@
       "effect": "Grants Def/Res+4 during combat if unit initiates combat.",
       "spCost": 240,
       "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Stance 3",
+      "effect": "Grants Res+6 during combat when this unit is attacked.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Stance 2",
+      "effect": "Grants Res+4 during combat when this unit is attacked.",
+      "spCost": 100,
+      "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
@@ -30842,6 +31933,27 @@
       "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat.",
       "spCost": 240,
       "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Stance 1",
+      "effect": "Grants Res+2 during combat when this unit is attacked.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Blow 3",
+      "effect": "Grants Res+6 during combat if unit initiates attack.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Blow 2",
+      "effect": "Grants Res+4 during combat if unit initiates attack.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
@@ -30883,6 +31995,13 @@
       "name": "Death Blow 3",
       "effect": "Grants Atk+6 during combat if unit initiates the attack.",
       "spCost": 200,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Blow 1",
+      "effect": "Grants Res+2 during combat if unit initiates attack.",
+      "spCost": 50,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
@@ -31020,6 +32139,34 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Triangle Adept 3",
+      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Colorless Weapon Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Triangle Adept 2",
+      "effect": "Gives Atk+15% if weapon-triangle advantage, Atk-15% if disadvantage.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Colorless Weapon Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Triangle Adept 1",
+      "effect": "Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Colorless Weapon Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Swift Strike 2",
+      "effect": "If unit initiates combat, unit granted Spd/Res+4 during battle.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Earth Boost 1",
       "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+2 during combat.",
       "spCost": 50,
@@ -31034,10 +32181,31 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Earth Boost 3",
-      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+6 during combat.",
+      "name": "Armored Blow 1",
+      "effect": "Grants Def+2 during combat if unit initiates the attack.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Fierce Stance 1",
+      "effect": "Grants Atk+2 during combat when this unit is attacked.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Fierce Stance 2",
+      "effect": "Grants Atk+4 during combat when this unit is attacked.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Fierce Stance 3",
+      "effect": "Grants Atk+6 during combat when this unit is attacked.",
       "spCost": 200,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
@@ -31059,6 +32227,104 @@
       "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+6 during combat.",
       "spCost": 200,
       "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Flashing Blade 1",
+      "effect": "If unit's Spd - foe's Spd ≥ 5, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)",
+      "spCost": 60,
+      "inheritRestriction": "Infantry and Armored Only Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Flashing Blade 2",
+      "effect": "If unit's Spd - foe's Spd ≥ 3, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)",
+      "spCost": 120,
+      "inheritRestriction": "Infantry and Armored Only Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Flashing Blade 3",
+      "effect": "If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)",
+      "spCost": 240,
+      "inheritRestriction": "Infantry and Armored Only Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Swift Strike 1",
+      "effect": "If unit initiates combat, unit granted Spd/Res+2 during battle.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Swift Sparrow 2",
+      "effect": "If unit initiates combat, unit granted Atk/Spd+4 during battle.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Swift Sparrow 1",
+      "effect": "If unit initiates combat, unit granted Atk/Spd+2 during battle.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Svalinn Shield",
+      "effect": "Neutralizes \"effective against\" bonuses.",
+      "spCost": 200,
+      "inheritRestriction": "Armored Only",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Sturdy Blow 2",
+      "effect": "Grants Atk/Def+4 during combat if unit initiates combat.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Sturdy Blow 1",
+      "effect": "Grants Atk/Def+2 during combat if unit initiates combat.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Stance 3",
+      "effect": "Grants Def+6 during combat when this unit is attacked.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Stance 2",
+      "effect": "Grants Def+4 during combat when this unit is attacked.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Stance 1",
+      "effect": "Grants Def+2 during combat when this unit is attacked.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Breath",
+      "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)",
+      "spCost": 240,
+      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Blow 2",
+      "effect": "If unit initiates combat, unit granted Spd/Def+4 during battle.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_A"
     },
     {
@@ -31125,6 +32391,55 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Steady Blow 1",
+      "effect": "If unit initiates combat, unit granted Spd/Def+2 during battle.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Spd Res 2",
+      "effect": "Grants Spd/Res+2.",
+      "spCost": 160,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Spd Res 1",
+      "effect": "Grants Spd/Res+1.",
+      "spCost": 80,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Speed +3",
+      "effect": "Grants Spd+3.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Speed +2",
+      "effect": "Grants Spd+2.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Speed +1",
+      "effect": "Grants Spd+1.",
+      "spCost": 30,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Spd Def 2",
+      "effect": "Grants Spd/Def+2.",
+      "spCost": 160,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Grani's Shield",
       "effect": "Neutralizes \"effective against\" bonuses.",
       "spCost": 200,
@@ -31132,10 +32447,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Armored Blow 2",
-      "effect": "Grants Def+4 during combat if unit initiates the attack.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Staff Users",
+      "name": "Spd Def 1",
+      "effect": "Grants Spd/Def+1.",
+      "spCost": 80,
+      "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
@@ -31170,6 +32485,20 @@
       "name": "HP +5",
       "effect": "Grants +5 to max HP.",
       "spCost": 160,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "HP Res 1",
+      "effect": "Grants HP+3, Res+1.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "HP Res 2",
+      "effect": "Grants HP+4, Res+2.",
+      "spCost": 200,
       "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
@@ -31209,10 +32538,31 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Armored Blow 1",
-      "effect": "Grants Def+2 during combat if unit initiates the attack.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Staff Users",
+      "name": "Iote's Shield",
+      "effect": "Neutralizes \"effective against\" bonuses.",
+      "spCost": 200,
+      "inheritRestriction": "Fliers Only",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Resistance +3",
+      "effect": "Grants Res+3.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Resistance +2",
+      "effect": "Grants Res+2.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Resistance +1",
+      "effect": "Grants Res+1.",
+      "spCost": 30,
+      "inheritRestriction": "None",
       "type": "PASSIVE_A"
     },
     {
@@ -31251,279 +32601,6 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Resistance +1",
-      "effect": "Grants Res+1.",
-      "spCost": 30,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Resistance +2",
-      "effect": "Grants Res+2.",
-      "spCost": 60,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Resistance +3",
-      "effect": "Grants Res+3.",
-      "spCost": 120,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Spd Def 1",
-      "effect": "Grants Spd/Def+1.",
-      "spCost": 80,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Spd Def 2",
-      "effect": "Grants Spd/Def+2.",
-      "spCost": 160,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Speed +1",
-      "effect": "Grants Spd+1.",
-      "spCost": 30,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Speed +2",
-      "effect": "Grants Spd+2.",
-      "spCost": 60,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Speed +3",
-      "effect": "Grants Spd+3.",
-      "spCost": 120,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Spd Res 1",
-      "effect": "Grants Spd/Res+1.",
-      "spCost": 80,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Spd Res 2",
-      "effect": "Grants Spd/Res+2.",
-      "spCost": 160,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Steady Blow 1",
-      "effect": "If unit initiates combat, unit granted Spd/Def+2 during battle.",
-      "spCost": 120,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Steady Blow 2",
-      "effect": "If unit initiates combat, unit granted Spd/Def+4 during battle.",
-      "spCost": 240,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Steady Breath",
-      "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)",
-      "spCost": 240,
-      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Steady Stance 1",
-      "effect": "Grants Def+2 during combat when this unit is attacked.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Steady Stance 2",
-      "effect": "Grants Def+4 during combat when this unit is attacked.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Steady Stance 3",
-      "effect": "Grants Def+6 during combat when this unit is attacked.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Sturdy Blow 1",
-      "effect": "Grants Atk/Def+2 during combat if unit initiates combat.",
-      "spCost": 120,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Sturdy Blow 2",
-      "effect": "Grants Atk/Def+4 during combat if unit initiates combat.",
-      "spCost": 240,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Svalinn Shield",
-      "effect": "Neutralizes \"effective against\" bonuses.",
-      "spCost": 200,
-      "inheritRestriction": "Armored Only",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Swift Sparrow 1",
-      "effect": "If unit initiates combat, unit granted Atk/Spd+2 during battle.",
-      "spCost": 120,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Swift Sparrow 2",
-      "effect": "If unit initiates combat, unit granted Atk/Spd+4 during battle.",
-      "spCost": 240,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Swift Strike 1",
-      "effect": "If unit initiates combat, unit granted Spd/Res+2 during battle.",
-      "spCost": 120,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Swift Strike 2",
-      "effect": "If unit initiates combat, unit granted Spd/Res+4 during battle.",
-      "spCost": 240,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Triangle Adept 1",
-      "effect": "Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Colorless Weapon Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Triangle Adept 2",
-      "effect": "Gives Atk+15% if weapon-triangle advantage, Atk-15% if disadvantage.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Colorless Weapon Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Triangle Adept 3",
-      "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Colorless Weapon Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Warding Blow 1",
-      "effect": "Grants Res+2 during combat if unit initiates attack.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Warding Blow 2",
-      "effect": "Grants Res+4 during combat if unit initiates attack.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Warding Blow 3",
-      "effect": "Grants Res+6 during combat if unit initiates attack.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Warding Stance 1",
-      "effect": "Grants Res+2 during combat when this unit is attacked.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Warding Stance 2",
-      "effect": "Grants Res+4 during combat when this unit is attacked.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Warding Stance 3",
-      "effect": "Grants Res+6 during combat when this unit is attacked.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Water Boost 1",
-      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+2 during combat.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Water Boost 2",
-      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+4 during combat.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Water Boost 3",
-      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+6 during combat.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Wind Boost 1",
-      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+2 during combat.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Wind Boost 2",
-      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+4 during combat.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Wind Boost 3",
-      "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+6 during combat.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Crusader's Ward",
-      "effect": "If unit receives consecutive attack from a foe 2 spaces away, damage from second attack onward reduced by 80%. (Skill cannot be inherited.)",
-      "spCost": 300,
-      "inheritRestriction": "Is exclusive",
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Hit and Run",
       "effect": "If unit initiates attack, unit retreats 1 space after battle.",
       "spCost": 150,
@@ -31531,9 +32608,618 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Daggerbreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
+      "name": "Flier Formation 2",
+      "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to a flier ally within 2 spaces.",
+      "spCost": 120,
+      "inheritRestriction": "Fliers Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Flier Formation 3",
+      "effect": "Unit can move to a space adjacent to a flier ally within 2 spaces.",
+      "spCost": 240,
+      "inheritRestriction": "Fliers Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Follow-Up Ring",
+      "effect": "Unit makes a guaranteed follow-up attack when unit's HP ≥ 50% at start of combat. (Skill cannot be inherited.)",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Blaze Dance 1",
+      "effect": "If Sing or Dance is used, target also granted Atk+2.",
       "spCost": 50,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Blaze Dance 2",
+      "effect": "If Sing or Dance is used, target also granted Atk+3.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Blaze Dance 3",
+      "effect": "If Sing or Dance is used, target also granted Atk+4.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dazzling Staff 1",
+      "effect": "If unit has 100% HP at the start of combat, the enemy cannot counterattack.",
+      "spCost": 60,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dazzling Staff 2",
+      "effect": "If unit has ≥ 50% HP at the start of combat, the enemy cannot counterattack.",
+      "spCost": 120,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dazzling Staff 3",
+      "effect": "The enemy cannot counterattack.",
+      "spCost": 240,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 1",
+      "effect": "If unit's HP ≤ 25%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
+      "spCost": 60,
+      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Watersweep 3",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Watersweep 2",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Watersweep 1",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack.",
+      "spCost": 60,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Vantage 3",
+      "effect": "Unit counterattacks first when attacked at HP ≤ 75%.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Vantage 2",
+      "effect": "Unit counterattacks first when attacked at HP ≤ 50%.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wings of Mercy 3",
+      "effect": "Enables unit to warp adjacent to any ally with HP ≤ 50%.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wings of Mercy 2",
+      "effect": "Enables unit to warp adjacent to any ally with HP ≤ 40%.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "B Tomebreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Red Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "B Tomebreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Red Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "B Tomebreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Red Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 2",
+      "effect": "If unit's HP ≤ 50%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
+      "spCost": 120,
+      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wary Fighter 3",
+      "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%.",
+      "spCost": 240,
+      "inheritRestriction": "Armored Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wary Fighter 2",
+      "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%.",
+      "spCost": 120,
+      "inheritRestriction": "Armored Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Bowbreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Fliers",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Bowbreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Fliers",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Bowbreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Fliers",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrathful Staff 2",
+      "effect": "If unit has ≥ 50% HP at the start of combat, damage from their staff will be calculated the same as other weapons.",
+      "spCost": 120,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrathful Staff 3",
+      "effect": "Damage from unit's staff will be calculated the same as other weapons.",
+      "spCost": 240,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wings of Mercy 1",
+      "effect": "Enables unit to warp adjacent to any ally with HP ≤ 30%.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Brash Assault 1",
+      "effect": "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Gale Dance 1",
+      "effect": "If Sing or Dance is used, target also granted Spd+2.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Gale Dance 2",
+      "effect": "If Sing or Dance is used, target also granted Spd+3.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Gale Dance 3",
+      "effect": "If Sing or Dance is used, target also granted Spd+4.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Geyser Dance 1",
+      "effect": "If Sing or Dance is used, target also granted Def/Res+3.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Geyser Dance 2",
+      "effect": "If Sing or Dance is used, target also granted Def/Res+4.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Desperation 1",
+      "effect": "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Desperation 2",
+      "effect": "If unit initiates combat with HP ≤ 50%, follow-up attacks occur immediately after unit's attack.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Desperation 3",
+      "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Brash Assault 2",
+      "effect": "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Brash Assault 3",
+      "effect": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wary Fighter 1",
+      "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 90%.",
+      "spCost": 60,
+      "inheritRestriction": "Armored Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Windsweep 3",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
+      "spCost": 240,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Windsweep 2",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack.",
+      "spCost": 120,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Cancel Affinity 1",
+      "effect": "Any weapon triangle affinity granted by unit's skills is negated. Also negates any weapon triangle affinity granted by foe's skills.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Tome and Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Drag Back",
+      "effect": "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space.",
+      "spCost": 150,
+      "inheritRestriction": "Melee Weapon Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Vantage 1",
+      "effect": "Unit counterattacks first when attacked at HP ≤ 25%.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Shield Pulse 3",
+      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-2 at start of turn 1. Unit takes 5 less damage when Special triggers.",
+      "spCost": 240,
+      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Shield Pulse 2",
+      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1. Unit takes 5 less damage when Special triggers.",
+      "spCost": 120,
+      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "G Tomebreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Blue Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "G Tomebreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Blue Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "G Tomebreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Blue Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Guard 1",
+      "effect": "If unit's HP is 100% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Guard 2",
+      "effect": "If unit's HP is ≥ 90% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Guard 3",
+      "effect": "If unit's HP is ≥ 80% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Shield Pulse 1",
+      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1.",
+      "spCost": 60,
+      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Spd 3",
+      "effect": "After combat, foe suffers Spd-7 through its next action.",
+      "spCost": 160,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Spd 2",
+      "effect": "After combat, foe suffers Spd-5 through its next action.",
+      "spCost": 80,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Cancel Affinity 2",
+      "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is negated.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Tome and Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Cancel Affinity 3",
+      "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Tome and Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Windsweep 1",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack.",
+      "spCost": 60,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Torrent Dance 1",
+      "effect": "If Sing or Dance is used, target also granted Res+3.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Swordbreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Green Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Swordbreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Green Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Swordbreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Green Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrathful Staff 1",
+      "effect": "If unit has 100% HP at the start of combat, damage from their staff will be calculated the same as other weapons.",
+      "spCost": 60,
+      "inheritRestriction": "Staff Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 3",
+      "effect": "If unit's HP ≤ 75%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
+      "spCost": 240,
+      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Axebreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 50,
+      "inheritRestriction": "Excludes Blue Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Axebreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Blue Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Axebreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Blue Weapon Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Escape Route 1",
+      "effect": "Enables unit whose own HP is ≤ 30% to warp adjacent to any ally.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Spd 1",
+      "effect": "After combat, foe suffers Spd-3 through its next action.",
+      "spCost": 40,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Res 3",
+      "effect": "After combat, foe suffers Res-7 through its next action.",
+      "spCost": 160,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Res 2",
+      "effect": "After combat, foe suffers Res-5 through its next action.",
+      "spCost": 80,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Res 1",
+      "effect": "After combat, foe suffers Res-3 through its next action.",
+      "spCost": 40,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Def 3",
+      "effect": "After combat, foe suffers Def-7 through its next action.",
+      "spCost": 160,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Def 2",
+      "effect": "After combat, foe suffers Def-5 through its next action.",
+      "spCost": 80,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Def 1",
+      "effect": "After combat, foe suffers Def-3 through its next action.",
+      "spCost": 40,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Atk Spd 2",
+      "effect": "After combat, inflicts Atk/Spd-5 on foe through its next action.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Atk Spd 1",
+      "effect": "After combat, inflicts Atk/Spd-3 on foe through its next action.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Atk Def 2",
+      "effect": "After combat, inflicts Atk/Def-5 on foe through its next action.",
+      "spCost": 200,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Atk Def 1",
+      "effect": "After combat, inflicts Atk/Def-3 on foe through its next action.",
+      "spCost": 100,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Atk 3",
+      "effect": "After combat, foe suffers Atk-7 through its next action.",
+      "spCost": 160,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Atk 2",
+      "effect": "After combat, foe suffers Atk-5 through its next action.",
+      "spCost": 80,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Atk 1",
+      "effect": "After combat, foe suffers Atk-3 through its next action.",
+      "spCost": 40,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Sacae's Blessing",
+      "effect": "If foe has sword, lance, or axe, foe cannot counterattack. (Skill cannot be inherited.)",
+      "spCost": 300,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Escape Route 2",
+      "effect": "Enables unit whose own HP is ≤ 40% to warp adjacent to any ally.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Escape Route 3",
+      "effect": "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Crusader's Ward",
+      "effect": "If unit receives consecutive attack from a foe 2 spaces away, damage from second attack onward reduced by 80%. (Skill cannot be inherited.)",
+      "spCost": 300,
       "inheritRestriction": "None",
       "type": "PASSIVE_B"
     },
@@ -31542,6 +33228,13 @@
       "effect": "If unit initiates attack, foe is moved 1 space away after combat.",
       "spCost": 150,
       "inheritRestriction": "Melee Weapon Users Only",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Beorc's Blessing",
+      "effect": "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)",
+      "spCost": 300,
+      "inheritRestriction": "None",
       "type": "PASSIVE_B"
     },
     {
@@ -31566,17 +33259,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Daggerbreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 100,
+      "name": "Daggerbreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 50,
       "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Drag Back",
-      "effect": "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space.",
-      "spCost": 150,
-      "inheritRestriction": "Melee Weapon Users Only",
       "type": "PASSIVE_B"
     },
     {
@@ -31622,6 +33308,13 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Daggerbreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Daggerbreaker 3",
       "effect": "If unit's HP ≥ 50% in combat against a dagger user, unit makes a follow-up attack and foe cannot.",
       "spCost": 200,
@@ -31629,10 +33322,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Blaze Dance 3",
-      "effect": "If Sing or Dance is used, target also granted Atk+4.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Staff Users",
+      "name": "Flier Formation 1",
+      "effect": "If unit has 100% HP, unit can move to a space adjacent to a flier ally within 2 spaces.",
+      "spCost": 60,
+      "inheritRestriction": "Fliers Only",
       "type": "PASSIVE_B"
     },
     {
@@ -31653,6 +33346,27 @@
       "name": "Obstruct 3",
       "effect": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)",
       "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Renewal 3",
+      "effect": "At the start of every second turn, restores 10 HP.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Renewal 2",
+      "effect": "At the start of every third turn, restores 10 HP.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Renewal 1",
+      "effect": "At the start of every fourth turn, restores 10 HP.",
+      "spCost": 60,
       "inheritRestriction": "None",
       "type": "PASSIVE_B"
     },
@@ -31723,7 +33437,7 @@
       "name": "Recover Ring",
       "effect": "Restores 10 HP at the start of each turn. (Skill cannot be inherited.)",
       "spCost": 200,
-      "inheritRestriction": "Is exclusive",
+      "inheritRestriction": "None",
       "type": "PASSIVE_B"
     },
     {
@@ -31748,640 +33462,24 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Renewal 1",
-      "effect": "At the start of every fourth turn, restores 10 HP.",
+      "name": "Fortify Def 3",
+      "effect": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Panic Ploy 3",
+      "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Panic Ploy 1",
+      "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 5 or more lower than unit through foe's next action.",
       "spCost": 60,
       "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Renewal 2",
-      "effect": "At the start of every third turn, restores 10 HP.",
-      "spCost": 120,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Renewal 3",
-      "effect": "At the start of every second turn, restores 10 HP.",
-      "spCost": 240,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "B Tomebreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Red Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Escape Route 1",
-      "effect": "Enables unit whose own HP is ≤ 30% to warp adjacent to any ally.",
-      "spCost": 60,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Escape Route 2",
-      "effect": "Enables unit whose own HP is ≤ 40% to warp adjacent to any ally.",
-      "spCost": 120,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Sacae's Blessing",
-      "effect": "If foe has sword, lance, or axe, foe cannot counterattack. (Skill cannot be inherited.)",
-      "spCost": 300,
-      "inheritRestriction": "Is exclusive",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Atk 1",
-      "effect": "After combat, foe suffers Atk-3 through its next action.",
-      "spCost": 40,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Atk 2",
-      "effect": "After combat, foe suffers Atk-5 through its next action.",
-      "spCost": 80,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Atk 3",
-      "effect": "After combat, foe suffers Atk-7 through its next action.",
-      "spCost": 160,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Atk Def 1",
-      "effect": "After combat, inflicts Atk/Def-3 on foe through its next action.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Atk Def 2",
-      "effect": "After combat, inflicts Atk/Def-5 on foe through its next action.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Atk Spd 1",
-      "effect": "After combat, inflicts Atk/Spd-3 on foe through its next action.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Atk Spd 2",
-      "effect": "After combat, inflicts Atk/Spd-5 on foe through its next action.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Def 1",
-      "effect": "After combat, foe suffers Def-3 through its next action.",
-      "spCost": 40,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Def 2",
-      "effect": "After combat, foe suffers Def-5 through its next action.",
-      "spCost": 80,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Def 3",
-      "effect": "After combat, foe suffers Def-7 through its next action.",
-      "spCost": 160,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Res 1",
-      "effect": "After combat, foe suffers Res-3 through its next action.",
-      "spCost": 40,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Res 2",
-      "effect": "After combat, foe suffers Res-5 through its next action.",
-      "spCost": 80,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Res 3",
-      "effect": "After combat, foe suffers Res-7 through its next action.",
-      "spCost": 160,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Spd 1",
-      "effect": "After combat, foe suffers Spd-3 through its next action.",
-      "spCost": 40,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Spd 2",
-      "effect": "After combat, foe suffers Spd-5 through its next action.",
-      "spCost": 80,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Spd 3",
-      "effect": "After combat, foe suffers Spd-7 through its next action.",
-      "spCost": 160,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Shield Pulse 1",
-      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1.",
-      "spCost": 60,
-      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Shield Pulse 2",
-      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1. Unit takes 5 less damage when Special triggers.",
-      "spCost": 120,
-      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Shield Pulse 3",
-      "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-2 at start of turn 1. Unit takes 5 less damage when Special triggers.",
-      "spCost": 240,
-      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Escape Route 3",
-      "effect": "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally.",
-      "spCost": 240,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "B Tomebreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Red Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Dazzling Staff 1",
-      "effect": "If unit has 100% HP at the start of combat, the enemy cannot counterattack.",
-      "spCost": 60,
-      "inheritRestriction": "Staff Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Dazzling Staff 2",
-      "effect": "If unit has ≥ 50% HP at the start of combat, the enemy cannot counterattack.",
-      "spCost": 120,
-      "inheritRestriction": "Staff Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Flier Formation 1",
-      "effect": "If unit has 100% HP, unit can move to a space adjacent to a flier ally within 2 spaces.",
-      "spCost": 60,
-      "inheritRestriction": "Fliers Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Flier Formation 2",
-      "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to a flier ally within 2 spaces.",
-      "spCost": 120,
-      "inheritRestriction": "Fliers Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Flier Formation 3",
-      "effect": "Unit can move to a space adjacent to a flier ally within 2 spaces.",
-      "spCost": 240,
-      "inheritRestriction": "Fliers Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Follow-Up Ring",
-      "effect": "Unit makes a guaranteed follow-up attack when unit's HP ≥ 50% at start of combat. (Skill cannot be inherited.)",
-      "spCost": 200,
-      "inheritRestriction": "Is exclusive",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Dazzling Staff 3",
-      "effect": "The enemy cannot counterattack.",
-      "spCost": 240,
-      "inheritRestriction": "Staff Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "B Tomebreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Red Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Bowbreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Fliers",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Bowbreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Fliers",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Bowbreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against a bow user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Fliers",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrathful Staff 3",
-      "effect": "Damage from unit's staff will be calculated the same as other weapons.",
-      "spCost": 240,
-      "inheritRestriction": "Staff Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Axebreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Blue Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Axebreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Blue Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Brash Assault 1",
-      "effect": "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Gale Dance 1",
-      "effect": "If Sing or Dance is used, target also granted Spd+2.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Gale Dance 2",
-      "effect": "If Sing or Dance is used, target also granted Spd+3.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Gale Dance 3",
-      "effect": "If Sing or Dance is used, target also granted Spd+4.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Geyser Dance 1",
-      "effect": "If Sing or Dance is used, target also granted Def/Res+3.",
-      "spCost": 120,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Geyser Dance 2",
-      "effect": "If Sing or Dance is used, target also granted Def/Res+4.",
-      "spCost": 240,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Brash Assault 2",
-      "effect": "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Brash Assault 3",
-      "effect": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Cancel Affinity 1",
-      "effect": "Any weapon triangle affinity granted by unit's skills is negated. Also negates any weapon triangle affinity granted by foe's skills.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Tome and Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "G Tomebreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Blue Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "G Tomebreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Blue Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Swordbreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Green Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Swordbreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Green Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Swordbreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Green Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Torrent Dance 1",
-      "effect": "If Sing or Dance is used, target also granted Res+3.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "G Tomebreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Blue Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Guard 1",
-      "effect": "If unit's HP is 100% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Guard 2",
-      "effect": "If unit's HP is ≥ 90% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Vantage 1",
-      "effect": "Unit counterattacks first when attacked at HP ≤ 25%.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Vantage 2",
-      "effect": "Unit counterattacks first when attacked at HP ≤ 50%.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Vantage 3",
-      "effect": "Unit counterattacks first when attacked at HP ≤ 75%.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Guard 3",
-      "effect": "If unit's HP is ≥ 80% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Cancel Affinity 2",
-      "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is negated.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Tome and Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Cancel Affinity 3",
-      "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Tome and Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Axebreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
-      "spCost": 200,
-      "inheritRestriction": "Excludes Blue Weapon Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Beorc's Blessing",
-      "effect": "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)",
-      "spCost": 300,
-      "inheritRestriction": "Is exclusive",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wary Fighter 1",
-      "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 90%.",
-      "spCost": 60,
-      "inheritRestriction": "Armored Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wary Fighter 2",
-      "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%.",
-      "spCost": 120,
-      "inheritRestriction": "Armored Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wary Fighter 3",
-      "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%.",
-      "spCost": 240,
-      "inheritRestriction": "Armored Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Blaze Dance 1",
-      "effect": "If Sing or Dance is used, target also granted Atk+2.",
-      "spCost": 50,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Desperation 1",
-      "effect": "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Watersweep 1",
-      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack.",
-      "spCost": 60,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Watersweep 2",
-      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack.",
-      "spCost": 120,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Watersweep 3",
-      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
-      "spCost": 240,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Desperation 2",
-      "effect": "If unit initiates combat with HP ≤ 50%, follow-up attacks occur immediately after unit's attack.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Desperation 3",
-      "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Blaze Dance 2",
-      "effect": "If Sing or Dance is used, target also granted Atk+3.",
-      "spCost": 100,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Windsweep 1",
-      "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack.",
-      "spCost": 60,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Windsweep 2",
-      "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack.",
-      "spCost": 120,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Windsweep 3",
-      "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
-      "spCost": 240,
-      "inheritRestriction": "Excludes Staff Users",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wings of Mercy 1",
-      "effect": "Enables unit to warp adjacent to any ally with HP ≤ 30%.",
-      "spCost": 60,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wings of Mercy 2",
-      "effect": "Enables unit to warp adjacent to any ally with HP ≤ 40%.",
-      "spCost": 120,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wings of Mercy 3",
-      "effect": "Enables unit to warp adjacent to any ally with HP ≤ 50%.",
-      "spCost": 240,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrath 1",
-      "effect": "If unit's HP ≤ 25%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
-      "spCost": 60,
-      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrath 2",
-      "effect": "If unit's HP ≤ 50%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
-      "spCost": 120,
-      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrath 3",
-      "effect": "If unit's HP ≤ 75%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
-      "spCost": 240,
-      "inheritRestriction": "Infantry and Armored Only Melee Weapon Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrathful Staff 1",
-      "effect": "If unit has 100% HP at the start of combat, damage from their staff will be calculated the same as other weapons.",
-      "spCost": 60,
-      "inheritRestriction": "Staff Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrathful Staff 2",
-      "effect": "If unit has ≥ 50% HP at the start of combat, damage from their staff will be calculated the same as other weapons.",
-      "spCost": 120,
-      "inheritRestriction": "Staff Users Only",
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Atk Smoke 3",
-      "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions.",
-      "spCost": 240,
-      "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_C"
     },
     {
@@ -32406,45 +33504,45 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Atk Ploy 3",
-      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.",
-      "spCost": 240,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Drive Atk 1",
-      "effect": "Grants allies within 2 spaces Atk+2 during combat.",
+      "name": "Lance Valor 3",
+      "effect": "If unit survives, all lance users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Lance Users Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "G Tome Valor 1",
-      "effect": "If unit survives and uses a green tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 30,
-      "inheritRestriction": "Green Tome Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "G Tome Valor 2",
-      "effect": "If unit survives, all green tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "name": "Lance Valor 2",
+      "effect": "If unit survives, all lance users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
-      "inheritRestriction": "Green Tome Users Only",
+      "inheritRestriction": "Lance Users Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "G Tome Valor 3",
-      "effect": "If unit survives, all green tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 120,
-      "inheritRestriction": "Green Tome Users Only",
+      "name": "Lance Valor 1",
+      "effect": "If unit survives and uses a lance, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
+      "inheritRestriction": "Lance Users Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Drive Atk 2",
-      "effect": "Grants allies within 2 spaces Atk+3 during combat.",
+      "name": "Infantry Pulse 3",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 1 fewer HP than unit. (Effects will stack with similar skills.)",
       "spCost": 240,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Infantry Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Infantry Pulse 2",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 3 fewer HP than unit. (Effects will stack with similar skills.)",
+      "spCost": 120,
+      "inheritRestriction": "Infantry Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Infantry Pulse 1",
+      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 5 fewer HP than unit. (Effects will stack with similar skills.)",
+      "spCost": 60,
+      "inheritRestriction": "Infantry Only",
       "type": "PASSIVE_C"
     },
     {
@@ -32469,30 +33567,79 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Drive Def 1",
-      "effect": "Grants allies within 2 spaces Def+2 during combat.",
-      "spCost": 120,
+      "name": "Hone Spd 3",
+      "effect": "Grants adjacent allies Spd+4 through their next actions at the start of each turn.",
+      "spCost": 200,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Drive Def 2",
-      "effect": "Grants allies within 2 spaces Def+3 during combat.",
+      "name": "Hone Spd 2",
+      "effect": "Grants adjacent allies Spd+3 through their next actions at the start of each turn.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Hone Spd 1",
+      "effect": "Grants adjacent allies Spd+2 through their next actions at the start of each turn.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Hone Fliers",
+      "effect": "Grants adjacent flying allies Atk/Spd+6 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "inheritRestriction": "Fliers Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Hone Cavalry",
+      "effect": "Grants adjacent cavalry allies Atk/Spd+6 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "inheritRestriction": "Cavalry Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Hone Atk 3",
+      "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Hone Atk 2",
+      "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "spCost": 100,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Hone Atk 1",
+      "effect": "Grants adjacent allies Atk+2 through their next actions at the start of each turn.",
+      "spCost": 50,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Hone Armor",
+      "effect": "Grants adjacent armored allies Atk/Spd+6 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "inheritRestriction": "Armored Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Armor March 2",
+      "effect": "If unit has ≥ 50% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
+      "spCost": 120,
+      "inheritRestriction": "Armored Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Guidance 3",
+      "effect": "Infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
       "spCost": 240,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Drive Res 1",
-      "effect": "Grants allies within 2 spaces Res+2 during combat.",
-      "spCost": 120,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Guidance 1",
-      "effect": "If unit has 100% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
-      "spCost": 60,
       "inheritRestriction": "Fliers Only",
       "type": "PASSIVE_C"
     },
@@ -32504,108 +33651,31 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Guidance 3",
-      "effect": "Infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
-      "spCost": 240,
+      "name": "Guidance 1",
+      "effect": "If unit has 100% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
+      "spCost": 60,
       "inheritRestriction": "Fliers Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Drive Res 2",
-      "effect": "Grants allies within 2 spaces Res+3 during combat.",
-      "spCost": 240,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Drive Spd 1",
-      "effect": "Grants allies within 2 spaces Spd+2 during combat.",
+      "name": "G Tome Valor 3",
+      "effect": "If unit survives, all green tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Green Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Drive Spd 2",
-      "effect": "Grants allies within 2 spaces Spd+3 during combat.",
-      "spCost": 240,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Armor March 1",
-      "effect": "If unit has 100% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
+      "name": "G Tome Valor 2",
+      "effect": "If unit survives, all green tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
-      "inheritRestriction": "Armored Only",
+      "inheritRestriction": "Green Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Breath of Life 1",
-      "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Def Ploy 1",
-      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-3 until the end of foe's next action.",
-      "spCost": 60,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Def Ploy 2",
-      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-4 until the end of foe's next action.",
-      "spCost": 120,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Def Ploy 3",
-      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action.",
-      "spCost": 240,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Breath of Life 2",
-      "effect": "If unit initiates attack, adjacent allies recover 5 HP after combat.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Breath of Life 3",
-      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Armor March 3",
-      "effect": "If unit has an adjacent armored ally at the start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
-      "spCost": 240,
-      "inheritRestriction": "Armored Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Axe Experience 1",
-      "effect": "If unit survives, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)",
+      "name": "G Tome Valor 1",
+      "effect": "If unit survives and uses a green tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 30,
-      "inheritRestriction": "Axe Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "B Tome Exp. 1",
-      "effect": "If using blue magic and unit survives combat, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 30,
-      "inheritRestriction": "Blue Tome Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Hone Armor",
-      "effect": "Grants adjacent armored allies Atk/Spd+6 through their next actions at the start of each turn.",
-      "spCost": 200,
-      "inheritRestriction": "Armored Only",
+      "inheritRestriction": "Green Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
@@ -32630,29 +33700,15 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Armor March 2",
-      "effect": "If unit has ≥ 50% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
-      "spCost": 120,
-      "inheritRestriction": "Armored Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Hone Atk 2",
-      "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Hone Atk 3",
-      "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.",
+      "name": "Goad Fliers",
+      "effect": "Grants flying allies within 2 spaces Spd/Atk+4 during combat.",
       "spCost": 200,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Fliers Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Hone Cavalry",
-      "effect": "Grants adjacent cavalry allies Atk/Spd+6 through their next actions at the start of each turn.",
+      "name": "Goad Cavalry",
+      "effect": "Grants cavalry allies within 2 spaces Spd/Atk+4 during combat.",
       "spCost": 200,
       "inheritRestriction": "Cavalry Only",
       "type": "PASSIVE_C"
@@ -32791,87 +33847,73 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Hone Fliers",
-      "effect": "Grants adjacent flying allies Atk/Spd+6 through their next actions at the start of each turn.",
+      "name": "Goad Armor",
+      "effect": "Grants armored allies within 2 spaces Spd/Atk+4 during combat.",
       "spCost": 200,
-      "inheritRestriction": "Fliers Only",
+      "inheritRestriction": "Armored Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Hone Spd 1",
-      "effect": "Grants adjacent allies Spd+2 through their next actions at the start of each turn.",
-      "spCost": 50,
+      "name": "Fortify Res 3",
+      "effect": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
+      "spCost": 200,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Hone Spd 2",
-      "effect": "Grants adjacent allies Spd+3 through their next actions at the start of each turn.",
+      "name": "Fortify Res 2",
+      "effect": "Grants adjacent allies Res+3 through their next actions at the start of each turn.",
       "spCost": 100,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Hone Spd 3",
-      "effect": "Grants adjacent allies Spd+4 through their next actions at the start of each turn.",
-      "spCost": 200,
+      "name": "Fortify Res 1",
+      "effect": "Grants adjacent allies Res+2 through their next actions at the start of each turn.",
+      "spCost": 50,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Infantry Pulse 1",
-      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 5 fewer HP than unit. (Effects will stack with similar skills.)",
-      "spCost": 60,
-      "inheritRestriction": "Infantry Only",
+      "name": "Fortify Fliers",
+      "effect": "Grants adjacent flying allies Def/Res+6 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "inheritRestriction": "Fliers Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Infantry Pulse 2",
-      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 3 fewer HP than unit. (Effects will stack with similar skills.)",
+      "name": "Fortify Dragons",
+      "effect": "Grants adjacent Dragon allies Def/Res+6 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "inheritRestriction": "Breath Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Panic Ploy 2",
+      "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 3 or more lower than unit through foe's next action.",
       "spCost": 120,
-      "inheritRestriction": "Infantry Only",
+      "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Infantry Pulse 3",
-      "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 1 fewer HP than unit. (Effects will stack with similar skills.)",
-      "spCost": 240,
-      "inheritRestriction": "Infantry Only",
+      "name": "Fortify Def 2",
+      "effect": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
+      "spCost": 100,
+      "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "B Tome Exp. 2",
-      "effect": "If unit survives combat, all blue magic users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 60,
-      "inheritRestriction": "Blue Tome Users Only",
+      "name": "Fortify Def 1",
+      "effect": "Grants adjacent allies Def+2 through their next actions at the start of each turn.",
+      "spCost": 50,
+      "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "B Tome Exp. 3",
-      "effect": "If unit survives combat, all blue magic users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 120,
-      "inheritRestriction": "Blue Tome Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "B Tome Valor 1",
-      "effect": "If unit survives and uses a blue tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 30,
-      "inheritRestriction": "Blue Tome Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "B Tome Valor 2",
-      "effect": "If unit survives, all blue tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 60,
-      "inheritRestriction": "Blue Tome Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "B Tome Valor 3",
-      "effect": "If unit survives, all blue tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 120,
-      "inheritRestriction": "Blue Tome Users Only",
+      "name": "Fortify Cavalry",
+      "effect": "Grants adjacent cavalry allies Def/Res+6 through their next actions at the start of each turn.",
+      "spCost": 200,
+      "inheritRestriction": "Cavalry Only",
       "type": "PASSIVE_C"
     },
     {
@@ -32882,24 +33924,10 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Lance Valor 1",
-      "effect": "If unit survives and uses a lance, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 30,
-      "inheritRestriction": "Lance Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Lance Valor 2",
-      "effect": "If unit survives, all lance users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 60,
-      "inheritRestriction": "Lance Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Lance Valor 3",
-      "effect": "If unit survives, all lance users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 120,
-      "inheritRestriction": "Lance Users Only",
+      "name": "Drive Spd 2",
+      "effect": "Grants allies within 2 spaces Spd+3 during combat.",
+      "spCost": 240,
+      "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
@@ -32945,10 +33973,17 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Cavalry",
-      "effect": "Grants adjacent cavalry allies Def/Res+6 through their next actions at the start of each turn.",
-      "spCost": 200,
-      "inheritRestriction": "Cavalry Only",
+      "name": "Drive Spd 1",
+      "effect": "Grants allies within 2 spaces Spd+2 during combat.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Drive Res 2",
+      "effect": "Grants allies within 2 spaces Res+3 during combat.",
+      "spCost": 240,
+      "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
@@ -33036,38 +34071,52 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Def 1",
-      "effect": "Grants adjacent allies Def+2 through their next actions at the start of each turn.",
-      "spCost": 50,
+      "name": "Drive Res 1",
+      "effect": "Grants allies within 2 spaces Res+2 during combat.",
+      "spCost": 120,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Def 2",
-      "effect": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
-      "spCost": 100,
+      "name": "Drive Def 2",
+      "effect": "Grants allies within 2 spaces Def+3 during combat.",
+      "spCost": 240,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Def 3",
-      "effect": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
-      "spCost": 200,
+      "name": "Drive Def 1",
+      "effect": "Grants allies within 2 spaces Def+2 during combat.",
+      "spCost": 120,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Dragons",
-      "effect": "Grants adjacent Dragon allies Def/Res+6 through their next actions at the start of each turn.",
-      "spCost": 200,
-      "inheritRestriction": "Breath Users Only",
+      "name": "Drive Atk 2",
+      "effect": "Grants allies within 2 spaces Atk+3 during combat.",
+      "spCost": 240,
+      "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Fliers",
-      "effect": "Grants adjacent flying allies Def/Res+6 through their next actions at the start of each turn.",
-      "spCost": 200,
-      "inheritRestriction": "Fliers Only",
+      "name": "Drive Atk 1",
+      "effect": "Grants allies within 2 spaces Atk+2 during combat.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Def Ploy 3",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Def Ploy 2",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-4 until the end of foe's next action.",
+      "spCost": 120,
+      "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
@@ -33092,58 +34141,16 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Res 1",
-      "effect": "Grants adjacent allies Res+2 through their next actions at the start of each turn.",
-      "spCost": 50,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Fortify Res 2",
-      "effect": "Grants adjacent allies Res+3 through their next actions at the start of each turn.",
-      "spCost": 100,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Fortify Res 3",
-      "effect": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
-      "spCost": 200,
-      "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Axe Experience 2",
-      "effect": "If unit survives, all axe users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)",
+      "name": "Def Ploy 1",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-3 until the end of foe's next action.",
       "spCost": 60,
-      "inheritRestriction": "Axe Users Only",
+      "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Axe Experience 3",
-      "effect": "If unit survives, all axe users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applied.)",
+      "name": "Dagger Valor 3",
+      "effect": "If unit survives, all dagger users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
-      "inheritRestriction": "Axe Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Axe Valor 1",
-      "effect": "If unit survives and uses an axe, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 30,
-      "inheritRestriction": "Axe Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Bow Exp. 1",
-      "effect": "If unit survives and uses a bow, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applies.)",
-      "spCost": 30,
-      "inheritRestriction": "Bow Users Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Dagger Valor 1",
-      "effect": "If unit survives and uses a dagger, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 30,
       "inheritRestriction": "Dagger Users Only",
       "type": "PASSIVE_C"
     },
@@ -33155,38 +34162,31 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Dagger Valor 3",
-      "effect": "If unit survives, all dagger users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "spCost": 120,
+      "name": "Dagger Valor 1",
+      "effect": "If unit survives and uses a dagger, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
       "inheritRestriction": "Dagger Users Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Panic Ploy 1",
-      "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 5 or more lower than unit through foe's next action.",
-      "spCost": 60,
+      "name": "Breath of Life 3",
+      "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+      "spCost": 200,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Panic Ploy 2",
-      "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 3 or more lower than unit through foe's next action.",
-      "spCost": 120,
+      "name": "Breath of Life 2",
+      "effect": "If unit initiates attack, adjacent allies recover 5 HP after combat.",
+      "spCost": 100,
       "inheritRestriction": "None",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Panic Ploy 3",
-      "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action.",
-      "spCost": 240,
+      "name": "Breath of Life 1",
+      "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
+      "spCost": 50,
       "inheritRestriction": "None",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Bow Exp. 2",
-      "effect": "If unit survives, all bow users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applies.)",
-      "spCost": 60,
-      "inheritRestriction": "Bow Users Only",
       "type": "PASSIVE_C"
     },
     {
@@ -33197,10 +34197,59 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Axe Valor 2",
-      "effect": "If unit survives, all axe users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "name": "Bow Exp. 2",
+      "effect": "If unit survives, all bow users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applies.)",
       "spCost": 60,
-      "inheritRestriction": "Axe Users Only",
+      "inheritRestriction": "Bow Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Bow Exp. 1",
+      "effect": "If unit survives and uses a bow, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applies.)",
+      "spCost": 30,
+      "inheritRestriction": "Bow Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Valor 3",
+      "effect": "If unit survives, all blue tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 120,
+      "inheritRestriction": "Blue Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Valor 2",
+      "effect": "If unit survives, all blue tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 60,
+      "inheritRestriction": "Blue Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Valor 1",
+      "effect": "If unit survives and uses a blue tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
+      "inheritRestriction": "Blue Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Exp. 3",
+      "effect": "If unit survives combat, all blue magic users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 120,
+      "inheritRestriction": "Blue Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Exp. 2",
+      "effect": "If unit survives combat, all blue magic users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 60,
+      "inheritRestriction": "Blue Tome Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "B Tome Exp. 1",
+      "effect": "If using blue magic and unit survives combat, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
+      "inheritRestriction": "Blue Tome Users Only",
       "type": "PASSIVE_C"
     },
     {
@@ -33211,23 +34260,44 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Atk Ploy 1",
-      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.",
+      "name": "Axe Valor 2",
+      "effect": "If unit survives, all axe users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Atk Ploy 2",
-      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.",
+      "name": "Axe Valor 1",
+      "effect": "If unit survives and uses an axe, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
+      "inheritRestriction": "Axe Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Axe Experience 3",
+      "effect": "If unit survives, all axe users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 120,
-      "inheritRestriction": "None",
+      "inheritRestriction": "Axe Users Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Atk Smoke 1",
-      "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.",
+      "name": "Axe Experience 2",
+      "effect": "If unit survives, all axe users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)",
       "spCost": 60,
+      "inheritRestriction": "Axe Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Axe Experience 1",
+      "effect": "If unit survives, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)",
+      "spCost": 30,
+      "inheritRestriction": "Axe Users Only",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Atk Smoke 3",
+      "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions.",
+      "spCost": 240,
       "inheritRestriction": "Excludes Staff Users",
       "type": "PASSIVE_C"
     },
@@ -33239,31 +34309,45 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Goad Armor",
-      "effect": "Grants armored allies within 2 spaces Spd/Atk+4 during combat.",
-      "spCost": 200,
+      "name": "Atk Smoke 1",
+      "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.",
+      "spCost": 60,
+      "inheritRestriction": "Excludes Staff Users",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Atk Ploy 3",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.",
+      "spCost": 240,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Atk Ploy 2",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.",
+      "spCost": 120,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Atk Ploy 1",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.",
+      "spCost": 60,
+      "inheritRestriction": "None",
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Armor March 3",
+      "effect": "If unit has an adjacent armored ally at the start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
+      "spCost": 240,
       "inheritRestriction": "Armored Only",
       "type": "PASSIVE_C"
     },
     {
-      "name": "Goad Cavalry",
-      "effect": "Grants cavalry allies within 2 spaces Spd/Atk+4 during combat.",
-      "spCost": 200,
-      "inheritRestriction": "Cavalry Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Goad Fliers",
-      "effect": "Grants flying allies within 2 spaces Spd/Atk+4 during combat.",
-      "spCost": 200,
-      "inheritRestriction": "Fliers Only",
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Hone Atk 1",
-      "effect": "Grants adjacent allies Atk+2 through their next actions at the start of each turn.",
-      "spCost": 50,
-      "inheritRestriction": "None",
+      "name": "Armor March 1",
+      "effect": "If unit has 100% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
+      "spCost": 60,
+      "inheritRestriction": "Armored Only",
       "type": "PASSIVE_C"
     },
     {
