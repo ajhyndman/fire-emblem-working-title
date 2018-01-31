@@ -5090,9 +5090,9 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-now@^8.3.9:
-  version "8.3.10"
-  resolved "https://registry.yarnpkg.com/now/-/now-8.3.10.tgz#13b0dc1b8651284d5c345bc969d664d11c7885e8"
+now@9.2.7:
+  version "9.2.7"
+  resolved "https://registry.yarnpkg.com/now/-/now-9.2.7.tgz#46e68cb606feb9c80d9d6b380fcddfaaa093c3a3"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
