@@ -7,6 +7,8 @@
 .*/node_modules/styled-components
 .*/node_modules/config-chain
 .*/node_modules/typechecker
+.*/node_modules/npmconf
+.*/node_modules/babel-plugin-transform-react-remove-prop-types
 
 [include]
 
