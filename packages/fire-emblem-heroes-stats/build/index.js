@@ -3,17 +3,17 @@ import {
   assoc,
   compose,
   contains,
+  equals,
   filter,
-  flatten,
   head,
   identity,
   ifElse,
   indexBy,
-  isNil,
   map,
   merge,
   not,
   path,
+  pick,
   prop,
   propEq,
   range,
@@ -27,7 +27,7 @@ import {
 } from 'ramda';
 
 import { baseStatToMaxStat } from './statGrowth';
-import { fetchAskApiQuery, fetchApiQuery } from './fetch';
+import { fetchApiQuery } from './fetch';
 import { CDN_HOST } from './constants';
 
 // None of the queries we are making should expect more than this many results.
@@ -67,124 +67,125 @@ const truncateParenthetical = replace(/\((.).*\)/, '($1)');
 
 // Fetches heroes and their stats/skills
 async function fetchHeroStats() {
-  const basicHeroData = await fetchAskApiQuery(`
-    [[Category: Heroes]]
-      |?HeroName
-      |?Title
+  const heroBaseStats = await fetchApiQuery({
+    action: 'cargoquery',
+    format: 'json',
+    limit: API_LIMIT,
+    tables: 'HeroBaseStats,Heroes',
+    fields:
+      'Heroes._pageName=Name,HeroBaseStats.Variation,HeroBaseStats.Rarity,HP,Atk,Spd,Def,Res',
+    where: 'HeroBaseStats.Variation="Neut"',
+    join_on: 'HeroBaseStats._pageName = Heroes._pageName',
+  }).then(
+    compose(
+      map(({ Name, Rarity, HP, Atk, Spd, Def, Res }) => ({
+        name: Name,
+        rarity: Number.parseInt(Rarity, 10),
+        hp: Number.parseInt(HP, 10),
+        atk: Number.parseInt(Atk, 10),
+        spd: Number.parseInt(Spd, 10),
+        def: Number.parseInt(Def, 10),
+        res: Number.parseInt(Res, 10),
+      })),
+      extractCargoResults,
+    ),
+  );
 
-      |?Origin
-      |?WeaponType
-      |?MoveType
+  const heroBaseStatsByNameAndRarity = indexBy(
+    ({ name, rarity }) => `${name}-${rarity}`,
+    heroBaseStats,
+  );
 
-      |?RewardRarities
-      |?SummonRarities
-      |?Has release date
-
-      |?Has Atk Growth Point
-      |?Has Def Growth Point
-      |?Has HP Growth Point
-      |?Has Res Growth Point
-      |?Has Spd Growth Point
-
-      |?Has Lv1 R1 ATK Neut
-      |?Has Lv1 R1 DEF Neut
-      |?Has Lv1 R1 HP Neut
-      |?Has Lv1 R1 RES Neut
-      |?Has Lv1 R1 SPD Neut
-
-      |?Has Lv1 R2 ATK Neut
-      |?Has Lv1 R2 DEF Neut
-      |?Has Lv1 R2 HP Neut
-      |?Has Lv1 R2 RES Neut
-      |?Has Lv1 R2 SPD Neut
-
-      |?Has Lv1 R3 ATK Neut
-      |?Has Lv1 R3 DEF Neut
-      |?Has Lv1 R3 HP Neut
-      |?Has Lv1 R3 RES Neut
-      |?Has Lv1 R3 SPD Neut
-
-      |?Has Lv1 R4 ATK Neut
-      |?Has Lv1 R4 DEF Neut
-      |?Has Lv1 R4 HP Neut
-      |?Has Lv1 R4 RES Neut
-      |?Has Lv1 R4 SPD Neut
-
-      |?Has Lv1 R5 ATK Neut
-      |?Has Lv1 R5 DEF Neut
-      |?Has Lv1 R5 HP Neut
-      |?Has Lv1 R5 RES Neut
-      |?Has Lv1 R5 SPD Neut
-
-      |?Has assist1
-      |?Has assist1 default
-      |?Has assist1 unlock
-
-      |?Has assist2
-      |?Has assist2 default
-      |?Has assist2 unlock
-
-      |?Has assist3
-      |?Has assist3 default
-      |?Has assist3 unlock
-
-      |?Has passiveA1
-      |?Has passiveA1 unlock
-
-      |?Has passiveA2
-      |?Has passiveA2 unlock
-
-      |?Has passiveA3
-      |?Has passiveA3 unlock
-
-      |?Has passiveB1
-      |?Has passiveB1 unlock
-
-      |?Has passiveB2
-      |?Has passiveB2 unlock
-
-      |?Has passiveB3
-      |?Has passiveB3 unlock
-
-      |?Has passiveC1
-      |?Has passiveC1 unlock
-
-      |?Has passiveC2
-      |?Has passiveC2 unlock
-
-      |?Has passiveC3
-      |?Has passiveC3 unlock
-
-      |?Has special1
-      |?Has special1 default
-      |?Has special1 unlock
-
-      |?Has special2
-      |?Has special2 default
-      |?Has special2 unlock
-
-      |?Has special3
-      |?Has special3 default
-      |?Has special3 unlock
-
-      |?Has weapon1
-      |?Has weapon1 default
-      |?Has weapon1 unlock
-
-      |?Has weapon2
-      |?Has weapon2 default
-      |?Has weapon2 unlock
-
-      |?Has weapon3
-      |?Has weapon3 default
-      |?Has weapon3 unlock
-
-      |?Has weapon4
-      |?Has weapon4 default
-      |?Has weapon4 unlock
-
-      |limit=${API_LIMIT}
-  `)
+  const basicHeroData = await fetchApiQuery({
+    action: 'cargoquery',
+    format: 'json',
+    limit: API_LIMIT,
+    tables: [
+      'Heroes',
+      'HeroGrowthPoints',
+      'HeroWeapons',
+      'HeroSpecials',
+      'HeroAssists',
+      'HeroPassives',
+    ].join(','),
+    fields: [
+      // 'Name',
+      'Heroes._pageName=Name',
+      'Title',
+      'Origin',
+      'WeaponType',
+      'MoveType',
+      'SummonRarities',
+      'RewardRarities',
+      'ReleaseDate',
+      'HeroGrowthPoints.HP',
+      'HeroGrowthPoints.Atk',
+      'HeroGrowthPoints.Spd',
+      'HeroGrowthPoints.Def',
+      'HeroGrowthPoints.Res',
+      'HeroWeapons.weapon1',
+      'HeroWeapons.weapon2',
+      'HeroWeapons.weapon3',
+      'HeroWeapons.weapon4',
+      'HeroWeapons.weapon1Unlock',
+      'HeroWeapons.weapon2Unlock',
+      'HeroWeapons.weapon3Unlock',
+      'HeroWeapons.weapon4Unlock',
+      'HeroWeapons.weapon1Default',
+      'HeroWeapons.weapon2Default',
+      'HeroWeapons.weapon3Default',
+      'HeroWeapons.weapon4Default',
+      'HeroAssists.assist1',
+      'HeroAssists.assist2',
+      'HeroAssists.assist3',
+      'HeroAssists.assist4',
+      'HeroAssists.assist1Unlock',
+      'HeroAssists.assist2Unlock',
+      'HeroAssists.assist3Unlock',
+      'HeroAssists.assist4Unlock',
+      'HeroAssists.assist1Default',
+      'HeroAssists.assist2Default',
+      'HeroAssists.assist3Default',
+      'HeroAssists.assist4Default',
+      'HeroSpecials.special1',
+      'HeroSpecials.special2',
+      'HeroSpecials.special3',
+      'HeroSpecials.special4',
+      'HeroSpecials.special1Unlock',
+      'HeroSpecials.special2Unlock',
+      'HeroSpecials.special3Unlock',
+      'HeroSpecials.special4Unlock',
+      'HeroSpecials.special1Default',
+      'HeroSpecials.special2Default',
+      'HeroSpecials.special3Default',
+      'HeroSpecials.special4Default',
+      'HeroPassives.passiveA1',
+      'HeroPassives.passiveA2',
+      'HeroPassives.passiveA3',
+      'HeroPassives.passiveB1',
+      'HeroPassives.passiveB2',
+      'HeroPassives.passiveB3',
+      'HeroPassives.passiveC1',
+      'HeroPassives.passiveC2',
+      'HeroPassives.passiveC3',
+      'HeroPassives.passiveA1Unlock',
+      'HeroPassives.passiveA2Unlock',
+      'HeroPassives.passiveA3Unlock',
+      'HeroPassives.passiveB1Unlock',
+      'HeroPassives.passiveB2Unlock',
+      'HeroPassives.passiveB3Unlock',
+      'HeroPassives.passiveC1Unlock',
+      'HeroPassives.passiveC2Unlock',
+      'HeroPassives.passiveC3Unlock',
+    ].join(','),
+    join_on: [
+      'Heroes._pageName = HeroGrowthPoints._pageName',
+      'Heroes._pageName = HeroWeapons._pageName',
+      'Heroes._pageName = HeroSpecials._pageName',
+      'Heroes._pageName = HeroAssists._pageName',
+      'Heroes._pageName = HeroPassives._pageName',
+    ].join(','),
+  })
     .then(
       compose(
         map(
@@ -195,121 +196,102 @@ async function fetchHeroStats() {
         ),
         map(
           ({
-            HeroName,
+            Name,
             Title,
             Origin,
             WeaponType,
             MoveType,
             RewardRarities,
             SummonRarities,
-            'Has release date': hasReleaseDate,
+            ReleaseDate,
 
-            'Has HP Growth Point': [hpGrowthPoints],
-            'Has Atk Growth Point': [atkGrowthPoints],
-            'Has Spd Growth Point': [spdGrowthPoints],
-            'Has Def Growth Point': [defGrowthPoints],
-            'Has Res Growth Point': [resGrowthPoints],
+            HP: hpGrowthPoints,
+            Atk: atkGrowthPoints,
+            Spd: spdGrowthPoints,
+            Def: defGrowthPoints,
+            Res: resGrowthPoints,
 
-            'Has Lv1 R1 HP Neut': [lv1R1Hp],
-            'Has Lv1 R1 ATK Neut': [lv1R1Atk],
-            'Has Lv1 R1 SPD Neut': [lv1R1Spd],
-            'Has Lv1 R1 DEF Neut': [lv1R1Def],
-            'Has Lv1 R1 RES Neut': [lv1R1Res],
+            assist1,
+            assist1Default,
+            assist1Unlock,
 
-            'Has Lv1 R2 HP Neut': [lv1R2Hp],
-            'Has Lv1 R2 ATK Neut': [lv1R2Atk],
-            'Has Lv1 R2 SPD Neut': [lv1R2Spd],
-            'Has Lv1 R2 DEF Neut': [lv1R2Def],
-            'Has Lv1 R2 RES Neut': [lv1R2Res],
+            assist2,
+            assist2Default,
+            assist2Unlock,
 
-            'Has Lv1 R3 HP Neut': [lv1R3Hp],
-            'Has Lv1 R3 ATK Neut': [lv1R3Atk],
-            'Has Lv1 R3 SPD Neut': [lv1R3Spd],
-            'Has Lv1 R3 DEF Neut': [lv1R3Def],
-            'Has Lv1 R3 RES Neut': [lv1R3Res],
+            assist3,
+            assist3Default,
+            assist3Unlock,
 
-            'Has Lv1 R4 HP Neut': [lv1R4Hp],
-            'Has Lv1 R4 ATK Neut': [lv1R4Atk],
-            'Has Lv1 R4 SPD Neut': [lv1R4Spd],
-            'Has Lv1 R4 DEF Neut': [lv1R4Def],
-            'Has Lv1 R4 RES Neut': [lv1R4Res],
+            passiveA1,
+            passiveA1Unlock,
 
-            'Has Lv1 R5 HP Neut': [lv1R5Hp],
-            'Has Lv1 R5 ATK Neut': [lv1R5Atk],
-            'Has Lv1 R5 SPD Neut': [lv1R5Spd],
-            'Has Lv1 R5 DEF Neut': [lv1R5Def],
-            'Has Lv1 R5 RES Neut': [lv1R5Res],
+            passiveA2,
+            passiveA2Unlock,
 
-            'Has assist1': assist1,
-            'Has assist1 default': assist1Default,
-            'Has assist1 unlock': assist1Unlock,
+            passiveA3,
+            passiveA3Unlock,
 
-            'Has assist2': assist2,
-            'Has assist2 default': assist2Default,
-            'Has assist2 unlock': assist2Unlock,
+            passiveB1,
+            passiveB1Unlock,
 
-            'Has assist3': assist3,
-            'Has assist3 default': assist3Default,
-            'Has assist3 unlock': assist3Unlock,
+            passiveB2,
+            passiveB2Unlock,
 
-            'Has passiveA1': passiveA1,
-            'Has passiveA1 unlock': passiveA1Unlock,
+            passiveB3,
+            passiveB3Unlock,
 
-            'Has passiveA2': passiveA2,
-            'Has passiveA2 unlock': passiveA2Unlock,
+            passiveC1,
+            passiveC1Unlock,
 
-            'Has passiveA3': passiveA3,
-            'Has passiveA3 unlock': passiveA3Unlock,
+            passiveC2,
+            passiveC2Unlock,
 
-            'Has passiveB1': passiveB1,
-            'Has passiveB1 unlock': passiveB1Unlock,
+            passiveC3,
+            passiveC3Unlock,
 
-            'Has passiveB2': passiveB2,
-            'Has passiveB2 unlock': passiveB2Unlock,
+            special1,
+            special1Default,
+            special1Unlock,
 
-            'Has passiveB3': passiveB3,
-            'Has passiveB3 unlock': passiveB3Unlock,
+            special2,
+            special2Default,
+            special2Unlock,
 
-            'Has passiveC1': passiveC1,
-            'Has passiveC1 unlock': passiveC1Unlock,
+            special3,
+            special3Default,
+            special3Unlock,
 
-            'Has passiveC2': passiveC2,
-            'Has passiveC2 unlock': passiveC2Unlock,
+            weapon1,
+            weapon1Default,
+            weapon1Unlock,
 
-            'Has passiveC3': passiveC3,
-            'Has passiveC3 unlock': passiveC3Unlock,
+            weapon2,
+            weapon2Default,
+            weapon2Unlock,
 
-            'Has special1': special1,
-            'Has special1 default': special1Default,
-            'Has special1 unlock': special1Unlock,
+            weapon3,
+            weapon3Default,
+            weapon3Unlock,
 
-            'Has special2': special2,
-            'Has special2 default': special2Default,
-            'Has special2 unlock': special2Unlock,
-
-            'Has special3': special3,
-            'Has special3 default': special3Default,
-            'Has special3 unlock': special3Unlock,
-
-            'Has weapon1': weapon1,
-            'Has weapon1 default': weapon1Default,
-            'Has weapon1 unlock': weapon1Unlock,
-
-            'Has weapon2': weapon2,
-            'Has weapon2 default': weapon2Default,
-            'Has weapon2 unlock': weapon2Unlock,
-
-            'Has weapon3': weapon3,
-            'Has weapon3 default': weapon3Default,
-            'Has weapon3 unlock': weapon3Unlock,
-
-            'Has weapon4': weapon4,
-            'Has weapon4 default': weapon4Default,
-            'Has weapon4 unlock': weapon4Unlock,
+            weapon4,
+            weapon4Default,
+            weapon4Unlock,
           }) => {
+            const enumerateRarities: (
+              rarityString: string,
+            ) => number[] = compose(
+              map(Number.parseInt),
+              filter(compose(not, equals(''))),
+              str => str.split(','),
+            );
+
             // Compute the available rarities for this character.
             const availableRarities = [
-              ...new Set([...RewardRarities, ...SummonRarities]),
+              ...new Set([
+                ...enumerateRarities(RewardRarities),
+                ...enumerateRarities(SummonRarities),
+              ]),
             ].sort();
 
             const minRarity = availableRarities[0];
@@ -323,29 +305,22 @@ async function fetchHeroStats() {
                   : `${minRarity}-${maxRarity}`;
 
             // Convert the release date into expected format.
-            const releaseDate = compose(
-              timestamp =>
-                timestamp === undefined
-                  ? 'N/A'
-                  : new Date(
-                      parseInt(timestamp) * 1000,
-                    ).toLocaleDateString('en-NA', {
-                      timeZone: 'UTC',
-                      month: 'short',
-                      day: '2-digit',
-                      year: 'numeric',
-                    }),
-              path(['timestamp']),
-              head,
-            )(hasReleaseDate);
+            const releaseDate = ReleaseDate
+              ? new Date(ReleaseDate).toLocaleDateString('en-NA', {
+                  timeZone: 'UTC',
+                  month: 'short',
+                  day: '2-digit',
+                  year: 'numeric',
+                })
+              : 'N/A';
 
             // Reformat the hero's skills into a list.
             const passiveSkills = compose(
               map(([skill, unlock]) => ({
-                name: head(skill),
-                rarity: head(unlock) || '-',
+                name: skill,
+                rarity: Number.parseInt(unlock, 10) || '-',
               })),
-              filter(compose(not, isNil, compose(head, head))),
+              filter(compose(Boolean, head)),
             )([
               [passiveA1, passiveA1Unlock],
               [passiveA2, passiveA2Unlock],
@@ -360,11 +335,11 @@ async function fetchHeroStats() {
 
             const otherSkills = compose(
               map(([skillPageReference, defaultRarity, unlockRarity]) => ({
-                name: head(skillPageReference).fulltext,
-                default: head(defaultRarity) || '-',
-                rarity: head(unlockRarity) || '-',
+                name: skillPageReference,
+                default: Number.parseInt(defaultRarity, 10) || '-',
+                rarity: Number.parseInt(unlockRarity, 10) || '-',
               })),
-              filter(compose(not, isNil, compose(head, head))),
+              filter(compose(Boolean, head)),
             )([
               [weapon1, weapon1Default, weapon1Unlock],
               [weapon2, weapon2Default, weapon2Unlock],
@@ -389,162 +364,114 @@ async function fetchHeroStats() {
 
             if (minRarity !== undefined) {
               range(minRarity, 6).forEach(rarity => {
-                let lv1Stats;
-                switch (rarity) {
-                  case 1:
-                    lv1Stats = {
-                      hp: parseInt(lv1R1Hp),
-                      atk: parseInt(lv1R1Atk),
-                      spd: parseInt(lv1R1Spd),
-                      def: parseInt(lv1R1Def),
-                      res: parseInt(lv1R1Res),
-                    };
-                    break;
-                  case 2:
-                    lv1Stats = {
-                      hp: parseInt(lv1R2Hp),
-                      atk: parseInt(lv1R2Atk),
-                      spd: parseInt(lv1R2Spd),
-                      def: parseInt(lv1R2Def),
-                      res: parseInt(lv1R2Res),
-                    };
-                    break;
-                  case 3:
-                    lv1Stats = {
-                      hp: parseInt(lv1R3Hp),
-                      atk: parseInt(lv1R3Atk),
-                      spd: parseInt(lv1R3Spd),
-                      def: parseInt(lv1R3Def),
-                      res: parseInt(lv1R3Res),
-                    };
-                    break;
-                  case 4:
-                    lv1Stats = {
-                      hp: parseInt(lv1R4Hp),
-                      atk: parseInt(lv1R4Atk),
-                      spd: parseInt(lv1R4Spd),
-                      def: parseInt(lv1R4Def),
-                      res: parseInt(lv1R4Res),
-                    };
-                    break;
-                  case 5:
-                    lv1Stats = {
-                      hp: parseInt(lv1R5Hp),
-                      atk: parseInt(lv1R5Atk),
-                      spd: parseInt(lv1R5Spd),
-                      def: parseInt(lv1R5Def),
-                      res: parseInt(lv1R5Res),
-                    };
-                    break;
-                }
-
-                stats['1'][rarity] = lv1Stats;
+                stats['1'][rarity] = compose(
+                  map(value => Number.parseInt(value, 10)),
+                  pick(['hp', 'atk', 'spd', 'def', 'res']),
+                )(heroBaseStatsByNameAndRarity[`${Name}-${rarity}`]);
 
                 stats['40'][rarity] = {
                   hp: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].hp - 1,
-                      hpGrowthPoints - 1,
+                      Number.parseInt(hpGrowthPoints, 10) - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].hp,
-                      hpGrowthPoints,
+                      Number.parseInt(hpGrowthPoints, 10),
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].hp + 1,
-                      hpGrowthPoints + 1,
+                      Number.parseInt(hpGrowthPoints, 10) + 1,
                     ),
                   ],
                   atk: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].atk - 1,
-                      atkGrowthPoints - 1,
+                      Number.parseInt(atkGrowthPoints, 10) - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].atk,
-                      atkGrowthPoints,
+                      Number.parseInt(atkGrowthPoints, 10),
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].atk + 1,
-                      atkGrowthPoints + 1,
+                      Number.parseInt(atkGrowthPoints, 10) + 1,
                     ),
                   ],
                   spd: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].spd - 1,
-                      spdGrowthPoints - 1,
+                      Number.parseInt(spdGrowthPoints, 10) - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].spd,
-                      spdGrowthPoints,
+                      Number.parseInt(spdGrowthPoints, 10),
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].spd + 1,
-                      spdGrowthPoints + 1,
+                      Number.parseInt(spdGrowthPoints, 10) + 1,
                     ),
                   ],
                   def: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].def - 1,
-                      defGrowthPoints - 1,
+                      Number.parseInt(defGrowthPoints, 10) - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].def,
-                      defGrowthPoints,
+                      Number.parseInt(defGrowthPoints, 10),
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].def + 1,
-                      defGrowthPoints + 1,
+                      Number.parseInt(defGrowthPoints, 10) + 1,
                     ),
                   ],
                   res: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].res - 1,
-                      resGrowthPoints - 1,
+                      Number.parseInt(resGrowthPoints, 10) - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].res,
-                      resGrowthPoints,
+                      Number.parseInt(resGrowthPoints, 10),
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].res + 1,
-                      resGrowthPoints + 1,
+                      Number.parseInt(resGrowthPoints, 10) + 1,
                     ),
                   ],
                 };
               });
             }
 
-            const name = head(HeroName) || '';
-
             return {
-              name,
-              title: head(Title),
-              origin: head(Origin),
-              weaponType: head(WeaponType),
-              moveType: head(MoveType),
+              name: Name,
+              title: Title,
+              origin: Origin,
+              weaponType: WeaponType,
+              moveType: MoveType,
               rarities,
               releaseDate,
               assets: {
                 portrait: {
-                  '75px': `${CDN_HOST}/75px-Icon_Portrait_${name}.png`,
-                  '113px': `${CDN_HOST}/113px-Icon_Portrait_${name}.png`,
-                  '150px': `${CDN_HOST}/150px-Icon_Portrait_${name}.png`,
+                  '75px': `${CDN_HOST}/75px-Icon_Portrait_${Name}.png`,
+                  '113px': `${CDN_HOST}/113px-Icon_Portrait_${Name}.png`,
+                  '150px': `${CDN_HOST}/150px-Icon_Portrait_${Name}.png`,
                 },
               },
               skills,
@@ -552,7 +479,7 @@ async function fetchHeroStats() {
             };
           },
         ),
-        extractPrintouts,
+        extractCargoResults,
       ),
     )
     .catch(error => {
