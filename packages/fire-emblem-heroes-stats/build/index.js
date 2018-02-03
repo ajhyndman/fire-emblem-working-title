@@ -627,8 +627,8 @@ async function fetchSkills() {
     limit: API_LIMIT,
     tables: 'Assists',
     fields:
-      'Name,Cost,Effect,Range,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
-    group_by: 'Name',
+      '_pageName=Name,Cost,Effect,Range,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
+    group_by: '_pageName',
   })
     .then(
       compose(
