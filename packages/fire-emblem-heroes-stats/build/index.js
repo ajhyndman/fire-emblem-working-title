@@ -757,29 +757,17 @@ async function fetchSkills() {
     join_on: 'PassiveGroup._pageName = PassiveSingle._pageName',
     group_by: 'PassiveSingle.Name',
   })
-    .then(a => {
-      console.log(a);
-      return a;
-    })
     .then(
       compose(
         filter(({ name }) => Boolean(name)),
-        map(
-          ({
-            Name,
-            Effect,
-            SkillTier,
-            MovementRestriction,
-            WeaponRestriction,
-          }) => ({
-            name: Name,
-            effect: sanitizeEffectString(Effect),
-            // skillTier: Number.parseInt(SkillTier, 10),
-            // movementRestriction: MovementRestriction.split(','),
-            // weaponRestriction: WeaponRestriction.split(','),
-            type: 'SEAL',
-          }),
-        ),
+        map(({ Name, Effect }) => ({
+          name: Name,
+          effect: sanitizeEffectString(Effect),
+          // skillTier: Number.parseInt(SkillTier, 10),
+          // movementRestriction: MovementRestriction.split(','),
+          // weaponRestriction: WeaponRestriction.split(','),
+          type: 'SEAL',
+        })),
         extractCargoResults,
       ),
     )
