@@ -16,9 +16,9 @@ export type WeaponType =
   | 'Red Sword'
   | 'Red Tome'
   | 'Red Breath'
-  | 'Neutral Bow'
-  | 'Neutral Dagger'
-  | 'Neutral Staff';
+  | 'Colorless Bow'
+  | 'Colorless Dagger'
+  | 'Colorless Staff';
 
 export type StatValue = number | '-';
 
