@@ -64,7 +64,7 @@ const unitList: Array<Hero> = [
     shortName: 'Troubadour',
     name: 'Troubadour (Camus GHB)',
     moveType: 'Cavalry',
-    weaponType: 'Neutral Staff',
+    weaponType: 'Colorless Staff',
     skills: [
       {
         name: 'Fear',

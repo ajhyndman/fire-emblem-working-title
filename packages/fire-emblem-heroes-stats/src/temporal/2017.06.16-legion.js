@@ -180,7 +180,7 @@ const unitList: Array<Hero> = [
     shortName: 'Bow Fighter',
     name: 'Bow Fighter (Legion GHB)',
     moveType: 'Infantry',
-    weaponType: 'Neutral Bow',
+    weaponType: 'Colorless Bow',
     skills: [
       {
         name: 'Brave Bow+',
