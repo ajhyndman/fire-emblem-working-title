@@ -31,7 +31,7 @@ import { fetchAskApiQuery } from './fetch';
 import { CDN_HOST } from './constants';
 
 // None of the queries we are making should expect more than this many results.
-const ASK_API_LIMIT = 2000;
+const API_LIMIT = 2000;
 
 const sanitizeEffectString = compose(
   trim,
@@ -170,7 +170,7 @@ async function fetchHeroStats() {
       |?Has weapon4 default
       |?Has weapon4 unlock
 
-      |limit=${ASK_API_LIMIT}
+      |limit=${API_LIMIT}
   `)
     .then(
       compose(
@@ -577,7 +577,7 @@ async function fetchSkills() {
       |?Might1
       |?Name1
       |?Range1
-      |limit=${ASK_API_LIMIT}
+      |limit=${API_LIMIT}
   `)
     .then(
       compose(
@@ -660,7 +660,7 @@ async function fetchSkills() {
       |?Is exclusive
       |?Name1
       |?Range1
-      |limit=${ASK_API_LIMIT}
+      |limit=${API_LIMIT}
   `)
     .then(
       compose(
@@ -758,7 +758,7 @@ async function fetchSkills() {
       |?Name2
       |?Name3
       |?Ptype
-      |limit=${ASK_API_LIMIT}
+      |limit=${API_LIMIT}
   `)
     .then(
       compose(
@@ -833,7 +833,7 @@ async function fetchSkills() {
       |?Name1
       |?Name2
       |?Name3
-      |limit=${ASK_API_LIMIT}
+      |limit=${API_LIMIT}
   `)
     .then(
       compose(
