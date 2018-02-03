@@ -700,121 +700,87 @@ async function fetchSkills() {
       console.error('failed to parse special skill stats', error);
     });
 
-  const passives = await fetchAskApiQuery(`
-    [[Category: Passives]]
-      |?Cost1
-      |?Cost2
-      |?Cost3
-      |?Effect1
-      |?Effect2
-      |?Effect3
-      |?Has mvmt restriction
-      |?Has skillTier
-      |?Has weapon restriction
-      |?Name1
-      |?Name2
-      |?Name3
-      |?Ptype
-      |limit=${API_LIMIT}
-  `)
+  const passives = await fetchApiQuery({
+    action: 'cargoquery',
+    format: 'json',
+    limit: API_LIMIT,
+    tables: 'PassiveGroup,PassiveSingle',
+    fields:
+      'Name,Effect,SkillTier,SPCost,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction,PassiveGroup.Exclusive=Exclusive,PassiveGroup.Ptype=Ptype',
+    join_on: 'PassiveGroup._pageName = PassiveSingle._pageName',
+    group_by: 'PassiveSingle.Name',
+  })
     .then(
       compose(
-        filter(({ name }) => name !== undefined),
+        filter(({ name }) => Boolean(name)),
         sortBy(prop('type')),
-        flatten,
         map(
           ({
-            Cost1,
-            Cost2,
-            Cost3,
-            Effect1,
-            Effect2,
-            Effect3,
-            'Has mvmt restriction': mvmtRestriction,
-            'Has weapon restriction': weaponRestriction,
-            Name1,
-            Name2,
-            Name3,
+            Name,
+            SPCost,
+            Effect,
+            Exclusive,
+            MovementRestriction,
+            WeaponRestriction,
+            // SkillTier,
             Ptype,
           }) => {
             // Don't include passives that are only available as seals, here.
-            if (head(Ptype) === 'S') return [];
+            if (Ptype === 'S') return {};
 
-            const inheritRestrictions = [
-              head(mvmtRestriction),
-              head(weaponRestriction),
-            ].filter(compose(not, isNil));
-
-            const inheritRestriction =
-              inheritRestrictions.length > 0
-                ? inheritRestrictions.join(' ')
-                : 'None';
-
-            return [
-              {
-                name: head(Name1),
-                effect: sanitizeEffectString(head(Effect1) || '-'),
-                spCost: head(Cost1),
-                inheritRestriction,
-                type: `PASSIVE_${head(Ptype)}`,
-              },
-              {
-                name: head(Name2),
-                effect: sanitizeEffectString(head(Effect2) || '-'),
-                spCost: head(Cost2),
-                inheritRestriction,
-                type: `PASSIVE_${head(Ptype)}`,
-              },
-              {
-                name: head(Name3),
-                effect: sanitizeEffectString(head(Effect3) || '-'),
-                spCost: head(Cost3),
-                inheritRestriction,
-                type: `PASSIVE_${head(Ptype)}`,
-              },
-            ];
+            return {
+              name: Name,
+              effect: sanitizeEffectString(Effect),
+              exclusive: Boolean(Number.parseInt(Exclusive, 10)),
+              spCost: Number.parseInt(SPCost, 10),
+              movementRestriction: MovementRestriction.split(','),
+              weaponRestriction: WeaponRestriction.split(','),
+              type: `PASSIVE_${Ptype}`,
+            };
           },
         ),
-        extractPrintouts,
+        extractCargoResults,
       ),
     )
     .catch(error => {
       console.error('failed to parse passive skill stats', error);
     });
 
-  const seals = await fetchAskApiQuery(`
-    [[Category:Sacred Seals]]
-      |?Effect1
-      |?Effect2
-      |?Effect3
-      |?Name1
-      |?Name2
-      |?Name3
-      |limit=${API_LIMIT}
-  `)
+  const seals = await fetchApiQuery({
+    action: 'cargoquery',
+    format: 'json',
+    limit: API_LIMIT,
+    tables: 'PassiveGroup,PassiveSingle',
+    fields:
+      'Name,Effect,SkillTier,PassiveGroup.Seal=Seal,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction',
+    where: 'PassiveGroup.Seal="1"',
+    join_on: 'PassiveGroup._pageName = PassiveSingle._pageName',
+    group_by: 'PassiveSingle.Name',
+  })
+    .then(a => {
+      console.log(a);
+      return a;
+    })
     .then(
       compose(
-        flatten,
-        map(({ Name1, Effect1, Name2, Effect2, Name3, Effect3 }) =>
-          [
-            {
-              name: head(Name1),
-              effect: sanitizeEffectString(head(Effect1) || '-'),
-              type: 'SEAL',
-            },
-            {
-              name: head(Name2),
-              effect: sanitizeEffectString(head(Effect2) || '-'),
-              type: 'SEAL',
-            },
-            {
-              name: head(Name3),
-              effect: sanitizeEffectString(head(Effect3) || '-'),
-              type: 'SEAL',
-            },
-          ].filter(({ name }) => name !== undefined),
+        filter(({ name }) => Boolean(name)),
+        map(
+          ({
+            Name,
+            Effect,
+            SkillTier,
+            MovementRestriction,
+            WeaponRestriction,
+          }) => ({
+            name: Name,
+            effect: sanitizeEffectString(Effect),
+            // skillTier: Number.parseInt(SkillTier, 10),
+            // movementRestriction: MovementRestriction.split(','),
+            // weaponRestriction: WeaponRestriction.split(','),
+            type: 'SEAL',
+          }),
         ),
-        extractPrintouts,
+        extractCargoResults,
       ),
     )
     .catch(error => {
@@ -922,4 +888,4 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   fs.writeFileSync('./stats.json', JSON.stringify(allStats, null, 2));
 }
 
-fetchWikiStats(true, true);
+fetchWikiStats(false, true);
