@@ -867,12 +867,10 @@ async function fetchWikiStats(shouldFetchHeroes, shouldFetchSkills) {
   map(x => console.log('New hero: ' + x), newHeroNames);
   map(x => console.log('New skill: ' + x), newSkills);
 
-  // Infer weapon subtypes from the heroes that own them.
-  const skillsV2 = skillsWithWeaponsTypes(heroes, skills);
-  validate(heroes, skillsV2);
+  validate(heroes, skills);
 
   // WRITE STATS TO FILE
-  const allStats = { heroes, skills: skillsV2 };
+  const allStats = { heroes, skills };
   fs.writeFileSync('./stats.json', JSON.stringify(allStats, null, 2));
 }
 
