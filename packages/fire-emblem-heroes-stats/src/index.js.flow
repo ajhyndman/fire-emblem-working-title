@@ -16,9 +16,9 @@ export type WeaponType =
   | 'Red Sword'
   | 'Red Tome'
   | 'Red Breath'
-  | 'Neutral Bow'
-  | 'Neutral Dagger'
-  | 'Neutral Staff';
+  | 'Colorless Bow'
+  | 'Colorless Dagger'
+  | 'Colorless Staff';
 
 export type StatValue = number | '-';
 
@@ -111,8 +111,10 @@ export type AssistSkill = {
   +name: string,
   +range: number,
   +effect: string,
+  +exclusive: boolean,
   +spCost: number,
-  +inheritRestriction: string,
+  +movementRestriction: string[],
+  +weaponRestriction: string[],
 };
 
 export type SpecialSkill = {
@@ -120,19 +122,23 @@ export type SpecialSkill = {
   +name: string,
   +cooldown: number,
   +effect: string,
+  +exclusive: boolean,
   +spCost: number,
   // The wiki no longer has trigger/target fields, but we likely want these in he future.
   // +trigger: 'Assist (Staff)' | 'Attack' | 'Enemy Attack';
   // +target: 'Ally' | 'Allies' | 'Enemies' | 'Self';
-  +inheritRestriction: string,
+  +movementRestriction: string[],
+  +weaponRestriction: string[],
 };
 
 export type PassiveSkill = {
   +type: 'PASSIVE_A' | 'PASSIVE_B' | 'PASSIVE_C',
   +name: string,
   +effect: string,
+  +exclusive: boolean,
   +spCost: number,
-  +inheritRestriction: string,
+  +movementRestriction: string[],
+  +weaponRestriction: string[],
 };
 
 export type SealSkill = {

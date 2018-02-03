@@ -45,7 +45,7 @@ const truncate = (x: number) => (x >= 0 ? Math.floor(x) : Math.ceil(x));
  * @param {number} eff Effective against bonus (e.g. Bow vs Flying Unit)
  * @param {number} adv Color advantage bonus (red > green > blue)
  * @param {number} mit Damage mitigation value (comes from resist or defence)
- * @param {number} classModifier At this time, Neutral Staff has a 0.5x net damage reduction.
+ * @param {number} classModifier At this time, Colorless Staff has a 0.5x net damage reduction.
  * @param {number} bonusDamage = 0;       // From skills like Bonfire
  * @param {number} offensiveMult = 0.0;   // From skills like Glimmer
  * @param {number} mitigationMult = 0.0;  // From skills like Luna
@@ -78,7 +78,7 @@ const dmgFormula = (
 const hasWeaponBreaker = (hero: HeroInstance, context: Context) => {
   const heroBWeapon = getWeaponType(context.enemy);
   let necessaryBreaker =
-    replace(/(Red|Green|Blue|Neutral)\s/, '', heroBWeapon) + 'breaker';
+    replace(/(Red|Green|Blue|Colorless)\s/, '', heroBWeapon) + 'breaker';
   if (test(/Tome/, heroBWeapon)) {
     // R Tomebreaker, G Tomebreaker, B Tomebreaker
     necessaryBreaker = heroBWeapon[0] + ' ' + necessaryBreaker;
@@ -133,7 +133,7 @@ const doesFollowUp = (instanceA: HeroInstance, context: Context) => {
 
 // Healers do half-damage
 const classModifier = (instance: HeroInstance) =>
-  getWeaponType(instance) === 'Neutral Staff' &&
+  getWeaponType(instance) === 'Colorless Staff' &&
   !hasSkill(instance, 'PASSIVE_B', 'Wrathful Staff')
     ? 0.5
     : 1;
@@ -157,9 +157,9 @@ const advantageBonus = (heroA: HeroInstance, context: Context) => {
     (colorA === 'BLUE' && colorB === 'GREEN')
   ) {
     advantage = -1;
-  } else if (colorB === 'NEUTRAL' && test(/raven/, weaponA)) {
+  } else if (colorB === 'COLORLESS' && test(/raven/, weaponA)) {
     advantage = 1;
-  } else if (colorA === 'NEUTRAL' && test(/raven/, weaponB)) {
+  } else if (colorA === 'COLORLESS' && test(/raven/, weaponB)) {
     advantage = -1;
   }
   const passiveA = getSkillName(heroA, 'PASSIVE_A');
@@ -194,7 +194,7 @@ const effectiveBonus = (attacker: HeroInstance, context: Context) => {
   }
   const defenderMoveType = getMoveType(context.enemy);
   if (
-    getWeaponType(attacker) === 'Neutral Bow' &&
+    getWeaponType(attacker) === 'Colorless Bow' &&
     defenderMoveType === 'Flying'
   ) {
     return 1.5;

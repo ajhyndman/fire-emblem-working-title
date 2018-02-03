@@ -171,7 +171,7 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
     case 'Axe Users Only':
       return weaponType === 'Green Axe';
     case 'Bow Users Only':
-      return weaponType === 'Neutral Bow';
+      return weaponType === 'Colorless Bow';
     case 'Fliers Only':
       return moveType === 'Flying';
     case 'Cavalry Only':
@@ -192,13 +192,13 @@ const canInherit = curry((hero: Hero, skill: any): boolean => {
       return test(/Breath/, weaponType);
     case 'Staff Only':
     case 'Staff Users Only':
-      return weaponType === 'Neutral Staff';
+      return weaponType === 'Colorless Staff';
     case 'Excludes Staves':
     case 'Excludes Staff Users':
-      return weaponType !== 'Neutral Staff';
+      return weaponType !== 'Colorless Staff';
     case 'Excludes Colorless Weapons':
     case 'Excludes Colorless Weapon Users':
-      return !test(/Neutral/, weaponType);
+      return !test(/Colorless/, weaponType);
     case 'Excludes Blue Weapons':
     case 'Excludes Blue Weapon Users':
       return !test(/Blue/, weaponType);
@@ -346,7 +346,7 @@ export const getWeaponColor = (instance: HeroInstance) => {
     case 'Blue Breath':
       return 'BLUE';
     default:
-      return 'NEUTRAL';
+      return 'COLORLESS';
   }
 };
 

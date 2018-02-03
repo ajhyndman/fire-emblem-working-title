@@ -68,7 +68,7 @@ const unitList: Array<Hero> = [
     shortName: 'Cleric',
     name: 'Cleric (Xander GHB)',
     moveType: 'Infantry',
-    weaponType: 'Neutral Staff',
+    weaponType: 'Colorless Staff',
     skills: [
       {
         name: 'Gravity',

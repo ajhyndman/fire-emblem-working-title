@@ -3,7 +3,7 @@
     'shortName': 'Thief',
     'name': 'Thief ( GHB)',
     'moveType': 'Infantry',
-    'weaponType': 'Neutral Dagger',
+    'weaponType': 'Colorless Dagger',
     'skills': [
       {
         'name': 'Silver Dagger+',
@@ -67,7 +67,7 @@
     'shortName': 'Cleric',
     'name': 'Cleric ( GHB)',
     'moveType': 'Infantry',
-    'weaponType': 'Neutral Staff',
+    'weaponType': 'Colorless Staff',
     'skills': [
       {
         'name': 'Gravity',
@@ -227,7 +227,7 @@
     'shortName': 'Cavalier',
     'name': 'Bow Cavalier ( GHB)',
     'moveType': 'Cavalry',
-    'weaponType': 'Neutral Bow',
+    'weaponType': 'Colorless Bow',
     'skills': [
       {
         'name': 'Silver Bow+',
@@ -259,7 +259,7 @@
     'shortName': 'Troubadour',
     'name': 'Troubadour ( GHB)',
     'moveType': 'Cavalry',
-    'weaponType': 'Neutral Staff',
+    'weaponType': 'Colorless Staff',
     'skills': [
       {
         'name': 'Fear',
@@ -295,7 +295,7 @@
     'shortName': 'Bow Fighter',
     'name': 'Bow Fighter ( GHB)',
     'moveType': 'Infantry',
-    'weaponType': 'Neutral Bow',
+    'weaponType': 'Colorless Bow',
     'skills': [
       {
         'name': 'Silver Bow+',
