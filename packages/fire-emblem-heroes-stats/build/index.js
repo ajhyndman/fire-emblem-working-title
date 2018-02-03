@@ -37,6 +37,8 @@ const sanitizeEffectString = compose(
   trim,
   replace(/<br.*?>/g, ' '),
   replace(/\[\[.*?\]\]/g, ''),
+  replace(/\&gt\;/g, '>'),
+  replace(/\&lt\;/g, '<'),
 );
 
 const extractPrintouts = compose(
