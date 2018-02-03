@@ -42,6 +42,14 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install UTF character support
+          command: |
+            apt-get -y -qq update
+            apt-get install -y -qq locales locales-all
+            export LC_ALL="en_US.UTF-8"
+            export LANG="en_US.UTF-8"
+            export LANGUAGE="en_US.UTF-8"
+      - run:
           name: Install AWS CLI
           command: |
             apt-get -y -qq update
