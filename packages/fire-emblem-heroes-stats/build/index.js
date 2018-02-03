@@ -1,25 +1,19 @@
 import fs from 'fs';
 import {
-  assoc,
   compose,
   contains,
   equals,
   filter,
   head,
-  identity,
-  ifElse,
   indexBy,
   map,
   merge,
   not,
-  path,
   pick,
   prop,
-  propEq,
   range,
   replace,
   sortBy,
-  test,
   trim,
   values,
   without,
@@ -44,12 +38,6 @@ const sanitizeEffectString = compose(
   replace(/\[\[File.*?\]\]/g, ''),
   replace(/\&gt\;/g, '>'),
   replace(/\&lt\;/g, '<'),
-);
-
-const extractPrintouts = compose(
-  map(prop('printouts')),
-  values,
-  path(['query', 'results']),
 );
 
 const extractCargoResults = compose(
@@ -534,9 +522,7 @@ async function fetchSkills() {
             'damage(mt)': Number.parseInt(Might, 10),
             'range(rng)': Number.parseInt(Range, 10),
             effect: sanitizeEffectString(Effect),
-            'exclusive?': Boolean(Number.parseInt(Exclusive, 10))
-              ? 'Yes'
-              : 'No',
+            'exclusive?': Number.parseInt(Exclusive, 10) !== 0 ? 'Yes' : 'No',
             type: 'WEAPON',
             weaponType: WeaponClass,
           }),
@@ -747,33 +733,6 @@ function validate(heroes, skills) {
       console.warn('Warning: Skill is unobtainable: ', skill.name);
     }
   }
-}
-
-// Look at the weapons available to each hero to figure out weapon types.
-function skillsWithWeaponsTypes(heroes, skills) {
-  const skillsByName = indexBy(prop('name'), skills);
-  var weaponTypeByName = {};
-  for (let hero of heroes) {
-    // Breath weapons are not color-specific.
-    const heroWeaponType = test(/Breath/, hero.weaponType)
-      ? 'Breath'
-      : hero.weaponType;
-    for (let skill of hero.skills) {
-      const skillInfo = skillsByName[skill.name];
-      if (skillInfo != null && skillInfo.type === 'WEAPON') {
-        weaponTypeByName[skill.name] = heroWeaponType;
-      }
-    }
-  }
-  const withWeaponTypes = map(
-    ifElse(
-      propEq('type', 'WEAPON'),
-      skill => assoc('weaponType', weaponTypeByName[skill.name], skill),
-      identity,
-    ),
-    skills,
-  );
-  return withWeaponTypes;
 }
 
 // Fetch new data and write it to stats.json
