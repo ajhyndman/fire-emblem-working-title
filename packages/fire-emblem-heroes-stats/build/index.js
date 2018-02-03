@@ -36,7 +36,12 @@ const API_LIMIT = 2000;
 const sanitizeEffectString = compose(
   trim,
   replace(/<br.*?>/g, ' '),
-  replace(/\[\[.*?\]\]/g, ''),
+  // remove [[]] around links
+  replace(/\[\[[^\|]*?\|?(.*?)\]\]/g, '$1'),
+  // remove text before | in links
+  replace(/\[\[[^|]*\|(.*?)\]\]/g, '[[$1]]'),
+  // completely strip [[File:]] links
+  replace(/\[\[File.*?\]\]/g, ''),
   replace(/\&gt\;/g, '>'),
   replace(/\&lt\;/g, '<'),
 );
@@ -576,134 +581,80 @@ async function fetchHeroStats() {
 
 // Fetches detailed info for all skills
 async function fetchSkills() {
-  const weapons = await fetchAskApiQuery(`
-    [[Category:Weapons]]
-      |?Category
-      |?Cost1
-      |?Effect1
-      |?Is exclusive
-      |?Might1
-      |?Name1
-      |?Range1
-      |limit=${API_LIMIT}
-  `)
+  const weapons = await fetchApiQuery({
+    action: 'cargoquery',
+    format: 'json',
+    limit: API_LIMIT,
+    tables: 'Weapons',
+    fields: 'WeaponClass,WeaponName,Range,Cost,Effect,Might,Exclusive',
+    group_by: 'WeaponName',
+  })
     .then(
       compose(
+        sortBy(prop('name')),
         map(
           ({
-            Category,
-            Cost1,
-            Effect1,
-            'Is exclusive': isExclusive,
-            Might1,
-            Name1,
-            Range1,
-          }) => {
-            const categories = Category.filter(
-              ({ fulltext }) =>
-                !(
-                  fulltext === 'Category:Weapons' ||
-                  fulltext.includes('Legendary')
-                ),
-            );
-
-            const weaponType = (() => {
-              switch (head(categories).fulltext) {
-                case 'Category:Swords':
-                  return 'Red Sword';
-                case 'Category:Red Tomes':
-                  return 'Red Tome';
-                case 'Category:Red Breaths':
-                  return 'Red Breath';
-                case 'Category:Lances':
-                  return 'Blue Lance';
-                case 'Category:Blue Tomes':
-                  return 'Blue Tome';
-                case 'Category:Blue Breaths':
-                  return 'Blue Breath';
-                case 'Category:Axes':
-                  return 'Green Axe';
-                case 'Category:Green Tomes':
-                  return 'Green Tome';
-                case 'Category:Green Breaths':
-                  return 'Green Breath';
-                case 'Category:Bows':
-                  return 'Neutral Bow';
-                case 'Category:Daggers':
-                  return 'Neutral Dagger';
-                case 'Category:Staves':
-                  return 'Neutral Staff';
-              }
-            })();
-
-            const effect =
-              head(Effect1) !== undefined
-                ? sanitizeEffectString(head(Effect1))
-                : '-';
-
-            return {
-              name: head(Name1),
-              spCost: head(Cost1),
-              'damage(mt)': head(Might1),
-              'range(rng)': head(Range1),
-              effect,
-              'exclusive?': head(isExclusive) === 't' ? 'Yes' : 'No',
-              type: 'WEAPON',
-              weaponType,
-            };
-          },
+            WeaponName,
+            Cost,
+            Effect,
+            Exclusive,
+            Might,
+            Range,
+            WeaponClass,
+          }) => ({
+            name: WeaponName,
+            spCost: Number.parseInt(Cost, 10),
+            'damage(mt)': Number.parseInt(Might, 10),
+            'range(rng)': Number.parseInt(Range, 10),
+            effect: sanitizeEffectString(Effect),
+            'exclusive?': Boolean(Number.parseInt(Exclusive, 10))
+              ? 'Yes'
+              : 'No',
+            type: 'WEAPON',
+            weaponType: WeaponClass,
+          }),
         ),
-        extractPrintouts,
+        extractCargoResults,
       ),
     )
     .catch(error => {
       console.error('failed to parse weapon skill stats', error);
     });
 
-  const assists = await fetchAskApiQuery(`
-    [[Category: Assists]]
-      |?Cost1
-      |?Effect1
-      |?Has weapon restriction
-      |?Is exclusive
-      |?Name1
-      |?Range1
-      |limit=${API_LIMIT}
-  `)
+  const assists = await fetchApiQuery({
+    action: 'cargoquery',
+    format: 'json',
+    limit: API_LIMIT,
+    tables: 'Assists',
+    fields:
+      'Name,Cost,Effect,Range,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
+    group_by: 'Name',
+  })
     .then(
       compose(
         map(
           ({
-            Cost1,
-            Effect1,
-            'Has weapon restriction': weaponRestriction,
-            'Is exclusive': isExclusive,
-            Name1,
-            Range1,
+            Name,
+            Cost,
+            Effect,
+            MovementRestriction,
+            WeaponRestriction,
+            Exclusive,
+            Range,
           }) => {
-            const effect =
-              head(Effect1) !== undefined
-                ? sanitizeEffectString(head(Effect1))
-                : '-';
-
-            const inheritRestriction =
-              head(isExclusive) === 't'
-                ? 'Is exclusive'
-                : head(weaponRestriction) !== undefined
-                  ? head(weaponRestriction)
-                  : 'None';
-
             return {
-              name: head(Name1),
-              range: head(Range1),
-              effect,
-              spCost: head(Cost1),
-              inheritRestriction,
+              name: Name,
+              range: Number.parseInt(Range, 10),
+              effect: sanitizeEffectString(Effect),
+              exclusive: Boolean(Number.parseInt(Exclusive, 10)),
+              spCost: Number.parseInt(Cost, 10),
+              movementRestriction: MovementRestriction.split(','),
+              weaponRestriction: WeaponRestriction.split(','),
               type: 'ASSIST',
             };
           },
         ),
-        extractPrintouts,
+        extractCargoResults,
       ),
     )
     .catch(error => {
