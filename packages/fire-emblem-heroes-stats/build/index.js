@@ -27,7 +27,7 @@ import {
 } from 'ramda';
 
 import { baseStatToMaxStat } from './statGrowth';
-import { fetchAskApiQuery } from './fetch';
+import { fetchAskApiQuery, fetchApiQuery } from './fetch';
 import { CDN_HOST } from './constants';
 
 // None of the queries we are making should expect more than this many results.
@@ -45,6 +45,12 @@ const extractPrintouts = compose(
   map(prop('printouts')),
   values,
   path(['query', 'results']),
+);
+
+const extractCargoResults = compose(
+  map(prop('title')),
+  values,
+  prop('cargoquery'),
 );
 
 const truncateParenthetical = replace(/\((.).*\)/, '($1)');
@@ -704,41 +710,39 @@ async function fetchSkills() {
       console.error('failed to parse assist skill stats', error);
     });
 
-  const specials = await fetchAskApiQuery(`
-    [[Category: Specials]]
-      |?Cooldown1
-      |?Cost1
-      |?Effect1
-      |?Has weapon restriction
-      |?Name1
-      |limit=${ASK_API_LIMIT}
-  `)
+  const specials = await fetchApiQuery({
+    action: 'cargoquery',
+    format: 'json',
+    limit: API_LIMIT,
+    tables: 'Specials',
+    fields:
+      'Name,Cost,Cooldown,Effect,WeaponRestriction,MovementRestriction,Exclusive,SkillTier',
+    group_by: 'Name',
+  })
     .then(
       compose(
         map(
           ({
-            Cooldown1,
-            Cost1,
-            Effect1,
-            'Has weapon restriction': weaponRestriction,
-            Name1,
-          }) => {
-            const inheritRestriction =
-              head(weaponRestriction) !== undefined
-                ? head(weaponRestriction)
-                : 'None';
-
-            return {
-              name: head(Name1),
-              cooldown: head(Cooldown1),
-              effect: sanitizeEffectString(head(Effect1) || '-'),
-              spCost: head(Cost1),
-              inheritRestriction,
-              type: 'SPECIAL',
-            };
-          },
+            Name,
+            Cooldown,
+            Cost,
+            Effect,
+            Exclusive,
+            MovementRestriction,
+            // SkillTier,
+            WeaponRestriction,
+          }) => ({
+            name: Name,
+            cooldown: Number.parseInt(Cooldown, 10),
+            effect: sanitizeEffectString(Effect || '-'),
+            exclusive: Boolean(parseInt(Exclusive)),
+            spCost: Number.parseInt(Cost, 10),
+            movementRestriction: MovementRestriction.split(','),
+            weaponRestriction: WeaponRestriction.split(','),
+            type: 'SPECIAL',
+          }),
         ),
-        extractPrintouts,
+        extractCargoResults,
       ),
     )
     .catch(error => {
