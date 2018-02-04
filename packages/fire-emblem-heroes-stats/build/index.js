@@ -167,6 +167,7 @@ async function fetchHeroStats() {
       'HeroPassives.passiveC2Unlock',
       'HeroPassives.passiveC3Unlock',
     ].join(','),
+    group_by: 'Heroes._pageName',
     join_on: [
       'Heroes._pageName = HeroGrowthPoints._pageName',
       'Heroes._pageName = HeroWeapons._pageName',
