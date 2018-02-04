@@ -30029,7 +30029,7 @@
     },
     {
       "name": "Tharja (Winter's Envoy)",
-      "title": "&quot;Normal Girl&quot;",
+      "title": "\"Normal Girl\"",
       "origin": "Fire Emblem Awakening",
       "weaponType": "Red Tome",
       "moveType": "Armored",
@@ -37718,7 +37718,7 @@
     },
     {
       "name": "Swift Strike 2",
-      "effect": "If unit during battle.",
+      "effect": "If unit initiates combat, unit granted Spd/Res+4 during battle.",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -37731,7 +37731,7 @@
     },
     {
       "name": "Swift Strike 1",
-      "effect": "If unit during battle.",
+      "effect": "If unit initiates combat, unit granted Spd/Res+2 during battle.",
       "exclusive": false,
       "spCost": 120,
       "movementRestriction": [
@@ -37903,7 +37903,7 @@
     },
     {
       "name": "Swift Sparrow 2",
-      "effect": "If unit during battle.",
+      "effect": "If unit initiates combat, unit granted Atk/Spd+4 during battle.",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -37916,7 +37916,7 @@
     },
     {
       "name": "Swift Sparrow 1",
-      "effect": "If unit during battle.",
+      "effect": "If unit initiates combat, unit granted Atk/Spd+2 during battle.",
       "exclusive": false,
       "spCost": 120,
       "movementRestriction": [
@@ -37929,7 +37929,7 @@
     },
     {
       "name": "Svalinn Shield",
-      "effect": "Neutralizes &quot;effective against armored&quot; bonuses.",
+      "effect": "Neutralizes \"effective against armored\" bonuses.",
       "exclusive": false,
       "spCost": 200,
       "movementRestriction": [
@@ -38171,7 +38171,7 @@
     },
     {
       "name": "Grani's Shield",
-      "effect": "Neutralizes &quot;effective against cavalry&quot; bonuses.",
+      "effect": "Neutralizes \"effective against cavalry\" bonuses.",
       "exclusive": false,
       "spCost": 200,
       "movementRestriction": [
@@ -38407,7 +38407,7 @@
     },
     {
       "name": "Iote's Shield",
-      "effect": "Neutralizes &quot;effective against fliers&quot; bonuses.",
+      "effect": "Neutralizes \"effective against fliers\" bonuses.",
       "exclusive": false,
       "spCost": 200,
       "movementRestriction": [
@@ -39040,7 +39040,7 @@
     },
     {
       "name": "Vengeful Fighter 3",
-      "effect": "If unit's HP ≥ 50% and foe Special cooldown charge +1 per attack. (Does not stack.)",
+      "effect": "If unit's HP ≥ 50% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -39251,7 +39251,7 @@
     },
     {
       "name": "Vengeful Fighter 2",
-      "effect": "If unit's HP ≥ 70% and foe Special cooldown charge +1 per attack. (Does not stack.)",
+      "effect": "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 120,
       "movementRestriction": [
@@ -39266,7 +39266,7 @@
     },
     {
       "name": "Vengeful Fighter 1",
-      "effect": "If unit's HP ≥ 90% and foe Special cooldown charge +1 per attack. (Does not stack.)",
+      "effect": "If unit's HP ≥ 90% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 60,
       "movementRestriction": [
@@ -39508,7 +39508,7 @@
     },
     {
       "name": "Bold Fighter 1",
-      "effect": "If unit's HP = 100% and unit cooldown charge +1 per attack. (Does not stack.)",
+      "effect": "If unit's HP = 100% and unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 60,
       "movementRestriction": [
@@ -39523,7 +39523,7 @@
     },
     {
       "name": "Bold Fighter 2",
-      "effect": "If unit's HP ≥ 50% and unit cooldown charge +1 per attack. (Does not stack.)",
+      "effect": "If unit's HP ≥ 50% and unit initiates combat, unit makes a guaranteed follow-up attack.<Br>Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 120,
       "movementRestriction": [
@@ -39556,7 +39556,7 @@
     },
     {
       "name": "Bold Fighter 3",
-      "effect": "If unit cooldown charge +1 per attack. (Does not stack.)",
+      "effect": "If unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -43231,7 +43231,7 @@
     },
     {
       "name": "Iote's Shield",
-      "effect": "Neutralizes &quot;effective against fliers&quot; bonuses.",
+      "effect": "Neutralizes \"effective against fliers\" bonuses.",
       "type": "SEAL"
     },
     {
