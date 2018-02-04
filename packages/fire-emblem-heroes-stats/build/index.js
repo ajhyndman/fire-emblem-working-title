@@ -27,17 +27,18 @@ import { CDN_HOST } from './constants';
 // None of the queries we are making should expect more than this many results.
 const API_LIMIT = 2000;
 
-const sanitizeEffectString = compose(
+const sanitizeDescription = compose(
   trim,
   replace(/<br.*?>/g, ' '),
   // remove [[]] around links
-  replace(/\[\[[^\|]*?\|?(.*?)\]\]/g, '$1'),
+  replace(/\[\[[^\|\]]*?\|?(.*?)\]\]/g, '$1'),
   // remove text before | in links
-  replace(/\[\[[^|]*\|(.*?)\]\]/g, '[[$1]]'),
+  replace(/\[\[[^|\]]*\|(.*?)\]\]/g, '[[$1]]'),
   // completely strip [[File:]] links
   replace(/\[\[File.*?\]\]/g, ''),
   replace(/\&gt\;/g, '>'),
   replace(/\&lt\;/g, '<'),
+  replace(/\&quot\;/g, '"'),
 );
 
 const extractCargoResults = compose(
@@ -449,7 +450,7 @@ async function fetchHeroStats() {
 
             return {
               name: Name,
-              title: Title,
+              title: sanitizeDescription(Title),
               origin: Origin,
               weaponType: WeaponType,
               moveType: MoveType,
@@ -521,7 +522,7 @@ async function fetchSkills() {
             spCost: Number.parseInt(Cost, 10),
             'damage(mt)': Number.parseInt(Might, 10),
             'range(rng)': Number.parseInt(Range, 10),
-            effect: sanitizeEffectString(Effect),
+            effect: sanitizeDescription(Effect),
             'exclusive?': Number.parseInt(Exclusive, 10) !== 0 ? 'Yes' : 'No',
             type: 'WEAPON',
             weaponType: WeaponClass,
@@ -558,7 +559,7 @@ async function fetchSkills() {
             return {
               name: Name,
               range: Number.parseInt(Range, 10),
-              effect: sanitizeEffectString(Effect),
+              effect: sanitizeDescription(Effect),
               exclusive: Boolean(Number.parseInt(Exclusive, 10)),
               spCost: Number.parseInt(Cost, 10),
               movementRestriction: MovementRestriction.split(','),
@@ -598,7 +599,7 @@ async function fetchSkills() {
           }) => ({
             name: Name,
             cooldown: Number.parseInt(Cooldown, 10),
-            effect: sanitizeEffectString(Effect || '-'),
+            effect: sanitizeDescription(Effect || '-'),
             exclusive: Boolean(parseInt(Exclusive)),
             spCost: Number.parseInt(Cost, 10),
             movementRestriction: MovementRestriction.split(','),
@@ -643,7 +644,7 @@ async function fetchSkills() {
 
             return {
               name: Name,
-              effect: sanitizeEffectString(Effect),
+              effect: sanitizeDescription(Effect),
               exclusive: Boolean(Number.parseInt(Exclusive, 10)),
               spCost: Number.parseInt(SPCost, 10),
               movementRestriction: MovementRestriction.split(','),
@@ -675,7 +676,7 @@ async function fetchSkills() {
         filter(({ name }) => Boolean(name)),
         map(({ Name, Effect }) => ({
           name: Name,
-          effect: sanitizeEffectString(Effect),
+          effect: sanitizeDescription(Effect),
           // skillTier: Number.parseInt(SkillTier, 10),
           // movementRestriction: MovementRestriction.split(','),
           // weaponRestriction: WeaponRestriction.split(','),
