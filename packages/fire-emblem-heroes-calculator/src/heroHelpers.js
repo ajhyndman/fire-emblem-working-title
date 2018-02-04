@@ -33,6 +33,7 @@ import {
 import type {
   Hero,
   MoveType,
+  Skill,
   SkillType,
   WeaponType,
 } from 'fire-emblem-heroes-stats';
@@ -150,71 +151,31 @@ export function updateRarity(
   };
 }
 
-// skill is 'any' because some fields are weapon/passive specific
-const canInherit = curry((hero: Hero, skill: any): boolean => {
-  const moveType = hero.moveType;
-  const weaponType = hero.weaponType;
+const canInherit = curry((hero: Hero, skill: Skill): boolean => {
   if (propEq('exclusive?', 'Yes', skill)) {
     return false;
   }
-  // Unobtainable weapons (story only) currently have no weapon type.
-  // Hero has weaponType 'Red Breath' and weapon has weaponType 'Breath'
+
+  if (skill.type === 'WEAPON') {
+    // Hero has weaponType 'Red Breath' and weapon has weaponType 'Breath'
+    const weaponType = test(/Breath/, hero.weaponType)
+      ? 'Breath'
+      : hero.weaponType;
+    return weaponType === skill.weaponType;
+  }
+
+  if (skill.type === 'SEAL') {
+    // TODO: Seals have movement and weapon restrictions, too.
+    return true;
+  }
+
   if (
-    skill.type === 'WEAPON' &&
-    (skill.weaponType === undefined ||
-      (test(/Breath/, weaponType) ? 'Breath' : weaponType) !== skill.weaponType)
+    skill.movementRestriction.includes(hero.moveType) ||
+    skill.weaponRestriction.includes(hero.weaponType)
   ) {
     return false;
   }
-  const restriction = propOr('None', 'inheritRestriction', skill);
-  switch (restriction) {
-    case 'Axe Users Only':
-      return weaponType === 'Green Axe';
-    case 'Bow Users Only':
-      return weaponType === 'Colorless Bow';
-    case 'Fliers Only':
-      return moveType === 'Flying';
-    case 'Cavalry Only':
-      return moveType === 'Cavalry';
-    case 'Armored Only':
-      return moveType === 'Armored';
-    case 'Excludes Fliers':
-      return moveType !== 'Flying';
-    case 'Melee Weapons Only':
-    case 'Melee Weapon Users Only':
-      return test(/(Sword|Axe|Lance|Breath)/, weaponType);
-    case 'Sword, Lance, Axe Users Only':
-      return test(/(Sword|Axe|Lance)/, weaponType);
-    case 'Ranged Weapons Only':
-    case 'Ranged Weapon Users Only':
-      return test(/(Staff|Tome|Bow|Shuriken)/, weaponType);
-    case 'Breath Users Only':
-      return test(/Breath/, weaponType);
-    case 'Staff Only':
-    case 'Staff Users Only':
-      return weaponType === 'Colorless Staff';
-    case 'Excludes Staves':
-    case 'Excludes Staff Users':
-      return weaponType !== 'Colorless Staff';
-    case 'Excludes Colorless Weapons':
-    case 'Excludes Colorless Weapon Users':
-      return !test(/Colorless/, weaponType);
-    case 'Excludes Blue Weapons':
-    case 'Excludes Blue Weapon Users':
-      return !test(/Blue/, weaponType);
-    case 'Excludes Red Weapons':
-    case 'Excludes Red Weapon Users':
-      return !test(/Red/, weaponType);
-    case 'Excludes Green Weapons':
-    case 'Excludes Green Weapon Users':
-      return !test(/Green/, weaponType);
-    case 'Is exclusive':
-      return false;
-    case 'None':
-      return true;
-    default:
-    // console.log('Warning: unknown inherit restriction: ' + restriction);
-  }
+
   return true;
 });
 
