@@ -1,6 +1,6 @@
 {
   "name": "fire-emblem-heroes-stats",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "main": "dist/fire-emblem-heroes-stats.js",
   "author": "Andrew Hyndman <ajhyndman@hotmail.com>",
   "license": "MIT",
