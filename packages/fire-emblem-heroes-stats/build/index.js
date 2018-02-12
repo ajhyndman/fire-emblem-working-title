@@ -107,6 +107,7 @@ async function fetchHeroStats() {
       'SummonRarities',
       'RewardRarities',
       'ReleaseDate',
+      'PoolDate',
       'HeroGrowthPoints.HP',
       'HeroGrowthPoints.Atk',
       'HeroGrowthPoints.Spd',
@@ -194,6 +195,7 @@ async function fetchHeroStats() {
             RewardRarities,
             SummonRarities,
             ReleaseDate,
+            PoolDate,
 
             HP: hpGrowthPoints,
             Atk: atkGrowthPoints,
@@ -297,6 +299,15 @@ async function fetchHeroStats() {
             // Convert the release date into expected format.
             const releaseDate = ReleaseDate
               ? new Date(ReleaseDate).toLocaleDateString('en-NA', {
+                  timeZone: 'UTC',
+                  month: 'short',
+                  day: '2-digit',
+                  year: 'numeric',
+                })
+              : 'N/A';
+
+            const poolDate = PoolDate
+              ? new Date(PoolDate).toLocaleDateString('en-NA', {
                   timeZone: 'UTC',
                   month: 'short',
                   day: '2-digit',
@@ -457,6 +468,7 @@ async function fetchHeroStats() {
               moveType: MoveType,
               rarities,
               releaseDate,
+              poolDate,
               assets: {
                 portrait: {
                   '75px': `${CDN_HOST}/75px-Icon_Portrait_${Name}.png`,
