@@ -296,24 +296,18 @@ async function fetchHeroStats() {
                   ? `${minRarity}`
                   : `${minRarity}-${maxRarity}`;
 
-            // Convert the release date into expected format.
-            const releaseDate = ReleaseDate
-              ? new Date(ReleaseDate).toLocaleDateString('en-NA', {
-                  timeZone: 'UTC',
-                  month: 'short',
-                  day: '2-digit',
-                  year: 'numeric',
-                })
-              : 'N/A';
+            // Convert release dates into expected format.
+            const formatDate = timestamp =>
+              new Date(timestamp).toLocaleDateString('en-NA', {
+                timeZone: 'UTC',
+                month: 'short',
+                day: '2-digit',
+                year: 'numeric',
+              });
 
-            const poolDate = PoolDate
-              ? new Date(PoolDate).toLocaleDateString('en-NA', {
-                  timeZone: 'UTC',
-                  month: 'short',
-                  day: '2-digit',
-                  year: 'numeric',
-                })
-              : 'N/A';
+            const releaseDate = ReleaseDate ? formatDate(ReleaseDate) : 'N/A';
+
+            const poolDate = PoolDate ? formatDate(PoolDate) : 'N/A';
 
             // Reformat the hero's skills into a list.
             const passiveSkills = compose(
