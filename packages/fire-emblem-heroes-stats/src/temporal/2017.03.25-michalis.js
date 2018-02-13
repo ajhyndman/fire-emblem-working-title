@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Lance Flier (Michalis GHB)',
     moveType: 'Flying',
     weaponType: 'Blue Lance',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Lance+',
@@ -69,6 +71,8 @@ const unitList: Array<Hero> = [
     name: 'Michalis (Michalis GHB)',
     moveType: 'Flying',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Hauteclere',
@@ -123,6 +127,8 @@ const unitList: Array<Hero> = [
     name: 'Sword Flier (Michalis GHB)',
     moveType: 'Flying',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Sword+',
@@ -181,6 +187,8 @@ const unitList: Array<Hero> = [
     name: 'Sword Cavalier (Michalis GHB)',
     moveType: 'Cavalry',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Sword+',
@@ -235,6 +243,8 @@ const unitList: Array<Hero> = [
     name: 'Lance Fighter (Michalis GHB)',
     moveType: 'Infantry',
     weaponType: 'Blue Lance',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Heavy Spear+',

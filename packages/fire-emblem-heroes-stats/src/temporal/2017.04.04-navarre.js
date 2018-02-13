@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Navarre (Navarre GHB)',
     moveType: 'Infantry',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Killing Edge+',
@@ -65,6 +67,8 @@ const unitList: Array<Hero> = [
     name: 'Thief 1 (Navarre GHB)',
     moveType: 'Infantry',
     weaponType: 'Colorless Dagger',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Dagger+',
@@ -123,6 +127,8 @@ const unitList: Array<Hero> = [
     name: 'Thief 2 (Navarre GHB)',
     moveType: 'Infantry',
     weaponType: 'Colorless Dagger',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Rogue Dagger+',
@@ -181,6 +187,8 @@ const unitList: Array<Hero> = [
     name: 'Axe Fighter (Navarre GHB)',
     moveType: 'Infantry',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Hammer+',
@@ -239,6 +247,8 @@ const unitList: Array<Hero> = [
     name: 'Cleric (Navarre GHB)',
     moveType: 'Infantry',
     weaponType: 'Colorless Staff',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Panic',

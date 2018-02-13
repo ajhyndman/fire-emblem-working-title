@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Camus (Camus GHB)',
     moveType: 'Cavalry',
     weaponType: 'Blue Lance',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Gradivus',
@@ -65,6 +67,8 @@ const unitList: Array<Hero> = [
     name: 'Troubadour (Camus GHB)',
     moveType: 'Cavalry',
     weaponType: 'Colorless Staff',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Fear',
@@ -119,6 +123,8 @@ const unitList: Array<Hero> = [
     name: 'Red Cavalier (Camus GHB)',
     moveType: 'Cavalry',
     weaponType: 'Red Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Bolganone+',
@@ -177,6 +183,8 @@ const unitList: Array<Hero> = [
     name: 'Axe Cavalier 1 (Camus GHB)',
     moveType: 'Cavalry',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Axe+',
@@ -235,6 +243,8 @@ const unitList: Array<Hero> = [
     name: 'Axe Cavalier 2 (Camus GHB)',
     moveType: 'Cavalry',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Axe+',

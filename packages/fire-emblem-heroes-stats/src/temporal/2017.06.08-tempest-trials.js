@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Veronica (Tempest Trials)',
     moveType: 'Infantry',
     weaponType: 'Green Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Élivágar',

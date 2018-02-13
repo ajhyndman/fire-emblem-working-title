@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Robin (F) (Robin GHB)',
     moveType: 'Infantry',
     weaponType: 'Green Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Gronnwolf+',
@@ -65,6 +67,8 @@ const unitList: Array<Hero> = [
     name: 'Lance Fighter (Robin GHB)',
     moveType: 'Infantry',
     weaponType: 'Blue Lance',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Lance',
@@ -119,6 +123,8 @@ const unitList: Array<Hero> = [
     name: 'Red Mage (Robin GHB)',
     moveType: 'Infantry',
     weaponType: 'Red Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Bolganone',
@@ -173,6 +179,8 @@ const unitList: Array<Hero> = [
     name: 'Axe Fighter (Robin GHB)',
     moveType: 'Infantry',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Killer Axe',
@@ -227,6 +235,8 @@ const unitList: Array<Hero> = [
     name: 'Blue Mage (Robin GHB)',
     moveType: 'Infantry',
     weaponType: 'Blue Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Thoron',

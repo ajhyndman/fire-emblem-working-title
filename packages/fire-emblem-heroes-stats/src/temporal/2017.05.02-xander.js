@@ -15,6 +15,8 @@ const unitList: Array<Hero> = [
     name: 'Xander (Xander GHB)',
     moveType: 'Cavalry',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Siegfried',
@@ -69,6 +71,8 @@ const unitList: Array<Hero> = [
     name: 'Cleric (Xander GHB)',
     moveType: 'Infantry',
     weaponType: 'Colorless Staff',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Gravity',
@@ -127,6 +131,8 @@ const unitList: Array<Hero> = [
     name: 'Green Cavalier (Xander GHB)',
     moveType: 'Cavalry',
     weaponType: 'Green Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Gronnwolf+',
@@ -185,6 +191,8 @@ const unitList: Array<Hero> = [
     name: 'Lance Fighter (Xander GHB)',
     moveType: 'Infantry',
     weaponType: 'Blue Lance',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Killer Lance+',
@@ -239,6 +247,8 @@ const unitList: Array<Hero> = [
     name: 'Sword Fighter (Xander GHB)',
     moveType: 'Infantry',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Killing Edge+',

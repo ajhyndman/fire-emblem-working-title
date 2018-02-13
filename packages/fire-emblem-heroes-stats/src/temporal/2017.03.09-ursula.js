@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Ursula (Ursula GHB)',
     moveType: 'Cavalry',
     weaponType: 'Blue Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Blárwolf+',
@@ -65,6 +67,8 @@ const unitList: Array<Hero> = [
     name: 'Axe Knight (Ursula GHB)',
     moveType: 'Armored',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Axe+',
@@ -119,6 +123,8 @@ const unitList: Array<Hero> = [
     name: 'Sword Cavalier (Ursula GHB)',
     moveType: 'Cavalry',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Sword+',
@@ -177,6 +183,8 @@ const unitList: Array<Hero> = [
     name: 'Thief 1 (Ursula GHB)',
     moveType: 'Infantry',
     weaponType: 'Colorless Dagger',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Poison Dagger+',
@@ -231,6 +239,8 @@ const unitList: Array<Hero> = [
     name: 'Thief 2 (Ursula GHB)',
     moveType: 'Infantry',
     weaponType: 'Colorless Dagger',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Poison Dagger+',

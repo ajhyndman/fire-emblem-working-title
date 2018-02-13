@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Lloyd (Lloyd GHB)',
     moveType: 'Infantry',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Regal Blade',
@@ -65,6 +67,8 @@ const unitList: Array<Hero> = [
     name: 'Axe Flier (Lloyd GHB)',
     moveType: 'Flying',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Axe+',
@@ -119,6 +123,8 @@ const unitList: Array<Hero> = [
     name: 'Lance Cavalier (Lloyd GHB)',
     moveType: 'Cavalry',
     weaponType: 'Blue Lance',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Lance+',
@@ -177,6 +183,8 @@ const unitList: Array<Hero> = [
     name: 'Bow Cavalier (Lloyd GHB)',
     moveType: 'Cavalry',
     weaponType: 'Colorless Bow',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Bow+',
@@ -231,6 +239,8 @@ const unitList: Array<Hero> = [
     name: 'Blue Mage (Lloyd GHB)',
     moveType: 'Infantry',
     weaponType: 'Blue Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Thoron+',

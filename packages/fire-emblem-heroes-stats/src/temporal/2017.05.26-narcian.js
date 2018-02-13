@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Narcian (Narcian GHB)',
     moveType: 'Flying',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Emerald Axe+',
@@ -65,6 +67,8 @@ const unitList: Array<Hero> = [
     name: 'Bow Fighter (Narcian GHB)',
     moveType: 'Infantry',
     weaponType: 'Colorless Bow',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Brave Bow',
@@ -119,6 +123,8 @@ const unitList: Array<Hero> = [
     name: 'Blue Cavalier (Narcian GHB)',
     moveType: 'Cavalry',
     weaponType: 'Blue Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Thoron',
@@ -173,6 +179,8 @@ const unitList: Array<Hero> = [
     name: 'Green Cavalier (Narcian GHB)',
     moveType: 'Cavalry',
     weaponType: 'Green Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Gronnraven',
@@ -223,6 +231,8 @@ const unitList: Array<Hero> = [
     name: 'Sword Fighter (Narcian GHB)',
     moveType: 'Infantry',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Silver Sword',

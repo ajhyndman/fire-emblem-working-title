@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Blue Mage (Zephiel GHB)',
     moveType: 'Infantry',
     weaponType: 'Blue Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Thoron+',
@@ -65,6 +67,8 @@ const unitList: Array<Hero> = [
     name: 'Axe Knight (Zephiel GHB)',
     moveType: 'Armored',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Brave Axe+',
@@ -123,6 +127,8 @@ const unitList: Array<Hero> = [
     name: 'Zephiel (Zephiel GHB)',
     moveType: 'Armored',
     weaponType: 'Red Sword',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Eckesachs',
@@ -177,6 +183,8 @@ const unitList: Array<Hero> = [
     name: 'Lance Knight (Zephiel GHB)',
     moveType: 'Armored',
     weaponType: 'Blue Lance',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Brave Lance+',
@@ -235,6 +243,8 @@ const unitList: Array<Hero> = [
     name: 'Red Mage (Zephiel GHB)',
     moveType: 'Infantry',
     weaponType: 'Red Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Bolganone+',

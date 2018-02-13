@@ -11,6 +11,8 @@ const unitList: Array<Hero> = [
     name: 'Legion 1 (Legion GHB)',
     moveType: 'Infantry',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: "Legion's Axe+",
@@ -69,6 +71,8 @@ const unitList: Array<Hero> = [
     name: 'Legion 2 (Legion GHB)',
     moveType: 'Infantry',
     weaponType: 'Green Axe',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: "Legion's Axe+",
@@ -127,6 +131,8 @@ const unitList: Array<Hero> = [
     name: 'Red Mage (Legion GHB)',
     moveType: 'Infantry',
     weaponType: 'Red Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Bolganone+',
@@ -181,6 +187,8 @@ const unitList: Array<Hero> = [
     name: 'Bow Fighter (Legion GHB)',
     moveType: 'Infantry',
     weaponType: 'Colorless Bow',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Brave Bow+',
@@ -235,6 +243,8 @@ const unitList: Array<Hero> = [
     name: 'Blue Cavalier (Legion GHB)',
     moveType: 'Cavalry',
     weaponType: 'Blue Tome',
+    releaseDate: 'N/A',
+    poolDate: 'N/A',
     skills: [
       {
         name: 'Thoron+',
