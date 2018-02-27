@@ -509,7 +509,7 @@ async function fetchSkills() {
     format: 'json',
     limit: API_LIMIT,
     tables: 'Weapons',
-    fields: 'WeaponClass,WeaponName,Range,Cost,Effect,Might,Exclusive',
+    fields: 'WeaponClass,WeaponName,WeaponRange,Cost,Effect,Might,Exclusive',
     group_by: 'WeaponName',
   })
     .then(
@@ -522,13 +522,13 @@ async function fetchSkills() {
             Effect,
             Exclusive,
             Might,
-            Range,
+            WeaponRange,
             WeaponClass,
           }) => ({
             name: WeaponName,
             spCost: Number.parseInt(Cost, 10),
             'damage(mt)': Number.parseInt(Might, 10),
-            'range(rng)': Number.parseInt(Range, 10),
+            'range(rng)': Number.parseInt(WeaponRange, 10),
             effect: sanitizeDescription(Effect),
             'exclusive?': Number.parseInt(Exclusive, 10) === 1 ? 'Yes' : 'No',
             type: 'WEAPON',
@@ -548,8 +548,8 @@ async function fetchSkills() {
     limit: API_LIMIT,
     tables: 'Assists',
     fields:
-      '_pageName=Name,Cost,Effect,Range,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
-    group_by: '_pageName',
+      'Name,Cost,Effect,Range,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
+    group_by: 'Name',
   })
     .then(
       compose(
