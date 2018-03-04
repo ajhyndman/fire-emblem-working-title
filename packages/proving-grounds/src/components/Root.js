@@ -26,7 +26,7 @@ type Props = {
 
 export const panelHeight = 212;
 
-const backgroundUrl = 'Bg_WorldMap2.png';
+const backgroundUrl = 'Bg_WorldMap2.jpg';
 
 class Root extends React.Component {
   props: Props;
