@@ -1,5 +1,7 @@
 {
-    "name": "",
+    "name": "Proving Grounds — Fire Emblem: Heroes",
+    "short_name": "Proving Grounds",
+    "description": "The authoritative Fire Emblem: Heroes combat simulator",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -12,6 +14,7 @@
             "type": "image/png"
         }
     ],
+    "start_url": "/",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
