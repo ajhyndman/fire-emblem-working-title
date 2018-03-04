@@ -33,6 +33,10 @@ class Root extends React.Component {
   searchInput: ReactClass<*>;
 
   componentDidMount() {
+    if (navigator !== undefined && navigator.serviceWorker !== undefined) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+
     window.document.onkeydown = event => {
       if (
         event.getModifierState('Alt') ||

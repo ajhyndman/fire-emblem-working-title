@@ -16,7 +16,7 @@
     "lint": "eslint src/**/*.js pages/**/*.js",
     "prettier": "prettier --single-quote --trailing-comma=all --write src/**/*.js",
     "stamp-deploy": "echo \"export const deployTimestamp = '$(date -I)';\" > deployTimestamp.js",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "storybook": "start-storybook -p 6006 -s .",
     "sync-static": "aws s3 sync ./static/cdn/ s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public",
     "tape": "tape -r babel-register tests/**/*.js",
@@ -33,6 +33,7 @@
     "eslint-plugin-prettier": "^2.2.0",
     "now": "9.2.7",
     "prettier": "^1.7.4",
+    "sw-precache-webpack-plugin": "0.9.1",
     "tape": "^4.6.3"
   },
   "dependencies": {
