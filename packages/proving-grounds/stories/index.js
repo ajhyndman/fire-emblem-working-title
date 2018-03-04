@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { action, storiesOf } from '@kadira/storybook';
+import { action, storiesOf } from '@storybook/react';
 import { drop } from 'ramda';
 import { withReducer, withState } from 'recompose';
 import { getHero } from 'fire-emblem-heroes-stats';

@@ -9,6 +9,8 @@
 .*/node_modules/typechecker
 .*/node_modules/npmconf
 .*/node_modules/babel-plugin-transform-react-remove-prop-types
+.*/node_modules/radium
+.*/node_modules/react-style-proptype
 
 [include]
 
