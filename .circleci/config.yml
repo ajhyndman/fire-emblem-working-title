@@ -39,14 +39,12 @@ jobs:
   publish-static:
     docker:
       - image: node:latest
+    environment:
+      - LC_ALL: "C.UTF-8"
+      - LANG: "C.UTF-8"
+      - LANGUAGE: "C.UTF-8"
     steps:
       - checkout
-      - run:
-          name: Install UTF character support
-          command: |
-            export LC_ALL="C.UTF-8"
-            export LANG="C.UTF-8"
-            export LANGUAGE="C.UTF-8"
       - run:
           name: Install AWS CLI
           command: |
