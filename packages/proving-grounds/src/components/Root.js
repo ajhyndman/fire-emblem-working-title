@@ -26,13 +26,17 @@ type Props = {
 
 export const panelHeight = 212;
 
-const backgroundUrl = 'Bg_WorldMap2.png';
+const backgroundUrl = 'Bg_WorldMap2.jpg';
 
 class Root extends React.Component {
   props: Props;
   searchInput: ReactClass<*>;
 
   componentDidMount() {
+    if (navigator !== undefined && navigator.serviceWorker !== undefined) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+
     window.document.onkeydown = event => {
       if (
         event.getModifierState('Alt') ||
