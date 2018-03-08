@@ -1,8 +1,8 @@
-// @flow
+/* eslint-disable flowtype/require-valid-file-annotation */
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
-  webpack: (config: Object, { dev }: { dev: boolean }) => {
+  webpack: (config, { dev }) => {
     if (dev) {
       return config;
     }
