@@ -548,7 +548,7 @@ async function fetchSkills() {
     limit: API_LIMIT,
     tables: 'Assists',
     fields:
-      'Name,Cost,Effect,Range,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
+      'Name,Cost,Effect,AssistRange,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
     group_by: 'Name',
   })
     .then(
@@ -561,11 +561,11 @@ async function fetchSkills() {
             MovementRestriction,
             WeaponRestriction,
             Exclusive,
-            Range,
+            AssistRange,
           }) => {
             return {
               name: Name,
-              range: Number.parseInt(Range, 10),
+              range: Number.parseInt(AssistRange, 10),
               effect: sanitizeDescription(Effect),
               exclusive: Boolean(Number.parseInt(Exclusive, 10)),
               spCost: Number.parseInt(Cost, 10),
