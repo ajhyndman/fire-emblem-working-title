@@ -36106,6 +36106,16 @@
       "weaponType": "Colorless Bow"
     },
     {
+      "name": "Silver Bow+",
+      "spCost": 300,
+      "damage(mt)": 13,
+      "range(rng)": 2,
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Colorless Bow"
+    },
+    {
       "name": "Silver Dagger",
       "spCost": 200,
       "damage(mt)": 7,
@@ -36176,6 +36186,16 @@
       "weaponType": "Green Axe"
     },
     {
+      "name": "Skadi",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Grants Spd+3. At the start of turn 3, foes within 3 columns centered on unit take 10 damage and bonuses on those foes become penalties through their next actions.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Colorless Bow"
+    },
+    {
       "name": "Slaying Axe",
       "spCost": 200,
       "damage(mt)": 10,
@@ -36194,6 +36214,26 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Axe"
+    },
+    {
+      "name": "Slaying Bow",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Colorless Bow"
+    },
+    {
+      "name": "Slaying Bow+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Accelerates Special trigger (cooldown count-1).",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Colorless Bow"
     },
     {
       "name": "Slaying Edge",
@@ -36354,6 +36394,16 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Axe"
+    },
+    {
+      "name": "Steel Bow",
+      "spCost": 100,
+      "damage(mt)": 6,
+      "range(rng)": 2,
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": "Colorless Bow"
     },
     {
       "name": "Steel Dagger",
@@ -38044,8 +38094,8 @@
       "type": "SPECIAL"
     },
     {
-      "name": "HP Res 1",
-      "effect": "Grants HP+3, Res+1.",
+      "name": "HP Def 1",
+      "effect": "Grants HP+3, Def+1.",
       "exclusive": false,
       "spCost": 100,
       "movementRestriction": [
@@ -39694,6 +39744,75 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Dazzling Staff 1",
+      "effect": "If unit has 100% HP at the start of combat, the enemy cannot counterattack.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "Blue Lance",
+        "Green Axe",
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Red Breath",
+        "Blue Breath",
+        "Green Breath",
+        "Colorless Bow",
+        "Colorless Dagger"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dazzling Staff 2",
+      "effect": "If unit has ≥ 50% HP at the start of combat, the enemy cannot counterattack.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "Blue Lance",
+        "Green Axe",
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Red Breath",
+        "Blue Breath",
+        "Green Breath",
+        "Colorless Bow",
+        "Colorless Dagger"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dazzling Staff 3",
+      "effect": "The enemy cannot counterattack.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "Blue Lance",
+        "Green Axe",
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Red Breath",
+        "Blue Breath",
+        "Green Breath",
+        "Colorless Bow",
+        "Colorless Dagger"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Death Blow 1",
       "effect": "Grants Atk+2 during combat if unit initiates the attack.",
       "exclusive": false,
@@ -40867,6 +40986,30 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "G Tome Valor 3",
+      "effect": "If unit survives, all green tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "Blue Lance",
+        "Green Axe",
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Red Breath",
+        "Blue Breath",
+        "Green Breath",
+        "Colorless Bow",
+        "Colorless Dagger",
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "G Tomebreaker 1",
       "effect": "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
       "exclusive": false,
@@ -41387,17 +41530,19 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP Def 1",
-      "effect": "Grants HP+3, Def+1.",
+      "name": "Armor March 1",
+      "effect": "If unit has 100% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
       "exclusive": false,
-      "spCost": 100,
+      "spCost": 60,
       "movementRestriction": [
-        ""
+        "Infantry",
+        "Cavalry",
+        "Flying"
       ],
       "weaponRestriction": [
         ""
       ],
-      "type": "PASSIVE_A"
+      "type": "PASSIVE_C"
     },
     {
       "name": "HP Def 2",
@@ -41413,19 +41558,17 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Armor March 1",
-      "effect": "If unit has 100% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
+      "name": "HP Res 1",
+      "effect": "Grants HP+3, Res+1.",
       "exclusive": false,
-      "spCost": 60,
+      "spCost": 100,
       "movementRestriction": [
-        "Infantry",
-        "Cavalry",
-        "Flying"
+        ""
       ],
       "weaponRestriction": [
         ""
       ],
-      "type": "PASSIVE_C"
+      "type": "PASSIVE_A"
     },
     {
       "name": "HP Res 2",
