@@ -4585,7 +4585,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "Feb 22, 2018",
-      "poolDate": "N/A",
+      "poolDate": "Mar 09, 2018",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Celica (Fallen Heroes).png",
@@ -5236,6 +5236,137 @@
         }
       },
       "shortName": "Chrom (S)"
+    },
+    {
+      "name": "Chrom (The Branded King)",
+      "title": "Knight Exalt",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Red Sword",
+      "moveType": "Cavalry",
+      "rarities": "5",
+      "releaseDate": "Mar 09, 2018",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Chrom (The Branded King).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Chrom (The Branded King).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Chrom (The Branded King).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Sword",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Sealed Falchion",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "New Moon",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Luna",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Aether",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Fury 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fury 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Fury 3",
+          "rarity": 5
+        },
+        {
+          "name": "Chill Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Chill Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Chill Def 3",
+          "rarity": 5
+        },
+        {
+          "name": "Sword Valor 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Sword Valor 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Sword Valor 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 19,
+            "atk": 9,
+            "spd": 6,
+            "def": 8,
+            "res": 4
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              37,
+              41,
+              44
+            ],
+            "atk": [
+              34,
+              37,
+              40
+            ],
+            "spd": [
+              24,
+              28,
+              31
+            ],
+            "def": [
+              31,
+              34,
+              37
+            ],
+            "res": [
+              13,
+              17,
+              20
+            ]
+          }
+        }
+      },
+      "shortName": "Chrom (T)"
     },
     {
       "name": "Chrom (Winter's Envoy)",
@@ -10880,6 +11011,145 @@
       }
     },
     {
+      "name": "Gerome",
+      "title": "Masked Rider",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Green Axe",
+      "moveType": "Flying",
+      "rarities": "4-5",
+      "releaseDate": "N/A",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Gerome.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Gerome.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Gerome.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Axe",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Poleaxe",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Poleaxe+",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Rally Defense",
+          "default": 4,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Atk/Def",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Fortress Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortress Def 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortress Def 3",
+          "rarity": 4
+        },
+        {
+          "name": "Hit and Run",
+          "rarity": 4
+        }
+      ],
+      "stats": {
+        "1": {
+          "4": {
+            "hp": 18,
+            "atk": 10,
+            "spd": 5,
+            "def": 8,
+            "res": 3
+          },
+          "5": {
+            "hp": 19,
+            "atk": 10,
+            "spd": 6,
+            "def": 8,
+            "res": 4
+          }
+        },
+        "40": {
+          "4": {
+            "hp": [
+              39,
+              42,
+              45
+            ],
+            "atk": [
+              33,
+              36,
+              39
+            ],
+            "spd": [
+              20,
+              23,
+              26
+            ],
+            "def": [
+              29,
+              32,
+              35
+            ],
+            "res": [
+              14,
+              17,
+              20
+            ]
+          },
+          "5": {
+            "hp": [
+              42,
+              45,
+              48
+            ],
+            "atk": [
+              35,
+              38,
+              41
+            ],
+            "spd": [
+              22,
+              25,
+              29
+            ],
+            "def": [
+              31,
+              34,
+              37
+            ],
+            "res": [
+              16,
+              19,
+              22
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Gordin",
       "title": "Altean Archer",
       "origin": "Fire Emblem: Mystery of the Emblem",
@@ -11949,7 +12219,7 @@
       "moveType": "Armored",
       "rarities": "5",
       "releaseDate": "Feb 22, 2018",
-      "poolDate": "N/A",
+      "poolDate": "Mar 09, 2018",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Hardin (Fallen Heroes).png",
@@ -20648,6 +20918,246 @@
       }
     },
     {
+      "name": "Morgan (F)",
+      "title": "Lass from Afar",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Blue Tome",
+      "moveType": "Flying",
+      "rarities": "5",
+      "releaseDate": "Mar 09, 2018",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Morgan (F).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Morgan (F).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Morgan (F).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Thunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Elthunder",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blárserpent",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Blárserpent+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Iceberg",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Warding Stance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Mirror Stance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Mirror Stance 2",
+          "rarity": 5
+        },
+        {
+          "name": "Guard 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Guard 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Guard 3",
+          "rarity": 5
+        },
+        {
+          "name": "Atk Ploy 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Ploy 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Ploy 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 8,
+            "spd": 6,
+            "def": 3,
+            "res": 9
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              34,
+              37,
+              41
+            ],
+            "atk": [
+              31,
+              34,
+              37
+            ],
+            "spd": [
+              27,
+              30,
+              33
+            ],
+            "def": [
+              12,
+              16,
+              19
+            ],
+            "res": [
+              30,
+              33,
+              36
+            ]
+          }
+        }
+      },
+      "shortName": "Morgan (F)"
+    },
+    {
+      "name": "Morgan (M)",
+      "title": "Lad from Afar",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Red Tome",
+      "moveType": "Infantry",
+      "rarities": "5",
+      "releaseDate": "Mar 09, 2018",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Morgan (M).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Morgan (M).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Morgan (M).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Flux",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Ruin",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Fenrir",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Grima's Truth",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dragon Fang",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Dull Ranged 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Dull Ranged 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Dull Ranged 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Def Res 2",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 8,
+            "def": 5,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              34,
+              37,
+              41
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              17,
+              20,
+              23
+            ],
+            "res": [
+              23,
+              26,
+              30
+            ]
+          }
+        }
+      },
+      "shortName": "Morgan (M)"
+    },
+    {
       "name": "Myrrh",
       "title": "Great Dragon",
       "origin": "Fire Emblem: The Sacred Stones",
@@ -25021,7 +25531,7 @@
       "moveType": "Armored",
       "rarities": "5",
       "releaseDate": "Feb 22, 2018",
-      "poolDate": "N/A",
+      "poolDate": "Mar 09, 2018",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Robin (M) (Fallen Heroes).png",
@@ -33100,47 +33610,47 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Sword"
+      "weaponType": ""
     },
     {
       "name": "Armorslayer+",
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Sword"
+      "weaponType": ""
     },
     {
       "name": "Armorsmasher",
       "spCost": 200,
       "damage(mt)": 10,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Sword"
+      "weaponType": ""
     },
     {
       "name": "Armorsmasher+",
       "spCost": 300,
       "damage(mt)": 14,
       "range(rng)": 1,
-      "effect": "Effective against armored foes.",
+      "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Sword"
+      "weaponType": ""
     },
     {
       "name": "Assassin's Bow",
       "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  If target has a dagger, it can't make a follow-up attack and this unit will.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -33150,7 +33660,7 @@
       "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  If target has a dagger, it can't make a follow-up attack and this unit will.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  If target has a dagger, it can't make a follow-up attack and this unit will.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -33396,24 +33906,44 @@
       "weaponType": "Blue Tome"
     },
     {
+      "name": "Blárserpent",
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": ""
+    },
+    {
+      "name": "Blárserpent+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff.",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": ""
+    },
+    {
       "name": "Blárwolf",
       "spCost": 200,
       "damage(mt)": 6,
       "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Tome"
+      "weaponType": ""
     },
     {
       "name": "Blárwolf+",
       "spCost": 300,
       "damage(mt)": 10,
       "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Tome"
+      "weaponType": ""
     },
     {
       "name": "Bolganone",
@@ -33460,7 +33990,7 @@
       "spCost": 200,
       "damage(mt)": 4,
       "range(rng)": 2,
-      "effect": "Spd-5. Effective against flying units.  Attacks twice if unit initiates combat.",
+      "effect": "Spd-5. Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Attacks twice if unit initiates combat.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -33470,7 +34000,7 @@
       "spCost": 300,
       "damage(mt)": 7,
       "range(rng)": 2,
-      "effect": "Spd-5. Effective against flying units.  Attacks twice if unit initiates combat.",
+      "effect": "Spd-5. Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Attacks twice if unit initiates combat.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -33640,7 +34170,7 @@
       "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
-      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units.",
+      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -33650,7 +34180,7 @@
       "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 2,
-      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units.",
+      "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -33660,7 +34190,7 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers.",
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -33670,7 +34200,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers.",
+      "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -33850,7 +34380,7 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Effective against dragons.  Foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
+      "effect": "Effective against dragons. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> Foe",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -33950,10 +34480,10 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Effective against flying units.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Green Tome"
+      "weaponType": ""
     },
     {
       "name": "Expiration",
@@ -33970,7 +34500,7 @@
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Effective against dragons.  At the start of every third turn, unit recovers 10 HP.",
+      "effect": "Effective against dragons. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> At",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Sword"
@@ -34070,7 +34600,7 @@
       "spCost": 200,
       "damage(mt)": 7,
       "range(rng)": 2,
-      "effect": "Effective against fliers.  Unit and enemies cannot use counterattacks.",
+      "effect": "Effective against fliers. <span style=\"position: relative; top: -1px\"></span>  Unit and enemies cannot use counterattacks.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34080,7 +34610,7 @@
       "spCost": 300,
       "damage(mt)": 11,
       "range(rng)": 2,
-      "effect": "Effective against fliers.  Unit and enemies cannot use counterattacks.",
+      "effect": "Effective against fliers. <span style=\"position: relative; top: -1px\"></span>  Unit and enemies cannot use counterattacks.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34190,7 +34720,7 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  Unit can pass though foes if own HP ≥ 50%.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Unit can pass though foes if own HP ≥ 50%.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34240,7 +34770,7 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against flying foes.  If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+      "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34250,7 +34780,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Effective against flying foes.  If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+      "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34324,6 +34854,16 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Tome"
+    },
+    {
+      "name": "Grima's Truth",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Grants Def+3. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd+5 to unit and allies within 2 spaces for 1 turn.",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": ""
     },
     {
       "name": "Grimoire",
@@ -34400,27 +34940,27 @@
       "spCost": 200,
       "damage(mt)": 6,
       "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Tome"
+      "weaponType": ""
     },
     {
       "name": "Gronnwolf+",
       "spCost": 300,
       "damage(mt)": 10,
       "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Tome"
+      "weaponType": ""
     },
     {
       "name": "Guard Bow",
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34430,7 +34970,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Effective against flying foes.  Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+      "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34460,7 +35000,7 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against flying foes . Grants Def/Res+2 during combat to allies within 2 spaces.",
+      "effect": "Effective against flying foes <span style=\"position: relative; top: -1px\"></span> . Grants Def/Res+2 during combat to allies within 2 spaces.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34470,7 +35010,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Effective against flying foes . Grants Def/Res+2 during combat to allies within 2 spaces.",
+      "effect": "Effective against flying foes <span style=\"position: relative; top: -1px\"></span> . Grants Def/Res+2 during combat to allies within 2 spaces.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34480,20 +35020,20 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": ""
     },
     {
       "name": "Hammer+",
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": ""
     },
     {
       "name": "Handbell",
@@ -34530,20 +35070,20 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Lance"
+      "weaponType": ""
     },
     {
       "name": "Heavy Spear+",
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Lance"
+      "weaponType": ""
     },
     {
       "name": "Hibiscus Tome",
@@ -34590,7 +35130,7 @@
       "spCost": 50,
       "damage(mt)": 4,
       "range(rng)": 2,
-      "effect": "Effective against flying units.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34680,60 +35220,60 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against cavalry foes.",
+      "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Tome"
+      "weaponType": ""
     },
     {
       "name": "Keen Blárwolf+",
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Effective against cavalry foes.",
+      "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Tome"
+      "weaponType": ""
     },
     {
       "name": "Keen Gronnwolf",
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against cavalry foes.",
+      "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Tome"
+      "weaponType": ""
     },
     {
       "name": "Keen Gronnwolf+",
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Effective against cavalry foes.",
+      "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Tome"
+      "weaponType": ""
     },
     {
       "name": "Keen Rauðrwolf",
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against cavalry foes.",
+      "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Tome"
+      "weaponType": ""
     },
     {
       "name": "Keen Rauðrwolf+",
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Effective against cavalry foes.",
+      "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Tome"
+      "weaponType": ""
     },
     {
       "name": "Killer Axe",
@@ -34760,7 +35300,7 @@
       "spCost": 200,
       "damage(mt)": 5,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1).",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34770,7 +35310,7 @@
       "spCost": 300,
       "damage(mt)": 9,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1).",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Accelerates Special trigger (cooldown count-1).",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34820,20 +35360,20 @@
       "spCost": 200,
       "damage(mt)": 5,
       "range(rng)": 2,
-      "effect": "Effective against magic foes.  After combat, if unit attacked and if foe uses magic, inflicts Def/Res-5 on foe through its next action.",
+      "effect": "Effective against magic foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span><span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span><span style=\"position:relative;to",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Colorless Dagger"
+      "weaponType": ""
     },
     {
       "name": "Kitty Paddle+",
       "spCost": 300,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against magic foes.  After combat, if unit attacked and if foe uses magic, inflicts Def/Res-7 on foe through its next action.",
+      "effect": "Effective against magic foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span><span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span><span style=\"position:relative;to",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Colorless Dagger"
+      "weaponType": ""
     },
     {
       "name": "Laevatein (Weapon)",
@@ -34970,7 +35510,7 @@
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "Effective against flying foes.  After combat, if unit attacked, bonuses on all foes within 2 spaces of target become penalties through foes' next actions.",
+      "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, bonuses on all foes within 2 spaces of target become penalties through foes' next actions.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34980,7 +35520,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "Effective against flying foes.  After combat, if unit attacked, bonuses on all foes within 2 spaces of target become penalties through foes' next actions.",
+      "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, bonuses on all foes within 2 spaces of target become penalties through foes' next actions.",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -34990,7 +35530,7 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -35010,7 +35550,7 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Effective against dragons.  Grants Def/Res+2 when this unit is attacked.",
+      "effect": "Effective against dragons. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> Gra",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -35030,7 +35570,7 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -35100,7 +35640,7 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Effective against flying units.  Grants Res+4 during combat if initiating attack.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>  Grants Res+4 during combat if initiating attack.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -35120,20 +35660,40 @@
       "spCost": 200,
       "damage(mt)": 2,
       "range(rng)": 2,
-      "effect": "Effective against infantry foes.  After combat, if unit attacked, inflicts Def/Res-4 on infantry foe through its next action.",
+      "effect": "Effective against infantry foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, inflicts Def/Res-4 on infantry foe through its next action.",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Colorless Dagger"
+      "weaponType": ""
     },
     {
       "name": "Poison Dagger+",
       "spCost": 300,
       "damage(mt)": 5,
       "range(rng)": 2,
-      "effect": "Effective against infantry foes.  After combat, if unit attacked, inflicts Def/Res-6 on infantry foe through its next action.",
+      "effect": "Effective against infantry foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, inflicts Def/Res-6 on infantry foe through its next action.",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Colorless Dagger"
+      "weaponType": ""
+    },
+    {
+      "name": "Poleaxe",
+      "spCost": 200,
+      "damage(mt)": 10,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": ""
+    },
+    {
+      "name": "Poleaxe+",
+      "spCost": 300,
+      "damage(mt)": 14,
+      "range(rng)": 1,
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
+      "exclusive?": "No",
+      "type": "WEAPON",
+      "weaponType": ""
     },
     {
       "name": "Ragnarok",
@@ -35230,27 +35790,27 @@
       "spCost": 200,
       "damage(mt)": 6,
       "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Tome"
+      "weaponType": ""
     },
     {
       "name": "Rauðrwolf+",
       "spCost": 300,
       "damage(mt)": 10,
       "range(rng)": 2,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Tome"
+      "weaponType": ""
     },
     {
       "name": "Refreshing Bolt",
       "spCost": 200,
       "damage(mt)": 8,
       "range(rng)": 2,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.",
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -35260,7 +35820,7 @@
       "spCost": 300,
       "damage(mt)": 12,
       "range(rng)": 2,
-      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.",
+      "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -35310,20 +35870,20 @@
       "spCost": 200,
       "damage(mt)": 10,
       "range(rng)": 1,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Lance"
+      "weaponType": ""
     },
     {
       "name": "Ridersbane+",
       "spCost": 300,
       "damage(mt)": 14,
       "range(rng)": 1,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Lance"
+      "weaponType": ""
     },
     {
       "name": "Rogue Dagger",
@@ -35414,6 +35974,16 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Blue Lance"
+    },
+    {
+      "name": "Sealed Falchion",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Effective against dragon foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> I",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Sealife Tome",
@@ -35530,17 +36100,7 @@
       "spCost": 200,
       "damage(mt)": 9,
       "range(rng)": 2,
-      "effect": "Effective against flying units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Colorless Bow"
-    },
-    {
-      "name": "Silver Bow+",
-      "spCost": 300,
-      "damage(mt)": 13,
-      "range(rng)": 2,
-      "effect": "Effective against flying units.",
+      "effect": "Effective against flying units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
@@ -35616,16 +36176,6 @@
       "weaponType": "Green Axe"
     },
     {
-      "name": "Skadi",
-      "spCost": 400,
-      "damage(mt)": 14,
-      "range(rng)": 2,
-      "effect": "Effective against flying foes.  Grants Spd+3. At the start of turn 3, foes within 3 columns centered on unit take 10 damage and bonuses on those foes become penalties through their next actions.",
-      "exclusive?": "Yes",
-      "type": "WEAPON",
-      "weaponType": "Colorless Bow"
-    },
-    {
       "name": "Slaying Axe",
       "spCost": 200,
       "damage(mt)": 10,
@@ -35644,26 +36194,6 @@
       "exclusive?": "No",
       "type": "WEAPON",
       "weaponType": "Green Axe"
-    },
-    {
-      "name": "Slaying Bow",
-      "spCost": 200,
-      "damage(mt)": 8,
-      "range(rng)": 2,
-      "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Colorless Bow"
-    },
-    {
-      "name": "Slaying Bow+",
-      "spCost": 300,
-      "damage(mt)": 12,
-      "range(rng)": 2,
-      "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Colorless Bow"
     },
     {
       "name": "Slaying Edge",
@@ -35690,20 +36220,20 @@
       "spCost": 200,
       "damage(mt)": 10,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": ""
     },
     {
       "name": "Slaying Hammer+",
       "spCost": 300,
       "damage(mt)": 14,
       "range(rng)": 1,
-      "effect": "Effective against armored foes.",
+      "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Green Axe"
+      "weaponType": ""
     },
     {
       "name": "Slaying Lance",
@@ -35730,20 +36260,20 @@
       "spCost": 200,
       "damage(mt)": 10,
       "range(rng)": 1,
-      "effect": "Effective against armored units.",
+      "effect": "Effective against armored units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Lance"
+      "weaponType": ""
     },
     {
       "name": "Slaying Spear+",
       "spCost": 300,
       "damage(mt)": 14,
       "range(rng)": 1,
-      "effect": "Effective against armored foes.",
+      "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Blue Lance"
+      "weaponType": ""
     },
     {
       "name": "Slow",
@@ -35826,16 +36356,6 @@
       "weaponType": "Green Axe"
     },
     {
-      "name": "Steel Bow",
-      "spCost": 100,
-      "damage(mt)": 6,
-      "range(rng)": 2,
-      "effect": "Effective against flying units.",
-      "exclusive?": "No",
-      "type": "WEAPON",
-      "weaponType": "Colorless Bow"
-    },
-    {
       "name": "Steel Dagger",
       "spCost": 100,
       "damage(mt)": 5,
@@ -35900,10 +36420,10 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "Grants Res+3. Effective against armored and cavalry foes.  Against armored and cavalry foes using bow, dagger, magic, or staff, damage from first attack received by unit during combat reduced by 30%.",
+      "effect": "Grants Res+3. Effective against armored and cavalry foes. <span style=\"position: relative; top: -1px\"></span> <span style=\"position: relative; top: -1px\"></span>  Against armored and cavalry foes using bow, dagger,",
       "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Blue Tome"
+      "weaponType": ""
     },
     {
       "name": "Thoron",
@@ -36050,7 +36570,7 @@
       "spCost": 400,
       "damage(mt)": 14,
       "range(rng)": 2,
-      "effect": "",
+      "effect": "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.",
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Green Tome"
@@ -36060,10 +36580,10 @@
       "spCost": 400,
       "damage(mt)": 16,
       "range(rng)": 1,
-      "effect": "Effective against armored and cavalry foes.",
+      "effect": "Effective against armored and cavalry foes. <span style=\"position: relative; top: -1px\"></span> <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "Yes",
       "type": "WEAPON",
-      "weaponType": "Red Sword"
+      "weaponType": ""
     },
     {
       "name": "Wo Dao",
@@ -36100,20 +36620,20 @@
       "spCost": 200,
       "damage(mt)": 10,
       "range(rng)": 1,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Sword"
+      "weaponType": ""
     },
     {
       "name": "Zanbato+",
       "spCost": 300,
       "damage(mt)": 14,
       "range(rng)": 1,
-      "effect": "Effective against cavalry units.",
+      "effect": "Effective against cavalry units. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive?": "No",
       "type": "WEAPON",
-      "weaponType": "Red Sword"
+      "weaponType": ""
     },
     {
       "name": "Élivágar",
@@ -36754,7 +37274,7 @@
         ""
       ],
       "weaponRestriction": [
-        "Colorless Staff"
+        ""
       ],
       "type": "SPECIAL"
     },
@@ -37109,12 +37629,7 @@
         ""
       ],
       "weaponRestriction": [
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Colorless Bow",
-        "Colorless Dagger",
-        "Colorless Staff"
+        ""
       ],
       "type": "SPECIAL"
     },
@@ -37307,7 +37822,7 @@
         ""
       ],
       "weaponRestriction": [
-        "Colorless Staff"
+        ""
       ],
       "type": "SPECIAL"
     },
@@ -37321,7 +37836,7 @@
         ""
       ],
       "weaponRestriction": [
-        "Colorless Staff"
+        ""
       ],
       "type": "SPECIAL"
     },
@@ -37529,10 +38044,10 @@
       "type": "SPECIAL"
     },
     {
-      "name": "HP Def 2",
-      "effect": "Grants HP+4, Def+2.",
+      "name": "HP Res 1",
+      "effect": "Grants HP+3, Res+1.",
       "exclusive": false,
-      "spCost": 200,
+      "spCost": 100,
       "movementRestriction": [
         ""
       ],
@@ -38871,6 +39386,45 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Chill Def 1",
+      "effect": "At the start of each turn, inflicts Def-3 on foe on the enemy team with the highest Def through its next action.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Chill Def 2",
+      "effect": "At the start of each turn, inflicts Def-5 on foe on the enemy team with the highest Def through its next action.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Chill Def 3",
+      "effect": "At the start of each turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Chill Spd 1",
       "effect": "At the start of each turn, inflicts Spd-3 on foe on the enemy team with the highest Spd through its next action.",
       "exclusive": false,
@@ -39138,75 +39692,6 @@
         "Colorless Staff"
       ],
       "type": "PASSIVE_A"
-    },
-    {
-      "name": "Dazzling Staff 1",
-      "effect": "If unit has 100% HP at the start of combat, the enemy cannot counterattack.",
-      "exclusive": false,
-      "spCost": 60,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "Blue Lance",
-        "Green Axe",
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Red Breath",
-        "Blue Breath",
-        "Green Breath",
-        "Colorless Bow",
-        "Colorless Dagger"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Dazzling Staff 2",
-      "effect": "If unit has ≥ 50% HP at the start of combat, the enemy cannot counterattack.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "Blue Lance",
-        "Green Axe",
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Red Breath",
-        "Blue Breath",
-        "Green Breath",
-        "Colorless Bow",
-        "Colorless Dagger"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Dazzling Staff 3",
-      "effect": "The enemy cannot counterattack.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "Blue Lance",
-        "Green Axe",
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Red Breath",
-        "Blue Breath",
-        "Green Breath",
-        "Colorless Bow",
-        "Colorless Dagger"
-      ],
-      "type": "PASSIVE_B"
     },
     {
       "name": "Death Blow 1",
@@ -39737,6 +40222,45 @@
         ""
       ],
       "type": "PASSIVE_C"
+    },
+    {
+      "name": "Dull Ranged 1",
+      "effect": "If unit's HP = 100% at start of combat and foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dull Ranged 2",
+      "effect": "If unit's HP ≥ 50% at start of combat and foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Dull Ranged 3",
+      "effect": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
     },
     {
       "name": "Earth Boost 1",
@@ -40343,30 +40867,6 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "G Tome Valor 3",
-      "effect": "If unit survives, all green tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "Blue Lance",
-        "Green Axe",
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Red Breath",
-        "Blue Breath",
-        "Green Breath",
-        "Colorless Bow",
-        "Colorless Dagger",
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
       "name": "G Tomebreaker 1",
       "effect": "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
       "exclusive": false,
@@ -40900,6 +41400,19 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "HP Def 2",
+      "effect": "Grants HP+4, Def+2.",
+      "exclusive": false,
+      "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Armor March 1",
       "effect": "If unit has 100% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)",
       "exclusive": false,
@@ -40913,19 +41426,6 @@
         ""
       ],
       "type": "PASSIVE_C"
-    },
-    {
-      "name": "HP Res 1",
-      "effect": "Grants HP+3, Res+1.",
-      "exclusive": false,
-      "spCost": 100,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_A"
     },
     {
       "name": "HP Res 2",
@@ -41309,6 +41809,32 @@
         "Colorless Staff"
       ],
       "type": "PASSIVE_B"
+    },
+    {
+      "name": "Mirror Stance 1",
+      "effect": "Grants Atk/Res+2 during combat when this unit is attacked.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Mirror Stance 2",
+      "effect": "Grants Atk/Res+4 during combat when this unit is attacked.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_A"
     },
     {
       "name": "Mirror Strike 1",
@@ -44589,6 +45115,21 @@
     {
       "name": "Squad Ace G 3",
       "effect": "Grants Def+3.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace H 1",
+      "effect": "Grants Res+1.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace H 2",
+      "effect": "Grants Res+2.",
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace H 3",
+      "effect": "Grants Res+3.",
       "type": "SEAL"
     },
     {
