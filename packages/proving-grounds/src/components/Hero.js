@@ -39,7 +39,7 @@ const HeroPortrait = ({
           width: ${gridSize}px;
         }
         .backing {
-          background-image: url(${staticUrl}Pane_${mergeLevel <= 0 ? rarity : 'plus'}.png);
+          background-image: url(${staticUrl}Pane_${mergeLevel <= 0 ? rarity : 'Plus'}.png);
           background-size: 100% auto;
           height: ${FRAME_WIDTH}px;
           width: ${FRAME_WIDTH}px;
