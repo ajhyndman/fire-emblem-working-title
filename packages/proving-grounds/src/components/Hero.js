@@ -2,7 +2,7 @@
 import React from 'react';
 import { replace } from 'ramda';
 import type { Assets } from 'fire-emblem-heroes-stats';
-import type { Rarity } from 'fire-emblem-heroes-calculator';
+import type { MergeLevel, Rarity } from 'fire-emblem-heroes-calculator';
 
 import Frame from './Frame';
 import { colors, fontFamilies, fontSizes, gridSize } from '../theme';
@@ -10,17 +10,20 @@ import { staticUrl } from '../../config';
 
 type Props = {
   assets: Assets,
+  mergeLevel?: MergeLevel,
   name: string,
   rarity?: Rarity,
   specialCooldown?: number,
   weaponType: ?string,
 };
 
+const FRAME_WIDTH = gridSize * 1.14;
 const CLASS_ICON_SIZE = 20;
 const OVERSET = 4;
 
 const HeroPortrait = ({
   assets,
+  mergeLevel = 0,
   name,
   weaponType,
   rarity = 5,
@@ -36,13 +39,13 @@ const HeroPortrait = ({
           width: ${gridSize}px;
         }
         .backing {
-          background-image: linear-gradient(
-            170deg,
-            ${colors.fadedJade},
-            ${colors.aquaIsland}
-          );
-          height: ${gridSize}px;
-          width: ${gridSize}px;
+          background-image: url(${staticUrl}Pane_${mergeLevel <= 0 ? rarity : 'plus'}.png);
+          background-size: 100% auto;
+          height: ${FRAME_WIDTH}px;
+          width: ${FRAME_WIDTH}px;
+          position: absolute;
+          top: ${-(0.07 * gridSize)}px;
+          left: ${-(0.07 * gridSize)}px;
         }
         .class {
           height: ${CLASS_ICON_SIZE}px;
@@ -80,7 +83,7 @@ const HeroPortrait = ({
           position: absolute;
           top: ${-(0.07 * gridSize)}px;
           left: ${-(0.07 * gridSize)}px;
-          width: ${1.14 * gridSize}px;
+          width: ${FRAME_WIDTH}px;
         }
       `}</style>
       <div className="backing" />

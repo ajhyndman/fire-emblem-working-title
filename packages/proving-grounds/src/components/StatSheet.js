@@ -74,6 +74,7 @@ const StatSheet = ({ heroInstance, level }: Props) => {
       <div className="left col">
         <HeroPortrait
           assets={getHero(heroInstance.name).assets}
+          mergeLevel={heroInstance.mergeLevel}
           name={heroInstance.name}
           rarity={heroInstance.rarity}
           weaponType={getHero(heroInstance.name).weaponType}
