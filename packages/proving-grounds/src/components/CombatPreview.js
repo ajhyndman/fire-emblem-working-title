@@ -120,6 +120,7 @@ const CombatPreview = ({
           <div>
             <HeroPortrait
               assets={getHero(leftHero.name).assets}
+              mergeLevel={leftHero.mergeLevel}
               name={leftHero.name}
               weaponType={getHero(leftHero.name).weaponType}
               rarity={leftHero.rarity}
@@ -175,6 +176,7 @@ const CombatPreview = ({
           <div>
             <HeroPortrait
               assets={getHero(rightHero.name).assets}
+              mergeLevel={rightHero.mergeLevel}
               name={rightHero.name}
               weaponType={getHero(rightHero.name).weaponType}
               rarity={rightHero.rarity}
