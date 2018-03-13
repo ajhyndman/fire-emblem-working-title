@@ -177,8 +177,8 @@ test('Stat Skills', assert => {
     testStatSkill(t, 'Defense +3', 'def', 3);
     testStatSkill(t, 'Resistance +3', 'res', 3);
 
-    testStatSkill(t, 'Attack Def +2', 'atk', 2);
-    testStatSkill(t, 'Attack Def +2', 'def', 2);
+    testStatSkill(t, 'Attack/Def +2', 'atk', 2);
+    testStatSkill(t, 'Attack/Def +2', 'def', 2);
 
     testStatSkill(t, 'Fury 3', 'hp', 0);
     testStatSkill(t, 'Fury 3', 'atk', 3);
