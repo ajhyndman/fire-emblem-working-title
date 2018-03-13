@@ -298,12 +298,7 @@ async function fetchHeroStats() {
 
             // Convert release dates into expected format.
             const formatDate = timestamp =>
-              new Date(timestamp).toLocaleDateString('en-NA', {
-                timeZone: 'UTC',
-                month: 'short',
-                day: '2-digit',
-                year: 'numeric',
-              });
+              new Date(timestamp).toISOString().substring(0, 10);
 
             const releaseDate = ReleaseDate ? formatDate(ReleaseDate) : 'N/A';
 
