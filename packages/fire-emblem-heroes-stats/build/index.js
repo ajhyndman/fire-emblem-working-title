@@ -627,9 +627,9 @@ async function fetchSkills() {
     limit: API_LIMIT,
     tables: 'PassiveGroup,PassiveSingle',
     fields:
-      'Name,Effect,SkillTier,SPCost,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction,PassiveGroup.Exclusive=Exclusive,PassiveGroup.Ptype=Ptype',
+      'PassiveSingle.Name=Name,Effect,SkillTier,SPCost,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction,PassiveGroup.Exclusive=Exclusive,PassiveGroup.Ptype=Ptype',
     join_on: 'PassiveGroup._pageName = PassiveSingle._pageName',
-    group_by: 'PassiveSingle.Name',
+    group_by: 'Name',
   })
     .then(
       compose(
@@ -673,10 +673,10 @@ async function fetchSkills() {
     limit: API_LIMIT,
     tables: 'PassiveGroup,PassiveSingle',
     fields:
-      'Name,Effect,SkillTier,PassiveGroup.Seal=Seal,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction',
+      'PassiveSingle.Name=Name,Effect,SkillTier,PassiveGroup.Seal=Seal,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction',
     where: 'PassiveGroup.Seal="1"',
     join_on: 'PassiveGroup._pageName = PassiveSingle._pageName',
-    group_by: 'PassiveSingle.Name',
+    group_by: 'Name',
   })
     .then(
       compose(
