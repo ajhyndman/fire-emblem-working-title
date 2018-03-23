@@ -2,9 +2,11 @@ import fetch from 'isomorphic-fetch';
 import fs from 'fs';
 import path from 'path';
 import { URL } from 'url';
-import { compose, last, map, prop, replace, split, toPairs } from 'ramda';
+import { compose, concat, last, map, merge, prop, replace, split, toPairs, values } from 'ramda';
 
 import { WIKI_HOST } from './constants';
+
+const API_BATCH_SIZE = 500;
 
 /**
  * Download an image and save it into assets, with the same name.
@@ -69,3 +71,20 @@ export const fetchApiQuery = (queryParams: { [param: string]: string }) => {
     response.json(),
   );
 };
+
+export const fetchApiRows = (queryParams: { [param: string]: string }, offset: number = 0) =>
+  fetchApiQuery(merge(queryParams, {offset: offset, limit: API_BATCH_SIZE})).then(json => {
+    const cargoRows = compose(
+      map(prop('title')),
+      values,
+      prop('cargoquery')
+    )(json);
+
+    if (cargoRows.length == API_BATCH_SIZE) {
+      return fetchApiRows(queryParams, offset + API_BATCH_SIZE).then(nextCargoRows =>
+        concat(cargoRows, nextCargoRows)
+      );
+    } else {
+      return cargoRows;
+    }
+  })

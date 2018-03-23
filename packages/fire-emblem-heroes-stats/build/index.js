@@ -15,17 +15,13 @@ import {
   replace,
   sortBy,
   trim,
-  values,
   without,
   zipWith,
 } from 'ramda';
 
 import { baseStatToMaxStat } from './statGrowth';
-import { fetchApiQuery } from './fetch';
+import { fetchApiRows } from './fetch';
 import { CDN_HOST } from './constants';
-
-// None of the queries we are making should expect more than this many results.
-const API_LIMIT = 2000;
 
 const sanitizeDescription = compose(
   trim,
@@ -41,12 +37,6 @@ const sanitizeDescription = compose(
   replace(/\&quot\;/g, '"'),
 );
 
-const extractCargoResults = compose(
-  map(prop('title')),
-  values,
-  prop('cargoquery'),
-);
-
 const truncateParenthetical = replace(/\((.).*\)/, '($1)');
 
 /**
@@ -56,10 +46,9 @@ const truncateParenthetical = replace(/\((.).*\)/, '($1)');
 
 // Fetches heroes and their stats/skills
 async function fetchHeroStats() {
-  const heroBaseStats = await fetchApiQuery({
+  const heroBaseStats = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    limit: API_LIMIT,
     tables: 'HeroBaseStats,Heroes',
     fields:
       'Heroes._pageName=Name,HeroBaseStats.Variation,HeroBaseStats.Rarity,HP,Atk,Spd,Def,Res',
@@ -76,7 +65,6 @@ async function fetchHeroStats() {
         def: Number.parseInt(Def, 10),
         res: Number.parseInt(Res, 10),
       })),
-      extractCargoResults,
     ),
   );
 
@@ -85,10 +73,9 @@ async function fetchHeroStats() {
     heroBaseStats,
   );
 
-  const basicHeroData = await fetchApiQuery({
+  const basicHeroData = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    limit: API_LIMIT,
     tables: [
       'Heroes',
       'HeroGrowthPoints',
@@ -470,7 +457,6 @@ async function fetchHeroStats() {
             };
           },
         ),
-        extractCargoResults,
       ),
     )
     .catch(error => {
@@ -499,10 +485,9 @@ async function fetchHeroStats() {
 
 // Fetches detailed info for all skills
 async function fetchSkills() {
-  const weapons = await fetchApiQuery({
+  const weapons = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    limit: API_LIMIT,
     tables: 'Weapons',
     fields: 'WeaponClass,WeaponName,WeaponRange,Cost,Effect,Might,Exclusive',
     group_by: 'WeaponName',
@@ -530,17 +515,15 @@ async function fetchSkills() {
             weaponType: WeaponClass,
           }),
         ),
-        extractCargoResults,
       ),
     )
     .catch(error => {
       console.error('failed to parse weapon skill stats', error);
     });
 
-  const assists = await fetchApiQuery({
+  const assists = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    limit: API_LIMIT,
     tables: 'Assists',
     fields:
       'Name,Cost,Effect,AssistRange,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
@@ -570,17 +553,15 @@ async function fetchSkills() {
             };
           },
         ),
-        extractCargoResults,
       ),
     )
     .catch(error => {
       console.error('failed to parse assist skill stats', error);
     });
 
-  const specials = await fetchApiQuery({
+  const specials = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    limit: API_LIMIT,
     tables: 'Specials',
     fields:
       'Name,Cost,Cooldown,Effect,WeaponRestriction,MovementRestriction,Exclusive,SkillTier',
@@ -609,17 +590,15 @@ async function fetchSkills() {
             type: 'SPECIAL',
           }),
         ),
-        extractCargoResults,
       ),
     )
     .catch(error => {
       console.error('failed to parse special skill stats', error);
     });
 
-  const passives = await fetchApiQuery({
+  const passives = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    limit: API_LIMIT,
     tables: 'PassiveGroup,PassiveSingle',
     fields:
       'PassiveSingle.Name=Name,Effect,SkillTier,SPCost,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction,PassiveGroup.Exclusive=Exclusive,PassiveGroup.Ptype=Ptype',
@@ -655,17 +634,15 @@ async function fetchSkills() {
             };
           },
         ),
-        extractCargoResults,
       ),
     )
     .catch(error => {
       console.error('failed to parse passive skill stats', error);
     });
 
-  const seals = await fetchApiQuery({
+  const seals = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    limit: API_LIMIT,
     tables: 'PassiveGroup,PassiveSingle',
     fields:
       'PassiveSingle.Name=Name,Effect,SkillTier,PassiveGroup.Seal=Seal,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction',
@@ -684,7 +661,6 @@ async function fetchSkills() {
           // weaponRestriction: WeaponRestriction.split(','),
           type: 'SEAL',
         })),
-        extractCargoResults,
       ),
     )
     .catch(error => {
