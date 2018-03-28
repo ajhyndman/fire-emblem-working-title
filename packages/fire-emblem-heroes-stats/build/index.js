@@ -78,6 +78,7 @@ async function fetchHeroStats() {
     format: 'json',
     tables: [
       'Heroes',
+      'HeroBaseStats',
       'HeroGrowthPoints',
       'HeroWeapons',
       'HeroSpecials',
@@ -157,6 +158,7 @@ async function fetchHeroStats() {
     ].join(','),
     group_by: 'Heroes._pageName',
     join_on: [
+      'HeroBaseStats._pageName = Heroes._pageName',
       'Heroes._pageName = HeroGrowthPoints._pageName',
       'Heroes._pageName = HeroWeapons._pageName',
       'Heroes._pageName = HeroSpecials._pageName',

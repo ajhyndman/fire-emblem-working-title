@@ -3173,49 +3173,6 @@
       }
     },
     {
-      "name": "Bruno",
-      "title": "Masked Knight",
-      "origin": "Fire Emblem Heroes",
-      "weaponType": "Blue Tome",
-      "moveType": "Cavalry",
-      "rarities": "N/A",
-      "releaseDate": "N/A",
-      "poolDate": "N/A",
-      "assets": {
-        "portrait": {
-          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Bruno.png",
-          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Bruno.png",
-          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Bruno.png"
-        }
-      },
-      "skills": [
-        {
-          "name": "Thunder",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Elthunder",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Thoron",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Valaskjálf",
-          "default": "-",
-          "rarity": "-"
-        }
-      ],
-      "stats": {
-        "1": {},
-        "40": {}
-      }
-    },
-    {
       "name": "Caeda",
       "title": "Talys's Heart",
       "origin": "Fire Emblem: Mystery of the Emblem",
@@ -5468,7 +5425,7 @@
       "moveType": "Cavalry",
       "rarities": "5",
       "releaseDate": "2018-03-09",
-      "poolDate": "N/A",
+      "poolDate": "2018-03-22",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Chrom (The Branded King).png",
@@ -15969,92 +15926,6 @@
       }
     },
     {
-      "name": "Laegjarn",
-      "title": "Sheathed Steel",
-      "origin": "Fire Emblem Heroes",
-      "weaponType": "Red Sword",
-      "moveType": "Flying",
-      "rarities": "N/A",
-      "releaseDate": "N/A",
-      "poolDate": "N/A",
-      "assets": {
-        "portrait": {
-          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Laegjarn.png",
-          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Laegjarn.png",
-          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Laegjarn.png"
-        }
-      },
-      "skills": [
-        {
-          "name": "Iron Sword",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Steel Sword",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Silver Sword",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Níu",
-          "default": "-",
-          "rarity": "-"
-        }
-      ],
-      "stats": {
-        "1": {},
-        "40": {}
-      }
-    },
-    {
-      "name": "Laevatein",
-      "title": "Searing Steel",
-      "origin": "Fire Emblem Heroes",
-      "weaponType": "Red Sword",
-      "moveType": "Infantry",
-      "rarities": "N/A",
-      "releaseDate": "N/A",
-      "poolDate": "N/A",
-      "assets": {
-        "portrait": {
-          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Laevatein.png",
-          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Laevatein.png",
-          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Laevatein.png"
-        }
-      },
-      "skills": [
-        {
-          "name": "Iron Sword",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Steel Sword",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Silver Sword",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Laevatein (Weapon)",
-          "default": "-",
-          "rarity": "-"
-        }
-      ],
-      "stats": {
-        "1": {},
-        "40": {}
-      }
-    },
-    {
       "name": "Laslow",
       "title": "Dancing Duelist",
       "origin": "Fire Emblem Fates",
@@ -17699,44 +17570,6 @@
             ]
           }
         }
-      }
-    },
-    {
-      "name": "Loki",
-      "title": "The Trickster",
-      "origin": "Fire Emblem Heroes",
-      "weaponType": "Colorless Staff",
-      "moveType": "Infantry",
-      "rarities": "N/A",
-      "releaseDate": "N/A",
-      "poolDate": "N/A",
-      "assets": {
-        "portrait": {
-          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Loki.png",
-          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Loki.png",
-          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Loki.png"
-        }
-      },
-      "skills": [
-        {
-          "name": "Assault",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Gravity",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Thökk",
-          "default": "-",
-          "rarity": "-"
-        }
-      ],
-      "stats": {
-        "1": {},
-        "40": {}
       }
     },
     {
@@ -21266,7 +21099,7 @@
       "moveType": "Flying",
       "rarities": "5",
       "releaseDate": "2018-03-09",
-      "poolDate": "N/A",
+      "poolDate": "2018-03-22",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Morgan (F).png",
@@ -21392,7 +21225,7 @@
       "moveType": "Infantry",
       "rarities": "4-5",
       "releaseDate": "2018-03-09",
-      "poolDate": "N/A",
+      "poolDate": "2018-03-22",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Morgan (M).png",
@@ -30784,49 +30617,6 @@
       }
     },
     {
-      "name": "Surtr",
-      "title": "Ruler of Flame",
-      "origin": "Fire Emblem Heroes",
-      "weaponType": "Green Axe",
-      "moveType": "Armored",
-      "rarities": "N/A",
-      "releaseDate": "N/A",
-      "poolDate": "N/A",
-      "assets": {
-        "portrait": {
-          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Surtr.png",
-          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Surtr.png",
-          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Surtr.png"
-        }
-      },
-      "skills": [
-        {
-          "name": "Iron Axe",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Steel Axe",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Silver Axe",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Sinmara",
-          "default": "-",
-          "rarity": "-"
-        }
-      ],
-      "stats": {
-        "1": {},
-        "40": {}
-      }
-    },
-    {
       "name": "Tailtiu",
       "title": "Thunder Noble",
       "origin": "Fire Emblem: Genealogy of the Holy War",
@@ -32806,49 +32596,6 @@
             ]
           }
         }
-      }
-    },
-    {
-      "name": "Veronica",
-      "title": "Emblian Princess",
-      "origin": "Fire Emblem Heroes",
-      "weaponType": "Green Tome",
-      "moveType": "Infantry",
-      "rarities": "N/A",
-      "releaseDate": "N/A",
-      "poolDate": "N/A",
-      "assets": {
-        "portrait": {
-          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Veronica.png",
-          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Veronica.png",
-          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Veronica.png"
-        }
-      },
-      "skills": [
-        {
-          "name": "Wind",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Elwind",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Rexcalibur",
-          "default": "-",
-          "rarity": "-"
-        },
-        {
-          "name": "Élivágar",
-          "default": "-",
-          "rarity": "-"
-        }
-      ],
-      "stats": {
-        "1": {},
-        "40": {}
       }
     },
     {
@@ -38647,10 +38394,10 @@
       "type": "SPECIAL"
     },
     {
-      "name": "Distant Def 1",
-      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
+      "name": "Distant Def 2",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.",
       "exclusive": false,
-      "spCost": 60,
+      "spCost": 120,
       "movementRestriction": [
         ""
       ],
@@ -38660,8 +38407,8 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Atk 2",
-      "effect": "Grants HP+4, Atk+2.",
+      "name": "HP/Def 2",
+      "effect": "Grants HP+4, Def+2.",
       "exclusive": false,
       "spCost": 200,
       "movementRestriction": [
@@ -39684,6 +39431,19 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Distant Def 1",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Armored Blow 1",
       "effect": "Grants Def+2 during combat if unit initiates the attack.",
       "exclusive": false,
@@ -39697,10 +39457,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Distant Def 2",
-      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.",
+      "name": "Distant Def 3",
+      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
       "exclusive": false,
-      "spCost": 120,
+      "spCost": 240,
       "movementRestriction": [
         ""
       ],
@@ -39710,10 +39470,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Distant Def 3",
-      "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
-      "exclusive": false,
-      "spCost": 240,
+      "name": "Dragonskin",
+      "effect": "Neutralizes \"effective against flying\" bonuses. Grants Def/Res+4 during combat if foe initiates combat.",
+      "exclusive": true,
+      "spCost": 0,
       "movementRestriction": [
         ""
       ],
@@ -39784,34 +39544,6 @@
       ],
       "weaponRestriction": [
         "Colorless Staff"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Swift Sparrow 1",
-      "effect": "If unit initiates combat, unit granted Atk/Spd+2 during battle.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Svalinn Shield",
-      "effect": "Neutralizes \"effective against armored\" bonuses.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        "Infantry",
-        "Cavalry",
-        "Flying"
-      ],
-      "weaponRestriction": [
-        ""
       ],
       "type": "PASSIVE_A"
     },
@@ -39975,6 +39707,34 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Swift Sparrow 1",
+      "effect": "If unit initiates combat, unit granted Atk/Spd+2 during battle.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Svalinn Shield",
+      "effect": "Neutralizes \"effective against armored\" bonuses.",
+      "exclusive": false,
+      "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "Cavalry",
+        "Flying"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Sturdy Stance 2",
       "effect": "Grants Atk/Def+4 during combat when this unit is attacked.",
       "exclusive": false,
@@ -40080,32 +39840,6 @@
         "Green Tome",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Steady Blow 2",
-      "effect": "If unit initiates combat, unit granted Spd/Def+4 during battle.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Steady Blow 1",
-      "effect": "If unit initiates combat, unit granted Spd/Def+2 during battle.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
         "Colorless Staff"
       ],
       "type": "PASSIVE_A"
@@ -40228,6 +39962,32 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Steady Blow 2",
+      "effect": "If unit initiates combat, unit granted Spd/Def+4 during battle.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Steady Blow 1",
+      "effect": "If unit initiates combat, unit granted Spd/Def+2 during battle.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Grani's Shield",
       "effect": "Neutralizes \"effective against cavalry\" bonuses.",
       "exclusive": false,
@@ -40334,10 +40094,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Def 1",
-      "effect": "Grants HP+3, Def+1.",
+      "name": "HP/Atk 2",
+      "effect": "Grants HP+4, Atk+2.",
       "exclusive": false,
-      "spCost": 100,
+      "spCost": 200,
       "movementRestriction": [
         ""
       ],
@@ -40347,10 +40107,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Def 2",
-      "effect": "Grants HP+4, Def+2.",
+      "name": "HP/Def 1",
+      "effect": "Grants HP+3, Def+1.",
       "exclusive": false,
-      "spCost": 200,
+      "spCost": 100,
       "movementRestriction": [
         ""
       ],
@@ -40420,32 +40180,6 @@
         "Infantry",
         "Armored",
         "Cavalry"
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Speed +3",
-      "effect": "Grants Spd+3.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Speed +2",
-      "effect": "Grants Spd+2.",
-      "exclusive": false,
-      "spCost": 60,
-      "movementRestriction": [
-        ""
       ],
       "weaponRestriction": [
         ""
@@ -40540,6 +40274,32 @@
       ],
       "weaponRestriction": [
         "Colorless Staff"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Speed +3",
+      "effect": "Grants Spd+3.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Speed +2",
+      "effect": "Grants Spd+2.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
       ],
       "type": "PASSIVE_A"
     },
@@ -40726,19 +40486,6 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Watersweep 3",
-      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Watersweep 2",
       "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack.",
       "exclusive": false,
@@ -40800,21 +40547,6 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Swordbreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
-      "exclusive": false,
-      "spCost": 50,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Green Axe",
-        "Green Tome",
-        "Green Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Axebreaker 3",
       "effect": "If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and foe cannot.",
       "exclusive": false,
@@ -40826,6 +40558,51 @@
         "Blue Lance",
         "Blue Tome",
         "Blue Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Swordbreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
+      "exclusive": false,
+      "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Green Axe",
+        "Green Tome",
+        "Green Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Swordbreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
+      "exclusive": false,
+      "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Green Axe",
+        "Green Tome",
+        "Green Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Swordbreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
+      "exclusive": false,
+      "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Green Axe",
+        "Green Tome",
+        "Green Breath"
       ],
       "type": "PASSIVE_B"
     },
@@ -40901,22 +40678,6 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Cancel Affinity 3",
-      "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Dull Ranged 1",
       "effect": "If unit's HP = 100% at start of combat and foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
       "exclusive": false,
@@ -40956,6 +40717,22 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Cancel Affinity 3",
+      "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed.",
+      "exclusive": false,
+      "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Chill Def 1",
       "effect": "At the start of each turn, inflicts Def-3 on foe on the enemy team with the highest Def through its next action.",
       "exclusive": false,
@@ -40973,19 +40750,6 @@
       "effect": "At the start of each turn, inflicts Def-5 on foe on the enemy team with the highest Def through its next action.",
       "exclusive": false,
       "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Chill Def 3",
-      "effect": "At the start of each turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action.",
-      "exclusive": false,
-      "spCost": 240,
       "movementRestriction": [
         ""
       ],
@@ -41062,6 +40826,19 @@
     {
       "name": "Escape Route 3",
       "effect": "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Chill Def 3",
+      "effect": "At the start of each turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action.",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -41177,21 +40954,6 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wary Fighter 3",
-      "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Infantry",
-        "Cavalry",
-        "Flying"
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Flier Formation 1",
       "effect": "If unit has 100% HP, unit can move to a space adjacent to a flier ally within 2 spaces.",
       "exclusive": false,
@@ -41243,6 +41005,21 @@
       "spCost": 200,
       "movementRestriction": [
         ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wary Fighter 3",
+      "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "Cavalry",
+        "Flying"
       ],
       "weaponRestriction": [
         ""
@@ -41546,6 +41323,21 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Bold Fighter 2",
+      "effect": "If unit's HP ≥ 50% and unit initiates combat, unit makes a guaranteed follow-up attack.<Br>Grants Special cooldown charge +1 per attack. (Does not stack.)",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "Cavalry",
+        "Flying"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "G Tomebreaker 1",
       "effect": "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot.",
       "exclusive": false,
@@ -41656,10 +41448,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Bold Fighter 2",
-      "effect": "If unit's HP ≥ 50% and unit initiates combat, unit makes a guaranteed follow-up attack.<Br>Grants Special cooldown charge +1 per attack. (Does not stack.)",
+      "name": "Bold Fighter 3",
+      "effect": "If unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
-      "spCost": 120,
+      "spCost": 240,
       "movementRestriction": [
         "Infantry",
         "Cavalry",
@@ -41710,21 +41502,6 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Bold Fighter 3",
-      "effect": "If unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Infantry",
-        "Cavalry",
-        "Flying"
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Vantage 3",
       "effect": "Unit counterattacks first when attacked at HP ≤ 75%.",
       "exclusive": false,
@@ -41751,6 +41528,19 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Vantage 1",
+      "effect": "Unit counterattacks first when attacked at HP ≤ 25%.",
+      "exclusive": false,
+      "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Hit and Run",
       "effect": "If unit initiates attack, unit retreats 1 space after battle.",
       "exclusive": false,
@@ -41765,19 +41555,6 @@
         "Colorless Bow",
         "Colorless Dagger",
         "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Vantage 1",
-      "effect": "Unit counterattacks first when attacked at HP ≤ 25%.",
-      "exclusive": false,
-      "spCost": 50,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        ""
       ],
       "type": "PASSIVE_B"
     },
@@ -41834,10 +41611,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Torrent Dance 1",
-      "effect": "If Sing or Dance is used, target also granted Res+3.",
+      "name": "Torrent Dance 3",
+      "effect": "If Sing or Dance is used, target also granted Res+5.",
       "exclusive": false,
-      "spCost": 50,
+      "spCost": 200,
       "movementRestriction": [
         ""
       ],
@@ -41847,32 +41624,28 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Swordbreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Green Axe",
-        "Green Tome",
-        "Green Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Swordbreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot.",
+      "name": "Torrent Dance 2",
+      "effect": "If Sing or Dance is used, target also granted Res+4.",
       "exclusive": false,
       "spCost": 100,
       "movementRestriction": [
         ""
       ],
       "weaponRestriction": [
-        "Green Axe",
-        "Green Tome",
-        "Green Breath"
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Torrent Dance 1",
+      "effect": "If Sing or Dance is used, target also granted Res+3.",
+      "exclusive": false,
+      "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
       ],
       "type": "PASSIVE_B"
     },
@@ -41938,6 +41711,19 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Bowbreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against a colorless bow foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "exclusive": false,
+      "spCost": 100,
+      "movementRestriction": [
+        "Flying"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Knock Back",
       "effect": "If unit initiates attack, foe is moved 1 space away after combat.",
       "exclusive": false,
@@ -41952,32 +41738,6 @@
         "Colorless Bow",
         "Colorless Dagger",
         "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Bowbreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against a colorless bow foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
-      "exclusive": false,
-      "spCost": 100,
-      "movementRestriction": [
-        "Flying"
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Bowbreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against a colorless bow foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        "Flying"
-      ],
-      "weaponRestriction": [
-        ""
       ],
       "type": "PASSIVE_B"
     },
@@ -42027,6 +41787,19 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Bowbreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against a colorless bow foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "exclusive": false,
+      "spCost": 200,
+      "movementRestriction": [
+        "Flying"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Wrath 3",
       "effect": "If unit's HP ≤ 75%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
       "exclusive": false,
@@ -42061,19 +41834,6 @@
         "Colorless Bow",
         "Colorless Dagger",
         "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Brash Assault 1",
-      "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 30%, unit makes a guaranteed follow-up attack.",
-      "exclusive": false,
-      "spCost": 50,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        ""
       ],
       "type": "PASSIVE_B"
     },
@@ -42194,6 +41954,19 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Brash Assault 1",
+      "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 30%, unit makes a guaranteed follow-up attack.",
+      "exclusive": false,
+      "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Brash Assault 2",
       "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 40%, unit makes a guaranteed follow-up attack.",
       "exclusive": false,
@@ -42228,25 +42001,6 @@
         ""
       ],
       "weaponRestriction": [
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrath 1",
-      "effect": "If unit's HP ≤ 25%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
-      "exclusive": false,
-      "spCost": 60,
-      "movementRestriction": [
-        "Cavalry",
-        "Flying"
-      ],
-      "weaponRestriction": [
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Colorless Bow",
-        "Colorless Dagger",
         "Colorless Staff"
       ],
       "type": "PASSIVE_B"
@@ -42287,6 +42041,25 @@
       ],
       "weaponRestriction": [
         ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 1",
+      "effect": "If unit's HP ≤ 25%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        "Cavalry",
+        "Flying"
+      ],
+      "weaponRestriction": [
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Colorless Bow",
+        "Colorless Dagger",
+        "Colorless Staff"
       ],
       "type": "PASSIVE_B"
     },
@@ -42531,6 +42304,19 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Desperation 1",
+      "effect": "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack.",
+      "exclusive": false,
+      "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Solar Brace",
       "effect": "Restores 30% of damage dealt when Special triggers during combat. (Stacks with effects of skills like Sol.)",
       "exclusive": true,
@@ -42601,15 +42387,15 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Desperation 1",
-      "effect": "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack.",
+      "name": "Seal Spd 3",
+      "effect": "After combat, foe suffers Spd-7 through its next action.",
       "exclusive": false,
-      "spCost": 50,
+      "spCost": 160,
       "movementRestriction": [
         ""
       ],
       "weaponRestriction": [
-        ""
+        "Colorless Staff"
       ],
       "type": "PASSIVE_B"
     },
@@ -42640,6 +42426,19 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Watersweep 3",
+      "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Sacae's Blessing",
       "effect": "If foe has sword, lance, or axe, foe cannot counterattack. (Skill cannot be inherited.)",
       "exclusive": true,
@@ -42649,19 +42448,6 @@
       ],
       "weaponRestriction": [
         ""
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Spd 3",
-      "effect": "After combat, foe suffers Spd-7 through its next action.",
-      "exclusive": false,
-      "spCost": 160,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Colorless Staff"
       ],
       "type": "PASSIVE_B"
     },
@@ -42683,6 +42469,19 @@
       "effect": "After combat, foe suffers Spd-3 through its next action.",
       "exclusive": false,
       "spCost": 40,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Res 3",
+      "effect": "After combat, foe suffers Res-7 through its next action.",
+      "exclusive": false,
+      "spCost": 160,
       "movementRestriction": [
         ""
       ],
@@ -42848,27 +42647,12 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Seal Res 3",
-      "effect": "After combat, foe suffers Res-7 through its next action.",
+      "name": "Fortify Def 2",
+      "effect": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
       "exclusive": false,
-      "spCost": 160,
+      "spCost": 100,
       "movementRestriction": [
         ""
-      ],
-      "weaponRestriction": [
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Fortify Cavalry",
-      "effect": "Grants adjacent cavalry allies Def/Res+6 through their next actions at the start of each turn.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        "Infantry",
-        "Armored",
-        "Flying"
       ],
       "weaponRestriction": [
         ""
@@ -42941,15 +42725,28 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Res Ploy 3",
-      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-5 until the end of foe's next action.",
+      "name": "Res Smoke 3",
+      "effect": "After combat, inflicts Res-7 on foes within 2 spaces of target through their next actions.",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
         ""
       ],
       "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Res Smoke 2",
+      "effect": "After combat, inflicts Res-5 on foes within 2 spaces of target through their next actions.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
         ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
       ],
       "type": "PASSIVE_C"
     },
@@ -43028,6 +42825,32 @@
       ],
       "weaponRestriction": [
         "Colorless Staff"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Res Smoke 1",
+      "effect": "After combat, inflicts Res-3 on foes within 2 spaces of target through their next actions.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Res Ploy 3",
+      "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-5 until the end of foe's next action.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
       ],
       "type": "PASSIVE_C"
     },
@@ -43237,54 +43060,6 @@
       ],
       "weaponRestriction": [
         ""
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Lance Valor 3",
-      "effect": "If unit survives, all lance users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "Green Axe",
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Red Breath",
-        "Blue Breath",
-        "Green Breath",
-        "Colorless Breath",
-        "Colorless Bow",
-        "Colorless Dagger",
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Lance Valor 2",
-      "effect": "If unit survives, all lance users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
-      "exclusive": false,
-      "spCost": 60,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "Green Axe",
-        "Red Tome",
-        "Blue Tome",
-        "Green Tome",
-        "Red Breath",
-        "Blue Breath",
-        "Green Breath",
-        "Colorless Breath",
-        "Colorless Bow",
-        "Colorless Dagger",
-        "Colorless Staff"
       ],
       "type": "PASSIVE_C"
     },
@@ -43519,6 +43294,54 @@
       ],
       "weaponRestriction": [
         ""
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Lance Valor 3",
+      "effect": "If unit survives, all lance users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "Green Axe",
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Red Breath",
+        "Blue Breath",
+        "Green Breath",
+        "Colorless Breath",
+        "Colorless Bow",
+        "Colorless Dagger",
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Lance Valor 2",
+      "effect": "If unit survives, all lance users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "Green Axe",
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Red Breath",
+        "Blue Breath",
+        "Green Breath",
+        "Colorless Breath",
+        "Colorless Bow",
+        "Colorless Dagger",
+        "Colorless Staff"
       ],
       "type": "PASSIVE_C"
     },
@@ -44001,8 +43824,8 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Def 2",
-      "effect": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
+      "name": "Savage Blow 2",
+      "effect": "If unit initiates attack, foes within 2 spaces of target take 5 damage after combat.",
       "exclusive": false,
       "spCost": 100,
       "movementRestriction": [
@@ -44027,12 +43850,14 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Savage Blow 2",
-      "effect": "If unit initiates attack, foes within 2 spaces of target take 5 damage after combat.",
+      "name": "Fortify Cavalry",
+      "effect": "Grants adjacent cavalry allies Def/Res+6 through their next actions at the start of each turn.",
       "exclusive": false,
-      "spCost": 100,
+      "spCost": 200,
       "movementRestriction": [
-        ""
+        "Infantry",
+        "Armored",
+        "Flying"
       ],
       "weaponRestriction": [
         ""
@@ -44109,32 +43934,6 @@
     {
       "name": "Drive Def 2",
       "effect": "Grants allies within 2 spaces Def+3 during combat.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Drive Def 1",
-      "effect": "Grants allies within 2 spaces Def+2 during combat.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Drive Atk 2",
-      "effect": "Grants allies within 2 spaces Atk+3 during combat.",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -44290,8 +44089,8 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Drive Atk 1",
-      "effect": "Grants allies within 2 spaces Atk+2 during combat.",
+      "name": "Drive Def 1",
+      "effect": "Grants allies within 2 spaces Def+2 during combat.",
       "exclusive": false,
       "spCost": 120,
       "movementRestriction": [
@@ -44303,8 +44102,8 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Def Tactic 3",
-      "effect": "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "name": "Drive Atk 2",
+      "effect": "Grants allies within 2 spaces Atk+3 during combat.",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -44316,8 +44115,8 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Def Tactic 2",
-      "effect": "At start of turn, grants Def+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "name": "Drive Atk 1",
+      "effect": "Grants allies within 2 spaces Atk+2 during combat.",
       "exclusive": false,
       "spCost": 120,
       "movementRestriction": [
@@ -44476,6 +44275,32 @@
       "effect": "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn.",
       "exclusive": false,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Def Tactic 3",
+      "effect": "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Def Tactic 2",
+      "effect": "At start of turn, grants Def+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "exclusive": false,
+      "spCost": 120,
       "movementRestriction": [
         ""
       ],
