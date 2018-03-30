@@ -3210,6 +3210,11 @@
           "rarity": 5
         },
         {
+          "name": "Wing Sword",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Rally Speed",
           "default": 4,
           "rarity": "-"
@@ -9801,6 +9806,11 @@
           "rarity": 5
         },
         {
+          "name": "Felicia's Plate",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Chilling Wind",
           "default": 4,
           "rarity": 3
@@ -13367,6 +13377,11 @@
           "name": "Brave Lance+",
           "default": 5,
           "rarity": "-"
+        },
+        {
+          "name": "Hinoka's Spear",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Rising Wind",
@@ -24713,6 +24728,11 @@
           "rarity": 5
         },
         {
+          "name": "Basilikos",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Daylight",
           "default": 4,
           "rarity": "-"
@@ -29811,6 +29831,11 @@
         {
           "name": "Rexcalibur+",
           "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "Wind's Brand",
+          "default": "-",
           "rarity": 5
         },
         {
@@ -35074,6 +35099,16 @@
       "weaponType": "Red Tome"
     },
     {
+      "name": "Forblaze",
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Tome"
+    },
+    {
       "name": "Fujin Yumi",
       "spCost": 400,
       "damage(mt)": 14,
@@ -35982,6 +36017,16 @@
       "exclusive?": "Yes",
       "type": "WEAPON",
       "weaponType": "Red Tome"
+    },
+    {
+      "name": "Nameless Blade",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "",
+      "exclusive?": "Yes",
+      "type": "WEAPON",
+      "weaponType": "Red Sword"
     },
     {
       "name": "Nidhogg",
