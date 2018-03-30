@@ -9,6 +9,7 @@ module.exports = {
 
     config.plugins.push(
       new SWPrecacheWebpackPlugin({
+        cacheId: 'proving-grounds',
         minify: true,
         verbose: true,
         staticFileGlobsIgnorePatterns: [/\.next\//],
