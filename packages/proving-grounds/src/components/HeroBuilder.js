@@ -15,7 +15,7 @@ import {
   values,
 } from 'ramda';
 import { getHero } from 'fire-emblem-heroes-stats';
-import { exportInstance } from 'fire-emblem-heroes-calculator';
+import { getArenaScore, exportInstance } from 'fire-emblem-heroes-calculator';
 import type {
   HeroInstance,
   InstanceSkills,
@@ -115,6 +115,9 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
         .export-button:focus {
           outline: none;
         }
+        .pad-left {
+          padding-left: 0.75em;
+        }
         .row {
           align-items: baseline;
           color: ${colors.iceberg};
@@ -123,7 +126,6 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
           font-size: ${fontSizes.medium}px;
           font-weight: bold;
           justify-content: space-between;
-          padding-left: 0.75em;
           position: relative;
         }
         .section {
@@ -227,7 +229,7 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
           />
         </div>
         <div className="section" style={{ width: 175 }}>
-          <div className="row">
+          <div className="row pad-left">
             Boon
             <div style={{ flexBasis: 75 }}>
               <Select
@@ -253,7 +255,7 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
               />
             </div>
           </div>
-          <div className="row">
+          <div className="row pad-left">
             Bane
             <div style={{ flexBasis: 75 }}>
               <Select
@@ -278,6 +280,14 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
                 }
               />
             </div>
+          </div>
+        </div>
+        <div className="section">
+          <div
+            className="row center"
+            title="Estimated Arena score vs advanced opponent (when used with a bonus hero)."
+          >
+            Arena Unit Score: {getArenaScore(heroInstance)}
           </div>
         </div>
         <div className="section">
