@@ -26,6 +26,7 @@ import {
   sort,
   sortWith,
   test,
+  toPairs,
   union,
   zipObj,
   __,
@@ -329,4 +330,79 @@ export function hpBelowThreshold(
   hpPercent: number,
 ): boolean {
   return getCurrentHp(hero) <= getStat(hero, 'hp') * hpPercent / 100;
+}
+
+function getBaseStatTotal(hero: HeroInstance): number {
+  const baseStats = getHero(hero.name).stats[40][hero.rarity];
+
+  return ['hp', 'atk', 'spd', 'def', 'res'].reduce((acc, statKey) => {
+    return (
+      acc +
+      baseStats[statKey][
+        statKey === hero.boon ? 2 : statKey === hero.bane ? 0 : 1
+      ]
+    );
+  }, 0);
+}
+
+/**
+ * Arena score formula sourced from:
+ * https://imgur.com/J62KSn0
+ * Credit for experimentation to https://www.reddit.com/user/patoente
+ *
+ * @param {*} hero
+ * Hero instance to calculate score for
+ * @param {*} level
+ * Compute arena score as if unit were this level
+ * @returns projected arena unit score
+ */
+export function getArenaScore(
+  hero: HeroInstance,
+  level: number = 40,
+  bonus: boolean = true,
+): number {
+  const baseScore = 150;
+
+  const bonusFactor = 2;
+
+  // Source:
+  // http://www.arcticsilverfox.com/score_calc/code.js?v=1519921929
+  // line 1009
+  const levelRarityFactors = {
+    '1': 68 / 39,
+    '2': 73 / 39,
+    '3': 79 / 39,
+    '4': 84 / 39,
+    '5': 91 / 39,
+  };
+
+  const baseStatTotalScore = Math.floor(getBaseStatTotal(hero) / 5);
+
+  const levelScore = Math.floor(level * levelRarityFactors[hero.rarity]);
+
+  const mergeScore = hero.mergeLevel * 2;
+
+  const rarityScore = 45 + hero.rarity * 2;
+
+  const spScore = Math.floor(
+    toPairs(hero.skills).reduce((acc, [skillType, skillName]) => {
+      if (skillName === undefined) return acc;
+      const skill = getSkillObject(skillType, skillName);
+      // TODO: Seal skills have an associated sp cost. too.  This should be
+      // included in stats.
+      if (skill.type === 'SEAL') return acc;
+      return acc + skill.spCost;
+    }, 0) / 100,
+  );
+
+  const unitScore =
+    (bonus ? bonusFactor : 1) *
+    (baseScore +
+      baseStatTotalScore +
+      levelScore +
+      mergeScore +
+      rarityScore +
+      spScore);
+
+  return unitScore;
 }
