@@ -25441,6 +25441,124 @@
       "shortName": "Robin (F)"
     },
     {
+      "name": "Robin (F) (Fell Vessel)",
+      "title": "Fell Vessel",
+      "origin": "Fire Emblem Awakening",
+      "weaponType": "Colorless Breath",
+      "moveType": "Flying",
+      "rarities": "5",
+      "releaseDate": "2018-03-29",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Robin (F) (Fell Vessel).png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Robin (F) (Fell Vessel).png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Robin (F) (Fell Vessel).png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Fire Breath+",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Flametongue",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Expiration",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Glowing Ember",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Bonfire",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Dragonskin",
+          "rarity": 5
+        },
+        {
+          "name": "Cancel Affinity 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Cancel Affinity 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Cancel Affinity 3",
+          "rarity": 5
+        },
+        {
+          "name": "Res Smoke 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Res Smoke 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Res Smoke 3",
+          "rarity": 5
+        }
+      ],
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 16,
+            "atk": 8,
+            "spd": 9,
+            "def": 8,
+            "res": 6
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              37,
+              40,
+              43
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              32,
+              35,
+              38
+            ],
+            "def": [
+              26,
+              30,
+              33
+            ],
+            "res": [
+              22,
+              25,
+              29
+            ]
+          }
+        }
+      },
+      "shortName": "Robin (F)"
+    },
+    {
       "name": "Robin (F) (Ylissean Summer)",
       "title": "Seaside Tactician",
       "origin": "Fire Emblem Awakening",
@@ -39473,7 +39591,7 @@
       "name": "Dragonskin",
       "effect": "Neutralizes \"effective against flying\" bonuses. Grants Def/Res+4 during combat if foe initiates combat.",
       "exclusive": true,
-      "spCost": 0,
+      "spCost": 300,
       "movementRestriction": [
         ""
       ],
