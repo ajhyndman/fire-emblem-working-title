@@ -44,58 +44,62 @@ storiesOf('Hero', module).add('default', () => (
   />
 ));
 
-storiesOf('HeroBuilder', module).add('default', () => {
-  const ACTION = action;
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case 'SET_PREVIEW_LEVEL':
-        return {
-          ...state,
-          level: action.level,
-        };
-      case 'UPDATE_BANE':
-        return {
-          ...state,
-          heroInstance: {
-            ...state.heroInstance,
-            bane: action.bane,
-          },
-        };
-      case 'UPDATE_BOON':
-        return {
-          ...state,
-          heroInstance: {
-            ...state.heroInstance,
-            boon: action.boon,
-          },
-        };
-      case 'UPDATE_RARITY':
-        return {
-          ...state,
-          heroInstance: {
-            ...state.heroInstance,
-            rarity: action.rarity,
-          },
-        };
-      default:
-        ACTION(action.type)(action);
-        return state;
-    }
-  };
+storiesOf('HeroBuilder', module)
+  .addDecorator(story => (
+    <div style={{ backgroundColor: colors.elephant }}>{story()}</div>
+  ))
+  .add('default', () => {
+    const ACTION = action;
+    const reducer = (state, action) => {
+      switch (action.type) {
+        case 'SET_PREVIEW_LEVEL':
+          return {
+            ...state,
+            level: action.level,
+          };
+        case 'UPDATE_BANE':
+          return {
+            ...state,
+            heroInstance: {
+              ...state.heroInstance,
+              bane: action.bane,
+            },
+          };
+        case 'UPDATE_BOON':
+          return {
+            ...state,
+            heroInstance: {
+              ...state.heroInstance,
+              boon: action.boon,
+            },
+          };
+        case 'UPDATE_RARITY':
+          return {
+            ...state,
+            heroInstance: {
+              ...state.heroInstance,
+              rarity: action.rarity,
+            },
+          };
+        default:
+          ACTION(action.type)(action);
+          return state;
+      }
+    };
 
-  const HeroBuilderStory = withReducer('state', 'dispatch', reducer, {
-    heroInstance,
-    level: 1,
-  })(({ state, dispatch }: { state: Object, dispatch: Dispatch }) => (
-    <HeroBuilder
-      dispatch={dispatch}
-      heroInstance={state.heroInstance}
-      level={state.level}
-    />
-  ));
+    const HeroBuilderStory = withReducer('state', 'dispatch', reducer, {
+      heroInstance,
+      level: 1,
+    })(({ state, dispatch }: { state: Object, dispatch: Dispatch }) => (
+      <HeroBuilder
+        dispatch={dispatch}
+        heroInstance={state.heroInstance}
+        level={state.level}
+      />
+    ));
 
-  return <HeroBuilderStory />;
-});
+    return <HeroBuilderStory />;
+  });
 
 storiesOf('ImportExportPanel', module).add('default', () => (
   <div className="root">
