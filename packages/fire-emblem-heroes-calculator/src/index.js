@@ -3,6 +3,7 @@
 export { calculateResult } from './damageCalculation';
 
 export {
+  getArenaScore,
   getCurrentHp,
   getDefaultSkills,
   getHeroesWithSkill,
