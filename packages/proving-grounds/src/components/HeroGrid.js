@@ -6,6 +6,7 @@ import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
 import type { Hero } from 'fire-emblem-heroes-stats';
 
 import HeroPortrait from './Hero';
+import HeroSlot from './HeroSlot';
 import {
   colors,
   fontFamilies,
@@ -36,19 +37,6 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         grid-row-gap: ${GUTTER_HEIGHT}px;
         margin: ${GUTTER_HEIGHT}px ${GUTTER_WIDTH}px;
       }
-      .gridSquare {
-        box-shadow: 0 0 10px rgba(70, 183, 227, 0.4);
-        cursor: pointer;
-        height: ${gridSize}px;
-        margin-bottom: ${GUTTER_HEIGHT}px;
-        position: relative;
-        transition: box-shadow 0.2s;
-        user-select: none;
-        width: ${gridSize}px;
-      }
-      .gridSquare:hover {
-        box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
-      }
       .gridSquareOuter {
         align-items: center;
         display: flex;
@@ -67,11 +55,6 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         justify-content: center;
         line-height: 1;
         width: ${gridSize}px;
-      }
-      .active,
-      .active:hover {
-        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5),
-          0 0 2px 4px rgba(223, 110, 134, 0.9);
       }
       div:empty {
         margin: 0 ${GUTTER_WIDTH}px;
@@ -108,12 +91,9 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
     {addIndex(map)(
       (hero: Hero, i: number) => (
         <div className="gridSquareOuter" key={`${i}-${hero.name}`}>
-          <div
-            className={`gridSquare ${activeHeroName === hero.name
-              ? 'active'
-              : ''}`}
-            onClick={event => {
-              event.stopPropagation();
+          <HeroSlot
+            isActive={activeHeroName === hero.name}
+            onClick={() => {
               dispatch({
                 type: 'SELECT_HERO',
                 hero: getDefaultInstance(hero.name),
@@ -125,7 +105,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
               assets={hero.assets}
               weaponType={hero.weaponType}
             />
-          </div>
+          </HeroSlot>
           <div className="name">{hero.shortName || hero.name}</div>
         </div>
       ),
