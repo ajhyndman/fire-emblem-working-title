@@ -43,8 +43,9 @@ class Root extends React.Component {
         event.getModifierState('Control') ||
         event.getModifierState('Meta') ||
         window.location.pathname !== '/'
-      )
+      ) {
         return;
+      }
       this.searchInput.focus();
     };
   }
