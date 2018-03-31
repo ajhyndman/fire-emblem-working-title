@@ -7,12 +7,16 @@ import reducer from '../reducer';
 import gaMiddleware from './gaMiddleware';
 import { loadState, saveState } from './localStorage';
 
+export type Tab = 'ALL_HEROES' | 'MY_SHELF';
+
 export type State = {
   activeHero: ?HeroInstance,
   activeSkill: ?SkillType,
   activeSlot: 0 | 1 | void,
+  activeTab: Tab,
   exportString: string,
   heroShelf: Array<HeroInstance>,
+  // Hero slot values may be null (this is to support serialization to JSON)
   heroSlots: [?HeroInstance, ?HeroInstance],
   host: string,
   notifications: Array<string>,
@@ -25,6 +29,7 @@ const emptyState: State = {
   activeHero: undefined,
   activeSkill: undefined,
   activeSlot: undefined,
+  activeTab: 'ALL_HEROES',
   exportString: '',
   heroShelf: [],
   heroSlots: [undefined, undefined],
