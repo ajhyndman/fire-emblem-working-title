@@ -20,7 +20,8 @@ import SkillSelector from '../src/components/SkillSelector';
 import StatSheet from '../src/components/StatSheet';
 import Toast from '../src/components/Toast';
 import { colors } from '../src/theme';
-import type { Dispatch } from '../src/reducer';
+import HeroShelf from '../src/components/HeroShelf';
+import { type Dispatch } from '../src/reducer';
 
 const heroInstance: HeroInstance = getDefaultInstance('Anna');
 
@@ -100,6 +101,25 @@ storiesOf('HeroBuilder', module)
 
     return <HeroBuilderStory />;
   });
+
+storiesOf('HeroShelf', module).add('with starter heroes', () => (
+  <div className="root">
+    <style jsx>{`
+      .root {
+        background: ${colors.elephant};
+      }
+    `}</style>
+    <HeroShelf
+      activeShelfSlot={0}
+      dispatch={() => {}}
+      heroShelf={[
+        getDefaultInstance('Alfonse', 3),
+        getDefaultInstance('Sharena', 4),
+        getDefaultInstance('Anna'),
+      ]}
+    />
+  </div>
+));
 
 storiesOf('ImportExportPanel', module).add('default', () => (
   <div className="root">
