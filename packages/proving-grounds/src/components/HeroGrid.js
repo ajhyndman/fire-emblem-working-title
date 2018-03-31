@@ -56,10 +56,6 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         line-height: 1;
         width: ${gridSize}px;
       }
-      div:empty {
-        margin: 0 ${GUTTER_WIDTH}px;
-        width: 56px;
-      }
       .name {
         color: ${Color(colors.iceberg).setAlpha(0.75)};
         font-family: ${fontFamilies.ui};
@@ -74,10 +70,9 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
     `}</style>
     {showUndo && (
       <div className="gridSquareOuter">
-        <div
-          className="gridSquare"
-          onClick={event => {
-            event.stopPropagation();
+        <HeroSlot
+          isActive={false}
+          onClick={() => {
             dispatch({
               type: 'SELECT_HERO',
               hero: 'CLEAR',
@@ -85,7 +80,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
           }}
         >
           <div className="undo">Undo</div>
-        </div>
+        </HeroSlot>
       </div>
     )}
     {addIndex(map)(
