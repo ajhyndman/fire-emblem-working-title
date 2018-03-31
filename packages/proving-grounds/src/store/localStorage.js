@@ -38,15 +38,22 @@ export const loadState = (initialState: State) => {
 
   try {
     const serializedHeroSlots = localStorage.getItem('heroSlots');
+    const serializedHeroShelf = localStorage.getItem('heroShelf');
 
     // this is a new user
-    if (!serializedHeroSlots) return initialState;
+    if (!(serializedHeroSlots && serializedHeroShelf)) return initialState;
 
     // this is a returning user
     const heroSlots = JSON.parse(serializedHeroSlots);
-    if (!all(validateInstance, heroSlots)) return initialState;
+    const heroShelf = JSON.parse(serializedHeroShelf);
+    if (
+      !(all(validateInstance, heroSlots) && all(validateInstance, heroShelf))
+    ) {
+      return initialState;
+    }
     return {
       ...initialState,
+      heroShelf,
       heroSlots,
     };
   } catch (error) {
@@ -62,7 +69,9 @@ export const loadState = (initialState: State) => {
 export const saveState = throttle((state: State) => {
   try {
     const serializedHeroSlots = JSON.stringify(state.heroSlots);
+    const serializedHeroShelf = JSON.stringify(state.heroShelf);
     localStorage.setItem('heroSlots', serializedHeroSlots);
+    localStorage.setItem('heroShelf', serializedHeroShelf);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.warn(
