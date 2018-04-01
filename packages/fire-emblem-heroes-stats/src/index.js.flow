@@ -59,6 +59,14 @@ export type StatsByLevel = {
   +'40': Level40Stats,
 };
 
+export type GrowthPoints = {
+  +hp: number,
+  +atk: number,
+  +spd: number,
+  +def: number,
+  +res: number,
+};
+
 export type Assets = {
   +portrait: {
     +'75px': string,
@@ -78,6 +86,7 @@ export type Hero = {
   +origin?: string,
   +rarities?: string,
   +assets: Assets,
+  +growthPoints: GrowthPoints,
   +stats: StatsByLevel,
   +skills: Array<{
     +name: string,

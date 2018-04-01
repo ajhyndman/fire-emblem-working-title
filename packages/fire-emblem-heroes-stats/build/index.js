@@ -342,6 +342,14 @@ async function fetchHeroStats() {
 
             const skills = [...otherSkills, ...passiveSkills];
 
+            const growthPoints = {
+              hp: Number.parseInt(hpGrowthPoints, 10),
+              atk: Number.parseInt(atkGrowthPoints, 10),
+              spd: Number.parseInt(spdGrowthPoints, 10),
+              def: Number.parseInt(defGrowthPoints, 10),
+              res: Number.parseInt(resGrowthPoints, 10),
+            };
+
             // Compute the hero's stats at level 1 and 40 for all available
             // rarities.
             const stats = {
@@ -463,6 +471,7 @@ async function fetchHeroStats() {
                 },
               },
               skills,
+              growthPoints,
               stats,
             };
           },
