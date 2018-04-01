@@ -31,7 +31,7 @@ const emptyState: State = {
   activeShelfSlot: undefined,
   activeSkill: undefined,
   activeSlot: undefined,
-  activeTab: 'MY_SHELF',
+  activeTab: 'ALL_HEROES',
   exportString: '',
   heroShelf: [],
   heroSlots: [undefined, undefined],
