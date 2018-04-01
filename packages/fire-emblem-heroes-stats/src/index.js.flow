@@ -98,6 +98,7 @@ export type SkillType =
 export type WeaponSkill = {
   +type: 'WEAPON',
   +name: string,
+  +skillTier: number,
   +spCost: number,
   +'damage(mt)': number,
   +'range(rng)': number,
@@ -113,6 +114,7 @@ export type AssistSkill = {
   +range: number,
   +effect: string,
   +exclusive: boolean,
+  +skillTier: number,
   +spCost: number,
   +movementRestriction: string[],
   +weaponRestriction: string[],
@@ -124,6 +126,7 @@ export type SpecialSkill = {
   +cooldown: number,
   +effect: string,
   +exclusive: boolean,
+  +skillTier: number,
   +spCost: number,
   // The wiki no longer has trigger/target fields, but we likely want these in he future.
   // +trigger: 'Assist (Staff)' | 'Attack' | 'Enemy Attack';
@@ -137,6 +140,7 @@ export type PassiveSkill = {
   +name: string,
   +effect: string,
   +exclusive: boolean,
+  +skillTier: number,
   +spCost: number,
   +movementRestriction: string[],
   +weaponRestriction: string[],
@@ -146,6 +150,7 @@ export type SealSkill = {
   +type: 'SEAL',
   +name: string,
   +effect: string,
+  +skillTier: number,
   +spCost: number,
 };
 
