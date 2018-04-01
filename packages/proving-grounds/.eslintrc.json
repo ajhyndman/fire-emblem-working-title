@@ -21,6 +21,8 @@
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
 
+    "flowtype/define-flow-type": "error",
+
     "no-null/no-null": ["error"],
 
     "prettier/prettier": ["error", {

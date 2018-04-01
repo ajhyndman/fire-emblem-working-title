@@ -4,8 +4,9 @@ import { getSpecialCooldown } from 'fire-emblem-heroes-calculator';
 import { getHero } from 'fire-emblem-heroes-stats';
 
 import HeroPortrait from './Hero';
+import HeroSlot from './HeroSlot';
 import Router from '../router';
-import { colors, gridSize, transition } from '../theme';
+import { gridSize, transition } from '../theme';
 import { staticUrl } from '../../config';
 import type { Dispatch } from '../reducer';
 
@@ -68,26 +69,6 @@ const CombatPreview = ({
         height: ${gridSize * 1.5}px;
         justify-content: space-between;
       }
-      .hero-slot {
-        background: ${colors.frostedGlass};
-        cursor: pointer;
-        height: ${gridSize}px;
-        position: relative;
-        transition: box-shadow 0.2s;
-        user-select: none;
-        width: ${gridSize}px;
-      }
-      .hero-slot:hover {
-        box-shadow: 0 5px 20px rgba(70, 183, 227, 0.5);
-      }
-      .active {
-        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5),
-          0 0 2px 4px rgba(223, 110, 134, 0.9);
-      }
-      .active:hover {
-        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5),
-          0 0 2px 4px rgba(223, 110, 134, 0.9);
-      }
       .swap-button {
         box-sizing: border-box;
         cursor: pointer;
@@ -108,16 +89,14 @@ const CombatPreview = ({
       }
     `}</style>
     <div className="container">
-      <div
-        className={`${activeSlot === 0 ? 'active' : ''} hero-slot`}
-        onClick={event => {
-          event.stopPropagation();
+      <HeroSlot
+        isActive={activeSlot === 0}
+        onClick={() => {
           dispatch({ type: 'SELECT_SLOT', slot: 0 });
         }}
-        onContextMenu={event => openConfig(event, dispatch, 0)}
       >
         {leftHero && (
-          <div>
+          <div onContextMenu={event => openConfig(event, dispatch, 0)}>
             <HeroPortrait
               assets={getHero(leftHero.name).assets}
               mergeLevel={leftHero.mergeLevel}
@@ -147,7 +126,7 @@ const CombatPreview = ({
             />
           </div>
         )}
-      </div>
+      </HeroSlot>
       <img
         className="swap-button"
         role="button"
@@ -164,16 +143,14 @@ const CombatPreview = ({
         `}
         sizes="40px"
       />
-      <div
-        className={`${activeSlot === 1 ? 'active' : ''} hero-slot`}
-        onClick={event => {
-          event.stopPropagation();
+      <HeroSlot
+        isActive={activeSlot === 1}
+        onClick={() => {
           dispatch({ type: 'SELECT_SLOT', slot: 1 });
         }}
-        onContextMenu={event => openConfig(event, dispatch, 1)}
       >
         {rightHero && (
-          <div>
+          <div onContextMenu={event => openConfig(event, dispatch, 1)}>
             <HeroPortrait
               assets={getHero(rightHero.name).assets}
               mergeLevel={rightHero.mergeLevel}
@@ -203,7 +180,7 @@ const CombatPreview = ({
             />
           </div>
         )}
-      </div>
+      </HeroSlot>
     </div>
   </div>
 );

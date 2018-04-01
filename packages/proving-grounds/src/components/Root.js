@@ -10,21 +10,23 @@ import { allPass, filter, map, path, pathOr, split, toLower } from 'ramda';
 import CombatPreview from './CombatPreview';
 import CombatResult from './CombatResult';
 import HeroGrid from './HeroGrid';
+import HeroShelf from './HeroShelf';
 import Input from './Input';
 import ShareButton from './ShareButton';
+import SegmentedControl from './SegmentedControl';
 import matchHero from '../matchHero';
 import { encodeHero } from '../queryCodex';
 import { breakPoints, fontFamilies } from '../theme';
 import { deployTimestamp, staticUrl } from '../../config';
-import type { Dispatch } from '../reducer';
-import type { State } from '../store';
+import { type Dispatch } from '../reducer';
+import { type State } from '../store';
 
 type Props = {
   dispatch: Dispatch,
   state: State,
 };
 
-export const panelHeight = 212;
+export const panelHeight = 245;
 
 const backgroundUrl = 'Bg_WorldMap2.jpg';
 
@@ -43,8 +45,9 @@ class Root extends React.Component {
         event.getModifierState('Control') ||
         event.getModifierState('Meta') ||
         window.location.pathname !== '/'
-      )
+      ) {
         return;
+      }
       this.searchInput.focus();
     };
   }
@@ -52,8 +55,11 @@ class Root extends React.Component {
   shouldComponentUpdate(nextProps: Props) {
     return (
       this.props.state.heroSlots !== nextProps.state.heroSlots ||
+      this.props.state.heroShelf !== nextProps.state.heroShelf ||
       this.props.state.activeSlot !== nextProps.state.activeSlot ||
+      this.props.state.activeShelfSlot !== nextProps.state.activeShelfSlot ||
       this.props.state.activeHero !== nextProps.state.activeHero ||
+      this.props.state.activeTab !== nextProps.state.activeTab ||
       this.props.state.searchString !== nextProps.state.searchString ||
       this.props.state.notifications !== nextProps.state.notifications ||
       this.props.state.previewLevel !== nextProps.state.previewLevel
@@ -262,25 +268,55 @@ class Root extends React.Component {
               />
             </div>
           </div>
+
+          <div className="row tabs-wrapper">
+            <SegmentedControl
+              maxWidth={500}
+              onChange={tabIndex => {
+                dispatch({
+                  type: 'ACTIVATE_TAB',
+                  id: tabIndex === 0 ? 'ALL_HEROES' : 'MY_SHELF',
+                });
+              }}
+              options={['All Heroes', 'My Shelf']}
+              selected={state.activeTab === 'ALL_HEROES' ? 0 : 1}
+              small
+            />
+          </div>
         </div>
         <div className="spacer" />
-        <HeroGrid
-          activeHeroName={path(['activeHero', 'name'], state)}
-          dispatch={dispatch}
-          heroes={filter(
-            allPass(map(matchHero, split(' ', state.searchString))),
-            getEventHeroes(false),
-          )}
-        />
-        <HeroGrid
-          activeHeroName={pathOr('', ['activeHero', 'name'], state)}
-          dispatch={dispatch}
-          heroes={filter(
-            allPass(map(matchHero, split(' ', toLower(state.searchString)))),
-            getReleasedHeroes(),
-          )}
-          showUndo
-        />
+        {state.activeTab === 'ALL_HEROES' && (
+          <div>
+            {getEventHeroes(false).length > 0 && (
+              <HeroGrid
+                activeHeroName={path(['activeHero', 'name'], state)}
+                dispatch={dispatch}
+                heroes={filter(
+                  allPass(map(matchHero, split(' ', state.searchString))),
+                  getEventHeroes(false),
+                )}
+              />
+            )}
+            <HeroGrid
+              activeHeroName={pathOr('', ['activeHero', 'name'], state)}
+              dispatch={dispatch}
+              heroes={filter(
+                allPass(
+                  map(matchHero, split(' ', toLower(state.searchString))),
+                ),
+                getReleasedHeroes(),
+              )}
+              showUndo
+            />
+          </div>
+        )}
+        {state.activeTab === 'MY_SHELF' && (
+          <HeroShelf
+            activeShelfSlot={state.activeShelfSlot}
+            dispatch={dispatch}
+            heroShelf={state.heroShelf}
+          />
+        )}
         <div className="footer">
           <span>Last updated: {deployTimestamp}</span>
           <span>

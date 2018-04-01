@@ -2,8 +2,8 @@
 import React from 'react';
 import Color from 'color-js';
 import { map, addIndex } from 'ramda';
-import { getDefaultInstance } from 'fire-emblem-heroes-calculator';
-import type { Hero } from 'fire-emblem-heroes-stats';
+import { getHero } from 'fire-emblem-heroes-stats';
+import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import HeroPortrait from './Hero';
 import HeroSlot from './HeroSlot';
@@ -17,16 +17,15 @@ import {
 import type { Dispatch } from '../reducer';
 
 type Props = {
-  activeHeroName: ?string,
+  activeShelfSlot: ?number,
   dispatch: Dispatch,
-  heroes: Array<Hero>,
-  showUndo?: boolean,
+  heroShelf: Array<HeroInstance>,
 };
 
 const GUTTER_HEIGHT = 5;
 const GUTTER_WIDTH = 8;
 
-const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
+const HeroShelf = ({ activeShelfSlot, dispatch, heroShelf }: Props) => (
   <div className="grid">
     <style jsx>{`
       .grid {
@@ -43,7 +42,7 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         flex-direction: column;
         width: 100%;
       }
-      .undo {
+      .add {
         align-items: center;
         background-color: ${Color(colors.aquaIsland).setAlpha(0.2)};
         box-shadow: inset 0 0 12px ${colors.aquaIsland};
@@ -68,45 +67,44 @@ const HeroGrid = ({ activeHeroName, dispatch, heroes, showUndo }: Props) => (
         white-space: nowrap;
       }
     `}</style>
-    {showUndo && (
-      <div className="gridSquareOuter">
-        <HeroSlot
-          isActive={false}
-          onClick={() => {
-            dispatch({
-              type: 'SELECT_HERO',
-              hero: 'CLEAR',
-            });
-          }}
-        >
-          <div className="undo">Undo</div>
-        </HeroSlot>
-      </div>
-    )}
-    {addIndex(map)(
-      (hero: Hero, i: number) => (
+    <div className="gridSquareOuter">
+      <HeroSlot
+        isActive={false}
+        onClick={() => {
+          dispatch({ type: 'ADD_TO_SHELF' });
+        }}
+      >
+        <div className="add">Add</div>
+      </HeroSlot>
+    </div>
+    {addIndex(map)((hero: HeroInstance, i: number) => {
+      const heroStats = getHero(hero.name);
+
+      return (
         <div className="gridSquareOuter" key={`${i}-${hero.name}`}>
           <HeroSlot
-            isActive={activeHeroName === hero.name}
+            isActive={activeShelfSlot === i}
             onClick={() => {
               dispatch({
-                type: 'SELECT_HERO',
-                hero: getDefaultInstance(hero.name),
+                type: 'SELECT_SHELF_HERO',
+                hero,
+                index: i,
               });
             }}
           >
             <HeroPortrait
+              mergeLevel={hero.mergeLevel}
               name={hero.name}
-              assets={hero.assets}
-              weaponType={hero.weaponType}
+              rarity={hero.rarity}
+              assets={heroStats.assets}
+              weaponType={heroStats.weaponType}
             />
           </HeroSlot>
-          <div className="name">{hero.shortName || hero.name}</div>
+          <div className="name">{heroStats.shortName || heroStats.name}</div>
         </div>
-      ),
-      heroes,
-    )}
+      );
+    }, heroShelf)}
   </div>
 );
 
-export default HeroGrid;
+export default HeroShelf;

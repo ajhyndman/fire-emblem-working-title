@@ -10,6 +10,7 @@ export const colors = Object.freeze({
   aquaIsland: '#9ad8da',
   blushPink: '#ff79fe',
   elephant: '#123346',
+  elephant40: 'rgba(18, 51, 70, 0.4)',
   fadedJade: '#40737d',
   frostedGlass: 'rgba(255, 255, 255, 0.2)',
   iceberg: '#dcf2f3',

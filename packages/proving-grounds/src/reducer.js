@@ -1,6 +1,7 @@
 // @flow
 import {
   any,
+  append,
   assocPath,
   clamp,
   compose,
@@ -10,6 +11,7 @@ import {
   findLastIndex,
   isNil,
   not,
+  remove,
   reverse,
   update,
 } from 'ramda';
@@ -17,9 +19,16 @@ import { updateRarity } from 'fire-emblem-heroes-calculator';
 import type { HeroInstance, Rarity, Stat } from 'fire-emblem-heroes-calculator';
 import type { SkillType } from 'fire-emblem-heroes-stats';
 
-import type { State } from './store';
+import type { State, Tab } from './store';
 
 export type Action =
+  | {
+      type: 'ACTIVATE_TAB',
+      id: Tab,
+    }
+  | {
+      type: 'ADD_TO_SHELF',
+    }
   | {
       type: 'CHANGE_EXPORT_STRING',
       value: string,
@@ -36,8 +45,13 @@ export type Action =
       value: string,
     }
   | {
+      type: 'SELECT_SHELF_HERO',
+      hero: HeroInstance,
+      index: number,
+    }
+  | {
       type: 'SELECT_HERO',
-      hero: ?(HeroInstance | 'CLEAR'),
+      hero: HeroInstance | 'CLEAR' | void,
     }
   | {
       type: 'SELECT_SKILL',
@@ -88,6 +102,7 @@ export type Dispatch = (action: Action) => void;
 
 const clearActiveState = {
   activeHero: undefined,
+  activeShelfSlot: undefined,
   activeSlot: undefined,
 };
 
@@ -101,6 +116,32 @@ const getLastOccupiedIndex = findLastIndex(compose(not, isNil));
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
+    case 'ACTIVATE_TAB':
+      return {
+        ...state,
+        ...clearActiveState,
+        activeTab: action.id,
+      };
+    case 'ADD_TO_SHELF':
+      if (state.activeSlot !== undefined) {
+        const selectedHero = state.heroSlots[state.activeSlot];
+        // heroSlots can contain null when deserialized from server
+        // eslint-disable-next-line no-null/no-null
+        if (selectedHero != null) {
+          // Move selected hero to shelf
+          return {
+            ...state,
+            activeSlot: undefined,
+            heroShelf: append(selectedHero, state.heroShelf),
+            heroSlots: update(state.activeSlot, undefined, state.heroSlots),
+          };
+        } else {
+          // Do nothing
+          return state;
+        }
+      }
+      // Do nothing
+      return state;
     case 'CHANGE_EXPORT_STRING':
       return { ...state, exportString: action.value };
     case 'CHANGE_SEARCH_STRING':
@@ -112,6 +153,41 @@ const reducer = (state: State, action: Action): State => {
         ...state,
         notifications: concat(state.notifications, [action.value]),
       };
+    case 'SELECT_SHELF_HERO':
+      if (
+        state.activeSlot !== undefined &&
+        // heroSlots can contain null when deserialized from server
+        // eslint-disable-next-line no-null/no-null
+        state.heroSlots[state.activeSlot] == null
+      ) {
+        // Move hero into slot.
+        return {
+          ...state,
+          ...clearActiveState,
+          heroShelf: remove(action.index, 1, state.heroShelf),
+          heroSlots: update(state.activeSlot, action.hero, state.heroSlots),
+        };
+      } else if (
+        state.activeSlot !== undefined &&
+        // heroSlots can contain null when deserialized from server
+        // eslint-disable-next-line no-null/no-null
+        state.heroSlots[state.activeSlot] != null
+      ) {
+        // Swap hero from shelf with active hero.
+        return {
+          ...state,
+          ...clearActiveState,
+          heroShelf: update(
+            action.index,
+            state.heroSlots[state.activeSlot],
+            state.heroShelf,
+          ),
+          heroSlots: update(state.activeSlot, action.hero, state.heroSlots),
+        };
+      }
+      // select hero on shelf
+      return { ...state, activeShelfSlot: action.index };
+
     case 'SELECT_HERO':
       if (state.activeSlot !== undefined && action.hero === 'CLEAR') {
         // clear active slot
@@ -152,32 +228,61 @@ const reducer = (state: State, action: Action): State => {
     case 'SELECT_SKILL':
       return { ...state, activeSkill: action.skillType };
     case 'SELECT_SLOT':
-      return state.activeHero === 'CLEAR'
-        ? action.slot === undefined
-          ? // clear active states
-            { ...state, ...clearActiveState }
-          : // clear the selected slot
-            {
-              ...state,
-              ...clearActiveState,
-              heroSlots: update(action.slot, undefined, state.heroSlots),
-            }
-        : state.activeHero === undefined
-          ? // activate slot
-            { ...state, activeSlot: action.slot }
-          : action.slot === undefined
-            ? // clear active states
-              { ...state, ...clearActiveState }
-            : // select new hero
-              {
-                ...state,
-                ...clearActiveState,
-                heroSlots: update(
-                  action.slot,
-                  state.activeHero,
-                  state.heroSlots,
-                ),
-              };
+      if (action.slot === undefined) {
+        // clear active states
+        return { ...state, ...clearActiveState };
+      }
+      if (state.activeHero === 'CLEAR') {
+        // clear the selected slot
+        return {
+          ...state,
+          ...clearActiveState,
+          heroSlots: update(action.slot, undefined, state.heroSlots),
+        };
+      }
+      if (state.activeHero !== undefined) {
+        // select new hero
+        return {
+          ...state,
+          ...clearActiveState,
+          heroSlots: update(action.slot, state.activeHero, state.heroSlots),
+        };
+      }
+      if (state.activeShelfSlot !== undefined) {
+        // select shelf hero
+        // TODO: Consider refactoring to DRY this logic out.
+
+        // heroSlots can contain null when deserialized from server
+        // eslint-disable-next-line no-null/no-null
+        if (state.heroSlots[action.slot] == null) {
+          // Move hero into slot.
+          const selectedHero = state.heroShelf[state.activeShelfSlot];
+
+          return {
+            ...state,
+            ...clearActiveState,
+            heroShelf: remove(state.activeShelfSlot, 1, state.heroShelf),
+            heroSlots: update(action.slot, selectedHero, state.heroSlots),
+          };
+        } else {
+          const selectedHero = state.heroShelf[state.activeShelfSlot];
+          const staleHero = state.heroSlots[action.slot];
+
+          // Swap hero from shelf with active hero.
+          return {
+            ...state,
+            ...clearActiveState,
+            heroShelf: update(
+              state.activeShelfSlot,
+              staleHero,
+              state.heroShelf,
+            ),
+            heroSlots: update(action.slot, selectedHero, state.heroSlots),
+          };
+        }
+      }
+      // activate slot
+      return { ...state, activeSlot: action.slot };
     case 'SET_HOST':
       return { ...state, host: action.host };
     case 'SET_MERGE_LEVEL': {
