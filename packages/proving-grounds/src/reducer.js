@@ -122,7 +122,7 @@ const reducer = (state: State, action: Action): State => {
         ...clearActiveState,
         activeTab: action.id,
       };
-    case 'ADD_TO_SHELF':
+    case 'ADD_TO_SHELF': {
       if (state.activeSlot !== undefined) {
         const selectedHero = state.heroSlots[state.activeSlot];
         // heroSlots can contain null when deserialized from server
@@ -135,13 +135,25 @@ const reducer = (state: State, action: Action): State => {
             heroShelf: append(selectedHero, state.heroShelf),
             heroSlots: update(state.activeSlot, undefined, state.heroSlots),
           };
-        } else {
-          // Do nothing
-          return state;
         }
       }
+
+      const lastIndex = getLastOccupiedIndex(state.heroSlots);
+      if (lastIndex >= 0) {
+        // clear the hero in highest occupied index
+        const selectedHero = state.heroSlots[lastIndex];
+
+        return {
+          ...state,
+          activeSlot: undefined,
+          heroShelf: append(selectedHero, state.heroShelf),
+          heroSlots: update(lastIndex, undefined, state.heroSlots),
+        };
+      }
+
       // Do nothing
       return state;
+    }
     case 'CHANGE_EXPORT_STRING':
       return { ...state, exportString: action.value };
     case 'CHANGE_SEARCH_STRING':
