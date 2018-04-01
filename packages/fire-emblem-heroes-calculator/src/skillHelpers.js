@@ -221,18 +221,28 @@ export function getStatValue(
  */
 
 // Checks whether or not a skill (ex: Wary Fighter 3) is the final form of the skill.
-export function isMaxTier(skillName: string): boolean {
-  if (isFreeSkill(skillName)) {
-    return false;
+export function isMaxTier(key: SkillType, skillName: string): boolean {
+  const skill = getSkillObject(key, skillName);
+
+  if (skill === undefined) return false;
+
+  switch (key) {
+    case 'WEAPON':
+      return skill.skillTier >= 4;
+    case 'SPECIAL':
+      return skill.skillTier >= 2;
+    case 'ASSIST':
+      return true;
+    case 'PASSIVE_A':
+      return !test(/\d/, skillName) || skill.skillTier >= 3;
+    case 'PASSIVE_B':
+      return !test(/\d/, skillName) || skill.skillTier >= 3;
+    case 'PASSIVE_C':
+      return !test(/\d/, skillName) || skill.skillTier >= 3;
+    case 'SEAL':
+      return !test(/\d/, skillName) || skill.skillTier >= 3;
   }
-  if (test(/(Swift Sparrow 2|Attack Def \+2)/, skillName)) {
-    return true;
-  }
-  if (test(/HP \+(3|4)$/, skillName)) {
-    return false;
-  }
-  // TODO: for weapons check if a + version of the skill exists.
-  return !test(/(1|2)$/, skillName);
+  return true;
 }
 
 // Checks for skills that cost 0 SP.

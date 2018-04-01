@@ -77,8 +77,7 @@ const SkillSelector = ({
       // TODO: Consider the merits of this filter.
       // Maybe the tradeoff in power for simplicity isn't worthwhile.
       filter(
-        skillName =>
-          skillType === 'SEAL' || isMaxTier(skillName ? skillName : ''),
+        skillName => isMaxTier(skillType, skillName ? skillName : ''),
         [undefined].concat(getInheritableSkills(heroInstance.name, skillType)),
       ),
     )}
