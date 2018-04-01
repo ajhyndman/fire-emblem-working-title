@@ -388,9 +388,6 @@ export function getArenaScore(
     toPairs(hero.skills).reduce((acc, [skillType, skillName]) => {
       if (skillName === undefined) return acc;
       const skill = getSkillObject(skillType, skillName);
-      // TODO: Seal skills have an associated sp cost. too.  This should be
-      // included in stats.
-      if (skill.type === 'SEAL') return acc;
       return acc + skill.spCost;
     }, 0) / 100,
   );
