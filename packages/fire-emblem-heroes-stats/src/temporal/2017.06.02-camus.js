@@ -41,6 +41,13 @@ const unitList: Array<Hero> = [
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Camus.png',
       },
     },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -96,6 +103,13 @@ const unitList: Array<Hero> = [
         '150px':
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Troubador.png',
       },
+    },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
     },
     stats: {
       '1': {
@@ -157,6 +171,13 @@ const unitList: Array<Hero> = [
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Red Cavalier.png',
       },
     },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -217,6 +238,13 @@ const unitList: Array<Hero> = [
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Axe Cavalier.png',
       },
     },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -276,6 +304,13 @@ const unitList: Array<Hero> = [
         '150px':
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Axe Cavalier.png',
       },
+    },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
     },
     stats: {
       '1': {

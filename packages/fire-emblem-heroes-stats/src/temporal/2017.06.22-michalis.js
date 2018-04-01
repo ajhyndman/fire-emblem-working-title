@@ -45,6 +45,13 @@ const unitList: Array<Hero> = [
         rarity: '-',
       },
     ],
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -101,6 +108,13 @@ const unitList: Array<Hero> = [
         rarity: '-',
       },
     ],
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -161,6 +175,13 @@ const unitList: Array<Hero> = [
         rarity: '-',
       },
     ],
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -217,6 +238,13 @@ const unitList: Array<Hero> = [
         rarity: '-',
       },
     ],
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -273,6 +301,13 @@ const unitList: Array<Hero> = [
         rarity: '-',
       },
     ],
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {

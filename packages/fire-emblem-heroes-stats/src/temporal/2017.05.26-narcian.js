@@ -41,6 +41,13 @@ const unitList: Array<Hero> = [
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Narcian.png',
       },
     },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -96,6 +103,13 @@ const unitList: Array<Hero> = [
         '150px':
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Bow Fighter.png',
       },
+    },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
     },
     stats: {
       '1': {
@@ -153,6 +167,13 @@ const unitList: Array<Hero> = [
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Blue Cavalier.png',
       },
     },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
+    },
     stats: {
       '1': {
         '5': {
@@ -204,6 +225,13 @@ const unitList: Array<Hero> = [
         '150px':
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Green Cavalier.png',
       },
+    },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
     },
     stats: {
       '1': {
@@ -260,6 +288,13 @@ const unitList: Array<Hero> = [
         '150px':
           'https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Sword Fighter.png',
       },
+    },
+    growthPoints: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0,
     },
     stats: {
       '1': {
