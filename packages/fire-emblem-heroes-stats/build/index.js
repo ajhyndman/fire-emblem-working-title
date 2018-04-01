@@ -654,8 +654,15 @@ async function fetchSkills() {
     action: 'cargoquery',
     format: 'json',
     tables: 'PassiveGroup,PassiveSingle',
-    fields:
-      'PassiveSingle.Name=Name,Effect,SkillTier,PassiveGroup.Seal=Seal,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction',
+    fields: [
+      'PassiveSingle.Name=Name',
+      'SPCost',
+      'Effect',
+      'SkillTier',
+      'PassiveGroup.Seal=Seal',
+      'PassiveGroup.MovementRestriction=MovementRestriction',
+      'PassiveGroup.WeaponRestriction=WeaponRestriction',
+    ].join(','),
     where: 'PassiveGroup.Seal="1"',
     join_on: 'PassiveGroup._pageName = PassiveSingle._pageName',
     group_by: 'Name',
@@ -663,9 +670,10 @@ async function fetchSkills() {
     .then(
       compose(
         filter(({ name }) => Boolean(name)),
-        map(({ Name, Effect }) => ({
+        map(({ Name, SPCost, Effect }) => ({
           name: Name,
           effect: sanitizeDescription(Effect),
+          spCost: Number.parseInt(SPCost, 10),
           // skillTier: Number.parseInt(SkillTier, 10),
           // movementRestriction: MovementRestriction.split(','),
           // weaponRestriction: WeaponRestriction.split(','),

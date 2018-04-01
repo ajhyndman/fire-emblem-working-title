@@ -45322,801 +45322,961 @@
     {
       "name": "Armored Boots",
       "effect": "If unit's HP = 100% at start of turn, unit can move 1 extra space. (That turn only; does not stack.)",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Atk Ploy 1",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Atk Ploy 2",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Atk Ploy 3",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Atk Smoke 1",
       "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Atk Smoke 2",
       "effect": "After combat, inflicts Atk-5 on foes within 2 spaces of target through their next actions.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Atk Smoke 3",
       "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Attack +1",
       "effect": "Grants Atk+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Attack +2",
       "effect": "Grants Atk+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Attack +3",
       "effect": "Grants Atk+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Brash Assault 1",
       "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 30%, unit makes a guaranteed follow-up attack.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Brash Assault 2",
       "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 40%, unit makes a guaranteed follow-up attack.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Brash Assault 3",
       "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 50%, unit makes a guaranteed follow-up attack.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Breath of Life 1",
       "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Breath of Life 2",
       "effect": "If unit initiates attack, adjacent allies recover 5 HP after combat.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Breath of Life 3",
       "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Close Def 1",
       "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+2 during combat.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Close Def 2",
       "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+4 during combat.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Close Def 3",
       "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Def Ploy 1",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-3 until the end of foe's next action.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Def Ploy 2",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-4 until the end of foe's next action.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Def Ploy 3",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Def Tactic 1",
       "effect": "At start of turn, grants Def+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Def Tactic 2",
       "effect": "At start of turn, grants Def+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Def Tactic 3",
       "effect": "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Defense +1",
       "effect": "Grants Def+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Defense +2",
       "effect": "Grants Def+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Defense +3",
       "effect": "Grants Def+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Deflect Magic 1",
       "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 30%.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Deflect Magic 2",
       "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 50%.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Deflect Magic 3",
       "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 80%.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Deflect Melee 1",
       "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 30%.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Deflect Melee 2",
       "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 50%.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Deflect Melee 3",
       "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 80%.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Deflect Missile 1",
       "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 30%.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Deflect Missile 2",
       "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 50%.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Deflect Missile 3",
       "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 80%.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Distant Def 1",
       "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Distant Def 2",
       "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Distant Def 3",
       "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Drive Def 1",
       "effect": "Grants allies within 2 spaces Def+2 during combat.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Drive Def 2",
       "effect": "Grants allies within 2 spaces Def+3 during combat.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Embla's Ward",
       "effect": "Unit receives 0 damage.",
+      "spCost": 0,
       "type": "SEAL"
     },
     {
       "name": "Fortify Def 1",
       "effect": "Grants adjacent allies Def+2 through their next actions at the start of each turn.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Fortify Def 2",
       "effect": "Grants adjacent allies Def+3 through their next actions at the start of each turn.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Fortify Def 3",
       "effect": "Grants adjacent allies Def+4 through their next actions at the start of each turn.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Fortify Res 1",
       "effect": "Grants adjacent allies Res+2 through their next actions at the start of each turn.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Fortify Res 2",
       "effect": "Grants adjacent allies Res+3 through their next actions at the start of each turn.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Fortify Res 3",
       "effect": "Grants adjacent allies Res+4 through their next actions at the start of each turn.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Fortress Res 1",
       "effect": "Grants Res+3. Inflicts Atk-3.",
+      "spCost": 40,
       "type": "SEAL"
     },
     {
       "name": "Fortress Res 2",
       "effect": "Grants Res+4. Inflicts Atk-3.",
+      "spCost": 80,
       "type": "SEAL"
     },
     {
       "name": "Fortress Res 3",
       "effect": "Grants Res+5. Inflicts Atk-3.",
+      "spCost": 160,
       "type": "SEAL"
     },
     {
       "name": "Guidance 1",
       "effect": "If unit has 100% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Guidance 2",
       "effect": "If unit has ≥ 50% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Guidance 3",
       "effect": "Infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Hardy Bearing 1",
       "effect": "Disables skills that change unit's attack priority. If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Hardy Bearing 2",
       "effect": "Disables skills that change unit's attack priority. If unit has ≥ 50% HP at start of battle, enemy skills that change attack priority are also disabled.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Hardy Bearing 3",
       "effect": "Disables skills that change unit's attack priority. Enemy skills that change attack priority are also disabled.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Heavy Blade 1",
       "effect": "If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Heavy Blade 2",
       "effect": "If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Heavy Blade 3",
       "effect": "If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Hone Atk 1",
       "effect": "Grants adjacent allies Atk+2 through their next actions at the start of each turn.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Hone Atk 2",
       "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Hone Atk 3",
       "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Hone Spd 1",
       "effect": "Grants adjacent allies Spd+2 through their next actions at the start of each turn.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Hone Spd 2",
       "effect": "Grants adjacent allies Spd+3 through their next actions at the start of each turn.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Hone Spd 3",
       "effect": "Grants adjacent allies Spd+4 through their next actions at the start of each turn.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "HP +3",
       "effect": "Grants +3 to max HP.",
+      "spCost": 40,
       "type": "SEAL"
     },
     {
       "name": "HP +4",
       "effect": "Grants +4 to max HP.",
+      "spCost": 80,
       "type": "SEAL"
     },
     {
       "name": "HP +5",
       "effect": "Grants +5 to max HP.",
+      "spCost": 160,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Atk 1",
       "effect": "Grants Atk+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Atk 2",
       "effect": "Grants Atk+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Atk 3",
       "effect": "Grants Atk+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Def 1",
       "effect": "Grants Def+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Def 2",
       "effect": "Grants Def+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Def 3",
       "effect": "Grants Def+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal HP 1",
       "effect": "Grants HP+3.",
+      "spCost": 40,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal HP 2",
       "effect": "Grants HP+4.",
+      "spCost": 80,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal HP 3",
       "effect": "Grants HP+5.",
+      "spCost": 160,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Res 1",
       "effect": "Grants Res+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Res 2",
       "effect": "Grants Res+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Res 3",
       "effect": "Grants Res+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Spd 1",
       "effect": "Grants Spd+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Spd 2",
       "effect": "Grants Spd+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Initiate Seal Spd 3",
       "effect": "Grants Spd+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Iote's Shield",
       "effect": "Neutralizes \"effective against fliers\" bonuses.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Múspellflame",
       "effect": "Unit receives 0 damage.",
+      "spCost": 0,
       "type": "SEAL"
     },
     {
       "name": "Obstruct 1",
       "effect": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Obstruct 2",
       "effect": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Obstruct 3",
       "effect": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Panic Ploy 1",
       "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 5 or more lower than unit through foe's next action.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Panic Ploy 2",
       "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 3 or more lower than unit through foe's next action.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Panic Ploy 3",
       "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Phantom Spd 1",
       "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +5 over actual value.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Phantom Spd 2",
       "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +8 over actual value.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Phantom Spd 3",
       "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +10 over actual value.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Poison Strike 1",
       "effect": "Inflicts 4 damage to foe after any combat this unit initiates.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Poison Strike 2",
       "effect": "Inflicts 7 damage to foe after any combat this unit initiates.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Poison Strike 3",
       "effect": "Inflicts 10 damage to foe after any combat this unit initiates.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Quick Riposte 1",
       "effect": "Unit automatically makes a follow-up attack if attacked at HP ≥ 90%.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Quick Riposte 2",
       "effect": "Unit automatically makes a follow-up attack if attacked at HP ≥ 80%.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Quick Riposte 3",
       "effect": "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Quickened Pulse",
       "effect": "Special cooldown count -1 at start of Turn 1.",
+      "spCost": 0,
       "type": "SEAL"
     },
     {
       "name": "Res Ploy 1",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-3 until the end of foe's next action.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Res Ploy 2",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-4 until the end of foe's next action.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Res Ploy 3",
       "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-5 until the end of foe's next action.",
+      "spCost": 240,
       "type": "SEAL"
     },
     {
       "name": "Resistance +1",
       "effect": "Grants Res+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Resistance +2",
       "effect": "Grants Res+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Resistance +3",
       "effect": "Grants Res+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Savage Blow 1",
       "effect": "If unit initiates attack, foes within 2 spaces of target take 3 damage after combat.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Savage Blow 2",
       "effect": "If unit initiates attack, foes within 2 spaces of target take 5 damage after combat.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Savage Blow 3",
       "effect": "If unit initiates attack, foes within 2 spaces of target take 7 damage after combat.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Seal Atk 1",
       "effect": "After combat, foe suffers Atk-3 through its next action.",
+      "spCost": 40,
       "type": "SEAL"
     },
     {
       "name": "Seal Atk 2",
       "effect": "After combat, foe suffers Atk-5 through its next action.",
+      "spCost": 80,
       "type": "SEAL"
     },
     {
       "name": "Seal Atk 3",
       "effect": "After combat, foe suffers Atk-7 through its next action.",
+      "spCost": 160,
       "type": "SEAL"
     },
     {
       "name": "Speed +1",
       "effect": "Grants Spd+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Speed +2",
       "effect": "Grants Spd+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Speed +3",
       "effect": "Grants Spd+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Spur Atk 1",
       "effect": "Grants adjacent allies Atk+2 during combat.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Spur Atk 2",
       "effect": "Grants adjacent allies Atk+3 during combat.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Spur Atk 3",
       "effect": "Grants adjacent allies Atk+4 during combat.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Spur Def 1",
       "effect": "Grants adjacent allies Def+2 during combat.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Spur Def 2",
       "effect": "Grants adjacent allies Def+3 during combat.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Spur Def 3",
       "effect": "Grants adjacent allies Def+4 during combat.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Spur Res 1",
       "effect": "Grants adjacent allies Res+2 during combat.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Spur Res 2",
       "effect": "Grants adjacent allies Res+3 during combat.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Spur Res 3",
       "effect": "Grants adjacent allies Res+4 during combat.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Spur Spd 1",
       "effect": "Grants adjacent allies Spd+2 during combat.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Spur Spd 2",
       "effect": "Grants adjacent allies Spd+3 during combat.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Spur Spd 3",
       "effect": "Grants adjacent allies Spd+4 during combat.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace A 1",
       "effect": "Grants HP+3.",
+      "spCost": 40,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace A 2",
       "effect": "Grants HP+4.",
+      "spCost": 80,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace A 3",
       "effect": "Grants HP+5.",
+      "spCost": 160,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace B 1",
       "effect": "Grants Def+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace B 2",
       "effect": "Grants Def+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace B 3",
       "effect": "Grants Def+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace C 1",
       "effect": "Grants Res+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace C 2",
       "effect": "Grants Res+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace C 3",
       "effect": "Grants Res+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace D 1",
       "effect": "Grants Spd+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace D 2",
       "effect": "Grants Spd+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace D 3",
       "effect": "Grants Spd+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace E 1",
       "effect": "Grants Atk+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace E 2",
       "effect": "Grants Atk+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace E 3",
       "effect": "Grants Atk+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace F 1",
       "effect": "Grants HP+3.",
+      "spCost": 40,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace F 2",
       "effect": "Grants HP+4.",
+      "spCost": 80,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace F 3",
       "effect": "Grants HP+5.",
+      "spCost": 160,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace G 1",
       "effect": "Grants Def+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace G 2",
       "effect": "Grants Def+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace G 3",
       "effect": "Grants Def+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace H 1",
       "effect": "Grants Res+1.",
+      "spCost": 30,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace H 2",
       "effect": "Grants Res+2.",
+      "spCost": 60,
       "type": "SEAL"
     },
     {
       "name": "Squad Ace H 3",
       "effect": "Grants Res+3.",
+      "spCost": 120,
       "type": "SEAL"
     },
     {
       "name": "Threaten Atk 1",
       "effect": "Inflicts Atk-3 on foes within 2 spaces through their next actions at the start of each turn.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Threaten Atk 2",
       "effect": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Threaten Atk 3",
       "effect": "Inflicts Atk-5 on foes within 2 spaces through their next actions at the start of each turn.",
+      "spCost": 200,
       "type": "SEAL"
     },
     {
       "name": "Threaten Spd 1",
       "effect": "Inflicts Spd-3 on foes within 2 spaces through their next actions at the start of each turn.",
+      "spCost": 50,
       "type": "SEAL"
     },
     {
       "name": "Threaten Spd 2",
       "effect": "Inflicts Spd-4 on foes within 2 spaces through their next actions at the start of each turn.",
+      "spCost": 100,
       "type": "SEAL"
     },
     {
       "name": "Threaten Spd 3",
       "effect": "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn.",
+      "spCost": 200,
       "type": "SEAL"
     }
   ]

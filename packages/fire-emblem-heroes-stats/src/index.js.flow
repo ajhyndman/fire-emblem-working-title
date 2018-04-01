@@ -146,6 +146,7 @@ export type SealSkill = {
   +type: 'SEAL',
   +name: string,
   +effect: string,
+  +spCost: number,
 };
 
 export type Skill =
