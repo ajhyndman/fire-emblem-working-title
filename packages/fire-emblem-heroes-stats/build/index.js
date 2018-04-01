@@ -499,7 +499,15 @@ async function fetchSkills() {
     action: 'cargoquery',
     format: 'json',
     tables: 'Weapons',
-    fields: 'WeaponClass,WeaponName,WeaponRange,Cost,Effect,Might,Exclusive',
+    fields: [
+      'WeaponName',
+      'Cost',
+      'Effect',
+      'Exclusive',
+      'Might',
+      'WeaponClass',
+      'WeaponRange',
+    ].join(','),
     group_by: 'WeaponName',
   })
     .then(
@@ -512,8 +520,8 @@ async function fetchSkills() {
             Effect,
             Exclusive,
             Might,
-            WeaponRange,
             WeaponClass,
+            WeaponRange,
           }) => ({
             name: WeaponName,
             spCost: Number.parseInt(Cost, 10),
@@ -535,8 +543,18 @@ async function fetchSkills() {
     action: 'cargoquery',
     format: 'json',
     tables: 'Assists',
-    fields:
-      'Name,Cost,Effect,AssistRange,WeaponRestriction,MovementRestriction,PrerequisiteSkill,Exclusive,SkillTier,SkillBuildCost',
+    fields: [
+      'Name',
+      'Cost',
+      'Effect',
+      'AssistRange',
+      'WeaponRestriction',
+      'MovementRestriction',
+      'PrerequisiteSkill',
+      'Exclusive',
+      'SkillTier',
+      'SkillBuildCost',
+    ].join(','),
     group_by: 'Name',
   })
     .then(
@@ -573,8 +591,16 @@ async function fetchSkills() {
     action: 'cargoquery',
     format: 'json',
     tables: 'Specials',
-    fields:
-      'Name,Cost,Cooldown,Effect,WeaponRestriction,MovementRestriction,Exclusive,SkillTier',
+    fields: [
+      'Name',
+      'Cost',
+      'Cooldown',
+      'Effect',
+      'WeaponRestriction',
+      'MovementRestriction',
+      'Exclusive',
+      'SkillTier',
+    ].join(','),
     group_by: 'Name',
   })
     .then(
@@ -610,8 +636,16 @@ async function fetchSkills() {
     action: 'cargoquery',
     format: 'json',
     tables: 'PassiveGroup,PassiveSingle',
-    fields:
-      'PassiveSingle.Name=Name,Effect,SkillTier,SPCost,PassiveGroup.MovementRestriction=MovementRestriction,PassiveGroup.WeaponRestriction=WeaponRestriction,PassiveGroup.Exclusive=Exclusive,PassiveGroup.Ptype=Ptype',
+    fields: [
+      'PassiveSingle.Name=Name',
+      'Effect',
+      'SkillTier',
+      'SPCost',
+      'PassiveGroup.MovementRestriction=MovementRestriction',
+      'PassiveGroup.WeaponRestriction=WeaponRestriction',
+      'PassiveGroup.Exclusive=Exclusive',
+      'PassiveGroup.Ptype=Ptype',
+    ].join(','),
     join_on: 'PassiveGroup._pageName = PassiveSingle._pageName',
     group_by: 'Name',
   })
