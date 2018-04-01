@@ -10,17 +10,26 @@ type Props = {
   selected?: number,
   options: string[],
   onChange: (nextSelected: number) => void,
+  maxWidth?: number,
+  small?: boolean,
 };
 
-const SegmentedControl = ({ selected, options, onChange }: Props) => (
+const SegmentedControl = ({
+  selected,
+  options,
+  onChange,
+  maxWidth,
+  small,
+}: Props) => (
   <div className="root">
     <style jsx>{`
       .root {
         display: flex;
         justify-content: space-between;
+        flex-basis: ${maxWidth ? `${maxWidth}px` : '100%'};
       }
       button {
-        background: ${colors.elephant};
+        background: ${colors.elephant40};
         color: ${Color(colors.elephant)
           .setValue(0.7)
           .setSaturation(0.1)
@@ -28,13 +37,13 @@ const SegmentedControl = ({ selected, options, onChange }: Props) => (
         cursor: pointer;
         font-family: ${fontFamilies.ui};
         font-weight: bold;
-        font-size: 16px;
+        font-size: ${small ? 14 : 16}px;
         letter-spacing: 0.05em;
         border-top: 2px solid ${colors.aquaIsland};
         border-bottom: 2px solid ${colors.fadedJade};
         border-right: none;
         border-left: none;
-        padding: 4.5px;
+        padding: ${small ? 1 : 4.5}px;
         position: relative;
         transition: box-shadow ${transition}, border-top ${transition},
           border-bottom ${transition};
@@ -86,7 +95,9 @@ const SegmentedControl = ({ selected, options, onChange }: Props) => (
         <button
           key={option}
           className={cn({ active: selected === i })}
-          style={{ flexBasis: `${1 / (options.length + 0.25) * 100}%` }}
+          style={{
+            flexBasis: `${1 / (options.length + (small ? 0.05 : 0.25)) * 100}%`,
+          }}
           onClick={() => onChange(i)}
         >
           {option}
