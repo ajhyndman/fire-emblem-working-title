@@ -10,8 +10,9 @@ import { loadState, saveState } from './localStorage';
 export type Tab = 'ALL_HEROES' | 'MY_SHELF';
 
 export type State = {
-  activeHero: ?HeroInstance,
-  activeSkill: ?SkillType,
+  activeHero: HeroInstance | void,
+  activeShelfSlot: number | void,
+  activeSkill: SkillType | void,
   activeSlot: 0 | 1 | void,
   activeTab: Tab,
   exportString: string,
@@ -27,9 +28,10 @@ export type State = {
 
 const emptyState: State = {
   activeHero: undefined,
+  activeShelfSlot: undefined,
   activeSkill: undefined,
   activeSlot: undefined,
-  activeTab: 'ALL_HEROES',
+  activeTab: 'MY_SHELF',
   exportString: '',
   heroShelf: [],
   heroSlots: [undefined, undefined],
