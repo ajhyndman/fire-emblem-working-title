@@ -53,6 +53,8 @@
     "next": "5.0.0",
     "next-redux-wrapper": "1.0.0",
     "ramda": "^0.23.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
     "react-ga": "^2.1.2",
     "react-icons": "^2.2.3",
     "react-redux": "^5.0.3",
