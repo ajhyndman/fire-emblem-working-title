@@ -153,7 +153,7 @@ export function updateRarity(
 }
 
 const canInherit = curry((hero: Hero, skill: Skill): boolean => {
-  if (propEq('exclusive?', 'Yes', skill)) {
+  if (skill.exclusive) {
     return false;
   }
 
@@ -163,11 +163,6 @@ const canInherit = curry((hero: Hero, skill: Skill): boolean => {
       ? 'Breath'
       : hero.weaponType;
     return weaponType === skill.weaponType;
-  }
-
-  if (skill.type === 'SEAL') {
-    // TODO: Seals have movement and weapon restrictions, too.
-    return true;
   }
 
   if (
