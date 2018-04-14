@@ -564,7 +564,7 @@
           "rarity": "-"
         },
         {
-          "name": "Falchion (Gaiden)",
+          "name": "Falchion",
           "default": 5,
           "rarity": "-"
         },
@@ -5643,7 +5643,7 @@
           "rarity": 3
         },
         {
-          "name": "Falchion (Awakening)",
+          "name": "Falchion",
           "default": 5,
           "rarity": 5
         },
@@ -5952,7 +5952,7 @@
           "rarity": "-"
         },
         {
-          "name": "Sealed Falchion",
+          "name": "Falchion",
           "default": 5,
           "rarity": "-"
         },
@@ -19664,7 +19664,7 @@
           "rarity": "-"
         },
         {
-          "name": "Falchion (Awakening)",
+          "name": "Falchion",
           "default": 5,
           "rarity": "-"
         },
@@ -21853,7 +21853,7 @@
           "rarity": 3
         },
         {
-          "name": "Falchion (Mystery)",
+          "name": "Falchion",
           "default": 5,
           "rarity": 5
         },
@@ -22036,7 +22036,7 @@
           "rarity": "-"
         },
         {
-          "name": "Falchion (Awakening)",
+          "name": "Falchion",
           "default": 5,
           "rarity": 5
         }
@@ -29317,10 +29317,6 @@
         {
           "name": "Drag Back",
           "rarity": 4
-        },
-        {
-          "name": "3",
-          "rarity": "-"
         },
         {
           "name": "Spur Def 1",
