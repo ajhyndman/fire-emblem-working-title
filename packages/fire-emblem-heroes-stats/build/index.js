@@ -543,7 +543,7 @@ async function fetchSkills() {
             'damage(mt)': Number.parseInt(Might, 10),
             'range(rng)': Number.parseInt(WeaponRange, 10),
             effect: sanitizeDescription(Effect),
-            'exclusive?': Number.parseInt(Exclusive, 10) === 1 ? 'Yes' : 'No',
+            exclusive: Boolean(Number.parseInt(Exclusive, 10)),
             type: 'WEAPON',
             weaponType: WeaponClass,
           }),

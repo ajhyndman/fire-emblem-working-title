@@ -114,7 +114,7 @@ export type WeaponSkill = {
   +effect: string,
   // Hero is Red Breath, weapon is Breath
   +weaponType: WeaponType | 'Breath',
-  +'exclusive?': 'Yes' | 'No',
+  +exclusive: boolean,
 };
 
 export type AssistSkill = {

@@ -29316,7 +29316,7 @@
         },
         {
           "name": "Drag Back",
-          "rarity": 4
+          "rarity": 3
         },
         {
           "name": "Spur Def 1",
@@ -37978,7 +37978,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "Restores HP = 50% of damage dealt.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -37989,7 +37989,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Restores HP = 50% of damage dealt. After combat, if unit attacked, restores 7 HP to allies within 2 spaces of unit.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -38000,7 +38000,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Unit can counterattack regardless of foe's range.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38011,7 +38011,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Inflicts Spd-2. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38022,7 +38022,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If unit’s HP ≥ 80% and foe initiates combat, unit makes a guaranteed follow-up attack.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38033,7 +38033,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38044,7 +38044,7 @@
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38055,7 +38055,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38066,7 +38066,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38077,7 +38077,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  In combat against a colorless dagger foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -38088,7 +38088,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  In combat against a colorless dagger foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -38099,7 +38099,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -38110,7 +38110,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1). Grants Res+5.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38121,7 +38121,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 5 HP to adjacent allies after combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38132,7 +38132,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Spd+3. If unit's Spd > foe's Spd, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38143,7 +38143,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38154,7 +38154,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Def+3. At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Res+4, but if unit attacked, deals 4 damage to unit after combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38165,7 +38165,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Res+4 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38176,7 +38176,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Res+4 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38187,7 +38187,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1). At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38198,7 +38198,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Def/Res+2 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38209,7 +38209,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Atk+3. If unit's Atk > foe's Atk, grants Special Special cooldown charge +1. (Only highest value applied. Does not stack.)",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38220,7 +38220,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38231,7 +38231,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38242,7 +38242,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants Res+3. Grants bonus to unit's Atk = total penalties on foe during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -38253,7 +38253,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 4 HP after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38264,7 +38264,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 4 HP after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38275,7 +38275,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38286,7 +38286,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38297,7 +38297,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38308,7 +38308,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38319,7 +38319,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38330,7 +38330,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38341,7 +38341,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Grants weapon-triangle advantage against colorless foes. Inflicts weapon-triangle disadvantage against colorless foes.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38352,7 +38352,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "Grants weapon-triangle advantage against colorless foes. Inflicts weapon-triangle disadvantage against colorless foes.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38363,7 +38363,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38374,7 +38374,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38385,7 +38385,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38396,7 +38396,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38407,7 +38407,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -38418,7 +38418,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -38429,7 +38429,7 @@
       "damage(mt)": 5,
       "range(rng)": 1,
       "effect": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38440,7 +38440,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38451,7 +38451,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -38462,7 +38462,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -38473,7 +38473,7 @@
       "damage(mt)": 5,
       "range(rng)": 1,
       "effect": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38484,7 +38484,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38495,7 +38495,7 @@
       "damage(mt)": 5,
       "range(rng)": 1,
       "effect": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38506,7 +38506,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38517,7 +38517,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Atk/Def+4 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38528,7 +38528,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "If unit initiates combat, inflicts status on foe restricting movement to 1 space through its next action.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -38539,7 +38539,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -38550,7 +38550,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -38561,7 +38561,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts status on foe preventing counterattacks through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -38572,7 +38572,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -38583,7 +38583,7 @@
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "If unit initiates combat, restores 4 HP after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38594,7 +38594,7 @@
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "If unit initiates combat, restores 4 HP after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38605,7 +38605,7 @@
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "If unit initiates combat, restores 4 HP after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38616,7 +38616,7 @@
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "If unit initiates combat, restores 4 HP after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38627,7 +38627,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38638,7 +38638,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38649,7 +38649,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, inflicts Atk/Spd-5 on foes within 2 spaces of target through their next actions after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -38660,7 +38660,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, inflicts Atk/Spd-5 on foes within 2 spaces of target through their next actions after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -38671,7 +38671,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -38682,7 +38682,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -38693,7 +38693,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd+2. Deals 4 damage to unit after combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38704,7 +38704,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "If unit initiates combat, grants adjacent allies Atk+4 for 1 turn after combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -38715,7 +38715,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -38726,7 +38726,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -38737,7 +38737,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -38748,7 +38748,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -38759,7 +38759,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38770,7 +38770,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38781,7 +38781,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "At start of turn, if adjacent allies use sword, axe, lance, or dragonstone, grants Atk+6 to those allies for 1 turn.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38792,7 +38792,7 @@
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "If unit initiates combat, inflicts Atk/Spd-5 on foes within 2 spaces of target through their next actions after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -38803,7 +38803,7 @@
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "If unit initiates combat, inflicts Atk/Spd-5 on foes within 2 spaces of target through their next actions after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -38814,7 +38814,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Deals +10 damage when Special triggers.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -38825,7 +38825,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If unit initiates combat, grants Atk/Spd+4 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38836,7 +38836,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action. If unit initiates combat, deals 7 damage to foe after combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -38847,7 +38847,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38858,7 +38858,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -38869,7 +38869,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38880,7 +38880,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against dragon foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -38891,7 +38891,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Res+3. Reduces damage from magic foe's first attack by 50%.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38902,7 +38902,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If unit initiates combat, grants Atk+4 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38913,7 +38913,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "At start of turn, inflicts Def-4 on foes within 2 spaces through their next actions.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -38924,7 +38924,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -38935,7 +38935,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38946,7 +38946,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -38957,7 +38957,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -38968,7 +38968,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38979,7 +38979,7 @@
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -38990,7 +38990,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39001,7 +39001,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Unit can counterattack regardless of foe's range. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -39012,7 +39012,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Effective against dragon foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> At the start of every third turn, restores 10 HP.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -39023,7 +39023,7 @@
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Atk-6 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -39034,7 +39034,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Atk-7 on target and foes within 2 spaces of target through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -39045,7 +39045,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions. Calculates damage using the lower of foe's Def or Res.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -39056,7 +39056,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39067,7 +39067,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39078,7 +39078,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "At start of turn, inflicts Atk-4 on foes within 2 spaces through their next actions.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39089,7 +39089,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39100,7 +39100,7 @@
       "damage(mt)": 6,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -39111,7 +39111,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -39122,7 +39122,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Unit and foe cannot counterattack.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39133,7 +39133,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Unit and foe cannot counterattack.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39144,7 +39144,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Unit and foe cannot counterattack.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39155,7 +39155,7 @@
       "damage(mt)": 15,
       "range(rng)": 1,
       "effect": "Unit and foe cannot counterattack.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39166,7 +39166,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Unit and foe cannot counterattack.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -39177,7 +39177,7 @@
       "damage(mt)": 15,
       "range(rng)": 1,
       "effect": "Unit and foe cannot counterattack.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -39188,7 +39188,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39199,7 +39199,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39210,7 +39210,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), unit makes a guaranteed follow-up attack.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39221,7 +39221,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -39232,7 +39232,7 @@
       "damage(mt)": 15,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -39243,7 +39243,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39254,7 +39254,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "At start of turn, inflict Res-7 on foe on the enemy team with the highest Res through its next action.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39265,7 +39265,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit’s HP ≥ 50%, unit can move through foes’ spaces.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39276,7 +39276,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "At start of turn, if unit's HP ≤ 50%, grants Atk+5 for 1 turn.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -39287,7 +39287,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39298,7 +39298,7 @@
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "Deals +10 damage when Special triggers.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39309,7 +39309,7 @@
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "Deals +10 damage when Special triggers.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39320,7 +39320,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants Res+3. At start of combat, if foe's HP = 100%, grants Atk/Spd+3 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39331,7 +39331,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Unit can counterattack regardless of foe's range.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39342,7 +39342,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39353,7 +39353,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39364,7 +39364,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts status on foe restricting movement to 1 space through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -39375,7 +39375,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts status on target and foes within 1 space of target restricting movement to 1 space through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -39386,7 +39386,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Atk+3. If unit’s Def ≥ foe’s Def+5, foe cannot make a follow-up attack. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -39397,7 +39397,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 4 HP after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39408,7 +39408,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "If unit initiates combat, restores 4 HP after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39419,7 +39419,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39430,7 +39430,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39441,7 +39441,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants Def+3. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd+5 to unit and allies within 2 spaces for 1 turn.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39452,7 +39452,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to an ally within 2 spaces.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39463,7 +39463,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39474,7 +39474,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39485,7 +39485,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39496,7 +39496,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39507,7 +39507,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Grants weapon-triangle advantage against colorless foes. Inflicts weapon-triangle disadvantage against colorless foes.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39518,7 +39518,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "Grants weapon-triangle advantage against colorless foes. Inflicts weapon-triangle disadvantage against colorless foes.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39529,7 +39529,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39540,7 +39540,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39551,7 +39551,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 to unit during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39562,7 +39562,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 to unit during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39573,7 +39573,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Grants Def/Res+2 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39584,7 +39584,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Grants Def/Res+2 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39595,7 +39595,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against flying foes <span style=\"position: relative; top: -1px\"></span> . Grants Def/Res+2 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39606,7 +39606,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against flying foes <span style=\"position: relative; top: -1px\"></span> . Grants Def/Res+2 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39617,7 +39617,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39628,7 +39628,7 @@
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39639,7 +39639,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39650,7 +39650,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39661,7 +39661,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39672,7 +39672,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39683,7 +39683,7 @@
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39694,7 +39694,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39705,7 +39705,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39716,7 +39716,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If unit is within 2 spaces of a flying or infantry ally, grants Atk/Spd+4 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39727,7 +39727,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants Res+3. At start of turn, if unit's HP ≥ 50%, inflicts Atk/Def-5 on foe on the enemy team with the lowest Res through it's next action.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -39738,7 +39738,7 @@
       "damage(mt)": 6,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39749,7 +39749,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39760,7 +39760,7 @@
       "damage(mt)": 3,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-3 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -39771,7 +39771,7 @@
       "damage(mt)": 6,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39782,7 +39782,7 @@
       "damage(mt)": 6,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -39793,7 +39793,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants Def+3. At start of combat, if foe's HP = 100%, grants Atk/Spd+3 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -39804,7 +39804,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Grants Def/Res+2 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -39815,7 +39815,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Grants Def/Res+2 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -39826,7 +39826,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -39837,7 +39837,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -39848,7 +39848,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -39859,7 +39859,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -39870,7 +39870,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39881,7 +39881,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -39892,7 +39892,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39903,7 +39903,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -39914,7 +39914,7 @@
       "damage(mt)": 7,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39925,7 +39925,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -39936,7 +39936,7 @@
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "Accelerates Special trigger (cooldown count-1). Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39947,7 +39947,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Accelerates Special trigger (cooldown count-1). Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -39958,7 +39958,7 @@
       "damage(mt)": 7,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39969,7 +39969,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -39980,7 +39980,7 @@
       "damage(mt)": 7,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -39991,7 +39991,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40002,7 +40002,7 @@
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "Effective against magic foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span><span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span><span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> After combat, if unit attacked and if foe uses magic, inflicts Def/Res-5 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40013,7 +40013,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against magic foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span><span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span><span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> After combat, if unit attacked and if foe uses magic, inflicts Def/Res-7 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40024,7 +40024,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Atk+3. Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40035,7 +40035,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "After combat, if unit attacked, converts bonuses on foe into penalties through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40046,7 +40046,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "After combat, if unit attacked, converts bonuses on foe into penalties through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40057,7 +40057,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Unit can counterattack regardless of foe's range.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -40068,7 +40068,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Deals +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40079,7 +40079,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Deals +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40090,7 +40090,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -40101,7 +40101,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Def+3. If foe's Def ≥ foe's Res+5, deals +7 damage.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40112,7 +40112,7 @@
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "If unit initiates combat, grants Def/Res+4 to adjacent allies for 1 turn after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -40123,7 +40123,7 @@
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "If unit initiates combat, grants Def/Res+4 to adjacent allies for 1 turn after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -40134,7 +40134,7 @@
       "damage(mt)": 7,
       "range(rng)": 1,
       "effect": "Slows Special trigger (cooldown count+1). Unit can counterattack regardless of foe's range.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -40145,7 +40145,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Slows Special trigger (cooldown count+1). Unit can counterattack regardless of foe's range.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Breath"
     },
@@ -40156,7 +40156,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40167,7 +40167,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40178,7 +40178,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "Inflicts Spd-5. Unit attacks twice. (Even if foe initiates combat, unit attacks twice.)",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40189,7 +40189,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40200,7 +40200,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40211,7 +40211,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40222,7 +40222,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40233,7 +40233,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Grants Spd+3. Neutralizes magic foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40244,7 +40244,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants Res+3. At start of turn, if unit's HP ≥ 50%, inflicts Atk/Res-5 on foe on the enemy team with the lowest Spd through it's next action.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -40255,7 +40255,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40266,7 +40266,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against dragon foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> If foe initiates combat, grants Def/Res+2 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -40277,7 +40277,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants weapon-triangle advantage against colorless foes.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40288,7 +40288,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count -1).",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40299,7 +40299,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40310,7 +40310,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Spd+3. Adds 50% of total bonuses on foe to unit's Atk/Spd/Def/Res during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40321,7 +40321,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If unit’s HP ≤ 40%, unit can move to a space adjacent to any ally.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40332,7 +40332,7 @@
       "damage(mt)": 3,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, deals 10 damage to foe.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -40343,7 +40343,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "Deals 10 damage to target and foes within 2 spaces of target after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -40354,7 +40354,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, converts bonuses on foe into penalties through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -40365,7 +40365,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -40376,7 +40376,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, grants Res+4 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40387,7 +40387,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd/Def/Res+4 to unit and allies within 2 spaces for 1 turn.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40398,7 +40398,7 @@
       "damage(mt)": 2,
       "range(rng)": 2,
       "effect": "Effective against infantry foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, inflicts Def/Res-4 on infantry foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40409,7 +40409,7 @@
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "Effective against infantry foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, inflicts Def/Res-6 on infantry foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40420,7 +40420,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40431,7 +40431,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40442,7 +40442,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40453,7 +40453,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Unit can counterattack regardless of foe's range.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40464,7 +40464,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Unit can counterattack regardless of foe's range.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40475,7 +40475,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40486,7 +40486,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40497,7 +40497,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40508,7 +40508,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40519,7 +40519,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "Grants weapon-triangle advantage against colorless foes. Inflicts weapon-triangle disadvantage against colorless foes.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40530,7 +40530,7 @@
       "damage(mt)": 11,
       "range(rng)": 2,
       "effect": "Grants weapon-triangle advantage against colorless foes. Inflicts weapon-triangle disadvantage against colorless foes.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40541,7 +40541,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40552,7 +40552,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40563,7 +40563,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40574,7 +40574,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40585,7 +40585,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "At start of combat, if foe's HP = 100%, grants Atk/Spd+2 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40596,7 +40596,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Atk+3. Deals +10 damage when Special triggers.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40607,7 +40607,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -40618,7 +40618,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -40629,7 +40629,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -40640,7 +40640,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -40651,7 +40651,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40662,7 +40662,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40673,7 +40673,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40684,7 +40684,7 @@
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40695,7 +40695,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -40706,7 +40706,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40717,7 +40717,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40728,7 +40728,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -40739,7 +40739,7 @@
       "damage(mt)": 12,
       "range(rng)": 1,
       "effect": "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -40750,7 +40750,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Effective against dragon foes. <span style=\"position:relative;top:-1px;left:-1px;margin-right:2px\"></span> At start of combat, if unit's HP < 100%, grants Atk/Spd/Def/Res+5 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40761,7 +40761,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -40772,7 +40772,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -40783,7 +40783,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action. At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40794,7 +40794,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action. At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40805,7 +40805,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -40816,7 +40816,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -40827,7 +40827,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Unit can counterattack regardless of foe's range.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40838,7 +40838,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "At start of turn, grants Atk+3 to adjacent allies for 1 turn.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40849,7 +40849,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "At start of turn, grants Atk+3 to adjacent allies for 1 turn.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -40860,7 +40860,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40871,7 +40871,7 @@
       "damage(mt)": 15,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40882,7 +40882,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40893,7 +40893,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40904,7 +40904,7 @@
       "damage(mt)": 7,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40915,7 +40915,7 @@
       "damage(mt)": 10,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -40926,7 +40926,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -40937,7 +40937,7 @@
       "damage(mt)": 15,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -40948,7 +40948,7 @@
       "damage(mt)": 11,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40959,7 +40959,7 @@
       "damage(mt)": 15,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -40970,7 +40970,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Grants Def+3. At the start of turn, deals 20 damage to foes within 2 spaces.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -40981,7 +40981,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Grants Spd+3. At the start of turn 3, deals 10 damage to foes within 3 columns centered on unit, and converts bonuses on those foes into penalties through their next actions.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -40992,7 +40992,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -41003,7 +41003,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -41014,7 +41014,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Accelerates Special trigger (cooldown count-1). Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -41025,7 +41025,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Accelerates Special trigger (cooldown count-1). Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -41036,7 +41036,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41047,7 +41047,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41058,7 +41058,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -41069,7 +41069,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -41080,7 +41080,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -41091,7 +41091,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1).",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -41102,7 +41102,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -41113,7 +41113,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Effective against armored foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -41124,7 +41124,7 @@
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Spd-6 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -41135,7 +41135,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Spd-7 on target and foes within 2 spaces of target through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -41146,7 +41146,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -41157,7 +41157,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -41168,7 +41168,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41179,7 +41179,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -41190,7 +41190,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -41201,7 +41201,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -41212,7 +41212,7 @@
       "damage(mt)": 6,
       "range(rng)": 2,
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Bow"
     },
@@ -41223,7 +41223,7 @@
       "damage(mt)": 5,
       "range(rng)": 2,
       "effect": "After combat, if unit attacked, inflicts Def/Res-3 on foe through its next action.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Colorless Dagger"
     },
@@ -41234,7 +41234,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -41245,7 +41245,7 @@
       "damage(mt)": 8,
       "range(rng)": 1,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41256,7 +41256,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Unit can counterattack regardless of foe's range.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -41267,7 +41267,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -41278,7 +41278,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -41289,7 +41289,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Effective against armored and cavalry foes. <span style=\"position: relative; top: -1px\"></span> <span style=\"position: relative; top: -1px\"></span>  Grants Res+3. If armored or cavalry foe uses bow, dagger, magic, or staff, reduces damage from foe's first attack by 30%.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -41300,7 +41300,7 @@
       "damage(mt)": 9,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -41311,7 +41311,7 @@
       "damage(mt)": 13,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -41322,7 +41322,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -41333,7 +41333,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Adds total bonuses on unit to damage dealt.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -41344,7 +41344,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Calculates damage from staff like other weapons. At start of turn, if foe's HP ≤ unit's HP+3 and foe is in cardinal direction and uses bow, dagger, magic, or staff, foe cannot move more than 1 space through its action.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Colorless Staff"
     },
@@ -41355,7 +41355,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -41366,7 +41366,7 @@
       "damage(mt)": 12,
       "range(rng)": 2,
       "effect": "Grants Atk/Spd+1 to allies within 2 spaces during combat.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -41377,7 +41377,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If unit's HP ≤ 50%, grants Def+4 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41388,7 +41388,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Accelerates Special trigger (cooldown count-1). If unit receives consecutive attacks, reduces damage from foe's second attack onward by 80%.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -41399,7 +41399,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If Sing or Dance is used, grants Atk/Spd/Def/Res+3 to target.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
     },
@@ -41410,7 +41410,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "If unit’s HP ≤ 50% and foe initiates combat, unit can counterattack before foe’s first attack.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -41421,7 +41421,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "At start of turn, inflicts Atk/Res-4 on foes in cardinal directions with Res < unit's Res through their next actions.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Tome"
     },
@@ -41432,7 +41432,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If foe initiates combat and uses sword, lance, or axe, grants Def+7 during combat.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
     },
@@ -41443,7 +41443,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "At start of turn, inflicts Atk/Res-4 on foes in cardinal directions with Res < unit's Res through their next actions.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -41454,7 +41454,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "Grants Spd+3. At start of turn, inflicts Spd-5 on foes in cardinal directions with Res < unit's Res through their next actions.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
     },
@@ -41465,7 +41465,7 @@
       "damage(mt)": 4,
       "range(rng)": 2,
       "effect": "",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -41476,7 +41476,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -41487,7 +41487,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "Effective against armored and cavalry foes. <span style=\"position: relative; top: -1px\"></span> <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41498,7 +41498,7 @@
       "damage(mt)": 9,
       "range(rng)": 1,
       "effect": "Deals +10 damage when Special triggers.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41509,7 +41509,7 @@
       "damage(mt)": 13,
       "range(rng)": 1,
       "effect": "Deals +10 damage when Special triggers.",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41520,7 +41520,7 @@
       "damage(mt)": 16,
       "range(rng)": 1,
       "effect": "If unit initiates combat, grants Spd+4 during combat",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41531,7 +41531,7 @@
       "damage(mt)": 10,
       "range(rng)": 1,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41542,7 +41542,7 @@
       "damage(mt)": 14,
       "range(rng)": 1,
       "effect": "Effective against cavalry foes. <span style=\"position: relative; top: -1px\"></span>",
-      "exclusive?": "No",
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
     },
@@ -41553,7 +41553,7 @@
       "damage(mt)": 14,
       "range(rng)": 2,
       "effect": "If unit initiates combat, converts bonuses on foes within 2 spaces of target into penalties through their next actions.",
-      "exclusive?": "Yes",
+      "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
     },
@@ -46171,17 +46171,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
-        "Colorless Dagger"
+        "Colorless Dagger",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_B"
     },
@@ -46196,17 +46196,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
-        "Colorless Dagger"
+        "Colorless Dagger",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_B"
     },
@@ -46221,17 +46221,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
-        "Colorless Dagger"
+        "Colorless Dagger",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_B"
     },
@@ -47691,10 +47691,10 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
+        "Blue Lance",
         "Blue Tome",
+        "Green Axe",
         "Green Tome",
         "Colorless Bow",
         "Colorless Dagger",
@@ -48423,17 +48423,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -48448,17 +48448,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -48473,17 +48473,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -48620,10 +48620,10 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
+        "Blue Lance",
         "Blue Tome",
+        "Green Axe",
         "Green Tome",
         "Colorless Bow",
         "Colorless Dagger",
@@ -48812,17 +48812,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -48837,17 +48837,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -48862,17 +48862,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -49664,17 +49664,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -49689,17 +49689,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -49714,17 +49714,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
-        "Green Axe",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Axe",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -50226,17 +50226,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -50251,17 +50251,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
@@ -50276,17 +50276,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "Blue Lance",
         "Red Tome",
-        "Blue Tome",
-        "Green Tome",
         "Red Breath",
+        "Blue Lance",
+        "Blue Tome",
         "Blue Breath",
+        "Green Tome",
         "Green Breath",
-        "Colorless Breath",
         "Colorless Bow",
         "Colorless Dagger",
-        "Colorless Staff"
+        "Colorless Staff",
+        "Colorless Breath"
       ],
       "type": "PASSIVE_C"
     },
