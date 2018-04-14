@@ -322,7 +322,7 @@ async function fetchHeroStats() {
 
             const otherSkills = compose(
               map(([skillPageReference, defaultRarity, unlockRarity]) => ({
-                name: test(/Falchion/, skillPageReference)
+                name: test(/^Falchion/, skillPageReference)
                   ? 'Falchion'
                   : skillPageReference,
                 default: Number.parseInt(defaultRarity, 10) || '-',
