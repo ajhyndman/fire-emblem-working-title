@@ -723,15 +723,24 @@ async function fetchSkills() {
     .then(
       compose(
         filter(({ name }) => Boolean(name)),
-        map(({ Name, SPCost, Effect, SkillTier }) => ({
-          name: Name,
-          effect: sanitizeDescription(Effect),
-          skillTier: Number.parseInt(SkillTier, 10),
-          spCost: Number.parseInt(SPCost, 10),
-          // movementRestriction: MovementRestriction.split(','),
-          // weaponRestriction: WeaponRestriction.split(','),
-          type: 'SEAL',
-        })),
+        map(
+          ({
+            Name,
+            SPCost,
+            Effect,
+            SkillTier,
+            MovementRestriction,
+            WeaponRestriction,
+          }) => ({
+            name: Name,
+            effect: sanitizeDescription(Effect),
+            skillTier: Number.parseInt(SkillTier, 10),
+            spCost: Number.parseInt(SPCost, 10),
+            movementRestriction: MovementRestriction.split(','),
+            weaponRestriction: WeaponRestriction.split(','),
+            type: 'SEAL',
+          }),
+        ),
       ),
     )
     .catch(error => {

@@ -161,6 +161,8 @@ export type SealSkill = {
   +effect: string,
   +skillTier: number,
   +spCost: number,
+  +movementRestriction: string[],
+  +weaponRestriction: string[],
 };
 
 export type Skill =

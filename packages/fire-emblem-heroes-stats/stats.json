@@ -50453,6 +50453,14 @@
       "effect": "At start of turn, if unit's HP = 100%, unit can move 1 extra space. (That turn only. Does not stack.)",
       "skillTier": 1,
       "spCost": 100,
+      "movementRestriction": [
+        "Infantry",
+        "Cavalry",
+        "Flying"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50460,6 +50468,12 @@
       "effect": "At start of turn, inflicts Atk-3 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50467,6 +50481,12 @@
       "effect": "At start of turn, inflicts Atk-4 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50474,6 +50494,12 @@
       "effect": "At start of turn, inflicts Atk-5 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50481,6 +50507,12 @@
       "effect": "Inflicts Atk-3 on foes within 2 spaces of target through their next actions after combat.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50488,6 +50520,12 @@
       "effect": "Inflicts Atk-5 on foes within 2 spaces of target through their next actions after combat.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50495,6 +50533,12 @@
       "effect": "Inflicts Atk-7 on foes within 2 spaces of target through their next actions after combat.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50502,6 +50546,12 @@
       "effect": "Grants Atk+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50509,6 +50559,12 @@
       "effect": "Grants Atk+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50516,6 +50572,12 @@
       "effect": "Grants Atk+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50523,6 +50585,12 @@
       "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 30%, unit makes a guaranteed follow-up attack.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50530,6 +50598,12 @@
       "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 40%, unit makes a guaranteed follow-up attack.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50537,6 +50611,12 @@
       "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 50%, unit makes a guaranteed follow-up attack.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50544,6 +50624,12 @@
       "effect": "If unit initiates combat, restores 3 HP to adjacent allies after combat.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50551,6 +50637,12 @@
       "effect": "If unit initiates combat, restores 5 HP to adjacent allies after combat.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50558,6 +50650,12 @@
       "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50565,6 +50663,12 @@
       "effect": "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+2 during combat.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50572,6 +50676,12 @@
       "effect": "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+4 during combat.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50579,6 +50689,12 @@
       "effect": "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+6 during combat.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50586,6 +50702,12 @@
       "effect": "At start of turn, inflicts Def-3 one foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50593,6 +50715,12 @@
       "effect": "At start of turn, inflicts Def-4 one foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50600,6 +50728,12 @@
       "effect": "At start of turn, inflicts Def-5 one foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50607,6 +50741,12 @@
       "effect": "At start of turn, grants Def+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50614,6 +50754,12 @@
       "effect": "At start of turn, grants Def+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50621,6 +50767,12 @@
       "effect": "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50628,6 +50780,12 @@
       "effect": "Grants Def+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50635,6 +50793,12 @@
       "effect": "Grants Def+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50642,6 +50806,12 @@
       "effect": "Grants Def+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50649,6 +50819,12 @@
       "effect": "If unit receives consecutive attacks and foe uses magic, reduces damage from foe's second attack onward by 30%.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50656,6 +50832,12 @@
       "effect": "If unit receives consecutive attacks and foe uses magic, reduces damage from foe's second attack onward by 50%.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50663,6 +50845,12 @@
       "effect": "If unit receives consecutive attacks and foe uses magic, reduces damage from foe's second attack onward by 80%.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50670,6 +50858,17 @@
       "effect": "If unit receives consecutive attacks and foe uses a sword, lance, or axe, reduces damage from foe's second attack onward by 30%.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Colorless Bow",
+        "Colorless Dagger",
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50677,6 +50876,17 @@
       "effect": "If unit receives consecutive attacks and foe uses a sword, lance, or axe, reduces damage from foe's second attack onward by 50%.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Colorless Bow",
+        "Colorless Dagger",
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50684,6 +50894,17 @@
       "effect": "If unit receives consecutive attacks and foe uses a sword, lance, or axe, reduces damage from foe's second attack onward by 80%.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Red Tome",
+        "Blue Tome",
+        "Green Tome",
+        "Colorless Bow",
+        "Colorless Dagger",
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50691,6 +50912,12 @@
       "effect": "If unit receives consecutive attacks and foe uses bow or dagger, reduces damage from foe's second attack onward by 30%.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50698,6 +50925,12 @@
       "effect": "If unit receives consecutive attacks and foe uses bow or dagger, reduces damage from foe's second attack onward by 50%.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50705,6 +50938,12 @@
       "effect": "If unit receives consecutive attacks and foe uses bow or dagger, reduces damage from foe's second attack onward by 80%.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50712,6 +50951,12 @@
       "effect": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+2 during combat.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50719,6 +50964,12 @@
       "effect": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+4 during combat.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50726,6 +50977,12 @@
       "effect": "If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50733,6 +50990,12 @@
       "effect": "Grants Def+2 to allies within 2 spaces during combat.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50740,6 +51003,12 @@
       "effect": "Grants Def+3 to allies within 2 spaces during combat.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50747,6 +51016,12 @@
       "effect": "Reduces damage dealt to unit to 0.",
       "skillTier": 1,
       "spCost": 0,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50754,6 +51029,12 @@
       "effect": "At start of turn, grants Def+2 to adjacent allies for 1 turn.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50761,6 +51042,12 @@
       "effect": "At start of turn, grants Def+3 to adjacent allies for 1 turn.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50768,6 +51055,12 @@
       "effect": "At start of turn, grants Def+4 to adjacent allies for 1 turn.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50775,6 +51068,12 @@
       "effect": "At start of turn, grants Res+2 to adjacent allies for 1 turn.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50782,6 +51081,12 @@
       "effect": "At start of turn, grants Res+3 to adjacent allies for 1 turn.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50789,6 +51094,12 @@
       "effect": "At start of turn, grants Res+4 to adjacent allies for 1 turn.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50796,6 +51107,12 @@
       "effect": "Grants Res+3. Inflicts Atk-3.",
       "skillTier": 1,
       "spCost": 40,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50803,6 +51120,12 @@
       "effect": "Grants Res+4. Inflicts Atk-3.",
       "skillTier": 2,
       "spCost": 80,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50810,6 +51133,12 @@
       "effect": "Grants Res+5. Inflicts Atk-3.",
       "skillTier": 3,
       "spCost": 160,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50817,6 +51146,14 @@
       "effect": "If unit's HP = 100%, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        "Infantry",
+        "Armored",
+        "Cavalry"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50824,6 +51161,14 @@
       "effect": "If unit's HP ≥ 50% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "Armored",
+        "Cavalry"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50831,6 +51176,14 @@
       "effect": "Infantry and armored allies within 2 spaces can move to a space adjacent to unit.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "Armored",
+        "Cavalry"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50838,6 +51191,12 @@
       "effect": "Disables unit's skills that change attack priority. At start of combat, if unit's HP = 100%, disables foe's skills that change attack priority.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50845,6 +51204,12 @@
       "effect": "Disables unit's skills that change attack priority. At start of combat, if unit's HP ≥ 50%, disables foe's skills that change attack priority.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50852,6 +51217,12 @@
       "effect": "Disables unit's and foe's skills that change attack priority.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50859,6 +51230,12 @@
       "effect": "If unit's Atk ≥ foe's Atk+5, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50866,6 +51243,12 @@
       "effect": "If unit's Atk ≥ foe's Atk+3, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50873,6 +51256,12 @@
       "effect": "If unit's Atk ≥ foe's Atk, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -50880,6 +51269,12 @@
       "effect": "At start of turn, grants Atk+2 to adjacent allies for 1 turn.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50887,6 +51282,12 @@
       "effect": "At start of turn, grants Atk+3 to adjacent allies for 1 turn.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50894,6 +51295,12 @@
       "effect": "At start of turn, grants Atk+4 to adjacent allies for 1 turn.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50901,6 +51308,12 @@
       "effect": "At start of turn, grants Spd+2 to adjacent allies for 1 turn.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50908,6 +51321,12 @@
       "effect": "At start of turn, grants Spd+3 to adjacent allies for 1 turn.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50915,6 +51334,12 @@
       "effect": "At start of turn, grants Spd+4 to adjacent allies for 1 turn.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50922,6 +51347,12 @@
       "effect": "Grants HP+3.",
       "skillTier": 1,
       "spCost": 40,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50929,6 +51360,12 @@
       "effect": "Grants HP+4.",
       "skillTier": 2,
       "spCost": 80,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50936,6 +51373,12 @@
       "effect": "Grants HP+5.",
       "skillTier": 3,
       "spCost": 160,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50943,6 +51386,12 @@
       "effect": "Grants Atk+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50950,6 +51399,12 @@
       "effect": "Grants Atk+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50957,6 +51412,12 @@
       "effect": "Grants Atk+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50964,6 +51425,12 @@
       "effect": "Grants Def+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50971,6 +51438,12 @@
       "effect": "Grants Def+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50978,6 +51451,12 @@
       "effect": "Grants Def+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50985,6 +51464,12 @@
       "effect": "Grants HP+3.",
       "skillTier": 1,
       "spCost": 40,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50992,6 +51477,12 @@
       "effect": "Grants HP+4.",
       "skillTier": 2,
       "spCost": 80,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -50999,6 +51490,12 @@
       "effect": "Grants HP+5.",
       "skillTier": 3,
       "spCost": 160,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51006,6 +51503,12 @@
       "effect": "Grants Res+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51013,6 +51516,12 @@
       "effect": "Grants Res+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51020,6 +51529,12 @@
       "effect": "Grants Res+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51027,6 +51542,12 @@
       "effect": "Grants Spd+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51034,6 +51555,12 @@
       "effect": "Grants Spd+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51041,6 +51568,12 @@
       "effect": "Grants Spd+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51048,6 +51581,14 @@
       "effect": "Neutralizes \"effective against flying\" bonuses.",
       "skillTier": 1,
       "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "Armored",
+        "Cavalry"
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51055,6 +51596,12 @@
       "effect": "Reduces damage dealt to unit to 0.",
       "skillTier": 1,
       "spCost": 0,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51062,6 +51609,12 @@
       "effect": "If unit's HP ≥ 90%, foes cannot move through spaces adjacent to unit. (Does not affect foes with Pass skills.)",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51069,6 +51622,12 @@
       "effect": "If unit's HP ≥ 70%, foes cannot move through spaces adjacent to unit. (Does not affect foes with Pass skills.)",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51076,6 +51635,12 @@
       "effect": "If unit's HP ≥ 50%, foes cannot move through spaces adjacent to unit. (Does not affect foes with Pass skills.)",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51083,6 +51648,12 @@
       "effect": "At start of turn, converts bonuses on foes in cardinal directions with HP ≤ unit's HP-5 into penalties through their next actions.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51090,6 +51661,12 @@
       "effect": "At start of turn, converts bonuses on foes in cardinal directions with HP ≤ unit's HP-3 into penalties through their next actions.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51097,6 +51674,12 @@
       "effect": "At start of turn, converts bonuses on foes in cardinal directions with HP ≤ unit's HP into penalties through their next actions.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51104,6 +51687,12 @@
       "effect": "If a skill compares unit's Spd to a foe's or ally's Spd, treats unit's Speed as if granted +5.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51111,6 +51700,12 @@
       "effect": "If a skill compares unit's Spd to a foe's or ally's Spd, treats unit's Speed as if granted +8.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51118,6 +51713,12 @@
       "effect": "If a skill compares unit's Spd to a foe's or ally's Spd, treats unit's Speed as if granted +10.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51125,6 +51726,12 @@
       "effect": "If unit initiates combat, deals 4 damage to foe after combat.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -51132,6 +51739,12 @@
       "effect": "If unit initiates combat, deals 7 damage to foe after combat.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -51139,6 +51752,12 @@
       "effect": "If unit initiates combat, deals 10 damage to foe after combat.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -51146,6 +51765,12 @@
       "effect": "If unit's HP ≥ 90% and foe initiates combat, unit makes a guaranteed follow-up attack.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51153,6 +51778,12 @@
       "effect": "If unit's HP ≥ 80% and foe initiates combat, unit makes a guaranteed follow-up attack.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51160,6 +51791,12 @@
       "effect": "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51167,6 +51804,12 @@
       "effect": "At the start of turn 1, grants Special cooldown count-1.",
       "skillTier": 1,
       "spCost": 0,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51174,6 +51817,12 @@
       "effect": "At start of turn, inflicts Res-3 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 1,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51181,6 +51830,12 @@
       "effect": "At start of turn, inflicts Res-4 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 2,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51188,6 +51843,12 @@
       "effect": "At start of turn, inflicts Res-5 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51195,6 +51856,12 @@
       "effect": "Grants Res+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51202,6 +51869,12 @@
       "effect": "Grants Res+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51209,6 +51882,12 @@
       "effect": "Grants Res+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51216,6 +51895,12 @@
       "effect": "If unit initiates combat, deals 3 damage to foes within 2 spaces of target after combat.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51223,6 +51908,12 @@
       "effect": "If unit initiates combat, deals 5 damage to foes within 2 spaces of target after combat.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51230,6 +51921,12 @@
       "effect": "If unit initiates combat, deals 7 damage to foes within 2 spaces of target after combat.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51237,6 +51934,12 @@
       "effect": "Inflicts Atk-3 on foe through its next action after combat.",
       "skillTier": 1,
       "spCost": 40,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -51244,6 +51947,12 @@
       "effect": "Inflicts Atk-5 on foe through its next action after combat.",
       "skillTier": 2,
       "spCost": 80,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -51251,6 +51960,12 @@
       "effect": "Inflicts Atk-7 on foe through its next action after combat.",
       "skillTier": 3,
       "spCost": 160,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
       "type": "SEAL"
     },
     {
@@ -51258,6 +51973,12 @@
       "effect": "Grants Spd+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51265,6 +51986,12 @@
       "effect": "Grants Spd+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51272,6 +51999,12 @@
       "effect": "Grants Spd+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51279,6 +52012,12 @@
       "effect": "Grants Atk+2 to adjacent allies during combat.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51286,6 +52025,12 @@
       "effect": "Grants Atk+3 to adjacent allies during combat.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51293,6 +52038,12 @@
       "effect": "Grants Atk+4 to adjacent allies during combat.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51300,6 +52051,12 @@
       "effect": "Grants Def+2 to adjacent allies during combat.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51307,6 +52064,12 @@
       "effect": "Grants Def+3 to adjacent allies during combat.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51314,6 +52077,12 @@
       "effect": "Grants Def+4 to adjacent allies during combat.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51321,6 +52090,12 @@
       "effect": "Grants Res+2 to adjacent allies during combat.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51328,6 +52103,12 @@
       "effect": "Grants Res+3 to adjacent allies during combat.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51335,6 +52116,12 @@
       "effect": "Grants Res+4 to adjacent allies during combat.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51342,6 +52129,12 @@
       "effect": "Grants Spd+2 to adjacent allies during combat.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51349,6 +52142,12 @@
       "effect": "Grants Spd+3 to adjacent allies during combat.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51356,6 +52155,12 @@
       "effect": "Grants Spd+4 to adjacent allies during combat.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51363,6 +52168,12 @@
       "effect": "Grants HP+3.",
       "skillTier": 1,
       "spCost": 40,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51370,6 +52181,12 @@
       "effect": "Grants HP+4.",
       "skillTier": 2,
       "spCost": 80,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51377,6 +52194,12 @@
       "effect": "Grants HP+5.",
       "skillTier": 3,
       "spCost": 160,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51384,6 +52207,12 @@
       "effect": "Grants Def+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51391,6 +52220,12 @@
       "effect": "Grants Def+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51398,6 +52233,12 @@
       "effect": "Grants Def+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51405,6 +52246,12 @@
       "effect": "Grants Res+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51412,6 +52259,12 @@
       "effect": "Grants Res+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51419,6 +52272,12 @@
       "effect": "Grants Res+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51426,6 +52285,12 @@
       "effect": "Grants Spd+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51433,6 +52298,12 @@
       "effect": "Grants Spd+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51440,6 +52311,12 @@
       "effect": "Grants Spd+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51447,6 +52324,12 @@
       "effect": "Grants Atk+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51454,6 +52337,12 @@
       "effect": "Grants Atk+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51461,6 +52350,12 @@
       "effect": "Grants Atk+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51468,6 +52363,12 @@
       "effect": "Grants HP+3.",
       "skillTier": 1,
       "spCost": 40,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51475,6 +52376,12 @@
       "effect": "Grants HP+4.",
       "skillTier": 2,
       "spCost": 80,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51482,6 +52389,12 @@
       "effect": "Grants HP+5.",
       "skillTier": 3,
       "spCost": 160,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51489,6 +52402,12 @@
       "effect": "Grants Def+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51496,6 +52415,12 @@
       "effect": "Grants Def+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51503,6 +52428,12 @@
       "effect": "Grants Def+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51510,6 +52441,12 @@
       "effect": "Grants Res+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51517,6 +52454,12 @@
       "effect": "Grants Res+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51524,6 +52467,12 @@
       "effect": "Grants Res+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51531,6 +52480,12 @@
       "effect": "Grants Spd+1.",
       "skillTier": 1,
       "spCost": 30,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51538,6 +52493,12 @@
       "effect": "Grants Spd+2.",
       "skillTier": 2,
       "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51545,6 +52506,12 @@
       "effect": "Grants Spd+3.",
       "skillTier": 3,
       "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51552,6 +52519,12 @@
       "effect": "At start of turn, inflicts Atk-3 on foes within 2 spaces through their next actions.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51559,6 +52532,12 @@
       "effect": "At start of turn, inflicts Atk-4 on foes within 2 spaces through their next actions.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51566,6 +52545,12 @@
       "effect": "At start of turn, inflicts Atk-5 on foes within 2 spaces through their next actions.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51573,6 +52558,12 @@
       "effect": "At start of turn, inflicts Spd-3 on foes within 2 spaces through their next actions.",
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51580,6 +52571,12 @@
       "effect": "At start of turn, inflicts Spd-4 on foes within 2 spaces through their next actions.",
       "skillTier": 2,
       "spCost": 100,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     },
     {
@@ -51587,6 +52584,12 @@
       "effect": "At start of turn, inflicts Spd-5 on foes within 2 spaces through their next actions.",
       "skillTier": 3,
       "spCost": 200,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
       "type": "SEAL"
     }
   ]
