@@ -142,9 +142,7 @@ export function getStatValue(
     }
     return statValue;
   } else if (skill.type === 'PASSIVE_A' || skill.type === 'SEAL') {
-    const statRegex = new RegExp(
-      statKey === 'hp' ? 'max HP' : capitalize(statKey),
-    );
+    const statRegex = new RegExp(statKey === 'hp' ? 'HP' : capitalize(statKey));
     if (test(statRegex, skill.effect)) {
       const skillNumbers = getSkillNumbers(hero, skillType);
       // Atk/Def/Spd/Res/HP+, 'Attack Def+', and Fury
