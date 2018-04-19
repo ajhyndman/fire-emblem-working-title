@@ -38846,7 +38846,7 @@
       "spCost": 200,
       "damage(mt)": 10,
       "range(rng)": 1,
-      "effect": "At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
+      "effect": "At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Res+2. If unit initiates combat, deals 2 damage to unit after combat.",
       "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
@@ -38857,7 +38857,7 @@
       "spCost": 300,
       "damage(mt)": 14,
       "range(rng)": 1,
-      "effect": "At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
+      "effect": "At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Res+2. If unit initiates combat, deals 2 damage to unit after combat.",
       "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Blue Lance"
@@ -41776,7 +41776,7 @@
     {
       "name": "Pivot",
       "range": 1,
-      "effect": "Target ally moves to opposite side of unit.",
+      "effect": "Unit moves to opposite side of target ally.",
       "exclusive": false,
       "skillTier": 1,
       "spCost": 150,
@@ -42086,7 +42086,7 @@
     {
       "name": "Reposition",
       "range": 1,
-      "effect": "Unit moves to opposite side of target ally.",
+      "effect": "Target ally moves to opposite side of unit.",
       "exclusive": false,
       "skillTier": 1,
       "spCost": 150,
@@ -42497,6 +42497,7 @@
         "Red Breath",
         "Blue Breath",
         "Green Breath",
+        "Colorless Breath",
         "Colorless Dagger",
         "Colorless Bow",
         "Colorless Staff"
@@ -42628,6 +42629,7 @@
         "Red Breath",
         "Blue Breath",
         "Green Breath",
+        "Colorless Breath",
         "Colorless Dagger",
         "Colorless Bow"
       ],
@@ -42718,6 +42720,7 @@
         "Red Breath",
         "Blue Breath",
         "Green Breath",
+        "Colorless Breath",
         "Colorless Dagger",
         "Colorless Bow"
       ],
@@ -42743,6 +42746,7 @@
         "Red Breath",
         "Blue Breath",
         "Green Breath",
+        "Colorless Breath",
         "Colorless Dagger",
         "Colorless Bow"
       ],
@@ -43033,6 +43037,7 @@
         "Red Breath",
         "Blue Breath",
         "Green Breath",
+        "Colorless Breath",
         "Colorless Dagger",
         "Colorless Bow"
       ],
@@ -43058,6 +43063,7 @@
         "Red Breath",
         "Blue Breath",
         "Green Breath",
+        "Colorless Breath",
         "Colorless Dagger",
         "Colorless Bow"
       ],
@@ -43083,6 +43089,7 @@
         "Red Breath",
         "Blue Breath",
         "Green Breath",
+        "Colorless Breath",
         "Colorless Dagger",
         "Colorless Bow"
       ],
@@ -44866,7 +44873,7 @@
     },
     {
       "name": "Heavy Blade 3",
-      "effect": "If unit's Atk ≥ foe's Atk, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
+      "effect": "If unit's Atk > foe's Atk, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
       "exclusive": false,
       "skillTier": 3,
       "spCost": 240,
@@ -51253,7 +51260,7 @@
     },
     {
       "name": "Heavy Blade 3",
-      "effect": "If unit's Atk ≥ foe's Atk, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
+      "effect": "If unit's Atk > foe's Atk, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
       "skillTier": 3,
       "spCost": 240,
       "movementRestriction": [
