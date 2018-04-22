@@ -1,13 +1,11 @@
 import fs from 'fs';
 import {
   compose,
-  contains,
   equals,
   filter,
   head,
   indexBy,
   map,
-  merge,
   not,
   pick,
   prop,
@@ -17,7 +15,6 @@ import {
   test,
   trim,
   without,
-  zipWith,
 } from 'ramda';
 
 import { baseStatToMaxStat } from './statGrowth';
@@ -37,8 +34,6 @@ const sanitizeDescription = compose(
   replace(/\&lt\;/g, '<'),
   replace(/\&quot\;/g, '"'),
 );
-
-const truncateParenthetical = replace(/\((.).*\)/, '($1)');
 
 /**
  * Fetch and collate the data.
@@ -74,7 +69,7 @@ async function fetchHeroStats() {
     heroBaseStats,
   );
 
-  const basicHeroData = await fetchApiRows({
+  const heroes = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
     tables: [
@@ -87,8 +82,8 @@ async function fetchHeroStats() {
       'HeroPassives',
     ].join(','),
     fields: [
-      // 'Name',
-      'Heroes._pageName=Name',
+      'Heroes._pageName=FullName',
+      'Name',
       'Title',
       'Origin',
       'WeaponType',
@@ -173,13 +168,8 @@ async function fetchHeroStats() {
     .then(
       compose(
         map(
-          hero =>
-            contains('(', hero.name)
-              ? { ...hero, shortName: truncateParenthetical(hero.name) }
-              : hero,
-        ),
-        map(
           ({
+            FullName,
             Name,
             Title,
             Origin,
@@ -365,7 +355,7 @@ async function fetchHeroStats() {
                 stats['1'][rarity] = compose(
                   map(value => Number.parseInt(value, 10)),
                   pick(['hp', 'atk', 'spd', 'def', 'res']),
-                )(heroBaseStatsByNameAndRarity[`${Name}-${rarity}`]);
+                )(heroBaseStatsByNameAndRarity[`${FullName}-${rarity}`]);
 
                 stats['40'][rarity] = {
                   hp: [
@@ -457,8 +447,11 @@ async function fetchHeroStats() {
               });
             }
 
+            const imageName = `${Name} ${Title}`;
+
             return {
-              name: Name,
+              name: FullName,
+              shortName: Name,
               title: sanitizeDescription(Title),
               origin: Origin,
               weaponType: WeaponType,
@@ -468,9 +461,9 @@ async function fetchHeroStats() {
               poolDate,
               assets: {
                 portrait: {
-                  '75px': `${CDN_HOST}/75px-Icon_Portrait_${Name}.png`,
-                  '113px': `${CDN_HOST}/113px-Icon_Portrait_${Name}.png`,
-                  '150px': `${CDN_HOST}/150px-Icon_Portrait_${Name}.png`,
+                  '75px': `${CDN_HOST}/75px-Icon_Portrait_${imageName}.png`,
+                  '113px': `${CDN_HOST}/113px-Icon_Portrait_${imageName}.png`,
+                  '150px': `${CDN_HOST}/150px-Icon_Portrait_${imageName}.png`,
                 },
               },
               skills,
@@ -484,23 +477,6 @@ async function fetchHeroStats() {
     .catch(error => {
       console.error('failed to parse hero stats', error);
     });
-
-  const heroNames = map(prop('name'), basicHeroData);
-
-  const heroAssets = map(
-    name => ({
-      assets: {
-        portrait: {
-          '75px': `${CDN_HOST}/75px-Icon_Portrait_${name}.png`,
-          '113px': `${CDN_HOST}/113px-Icon_Portrait_${name}.png`,
-          '150px': `${CDN_HOST}/150px-Icon_Portrait_${name}.png`,
-        },
-      },
-    }),
-    heroNames,
-  );
-
-  const heroes = zipWith(merge, basicHeroData, heroAssets);
 
   return heroes;
 }
