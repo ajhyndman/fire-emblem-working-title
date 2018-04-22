@@ -149,29 +149,6 @@ test('encodeHero', t => {
     assert.end();
   });
 
-  t.test('decoding is backwards compatible', assert => {
-    assert.deepEqual(decodeHero('AwEwxgzGDUBMQ'), {
-      ...getDefaultInstance('Anna: Commander'),
-      bane: 'atk',
-    });
-    assert.deepEqual(
-      decodeHero('MwRgxgrMDUAmcIJwDMBGB2AptALMzOAHNKsosNgEzpiXBA'),
-      {
-        ...getDefaultInstance('Cordelia: Knight Paragon'),
-        skills: {
-          WEAPON: 'Brave Lance+',
-          ASSIST: 'Pivot',
-          SPECIAL: 'Galeforce',
-          PASSIVE_A: 'Swift Sparrow 2',
-          PASSIVE_B: 'Drag Back',
-          PASSIVE_C: 'Savage Blow 3',
-          SEAL: undefined,
-        },
-      },
-    );
-    assert.end();
-  });
-
   t.test('encode removed skills', assert => {
     const noSkillHero: HeroInstance = {
       ...getDefaultInstance('Anna: Commander'),
