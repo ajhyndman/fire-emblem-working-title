@@ -22,7 +22,7 @@ type Props = {
 };
 
 // TODO: redirect to non-build page instead of showing an Anna configuration.
-const defaultInstance = getDefaultInstance('Anna');
+const defaultInstance = getDefaultInstance('Anna: Commander');
 
 class Build extends React.Component {
   props: Props;

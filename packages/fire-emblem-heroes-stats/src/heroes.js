@@ -20,7 +20,7 @@ const heroesByName: HeroesByName = indexBy(prop('name'), getAllHeroes());
  */
 export const getHero = (name: string): Hero => {
   const hero: ?Hero = heroesByName[name];
-  return hero || heroesByName['Anna'];
+  return hero || heroesByName['Anna: Commander'];
 };
 
 export const getReleasedHeroes = () =>

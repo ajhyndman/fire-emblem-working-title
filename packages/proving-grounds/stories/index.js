@@ -23,7 +23,7 @@ import { colors } from '../src/theme';
 import HeroShelf from '../src/components/HeroShelf';
 import { type Dispatch } from '../src/reducer';
 
-const heroInstance: HeroInstance = getDefaultInstance('Anna');
+const heroInstance: HeroInstance = getDefaultInstance('Anna: Commander');
 
 storiesOf('Frame', module).add('default', () => (
   <div className="root">
