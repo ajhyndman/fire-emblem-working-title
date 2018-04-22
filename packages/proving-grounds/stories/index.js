@@ -113,9 +113,9 @@ storiesOf('HeroShelf', module).add('with starter heroes', () => (
       activeShelfSlot={0}
       dispatch={() => {}}
       heroShelf={[
-        getDefaultInstance('Alfonse', 3),
-        getDefaultInstance('Sharena', 4),
-        getDefaultInstance('Anna'),
+        getDefaultInstance('Alfonse: Prince of Askr', 3),
+        getDefaultInstance('Sharena: Princess of Askr', 4),
+        getDefaultInstance('Anna: Commander'),
       ]}
     />
   </div>

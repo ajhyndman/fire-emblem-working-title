@@ -18,11 +18,11 @@ import {
 } from '../src/queryCodex';
 
 const customizedInstance: HeroInstance = {
-  ...getDefaultInstance('Anna'),
+  ...getDefaultInstance('Anna: Commander'),
   bane: 'atk',
   mergeLevel: 3,
   skills: {
-    ...getDefaultSkills('Anna'),
+    ...getDefaultSkills('Anna: Commander'),
     PASSIVE_A: 'Attack +3',
     // Convert to any because otherwise flow complains with incorrect line numbers.
     SEAL: 'Attack +1',
@@ -32,7 +32,7 @@ const customizedInstance: HeroInstance = {
 test('flattenInstance', t => {
   t.test('reduces an instance to an array', assert => {
     assert.deepEqual(flattenInstance(customizedInstance), [
-      'Anna',
+      'Anna: Commander',
       2, // atk bane
       'n', // no boon
       5,
@@ -64,7 +64,7 @@ test('flattenInstance', t => {
 test('flattenAndIgnoreDefaults', t => {
   t.test('reduces an instance to an array', assert => {
     assert.deepEqual(flattenAndIgnoreDefaults(customizedInstance), [
-      'Anna',
+      'Anna: Commander',
       2, // atk bane
       'd',
       'd',
@@ -81,9 +81,10 @@ test('flattenAndIgnoreDefaults', t => {
   });
 
   t.test('trims defaults', assert => {
-    assert.deepEqual(flattenAndIgnoreDefaults(getDefaultInstance('Anna')), [
-      'Anna',
-    ]);
+    assert.deepEqual(
+      flattenAndIgnoreDefaults(getDefaultInstance('Anna: Commander')),
+      ['Anna: Commander'],
+    );
     assert.end();
   });
 
@@ -100,7 +101,7 @@ test('flattenAndIgnoreDefaults', t => {
 
 test('hash', t => {
   t.test('hashes to a unicode string five characters long', assert => {
-    assert.equal(hash('Anna').length, 5);
+    assert.equal(hash('Anna: Commander').length, 5);
     assert.end();
   });
 
@@ -150,13 +151,13 @@ test('encodeHero', t => {
 
   t.test('decoding is backwards compatible', assert => {
     assert.deepEqual(decodeHero('AwEwxgzGDUBMQ'), {
-      ...getDefaultInstance('Anna'),
+      ...getDefaultInstance('Anna: Commander'),
       bane: 'atk',
     });
     assert.deepEqual(
       decodeHero('MwRgxgrMDUAmcIJwDMBGB2AptALMzOAHNKsosNgEzpiXBA'),
       {
-        ...getDefaultInstance('Cordelia'),
+        ...getDefaultInstance('Cordelia: Knight Paragon'),
         skills: {
           WEAPON: 'Brave Lance+',
           ASSIST: 'Pivot',
@@ -173,7 +174,7 @@ test('encodeHero', t => {
 
   t.test('encode removed skills', assert => {
     const noSkillHero: HeroInstance = {
-      ...getDefaultInstance('Anna'),
+      ...getDefaultInstance('Anna: Commander'),
       skills: {
         WEAPON: undefined,
         ASSIST: undefined,

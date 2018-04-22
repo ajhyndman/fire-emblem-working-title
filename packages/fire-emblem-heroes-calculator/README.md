@@ -18,7 +18,7 @@ You can also [try `fire-emblem-heroes-calculator` out](https://npm.runkit.com/fi
 
 <script type="text/javascript">
   // A new variable will be available here, named `calculator`.
-  alert(calculator.getDefaultInstance('Anna'));
+  alert(calculator.getDefaultInstance('Anna: Commander'));
 </script>
 ```
 
@@ -36,8 +36,8 @@ var calculator = require('fire-emblem-heroes-calculator');
 
 ```js
 
-var Anna = calculator.getDefaultInstance('Anna');
-var Sharena = calculator.getDefaultInstance('Sharena');
+var Anna = calculator.getDefaultInstance('Anna: Commander');
+var Sharena = calculator.getDefaultInstance('Sharena: Princess of Askr');
 
 calculator.calculateResult(Anna, Sharena);
 
@@ -62,7 +62,7 @@ calculator.calculateResult(Anna, Sharena);
 //   },
 // }
 
-calculator.getInheritableSkills('Anna', 'WEAPON');
+calculator.getInheritableSkills('Anna: Commander', 'WEAPON');
 
 // => [
 //   'Brave Axe',

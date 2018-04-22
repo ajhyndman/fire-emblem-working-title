@@ -8,7 +8,7 @@ import { getStat } from '../src/heroHelpers';
 
 test('lower rarity', t => {
   t.plan(5);
-  const fourStarEffie = getDefaultInstance('Effie', 4);
+  const fourStarEffie = getDefaultInstance('Effie: Army of One', 4);
   // Has Silver Lance
   t.equal(getStat(fourStarEffie, 'hp', 40), 47);
   t.equal(getStat(fourStarEffie, 'atk', 40), 38 + 11);
@@ -18,7 +18,11 @@ test('lower rarity', t => {
 });
 
 test('level 1 variance', t => {
-  const olwen = { ...getDefaultInstance('Olwen'), boon: 'atk', bane: 'res' };
+  const olwen = {
+    ...getDefaultInstance('Olwen: Blue Mage Knight'),
+    boon: 'atk',
+    bane: 'res',
+  };
   t.plan(5);
   t.equal(getStat(olwen, 'hp', 1), 17);
   t.equal(getStat(olwen, 'atk', 1), 7 + 1);
@@ -28,7 +32,11 @@ test('level 1 variance', t => {
 });
 
 test('level 40 variance', t => {
-  const olwen = { ...getDefaultInstance('Olwen'), boon: 'atk', bane: 'res' };
+  const olwen = {
+    ...getDefaultInstance('Olwen: Blue Mage Knight'),
+    boon: 'atk',
+    bane: 'res',
+  };
   t.plan(5);
   // Includes Dire thunder.
   t.equal(getStat(olwen, 'hp', 40), 34);
@@ -39,7 +47,7 @@ test('level 40 variance', t => {
 });
 
 test('merge bonuses', t => {
-  const neutralOlwen = getDefaultInstance('Olwen');
+  const neutralOlwen = getDefaultInstance('Olwen: Blue Mage Knight');
   t.plan(10);
   // For neutral olwen the stat order is hp spd atk res def
   const olwen1 = { ...neutralOlwen, mergeLevel: 1 };
@@ -73,7 +81,7 @@ function testStatSkill(
 ) {
   const skillType = getSkillType(skillName) || 'SEAL';
   // Whether or not a hero can actually equip a skill doesn't matter to getStat.
-  const hero = withHpMissing(missingHp, getDefaultInstance('Anna'));
+  const hero = withHpMissing(missingHp, getDefaultInstance('Anna: Commander'));
   const withoutSkill = {
     ...hero,
     // $FlowIssue flow doesn't like the skills object literal
@@ -100,7 +108,7 @@ function testStatSkill(
 
 test('Context is optional', t => {
   t.plan(5);
-  const hero = getDefaultInstance('Anna');
+  const hero = getDefaultInstance('Anna: Commander');
   t.equal(getStat(hero, 'hp', 40), 41);
   t.equal(getStat(hero, 'atk', 40), 45);
   t.equal(getStat(hero, 'spd', 40), 38);
