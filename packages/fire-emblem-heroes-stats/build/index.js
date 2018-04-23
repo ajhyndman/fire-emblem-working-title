@@ -458,7 +458,7 @@ async function fetchHeroStats() {
             }
 
             return {
-              name: Name,
+              name: sanitizeDescription(Name),
               title: sanitizeDescription(Title),
               origin: Origin,
               weaponType: WeaponType,
