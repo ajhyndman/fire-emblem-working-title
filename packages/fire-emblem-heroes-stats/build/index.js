@@ -450,7 +450,7 @@ async function fetchHeroStats() {
             const imageName = `${Name} ${Title}`;
 
             return {
-              name: FullName,
+              name: sanitizeDescription(FullName),
               shortName: Name,
               title: sanitizeDescription(Title),
               origin: Origin,
