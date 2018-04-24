@@ -100,8 +100,8 @@ test('flattenAndIgnoreDefaults', t => {
 });
 
 test('hash', t => {
-  t.test('hashes to a unicode string five characters long', assert => {
-    assert.equal(hash('Anna: Commander').length, 5);
+  t.test('hashes to a unicode string seven characters long', assert => {
+    assert.equal(hash('Anna: Commander').length, 7);
     assert.end();
   });
 
