@@ -193,7 +193,7 @@ export const hash = (value: any): string =>
     : typeof value === 'number' ||
       (typeof value === 'string' && value.length < 4)
       ? value
-      : take(5, SHA1(value).toString());
+      : take(7, SHA1(value).toString());
 
 const values = flatten([
   [USE_DEFAULT, NO_VARIANT],

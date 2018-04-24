@@ -23,7 +23,7 @@ import { colors } from '../src/theme';
 import HeroShelf from '../src/components/HeroShelf';
 import { type Dispatch } from '../src/reducer';
 
-const heroInstance: HeroInstance = getDefaultInstance('Anna');
+const heroInstance: HeroInstance = getDefaultInstance('Anna: Commander');
 
 storiesOf('Frame', module).add('default', () => (
   <div className="root">
@@ -113,9 +113,9 @@ storiesOf('HeroShelf', module).add('with starter heroes', () => (
       activeShelfSlot={0}
       dispatch={() => {}}
       heroShelf={[
-        getDefaultInstance('Alfonse', 3),
-        getDefaultInstance('Sharena', 4),
-        getDefaultInstance('Anna'),
+        getDefaultInstance('Alfonse: Prince of Askr', 3),
+        getDefaultInstance('Sharena: Princess of Askr', 4),
+        getDefaultInstance('Anna: Commander'),
       ]}
     />
   </div>

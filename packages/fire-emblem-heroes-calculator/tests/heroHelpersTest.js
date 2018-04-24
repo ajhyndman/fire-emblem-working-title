@@ -10,8 +10,8 @@ import { getArenaScore } from '../src/heroHelpers';
 test('getArenaScore', t => {
   t.plan(4);
 
-  t.equal(getArenaScore(getDefaultInstance('Abel')), 672);
-  t.equal(getArenaScore(getDefaultInstance('Alfonse')), 678);
-  t.equal(getArenaScore(getDefaultInstance('Alm')), 676);
-  t.equal(getArenaScore(getDefaultInstance('Anna')), 678);
+  t.equal(getArenaScore(getDefaultInstance('Abel: The Panther')), 672);
+  t.equal(getArenaScore(getDefaultInstance('Alfonse: Prince of Askr')), 678);
+  t.equal(getArenaScore(getDefaultInstance('Alm: Hero of Prophecy')), 676);
+  t.equal(getArenaScore(getDefaultInstance('Anna: Commander')), 678);
 });
