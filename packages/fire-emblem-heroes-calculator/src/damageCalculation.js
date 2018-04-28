@@ -193,10 +193,7 @@ const effectiveBonus = (attacker: HeroInstance, context: Context) => {
     return 1;
   }
   const defenderMoveType = getMoveType(context.enemy);
-  if (
-    getWeaponType(attacker) === 'Colorless Bow' &&
-    defenderMoveType === 'Flying'
-  ) {
+  if (getWeaponType(attacker) === 'Bow' && defenderMoveType === 'Flying') {
     return 1.5;
   }
   const weaponName = getSkillName(attacker, 'WEAPON');

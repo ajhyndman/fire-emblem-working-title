@@ -203,7 +203,7 @@ const unitList: Array<Hero> = [
     shortName: 'Cavalier',
     name: 'Bow Cavalier (Lloyd GHB)',
     moveType: 'Cavalry',
-    weaponType: 'Colorless Bow',
+    weaponType: 'Bow',
     releaseDate: 'N/A',
     poolDate: 'N/A',
     skills: [

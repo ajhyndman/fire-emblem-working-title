@@ -227,7 +227,7 @@
     'shortName': 'Cavalier',
     'name': 'Bow Cavalier ( GHB)',
     'moveType': 'Cavalry',
-    'weaponType': 'Colorless Bow',
+    'weaponType': 'Bow',
     'skills': [
       {
         'name': 'Silver Bow+',
@@ -295,7 +295,7 @@
     'shortName': 'Bow Fighter',
     'name': 'Bow Fighter ( GHB)',
     'moveType': 'Infantry',
-    'weaponType': 'Colorless Bow',
+    'weaponType': 'Bow',
     'skills': [
       {
         'name': 'Silver Bow+',

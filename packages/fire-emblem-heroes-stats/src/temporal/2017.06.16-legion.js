@@ -207,7 +207,7 @@ const unitList: Array<Hero> = [
     shortName: 'Bow Fighter',
     name: 'Bow Fighter (Legion GHB)',
     moveType: 'Infantry',
-    weaponType: 'Colorless Bow',
+    weaponType: 'Bow',
     releaseDate: 'N/A',
     poolDate: 'N/A',
     skills: [
