@@ -16,7 +16,7 @@ export type WeaponType =
   | 'Red Sword'
   | 'Red Tome'
   | 'Red Breath'
-  | 'Bow'
+  | 'Colorless Bow'
   | 'Colorless Dagger'
   | 'Colorless Staff';
 

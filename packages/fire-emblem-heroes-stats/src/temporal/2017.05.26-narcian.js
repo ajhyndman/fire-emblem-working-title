@@ -73,7 +73,7 @@ const unitList: Array<Hero> = [
     shortName: 'Fighter',
     name: 'Bow Fighter (Narcian GHB)',
     moveType: 'Infantry',
-    weaponType: 'Bow',
+    weaponType: 'Colorless Bow',
     releaseDate: 'N/A',
     poolDate: 'N/A',
     skills: [
