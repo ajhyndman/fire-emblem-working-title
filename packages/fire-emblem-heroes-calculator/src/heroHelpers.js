@@ -161,7 +161,7 @@ const canInherit = curry((hero: Hero, skill: Skill): boolean => {
     // Hero has weaponType 'Red Breath' and weapon has weaponType 'Breath'
     const weaponType = test(/Breath/, hero.weaponType)
       ? 'Breath'
-      : hero.weaponType;
+      : test(/Bow/, hero.weaponType) ? 'Bow' : hero.weaponType;
     return weaponType === skill.weaponType;
   }
 
