@@ -226,6 +226,7 @@ export function isMaxTier(key: SkillType, skillName: string): boolean {
 
   switch (key) {
     case 'WEAPON':
+      if (skill.weaponType === 'Colorless Staff') return skill.skillTier >= 3;
       return skill.skillTier >= 4;
     case 'SPECIAL':
       return skill.skillTier >= 2;
@@ -241,14 +242,6 @@ export function isMaxTier(key: SkillType, skillName: string): boolean {
       return !test(/\d/, skillName) || skill.skillTier >= 3;
   }
   return true;
-}
-
-// Checks for skills that cost 0 SP.
-export function isFreeSkill(skillName: string): boolean {
-  return test(
-    /^(Iron|Steel|Fire Breath\+?$|Fire$|Flux$|Wind$|Thunder$)/,
-    skillName,
-  );
 }
 
 /*
