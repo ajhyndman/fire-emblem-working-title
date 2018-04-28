@@ -14675,6 +14675,139 @@
       }
     },
     {
+      "name": "Hinoka: Blue Sky Warrior",
+      "shortName": "Hinoka",
+      "title": "Blue Sky Warrior",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Colorless Bow",
+      "moveType": "Flying",
+      "rarities": "5",
+      "releaseDate": "2018-04-24",
+      "poolDate": "2018-05-10",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Hinoka Blue Sky Warrior.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Hinoka Blue Sky Warrior.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Hinoka Blue Sky Warrior.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Warrior Princess",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "New Moon",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Luna",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Atk/Spd Bond 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk/Spd Bond 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk/Spd Bond 3",
+          "rarity": 5
+        },
+        {
+          "name": "Flier Formation 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Flier Formation 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Flier Formation 3",
+          "rarity": 5
+        },
+        {
+          "name": "Flier Guidance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Flier Guidance 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Flier Guidance 3",
+          "rarity": 5
+        }
+      ],
+      "growthPoints": {
+        "hp": 5,
+        "atk": 8,
+        "spd": 8,
+        "def": 2,
+        "res": 6
+      },
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 6,
+            "spd": 9,
+            "def": 4,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              34,
+              37,
+              41
+            ],
+            "atk": [
+              29,
+              32,
+              35
+            ],
+            "spd": [
+              32,
+              35,
+              38
+            ],
+            "def": [
+              13,
+              17,
+              20
+            ],
+            "res": [
+              25,
+              29,
+              32
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Hinoka: Warrior Princess",
       "shortName": "Hinoka",
       "title": "Warrior Princess",
@@ -16826,6 +16959,316 @@
       }
     },
     {
+      "name": "Kana: Dragon Princess",
+      "shortName": "Kana",
+      "title": "Dragon Princess",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Green Breath",
+      "moveType": "Infantry",
+      "rarities": "5",
+      "releaseDate": "2018-04-24",
+      "poolDate": "2018-05-10",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Kana Dragon Princess.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Kana Dragon Princess.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Kana Dragon Princess.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Fire Breath+",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Water Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Water Breath+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Draconic Aura",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Fierce Stance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fierce Stance 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Fierce Stance 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Atk 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Atk 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Goad Dragons",
+          "rarity": 5
+        }
+      ],
+      "growthPoints": {
+        "hp": 6,
+        "atk": 6,
+        "spd": 8,
+        "def": 8,
+        "res": 5
+      },
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 8,
+            "spd": 8,
+            "def": 7,
+            "res": 7
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              36,
+              40,
+              43
+            ],
+            "atk": [
+              26,
+              30,
+              33
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              30,
+              33,
+              36
+            ],
+            "res": [
+              23,
+              26,
+              30
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Kana: Dragon Spawn",
+      "shortName": "Kana",
+      "title": "Dragon Spawn",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Blue Breath",
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "2018-05-03",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Kana Dragon Spawn.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Kana Dragon Spawn.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Kana Dragon Spawn.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Fire Breath",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Fire Breath+",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Water Breath",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Water Breath+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Dragon Gaze",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Dragon Fang",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Brazen Def/Res 1",
+          "rarity": 3
+        },
+        {
+          "name": "Brazen Def/Res 2",
+          "rarity": 4
+        },
+        {
+          "name": "Brazen Def/Res 3",
+          "rarity": 5
+        },
+        {
+          "name": "Fortify Def 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Fortify Def 2",
+          "rarity": 3
+        },
+        {
+          "name": "Fortify Dragons",
+          "rarity": 4
+        }
+      ],
+      "growthPoints": {
+        "hp": 6,
+        "atk": 6,
+        "spd": 8,
+        "def": 7,
+        "res": 6
+      },
+      "stats": {
+        "1": {
+          "3": {
+            "hp": 17,
+            "atk": 8,
+            "spd": 6,
+            "def": 6,
+            "res": 6
+          },
+          "4": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 7,
+            "def": 6,
+            "res": 6
+          },
+          "5": {
+            "hp": 18,
+            "atk": 9,
+            "spd": 7,
+            "def": 7,
+            "res": 7
+          }
+        },
+        "40": {
+          "3": {
+            "hp": [
+              33,
+              36,
+              39
+            ],
+            "atk": [
+              24,
+              27,
+              30
+            ],
+            "spd": [
+              26,
+              29,
+              32
+            ],
+            "def": [
+              24,
+              27,
+              30
+            ],
+            "res": [
+              22,
+              25,
+              28
+            ]
+          },
+          "4": {
+            "hp": [
+              34,
+              37,
+              40
+            ],
+            "atk": [
+              26,
+              29,
+              32
+            ],
+            "spd": [
+              28,
+              31,
+              34
+            ],
+            "def": [
+              25,
+              28,
+              31
+            ],
+            "res": [
+              23,
+              26,
+              29
+            ]
+          },
+          "5": {
+            "hp": [
+              36,
+              40,
+              43
+            ],
+            "atk": [
+              27,
+              31,
+              34
+            ],
+            "spd": [
+              30,
+              33,
+              36
+            ],
+            "def": [
+              28,
+              31,
+              34
+            ],
+            "res": [
+              25,
+              29,
+              32
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Karel: Sword Demon",
       "shortName": "Karel",
       "title": "Sword Demon",
@@ -17067,6 +17510,195 @@
               29,
               32,
               35
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Kaze: Easygoing Ninja",
+      "shortName": "Kaze",
+      "title": "Easygoing Ninja",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Colorless Dagger",
+      "moveType": "Infantry",
+      "rarities": "3-4",
+      "releaseDate": "2018-05-02",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Kaze Easygoing Ninja.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Kaze Easygoing Ninja.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Kaze Easygoing Ninja.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Dagger",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Dagger",
+          "default": 3,
+          "rarity": "-"
+        },
+        {
+          "name": "Barb Shuriken",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Barb Shuriken+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Chilling Wind",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Iceberg",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Poison Strike 1",
+          "rarity": 3
+        },
+        {
+          "name": "Poison Strike 2",
+          "rarity": 4
+        },
+        {
+          "name": "Poison Strike 3",
+          "rarity": 5
+        },
+        {
+          "name": "Atk Smoke 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Atk Smoke 2",
+          "rarity": 3
+        },
+        {
+          "name": "Atk Smoke 3",
+          "rarity": 4
+        }
+      ],
+      "growthPoints": {
+        "hp": 4,
+        "atk": 7,
+        "spd": 8,
+        "def": 2,
+        "res": 8
+      },
+      "stats": {
+        "1": {
+          "3": {
+            "hp": 16,
+            "atk": 5,
+            "spd": 9,
+            "def": 3,
+            "res": 7
+          },
+          "4": {
+            "hp": 16,
+            "atk": 5,
+            "spd": 10,
+            "def": 3,
+            "res": 8
+          },
+          "5": {
+            "hp": 17,
+            "atk": 6,
+            "spd": 10,
+            "def": 4,
+            "res": 8
+          }
+        },
+        "40": {
+          "3": {
+            "hp": [
+              28,
+              31,
+              34
+            ],
+            "atk": [
+              23,
+              26,
+              29
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              11,
+              14,
+              17
+            ],
+            "res": [
+              27,
+              30,
+              33
+            ]
+          },
+          "4": {
+            "hp": [
+              29,
+              32,
+              35
+            ],
+            "atk": [
+              24,
+              27,
+              30
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              12,
+              15,
+              18
+            ],
+            "res": [
+              29,
+              32,
+              35
+            ]
+          },
+          "5": {
+            "hp": [
+              31,
+              34,
+              37
+            ],
+            "atk": [
+              27,
+              30,
+              33
+            ],
+            "spd": [
+              33,
+              36,
+              39
+            ],
+            "def": [
+              13,
+              17,
+              20
+            ],
+            "res": [
+              31,
+              34,
+              37
             ]
           }
         }
@@ -21079,6 +21711,131 @@
       }
     },
     {
+      "name": "Lyn: Lady of the Wind",
+      "shortName": "Lyn",
+      "title": "Lady of the Wind",
+      "origin": "Fire Emblem: The Blazing Blade",
+      "weaponType": "Green Bow",
+      "moveType": "Infantry",
+      "rarities": "5",
+      "releaseDate": "2018-05-01",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lyn Lady of the Wind.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Lyn Lady of the Wind.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Lyn Lady of the Wind.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Silver Bow",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Swift Mulagir",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Defense",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Rally Def/Res",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Laws of Sacae",
+          "rarity": 5
+        },
+        {
+          "name": "Desperation 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Desperation 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spd Tactic 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spd Tactic 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Spd Tactic 3",
+          "rarity": 5
+        }
+      ],
+      "growthPoints": {
+        "hp": 5,
+        "atk": 6,
+        "spd": 8,
+        "def": 4,
+        "res": 6
+      },
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 9,
+            "spd": 10,
+            "def": 4,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              33,
+              36,
+              40
+            ],
+            "atk": [
+              27,
+              31,
+              34
+            ],
+            "spd": [
+              33,
+              36,
+              39
+            ],
+            "def": [
+              18,
+              21,
+              24
+            ],
+            "res": [
+              23,
+              27,
+              30
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Lyn: Wind's Embrace",
       "shortName": "Lyn",
       "title": "Wind's Embrace",
@@ -23908,7 +24665,7 @@
       "origin": "Fire Emblem: Thracia 776",
       "weaponType": "Colorless Staff",
       "moveType": "Cavalry",
-      "rarities": "5",
+      "rarities": "4-5",
       "releaseDate": "2018-04-11",
       "poolDate": "2018-04-24",
       "assets": {
@@ -23927,7 +24684,7 @@
         {
           "name": "Absorb",
           "default": "-",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Absorb+",
@@ -23946,7 +24703,7 @@
         },
         {
           "name": "Restore",
-          "default": "-",
+          "default": 4,
           "rarity": "-"
         },
         {
@@ -23957,7 +24714,7 @@
         {
           "name": "Heavenly Light",
           "default": "-",
-          "rarity": 5
+          "rarity": 4
         },
         {
           "name": "Resistance +1",
@@ -23965,7 +24722,7 @@
         },
         {
           "name": "Spd/Res 1",
-          "rarity": "-"
+          "rarity": 4
         },
         {
           "name": "Spd/Res 2",
@@ -23981,7 +24738,7 @@
         },
         {
           "name": "Drive Def 2",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "growthPoints": {
@@ -23993,6 +24750,13 @@
       },
       "stats": {
         "1": {
+          "4": {
+            "hp": 16,
+            "atk": 4,
+            "spd": 8,
+            "def": 5,
+            "res": 7
+          },
           "5": {
             "hp": 17,
             "atk": 5,
@@ -24002,6 +24766,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              31,
+              34,
+              37
+            ],
+            "atk": [
+              21,
+              24,
+              27
+            ],
+            "spd": [
+              29,
+              32,
+              35
+            ],
+            "def": [
+              16,
+              19,
+              22
+            ],
+            "res": [
+              22,
+              25,
+              28
+            ]
+          },
           "5": {
             "hp": [
               33,
@@ -32812,6 +33603,127 @@
       }
     },
     {
+      "name": "Shigure: Uplifting Artist",
+      "shortName": "Shigure",
+      "title": "Uplifting Artist",
+      "origin": "Fire Emblem Fates",
+      "weaponType": "Blue Lance",
+      "moveType": "Flying",
+      "rarities": "5",
+      "releaseDate": "2018-04-24",
+      "poolDate": "2018-05-10",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Shigure Uplifting Artist.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Shigure Uplifting Artist.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Shigure Uplifting Artist.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Iron Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Steel Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Harmonic Lance",
+          "default": "-",
+          "rarity": "-"
+        },
+        {
+          "name": "Harmonic Lance+",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Daylight",
+          "default": 5,
+          "rarity": "-"
+        },
+        {
+          "name": "Noontime",
+          "default": "-",
+          "rarity": 5
+        },
+        {
+          "name": "Darting Stance 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Darting Stance 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Darting Stance 3",
+          "rarity": 5
+        },
+        {
+          "name": "Spur Res 1",
+          "rarity": "-"
+        },
+        {
+          "name": "Spur Res 2",
+          "rarity": "-"
+        },
+        {
+          "name": "Ward Fliers",
+          "rarity": 5
+        }
+      ],
+      "growthPoints": {
+        "hp": 6,
+        "atk": 8,
+        "spd": 9,
+        "def": 6,
+        "res": 4
+      },
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 18,
+            "atk": 7,
+            "spd": 9,
+            "def": 5,
+            "res": 8
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              36,
+              40,
+              43
+            ],
+            "atk": [
+              30,
+              33,
+              36
+            ],
+            "spd": [
+              34,
+              37,
+              40
+            ],
+            "def": [
+              23,
+              27,
+              30
+            ],
+            "res": [
+              22,
+              25,
+              28
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Shiro: Raw Talent",
       "shortName": "Shiro",
       "title": "Raw Talent",
@@ -38253,7 +39165,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  In combat against a colorless dagger foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Assassin's Bow+",
@@ -38264,7 +39176,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  In combat against a colorless dagger foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Assault",
@@ -38309,6 +39221,28 @@
       "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Red Sword"
+    },
+    {
+      "name": "Barb Shuriken",
+      "skillTier": 3,
+      "spCost": 200,
+      "damage(mt)": 8,
+      "range(rng)": 2,
+      "effect": "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.",
+      "exclusive": false,
+      "type": "WEAPON",
+      "weaponType": "Colorless Dagger"
+    },
+    {
+      "name": "Barb Shuriken+",
+      "skillTier": 4,
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.",
+      "exclusive": false,
+      "type": "WEAPON",
+      "weaponType": "Colorless Dagger"
     },
     {
       "name": "Basilikos",
@@ -38627,7 +39561,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Brave Bow+",
@@ -38638,7 +39572,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Inflicts Spd-5. If unit initiates combat, unit attacks twice.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Brave Lance",
@@ -38825,7 +39759,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, inflicts Atk/Spd-5 on foes within 2 spaces of target through their next actions after combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Clarisse's Bow+",
@@ -38836,7 +39770,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, inflicts Atk/Spd-5 on foes within 2 spaces of target through their next actions after combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Cupid Arrow",
@@ -38847,7 +39781,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Cupid Arrow+",
@@ -38858,7 +39792,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Cursed Lance",
@@ -39298,7 +40232,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Unit and foe cannot counterattack.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Firesweep Bow+",
@@ -39309,7 +40243,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Unit and foe cannot counterattack.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Firesweep Lance",
@@ -39441,7 +40375,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit’s HP ≥ 50%, unit can move through foes’ spaces.",
       "exclusive": true,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Fólkvangr",
@@ -39518,7 +40452,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Gratia+",
@@ -39529,7 +40463,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Gravity",
@@ -39727,7 +40661,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 to unit during combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Guard Bow+",
@@ -39738,7 +40672,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 to unit during combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Hagoita",
@@ -39771,7 +40705,7 @@
       "effect": "Effective against flying foes <span style=\"position: relative; top: -1px\"></span> . Grants Def/Res+2 to allies within 2 spaces during combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Hama Ya+",
@@ -39782,7 +40716,7 @@
       "effect": "Effective against flying foes <span style=\"position: relative; top: -1px\"></span> . Grants Def/Res+2 to allies within 2 spaces during combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Hammer",
@@ -39947,7 +40881,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Iron Dagger",
@@ -40134,7 +41068,7 @@
       "effect": "Accelerates Special trigger (cooldown count-1). Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Killer Bow+",
@@ -40145,7 +41079,7 @@
       "effect": "Accelerates Special trigger (cooldown count-1). Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Killer Lance",
@@ -40409,7 +41343,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Monstrous Bow+",
@@ -40420,7 +41354,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Mulagir",
@@ -40431,7 +41365,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Grants Spd+3. Neutralizes magic foe's bonuses (from skills like Fortify, Rally, etc.) during combat.",
       "exclusive": true,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Muninn's Egg",
@@ -40497,7 +41431,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2.",
       "exclusive": true,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Níu",
@@ -40574,7 +41508,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  If unit initiates combat, grants Res+4 during combat.",
       "exclusive": true,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Peshkatz",
@@ -40761,7 +41695,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Refreshing Bolt+",
@@ -40772,7 +41706,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  At start of combat, if unit's HP = 100%, grants Atk/Spd/Def/Rest+2. If unit initiates combat, deals 2 damage to unit after combat.",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Regal Blade",
@@ -41080,7 +42014,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Silver Bow+",
@@ -41091,7 +42025,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Silver Dagger",
@@ -41179,7 +42113,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Grants Spd+3. At the start of turn 3, deals 10 damage to foes within 3 columns centered on unit, and converts bonuses on those foes into penalties through their next actions.",
       "exclusive": true,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Slaying Axe",
@@ -41212,7 +42146,7 @@
       "effect": "Accelerates Special trigger (cooldown count-1). Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Slaying Bow+",
@@ -41223,7 +42157,7 @@
       "effect": "Accelerates Special trigger (cooldown count-1). Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Slaying Edge",
@@ -41410,7 +42344,7 @@
       "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>",
       "exclusive": false,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Steel Dagger",
@@ -41455,6 +42389,17 @@
       "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Axe"
+    },
+    {
+      "name": "Swift Mulagir",
+      "skillTier": 4,
+      "spCost": 400,
+      "damage(mt)": 14,
+      "range(rng)": 2,
+      "effect": "Effective against flying foes. <span style=\"position: relative; top: -1px\"></span>  Grants Res+3. If the number of allies within 2 spaces (excluding unit) > the number of foes within 2 spaces (excluding target), grants Atk/Spd+5 during combat.",
+      "exclusive": true,
+      "type": "WEAPON",
+      "weaponType": "Bow"
     },
     {
       "name": "Tannenboom!",
@@ -41652,7 +42597,7 @@
       "effect": "Effective against flying and armored foes. <span style=\"position: relative; top: -1px\"></span> <span style=\"position: relative; top: -1px\"></span>  Grants Spd+3. Grants Atk+3 to allies within 2 spaces during combat.",
       "exclusive": true,
       "type": "WEAPON",
-      "weaponType": "Colorless Bow"
+      "weaponType": "Bow"
     },
     {
       "name": "Water Breath",
@@ -43432,8 +44377,8 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Def 1",
-      "effect": "Grants HP+3, Def+1.",
+      "name": "HP/Res 1",
+      "effect": "Grants HP+3, Res+1.",
       "exclusive": false,
       "skillTier": 2,
       "spCost": 100,
@@ -45272,11 +46217,11 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Def 2",
-      "effect": "Grants HP+4, Def+2.",
+      "name": "HP/Def 1",
+      "effect": "Grants HP+3, Def+1.",
       "exclusive": false,
-      "skillTier": 3,
-      "spCost": 200,
+      "skillTier": 2,
+      "spCost": 100,
       "movementRestriction": [
         ""
       ],
@@ -45286,11 +46231,11 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Res 1",
-      "effect": "Grants HP+3, Res+1.",
+      "name": "HP/Def 2",
+      "effect": "Grants HP+4, Def+2.",
       "exclusive": false,
-      "skillTier": 2,
-      "spCost": 100,
+      "skillTier": 3,
+      "spCost": 200,
       "movementRestriction": [
         ""
       ],
@@ -45405,6 +46350,20 @@
       "exclusive": false,
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Laws of Sacae",
+      "effect": "If foe initiates combat and the number of allies within 2 spaces ≥ 2, grants Atk/Spd/Def/Res+4 during combat.",
+      "exclusive": true,
+      "skillTier": 1,
+      "spCost": 300,
       "movementRestriction": [
         ""
       ],
@@ -45678,20 +46637,6 @@
         ""
       ],
       "type": "PASSIVE_A"
-    },
-    {
-      "name": "Watersweep 2",
-      "effect": "If unit initiates combat, unit cannot make a follow-up attack. If unit's Spd ≥ foe's Spd+3 and foe uses magic, staff, or dragonstone, foe cannot counterattack.",
-      "exclusive": false,
-      "skillTier": 2,
-      "spCost": 120,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
     },
     {
       "name": "Axebreaker 1",
@@ -47237,6 +48182,29 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Wrath 1",
+      "effect": "At start of turn, if unit's HP ≤ 25% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
+      "exclusive": false,
+      "skillTier": 1,
+      "spCost": 60,
+      "movementRestriction": [
+        "Cavalry",
+        "Flying"
+      ],
+      "weaponRestriction": [
+        "Red Bow",
+        "Red Tome",
+        "Blue Bow",
+        "Blue Tome",
+        "Green Bow",
+        "Green Tome",
+        "Colorless Bow",
+        "Colorless Dagger",
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Live for Bounty",
       "effect": "If unit survives, get 1.5x shards/crystals from a Training Tower map. (Only highest value applied. Does not stack.)",
       "exclusive": false,
@@ -47356,29 +48324,6 @@
       "spCost": 150,
       "movementRestriction": [
         ""
-      ],
-      "weaponRestriction": [
-        "Red Bow",
-        "Red Tome",
-        "Blue Bow",
-        "Blue Tome",
-        "Green Bow",
-        "Green Tome",
-        "Colorless Bow",
-        "Colorless Dagger",
-        "Colorless Staff"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrath 1",
-      "effect": "At start of turn, if unit's HP ≤ 25% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
-      "exclusive": false,
-      "skillTier": 1,
-      "spCost": 60,
-      "movementRestriction": [
-        "Cavalry",
-        "Flying"
       ],
       "weaponRestriction": [
         "Red Bow",
@@ -47595,6 +48540,20 @@
       "exclusive": false,
       "skillTier": 1,
       "spCost": 50,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Desperation 2",
+      "effect": "If unit’s HP ≤ 50% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
+      "exclusive": false,
+      "skillTier": 2,
+      "spCost": 100,
       "movementRestriction": [
         ""
       ],
@@ -47864,20 +48823,6 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Desperation 2",
-      "effect": "If unit’s HP ≤ 50% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
-      "exclusive": false,
-      "skillTier": 2,
-      "spCost": 100,
-      "movementRestriction": [
-        ""
-      ],
-      "weaponRestriction": [
-        ""
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Desperation 3",
       "effect": "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
       "exclusive": false,
@@ -47897,6 +48842,20 @@
       "exclusive": false,
       "skillTier": 3,
       "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Watersweep 2",
+      "effect": "If unit initiates combat, unit cannot make a follow-up attack. If unit's Spd ≥ foe's Spd+3 and foe uses magic, staff, or dragonstone, foe cannot counterattack.",
+      "exclusive": false,
+      "skillTier": 2,
+      "spCost": 120,
       "movementRestriction": [
         ""
       ],
@@ -48088,13 +49047,15 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Fortify Def 3",
-      "effect": "At start of turn, grants Def+4 to adjacent allies for 1 turn.",
+      "name": "Fortify Fliers",
+      "effect": "At start of turn, grants Def/Res+6 to adjacent flying allies for 1 turn.",
       "exclusive": false,
       "skillTier": 3,
       "spCost": 200,
       "movementRestriction": [
-        ""
+        "Infantry",
+        "Armored",
+        "Cavalry"
       ],
       "weaponRestriction": [
         ""
@@ -48336,6 +49297,48 @@
       ],
       "weaponRestriction": [
         "Colorless Staff"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spd Tactic 1",
+      "effect": "At start of turn, grants Spd+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "exclusive": false,
+      "skillTier": 1,
+      "spCost": 60,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spd Tactic 2",
+      "effect": "At start of turn, grants Spd+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "exclusive": false,
+      "skillTier": 2,
+      "spCost": 120,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Spd Tactic 3",
+      "effect": "At start of turn, grants Spd+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
+      "exclusive": false,
+      "skillTier": 3,
+      "spCost": 240,
+      "movementRestriction": [
+        ""
+      ],
+      "weaponRestriction": [
+        ""
       ],
       "type": "PASSIVE_C"
     },
@@ -49466,15 +50469,13 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Fliers",
-      "effect": "At start of turn, grants Def/Res+6 to adjacent flying allies for 1 turn.",
+      "name": "Savage Blow 2",
+      "effect": "If unit initiates combat, deals 5 damage to foes within 2 spaces of target after combat.",
       "exclusive": false,
-      "skillTier": 3,
-      "spCost": 200,
+      "skillTier": 2,
+      "spCost": 100,
       "movementRestriction": [
-        "Infantry",
-        "Armored",
-        "Cavalry"
+        ""
       ],
       "weaponRestriction": [
         ""
@@ -49507,11 +50508,11 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Savage Blow 2",
-      "effect": "If unit initiates combat, deals 5 damage to foes within 2 spaces of target after combat.",
+      "name": "Fortify Def 3",
+      "effect": "At start of turn, grants Def+4 to adjacent allies for 1 turn.",
       "exclusive": false,
-      "skillTier": 2,
-      "spCost": 100,
+      "skillTier": 3,
+      "spCost": 200,
       "movementRestriction": [
         ""
       ],
