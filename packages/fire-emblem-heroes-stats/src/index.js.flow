@@ -9,12 +9,15 @@ export type MoveType = 'Armored' | 'Cavalry' | 'Flying' | 'Infantry';
 export type WeaponType =
   | 'Blue Lance'
   | 'Blue Tome'
+  | 'Blue Bow'
   | 'Blue Breath'
   | 'Green Axe'
   | 'Green Tome'
+  | 'Green Bow'
   | 'Green Breath'
   | 'Red Sword'
   | 'Red Tome'
+  | 'Red Bow'
   | 'Red Breath'
   | 'Colorless Bow'
   | 'Colorless Dagger'
@@ -113,7 +116,7 @@ export type WeaponSkill = {
   +'range(rng)': number,
   +effect: string,
   // Hero is Red Breath, weapon is Breath
-  +weaponType: WeaponType | 'Breath',
+  +weaponType: WeaponType | 'Bow' | 'Breath',
   +exclusive: boolean,
 };
 
