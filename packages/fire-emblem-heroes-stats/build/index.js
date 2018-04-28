@@ -35,6 +35,12 @@ const sanitizeDescription = compose(
   replace(/\&quot\;/g, '"'),
 );
 
+const formatImageName = compose(
+  replace("'", ''),
+  replace('"', ''),
+  replace(':', ''),
+);
+
 /**
  * Fetch and collate the data.
  * (Do all the things!)
@@ -447,10 +453,12 @@ async function fetchHeroStats() {
               });
             }
 
-            const imageName = `${Name} ${Title}`;
+            const fullName = sanitizeDescription(FullName);
+
+            const imageName = formatImageName(fullName);
 
             return {
-              name: sanitizeDescription(FullName),
+              name: fullName,
               shortName: Name,
               title: sanitizeDescription(Title),
               origin: Origin,
