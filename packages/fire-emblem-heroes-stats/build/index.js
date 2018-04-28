@@ -36,9 +36,9 @@ const sanitizeDescription = compose(
 );
 
 const formatImageName = compose(
-  replace("'", ''),
-  replace('"', ''),
-  replace(':', ''),
+  replace(/\'/g, ''),
+  replace(/\"/g, ''),
+  replace(/\:/g, ''),
 );
 
 /**
