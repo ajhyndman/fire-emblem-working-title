@@ -81,7 +81,7 @@ async function fetchHeroStats() {
     tables: [
       'Heroes',
       'HeroBaseStats',
-      'HeroGrowthPoints',
+      'HeroGrowths',
       'HeroWeapons',
       'HeroSpecials',
       'HeroAssists',
@@ -98,11 +98,11 @@ async function fetchHeroStats() {
       'RewardRarities',
       'ReleaseDate',
       'PoolDate',
-      'HeroGrowthPoints.HP',
-      'HeroGrowthPoints.Atk',
-      'HeroGrowthPoints.Spd',
-      'HeroGrowthPoints.Def',
-      'HeroGrowthPoints.Res',
+      'HeroGrowths.HP',
+      'HeroGrowths.Atk',
+      'HeroGrowths.Spd',
+      'HeroGrowths.Def',
+      'HeroGrowths.Res',
       'HeroWeapons.weapon1',
       'HeroWeapons.weapon2',
       'HeroWeapons.weapon3',
@@ -164,7 +164,7 @@ async function fetchHeroStats() {
     group_by: 'Heroes._pageName',
     join_on: [
       'HeroBaseStats._pageName = Heroes._pageName',
-      'Heroes._pageName = HeroGrowthPoints._pageName',
+      'Heroes._pageName = HeroGrowths._pageName',
       'Heroes._pageName = HeroWeapons._pageName',
       'Heroes._pageName = HeroSpecials._pageName',
       'Heroes._pageName = HeroAssists._pageName',
@@ -186,11 +186,11 @@ async function fetchHeroStats() {
             ReleaseDate,
             PoolDate,
 
-            HP: hpGrowthPoints,
-            Atk: atkGrowthPoints,
-            Spd: spdGrowthPoints,
-            Def: defGrowthPoints,
-            Res: resGrowthPoints,
+            HP: hpGrowths,
+            Atk: atkGrowths,
+            Spd: spdGrowths,
+            Def: defGrowths,
+            Res: resGrowths,
 
             assist1,
             assist1Default,
@@ -341,12 +341,12 @@ async function fetchHeroStats() {
 
             const skills = [...otherSkills, ...passiveSkills];
 
-            const growthPoints = {
-              hp: Number.parseInt(hpGrowthPoints, 10),
-              atk: Number.parseInt(atkGrowthPoints, 10),
-              spd: Number.parseInt(spdGrowthPoints, 10),
-              def: Number.parseInt(defGrowthPoints, 10),
-              res: Number.parseInt(resGrowthPoints, 10),
+            const growths = {
+              hp: Number.parseInt(hpGrowths, 10),
+              atk: Number.parseInt(atkGrowths, 10),
+              spd: Number.parseInt(spdGrowths, 10),
+              def: Number.parseInt(defGrowths, 10),
+              res: Number.parseInt(resGrowths, 10),
             };
 
             // Compute the hero's stats at level 1 and 40 for all available
@@ -368,85 +368,85 @@ async function fetchHeroStats() {
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].hp - 1,
-                      Number.parseInt(hpGrowthPoints, 10) - 1,
+                      Number.parseInt(hpGrowths, 10) / 5 - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].hp,
-                      Number.parseInt(hpGrowthPoints, 10),
+                      Number.parseInt(hpGrowths, 10) / 5,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].hp + 1,
-                      Number.parseInt(hpGrowthPoints, 10) + 1,
+                      Number.parseInt(hpGrowths, 10) / 5 + 1,
                     ),
                   ],
                   atk: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].atk - 1,
-                      Number.parseInt(atkGrowthPoints, 10) - 1,
+                      Number.parseInt(atkGrowths, 10) / 5 - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].atk,
-                      Number.parseInt(atkGrowthPoints, 10),
+                      Number.parseInt(atkGrowths, 10) / 5,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].atk + 1,
-                      Number.parseInt(atkGrowthPoints, 10) + 1,
+                      Number.parseInt(atkGrowths, 10) / 5 + 1,
                     ),
                   ],
                   spd: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].spd - 1,
-                      Number.parseInt(spdGrowthPoints, 10) - 1,
+                      Number.parseInt(spdGrowths, 10) / 5 - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].spd,
-                      Number.parseInt(spdGrowthPoints, 10),
+                      Number.parseInt(spdGrowths, 10) / 5,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].spd + 1,
-                      Number.parseInt(spdGrowthPoints, 10) + 1,
+                      Number.parseInt(spdGrowths, 10) / 5 + 1,
                     ),
                   ],
                   def: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].def - 1,
-                      Number.parseInt(defGrowthPoints, 10) - 1,
+                      Number.parseInt(defGrowths, 10) / 5 - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].def,
-                      Number.parseInt(defGrowthPoints, 10),
+                      Number.parseInt(defGrowths, 10) / 5,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].def + 1,
-                      Number.parseInt(defGrowthPoints, 10) + 1,
+                      Number.parseInt(defGrowths, 10) / 5 + 1,
                     ),
                   ],
                   res: [
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].res - 1,
-                      Number.parseInt(resGrowthPoints, 10) - 1,
+                      Number.parseInt(resGrowths, 10) / 5 - 1,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].res,
-                      Number.parseInt(resGrowthPoints, 10),
+                      Number.parseInt(resGrowths, 10) / 5,
                     ),
                     baseStatToMaxStat(
                       rarity,
                       stats['1'][rarity].res + 1,
-                      Number.parseInt(resGrowthPoints, 10) + 1,
+                      Number.parseInt(resGrowths, 10) / 5 + 1,
                     ),
                   ],
                 };
@@ -475,7 +475,7 @@ async function fetchHeroStats() {
                 },
               },
               skills,
-              growthPoints,
+              growths,
               stats,
             };
           },
@@ -503,7 +503,6 @@ async function fetchSkills() {
       'Might',
       'WeaponClass',
       'WeaponRange',
-      'SkillTier',
     ].join(','),
     group_by: 'WeaponName',
   })
@@ -519,10 +518,8 @@ async function fetchSkills() {
             Might,
             WeaponClass,
             WeaponRange,
-            SkillTier,
           }) => ({
             name: WeaponName,
-            skillTier: Number.parseInt(SkillTier, 10),
             spCost: Number.parseInt(Cost, 10),
             'damage(mt)': Number.parseInt(Might, 10),
             'range(rng)': Number.parseInt(WeaponRange, 10),
@@ -550,7 +547,6 @@ async function fetchSkills() {
       'CanUseWeapon',
       'CanUseMove',
       'Exclusive',
-      'SkillTier',
       'SkillBuildCost',
     ].join(','),
     group_by: 'Name',
@@ -566,14 +562,12 @@ async function fetchSkills() {
             CanUseWeapon,
             Exclusive,
             AssistRange,
-            SkillTier,
           }) => {
             return {
               name: Name,
               range: Number.parseInt(AssistRange, 10),
               effect: sanitizeDescription(Effect),
               exclusive: Boolean(Number.parseInt(Exclusive, 10)),
-              skillTier: Number.parseInt(SkillTier, 10),
               spCost: Number.parseInt(Cost, 10),
               movementRestriction: CanUseMove.split(','),
               weaponRestriction: CanUseWeapon.split(','),
@@ -599,7 +593,6 @@ async function fetchSkills() {
       'CanUseWeapon',
       'CanUseMove',
       'Exclusive',
-      'SkillTier',
     ].join(','),
     group_by: 'Name',
   })
@@ -613,14 +606,12 @@ async function fetchSkills() {
             Effect,
             Exclusive,
             CanUseMove,
-            SkillTier,
             CanUseWeapon,
           }) => ({
             name: Name,
             cooldown: Number.parseInt(Cooldown, 10),
             effect: sanitizeDescription(Effect || '-'),
             exclusive: Boolean(parseInt(Exclusive)),
-            skillTier: Number.parseInt(SkillTier, 10),
             spCost: Number.parseInt(Cost, 10),
             movementRestriction: CanUseMove.split(','),
             weaponRestriction: CanUseWeapon.split(','),
@@ -640,7 +631,6 @@ async function fetchSkills() {
     fields: [
       'PassiveSingle.Name=Name',
       'Effect',
-      'SkillTier',
       'SPCost',
       'PassiveGroup.CanUseMove=CanUseMove',
       'PassiveGroup.CanUseWeapon=CanUseWeapon',
@@ -662,7 +652,6 @@ async function fetchSkills() {
             Exclusive,
             CanUseMove,
             CanUseWeapon,
-            SkillTier,
             Ptype,
           }) => {
             // Don't include passives that are only available as seals, here.
@@ -672,7 +661,6 @@ async function fetchSkills() {
               name: Name,
               effect: sanitizeDescription(Effect),
               exclusive: Boolean(Number.parseInt(Exclusive, 10)),
-              skillTier: Number.parseInt(SkillTier, 10),
               spCost: Number.parseInt(SPCost, 10),
               movementRestriction: CanUseMove.split(','),
               weaponRestriction: CanUseWeapon.split(','),
@@ -694,7 +682,6 @@ async function fetchSkills() {
       'PassiveSingle.Name=Name',
       'SPCost',
       'Effect',
-      'SkillTier',
       'PassiveGroup.Seal=Seal',
       'PassiveGroup.CanUseMove=CanUseMove',
       'PassiveGroup.CanUseWeapon=CanUseWeapon',
@@ -711,13 +698,11 @@ async function fetchSkills() {
             Name,
             SPCost,
             Effect,
-            SkillTier,
             CanUseMove,
             CanUseWeapon,
           }) => ({
             name: Name,
             effect: sanitizeDescription(Effect),
-            skillTier: Number.parseInt(SkillTier, 10),
             spCost: Number.parseInt(SPCost, 10),
             movementRestriction: CanUseMove.split(','),
             weaponRestriction: CanUseWeapon.split(','),
