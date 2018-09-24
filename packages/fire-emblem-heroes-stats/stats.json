@@ -12475,7 +12475,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2018-09-14",
-      "poolDate": "2018-09-28",
+      "poolDate": "2018-10-10",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Flora Cold as Ice.png",
@@ -29805,7 +29805,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2018-09-14",
-      "poolDate": "2018-09-28",
+      "poolDate": "2018-10-10",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Nina Eye Spy.png",
@@ -32393,7 +32393,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2018-09-14",
-      "poolDate": "2018-09-28",
+      "poolDate": "2018-10-10",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Ophelia Dramatic Heroine.png",
@@ -39571,7 +39571,7 @@
       "moveType": "Cavalry",
       "rarities": "5",
       "releaseDate": "2018-09-14",
-      "poolDate": "2018-09-28",
+      "poolDate": "2018-10-10",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Silas Loyal Knight.png",
@@ -51565,10 +51565,30 @@
       "exclusive": true,
       "spCost": 500,
       "movementRestriction": [
-        ""
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
       ],
       "weaponRestriction": [
-        ""
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
       ],
       "type": "SPECIAL"
     },
@@ -58428,10 +58448,19 @@
       "exclusive": true,
       "spCost": 350,
       "movementRestriction": [
-        ""
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
       ],
       "weaponRestriction": [
-        ""
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
       ],
       "type": "PASSIVE_A"
     },
@@ -61103,10 +61132,30 @@
       "exclusive": true,
       "spCost": 300,
       "movementRestriction": [
-        ""
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
       ],
       "weaponRestriction": [
-        ""
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
       ],
       "type": "PASSIVE_B"
     },
