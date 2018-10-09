@@ -65,8 +65,44 @@
           "rarity": 1
         },
         {
+          "name": "Swordbreaker 1",
+          "rarity": 1
+        },
+        {
+          "name": "Swordbreaker 1",
+          "rarity": 1
+        },
+        {
+          "name": "Swordbreaker 1",
+          "rarity": 1
+        },
+        {
           "name": "Swordbreaker 2",
           "rarity": 2
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 2
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 2
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 2
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 4
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 4
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 4
         },
         {
           "name": "Swordbreaker 3",
@@ -499,7 +535,7 @@
           "rarity": 3
         },
         {
-          "name": "Falchion",
+          "name": "Falchion (Gaiden)",
           "default": 5,
           "rarity": 5
         },
@@ -1891,6 +1927,11 @@
           "name": "Martyr",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Martyr+",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -5709,6 +5750,10 @@
           "rarity": 4
         },
         {
+          "name": "Death Blow 4",
+          "rarity": 5
+        },
+        {
           "name": "Double Lion",
           "rarity": 5
         },
@@ -6112,7 +6157,7 @@
           "rarity": 3
         },
         {
-          "name": "Falchion",
+          "name": "Falchion (Awakening)",
           "default": 5,
           "rarity": 5
         },
@@ -6870,6 +6915,11 @@
           "name": "Martyr",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Martyr+",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -8916,7 +8966,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2017-11-15",
-      "poolDate": "2017-11-28",
+      "poolDate": "2017-12-04",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Dorcas Serene Warrior.png",
@@ -10154,6 +10204,11 @@
           "rarity": 4
         },
         {
+          "name": "Recover+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Imbue",
           "default": 4,
           "rarity": 2
@@ -11299,6 +11354,11 @@
           "name": "Physic",
           "default": 4,
           "rarity": 3
+        },
+        {
+          "name": "Physic+",
+          "default": 5,
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -13631,6 +13691,11 @@
           "rarity": 4
         },
         {
+          "name": "Physic+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Imbue",
           "default": 4,
           "rarity": 2
@@ -15745,7 +15810,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2018-09-21",
-      "poolDate": "N/A",
+      "poolDate": "2018-10-23",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Helbindi Savage Scourge.png",
@@ -16957,8 +17022,44 @@
           "rarity": 1
         },
         {
+          "name": "Swordbreaker 1",
+          "rarity": 1
+        },
+        {
+          "name": "Swordbreaker 1",
+          "rarity": 1
+        },
+        {
+          "name": "Swordbreaker 1",
+          "rarity": 1
+        },
+        {
           "name": "Swordbreaker 2",
           "rarity": 2
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 2
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 2
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 2
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 4
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 4
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 4
         },
         {
           "name": "Swordbreaker 3",
@@ -19721,7 +19822,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2018-06-08",
-      "poolDate": "2018-06-08",
+      "poolDate": "2018-06-21",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Karla Sword Vassal.png",
@@ -20541,6 +20642,11 @@
           "rarity": 4
         },
         {
+          "name": "Physic+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Imbue",
           "default": 4,
           "rarity": 2
@@ -20688,7 +20794,7 @@
       "moveType": "Flying",
       "rarities": "5",
       "releaseDate": "2018-09-21",
-      "poolDate": "N/A",
+      "poolDate": "2018-10-23",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Laegjarn Sheathed Steel.png",
@@ -20821,7 +20927,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2018-09-21",
-      "poolDate": "N/A",
+      "poolDate": "2018-10-23",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Laevatein Searing Steel.png",
@@ -21138,7 +21244,7 @@
       "moveType": "Infantry",
       "rarities": "4-5",
       "releaseDate": "2018-06-08",
-      "poolDate": "2018-06-08",
+      "poolDate": "2018-06-21",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Legault The Hurricane.png",
@@ -23339,6 +23445,11 @@
           "rarity": 4
         },
         {
+          "name": "Rehabilitate+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Imbue",
           "default": 4,
           "rarity": 2
@@ -23773,6 +23884,11 @@
           "rarity": 5
         },
         {
+          "name": "Solitary Blade",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Night Sky",
           "default": 4,
           "rarity": 3
@@ -24083,7 +24199,7 @@
           "rarity": 3
         },
         {
-          "name": "Falchion",
+          "name": "Falchion (Awakening)",
           "default": 5,
           "rarity": 5
         },
@@ -24471,6 +24587,11 @@
           "name": "Martyr",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Martyr+",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -24930,7 +25051,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2017-11-15",
-      "poolDate": "2017-11-28",
+      "poolDate": "2017-12-04",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Lute Prodigy.png",
@@ -25214,6 +25335,11 @@
           "name": "Rehabilitate",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Rehabilitate+",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -26087,6 +26213,11 @@
           "rarity": 4
         },
         {
+          "name": "Physic+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Imbue",
           "default": 4,
           "rarity": 2
@@ -26234,7 +26365,7 @@
       "moveType": "Cavalry",
       "rarities": "5",
       "releaseDate": "2018-07-20",
-      "poolDate": "2018-08-03",
+      "poolDate": "2018-08-10",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Maribelle Dire Damsel.png",
@@ -26272,6 +26403,11 @@
           "name": "Martyr",
           "default": 4,
           "rarity": 3
+        },
+        {
+          "name": "Martyr+",
+          "default": 5,
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -26700,7 +26836,7 @@
           "rarity": 3
         },
         {
-          "name": "Falchion",
+          "name": "Falchion (Mystery)",
           "default": 5,
           "rarity": 5
         },
@@ -26884,9 +27020,13 @@
           "rarity": 3
         },
         {
-          "name": "Falchion",
+          "name": "Falchion (Awakening)",
           "default": 5,
           "rarity": 5
+        },
+        {
+          "name": "",
+          "rarity": "-"
         }
       ],
       "growths": {
@@ -27701,7 +27841,7 @@
       "moveType": "Infantry",
       "rarities": "5",
       "releaseDate": "2017-11-15",
-      "poolDate": "2017-11-28",
+      "poolDate": "2017-12-04",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Mia Lady of Blades.png",
@@ -28425,6 +28565,11 @@
           "rarity": 4
         },
         {
+          "name": "Recover+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Imbue",
           "default": 4,
           "rarity": 2
@@ -28951,6 +29096,11 @@
           "name": "Restore",
           "default": 4,
           "rarity": 3
+        },
+        {
+          "name": "Restore+",
+          "default": 5,
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -30163,7 +30313,7 @@
       "moveType": "Flying",
       "rarities": "5",
       "releaseDate": "2018-06-08",
-      "poolDate": "2018-06-08",
+      "poolDate": "2018-06-21",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Nino Pale Flower.png",
@@ -32016,7 +32166,7 @@
       "moveType": "Flying",
       "rarities": "5",
       "releaseDate": "2018-07-20",
-      "poolDate": "2018-08-03",
+      "poolDate": "2018-08-10",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Olivia Sky-High Dancer.png",
@@ -33134,6 +33284,11 @@
           "name": "Rehabilitate",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Rehabilitate+",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -36996,6 +37151,11 @@
           "rarity": 4
         },
         {
+          "name": "Physic+",
+          "default": "-",
+          "rarity": 5
+        },
+        {
           "name": "Imbue",
           "default": 4,
           "rarity": 2
@@ -37781,6 +37941,11 @@
           "name": "Recover",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Recover+",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -39685,7 +39850,7 @@
       "origin": "Fire Emblem: Genealogy of the Holy War",
       "weaponType": "Red Sword",
       "moveType": "Infantry",
-      "rarities": "5",
+      "rarities": "4-5",
       "releaseDate": "2018-09-07",
       "poolDate": "2018-09-21",
       "assets": {
@@ -39755,6 +39920,13 @@
       },
       "stats": {
         "1": {
+          "4": {
+            "hp": 15,
+            "atk": 4,
+            "spd": 8,
+            "def": 3,
+            "res": 6
+          },
           "5": {
             "hp": 16,
             "atk": 5,
@@ -39764,6 +39936,33 @@
           }
         },
         "40": {
+          "4": {
+            "hp": [
+              34,
+              37,
+              40
+            ],
+            "atk": [
+              21,
+              24,
+              27
+            ],
+            "spd": [
+              31,
+              34,
+              37
+            ],
+            "def": [
+              12,
+              15,
+              18
+            ],
+            "res": [
+              25,
+              28,
+              31
+            ]
+          },
           "5": {
             "hp": [
               37,
@@ -41228,8 +41427,44 @@
           "rarity": 3
         },
         {
+          "name": "Swordbreaker 1",
+          "rarity": 3
+        },
+        {
+          "name": "Swordbreaker 1",
+          "rarity": 3
+        },
+        {
+          "name": "Swordbreaker 1",
+          "rarity": 3
+        },
+        {
           "name": "Swordbreaker 2",
           "rarity": 4
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 4
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 4
+        },
+        {
+          "name": "Swordbreaker 2",
+          "rarity": 4
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 5
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 5
+        },
+        {
+          "name": "Swordbreaker 3",
+          "rarity": 5
         },
         {
           "name": "Swordbreaker 3",
@@ -41373,7 +41608,7 @@
       "moveType": "Flying",
       "rarities": "5",
       "releaseDate": "2018-07-20",
-      "poolDate": "2018-08-03",
+      "poolDate": "2018-08-10",
       "assets": {
         "portrait": {
           "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Sumia Maid of Flowers.png",
@@ -43188,6 +43423,131 @@
       }
     },
     {
+      "name": "Tiki: Legendary Dragon",
+      "shortName": "Tiki",
+      "title": "Legendary Dragon",
+      "origin": "Fire Emblem: Mystery of the Emblem",
+      "weaponType": "Blue Breath",
+      "moveType": "Armored",
+      "rarities": "5",
+      "releaseDate": "2018-09-28",
+      "poolDate": "N/A",
+      "assets": {
+        "portrait": {
+          "75px": "https://proving-grounds-static.ajhyndman.com/75px-Icon_Portrait_Tiki Legendary Dragon.png",
+          "113px": "https://proving-grounds-static.ajhyndman.com/113px-Icon_Portrait_Tiki Legendary Dragon.png",
+          "150px": "https://proving-grounds-static.ajhyndman.com/150px-Icon_Portrait_Tiki Legendary Dragon.png"
+        }
+      },
+      "skills": [
+        {
+          "name": "Fire Breath",
+          "default": 1,
+          "rarity": 1
+        },
+        {
+          "name": "Fire Breath+",
+          "default": 3,
+          "rarity": 2
+        },
+        {
+          "name": "Flametongue",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Divine Mist",
+          "default": 5,
+          "rarity": 5
+        },
+        {
+          "name": "New Moon",
+          "default": 4,
+          "rarity": 3
+        },
+        {
+          "name": "Moonbow",
+          "default": "-",
+          "rarity": 4
+        },
+        {
+          "name": "Fierce Stance 1",
+          "rarity": 3
+        },
+        {
+          "name": "Fierce Stance 2",
+          "rarity": 4
+        },
+        {
+          "name": "Fierce Breath",
+          "rarity": 5
+        },
+        {
+          "name": "Bold Fighter 1",
+          "rarity": 1
+        },
+        {
+          "name": "Bold Fighter 2",
+          "rarity": 2
+        },
+        {
+          "name": "Bold Fighter 3",
+          "rarity": 4
+        },
+        {
+          "name": "With Everyone!",
+          "rarity": 5
+        }
+      ],
+      "growths": {
+        "hp": 65,
+        "atk": 55,
+        "spd": 55,
+        "def": 75,
+        "res": 55
+      },
+      "stats": {
+        "1": {
+          "5": {
+            "hp": 17,
+            "atk": 10,
+            "spd": 11,
+            "def": 4,
+            "res": 5
+          }
+        },
+        "40": {
+          "5": {
+            "hp": [
+              42,
+              45,
+              48
+            ],
+            "atk": [
+              31,
+              34,
+              37
+            ],
+            "spd": [
+              32,
+              35,
+              38
+            ],
+            "def": [
+              33,
+              37,
+              40
+            ],
+            "res": [
+              26,
+              29,
+              32
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Tiki: Naga's Voice",
       "shortName": "Tiki",
       "title": "Naga's Voice",
@@ -44263,6 +44623,11 @@
           "rarity": 3
         },
         {
+          "name": "Recover+",
+          "default": 5,
+          "rarity": 5
+        },
+        {
           "name": "Imbue",
           "default": 4,
           "rarity": 2
@@ -44276,6 +44641,11 @@
           "name": "Windfire Balm",
           "default": "-",
           "rarity": 4
+        },
+        {
+          "name": "Windfire Balm+",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Wrathful Staff 1",
@@ -44835,6 +45205,11 @@
           "name": "Rehabilitate",
           "default": 5,
           "rarity": 4
+        },
+        {
+          "name": "Rehabilitate+",
+          "default": "-",
+          "rarity": 5
         },
         {
           "name": "Imbue",
@@ -46097,7 +46472,7 @@
       "spCost": 200,
       "damage(mt)": 10,
       "range(rng)": 1,
-      "effect": "If foe initiates combat, grants Res+4 during combat.",
+      "effect": "If foe initiates combat, grants Res+7 during combat.",
       "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Sword"
@@ -46391,6 +46766,16 @@
       "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Red Tome"
+    },
+    {
+      "name": "Bottled Juice+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.",
+      "exclusive": false,
+      "type": "WEAPON",
+      "weaponType": "Dagger"
     },
     {
       "name": "Brave Axe",
@@ -46913,6 +47298,16 @@
       "weaponType": "Blue Lance"
     },
     {
+      "name": "Devilish Bow+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "Effective against flying foes. Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)",
+      "exclusive": false,
+      "type": "WEAPON",
+      "weaponType": "Bow"
+    },
+    {
       "name": "Dire Thunder",
       "spCost": 400,
       "damage(mt)": 9,
@@ -46921,6 +47316,16 @@
       "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Blue Tome"
+    },
+    {
+      "name": "Divine Mist",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Effective against dragon foes. Unit can counterattack regardless of foe's range. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
+      "exclusive": true,
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Divine Naga",
@@ -47203,6 +47608,16 @@
       "weaponType": "Bow"
     },
     {
+      "name": "Firesweep L+",
+      "spCost": 300,
+      "damage(mt)": 15,
+      "range(rng)": 1,
+      "effect": "Unit and foe cannot counterattack.",
+      "exclusive": false,
+      "type": "WEAPON",
+      "weaponType": "Blue Lance"
+    },
+    {
       "name": "Firesweep Lance",
       "spCost": 200,
       "damage(mt)": 11,
@@ -47213,17 +47628,7 @@
       "weaponType": "Blue Lance"
     },
     {
-      "name": "Firesweep Lance+",
-      "spCost": 300,
-      "damage(mt)": 15,
-      "range(rng)": 1,
-      "effect": "Unit and foe cannot counterattack.",
-      "exclusive": false,
-      "type": "WEAPON",
-      "weaponType": "Blue Lance"
-    },
-    {
-      "name": "Firesweep Sword",
+      "name": "Firesweep S",
       "spCost": 200,
       "damage(mt)": 11,
       "range(rng)": 1,
@@ -47233,7 +47638,7 @@
       "weaponType": "Red Sword"
     },
     {
-      "name": "Firesweep Sword+",
+      "name": "Firesweep S+",
       "spCost": 300,
       "damage(mt)": 15,
       "range(rng)": 1,
@@ -49048,7 +49453,7 @@
       "damage(mt)": 8,
       "range(rng)": 2,
       "effect": "Effective against flying foes. If foe's Def ≥ foe's Res+5, deals +7 damage.",
-      "exclusive": true,
+      "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Bow"
     },
@@ -49413,6 +49818,16 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Solitary Blade",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "",
+      "exclusive": true,
+      "type": "WEAPON",
+      "weaponType": "Sword"
+    },
+    {
       "name": "Spectral Tome",
       "spCost": 200,
       "damage(mt)": 8,
@@ -49431,6 +49846,16 @@
       "exclusive": false,
       "type": "WEAPON",
       "weaponType": "Green Tome"
+    },
+    {
+      "name": "Spirit Breath",
+      "spCost": 400,
+      "damage(mt)": 16,
+      "range(rng)": 1,
+      "effect": "Grants Def+3. If initiates combat and unit’s Def ≥ foe’s Def+5, unit makes a guaranteed follow-up attack. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
+      "exclusive": false,
+      "type": "WEAPON",
+      "weaponType": "Breath"
     },
     {
       "name": "Starfish",
@@ -49843,6 +50268,16 @@
       "weaponType": "Red Sword"
     },
     {
+      "name": "Witchy Wand+",
+      "spCost": 300,
+      "damage(mt)": 12,
+      "range(rng)": 2,
+      "effect": "After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: \"Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)\" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.)",
+      "exclusive": false,
+      "type": "WEAPON",
+      "weaponType": "Colorless Staff"
+    },
+    {
       "name": "Wo Dao",
       "spCost": 200,
       "damage(mt)": 9,
@@ -49931,16 +50366,6 @@
       "exclusive": true,
       "type": "WEAPON",
       "weaponType": "Green Tome"
-    },
-    {
-      "name": "—",
-      "spCost": 0,
-      "damage(mt)": 0,
-      "range(rng)": 0,
-      "effect": "",
-      "exclusive": false,
-      "type": "WEAPON",
-      "weaponType": "-"
     },
     {
       "name": "Ardent Sacrifice",
@@ -52689,10 +53114,10 @@
       "type": "SPECIAL"
     },
     {
-      "name": "Defiant Spd 3",
-      "effect": "At start of turn, if unit's HP ≤ 50%, grants Spd+7 for 1 turn.",
+      "name": "Defiant Spd 1",
+      "effect": "At start of turn, if unit's HP ≤ 50%, grants Spd+3 for 1 turn.",
       "exclusive": false,
-      "spCost": 160,
+      "spCost": 40,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -52723,10 +53148,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Spd 1",
-      "effect": "Grants HP+3, Spd+1.",
+      "name": "HP/Def 2",
+      "effect": "Grants HP+4, Def+2.",
       "exclusive": false,
-      "spCost": 100,
+      "spCost": 200,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -52815,6 +53240,40 @@
         "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Wind Boost 3",
+      "effect": "At start of combat, if unit's HP ≥ foe's HP+3, grants Spd+6 during combat.",
+      "exclusive": false,
+      "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -53639,40 +54098,6 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Wind Boost 3",
-      "effect": "At start of combat, if unit's HP ≥ foe's HP+3, grants Spd+6 during combat.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
       "name": "Wind Boost 2",
       "effect": "At start of combat, if unit's HP ≥ foe's HP+3, grants Spd+4 during combat.",
       "exclusive": false,
@@ -53946,7 +54371,7 @@
     },
     {
       "name": "Warding Breath",
-      "effect": "If foe initiates combat, grants Res+4 during combat. Grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
+      "effect": "If foe initiates combat, grants Res+4 during combat and Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -53969,6 +54394,39 @@
       "effect": "If unit initiates combat, grants Res+6 during combat.",
       "exclusive": false,
       "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Warding Blow 2",
+      "effect": "If unit initiates combat, grants Res+4 during combat.",
+      "exclusive": false,
+      "spCost": 100,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -54538,39 +54996,6 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Warding Blow 2",
-      "effect": "If unit initiates combat, grants Res+4 during combat.",
-      "exclusive": false,
-      "spCost": 100,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
       "name": "Warding Blow 1",
       "effect": "If unit initiates combat, grants Res+2 during combat.",
       "exclusive": false,
@@ -54737,6 +55162,36 @@
       "effect": "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.",
       "exclusive": false,
       "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Triangle Adept 2",
+      "effect": "If unit has weapon-triangle advantage, boosts Atk by 15%. If unit has weapon-triangle disadvantage, reduces Atk by 15%.",
+      "exclusive": false,
+      "spCost": 100,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -55093,36 +55548,6 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Triangle Adept 2",
-      "effect": "If unit has weapon-triangle advantage, boosts Atk by 15%. If unit has weapon-triangle disadvantage, reduces Atk by 15%.",
-      "exclusive": false,
-      "spCost": 100,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
       "name": "Triangle Adept 1",
       "effect": "If unit has weapon-triangle advantage, boosts Atk by 10%. If unit has weapon-triangle disadvantage, reduces Atk by 10%.",
       "exclusive": false,
@@ -55244,6 +55669,107 @@
         "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Swift Stance 1",
+      "effect": "If foe initiates combat, grants Spd/Res+2 during combat.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Def/Res 1",
+      "effect": "Grants Def/Res+1.",
+      "exclusive": false,
+      "spCost": 80,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Def/Res 2",
+      "effect": "Grants Def/Res+2.",
+      "exclusive": false,
+      "spCost": 160,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -55660,10 +56186,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Defiant Spd 1",
-      "effect": "At start of turn, if unit's HP ≤ 50%, grants Spd+3 for 1 turn.",
+      "name": "Armored Blow 1",
+      "effect": "If unit initiates combat, grants Def+2 during combat.",
       "exclusive": false,
-      "spCost": 40,
+      "spCost": 50,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -55685,7 +56211,6 @@
         "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
-        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -55728,10 +56253,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Armored Blow 1",
-      "effect": "If unit initiates combat, grants Def+2 during combat.",
+      "name": "Defiant Spd 3",
+      "effect": "At start of turn, if unit's HP ≤ 50%, grants Spd+7 for 1 turn.",
       "exclusive": false,
-      "spCost": 50,
+      "spCost": 160,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -55753,6 +56278,7 @@
         "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
+        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -55877,39 +56403,6 @@
         "  Blue Tome",
         "  Green Tome",
         "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Swift Stance 1",
-      "effect": "If foe initiates combat, grants Spd/Res+2 during combat.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -56081,22 +56574,6 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Dragonskin",
-      "effect": "Neutralizes \"effective against flying\" bonuses. If foe initiates combat, grants Def/Res+4 during combat.",
-      "exclusive": true,
-      "spCost": 300,
-      "movementRestriction": [
-        "Flying"
-      ],
-      "weaponRestriction": [
-        "Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
       "name": "Sturdy Blow 2",
       "effect": "If unit initiates combat, grants Atk/Def+4 during combat.",
       "exclusive": false,
@@ -56123,6 +56600,22 @@
         "  Blue Tome",
         "  Green Tome",
         "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Dragonskin",
+      "effect": "Neutralizes \"effective against flying\" bonuses. If foe initiates combat, grants Def/Res+4 during combat.",
+      "exclusive": true,
+      "spCost": 300,
+      "movementRestriction": [
+        "Flying"
+      ],
+      "weaponRestriction": [
+        "Red Breath",
         "  Blue Breath",
         "  Green Breath",
         "  Colorless Breath"
@@ -56353,6 +56846,39 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Steady Blow 2",
+      "effect": "If unit initiates combat, grants Spd/Def+4 during battle.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "Earth Boost 1",
       "effect": "At start of combat, if unit's HP ≥ foe's HP+3, grants Def+2 during combat.",
       "exclusive": false,
@@ -56455,10 +56981,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Steady Blow 2",
-      "effect": "If unit initiates combat, grants Spd/Def+4 during battle.",
+      "name": "Steady Blow 1",
+      "effect": "If unit initiates combat, grants Spd/Def+2 during battle.",
       "exclusive": false,
-      "spCost": 240,
+      "spCost": 120,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -56488,31 +57014,18 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Steady Blow 1",
-      "effect": "If unit initiates combat, grants Spd/Def+2 during battle.",
+      "name": "Fierce Breath",
+      "effect": "If foe initiates combat, grants Atk+4 during combat and Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)",
       "exclusive": false,
-      "spCost": 120,
+      "spCost": 240,
       "movementRestriction": [
         "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
+        "  Armored"
       ],
       "weaponRestriction": [
         "Red Sword",
         "  Blue Lance",
         "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -57333,6 +57846,40 @@
       "type": "PASSIVE_A"
     },
     {
+      "name": "Speed +2",
+      "effect": "Grants Spd+2.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
       "name": "HP +3",
       "effect": "Grants HP+3.",
       "exclusive": false,
@@ -57537,40 +58084,6 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Def 2",
-      "effect": "Grants HP+4, Def+2.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
       "name": "HP/Res 1",
       "effect": "Grants HP+3, Res+1.",
       "exclusive": false,
@@ -57639,10 +58152,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "HP/Spd 2",
-      "effect": "Grants HP+4, Spd+2.",
+      "name": "HP/Spd 1",
+      "effect": "Grants HP+3, Spd+1.",
       "exclusive": false,
-      "spCost": 200,
+      "spCost": 100,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -57673,10 +58186,10 @@
       "type": "PASSIVE_A"
     },
     {
-      "name": "Speed +2",
-      "effect": "Grants Spd+2.",
+      "name": "HP/Spd 2",
+      "effect": "Grants HP+4, Spd+2.",
       "exclusive": false,
-      "spCost": 60,
+      "spCost": 200,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -57842,6 +58355,40 @@
       "effect": "If unit is adjacent to an ally, grants Spd/Res+5 during combat.",
       "exclusive": false,
       "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_A"
+    },
+    {
+      "name": "Spd/Res Bond 2",
+      "effect": "If unit is adjacent to an ally, grants Spd/Res+4 during combat.",
+      "exclusive": false,
+      "spCost": 120,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -58129,40 +58676,6 @@
         "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_A"
-    },
-    {
-      "name": "Spd/Res Bond 2",
-      "effect": "If unit is adjacent to an ally, grants Spd/Res+4 during combat.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -58786,10 +59299,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wrath 2",
-      "effect": "At start of turn, if unit's HP ≤ 50% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
+      "name": "Wrath 1",
+      "effect": "At start of turn, if unit's HP ≤ 25% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
       "exclusive": false,
-      "spCost": 120,
+      "spCost": 60,
       "movementRestriction": [
         "Infantry",
         " Armored"
@@ -58806,18 +59319,66 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wrath 1",
-      "effect": "At start of turn, if unit's HP ≤ 25% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
+      "name": "Wings of Mercy 3",
+      "effect": "If an ally's HP ≤ 50%, unit can move to a space adjacent to that ally.",
       "exclusive": false,
-      "spCost": 60,
+      "spCost": 240,
       "movementRestriction": [
         "Infantry",
-        " Armored"
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
       ],
       "weaponRestriction": [
         "Red Sword",
         "  Blue Lance",
         "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wings of Mercy 2",
+      "effect": "If an ally's HP ≤ 40%, unit can move to a space adjacent to that ally.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -58925,10 +59486,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Axebreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against an axe foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "name": "Wings of Mercy 1",
+      "effect": "If an ally's HP ≤ 30%, unit can move to a space adjacent to that ally.",
       "exclusive": false,
-      "spCost": 50,
+      "spCost": 60,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -58937,46 +59498,22 @@
       ],
       "weaponRestriction": [
         "Red Sword",
+        "  Blue Lance",
         "  Green Axe",
         "  Red Bow",
+        "  Blue Bow",
         "  Green Bow",
         "  Colorless Bow",
         "  Red Dagger",
+        "  Blue Dagger",
         "  Green Dagger",
         "  Colorless Dagger",
         "  Red Tome",
+        "  Blue Tome",
         "  Green Tome",
         "  Colorless Staff",
         "  Red Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Axebreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against an axe foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
-      "exclusive": false,
-      "spCost": 100,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Green Axe",
-        "  Red Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
+        "  Blue Breath",
         "  Green Breath",
         "  Colorless Breath"
       ],
@@ -59038,10 +59575,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Axebreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against an axe foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "name": "Axebreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against an axe foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
       "exclusive": false,
-      "spCost": 200,
+      "spCost": 50,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -59067,10 +59604,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wings of Mercy 3",
-      "effect": "If an ally's HP ≤ 50%, unit can move to a space adjacent to that ally.",
+      "name": "Axebreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against an axe foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
       "exclusive": false,
-      "spCost": 240,
+      "spCost": 100,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -59079,56 +59616,17 @@
       ],
       "weaponRestriction": [
         "Red Sword",
-        "  Blue Lance",
         "  Green Axe",
         "  Red Bow",
-        "  Blue Bow",
         "  Green Bow",
         "  Colorless Bow",
         "  Red Dagger",
-        "  Blue Dagger",
         "  Green Dagger",
         "  Colorless Dagger",
         "  Red Tome",
-        "  Blue Tome",
         "  Green Tome",
         "  Colorless Staff",
         "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wings of Mercy 2",
-      "effect": "If an ally's HP ≤ 40%, unit can move to a space adjacent to that ally.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
         "  Green Breath",
         "  Colorless Breath"
       ],
@@ -59139,6 +59637,37 @@
       "effect": "If unit's HP ≥ 50% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 240,
+      "movementRestriction": [
+        "Armored"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Vengeful Fighter 2",
+      "effect": "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
+      "exclusive": false,
+      "spCost": 120,
       "movementRestriction": [
         "Armored"
       ],
@@ -60083,10 +60612,39 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wings of Mercy 1",
-      "effect": "If an ally's HP ≤ 30%, unit can move to a space adjacent to that ally.",
+      "name": "Axebreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against an axe foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
       "exclusive": false,
-      "spCost": 60,
+      "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Green Axe",
+        "  Red Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Windsweep 3",
+      "effect": "If unit initiates combat, unit cannot make a follow-up attack. If unit's Spd ≥ foe's Spd and foe uses sword, lance, axe, bow, or dagger, foe cannot counterattack.",
+      "exclusive": false,
+      "spCost": 240,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -60108,38 +60666,6 @@
         "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wary Fighter 3",
-      "effect": "If unit's HP ≥ 50%, unit and foe cannot make a follow-up attack.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Armored"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -60280,10 +60806,43 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wary Fighter 2",
-      "effect": "If unit's HP ≥ 70%, unit and foe cannot make a follow-up attack.",
+      "name": "Windsweep 2",
+      "effect": "If unit initiates combat, unit cannot make a follow-up attack. If unit's Spd ≥ foe's Spd+3 and foe uses sword, lance, axe, bow, or dagger, foe cannot counterattack.",
       "exclusive": false,
       "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wary Fighter 3",
+      "effect": "If unit's HP ≥ 50%, unit and foe cannot make a follow-up attack.",
+      "exclusive": false,
+      "spCost": 240,
       "movementRestriction": [
         "Armored"
       ],
@@ -60311,41 +60870,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wary Fighter 1",
-      "effect": "If unit's HP ≥ 90%, unit and foe cannot make a follow-up attack.",
+      "name": "Vengeful Fighter 1",
+      "effect": "If unit's HP ≥ 90% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 60,
-      "movementRestriction": [
-        "Armored"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Vengeful Fighter 2",
-      "effect": "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
-      "exclusive": false,
-      "spCost": 120,
       "movementRestriction": [
         "Armored"
       ],
@@ -60485,75 +61013,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Vengeful Fighter 1",
-      "effect": "If unit's HP ≥ 90% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
-      "exclusive": false,
-      "spCost": 60,
-      "movementRestriction": [
-        "Armored"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Vantage 3",
       "effect": "If unit’s HP ≤ 75% and foe initiates combat, unit can counterattack before foe’s first attack.",
       "exclusive": false,
       "spCost": 200,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Crusader's Ward",
-      "effect": "If unit receives consecutive attacks and foe's Range = 2, reduces damage from foe's second attack onward by 80%. (Skill cannot be inherited.)",
-      "exclusive": true,
-      "spCost": 300,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -60618,6 +61081,40 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Crusader's Ward",
+      "effect": "If unit receives consecutive attacks and foe's Range = 2, reduces damage from foe's second attack onward by 80%. (Skill cannot be inherited.)",
+      "exclusive": true,
+      "spCost": 300,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Vantage 1",
       "effect": "If unit’s HP ≤ 25% and foe initiates combat, unit can counterattack before foe’s first attack.",
       "exclusive": false,
@@ -60652,28 +61149,61 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "B Tomebreaker 1",
-      "effect": "If unit's HP ≥ 90% in combat against a blue tome foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "name": "Wary Fighter 2",
+      "effect": "If unit's HP ≥ 70%, unit and foe cannot make a follow-up attack.",
       "exclusive": false,
-      "spCost": 50,
+      "spCost": 120,
       "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
+        "Armored"
       ],
       "weaponRestriction": [
-        "Blue Lance",
+        "Red Sword",
+        "  Blue Lance",
         "  Green Axe",
+        "  Red Bow",
         "  Blue Bow",
         "  Green Bow",
         "  Colorless Bow",
+        "  Red Dagger",
         "  Blue Dagger",
         "  Green Dagger",
         "  Colorless Dagger",
+        "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
         "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wary Fighter 1",
+      "effect": "If unit's HP ≥ 90%, unit and foe cannot make a follow-up attack.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        "Armored"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
         "  Colorless Breath"
@@ -60783,6 +61313,54 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Warp Powder",
+      "effect": "If unit's HP ≥ 80%, unit can move to a space adjacent to any ally within 2 spaces.",
+      "exclusive": true,
+      "spCost": 300,
+      "movementRestriction": [
+        "Armored"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "B Tomebreaker 1",
+      "effect": "If unit's HP ≥ 90% in combat against a blue tome foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "exclusive": false,
+      "spCost": 50,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Blue Lance",
+        "  Green Axe",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "B Tomebreaker 2",
       "effect": "If unit's HP ≥ 70% in combat against a blue tome foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
       "exclusive": false,
@@ -60805,69 +61383,6 @@
         "  Blue Tome",
         "  Green Tome",
         "  Colorless Staff",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "B Tomebreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against a blue tome foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Blue Lance",
-        "  Green Axe",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Beorc's Blessing",
-      "effect": "Neutralizes cavalry and flying foe's bonuses (from skills like Fortify, Rally, etc.) during combat. (Skill cannot be inherited.)",
-      "exclusive": true,
-      "spCost": 300,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
         "  Colorless Breath"
@@ -61127,10 +61642,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Binding Shield",
-      "effect": "In combat against a dragon foe, unit makes a guaranteed follow-up attack and foe cannot counterattack or make a follow-up attack.",
-      "exclusive": true,
-      "spCost": 300,
+      "name": "B Tomebreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against a blue tome foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "exclusive": false,
+      "spCost": 200,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -61138,21 +61653,17 @@
         "  Flying"
       ],
       "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
+        "Blue Lance",
         "  Green Axe",
-        "  Red Bow",
         "  Blue Bow",
         "  Green Bow",
         "  Colorless Bow",
-        "  Red Dagger",
         "  Blue Dagger",
         "  Green Dagger",
         "  Colorless Dagger",
-        "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
-        "  Red Breath",
+        "  Colorless Staff",
         "  Blue Breath",
         "  Green Breath",
         "  Colorless Breath"
@@ -61262,10 +61773,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Blaze Dance 1",
-      "effect": "If Sing or Dance is used, grants Atk+2 to target.",
-      "exclusive": false,
-      "spCost": 50,
+      "name": "Beorc's Blessing",
+      "effect": "Neutralizes cavalry and flying foe's bonuses (from skills like Fortify, Rally, etc.) during combat. (Skill cannot be inherited.)",
+      "exclusive": true,
+      "spCost": 300,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -61287,6 +61798,7 @@
         "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
+        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -61295,10 +61807,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Blaze Dance 2",
-      "effect": "If Sing or Dance is used, grants Atk+3 to target.",
-      "exclusive": false,
-      "spCost": 100,
+      "name": "Binding Shield",
+      "effect": "In combat against a dragon foe, unit makes a guaranteed follow-up attack and foe cannot counterattack or make a follow-up attack.",
+      "exclusive": true,
+      "spCost": 300,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -61398,6 +61910,72 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Blaze Dance 1",
+      "effect": "If Sing or Dance is used, grants Atk+2 to target.",
+      "exclusive": false,
+      "spCost": 50,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Blaze Dance 2",
+      "effect": "If Sing or Dance is used, grants Atk+3 to target.",
+      "exclusive": false,
+      "spCost": 100,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Blaze Dance 3",
       "effect": "If Sing or Dance is used, grants Atk+4 to target.",
       "exclusive": false,
@@ -61435,68 +62013,6 @@
       "effect": "If unit's HP = 100% and unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 60,
-      "movementRestriction": [
-        "Armored"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Bold Fighter 2",
-      "effect": "If unit's HP ≥ 50% and unit initiates combat, unit makes a guaranteed follow-up attack.<Br>Grants Special cooldown charge +1 per attack. (Does not stack.)",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        "Armored"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Bold Fighter 3",
-      "effect": "If unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
-      "exclusive": false,
-      "spCost": 240,
       "movementRestriction": [
         "Armored"
       ],
@@ -61590,6 +62106,37 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Aerobatics 2",
+      "effect": "If unit's HP ≥ 50%, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces.",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        "Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Def Feint 3",
       "effect": "If a Rally Assist skill is used by unit or targets unit, inflicts Def-7 on foes in cardinal directions of unit through their next actions.",
       "exclusive": false,
@@ -61623,31 +62170,12 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Warp Powder",
-      "effect": "If unit's HP ≥ 80%, unit can move to a space adjacent to any ally within 2 spaces.",
-      "exclusive": true,
-      "spCost": 300,
-      "movementRestriction": [
-        "Armored"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Aerobatics 2",
-      "effect": "If unit's HP ≥ 50%, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces.",
+      "name": "Bold Fighter 2",
+      "effect": "If unit's HP ≥ 50% and unit initiates combat, unit makes a guaranteed follow-up attack.<Br>Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
       "spCost": 120,
       "movementRestriction": [
-        "Flying"
+        "Armored"
       ],
       "weaponRestriction": [
         "Red Sword",
@@ -61665,39 +62193,6 @@
         "  Blue Tome",
         "  Green Tome",
         "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Windsweep 3",
-      "effect": "If unit initiates combat, unit cannot make a follow-up attack. If unit's Spd ≥ foe's Spd and foe uses sword, lance, axe, bow, or dagger, foe cannot counterattack.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -61743,6 +62238,35 @@
       "effect": "If unit's HP ≥ 50% in combat against a sword foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
       "exclusive": false,
       "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Swordbreaker 2",
+      "effect": "If unit's HP ≥ 70% in combat against a sword foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "exclusive": false,
+      "spCost": 100,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -61990,10 +62514,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Swordbreaker 2",
-      "effect": "If unit's HP ≥ 70% in combat against a sword foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "name": "Spd/Res Link 2",
+      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Spd/Res+4 to unit and target ally or unit and targeting ally for 1 turn.",
       "exclusive": false,
-      "spCost": 100,
+      "spCost": 120,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -62003,17 +62527,21 @@
       "weaponRestriction": [
         "Red Sword",
         "  Blue Lance",
+        "  Green Axe",
         "  Red Bow",
         "  Blue Bow",
+        "  Green Bow",
         "  Colorless Bow",
         "  Red Dagger",
         "  Blue Dagger",
+        "  Green Dagger",
         "  Colorless Dagger",
         "  Red Tome",
         "  Blue Tome",
-        "  Colorless Staff",
+        "  Green Tome",
         "  Red Breath",
         "  Blue Breath",
+        "  Green Breath",
         "  Colorless Breath"
       ],
       "type": "PASSIVE_B"
@@ -62048,10 +62576,41 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Windsweep 2",
-      "effect": "If unit initiates combat, unit cannot make a follow-up attack. If unit's Spd ≥ foe's Spd+3 and foe uses sword, lance, axe, bow, or dagger, foe cannot counterattack.",
+      "name": "Bold Fighter 3",
+      "effect": "If unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)",
       "exclusive": false,
-      "spCost": 120,
+      "spCost": 240,
+      "movementRestriction": [
+        "Armored"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Windsweep 1",
+      "effect": "If unit initiates combat, unit cannot make a follow-up attack. If unit's Spd ≥ foe's Spd+5 and foe uses sword, lance, axe, bow, or dagger, foe cannot counterattack.",
+      "exclusive": false,
+      "spCost": 60,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -62103,39 +62662,6 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Spd/Res Link 2",
-      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Spd/Res+4 to unit and target ally or unit and targeting ally for 1 turn.",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Spd/Res Link 1",
       "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Spd/Res+2 to unit and target ally or unit and targeting ally for 1 turn.",
       "exclusive": false,
@@ -62169,8 +62695,24 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Windsweep 1",
-      "effect": "If unit initiates combat, unit cannot make a follow-up attack. If unit's Spd ≥ foe's Spd+5 and foe uses sword, lance, axe, bow, or dagger, foe cannot counterattack.",
+      "name": "Wrathful Staff 1",
+      "effect": "At start of combat, if unit's HP = 100%, calculates damage from staff like other weapons.",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Atk/Spd Link 1",
+      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Spd+2 to unit and target ally or unit and targeting ally for 1 turn.",
       "exclusive": false,
       "spCost": 60,
       "movementRestriction": [
@@ -62289,8 +62831,8 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wrathful Staff 2",
-      "effect": "At start of combat, if unit's HP ≥ 50%, calculates damage from staff like other weapons.",
+      "name": "Atk/Spd Link 2",
+      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Spd+4 to unit and target ally or unit and targeting ally for 1 turn.",
       "exclusive": false,
       "spCost": 120,
       "movementRestriction": [
@@ -62300,7 +62842,57 @@
         "  Flying"
       ],
       "weaponRestriction": [
-        "Colorless Staff"
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Atk/Spd Link 3",
+      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Spd+6 to unit and target ally or unit and targeting ally for 1 turn.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
       ],
       "type": "PASSIVE_B"
     },
@@ -62342,39 +62934,6 @@
       "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+4 to unit and target ally or unit and targeting ally for 1 turn.",
       "exclusive": false,
       "spCost": 120,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Def/Res Link 3",
-      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+6 to unit and target ally or unit and targeting ally for 1 turn.",
-      "exclusive": false,
-      "spCost": 240,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -62542,10 +63101,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wrathful Staff 1",
-      "effect": "At start of combat, if unit's HP = 100%, calculates damage from staff like other weapons.",
+      "name": "Def/Res Link 3",
+      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+6 to unit and target ally or unit and targeting ally for 1 turn.",
       "exclusive": false,
-      "spCost": 60,
+      "spCost": 240,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -62553,7 +63112,44 @@
         "  Flying"
       ],
       "weaponRestriction": [
-        "Colorless Staff"
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 3",
+      "effect": "At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        " Armored"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
       ],
       "type": "PASSIVE_B"
     },
@@ -62595,39 +63191,6 @@
       "effect": "If unit's HP ≥ 70% in combat against a colorless bow foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
       "exclusive": false,
       "spCost": 100,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Bowbreaker 3",
-      "effect": "If unit's HP ≥ 50% in combat against a colorless bow foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
-      "exclusive": false,
-      "spCost": 200,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -62759,10 +63322,74 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Bowbreaker 3",
+      "effect": "If unit's HP ≥ 50% in combat against a colorless bow foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.",
+      "exclusive": false,
+      "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Aerobatics 1",
       "effect": "If unit's HP = 100%, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces.",
       "exclusive": false,
       "spCost": 60,
+      "movementRestriction": [
+        "Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Aerobatics 3",
+      "effect": "Unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces.",
+      "exclusive": false,
+      "spCost": 240,
       "movementRestriction": [
         "Flying"
       ],
@@ -62827,39 +63454,6 @@
       "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Def+4 to unit and target ally or unit and targeting ally for 1 turn.",
       "exclusive": false,
       "spCost": 120,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Atk/Def Link 3",
-      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Def+6 to unit and target ally or unit and targeting ally for 1 turn.",
-      "exclusive": false,
-      "spCost": 240,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -62987,53 +63581,6 @@
         "  Blue Breath",
         "  Green Breath",
         "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Aerobatics 3",
-      "effect": "Unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Wrathful Staff 3",
-      "effect": "Calculates damage from staff like other weapons.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Colorless Staff"
       ],
       "type": "PASSIVE_B"
     },
@@ -63179,6 +63726,39 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Atk/Def Link 3",
+      "effect": "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Def+6 to unit and target ally or unit and targeting ally for 1 turn.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Shield Pulse 2",
       "effect": "At start of turn 1, if foe's attack triggers Special, grants Special cooldown count-1. Reduces damage dealt to unit by 5 when Special triggers.",
       "exclusive": false,
@@ -63211,6 +63791,39 @@
         "Red Sword",
         "  Blue Lance",
         "  Green Axe",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Spd 3",
+      "effect": "Inflicts Spd-7 on foe through its next action after combat.",
+      "exclusive": false,
+      "spCost": 160,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -63522,10 +64135,26 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Wrath 3",
-      "effect": "At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
+      "name": "Wrathful Staff 2",
+      "effect": "At start of combat, if unit's HP ≥ 50%, calculates damage from staff like other weapons.",
       "exclusive": false,
-      "spCost": 240,
+      "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Colorless Staff"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Wrath 2",
+      "effect": "At start of turn, if unit's HP ≤ 50% and unit's attack triggers Special, grants Special cooldown count-1. Deals +10 damage when Special triggers.",
+      "exclusive": false,
+      "spCost": 120,
       "movementRestriction": [
         "Infantry",
         " Armored"
@@ -63534,39 +64163,6 @@
         "Red Sword",
         "  Blue Lance",
         "  Green Axe",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Spd 3",
-      "effect": "Inflicts Spd-7 on foe through its next action after combat.",
-      "exclusive": false,
-      "spCost": 160,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -63711,6 +64307,39 @@
       "effect": "Inflicts Res-3 on foe through its next action after combat.",
       "exclusive": false,
       "spCost": 40,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
+      "name": "Seal Def/Res 2",
+      "effect": "Inflicts Def/Res-5 on foe through its next action after combat.",
+      "exclusive": false,
+      "spCost": 200,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -63955,39 +64584,6 @@
         "  Blue Tome",
         "  Green Tome",
         "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
-      "name": "Seal Def/Res 2",
-      "effect": "Inflicts Def/Res-5 on foe through its next action after combat.",
-      "exclusive": false,
-      "spCost": 200,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -64260,6 +64856,39 @@
       "type": "PASSIVE_B"
     },
     {
+      "name": "Seal Atk 3",
+      "effect": "Inflicts Atk-7 on foe through its next action after combat.",
+      "exclusive": false,
+      "spCost": 160,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_B"
+    },
+    {
       "name": "Rockslide Dance 1",
       "effect": "If Sing or Dance is used, grants Spd+2 and Def+3 to target.",
       "exclusive": false,
@@ -64394,39 +65023,6 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Seal Atk 3",
-      "effect": "Inflicts Atk-7 on foe through its next action after combat.",
-      "exclusive": false,
-      "spCost": 160,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_B"
-    },
-    {
       "name": "Seal Atk 2",
       "effect": "Inflicts Atk-5 on foe through its next action after combat.",
       "exclusive": false,
@@ -64493,10 +65089,10 @@
       "type": "PASSIVE_B"
     },
     {
-      "name": "Fortify Dragons",
-      "effect": "At start of turn, grants Def/Res+6 to adjacent dragon allies for 1 turn.",
+      "name": "Wrathful Staff 3",
+      "effect": "Calculates damage from staff like other weapons.",
       "exclusive": false,
-      "spCost": 200,
+      "spCost": 240,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -64504,12 +65100,9 @@
         "  Flying"
       ],
       "weaponRestriction": [
-        "Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
+        "Colorless Staff"
       ],
-      "type": "PASSIVE_C"
+      "type": "PASSIVE_B"
     },
     {
       "name": "Savage Blow 3",
@@ -65215,6 +65808,40 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Odd Res Wave 3",
+      "effect": "At start of odd-numbered turns, grants Res+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Spd Ploy 1",
       "effect": "At start of turn, inflicts Spd-3 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "exclusive": false,
@@ -65486,40 +66113,6 @@
     {
       "name": "Spd Tactic 3",
       "effect": "At start of turn, grants Spd+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Odd Res Wave 3",
-      "effect": "At start of odd-numbered turns, grants Res+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
       "exclusive": false,
       "spCost": 240,
       "movementRestriction": [
@@ -66155,6 +66748,40 @@
       "effect": "At start of turn, grants Spd+4 to adjacent allies for 1 turn.",
       "exclusive": false,
       "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Hone Spd 2",
+      "effect": "At start of turn, grants Spd+3 to adjacent allies for 1 turn.",
+      "exclusive": false,
+      "spCost": 100,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -67001,40 +67628,6 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Hone Spd 2",
-      "effect": "At start of turn, grants Spd+3 to adjacent allies for 1 turn.",
-      "exclusive": false,
-      "spCost": 100,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
       "name": "Hone Spd 1",
       "effect": "At start of turn, grants Spd+2 to adjacent allies for 1 turn.",
       "exclusive": false,
@@ -67717,10 +68310,10 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Savage Blow 2",
-      "effect": "If unit initiates combat, deals 5 damage to foes within 2 spaces of target after combat.",
+      "name": "Fortify Dragons",
+      "effect": "At start of turn, grants Def/Res+6 to adjacent dragon allies for 1 turn.",
       "exclusive": false,
-      "spCost": 100,
+      "spCost": 200,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -67728,22 +68321,7 @@
         "  Flying"
       ],
       "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
+        "Red Breath",
         "  Blue Breath",
         "  Green Breath",
         "  Colorless Breath"
@@ -67785,8 +68363,8 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Fortify Def 2",
-      "effect": "At start of turn, grants Def+3 to adjacent allies for 1 turn.",
+      "name": "Savage Blow 2",
+      "effect": "If unit initiates combat, deals 5 damage to foes within 2 spaces of target after combat.",
       "exclusive": false,
       "spCost": 100,
       "movementRestriction": [
@@ -68246,6 +68824,142 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Even Def Wave 2",
+      "effect": "At start of even-numbered turns, grants Def+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Even Def Wave 1",
+      "effect": "At start of even-numbered turns, grants Def+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+      "exclusive": false,
+      "spCost": 60,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Even Atk Wave 3",
+      "effect": "At start of even-numbered turns, grants Atk+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Even Atk Wave 2",
+      "effect": "At start of even-numbered turns, grants Atk+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+      "exclusive": false,
+      "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Staff Valor 1",
       "effect": "While unit lives and uses a staff, unit gets 1.5x SP after combat or after using a healing Assist skill. (Only highest value applied. Does not stack.)",
       "exclusive": false,
@@ -68294,42 +69008,8 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Even Def Wave 2",
-      "effect": "At start of even-numbered turns, grants Def+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
-      "exclusive": false,
-      "spCost": 120,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Even Def Wave 1",
-      "effect": "At start of even-numbered turns, grants Def+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
+      "name": "Even Atk Wave 1",
+      "effect": "At start of even-numbered turns, grants Atk+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)",
       "exclusive": false,
       "spCost": 60,
       "movementRestriction": [
@@ -68895,6 +69575,39 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Def Smoke 3",
+      "effect": "Inflicts Def-7 on foes within 2 spaces of target through their next actions after combat.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Sword Exp. 1",
       "effect": "While unit lives and uses a sword, unit gets 1.5x EXP. (Only highest value applied. Does not stack.)",
       "exclusive": false,
@@ -68991,39 +69704,6 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Def Smoke 3",
-      "effect": "Inflicts Def-7 on foes within 2 spaces of target through their next actions after combat.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
       "name": "Def Smoke 2",
       "effect": "Inflicts Def-5 on foes within 2 spaces of target through their next actions after combat.",
       "exclusive": false,
@@ -69082,6 +69762,40 @@
         "  Red Tome",
         "  Blue Tome",
         "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
+      "name": "Def Ploy 3",
+      "effect": "At start of turn, inflicts Def-5 on foes in cardinal directions with Res < unit's Res through their next actions.",
+      "exclusive": false,
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -69498,40 +70212,6 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "Def Ploy 3",
-      "effect": "At start of turn, inflicts Def-5 on foes in cardinal directions with Res < unit's Res through their next actions.",
-      "exclusive": false,
-      "spCost": 240,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
       "name": "Def Ploy 2",
       "effect": "At start of turn, inflicts Def-4 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "exclusive": false,
@@ -69793,6 +70473,40 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "Breath of Life 2",
+      "effect": "If unit initiates combat, restores 5 HP to adjacent allies after combat.",
+      "exclusive": false,
+      "spCost": 100,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Ward Armor",
       "effect": "Grants Def/Res+4 to armored allies within 2 spaces during combat.",
       "exclusive": false,
@@ -69880,40 +70594,6 @@
       "spCost": 200,
       "movementRestriction": [
         "Flying"
-      ],
-      "weaponRestriction": [
-        "Red Sword",
-        "  Blue Lance",
-        "  Green Axe",
-        "  Red Bow",
-        "  Blue Bow",
-        "  Green Bow",
-        "  Colorless Bow",
-        "  Red Dagger",
-        "  Blue Dagger",
-        "  Green Dagger",
-        "  Colorless Dagger",
-        "  Red Tome",
-        "  Blue Tome",
-        "  Green Tome",
-        "  Colorless Staff",
-        "  Red Breath",
-        "  Blue Breath",
-        "  Green Breath",
-        "  Colorless Breath"
-      ],
-      "type": "PASSIVE_C"
-    },
-    {
-      "name": "Breath of Life 2",
-      "effect": "If unit initiates combat, restores 5 HP to adjacent allies after combat.",
-      "exclusive": false,
-      "spCost": 100,
-      "movementRestriction": [
-        "Infantry",
-        "  Armored",
-        "  Cavalry",
-        "  Flying"
       ],
       "weaponRestriction": [
         "Red Sword",
@@ -70514,6 +71194,40 @@
       "type": "PASSIVE_C"
     },
     {
+      "name": "With Everyone!",
+      "effect": "At start of turn, if unit is adjacent to an ally, grants Def/Res+5 to unit and adjacent allies for 1 turn.",
+      "exclusive": true,
+      "spCost": 300,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "PASSIVE_C"
+    },
+    {
       "name": "Atk Ploy 2",
       "effect": "At start of turn, inflicts Atk-4 on foes in cardinal directions with Res < unit's Res through their next actions.",
       "exclusive": false,
@@ -70675,10 +71389,10 @@
       "type": "PASSIVE_C"
     },
     {
-      "name": "—",
-      "effect": "If unit initiates combat against a foe that can counter and unit's HP ≤ 75%, unit\\nmakes a guaranteed follow-up attack.",
+      "name": "Fortify Def 2",
+      "effect": "At start of turn, grants Def+3 to adjacent allies for 1 turn.",
       "exclusive": false,
-      "spCost": 0,
+      "spCost": 100,
       "movementRestriction": [
         "Infantry",
         "  Armored",
@@ -70706,7 +71420,7 @@
         "  Green Breath",
         "  Colorless Breath"
       ],
-      "type": "PASSIVE_R"
+      "type": "PASSIVE_C"
     },
     {
       "name": "Armored Boots",
@@ -71091,6 +71805,102 @@
         "  Blue Tome",
         "  Green Tome",
         "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Blaze Dance 1",
+      "effect": "If Sing or Dance is used, grants Atk+2 to target.",
+      "spCost": 50,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Blaze Dance 2",
+      "effect": "If Sing or Dance is used, grants Atk+3 to target.",
+      "spCost": 100,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Blaze Dance 3",
+      "effect": "If Sing or Dance is used, grants Atk+4 to target.",
+      "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
         "  Red Breath",
         "  Blue Breath",
         "  Green Breath",
@@ -72154,6 +72964,72 @@
     {
       "name": "Drive Def 2",
       "effect": "Grants Def+3 to allies within 2 spaces during combat.",
+      "spCost": 240,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Drive Spd 1",
+      "effect": "Grants Spd+2 to allies within 2 spaces during combat.",
+      "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Drive Spd 2",
+      "effect": "Grants Spd+3 to allies within 2 spaces during combat.",
       "spCost": 240,
       "movementRestriction": [
         "Infantry",
@@ -77330,6 +78206,105 @@
       "type": "SEAL"
     },
     {
+      "name": "Squad Ace O 1",
+      "effect": "Grants Atk+1.",
+      "spCost": 30,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace O 2",
+      "effect": "Grants Atk+2.",
+      "spCost": 60,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Squad Ace O 3",
+      "effect": "Grants Atk+3.",
+      "spCost": 120,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
       "name": "Threaten Atk 1",
       "effect": "At start of turn, inflicts Atk-3 on foes within 2 spaces through their next actions.",
       "spCost": 50,
@@ -77398,6 +78373,105 @@
     {
       "name": "Threaten Atk 3",
       "effect": "At start of turn, inflicts Atk-5 on foes within 2 spaces through their next actions.",
+      "spCost": 200,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Threaten Def 1",
+      "effect": "At start of turn, inflicts Def-3 on foes within 2 spaces through their next actions.",
+      "spCost": 50,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Threaten Def 2",
+      "effect": "At start of turn, inflicts Def-4 on foes within 2 spaces through their next actions.",
+      "spCost": 100,
+      "movementRestriction": [
+        "Infantry",
+        "  Armored",
+        "  Cavalry",
+        "  Flying"
+      ],
+      "weaponRestriction": [
+        "Red Sword",
+        "  Blue Lance",
+        "  Green Axe",
+        "  Red Bow",
+        "  Blue Bow",
+        "  Green Bow",
+        "  Colorless Bow",
+        "  Red Dagger",
+        "  Blue Dagger",
+        "  Green Dagger",
+        "  Colorless Dagger",
+        "  Red Tome",
+        "  Blue Tome",
+        "  Green Tome",
+        "  Colorless Staff",
+        "  Red Breath",
+        "  Blue Breath",
+        "  Green Breath",
+        "  Colorless Breath"
+      ],
+      "type": "SEAL"
+    },
+    {
+      "name": "Threaten Def 3",
+      "effect": "At start of turn, inflicts Def-5 on foes within 2 spaces through their next actions.",
       "spCost": 200,
       "movementRestriction": [
         "Infantry",

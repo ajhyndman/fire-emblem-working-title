@@ -1,18 +1,21 @@
 import fs from 'fs';
 import {
   compose,
+  concat,
+  dissoc,
   equals,
   filter,
-  head,
+  groupBy,
   indexBy,
   map,
   not,
   pick,
   prop,
   range,
+  reject,
   replace,
+  sort,
   sortBy,
-  test,
   trim,
   without,
 } from 'ramda';
@@ -75,6 +78,176 @@ async function fetchHeroStats() {
     heroBaseStats,
   );
 
+  const heroWeapons = await fetchApiRows({
+    action: 'cargoquery',
+    format: 'json',
+    tables: [
+      'Heroes',
+      'HeroWeapons',
+      'Weapons',
+    ].join(','),
+    fields: [
+      'Heroes._pageName=HeroFullName',
+      'HeroWeapons.skill',
+      'HeroWeapons.skillPos',
+      'HeroWeapons.unlockRarity',
+      'HeroWeapons.defaultRarity',
+    ].join(','),
+    join_on: [
+      'Heroes._pageName = HeroWeapons._pageName',
+      'HeroWeapons.skill = Weapons._pageName',
+    ].join(',')
+  }).then(
+      compose(
+          map(
+              compose(
+                  sortBy(prop("skillPos")),
+                  map(
+                      dissoc("HeroFullName"),
+                  ),
+              ),
+          ),
+          groupBy(
+              (weapon) => weapon.HeroFullName
+          ),
+      ),
+  ).catch(error => {
+    console.error('failed to parse hero weapons', error);
+  });
+
+  const heroAssists = await fetchApiRows({
+    action: 'cargoquery',
+    format: 'json',
+    tables: [
+      'Heroes',
+      'HeroAssists',
+      'Assists',
+    ].join(','),
+    fields: [
+      'Heroes._pageName=HeroFullName',
+      'HeroAssists.skill',
+      'HeroAssists.skillPos',
+      'HeroAssists.unlockRarity',
+      'HeroAssists.defaultRarity',
+    ].join(','),
+    join_on: [
+      'Heroes._pageName = HeroAssists._pageName',
+      'HeroAssists.skill = Assists._pageName',
+    ].join(',')
+  }).then(
+      compose(
+          map(
+              compose(
+                  sortBy(prop("skillPos")),
+                  map(
+                      dissoc("HeroFullName"),
+                  ),
+                  reject(
+                      (assist) => assist.skill === ""
+                  ),
+              ),
+          ),
+          groupBy(
+              (assist) => assist.HeroFullName
+          ),
+      ),
+  ).catch(error => {
+    console.error('failed to parse hero assists', error);
+  });
+
+  const heroSpecials = await fetchApiRows({
+    action: 'cargoquery',
+    format: 'json',
+    tables: [
+      'Heroes',
+      'HeroSpecials',
+      'Specials',
+    ].join(','),
+    fields: [
+      'Heroes._pageName=HeroFullName',
+      'HeroSpecials.skill',
+      'HeroSpecials.skillPos',
+      'HeroSpecials.unlockRarity',
+      'HeroSpecials.defaultRarity',
+    ].join(','),
+    join_on: [
+      'Heroes._pageName = HeroSpecials._pageName',
+      'HeroSpecials.skill = Specials._pageName',
+    ].join(',')
+  }).then(
+      compose(
+          map(
+              compose(
+                  sortBy(prop("skillPos")),
+                  map(
+                      dissoc("HeroFullName"),
+                  ),
+                  reject(
+                      (special) => special.skill === ""
+                  ),
+              ),
+          ),
+          groupBy(
+              (special) => special.HeroFullName
+          ),
+      ),
+  ).catch(error => {
+    console.error('failed to parse hero specials', error);
+  });
+
+  const heroPassives = await fetchApiRows({
+    action: 'cargoquery',
+    format: 'json',
+    tables: [
+      'Heroes',
+      'HeroPassives',
+      'PassiveSingle',
+      'PassiveGroup',
+    ].join(','),
+    fields: [
+      'Heroes._pageName=HeroFullName',
+      'HeroPassives.skill',
+      'HeroPassives.skillPos',
+      'HeroPassives.unlockRarity',
+      'PassiveGroup.Ptype',
+    ].join(','),
+    join_on: [
+      'Heroes._pageName = HeroPassives._pageName',
+      'HeroPassives.skill = PassiveSingle.Name',
+      'PassiveSingle._pageName = PassiveGroup._pageName',
+    ].join(',')
+  }).then(
+      compose(
+          map(
+              compose(
+                  sort((lhs, rhs) => {
+                    if (lhs.Ptype < rhs.Ptype) {
+                      return -1;
+                    } else if (lhs.Ptype > rhs.Ptype) {
+                      return 1;
+                    } else {
+                      if (lhs.skillPos < rhs.skillPos) {
+                        return -1;
+                      } else if (lhs.skillPos > rhs.skillPos) {
+                        return 1;
+                      } else {
+                        return 0;
+                      }
+                    }
+                  }),
+                  map(
+                    dissoc("HeroFullName"),
+                  ),
+              ),
+          ),
+          groupBy(
+              (passive) => passive.HeroFullName
+          ),
+      ),
+  ).catch(error => {
+    console.error('failed to parse hero passives', error);
+  });
+
   const heroes = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
@@ -82,10 +255,6 @@ async function fetchHeroStats() {
       'Heroes',
       'HeroBaseStats',
       'HeroGrowths',
-      'HeroWeapons',
-      'HeroSpecials',
-      'HeroAssists',
-      'HeroPassives',
     ].join(','),
     fields: [
       'Heroes._pageName=FullName',
@@ -103,72 +272,11 @@ async function fetchHeroStats() {
       'HeroGrowths.Spd',
       'HeroGrowths.Def',
       'HeroGrowths.Res',
-      'HeroWeapons.weapon1',
-      'HeroWeapons.weapon2',
-      'HeroWeapons.weapon3',
-      'HeroWeapons.weapon4',
-      'HeroWeapons.weapon5',
-      'HeroWeapons.weapon1Unlock',
-      'HeroWeapons.weapon2Unlock',
-      'HeroWeapons.weapon3Unlock',
-      'HeroWeapons.weapon4Unlock',
-      'HeroWeapons.weapon5Unlock',
-      'HeroWeapons.weapon1Default',
-      'HeroWeapons.weapon2Default',
-      'HeroWeapons.weapon3Default',
-      'HeroWeapons.weapon4Default',
-      'HeroWeapons.weapon5Default',
-      'HeroAssists.assist1',
-      'HeroAssists.assist2',
-      'HeroAssists.assist3',
-      'HeroAssists.assist4',
-      'HeroAssists.assist1Unlock',
-      'HeroAssists.assist2Unlock',
-      'HeroAssists.assist3Unlock',
-      'HeroAssists.assist4Unlock',
-      'HeroAssists.assist1Default',
-      'HeroAssists.assist2Default',
-      'HeroAssists.assist3Default',
-      'HeroAssists.assist4Default',
-      'HeroSpecials.special1',
-      'HeroSpecials.special2',
-      'HeroSpecials.special3',
-      'HeroSpecials.special4',
-      'HeroSpecials.special1Unlock',
-      'HeroSpecials.special2Unlock',
-      'HeroSpecials.special3Unlock',
-      'HeroSpecials.special4Unlock',
-      'HeroSpecials.special1Default',
-      'HeroSpecials.special2Default',
-      'HeroSpecials.special3Default',
-      'HeroSpecials.special4Default',
-      'HeroPassives.passiveA1',
-      'HeroPassives.passiveA2',
-      'HeroPassives.passiveA3',
-      'HeroPassives.passiveB1',
-      'HeroPassives.passiveB2',
-      'HeroPassives.passiveB3',
-      'HeroPassives.passiveC1',
-      'HeroPassives.passiveC2',
-      'HeroPassives.passiveC3',
-      'HeroPassives.passiveA1Unlock',
-      'HeroPassives.passiveA2Unlock',
-      'HeroPassives.passiveA3Unlock',
-      'HeroPassives.passiveB1Unlock',
-      'HeroPassives.passiveB2Unlock',
-      'HeroPassives.passiveB3Unlock',
-      'HeroPassives.passiveC1Unlock',
-      'HeroPassives.passiveC2Unlock',
-      'HeroPassives.passiveC3Unlock',
     ].join(','),
     group_by: 'Heroes._pageName',
     join_on: [
       'HeroBaseStats._pageName = Heroes._pageName',
       'Heroes._pageName = HeroGrowths._pageName',
-      'Heroes._pageName = HeroWeapons._pageName',
-      'Heroes._pageName = HeroSpecials._pageName',
-      'Heroes._pageName = HeroAssists._pageName',
-      'Heroes._pageName = HeroPassives._pageName',
     ].join(','),
   })
     .then(
@@ -191,77 +299,6 @@ async function fetchHeroStats() {
             Spd: spdGrowths,
             Def: defGrowths,
             Res: resGrowths,
-
-            assist1,
-            assist1Default,
-            assist1Unlock,
-
-            assist2,
-            assist2Default,
-            assist2Unlock,
-
-            assist3,
-            assist3Default,
-            assist3Unlock,
-
-            passiveA1,
-            passiveA1Unlock,
-
-            passiveA2,
-            passiveA2Unlock,
-
-            passiveA3,
-            passiveA3Unlock,
-
-            passiveB1,
-            passiveB1Unlock,
-
-            passiveB2,
-            passiveB2Unlock,
-
-            passiveB3,
-            passiveB3Unlock,
-
-            passiveC1,
-            passiveC1Unlock,
-
-            passiveC2,
-            passiveC2Unlock,
-
-            passiveC3,
-            passiveC3Unlock,
-
-            special1,
-            special1Default,
-            special1Unlock,
-
-            special2,
-            special2Default,
-            special2Unlock,
-
-            special3,
-            special3Default,
-            special3Unlock,
-
-            weapon1,
-            weapon1Default,
-            weapon1Unlock,
-
-            weapon2,
-            weapon2Default,
-            weapon2Unlock,
-
-            weapon3,
-            weapon3Default,
-            weapon3Unlock,
-
-            weapon4,
-            weapon4Default,
-            weapon4Unlock,
-
-            weapon5,
-            weapon5Default,
-            weapon5Unlock,
           }) => {
             const enumerateRarities: (
               rarityString: string,
@@ -297,47 +334,16 @@ async function fetchHeroStats() {
 
             const poolDate = PoolDate ? formatDate(PoolDate) : 'N/A';
 
-            // Reformat the hero's skills into a list.
-            const passiveSkills = compose(
-              map(([skill, unlock]) => ({
-                name: skill,
-                rarity: Number.parseInt(unlock, 10) || '-',
-              })),
-              filter(compose(Boolean, head)),
-            )([
-              [passiveA1, passiveA1Unlock],
-              [passiveA2, passiveA2Unlock],
-              [passiveA3, passiveA3Unlock],
-              [passiveB1, passiveB1Unlock],
-              [passiveB2, passiveB2Unlock],
-              [passiveB3, passiveB3Unlock],
-              [passiveC1, passiveC1Unlock],
-              [passiveC2, passiveC2Unlock],
-              [passiveC3, passiveC3Unlock],
-            ]);
+            const passiveSkills = map((passive) => ({
+              name: passive.skill,
+              rarity: Number.parseInt(passive.unlockRarity, 10) || '-',
+            }))(heroPassives[FullName]);
 
-            const otherSkills = compose(
-              map(([skillPageReference, defaultRarity, unlockRarity]) => ({
-                name: test(/^Falchion/, skillPageReference)
-                  ? 'Falchion'
-                  : skillPageReference,
-                default: Number.parseInt(defaultRarity, 10) || '-',
-                rarity: Number.parseInt(unlockRarity, 10) || '-',
-              })),
-              filter(compose(Boolean, head)),
-            )([
-              [weapon1, weapon1Default, weapon1Unlock],
-              [weapon2, weapon2Default, weapon2Unlock],
-              [weapon3, weapon3Default, weapon3Unlock],
-              [weapon4, weapon4Default, weapon4Unlock],
-              [weapon5, weapon5Default, weapon5Unlock],
-              [assist1, assist1Default, assist1Unlock],
-              [assist2, assist2Default, assist2Unlock],
-              [assist3, assist3Default, assist3Unlock],
-              [special1, special1Default, special1Unlock],
-              [special2, special2Default, special2Unlock],
-              [special3, special3Default, special3Unlock],
-            ]);
+            const otherSkills = map((otherSkill) => ({
+              name: otherSkill.skill,
+              default: Number.parseInt(otherSkill.defaultRarity, 10) || '-',
+              rarity: Number.parseInt(otherSkill.unlockRarity, 10) || '-',
+            }))(concat(concat(heroWeapons[FullName], heroAssists[FullName]), heroSpecials[FullName], []));
 
             const skills = [...otherSkills, ...passiveSkills];
 
