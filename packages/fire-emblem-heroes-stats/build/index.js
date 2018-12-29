@@ -396,6 +396,7 @@ async function fetchSkills() {
       'CanUseWeapon',
       'Exclusive',
       'UseRange',
+      'Might',
       'Scategory=Category',
     ].join(','),
   })
@@ -411,6 +412,7 @@ async function fetchSkills() {
             CanUseWeapon,
             Exclusive,
             UseRange,
+            Might,
             Category,
           }) => {
             return {
@@ -420,7 +422,8 @@ async function fetchSkills() {
               movementRestriction: CanUseMove.split(','),
               weaponRestriction: CanUseWeapon.split(','),
               exclusive: Boolean(Number.parseInt(Exclusive, 10)),
-              range: UseRange,
+              range: Number.parseInt(UseRange, 10),
+              might: Number.parseInt(Might, 10),
               type: Category,
             };
           },
