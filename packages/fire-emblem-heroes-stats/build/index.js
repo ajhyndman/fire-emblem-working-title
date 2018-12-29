@@ -1,7 +1,7 @@
 import fs from 'fs';
 import {
+  ascend,
   compose,
-  concat,
   dissoc,
   equals,
   filter,
@@ -12,10 +12,9 @@ import {
   pick,
   prop,
   range,
-  reject,
   replace,
   sort,
-  sortBy,
+  sortWith,
   trim,
   without,
 } from 'ramda';
@@ -51,6 +50,7 @@ const skillCategoriesToOrdinals = {
   "passivea": 3,
   "passiveb": 4,
   "passivec": 5,
+  "sacredseal": 6,
 };
 
 /**
@@ -402,7 +402,14 @@ async function fetchSkills() {
   })
     .then(
       compose(
-        sortBy(prop('Category')),
+        sortWith(
+          [
+            ascend(({type}) => {
+              return skillCategoriesToOrdinals[type];
+            }),
+            ascend(prop("name")),
+          ]
+        ),
         map(
           ({
             WikiName,
