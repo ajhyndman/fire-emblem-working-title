@@ -35,7 +35,7 @@
     "imagemin-cli": "3.0.0",
     "imagemin-pngquant": "5.0.1",
     "now": "9.2.7",
-    "prettier": "^1.7.4",
+    "prettier": "^1.17.0",
     "sw-precache-webpack-plugin": "0.9.1",
     "tape": "^4.6.3"
   },
