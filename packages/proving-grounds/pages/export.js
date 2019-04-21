@@ -1,7 +1,7 @@
 // @flow
 import 'babel-polyfill';
 import React from 'react';
-import withRedux from 'next-redux-wrapper';
+import { connect } from 'react-redux';
 import { isEmpty } from 'ramda';
 import { importInstance } from 'fire-emblem-heroes-calculator';
 
@@ -11,7 +11,6 @@ import Overlay from '../src/components/Overlay';
 import Root, { panelHeight } from '../src/components/Root';
 import Toast from '../src/components/Toast';
 import Router from '../src/router';
-import initStore from '../src/store';
 import { decodeHero } from '../src/queryCodex';
 import type { Dispatch } from '../src/reducer';
 import type { State } from '../src/store';
@@ -98,4 +97,4 @@ class Build extends React.Component {
   }
 }
 
-export default withRedux(initStore, state => ({ state }))(Build);
+export default connect(state => ({ state }))(Build);
