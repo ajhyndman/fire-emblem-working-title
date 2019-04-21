@@ -96,7 +96,7 @@ export const fetchApiRows = (
       prop('cargoquery'),
     )(json);
 
-    if (cargoRows.length == API_BATCH_SIZE) {
+    if (cargoRows.length === API_BATCH_SIZE) {
       return fetchApiRows(queryParams, offset + API_BATCH_SIZE).then(
         nextCargoRows => concat(cargoRows, nextCargoRows),
       );

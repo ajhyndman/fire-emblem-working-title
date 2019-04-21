@@ -49,4 +49,4 @@ export const camelCase = compose(
 // isNaN indicates that '1' is a number, '' is a number, and '1/2/3' is not
 // parseInt converts '' to null, and 1/2/3 to 1
 export const maybeToNumber = txt =>
-  txt == '' || isNaN(txt) ? txt : parseInt(txt, 10);
+  txt === '' || isNaN(txt) ? txt : parseInt(txt, 10);

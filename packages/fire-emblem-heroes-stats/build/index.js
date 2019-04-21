@@ -27,20 +27,20 @@ const sanitizeDescription = compose(
   trim,
   replace(/<br.*?>/g, ' '),
   // remove [[]] around links
-  replace(/\[\[[^\|\]]*?\|?(.*?)\]\]/g, '$1'),
+  replace(/\[\[[^|\]]*?\|?(.*?)\]\]/g, '$1'),
   // remove text before | in links
   replace(/\[\[[^|\]]*\|(.*?)\]\]/g, '[[$1]]'),
   // completely strip [[File:]] links
   replace(/\[\[File.*?\]\]/g, ''),
-  replace(/\&gt\;/g, '>'),
-  replace(/\&lt\;/g, '<'),
-  replace(/\&quot\;/g, '"'),
+  replace(/&gt;/g, '>'),
+  replace(/&lt;/g, '<'),
+  replace(/&quot;/g, '"'),
 );
 
 const formatImageName = compose(
-  replace(/\'/g, ''),
-  replace(/\"/g, ''),
-  replace(/\:/g, ''),
+  replace(/'/g, ''),
+  replace(/"/g, ''),
+  replace(/:/g, ''),
 );
 
 const skillCategoriesToOrdinals = {
@@ -462,7 +462,7 @@ function validate(heroes, skills) {
         level40Rarities++;
       }
     }
-    if (level1Rarities != level40Rarities || level1Rarities == 0) {
+    if (level1Rarities !== level40Rarities || level1Rarities === 0) {
       console.warn(
         'Warning: ' +
           hero.name +

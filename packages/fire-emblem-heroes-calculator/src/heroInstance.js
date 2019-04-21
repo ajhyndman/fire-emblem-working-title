@@ -221,7 +221,7 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
 
 export const importInstance = (text: string): HeroInstance => {
   // Lines that do not match one of these regular expressions will be ignored.
-  const titleRegex = /^(.*) \((\d)★\+?(\d+)?(?: \+)?([a-z]+)?(?: \-)?([a-z]+)?\)\s*/;
+  const titleRegex = /^(.*) \((\d)★\+?(\d+)?(?: \+)?([a-z]+)?(?: -)?([a-z]+)?\)\s*/;
   const skillRegex = /^(Weapon|Assist|Special|A|B|C|S): (.*?)\s*$/;
   const buffRegex = /^Buffs:\s*(.*?)\s*$/;
   const debuffRegex = /^Debuffs:\s*(.*?)\s*$/;
