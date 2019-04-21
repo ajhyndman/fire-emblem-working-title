@@ -29,7 +29,7 @@
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-register": "^6.24.0",
     "eslint": "5.16.0",
-    "eslint-config-ajhyndman": "2.0.0",
+    "eslint-config-ajhyndman": "2.0.1",
     "eslint-config-prettier": "4.1.0",
     "eslint-plugin-flowtype": "3.6.1",
     "eslint-plugin-import": "2.17.2",

@@ -5725,10 +5725,10 @@ escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.5.6"
 
-eslint-config-ajhyndman@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-ajhyndman/-/eslint-config-ajhyndman-2.0.0.tgz#cd44dac3ebde3d591608707fc955fd1eb0c91648"
-  integrity sha512-BHavg4bChuVmdNNr1hcqXkfxovBO4oL2c2FPuXyeNP64BdMTMEoHSgZEgvfJrOY71N3Yzs2YRpNRO05ymY5Ojg==
+eslint-config-ajhyndman@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-ajhyndman/-/eslint-config-ajhyndman-2.0.1.tgz#2c2c5dd58cc7f4d54bde7513950169856c611256"
+  integrity sha512-4J6bADy8hotFYYQXXcb00zVJa+IfUcWVzxV0IvEiq/KXZy2Gt71Rz2x0P5VQ2+/y2ICuzSFboBJwJa8C0mCd8w==
 
 eslint-config-prettier@4.1.0:
   version "4.1.0"
