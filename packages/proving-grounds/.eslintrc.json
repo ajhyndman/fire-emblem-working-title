@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "ajhyndman/flow",
-    "prettier"
-  ],
+  "extends": ["ajhyndman/flow"],
   "env": {
     "browser": true,
     "node": true
@@ -11,32 +8,7 @@
     "ga": false,
     "ReactClass": false
   },
-  "plugins": [
-    "no-null",
-    "prettier"
-  ],
   "rules": {
-    "eqeqeq": ["error", "always", { "null": "ignore" }],
-
-    "flowtype/define-flow-type": "error",
-
-    "no-null/no-null": ["error"],
-
-    "prettier/prettier": ["error", {
-      "singleQuote": true,
-      "trailingComma": "all",
-      "parser": "flow"
-    }],
-
-    "react/sort-comp": ["error", {
-      "order": [
-        "type-annotations",
-        "static-methods",
-        "lifecycle",
-        "/^on.+$/",
-        "everything-else",
-        "render"
-      ]
-    }]
+    "flowtype/define-flow-type": "error"
   }
 }
