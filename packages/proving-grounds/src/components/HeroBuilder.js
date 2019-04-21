@@ -167,7 +167,8 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
                 ]}
                 selected={level === 1 ? 0 : 1}
                 onChange={i =>
-                  dispatch({ type: 'SET_PREVIEW_LEVEL', level: [1, 40][i] })}
+                  dispatch({ type: 'SET_PREVIEW_LEVEL', level: [1, 40][i] })
+                }
               />
             </div>
             <div className="column">
@@ -177,7 +178,8 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
                   dispatch({
                     type: 'SET_MERGE_LEVEL',
                     value: mergeLevel + 1,
-                  })}
+                  })
+                }
               >
                 <PlusSquare style={{ display: 'block' }} />
               </button>
@@ -187,7 +189,8 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
                   dispatch({
                     type: 'SET_MERGE_LEVEL',
                     value: heroInstance.mergeLevel - 1,
-                  })}
+                  })
+                }
               >
                 <MinusSquare style={{ display: 'block' }} />
               </button>
@@ -237,12 +240,16 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
                   dispatch({
                     type: 'UPDATE_BOON',
                     stat: varianceOptions[selected],
-                  })}
+                  })
+                }
                 options={[
                   '—',
                   ...keys(
                     filter(
-                      compose(not, equals(heroInstance.bane)),
+                      compose(
+                        not,
+                        equals(heroInstance.bane),
+                      ),
                       varianceOptions,
                     ),
                   ),
@@ -263,12 +270,16 @@ const HeroBuilder = ({ dispatch, heroInstance, level }: Props) => {
                   dispatch({
                     type: 'UPDATE_BANE',
                     stat: varianceOptions[selected],
-                  })}
+                  })
+                }
                 options={[
                   '—',
                   ...keys(
                     filter(
-                      compose(not, equals(heroInstance.boon)),
+                      compose(
+                        not,
+                        equals(heroInstance.boon),
+                      ),
                       varianceOptions,
                     ),
                   ),

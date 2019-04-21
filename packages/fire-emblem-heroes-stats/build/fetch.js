@@ -2,7 +2,18 @@ import fetch from 'isomorphic-fetch';
 import fs from 'fs';
 import path from 'path';
 import { URL } from 'url';
-import { compose, concat, last, map, merge, prop, replace, split, toPairs, values } from 'ramda';
+import {
+  compose,
+  concat,
+  last,
+  map,
+  merge,
+  prop,
+  replace,
+  split,
+  toPairs,
+  values,
+} from 'ramda';
 
 import { WIKI_HOST } from './constants';
 
@@ -72,19 +83,24 @@ export const fetchApiQuery = (queryParams: { [param: string]: string }) => {
   );
 };
 
-export const fetchApiRows = (queryParams: { [param: string]: string }, offset: number = 0) =>
-  fetchApiQuery(merge(queryParams, {offset: offset, limit: API_BATCH_SIZE})).then(json => {
+export const fetchApiRows = (
+  queryParams: { [param: string]: string },
+  offset: number = 0,
+) =>
+  fetchApiQuery(
+    merge(queryParams, { offset: offset, limit: API_BATCH_SIZE }),
+  ).then(json => {
     const cargoRows = compose(
       map(prop('title')),
       values,
-      prop('cargoquery')
+      prop('cargoquery'),
     )(json);
 
     if (cargoRows.length == API_BATCH_SIZE) {
-      return fetchApiRows(queryParams, offset + API_BATCH_SIZE).then(nextCargoRows =>
-        concat(cargoRows, nextCargoRows)
+      return fetchApiRows(queryParams, offset + API_BATCH_SIZE).then(
+        nextCargoRows => concat(cargoRows, nextCargoRows),
       );
     } else {
       return cargoRows;
     }
-  })
+  });

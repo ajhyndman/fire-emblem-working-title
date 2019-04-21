@@ -44,13 +44,13 @@ const formatImageName = compose(
 );
 
 const skillCategoriesToOrdinals = {
-  "weapon": 0,
-  "assist": 1,
-  "special": 2,
-  "passivea": 3,
-  "passiveb": 4,
-  "passivec": 5,
-  "sacredseal": 6,
+  weapon: 0,
+  assist: 1,
+  special: 2,
+  passivea: 3,
+  passiveb: 4,
+  passivec: 5,
+  sacredseal: 6,
 };
 
 /**
@@ -90,11 +90,7 @@ async function fetchHeroStats() {
   const heroSkills = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    tables: [
-      'Heroes',
-      'HeroSkills',
-      'Skills',
-    ].join(','),
+    tables: ['Heroes', 'HeroSkills', 'Skills'].join(','),
     fields: [
       'Heroes._pageName=HeroFullName',
       'HeroSkills.skill=WikiName',
@@ -106,50 +102,46 @@ async function fetchHeroStats() {
     join_on: [
       'Heroes._pageName=HeroSkills._pageName',
       'HeroSkills.skill=Skills.WikiName',
-    ].join(',')
-  }).then(
+    ].join(','),
+  })
+    .then(
       compose(
-          map(
-              compose(
-                  sort((lhs, rhs) => {
-                    const lhsCategoryOrdinal = skillCategoriesToOrdinals[lhs.Category];
-                    const rhsCategoryOrdinal = skillCategoriesToOrdinals[rhs.Category];
+        map(
+          compose(
+            sort((lhs, rhs) => {
+              const lhsCategoryOrdinal =
+                skillCategoriesToOrdinals[lhs.Category];
+              const rhsCategoryOrdinal =
+                skillCategoriesToOrdinals[rhs.Category];
 
-                    if (lhsCategoryOrdinal < rhsCategoryOrdinal) {
-                      return -1;
-                    } else if (lhsCategoryOrdinal > rhsCategoryOrdinal) {
-                      return 1;
-                    } else {
-                      if (lhs.SkillPos < rhs.SkillPos) {
-                        return -1;
-                      } else if (lhs.SkillPos > rhs.SkillPos) {
-                        return 1;
-                      } else {
-                        return 0;
-                      }
-                    }
-                  }),
-                  map(
-                    dissoc("HeroFullName"),
-                  ),
-              ),
+              if (lhsCategoryOrdinal < rhsCategoryOrdinal) {
+                return -1;
+              } else if (lhsCategoryOrdinal > rhsCategoryOrdinal) {
+                return 1;
+              } else {
+                if (lhs.SkillPos < rhs.SkillPos) {
+                  return -1;
+                } else if (lhs.SkillPos > rhs.SkillPos) {
+                  return 1;
+                } else {
+                  return 0;
+                }
+              }
+            }),
+            map(dissoc('HeroFullName')),
           ),
-          groupBy(
-              (passive) => passive.HeroFullName
-          ),
+        ),
+        groupBy(passive => passive.HeroFullName),
       ),
-  ).catch(error => {
-    console.error('failed to parse hero passives', error);
-  });
+    )
+    .catch(error => {
+      console.error('failed to parse hero passives', error);
+    });
 
   const heroes = await fetchApiRows({
     action: 'cargoquery',
     format: 'json',
-    tables: [
-      'Heroes',
-      'HeroBaseStats',
-      'HeroGrowths',
-    ].join(','),
+    tables: ['Heroes', 'HeroBaseStats', 'HeroGrowths'].join(','),
     fields: [
       'Heroes._pageName=FullName',
       'Name',
@@ -198,7 +190,12 @@ async function fetchHeroStats() {
               rarityString: string,
             ) => number[] = compose(
               map(Number.parseInt),
-              filter(compose(not, equals(''))),
+              filter(
+                compose(
+                  not,
+                  equals(''),
+                ),
+              ),
               str => str.split(','),
             );
 
@@ -217,8 +214,8 @@ async function fetchHeroStats() {
               minRarity === undefined
                 ? 'N/A'
                 : minRarity === maxRarity
-                  ? `${minRarity}`
-                  : `${minRarity}-${maxRarity}`;
+                ? `${minRarity}`
+                : `${minRarity}-${maxRarity}`;
 
             // Convert release dates into expected format.
             const formatDate = timestamp =>
@@ -228,7 +225,7 @@ async function fetchHeroStats() {
 
             const poolDate = PoolDate ? formatDate(PoolDate) : 'N/A';
 
-            const skills = map((skill) => ({
+            const skills = map(skill => ({
               name: skill.WikiName,
               default: Number.parseInt(skill.DefaultRarity, 10) || '-',
               rarity: Number.parseInt(skill.UnlockRarity, 10) || '-',
@@ -402,14 +399,12 @@ async function fetchSkills() {
   })
     .then(
       compose(
-        sortWith(
-          [
-            ascend(({type}) => {
-              return skillCategoriesToOrdinals[type];
-            }),
-            ascend(prop("name")),
-          ]
-        ),
+        sortWith([
+          ascend(({ type }) => {
+            return skillCategoriesToOrdinals[type];
+          }),
+          ascend(prop('name')),
+        ]),
         map(
           ({
             WikiName,

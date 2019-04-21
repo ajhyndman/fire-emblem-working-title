@@ -234,9 +234,9 @@ class Root extends React.Component {
           <div className="row">
             <ShareButton
               icon={Share}
-              link={`${typeof window !== 'undefined'
-                ? window.location.protocol
-                : ''}//${state.host}/?0=${encodeHero(
+              link={`${
+                typeof window !== 'undefined' ? window.location.protocol : ''
+              }//${state.host}/?0=${encodeHero(
                 state.heroSlots[0],
               )}&1=${encodeHero(state.heroSlots[1])}`}
               onClick={link => {

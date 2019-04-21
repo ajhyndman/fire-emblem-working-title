@@ -37,7 +37,16 @@ export type SpecialType =
   | 'OTHER'
   | void;
 
-const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
+const capitalize = compose(
+  join(''),
+  juxt([
+    compose(
+      toUpper,
+      head,
+    ),
+    tail,
+  ]),
+);
 
 // Returns a list of numbers from the effect of the skill, or [0].
 export function getSkillNumbers(
@@ -283,7 +292,9 @@ export function doesDefenseSpecialApply(skillName: string, attackRange: 1 | 2) {
 export function getSpecialMitigationMultiplier(skillName: string): number {
   return test(/(New Moon|Moonbow)/, skillName)
     ? 0.3
-    : test(/(Luna|Aether)/, skillName) ? 0.5 : 0;
+    : test(/(Luna|Aether)/, skillName)
+    ? 0.5
+    : 0;
 }
 // Returns a flat amount of nonLethal damage for an AOE special.
 export function getSpecialAOEDamageAmount(
@@ -300,7 +311,9 @@ export function getSpecialAOEDamageAmount(
   );
   const multiplier = test(/(Blazing)/, skillName)
     ? 1.5
-    : test(/(Growing|Rising)/, skillName) ? 1.0 : 0;
+    : test(/(Growing|Rising)/, skillName)
+    ? 1.0
+    : 0;
   return Math.floor(multiplier * (atk - def));
 }
 // Returns a flat amount of bonus damage for a stat-based special (or missing HP special)
@@ -338,21 +351,25 @@ export function getSpecialBonusDamageAmount(
 export function getSpecialOffensiveMultiplier(skillName: string): number {
   return test(/Astra/, skillName)
     ? 1.5
-    : test(/(Glimmer|Night Sky)/, skillName) ? 0.5 : 0;
+    : test(/(Glimmer|Night Sky)/, skillName)
+    ? 0.5
+    : 0;
 }
 // Returns the percent of damage reduced by a special.
 export function getSpecialDefensiveMultiplier(skillName: string): number {
   return test(/(Pavise|Aegis)/, skillName)
     ? 0.5
     : test(/(Buckler|Escutcheon|Holy Vestments|Sacred Cowl)/, skillName)
-      ? 0.3
-      : 0;
+    ? 0.3
+    : 0;
 }
 // Returns the percent of damage increased by a special
 export function getSpecialLifestealPercent(skillName: string): number {
   return test(/(Aether|Sol)/, skillName)
     ? 0.5
-    : test(/(Daylight|Noontime)/, skillName) ? 0.3 : 0.0;
+    : test(/(Daylight|Noontime)/, skillName)
+    ? 0.3
+    : 0.0;
 }
 
 // Returns the number of special charges generated per attack (usually 1).

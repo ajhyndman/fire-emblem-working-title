@@ -152,28 +152,32 @@ export function updateRarity(
   };
 }
 
-const canInherit = curry((hero: Hero, skill: Skill): boolean => {
-  if (skill.exclusive) {
-    return false;
-  }
+const canInherit = curry(
+  (hero: Hero, skill: Skill): boolean => {
+    if (skill.exclusive) {
+      return false;
+    }
 
-  if (skill.type === 'WEAPON') {
-    // Hero has weaponType 'Red Breath' and weapon has weaponType 'Breath'
-    const weaponType = test(/Breath/, hero.weaponType)
-      ? 'Breath'
-      : test(/Bow/, hero.weaponType) ? 'Bow' : hero.weaponType;
-    return weaponType === skill.weaponType;
-  }
+    if (skill.type === 'WEAPON') {
+      // Hero has weaponType 'Red Breath' and weapon has weaponType 'Breath'
+      const weaponType = test(/Breath/, hero.weaponType)
+        ? 'Breath'
+        : test(/Bow/, hero.weaponType)
+        ? 'Bow'
+        : hero.weaponType;
+      return weaponType === skill.weaponType;
+    }
 
-  if (
-    skill.movementRestriction.includes(hero.moveType) ||
-    skill.weaponRestriction.includes(hero.weaponType)
-  ) {
-    return false;
-  }
+    if (
+      skill.movementRestriction.includes(hero.moveType) ||
+      skill.weaponRestriction.includes(hero.weaponType)
+    ) {
+      return false;
+    }
 
-  return true;
-});
+    return true;
+  },
+);
 
 // Returns a list of skill names that a hero can obtain.
 export function getInheritableSkills(
@@ -226,7 +230,9 @@ export const getStat = (
   const variance =
     instance.boon === statKey
       ? 'high'
-      : instance.bane === statKey ? 'low' : 'normal';
+      : instance.bane === statKey
+      ? 'low'
+      : 'normal';
 
   if (
     hero.stats[`${level}`] === undefined ||
@@ -239,7 +245,9 @@ export const getStat = (
     // skills and merges are currently not included in level 1 stats.
     return variance === 'normal'
       ? value
-      : variance === 'low' ? value - 1 : value + 1;
+      : variance === 'low'
+      ? value - 1
+      : value + 1;
   }
 
   const values = hero.stats[`${level}`][rarity][statKey];
@@ -247,7 +255,9 @@ export const getStat = (
   const baseValue =
     variance === 'normal'
       ? parseInt(normal, 10)
-      : variance === 'low' ? parseInt(low, 10) : parseInt(high, 10);
+      : variance === 'low'
+      ? parseInt(low, 10)
+      : parseInt(high, 10);
 
   let mergeBonus = 0;
   if (instance.mergeLevel > 0) {
@@ -263,7 +273,7 @@ export const getStat = (
       statKeys,
     );
     mergeBonus =
-      Math.floor(2 * instance.mergeLevel / 5) +
+      Math.floor((2 * instance.mergeLevel) / 5) +
       ((2 * instance.mergeLevel) % 5 > indexOf(statKey, orderedStatKeys)
         ? 1
         : 0);
@@ -316,7 +326,7 @@ export function hpAboveThreshold(
   hero: HeroInstance,
   hpPercent: number,
 ): boolean {
-  return getCurrentHp(hero) >= getStat(hero, 'hp') * hpPercent / 100;
+  return getCurrentHp(hero) >= (getStat(hero, 'hp') * hpPercent) / 100;
 }
 
 // Returns whether or not hp <= X% of hp, using the hp at the start of combat.
@@ -324,7 +334,7 @@ export function hpBelowThreshold(
   hero: HeroInstance,
   hpPercent: number,
 ): boolean {
-  return getCurrentHp(hero) <= getStat(hero, 'hp') * hpPercent / 100;
+  return getCurrentHp(hero) <= (getStat(hero, 'hp') * hpPercent) / 100;
 }
 
 function getBaseStatTotal(hero: HeroInstance): number {

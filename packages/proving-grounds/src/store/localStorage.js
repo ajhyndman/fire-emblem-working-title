@@ -5,7 +5,10 @@ import type { HeroInstance } from 'fire-emblem-heroes-calculator';
 
 import type { State } from '.';
 
-const isNotNil = compose(not, isNil);
+const isNotNil = compose(
+  not,
+  isNil,
+);
 
 const validateInstance = (instance: ?HeroInstance): boolean => {
   if (!instance) return true;

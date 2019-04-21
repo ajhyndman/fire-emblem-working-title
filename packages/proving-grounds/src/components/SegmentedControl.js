@@ -96,7 +96,8 @@ const SegmentedControl = ({
           key={option}
           className={cn({ active: selected === i })}
           style={{
-            flexBasis: `${1 / (options.length + (small ? 0.05 : 0.25)) * 100}%`,
+            flexBasis: `${(1 / (options.length + (small ? 0.05 : 0.25))) *
+              100}%`,
           }}
           onClick={() => onChange(i)}
         >

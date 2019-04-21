@@ -202,17 +202,21 @@ export const exportInstance = (heroInstance: HeroInstance): string => {
 
   const status = equals(getDefaultState(), heroInstance.state)
     ? ''
-    : `:::Status\r\n${buffList}${debuffList}${heroInstance.state.hpMissing
-        ? `Damage: ${heroInstance.state.hpMissing}\r\n`
-        : ''}${heroInstance.state.specialCharge
-        ? `Charge: ${heroInstance.state.specialCharge}\r\n`
-        : ''}`;
+    : `:::Status\r\n${buffList}${debuffList}${
+        heroInstance.state.hpMissing
+          ? `Damage: ${heroInstance.state.hpMissing}\r\n`
+          : ''
+      }${
+        heroInstance.state.specialCharge
+          ? `Charge: ${heroInstance.state.specialCharge}\r\n`
+          : ''
+      }`;
 
-  return `${heroInstance.name} (${heroInstance.rarity}★${heroInstance.mergeLevel
-    ? `+${heroInstance.mergeLevel}`
-    : ''}${heroInstance.boon ? ` +${heroInstance.boon}` : ''}${heroInstance.bane
-    ? ` -${heroInstance.bane}`
-    : ''})\r\n${skillList}\r\n${status}`;
+  return `${heroInstance.name} (${heroInstance.rarity}★${
+    heroInstance.mergeLevel ? `+${heroInstance.mergeLevel}` : ''
+  }${heroInstance.boon ? ` +${heroInstance.boon}` : ''}${
+    heroInstance.bane ? ` -${heroInstance.bane}` : ''
+  })\r\n${skillList}\r\n${status}`;
 };
 
 export const importInstance = (text: string): HeroInstance => {

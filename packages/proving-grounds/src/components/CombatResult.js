@@ -82,50 +82,52 @@ const CombatResult = ({ leftHero, rightHero }: CombatResultProps) => {
           text-align: center;
         }
       `}</style>
-      {leftHero &&
-        rightHero &&
-        result && (
-          <div className="container">
-            <div className="result">
-              <h1>{`${!isNaN(getStat(leftHero, 'hp'))
-                ? getStat(leftHero, 'hp')
-                : '?'} → ${!isNaN(result.combatInfo.attackerHp)
+      {leftHero && rightHero && result && (
+        <div className="container">
+          <div className="result">
+            <h1>{`${
+              !isNaN(getStat(leftHero, 'hp')) ? getStat(leftHero, 'hp') : '?'
+            } → ${
+              !isNaN(result.combatInfo.attackerHp)
                 ? result.combatInfo.attackerHp
-                : '?'}`}</h1>
-              <h2>
-                <DamageInfo
-                  damage={result.combatInfo.attackerDamage}
-                  numAttacks={result.combatInfo.attackerNumAttacks}
-                  specialDamage={result.combatInfo.attackerSpecialDamage}
-                />
-              </h2>
-            </div>
-            <img
-              className="attack-indicator"
-              role="presentation"
-              src={`${staticUrl}Attack.png`}
-              srcSet={`
+                : '?'
+            }`}</h1>
+            <h2>
+              <DamageInfo
+                damage={result.combatInfo.attackerDamage}
+                numAttacks={result.combatInfo.attackerNumAttacks}
+                specialDamage={result.combatInfo.attackerSpecialDamage}
+              />
+            </h2>
+          </div>
+          <img
+            className="attack-indicator"
+            role="presentation"
+            src={`${staticUrl}Attack.png`}
+            srcSet={`
               ${staticUrl}40px-Attack.png 40w,
               ${staticUrl}Attack.png 71w
             `}
-              sizes="40px"
-            />
-            <div className="result">
-              <h1>{`${!isNaN(getStat(rightHero, 'hp'))
-                ? getStat(rightHero, 'hp')
-                : '?'} → ${!isNaN(result.combatInfo.defenderHp)
+            sizes="40px"
+          />
+          <div className="result">
+            <h1>{`${
+              !isNaN(getStat(rightHero, 'hp')) ? getStat(rightHero, 'hp') : '?'
+            } → ${
+              !isNaN(result.combatInfo.defenderHp)
                 ? result.combatInfo.defenderHp
-                : '?'}`}</h1>
-              <h2>
-                <DamageInfo
-                  damage={result.combatInfo.defenderDamage}
-                  numAttacks={result.combatInfo.defenderNumAttacks}
-                  specialDamage={result.combatInfo.defenderSpecialDamage}
-                />
-              </h2>
-            </div>
+                : '?'
+            }`}</h1>
+            <h2>
+              <DamageInfo
+                damage={result.combatInfo.defenderDamage}
+                numAttacks={result.combatInfo.defenderNumAttacks}
+                specialDamage={result.combatInfo.defenderSpecialDamage}
+              />
+            </h2>
           </div>
-        )}
+        </div>
+      )}
     </div>
   );
 };

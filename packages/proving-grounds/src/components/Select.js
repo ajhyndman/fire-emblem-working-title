@@ -116,8 +116,8 @@ class Select extends React.Component {
         <div
           className={cn('options', { active: this.state.active })}
           style={{
-            transform: `translateY(-${options.indexOf(selected) /
-              options.length *
+            transform: `translateY(-${(options.indexOf(selected) /
+              options.length) *
               100}%)`,
           }}
         >

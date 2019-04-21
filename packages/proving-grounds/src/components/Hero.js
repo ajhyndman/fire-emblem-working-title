@@ -113,10 +113,9 @@ const HeroPortrait = ({
           sizes={`${CLASS_ICON_SIZE}px`}
         />
       )}
-      {specialCooldown !== undefined &&
-        specialCooldown !== -1 && (
-          <span className="specialCooldown">{specialCooldown}</span>
-        )}
+      {specialCooldown !== undefined && specialCooldown !== -1 && (
+        <span className="specialCooldown">{specialCooldown}</span>
+      )}
     </div>
   );
 };

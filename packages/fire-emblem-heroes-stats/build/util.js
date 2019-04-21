@@ -19,12 +19,28 @@ export const inspect = x => {
   return x;
 };
 
-const capitalize = compose(join(''), juxt([compose(toUpper, head), tail]));
+const capitalize = compose(
+  join(''),
+  juxt([
+    compose(
+      toUpper,
+      head,
+    ),
+    tail,
+  ]),
+);
 
 // Convert a string to lowercase, capitalize every word other than the first, and remove spaces.
 export const camelCase = compose(
   join(''),
-  juxt([head, compose(join(''), map(capitalize), tail)]),
+  juxt([
+    head,
+    compose(
+      join(''),
+      map(capitalize),
+      tail,
+    ),
+  ]),
   split(' '),
   toLower,
 );
