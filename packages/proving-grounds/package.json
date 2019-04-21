@@ -20,14 +20,16 @@
     "start": "NODE_ENV=production node server.js",
     "storybook": "start-storybook -p 6006 -s .",
     "sync-static": "aws s3 sync ./static/cdn/ s3://proving-grounds-static.ajhyndman.com/ --cache-control max-age=2592000,public",
-    "tape": "tape -r babel-register tests/**/*.js",
+    "tape": "tape -r @babel/register tests/**/*.js",
     "test": "yarn lint && yarn tape"
   },
   "devDependencies": {
+    "@babel/core": "7.4.3",
+    "@babel/register": "7.4.0",
     "@storybook/react": "^5.0.10",
     "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.5",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-register": "^6.24.0",
     "eslint": "5.16.0",
     "eslint-config-ajhyndman": "2.0.1",
     "eslint-config-prettier": "4.1.0",
@@ -40,6 +42,7 @@
     "imagemin-pngquant": "5.0.1",
     "now": "9.2.7",
     "prettier": "^1.17.0",
+    "prop-types": "15.7.2",
     "sw-precache-webpack-plugin": "0.9.1",
     "tape": "^4.6.3"
   },
