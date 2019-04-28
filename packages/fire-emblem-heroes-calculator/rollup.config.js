@@ -2,14 +2,19 @@
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 
 const config = {
-  moduleName: 'calculator',
-  format: 'umd',
+  input: 'src/index.js',
+  output: {
+    file: 'dist/fire-emblem-heroes-calculator.js',
+    format: 'umd',
+    name: 'calculator',
+  },
   plugins: [
     resolve(),
     commonjs({
+      exclude: 'src/**',
       // explicitly specify unresolvable named exports
       // (see https://github.com/rollup/rollup-plugin-commonjs for more details)
       namedExports: {
@@ -27,13 +32,14 @@ const config = {
     babel({
       babelrc: false,
       exclude: 'node_modules/**',
-      presets: [['es2015', { modules: false }], 'stage-2'],
-      plugins: ['transform-flow-strip-types', 'ramda'],
+      presets: [['@babel/preset-env', { modules: false }]],
+      plugins: ['@babel/plugin-transform-flow-strip-types', 'ramda'],
     }),
   ],
 };
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.BUILD === 'production') {
+  config.output.file = 'dist/fire-emblem-heroes-calculator.min.js';
   config.plugins.push(uglify());
 }
 
