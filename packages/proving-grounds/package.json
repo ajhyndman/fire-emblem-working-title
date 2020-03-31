@@ -57,7 +57,7 @@
     "fire-emblem-heroes-stats": "^0.15.2",
     "lodash.throttle": "^4.1.1",
     "lz-string": "^1.4.4",
-    "next": "8.1.0",
+    "next": "9.3.3",
     "next-redux-wrapper": "^3.0.0-alpha.2",
     "ramda": "^0.23.0",
     "react": "^16.8.6",
